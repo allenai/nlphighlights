@@ -51,6 +51,8 @@ const RightOuter = styled.span`
 
 const strokeWeight = 1.5;
 
+/*  TODO(mattg): I'm not sure why this is crashing when other similar calls aren't, but I'm also not
+ *  sure we need this, so it may not be worth looking into.
 const innerStyles = css`
     display: block;
     transform-origin: 50% 50%;
@@ -103,3 +105,4 @@ const PaddedContainer = styled(({ isExpanded, ...props }) => <span {...props} />
         }
     }
 `;
+*/

@@ -33,29 +33,12 @@ export default ({ data }) => {
                     </p>
                 </SectionIntro>
                 <PartContainer>
-                    <StandaloneEpisodeLink to={outline.overview.slug}>
-                        <PartHeader
-                            color={outline.overview.color}
-                            icon={outline.overview.icon}
-                            title={groupedEpisodes[outline.overview.slug].node.frontmatter.title}
-                            description={
-                                groupedEpisodes[outline.overview.slug].node.frontmatter.description
-                            }
-                            slug={outline.overview.slug}
-                        />
-                    </StandaloneEpisodeLink>
                 </PartContainer>
             </About>
             <Parts>
                 <SectionIntro>
                     <h2>Explore the guide material</h2>
                 </SectionIntro>
-                {outline.parts.map(
-                    part =>
-                        part.episodeSlugs && (
-                            <Part data={part} groupedEpisodes={groupedEpisodes} key={part.title} />
-                        )
-                )}
             </Parts>
             <Credits>
                 NLP Highlights is a podcast run by the <Link to={data.site.siteMetadata.siteUrl}>AllenNLP</Link>

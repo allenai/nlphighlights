@@ -57,34 +57,6 @@ export const Navigation = ({
                         <LandingLink href="/">Home</LandingLink>
                     </MenuItem>
                 )}
-                <MenuItem key={outline.overview.slug}>
-                    <LandingLink to={outline.overview.slug}>
-                        {!isMobile && getMenuIcon(outline.overview)}
-                        {groupedEpisodes[outline.overview.slug].node.frontmatter.title}
-                    </LandingLink>
-                </MenuItem>
-                {outline.parts.map(
-                    part =>
-                        part.episodeSlugs && (
-                            <SubMenu
-                                key={part.title}
-                                onTitleClick={() => onTitleClick && onTitleClick(part.title)}
-                                title={
-                                    <SubMenuTitle>
-                                        {!isMobile && getMenuIcon(part)}
-                                        {part.title}
-                                    </SubMenuTitle>
-                                }>
-                                {part.episodeSlugs.map(episodeSlug => (
-                                    <SubMenuItem key={episodeSlug}>
-                                        <InteriorLink to={episodeSlug}>
-                                            {groupedEpisodes[episodeSlug].node.frontmatter.title}
-                                        </InteriorLink>
-                                    </SubMenuItem>
-                                ))}
-                            </SubMenu>
-                        )
-                )}
                 {isMobile &&
                     headerLinks.map(headerLink => (
                         <MenuItem key={headerLink.url}>
