@@ -1,0 +1,6 @@
+{
+    "appName": "nlp-highlights",
+    "httpPort": 8000,
+    "contact": "mattg",
+    "team": "allennlp"
+}

@@ -1,0 +1,12 @@
+{
+    "courseId": "nlp-highlights",
+    "title": "NLP Highlights",
+    "description": "A podcast run by the AllenNLP team at the Allen Institute for AI",
+    "siteUrl": "https://nlphighlights.allennlp.org/",
+    "twitter": "ai2_allennlp",
+    "googleAnalyticsId": "UA-105970043-4",
+    "headerLinks": [
+        { "text": "AI2 Website", "url": "https://allenai.org/" },
+        { "text": "AllenNLP Website", "url": "https://allennlp.org/" }
+    ]
+}
