@@ -1,14 +1,12 @@
 {
-    "name": "allennlp-guide",
+    "name": "nlp-highlights",
     "private": true,
-    "description": "Diving Into Natural Language Processing With AllenNLP",
+    "description": "NLP Highlights, a podcast about recent work in natural language processing",
     "version": "1.0.0",
-    "author": "AllenNLP <allennlp-contact@allenai.org>",
+    "author": "NLP Highlights at AllenNLP <nlp-highlights@allenai.org>",
     "dependencies": {
         "@allenai/varnish": "0.8.11",
         "@illinois/react-use-local-storage": "^1.1.0",
-        "@jupyterlab/outputarea": "^0.19.1",
-        "@jupyterlab/rendermime": "^0.19.1",
         "@phosphor/widgets": "^1.6.0",
         "antd": "^3.26.7",
         "autoprefixer": "^9.4.7",
@@ -41,8 +39,6 @@
         "gatsby-source-filesystem": "^2.0.20",
         "gatsby-transformer-remark": "^2.2.5",
         "gatsby-transformer-sharp": "^2.1.17",
-        "juniper-js": "^0.1.0",
-        "prismjs": "^1.15.0",
         "react": "^16.8.2",
         "react-animate-height": "^2.0.20",
         "react-dom": "^16.8.2",
@@ -67,6 +63,6 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/allenai/allennlp-guide"
+        "url": "https://github.com/allenai/nlphighlights"
     }
 }

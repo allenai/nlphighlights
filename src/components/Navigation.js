@@ -6,7 +6,6 @@ import React from 'react';
 import styled, { createGlobalStyle, css, keyframes } from 'styled-components';
 import { Menu, Icon } from 'antd';
 import { Link } from '../components/Link';
-import { outline } from '../outline';
 import { getIcon, toRem } from '../utils';
 
 export const Navigation = ({

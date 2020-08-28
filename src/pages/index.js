@@ -4,7 +4,6 @@ import styled, { css } from 'styled-components';
 import AnimateHeight from 'react-animate-height';
 import { above } from '@allenai/varnish/theme/breakpoints';
 
-import { outline } from '../outline';
 import { getGroupedEpisodes } from '../utils';
 import Layout from '../components/Layout';
 import { Link } from '../components/Link';
@@ -59,13 +58,8 @@ export default ({ data }) => {
                 )}
             </Parts>
             <Credits>
-                Written by the <Link to={data.site.siteMetadata.siteUrl}>AllenNLP</Link> team at the{' '}
-                <Link to="https://allenai.org/">Allen Institute for AI</Link>.<br />
-                This guide was inspired by{' '}
-                <Link to="https://github.com/ines/course-starter-python">
-                    Online Course Starter
-                </Link>
-                .
+                NLP Highlights is a podcast run by the <Link to={data.site.siteMetadata.siteUrl}>AllenNLP</Link>
+                team at the{' '} <Link to="https://allenai.org/">Allen Institute for AI</Link>.<br />
             </Credits>
             <Footer />
         </Layout>
@@ -90,7 +84,6 @@ export const pageQuery = graphql`
                     }
                     frontmatter {
                         title
-                        description
                     }
                 }
             }

@@ -30,7 +30,7 @@ const Template = ({ data, location }) => {
     const { allMarkdownRemark, markdownRemark, site } = data;
     const { courseId } = site.siteMetadata;
     const { frontmatter, fields, htmlAst } = markdownRemark;
-    const { title, description } = frontmatter;
+    const { title, hosts, guests, number, tags } = frontmatter;
     const { slug } = fields;
 
     // Build flat list of outline slugs that the prev/next navigation buttons can easily step through
@@ -116,7 +116,6 @@ const Template = ({ data, location }) => {
             }}>
             <Layout
                 title={title}
-                description={description}
                 groupedEpisodes={groupedEpisodes}
                 defaultSelectedKeys={[slug]}
                 defaultOpenKeys={!isOverview && [thisPart.title]}>
@@ -154,7 +153,6 @@ const Template = ({ data, location }) => {
                                             <span>{title}</span>
                                         </h1>
                                     )}
-                                    {description && <p>{description}</p>}
                                 </EpisodeIntroText>
                             </EpisodeIntro>
                             {html}
@@ -209,7 +207,10 @@ export const pageQuery = graphql`
                     }
                     frontmatter {
                         title
-                        description
+                        hosts
+                        guests
+                        number
+                        tags
                     }
                 }
             }
@@ -221,7 +222,10 @@ export const pageQuery = graphql`
             }
             frontmatter {
                 title
-                description
+                hosts
+                guests
+                number
+                tags
             }
         }
     }

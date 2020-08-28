@@ -8,15 +8,8 @@ module.exports = {
         {
             resolve: `gatsby-source-filesystem`,
             options: {
-                name: `chapters`,
-                path: `${__dirname}/chapters`
-            }
-        },
-        {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-                name: `exercises`,
-                path: `${__dirname}/exercises`
+                name: `episodes`,
+                path: `${__dirname}/episodes`
             }
         },
         {
