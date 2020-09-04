@@ -1,12 +1,3 @@
-// Prism Code formatting modules
-import Prism from 'prismjs';
-import 'prismjs/plugins/line-highlight/prism-line-highlight.js';
-import 'prismjs/plugins/line-numbers/prism-line-numbers.js';
-import 'prismjs/plugins/normalize-whitespace/prism-normalize-whitespace.js';
-// Prism CSS
-import 'prismjs/plugins/line-highlight/prism-line-highlight.css';
-import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
-
 import React, { useState, useEffect } from 'react';
 import { graphql, navigate } from 'gatsby';
 import useLocalStorage from '@illinois/react-use-local-storage';
@@ -21,35 +12,32 @@ import { IconBox } from '../components/IconBox';
 import { Link } from '../components/Link';
 import { Navigation } from '../components/Navigation';
 import { Disclosure } from '../components/inlineSVG';
-import { codeBlockTextStyles, codeBlockWrappingStyles } from '../components/code/CodeBlock';
 
-import { outline } from '../outline';
 import { getGroupedEpisodes } from '../utils';
+
+function formatStringList(headingSingular, headingPlural, strings) {
+    if (strings === undefined || strings.length === 0) {
+        return "";
+    } else if (strings.length == 1) {
+        return headingSingular + ": " + strings[0];
+    } else {
+        return headingPlural + ": " + strings.join(", ");
+    }
+}
 
 const Template = ({ data, location }) => {
     const { allMarkdownRemark, markdownRemark, site } = data;
     const { courseId } = site.siteMetadata;
     const { frontmatter, fields, htmlAst } = markdownRemark;
-    const { title, hosts, guests, number, tags } = frontmatter;
+    const { title, hosts, guests, number, tags, description } = frontmatter;
     const { slug } = fields;
 
-    // Build flat list of outline slugs that the prev/next navigation buttons can easily step through
-    const slugList = {};
-    slugList[`${outline.overview.slug}`] = '';
-    outline.parts.forEach(part => {
-        if (part.episodeSlugs) {
-            part.episodeSlugs.forEach(slug => {
-                slugList[`${slug}`] = part.title;
-            });
-        }
-    });
+    const guestStr = formatStringList("Guest", "Guests", guests);
+    const hostStr = formatStringList("Host", "Hosts", hosts);
+    const tagStr = formatStringList("Tags", "Tags", tags);
 
     // Util consts for slugs and outline data
     const groupedEpisodes = getGroupedEpisodes(allMarkdownRemark);
-    const links = Object.keys(slugList);
-    const thisPart = outline.parts.find(part => part.title === slugList[slug]);
-    const isOverview = slug === outline.overview.slug;
-    const getProp = prop => (isOverview ? outline.overview[prop] : thisPart[prop]);
 
     const [activeExc, setActiveExc] = useState(null);
     const [completed, setCompleted] = useLocalStorage(
@@ -59,23 +47,7 @@ const Template = ({ data, location }) => {
     const [storedUserExpandedGroups, setUserExpandedGroups] = useLocalStorage('expandedGroups');
 
     // User-defined nav group expand/collapse state
-    const userExpandedGroups = [].concat(storedUserExpandedGroups);
-    if (!isOverview && !userExpandedGroups.includes(thisPart.title)) {
-        userExpandedGroups.push(thisPart.title);
-    }
-    const toggleMenuKey = key => {
-        console.log(key);
-        const index = userExpandedGroups.indexOf(key);
-        if (index > -1) {
-            userExpandedGroups.splice(index, 1);
-        } else {
-            userExpandedGroups.push(key);
-        }
-        setUserExpandedGroups(userExpandedGroups);
-    };
-
     const html = renderAst(htmlAst);
-    import(`prismjs/components/prism-python`).then(() => Prism.highlightAll());
 
     const handleSetActiveExc = id => {
         let scrollX;
@@ -111,14 +83,12 @@ const Template = ({ data, location }) => {
                 setActiveExc: handleSetActiveExc,
                 completed,
                 setCompleted,
-                userExpandedGroups,
                 setUserExpandedGroups
             }}>
             <Layout
                 title={title}
                 groupedEpisodes={groupedEpisodes}
-                defaultSelectedKeys={[slug]}
-                defaultOpenKeys={!isOverview && [thisPart.title]}>
+                defaultSelectedKeys={[slug]}>
                 <GlobalStyle />
                 <Wrapper>
                     <LeftContainer>
@@ -127,8 +97,6 @@ const Template = ({ data, location }) => {
                                 <Navigation
                                     groupedEpisodes={groupedEpisodes}
                                     defaultSelectedKeys={[slug]}
-                                    defaultOpenKeys={userExpandedGroups}
-                                    onTitleClick={toggleMenuKey.bind(this)}
                                 />
                             </SideNav>
                         </LeftContent>
@@ -138,48 +106,27 @@ const Template = ({ data, location }) => {
                             <EpisodeIntro>
                                 <div>
                                     <StyledIconBox
-                                        color={getProp('color')}
-                                        icon={getProp('icon')}
                                     />
                                 </div>
                                 <EpisodeIntroText>
-                                    {!isOverview && (
-                                        <PartTitle>
-                                            <span>{thisPart.title}</span>
-                                        </PartTitle>
-                                    )}
                                     {title && (
                                         <h1>
                                             <span>{title}</span>
                                         </h1>
                                     )}
+                                    {guestStr && (
+                                        <div> <span> {guestStr} </span> </div>
+                                    )}
+                                    {hostStr && (
+                                        <div> <span> {hostStr} </span> </div>
+                                    )}
+                                    {tagStr && (
+                                        <div> <span> {tagStr} </span> </div>
+                                    )}
+                                    {description && <p>{description}</p>}
                                 </EpisodeIntroText>
                             </EpisodeIntro>
                             {html}
-                            <Pagination>
-                                <div>
-                                    {links.indexOf(slug) !== 0 && (
-                                        <PrevButton
-                                            onClick={() =>
-                                                navigate(links[links.indexOf(slug) - 1])
-                                            }>
-                                            <DisclosureIcon /> Previous Episode
-                                        </PrevButton>
-                                    )}
-                                </div>
-                                <div>
-                                    {links.indexOf(slug) !== links.length - 1 && (
-                                        <Button
-                                            variant="primary"
-                                            onClick={() =>
-                                                navigate(links[links.indexOf(slug) + 1])
-                                            }>
-                                            Next Episode <DisclosureIcon />
-                                        </Button>
-                                    )}
-                                </div>
-                            </Pagination>
-                            <EpisodeFooter />
                         </RightContent>
                     </RightContainer>
                 </Wrapper>
@@ -210,6 +157,7 @@ export const pageQuery = graphql`
                         hosts
                         guests
                         number
+                        description
                         tags
                     }
                 }
@@ -225,6 +173,7 @@ export const pageQuery = graphql`
                 hosts
                 guests
                 number
+                description
                 tags
             }
         }
@@ -290,164 +239,6 @@ const GlobalStyle = createGlobalStyle`
 
         progress {
             appearance: none;
-        }
-
-        // Inline Code styles
-
-        pre,
-        code,
-        code[class*="language-"],
-        pre[class*="language-"],
-        p > code,
-        li > code,
-        th > code,
-        td > code,
-        a > code {
-            ${codeBlockTextStyles}
-        }
-
-        pre {
-            ${codeBgStyles}
-            overflow: visible;
-        }
-
-        pre > code {
-            background: transparent;
-        }
-
-        p,
-        li,
-        th,
-        td,
-        a {
-            & > code {
-                ${codeBgStyles}
-                padding-left: 0.3rem;
-                padding-right: 0.3rem;
-            }
-        }
-
-        /* Code blocks */
-        [class*="MarkdownContainer"] > pre,
-        .gatsby-highlight > pre {
-            padding: 1rem 1.25rem 1rem;
-            margin: 1.75rem 0;
-            overflow: visible;
-        }
-
-        /* Inline code */
-        :not(pre) > code[class*="language-"] {
-            padding: .1em;
-            border-radius: .3em;
-            white-space: normal;
-        }
-
-        pre[data-line] {
-            overflow-x: hidden !important;
-        }
-
-        code[class*="language-"],
-        pre[class*="language-"] {
-            color: black;
-            ${codeBlockWrappingStyles}
-
-            // Prism highlighting styles
-
-            .token.comment,
-            .token.prolog,
-            .token.doctype,
-            .token.cdata {
-                color: slategray;
-            }
-
-            .token.punctuation {
-                color: #999;
-            }
-
-            .namespace {
-                opacity: .7;
-            }
-
-            .token.property,
-            .token.tag,
-            .token.boolean,
-            .token.number,
-            .token.constant,
-            .token.symbol,
-            .token.deleted {
-                color: #905;
-            }
-
-            .token.selector,
-            .token.attr-name,
-            .token.string,
-            .token.char,
-            .token.inserted {
-                color: #690;
-            }
-
-            .token.operator,
-            .token.entity,
-            .token.url,
-            .language-css .token.string,
-            .style .token.string {
-                color: #9a6e3a;
-            }
-
-            .token.atrule,
-            .token.attr-value,
-            .token.keyword,
-            .token.builtin {
-                color: #07a;
-            }
-
-            .token.function,
-            .token.class-name {
-                color: #DD4A68;
-            }
-
-            .token.regex,
-            .token.important,
-            .token.variable {
-                color: #e90;
-            }
-
-            .token.important,
-            .token.bold {
-                font-weight: bold;
-            }
-            .token.italic {
-                font-style: italic;
-            }
-
-            .token.entity {
-                cursor: help;
-            }
-
-            .line-highlight {
-                background: ${({ theme }) => theme.color.N4} !important;
-                outline: 1px solid ${({ theme }) => theme.color.N5};
-                margin-top: 15px;
-            }
-
-            .line-numbers-rows {
-                z-index: 1;
-                border-right-color: ${({ theme }) => theme.color.N5} !important;
-
-                & > span:before {
-                    color: ${({ theme }) => theme.color.N6};
-                }
-            }
-
-            &.line-numbers {
-                & > code {
-                    z-index: 2;
-                }
-
-                .line-numbers-rows {
-                    top: -1px;
-                }
-            }
         }
     }
 `;

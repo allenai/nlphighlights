@@ -47,8 +47,7 @@ const Layout = ({
                                 <HeaderContent>
                                     <LogoContainer>
                                         <a href="/">
-                                            <AllenNLPLogo />
-                                            <span>Guide</span>
+                                            <span>NLP Highlights</span>
                                         </a>
                                     </LogoContainer>
                                     <nav>

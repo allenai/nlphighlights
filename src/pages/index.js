@@ -16,6 +16,9 @@ import { ArrowRightIcon, ExpandCollapseIcon, Disclosure } from '../components/in
 // Home Page Export
 export default ({ data }) => {
     const groupedEpisodes = getGroupedEpisodes(data.allMarkdownRemark);
+    const episodeSlugs = Object.keys(groupedEpisodes);
+    episodeSlugs.sort()
+    console.log(groupedEpisodes)
 
     return (
         <Layout groupedEpisodes={groupedEpisodes}>
@@ -24,12 +27,21 @@ export default ({ data }) => {
             </Banner>
             <About>
                 <SectionIntro>
-                    <h2>About this guide</h2>
+                    <h2>About the podcast</h2>
                     <p>
-                        We walk through the basics of using AllenNLP, describing all of the main
-                        abstractions used and why we chose them, how to use specific functionality
-                        like configuration files or pre-trained representations, and how to build
-                        various kinds of models, from simple to complex.
+                      NLP Highlights is a podcast discussing interesting recent work in natural
+                      language processing.  The hosts are members of the AllenNLP team at the Allen
+                      Institute for AI.  This website contains a page for each episode, with
+                      transcriptions.
+                    </p>
+
+                    <p>
+                      A note: transcribing technical discussions involving non-native speakers is
+                      challenging!  We have worked with our transcribers to try to make sure the
+                      technical terms and names used are correct, but there are surely errors that
+                      we missed.  To improve the transcriptions, please open a pull request on the
+                      <Link to="https://github.com/allenai/nlphighlights"> Github page</Link> for
+                      this website.
                     </p>
                 </SectionIntro>
                 <PartContainer>
@@ -37,8 +49,20 @@ export default ({ data }) => {
             </About>
             <Parts>
                 <SectionIntro>
-                    <h2>Explore the guide material</h2>
+                    <h2>Episodes</h2>
                 </SectionIntro>
+                <EpisodeList>
+                    {episodeSlugs.map(episodeSlug => (
+                        <EpisodeLink key={episodeSlug} to={episodeSlug}>
+                            <h4>{groupedEpisodes[episodeSlug].node.frontmatter.title}</h4>
+                            <p>
+                                {groupedEpisodes[episodeSlug].node.frontmatter.description}
+                                <StyledArrowRightIcon />
+                            </p>
+                            <MobileDisclosure />
+                        </EpisodeLink>
+                    ))}
+                </EpisodeList>
             </Parts>
             <Credits>
                 NLP Highlights is a podcast run by the <Link to={data.site.siteMetadata.siteUrl}>AllenNLP</Link>
@@ -67,6 +91,11 @@ export const pageQuery = graphql`
                     }
                     frontmatter {
                         title
+                        description
+                        hosts
+                        guests
+                        number
+                        tags
                     }
                 }
             }

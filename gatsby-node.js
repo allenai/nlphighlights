@@ -1,7 +1,7 @@
 const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
 
-const chapterTemplate = path.resolve('src/templates/chapter.js');
+const episodeTemplate = path.resolve('src/templates/episode.js');
 
 function replacePath(pagePath) {
     return pagePath === `/` ? pagePath : pagePath.replace(/\/$/, ``);
@@ -68,12 +68,12 @@ exports.createPages = ({ actions, graphql }) => {
             return Promise.reject(result.errors);
         }
         const posts = result.data.allMarkdownRemark.edges.filter(
-            ({ node }) => node.frontmatter.type === 'chapter'
+            ({ node }) => node.frontmatter.type === 'episode'
         );
         posts.forEach(({ node }) => {
             createPage({
                 path: replacePath(node.fields.slug),
-                component: chapterTemplate,
+                component: episodeTemplate,
                 context: { slug: node.fields.slug }
             });
         });
