@@ -129,9 +129,10 @@ def convert_transcripts_to_markdown(transcript_dir: str):
 
         convert_episode_to_markdown(episode_dir, episode_filename)
 
+
 def convert_episode_to_markdown(episode_name, transcript_filename):
     episode_number, episode_name = split_episode_name(episode_name)
-    episode_filename = episode_number + "_" + episode_name.replace(" ", "_").lower()
+    episode_filename = episode_number + "_" + sanitize(episode_name) + ".md"
 
     with open(transcript_filename) as transcript_file:
         transcript_lines = transcript_file.readlines()
@@ -220,6 +221,10 @@ def split_episode_name(episode_name: str) -> Tuple[str, str]:
         return episode_name.split(" - ", 1)
     else:
         raise ValueError(f"unhandled episode name / number combo: {episode_name}")
+
+
+def sanitize(filename: str) -> str:
+    return filename.replace(" ", "_").replace(",", "").replace(":", "").lower()
 
 
 if __name__ == "__main__":
