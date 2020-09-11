@@ -18,6 +18,7 @@ export default ({ data }) => {
     const groupedEpisodes = getGroupedEpisodes(data.allMarkdownRemark);
     const episodeSlugs = Object.keys(groupedEpisodes);
     episodeSlugs.sort()
+    episodeSlugs.reverse()
     console.log(groupedEpisodes)
 
     return (
@@ -54,7 +55,7 @@ export default ({ data }) => {
                 <EpisodeList>
                     {episodeSlugs.map(episodeSlug => (
                         <EpisodeLink key={episodeSlug} to={episodeSlug}>
-                            <h4>{groupedEpisodes[episodeSlug].node.frontmatter.title}</h4>
+                            <h4>{parseInt(groupedEpisodes[episodeSlug].node.frontmatter.number)}: {groupedEpisodes[episodeSlug].node.frontmatter.title}</h4>
                             <p>
                                 {groupedEpisodes[episodeSlug].node.frontmatter.description}
                                 <StyledArrowRightIcon />
