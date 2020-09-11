@@ -1,5 +1,8 @@
 .vscode
 
+credentials.json
+token.pickle
+
 # Logs
 logs
 *.log
