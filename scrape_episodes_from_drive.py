@@ -224,7 +224,10 @@ def split_episode_name(episode_name: str) -> Tuple[str, str]:
 
 
 def sanitize(filename: str) -> str:
-    return filename.replace(" ", "_").replace(",", "").replace(":", "").lower()
+    punct_to_remove = ',:?'
+    for p in punct_to_remove:
+        filename = filename.replace(p, "")
+    return filename.replace(" ", "_").lower()
 
 
 if __name__ == "__main__":
