@@ -2,7 +2,7 @@
 title: "Improving Hypernymy Detection with an Integrated Path-based and Distributional Method"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: []
-number: 024
+number: "024"
 tags: []
 description: TODO
 type: episode

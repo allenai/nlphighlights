@@ -2,7 +2,7 @@
 title: "Neural Text Generation in Stories Using Entity Representations as Context, with Elizabeth Clark and Yangfeng Ji"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["New Speaker","Yangfeng Ji","Elizabeth Clark"]
-number: 061
+number: "061"
 tags: []
 description: TODO
 type: episode

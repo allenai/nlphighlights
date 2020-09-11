@@ -2,7 +2,7 @@
 title: "NLP Startups, with Oren Etzioni"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Oren Etzioni"]
-number: 100
+number: "100"
 tags: []
 description: TODO
 type: episode

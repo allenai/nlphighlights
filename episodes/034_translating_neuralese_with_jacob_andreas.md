@@ -2,7 +2,7 @@
 title: "Translating Neuralese, with Jacob Andreas"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Jacob Andreas"]
-number: 034
+number: "034"
 tags: []
 description: TODO
 type: episode

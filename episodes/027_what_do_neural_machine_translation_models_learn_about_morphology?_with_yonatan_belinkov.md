@@ -2,7 +2,7 @@
 title: "What do Neural Machine Translation Models Learn about Morphology? with Yonatan Belinkov"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Yonatan Belinkov"]
-number: 027
+number: "027"
 tags: []
 description: TODO
 type: episode

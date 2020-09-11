@@ -2,7 +2,7 @@
 title: "Sam Bowman"
 hosts: ["Matt Gardner","Waleed Amar"]
 guests: ["Sam Bowman"]
-number: 067
+number: "067"
 tags: []
 description: TODO
 type: episode

@@ -2,7 +2,7 @@
 title: "Measuring the Evolution of a Scientific Field through Citation Frames, with David Jurgens"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["David Jurgens"]
-number: 070
+number: "070"
 tags: []
 description: TODO
 type: episode

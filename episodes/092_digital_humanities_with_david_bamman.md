@@ -2,7 +2,7 @@
 title: "Digital Humanities, with David Bamman"
 hosts: ["Waleed"]
 guests: ["Matt","David"]
-number: 092
+number: "092"
 tags: []
 description: TODO
 type: episode

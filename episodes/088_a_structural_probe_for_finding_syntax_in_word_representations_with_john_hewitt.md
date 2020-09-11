@@ -2,7 +2,7 @@
 title: "A Structural Probe for Finding Syntax in Word Representations, with John Hewitt"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["John Hewitt","New Speaker"]
-number: 088
+number: "088"
 tags: []
 description: TODO
 type: episode

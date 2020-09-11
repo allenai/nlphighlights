@@ -2,7 +2,7 @@
 title: "AllenNLP, interviewing Matt Gardner"
 hosts: ["Matt Gardner","Pradeep Dasigi"]
 guests: ["Karissa Shanika"]
-number: 115
+number: "115"
 tags: []
 description: TODO
 type: episode

@@ -2,7 +2,7 @@
 title: "Entity linking with CNNs"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: []
-number: 007
+number: "007"
 tags: []
 description: TODO
 type: episode

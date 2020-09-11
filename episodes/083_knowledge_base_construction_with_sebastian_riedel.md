@@ -2,7 +2,7 @@
 title: "Knowledge Base Construction, with Sebastian Riedel"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Sebastian R."]
-number: 083
+number: "083"
 tags: []
 description: TODO
 type: episode

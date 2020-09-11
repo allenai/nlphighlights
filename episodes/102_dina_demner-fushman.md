@@ -2,7 +2,7 @@
 title: "Dina Demner-Fushman"
 hosts: ["Pradeep Dasigi","Waleed Ammar"]
 guests: ["Dina Demnar-Fushman","Matt Garner"]
-number: 102
+number: "102"
 tags: []
 description: TODO
 type: episode

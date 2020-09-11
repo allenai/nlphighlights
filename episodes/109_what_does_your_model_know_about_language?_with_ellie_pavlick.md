@@ -2,7 +2,7 @@
 title: "What does your model know about language?, with Ellie Pavlick"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Ellie Pavlick"]
-number: 109
+number: "109"
 tags: []
 description: TODO
 type: episode

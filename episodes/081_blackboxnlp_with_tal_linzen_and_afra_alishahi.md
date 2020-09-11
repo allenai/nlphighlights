@@ -2,7 +2,7 @@
 title: "BlackboxNLP, with Tal Linzen and Afra Alishahi"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Tal Linzen","Afra Alishahi"]
-number: 081
+number: "081"
 tags: []
 description: TODO
 type: episode

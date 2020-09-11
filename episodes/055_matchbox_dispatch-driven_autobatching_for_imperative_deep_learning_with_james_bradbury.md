@@ -2,7 +2,7 @@
 title: "Matchbox: Dispatch-driven autobatching for imperative deep learning, with James Bradbury"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["James Bradbury"]
-number: 055
+number: "055"
 tags: []
 description: TODO
 type: episode

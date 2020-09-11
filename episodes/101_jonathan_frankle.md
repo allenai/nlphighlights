@@ -2,7 +2,7 @@
 title: "Jonathan Frankle"
 hosts: ["Waleed","Pradeep Dasigi"]
 guests: ["Jonathan Franke"]
-number: 101
+number: "101"
 tags: []
 description: TODO
 type: episode

@@ -2,7 +2,7 @@
 title: "Pathologies of Neural Models Make Interpretation Difficult, with Shi Feng"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Shi Feng"]
-number: 087
+number: "087"
 tags: []
 description: TODO
 type: episode

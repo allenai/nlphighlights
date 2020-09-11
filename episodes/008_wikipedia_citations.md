@@ -2,7 +2,7 @@
 title: "Wikipedia citations"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: []
-number: 008
+number: "008"
 tags: []
 description: TODO
 type: episode

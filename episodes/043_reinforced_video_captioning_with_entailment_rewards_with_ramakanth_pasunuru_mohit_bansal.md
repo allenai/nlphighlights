@@ -2,7 +2,7 @@
 title: "Reinforced Video Captioning with Entailment Rewards, with Ramakanth Pasunuru, Mohit Bansal"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Mohit Bansal","Ramakanth Pasunuru","Speaker 1"]
-number: 043
+number: "043"
 tags: []
 description: TODO
 type: episode

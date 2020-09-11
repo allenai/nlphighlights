@@ -2,7 +2,7 @@
 title: "Cardinal Virtues: Extracting Relation Cardinalities from Text, with Paramita Mirza"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Paramita Mirza"]
-number: 050
+number: "050"
 tags: []
 description: TODO
 type: episode

@@ -2,7 +2,7 @@
 title: "On Writing Quality Peer Reviews, with Noah A. Smith"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Noah Smith"]
-number: 077
+number: "077"
 tags: []
 description: TODO
 type: episode

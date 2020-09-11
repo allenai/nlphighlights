@@ -2,7 +2,7 @@
 title: "Generalizing to Unseen Entities and Entity Pairs with Row-less Universal Schema"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: []
-number: 018
+number: "018"
 tags: []
 description: TODO
 type: episode

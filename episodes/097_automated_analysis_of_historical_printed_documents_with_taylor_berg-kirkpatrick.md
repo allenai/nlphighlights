@@ -2,7 +2,7 @@
 title: "Automated Analysis of Historical Printed Documents, with Taylor Berg-Kirkpatrick"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Taylor Berg-Kirkpatrick"]
-number: 097
+number: "097"
 tags: []
 description: TODO
 type: episode

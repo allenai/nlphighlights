@@ -2,7 +2,7 @@
 title: "A Comparative Study of Word Embeddings for Reading Comprehension"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: []
-number: 001
+number: "001"
 tags: []
 description: TODO
 type: episode

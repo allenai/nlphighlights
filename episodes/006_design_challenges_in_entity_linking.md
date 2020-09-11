@@ -2,7 +2,7 @@
 title: "Design Challenges in Entity Linking"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: []
-number: 006
+number: "006"
 tags: []
 description: TODO
 type: episode

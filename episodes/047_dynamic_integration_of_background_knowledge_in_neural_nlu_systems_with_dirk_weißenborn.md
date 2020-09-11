@@ -2,7 +2,7 @@
 title: "Dynamic integration of background knowledge in neural NLU systems, with Dirk Weißenborn"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Dirk Weißenborn"]
-number: 047
+number: "047"
 tags: []
 description: TODO
 type: episode

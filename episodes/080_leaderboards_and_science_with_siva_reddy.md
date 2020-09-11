@@ -2,7 +2,7 @@
 title: "Leaderboards and Science, with Siva Reddy"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Natalie S."]
-number: 080
+number: "080"
 tags: []
 description: TODO
 type: episode

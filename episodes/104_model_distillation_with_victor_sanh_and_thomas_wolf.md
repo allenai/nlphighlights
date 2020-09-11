@@ -2,7 +2,7 @@
 title: "Model Distillation, with Victor Sanh and Thomas Wolf"
 hosts: ["Matt Gardner","Pradeep Dasigi"]
 guests: ["Speaker 3","Victor Sanh","Thomas Wolf"]
-number: 104
+number: "104"
 tags: []
 description: TODO
 type: episode

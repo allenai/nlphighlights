@@ -2,7 +2,7 @@
 title: "Visual Reasoning, with Yoav Artzi"
 hosts: ["Waleed"]
 guests: ["Zhou","Matt","New Speaker"]
-number: 082
+number: "082"
 tags: []
 description: TODO
 type: episode

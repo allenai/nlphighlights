@@ -2,7 +2,7 @@
 title: "Where do corpora come from, with Matt Honnibal and Ines Montani"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Ines Montani","Matt Honnibal"]
-number: 078
+number: "078"
 tags: []
 description: TODO
 type: episode

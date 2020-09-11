@@ -2,7 +2,7 @@
 title: "Supervised Learning of Universal Sentence Representations from Natural Language Inference Data"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: []
-number: 012
+number: "012"
 tags: []
 description: TODO
 type: episode

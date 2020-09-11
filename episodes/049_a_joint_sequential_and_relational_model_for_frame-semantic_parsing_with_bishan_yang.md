@@ -2,7 +2,7 @@
 title: "A Joint Sequential and Relational Model for Frame-Semantic Parsing, with Bishan Yang"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Bishan Yang"]
-number: 049
+number: "049"
 tags: []
 description: TODO
 type: episode

@@ -2,7 +2,7 @@
 title: "A Survey Of Cross-lingual Word Embedding Models, with Sebastian Ruder"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Sebastian Ruder"]
-number: 057
+number: "057"
 tags: []
 description: TODO
 type: episode

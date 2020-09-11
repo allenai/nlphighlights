@@ -2,7 +2,7 @@
 title: "Neural Semantic Parsing over Multiple Knowledge-bases"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: []
-number: 025
+number: "025"
 tags: []
 description: TODO
 type: episode

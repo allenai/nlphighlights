@@ -2,7 +2,7 @@
 title: "The Effect of Different Writing Tasks on Linguistic Style: A Case Study of the ROC Story Cloze Task, with Roy Schwartz"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["New Speaker","Roy Schwartz"]
-number: 032
+number: "032"
 tags: []
 description: TODO
 type: episode

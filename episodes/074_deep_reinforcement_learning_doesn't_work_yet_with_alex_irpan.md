@@ -2,7 +2,7 @@
 title: "Deep Reinforcement Learning Doesn't Work Yet, with Alex Irpan"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Alex Irpan"]
-number: 074
+number: "074"
 tags: []
 description: TODO
 type: episode

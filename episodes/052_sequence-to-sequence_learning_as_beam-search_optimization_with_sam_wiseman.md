@@ -2,7 +2,7 @@
 title: "Sequence-to-Sequence Learning as Beam-Search Optimization, with Sam Wiseman"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Sam Wiseman"]
-number: 052
+number: "052"
 tags: []
 description: TODO
 type: episode

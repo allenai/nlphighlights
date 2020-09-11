@@ -2,7 +2,7 @@
 title: "An Overview of Question Answering, with Jordan Boyd-Graber"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Jordan Boyd-G"]
-number: 072
+number: "072"
 tags: []
 description: TODO
 type: episode

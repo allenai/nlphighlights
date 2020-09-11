@@ -2,7 +2,7 @@
 title: "Research in Academia versus Industry, with Philip Resnik and Jason Baldridge"
 hosts: ["Waleed"]
 guests: ["Philip","Matt","New Speaker","Jason"]
-number: 090
+number: "090"
 tags: []
 description: TODO
 type: episode

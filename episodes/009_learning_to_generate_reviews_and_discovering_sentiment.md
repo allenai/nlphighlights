@@ -2,7 +2,7 @@
 title: "Learning to Generate Reviews and Discovering Sentiment"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: []
-number: 009
+number: "009"
 tags: []
 description: TODO
 type: episode

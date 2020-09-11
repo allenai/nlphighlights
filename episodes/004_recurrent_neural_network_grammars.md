@@ -2,7 +2,7 @@
 title: "Recurrent Neural Network Grammars"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Speaker 6","Chris Dyer"]
-number: 004
+number: "004"
 tags: []
 description: TODO
 type: episode

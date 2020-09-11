@@ -2,7 +2,7 @@
 title: "An Overview of Dialog Research, with Zhou Yu"
 hosts: ["Waleed"]
 guests: ["Zhou","Matt","New Speaker"]
-number: 089
+number: "089"
 tags: []
 description: TODO
 type: episode

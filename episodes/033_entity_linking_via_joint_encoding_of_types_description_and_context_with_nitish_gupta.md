@@ -2,7 +2,7 @@
 title: "Entity Linking via Joint Encoding of Types, Description and Context, with Nitish Gupta"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Nitish Gupta"]
-number: 033
+number: "033"
 tags: []
 description: TODO
 type: episode

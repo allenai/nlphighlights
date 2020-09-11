@@ -2,7 +2,7 @@
 title: "Data Programming: Creating Large Training Sets, Quickly"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: []
-number: 028
+number: "028"
 tags: []
 description: TODO
 type: episode

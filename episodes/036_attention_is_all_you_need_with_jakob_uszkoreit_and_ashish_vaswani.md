@@ -2,7 +2,7 @@
 title: "Attention Is All You Need, with Jakob Uszkoreit and Ashish Vaswani"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Jakob Uszkoreit","Ashish Vaswani"]
-number: 036
+number: "036"
 tags: []
 description: TODO
 type: episode

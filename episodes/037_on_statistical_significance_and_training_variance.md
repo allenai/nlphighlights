@@ -2,7 +2,7 @@
 title: "On Statistical Significance and Training Variance"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: []
-number: 037
+number: "037"
 tags: []
 description: TODO
 type: episode

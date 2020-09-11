@@ -2,7 +2,7 @@
 title: "Build It Break It Workshop, with Allyson Ettinger and Sudha Rao"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Allyson Ettinger","Sudha Rao"]
-number: 045
+number: "045"
 tags: []
 description: TODO
 type: episode

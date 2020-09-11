@@ -2,7 +2,7 @@
 title: "A Corpus of Natural Language for Visual Reasoning, with Alane Suhr"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Alane Suhr"]
-number: 038
+number: "038"
 tags: []
 description: TODO
 type: episode

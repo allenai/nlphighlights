@@ -2,7 +2,7 @@
 title: "Tying Word Vectors and Word Classifiers: A Loss Framework for Language Modeling"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: []
-number: 031
+number: "031"
 tags: []
 description: TODO
 type: episode

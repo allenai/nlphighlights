@@ -2,7 +2,7 @@
 title: "Simulating Action Dynamics with Neural Process Networks, with Antoine Bosselut"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["New Speaker","AntoineBosselut"]
-number: 054
+number: "054"
 tags: []
 description: TODO
 type: episode

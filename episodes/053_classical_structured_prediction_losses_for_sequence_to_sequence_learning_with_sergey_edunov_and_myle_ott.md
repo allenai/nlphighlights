@@ -2,7 +2,7 @@
 title: "Classical Structured Prediction Losses for Sequence to Sequence Learning, with Sergey Edunov and Myle Ott"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Sergey Edunov","Myle Ott"]
-number: 053
+number: "053"
 tags: []
 description: TODO
 type: episode

@@ -2,7 +2,7 @@
 title: "Neural Network Models for Paraphrase Identification, Semantic Textual Similarity, Natural Language Inference, and Question Answering, with Wuwei Lan"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Wei Xu","Wuwei Lan"]
-number: 064
+number: "064"
 tags: []
 description: TODO
 type: episode

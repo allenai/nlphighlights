@@ -153,7 +153,7 @@ def convert_episode_to_markdown(episode_name, transcript_filename):
         episode_file.write(f'title: "{episode_name}"\n')
         episode_file.write(f'hosts: [{",".join(hosts)}]\n')
         episode_file.write(f'guests: [{",".join(guests)}]\n')
-        episode_file.write(f'number: {episode_number}\n')
+        episode_file.write(f'number: "{episode_number}"\n')
         episode_file.write('tags: []\n')
         episode_file.write('description: TODO\n')
         episode_file.write('type: episode\n')

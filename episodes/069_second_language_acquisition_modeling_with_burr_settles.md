@@ -2,7 +2,7 @@
 title: "Second language acquisition modeling, with Burr Settles"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Burr Settles","New Speaker"]
-number: 069
+number: "069"
 tags: []
 description: TODO
 type: episode

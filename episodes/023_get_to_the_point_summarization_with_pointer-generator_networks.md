@@ -2,7 +2,7 @@
 title: "Get To The Point: Summarization with Pointer-Generator Networks"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: []
-number: 023
+number: "023"
 tags: []
 description: TODO
 type: episode

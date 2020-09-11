@@ -2,7 +2,7 @@
 title: "Data-to-text generation, with Verena Rieser and Ondřej Dušek"
 hosts: ["Matt Gardner"]
 guests: ["Verena Rieser","Ondřej Dušek"]
-number: 108
+number: "108"
 tags: []
 description: TODO
 type: episode

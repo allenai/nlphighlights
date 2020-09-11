@@ -2,7 +2,7 @@
 title: "Neural models of factuality, with Rachel Rudinger"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Rachel Rudinger"]
-number: 068
+number: "068"
 tags: []
 description: TODO
 type: episode

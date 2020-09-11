@@ -2,7 +2,7 @@
 title: "Incidental Supervision: Moving beyond Supervised Learning, with Dan Roth"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Dan Roth"]
-number: 048
+number: "048"
 tags: []
 description: TODO
 type: episode

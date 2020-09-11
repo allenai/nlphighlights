@@ -2,8 +2,8 @@
 title: "Semantic Parsing, with Jonathan Berant"
 hosts: ["Waleed"]
 guests: ["Matt","Jonathan"]
-number: 091
-tags: []
+number: "091"
+tags: ["semantic parsing"]
 description: TODO
 type: episode
 ---

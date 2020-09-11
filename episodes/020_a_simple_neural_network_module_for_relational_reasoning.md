@@ -2,7 +2,7 @@
 title: "A Simple Neural Network Module for Relational Reasoning"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: []
-number: 020
+number: "020"
 tags: []
 description: TODO
 type: episode

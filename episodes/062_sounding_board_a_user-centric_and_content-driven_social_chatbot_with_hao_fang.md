@@ -2,7 +2,7 @@
 title: "Sounding Board: A User-Centric and Content-Driven Social Chatbot, with Hao Fang"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Hao Fang","New Speaker"]
-number: 062
+number: "062"
 tags: []
 description: TODO
 type: episode

@@ -2,7 +2,7 @@
 title: "Multi-modal transformers, with Mohit Bansal and Hao Tan"
 hosts: ["Matt Gardner","Pradeep Dasigi"]
 guests: ["Hao Tan","Mohit Banal"]
-number: 107
+number: "107"
 tags: []
 description: TODO
 type: episode

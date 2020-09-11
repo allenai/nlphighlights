@@ -2,7 +2,7 @@
 title: "Probabilistic Typology: Deep Generative Models of Vowel Inventories"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: []
-number: 030
+number: "030"
 tags: []
 description: TODO
 type: episode

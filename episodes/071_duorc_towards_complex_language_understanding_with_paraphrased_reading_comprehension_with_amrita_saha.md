@@ -2,7 +2,7 @@
 title: "DuoRC: Towards Complex Language Understanding with Paraphrased Reading Comprehension, with Amrita Saha"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Amrita Saha"]
-number: 071
+number: "071"
 tags: []
 description: TODO
 type: episode

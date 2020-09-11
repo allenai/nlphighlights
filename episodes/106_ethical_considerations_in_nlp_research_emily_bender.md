@@ -2,7 +2,7 @@
 title: "Ethical considerations in NLP research, Emily Bender"
 hosts: ["Pradeep Dasigi","Matt Gardner","Waleed Ammar"]
 guests: ["Emily Bender"]
-number: 106
+number: "106"
 tags: []
 description: TODO
 type: episode

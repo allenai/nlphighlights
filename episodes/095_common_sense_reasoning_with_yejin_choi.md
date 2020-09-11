@@ -2,7 +2,7 @@
 title: "Common sense reasoning, with Yejin Choi"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Yejin Choi","New Speaker"]
-number: 095
+number: "095"
 tags: []
 description: TODO
 type: episode

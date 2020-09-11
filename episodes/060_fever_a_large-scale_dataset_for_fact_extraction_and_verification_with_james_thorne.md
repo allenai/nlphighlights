@@ -2,7 +2,7 @@
 title: "FEVER: a large-scale dataset for Fact Extraction and VERification, with James Thorne"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["James Thorne","New Speaker"]
-number: 060
+number: "060"
 tags: []
 description: TODO
 type: episode

@@ -2,7 +2,7 @@
 title: "NLP for Truly Low Resource Languages, with Anders Søgaard"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Anders Søgaard"]
-number: 044
+number: "044"
 tags: []
 description: TODO
 type: episode

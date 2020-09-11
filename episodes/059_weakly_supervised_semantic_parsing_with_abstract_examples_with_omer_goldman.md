@@ -2,7 +2,7 @@
 title: "Weakly Supervised Semantic Parsing With Abstract Examples, with Omer Goldman"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Omer Goldman"]
-number: 059
+number: "059"
 tags: []
 description: TODO
 type: episode

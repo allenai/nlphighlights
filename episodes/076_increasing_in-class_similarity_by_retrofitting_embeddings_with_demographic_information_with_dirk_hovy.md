@@ -2,7 +2,7 @@
 title: "Increasing In-Class Similarity by Retrofitting Embeddings with Demographic Information, with Dirk Hovy"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Dirk Hovy"]
-number: 076
+number: "076"
 tags: []
 description: TODO
 type: episode

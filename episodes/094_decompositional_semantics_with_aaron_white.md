@@ -2,7 +2,7 @@
 title: "Decompositional Semantics, with Aaron White"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Aaron White"]
-number: 094
+number: "094"
 tags: []
 description: TODO
 type: episode

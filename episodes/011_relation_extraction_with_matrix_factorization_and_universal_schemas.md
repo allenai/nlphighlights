@@ -2,7 +2,7 @@
 title: "Relation Extraction with Matrix Factorization and Universal Schemas"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: []
-number: 011
+number: "011"
 tags: []
 description: TODO
 type: episode

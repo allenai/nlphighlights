@@ -2,7 +2,7 @@
 title: "Large Teams Develop, Small Groups Disrupt, with Lingfei Wu"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Lingfei Wu"]
-number: 084
+number: "084"
 tags: []
 description: TODO
 type: episode

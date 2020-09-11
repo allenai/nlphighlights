@@ -2,7 +2,7 @@
 title: "Neural Lattice Language Models, with Jacob Buckman"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Jacob Buckman"]
-number: 063
+number: "063"
 tags: []
 description: TODO
 type: episode

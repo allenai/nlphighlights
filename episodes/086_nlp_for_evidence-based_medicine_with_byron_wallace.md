@@ -2,7 +2,7 @@
 title: "NLP for Evidence-based Medicine, with Byron Wallace"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["New Speaker","Byron Wallace"]
-number: 086
+number: "086"
 tags: []
 description: TODO
 type: episode

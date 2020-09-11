@@ -2,7 +2,7 @@
 title: "Brendan O'Connor"
 hosts: ["Pradeep Dasigi","Matt Gardner","Waleed Ammar"]
 guests: ["Brendan O'Connor"]
-number: 103
+number: "103"
 tags: []
 description: TODO
 type: episode

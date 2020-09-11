@@ -2,7 +2,7 @@
 title: "Typologically diverse, multi-lingual, information-seeking questions, with Jon Clark"
 hosts: ["Waleed Ammar","Matt Gardner"]
 guests: ["Jon Clark"]
-number: 111
+number: "111"
 tags: []
 description: TODO
 type: episode

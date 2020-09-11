@@ -2,7 +2,7 @@
 title: "Event Representations with Tensor-based Compositions, with Niranjan Balasubramanian"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Niranjan B."]
-number: 065
+number: "065"
 tags: []
 description: TODO
 type: episode

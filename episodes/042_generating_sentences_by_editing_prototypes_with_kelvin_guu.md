@@ -2,7 +2,7 @@
 title: "Generating Sentences by Editing Prototypes, with Kelvin Guu"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Kelvin Guu"]
-number: 042
+number: "042"
 tags: []
 description: TODO
 type: episode

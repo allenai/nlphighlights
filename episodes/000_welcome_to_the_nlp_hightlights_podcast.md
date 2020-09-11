@@ -2,7 +2,7 @@
 title: "Welcome to the NLP Hightlights Podcast"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: []
-number: 000
+number: "000"
 tags: []
 description: TODO
 type: episode

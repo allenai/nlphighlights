@@ -2,7 +2,7 @@
 title: "Structured Attention Networks, with Yoon Kim"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Yoon Kim"]
-number: 026
+number: "026"
 tags: []
 description: TODO
 type: episode

@@ -2,7 +2,7 @@
 title: "End-to-end Differentiable Proving, with Tim"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Tim Rocktäschel"]
-number: 019
+number: "019"
 tags: []
 description: TODO
 type: episode

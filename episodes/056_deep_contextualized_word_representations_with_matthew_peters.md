@@ -2,7 +2,7 @@
 title: "Deep contextualized word representations, with Matthew Peters"
 hosts: ["Waleed","Matt Gardner","Waleed Ammar"]
 guests: ["Matthew Peters"]
-number: 056
+number: "056"
 tags: []
 description: TODO
 type: episode

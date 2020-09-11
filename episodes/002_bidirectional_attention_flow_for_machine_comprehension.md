@@ -2,7 +2,7 @@
 title: "Bidirectional Attention Flow for Machine Comprehension"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: []
-number: 002
+number: "002"
 tags: []
 description: TODO
 type: episode
