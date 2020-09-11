@@ -1,5 +1,5 @@
 {
-    "appName": "nlp-highlights",
+    "appName": "nlphighlights",
     "httpPort": 8000,
     "contact": "mattg",
     "team": "allennlp"

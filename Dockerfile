@@ -14,7 +14,7 @@ COPY gatsby-node.js .
 COPY meta.json .
 
 COPY static/ static/
-COPY chapters/ chapters/
+COPY episodes/ episodes/
 
 RUN npm run build
 
