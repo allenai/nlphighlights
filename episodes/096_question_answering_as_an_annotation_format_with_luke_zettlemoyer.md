@@ -8,73 +8,73 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="">
+<turn speaker="Matt Gardner" timestamp="">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting work in natural
 language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="">
+<turn speaker="Waleed Ammar" timestamp="">
 
 This is Matt Gardner and Waleed Ammar, we are research scientists at the Allen Institute for
 artificial intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="">
+<turn speaker="Matt Gardner" timestamp="">
 
 All right. Today I have two new people to introduce because we are adding a new co-hosts to the NLP
 highlights podcast Waleed and I for a few reasons, decided it would be good to have a third person
 helping us. So we've asked Pradeep Dasigi who is also a research scientist at AI-2 to join us as a
 co-host. Pradeep welcome.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="">
+<turn speaker="Pradeep Dasigi" timestamp="">
 
 Thank you. Hello everyone. It's great to be here.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="">
+<turn speaker="Matt Gardner" timestamp="">
 
 Do you want to introduce yourself very briefly?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="">
+<turn speaker="Pradeep Dasigi" timestamp="">
 
 Sure. I'm a research scientist AI-2. I've mostly been working on question/answering and semantic
 parsing kind of problems. I've been a regular listener of this podcast and I'm really happy and
 excited to be part of this now.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="">
+<turn speaker="Matt Gardner" timestamp="">
 
 Great. We're glad to have you. And today our guest is Luke Zettlemoyer. Luke is a professor at the
 university of Washington and the scientist at Facebook AI research in Seattle and I had the pleasure
 of working with him for about a year at AI-2 when he was here. Luke, it's really great to have you
 on the program.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Luke Zettlemoyer" timestamp="">
+<turn speaker="Luke Zettlemoyer" timestamp="">
 
 Thank you very much, I'm super excited to chat about some stuff.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="">
+<turn speaker="Matt Gardner" timestamp="">
 
 Yeah. I guess today at the topic I wanted to talk about with you is something that I guess you
 influenced my thinking on very heavily and this is how we can use question answering it as an
@@ -84,10 +84,10 @@ focused on open domain, factoid QA or semantic parsing, which you, Luke have a l
 but more recently it's been used for other things including as I believe you introduced this; as an
 annotation format. Do you want to explain what you did here?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Luke Zettlemoyer" timestamp="">
+<turn speaker="Luke Zettlemoyer" timestamp="">
 
 Yeah. So I think that the idea is a little bit more general even than just QA, but we'll talk about
 it mostly in the QA context. And the idea is that often when you label a data set, you want to, you
@@ -100,10 +100,10 @@ between things. Then very carefully go and label and it requires a lot of expert
 training to do this right. And so what we were trying to think about is, you know, how could you get
 labeled data, but in a way that's much easier to train people to do.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Luke Zettlemoyer" timestamp="">
+<turn speaker="Luke Zettlemoyer" timestamp="">
 
 So the general theme is that you could say what I'm going to do is take this linguistic phenomena or
 this other thing that I want to try to label and I want to try to reduce it. Even if it's noisy, I
@@ -116,10 +116,10 @@ more complicated. But the idea is that with very little explanation you can get 
 closely matches what you're looking for in linguistics because people know how to do these other
 tasks.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Luke Zettlemoyer" timestamp="">
+<turn speaker="Luke Zettlemoyer" timestamp="">
 
 So this specific instance of this that we did was the QA SRL was the first version of it. And there
 it was semantic roles. So you know who did what to whom. And so, you know, if you have some sentence
@@ -130,10 +130,10 @@ all the possible relationships, you could just say who's giving an interview, wh
 on, when is the interview happening, these kinds of things. And the answers to those questions will
 directly correspond to different semantic relationships you might want to label.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="">
+<turn speaker="Matt Gardner" timestamp="">
 
 Yeah. So I guess we can think of this as using natural language to annotate instead of the
 formalism, right? So when you do this, there are going to be tradeoffs. So you mentioned you don't
@@ -142,10 +142,10 @@ people on what the, what, what the distinctions are that you might care about be
 Arg0 and Arg1, for instance in semantic role labeling. But it feels like you lose something there
 when you don't have that and you use language instead. Can you talk about these tradeoffs?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Luke Zettlemoyer" timestamp="">
+<turn speaker="Luke Zettlemoyer" timestamp="">
 
 Yeah, I think it's a, it's a really great point and there's always going to be trade offs and this
 case the philosophy was try to go as much as possible kind of ontology free. So we don't want to
@@ -162,10 +162,10 @@ have the same answer, but at least here are some words that can describe that re
 we can give that to someone later on that can think about how to make use of that as appropriate for
 what they want to do with it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="">
+<turn speaker="Matt Gardner" timestamp="">
 
 Yeah. I guess if, let's say I really want a distinction between the temporal arguments to SRL and
 maybe a causal argument, I don't know, maybe maybe this distinction is really important to me.
@@ -175,10 +175,10 @@ that the relationships will be labeled with language, but my downstream system, 
 make the actual distinction that I want to given the structure that I've recovered much more easily
 than I could have if I had just tried to do this distinction from scratch. Is that fair?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Luke Zettlemoyer" timestamp="">
+<turn speaker="Luke Zettlemoyer" timestamp="">
 
 I hope so. Yeah. I mean, I hope that's true. I think it's still largely untested at this point, but
 I think that's a good summary and this work was kind of happening, you know, in a different era of
@@ -189,10 +189,10 @@ need to get right, for example, for certain extraction tasks. In that, you know,
 embeddings or something else will actually allow you to do similarity and kind of sidestep a lot of
 the ontological issues. But again, you know, we're also punting, right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Luke Zettlemoyer" timestamp="">
+<turn speaker="Luke Zettlemoyer" timestamp="">
 
 So, you know, FrameNet is an example of a SRL, formalism where they do just a really great job of
 designing a really interesting ontology and you learn generalizations across different forms of
@@ -201,10 +201,10 @@ objects and you know, these kinds of things and you, and so, you know, conceptua
 ontology and it was perfect, you should be able to generalize better. Like you should be able to
 make use of it and we're missing that opportunity. So it's interesting in general.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="">
+<turn speaker="Matt Gardner" timestamp="">
 
 Yeah, I agree. I want to come back to this pre-training point and how this whole idea fits into the
 new world of ELMo and BERT, RoBERTa and all of this stuff. But before we get there, I think it'd be
@@ -212,10 +212,10 @@ interesting to talk about where else this applies, where else you've done it, wh
 take this general idea. So we've talked about QA SRL where you try to use question answering as an
 annotation format for semantic role labeling. You also have done QAMR, you would tell us about that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Luke Zettlemoyer" timestamp="">
+<turn speaker="Luke Zettlemoyer" timestamp="">
 
 So within predicate argument structure of a sentence. So they way you think about predicate argument
 structure or the way I think about it is, you know, like a little graph backbone of all the words
@@ -226,10 +226,10 @@ majority of it is focused on verbs. And so when we did the QA-SRL annotation, we
 possible questions that could be asked to set up templates, which designed very specifically to
 think about verbal predicate argument structure.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Luke Zettlemoyer" timestamp="">
+<turn speaker="Luke Zettlemoyer" timestamp="">
 
 Now where you would like to actually get sort of a more complete semantics for the whole graph.
 Think of something like an AMR or Hooker representation or something like that, but the QA-SRL has
@@ -241,10 +241,10 @@ appear in these semantic graphs through their very free choice of what questions
 answers to give. Julian Michael was really driving this work and he did a really great job of, you
 know, getting this to be crowdsourceable, being able to gather these annotations at scale.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Luke Zettlemoyer" timestamp="">
+<turn speaker="Luke Zettlemoyer" timestamp="">
 
 Again, this was actually done in a different modeling era. So one of the challenges there was just
 like how to model this really interesting complex data that you got out. There were issues of
@@ -254,19 +254,19 @@ weren't quite as good back then. I was quite challenging. So I actually think it
 revisiting now. Our models are so much better and you know, you can sort of have a fresh look at all
 of this, but that's kind of where that project was standing at the time.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="">
+<turn speaker="Pradeep Dasigi" timestamp="">
 
 So, right. You talked about QA-SRL and QAMR a, I guess going back to the idea of how general this
 formalism is are there at a high level, any limits on what kinds of linguistic phenomena? This
 formalism of question/answering can focus on?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Luke Zettlemoyer" timestamp="">
+<turn speaker="Luke Zettlemoyer" timestamp="">
 
 Yeah, that's a great question. I don't know the answer. I mean I think that going back to the
 original inspiration, I actually like to think of it as take a semantic phenomenon and then reduce
@@ -278,10 +278,10 @@ similarly. I mean you could argue about exactly what qualities the translation s
 people already know how to do that task. Actually, part of the motivation before pre-training was to
 get a lot of data.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Luke Zettlemoyer" timestamp="">
+<turn speaker="Luke Zettlemoyer" timestamp="">
 
 If you want to ever get a lot of data for a task, you need to reduce it to something that people
 already know how to do. Okay. And so you could take an extreme stance here, which I don't know if I
@@ -295,19 +295,19 @@ hopefully that were relationships between spans of texts could be done, but I do
 prove that. But more generally I hope that this idea would go far beyond that to kind of anything
 that's reducible to some tasks that we already know how to do.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="">
+<turn speaker="Matt Gardner" timestamp="">
 
 Yeah. I think the decompositional semantics initiative by Aaron White and Benjamin Van Durme and
 others, we interviewed Aaron White on the podcast a few episodes ago. I think that it's very much
 related to this idea that they're pushing on a few different areas of semantics that way.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Luke Zettlemoyer" timestamp="">
+<turn speaker="Luke Zettlemoyer" timestamp="">
 
 Yeah, I love that story. And it's, and one way to think about that is that it's more about like at
 least the earlier versions, I'm sure that generalized it, but it was a really nice idea of like what
@@ -316,10 +316,10 @@ we're more asking which spans of text should be connected by an edge and they're
 like what is the right set of labels and how do you decompose that space. And I think it's very
 complimentary. Like I was pretty excited when I saw that work for the first time.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="">
+<turn speaker="Matt Gardner" timestamp="">
 
 Right. Jumping back to QAMR a little bit, just to give a concrete example of this. So semantic role
 labeling is verbs largely and what nouns attach to the verbs, and as you said, QAMR tries to do more
@@ -327,10 +327,10 @@ general structures. One example of this might be Facebook scientists, Luke Zettl
 larger sentence, but you would questions just about that noun phrase, right? What kinds of things
 might you see?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Luke Zettlemoyer" timestamp="">
+<turn speaker="Luke Zettlemoyer" timestamp="">
 
 Right? So I think you would see things like, you know, what's a Luke's job or what kind of job does
 he have? So more what kind of questions? In general, you know noun, noun compounds often have very
@@ -345,10 +345,10 @@ popped out with that data and you see it also in all kinds of other situations, 
 noun compounds where you have implicit relationships that aren't explicitly specified with the word.
 So that was pretty cool.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="">
+<turn speaker="Matt Gardner" timestamp="">
 
 Yeah. I guess earlier we brought up trade offs between formalism based annotation and natural
 language based annotation and one nice thing that you get from QAMR is this flexibility that the
@@ -357,10 +357,10 @@ capture in a formalism. How do you even write down a formalism that says like th
 employment relationship? I guess you could try to characterize all possible noun compound
 relationships but...
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Luke Zettlemoyer" timestamp="">
+<turn speaker="Luke Zettlemoyer" timestamp="">
 
 There is some great work for sure on a bunch of really nice papers I'm doing noun noun compounds. I
 think Vered Shwartz has done some really great work in that area. I just happen to know her work.
@@ -369,28 +369,28 @@ that. But I do think that there's a potential to be more scalable when using nat
 ontology because you don't have to specify that. You can sort of explore it as you go and see what
 falls out.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="">
+<turn speaker="Matt Gardner" timestamp="">
 
 Right. And and language is productive. People come up with new uses for these things like Watergate
 and how that turned into Pizzagate and all kinds of other gates and like there's new stuff that's
 just going to be hard to fit into an ontology no matter what you do. And so that, that's really a
 really nice thing about using language itself as an annotation format.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Luke Zettlemoyer" timestamp="">
+<turn speaker="Luke Zettlemoyer" timestamp="">
 
 Yeah. And again, you know, ontologys are useful. So you are giving something up but then you're
 getting some flexibilities. I totally agree.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="">
+<turn speaker="Pradeep Dasigi" timestamp="">
 
 Right. So that's one advantage of using QA as a format, right. You get more information from the
 annotators. Are there any other advantages in terms of how you can use that data? Does say QSRL open
@@ -398,10 +398,10 @@ up new avenues for using the data that you're getting or building models using t
 of data for example, can you pretrain question answering a model on QARSL and use it for other
 downstream tasks? Other advantages like that?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Luke Zettlemoyer" timestamp="">
+<turn speaker="Luke Zettlemoyer" timestamp="">
 
 Yeah, I mean, that's a great question. We should investigate the pre-training avenues more. We
 haven't done enough of that. That would be the sort of dream would be that you could scaffold BERT
@@ -413,10 +413,10 @@ structure. But another interesting angle beyond just kind of core numbers on tas
 interpretability too. So you know, if you'd like to be able to express to users what relationships
 you think exist in a text and natural language is a pretty natural way to do that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Luke Zettlemoyer" timestamp="">
+<turn speaker="Luke Zettlemoyer" timestamp="">
 
 So if your models can predict in this space, maybe you know, maybe they can better explain why
 they're sort of making predictions they're making. And we did some very small version of this last
@@ -429,19 +429,19 @@ correct, conceivably you could even show me your predictions. I can learn from, 
 interesting sort of interaction that can happen. I still haven't given up on like moving the core
 numbers, but I also think there's other ways of thinking about the usefulness.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="">
+<turn speaker="Matt Gardner" timestamp="">
 
 So I know that you also had a project, a at least briefly trying to get this same question answering
 as annotation, idea working for co reference resolution. But I think you ran into a bunch of
 challenges there. Do you want to tell us about this?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Luke Zettlemoyer" timestamp="">
+<turn speaker="Luke Zettlemoyer" timestamp="">
 
 Yeah, that's a great question. I really like thinking about sort of how to push this in different
 directions. We sort of just did some preliminary piloting. We didn't ever try to like launch a full
@@ -452,10 +452,10 @@ QA, they just do, right? So if you say, you know, "Luke is excited that he's hav
 then you know, say who's having an interview, they're not going to answer he, they're going to
 answer Luke.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Luke Zettlemoyer" timestamp="">
+<turn speaker="Luke Zettlemoyer" timestamp="">
 
 Right. So one of the small tweaks we had to do in the original data annotation was to train people
 to answer in pronouns, not antecedents. So it turns out that you know, this just happens naturally
@@ -467,10 +467,10 @@ it's a pretty exciting direction. Something that we would still like to work on 
 studies kind of showed that it does work, but you have to be a little bit careful about exactly
 which questions you ask and think about how to do it scalably and so forth.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Luke Zettlemoyer" timestamp="">
+<turn speaker="Luke Zettlemoyer" timestamp="">
 
 And there's another caveat, which is that co-reference is a very complex phenomenon and the types of
 co-reference that are on ontonotes, I mean ontonotes has done a great job. That's our reference data
@@ -480,10 +480,10 @@ co-reference and other things that happen that would, you know, potentially just
 formulation. That'd be great. But it would be maybe harder to map it back to what we already know,
 which is, you know, pluses and minuses to that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="">
+<turn speaker="Matt Gardner" timestamp="">
 
 Yeah, definitely. I remember reading a paper a long time ago by a Marta Recasens and Ed Hovy and
 maybe others about near identity coreference relationships and how it's really hard to define even
@@ -492,10 +492,10 @@ it really seems like it'd be useful to use natural language as an annotation for
 have to box yourself in too much with the formalism that might not capture what's actually going on
 in the language.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Luke Zettlemoyer" timestamp="">
+<turn speaker="Luke Zettlemoyer" timestamp="">
 
 Yeah, I think it's super exciting. I mean you could argue that as it field in general, we should be
 trying to push more of the boundaries of the task definitions. You know, in many ways the tasks
@@ -506,19 +506,19 @@ which won't be too difficult, I don't think, to find, although it's always hard 
 So you know I have a lot of respect for people to make data sets, but I just mean that phenomenon
 there's lots of them.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="">
+<turn speaker="Matt Gardner" timestamp="">
 
 Talking about this co-ref and new datasets, harder problems. I think it's a good time to talk about
 some work that Pradeep did that I think is very related. You want to tell us briefly about co-ref
 and how this fits in.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="">
+<turn speaker="Pradeep Dasigi" timestamp="">
 
 Right. We built this new reading combination data set called Quoref. That's whit a Q, so it's a
 question answering dataset that uses co-reference resolution. So the ideas as Matt mentioned, it's
@@ -530,17 +530,17 @@ itself is a span selection question answering dataset very much tech SQuAD excep
 get to the answer for most of the questions you are required to resolve co-reference in the given
 context to get to the answers.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="">
+<turn speaker="Matt Gardner" timestamp="">
 
 As you were talking about your co-reference project, I think it's very similar to what we did here.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Luke Zettlemoyer" timestamp="">
+<turn speaker="Luke Zettlemoyer" timestamp="">
 
 The hope would be to try to get a more dense annotation would be one of our goals, but I really like
 what you did there balancing sort of the co-ref that you actually need to do QA, and that seems very
@@ -550,10 +550,10 @@ maybe we'll do some modeling there. We have also done a lot of work on just like
 and models for QA. And I think a big challenge right now in the field is, you know, how do you get
 more reasoning into these big deep learning models.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Luke Zettlemoyer" timestamp="">
+<turn speaker="Luke Zettlemoyer" timestamp="">
 
 And I hope that coref will be one of the cases where you can get something a little more explicit in
 some models or you know, if it's not some sort of interesting discrete reasoning, at least show that
@@ -563,10 +563,10 @@ sort of found your data pretty interesting. And something that I'll look at. You
 datasets now that have done various trying to encourage more reasoning, but I think there could be a
 lot, lot more.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="">
+<turn speaker="Matt Gardner" timestamp="">
 
 So this is something I've been thinking a whole lot about recently and I'm curious to know your
 thoughts Luke, I've been trying to figure out what it means to get a machine to actually read a
@@ -576,10 +576,10 @@ discourse parsing, but that's not really the same thing. Like what, what does it
 and how do we define this? And it seems like the only thing I can come up with is this idea that you
 have of question answering as annotation for various kinds of of Symantec phenomenon.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Luke Zettlemoyer" timestamp="">
+<turn speaker="Luke Zettlemoyer" timestamp="">
 
 I'm sure there's a lot of semantics you can't reduce to QA, just think about like sentiment types of
 things and sort of you know, complex sort of pragmatic implications and so forth. But it would
@@ -592,10 +592,10 @@ something I had thought about before that, but you know, I think we should, the 
 necessarily defined what understanding is, but sort of what the next level is and how can we jump
 five levels or how could we jump 10 levels, whatever that means.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Luke Zettlemoyer" timestamp="">
+<turn speaker="Luke Zettlemoyer" timestamp="">
 
 And I think one really nice way of doing that is, is designing ever more complex questions that seem
 to require more reasoning now, I think there's a trade off here, for example, they become arguably
@@ -607,17 +607,17 @@ because people can do it and it stresses the systems in different ways. And now 
 exactly what percentage and how to trade that off? I don't have good answer, so I think you know,
 it's, it's still quite interesting either way.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="">
+<turn speaker="Pradeep Dasigi" timestamp="">
 
 Can you say more about the distinction between those natural questions and unnatural questions,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Luke Zettlemoyer" timestamp="">
+<turn speaker="Luke Zettlemoyer" timestamp="">
 
 Maybe I can make an analogy to semantic parsing. If you look at all the semantic parsing datasets
 like that, especially the real old ones like geo query and stuff, you know, the questions would be
@@ -628,10 +628,10 @@ know you could do the counting and you could draw the circles on the map or what
 answer my question for me. Even if the questions are somewhat artificial and not things that people
 would normally ask, I'm still having systems be able to answer them. There's value in that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="">
+<turn speaker="Matt Gardner" timestamp="">
 
 I guess the way I think about this and shameless plug, I put a paper on archive and I have another
 one coming that are very related to this. There are different reasons you might want to use question
@@ -647,10 +647,10 @@ arbitrary questions about that paragraph to probe either another person's or a m
 understanding of that paragraph. And these can be arbitrarily complex if I want to really probe,
 understanding.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Luke Zettlemoyer" timestamp="">
+<turn speaker="Luke Zettlemoyer" timestamp="">
 
 I think that's a really nicely stated. And that you can understand more about what the models can do
 by doing that in a probing sense. Another thing I would also highlight, just to add a little bit to
@@ -665,20 +665,20 @@ formal questions, I don't think it matters too much. But you sort of in English 
 structured is you're looking for. And that hopefully is a friendlier interface than having to kind
 of understand the linguistics of what's going on.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="">
+<turn speaker="Matt Gardner" timestamp="">
 
 Yeah, definitely. Great. This has been really interesting. As a last topic, I think it'd be nice to
 come back to this contextualization idea in pre-training. How do you think the notion of getting
 data at scale with natural language annotations changes or fits into this idea of like we have these
 huge pre-trained language models and it still help?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Luke Zettlemoyer" timestamp="">
+<turn speaker="Luke Zettlemoyer" timestamp="">
 
 I have to be honest and say when we were doing this, you know, this sort of notion of pre-training
 wasn't even in my mind, but the deep learning was having a huge impact. Not as much in NLP as it is
@@ -690,10 +690,10 @@ mean sort of sometimes over lunch we'll sit with my vision friends and then ask 
 would the ImageNet of NLP be like? These all the self supervised training enough or like what if we
 actually had a large label dataset?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Luke Zettlemoyer" timestamp="">
+<turn speaker="Luke Zettlemoyer" timestamp="">
 
 What's the analogy to where it works other places I would dream, you know in my wildest dreams QARSL
 could be a part of that. I don't know if this is true, but I think it's a fun thought exercise. You
@@ -704,10 +704,10 @@ the field is already doing this a little bit with probing and so forth, but I th
 lot more of like really looking for tasks where things fail and trying to think about how to get
 that supervision as these models.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="">
+<turn speaker="Matt Gardner" timestamp="">
 
 Yeah, that's a good point. On the note of like what can and can't you learn from language modeling
 or masks, language modeling. I've had a few Twitter conversations with Emily Bender and others about
@@ -715,10 +715,10 @@ the linguistic theory of learning, meaning from form. And I guess linguists woul
 all I have is language modeling, there's probably a lot that I'm missing. And maybe there's room for
 getting more actual meaning by means of these additional annotations at scale.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Luke Zettlemoyer" timestamp="">
+<turn speaker="Luke Zettlemoyer" timestamp="">
 
 I have to believe that's true. Of course you could argue then you should go for, you know, cross
 modal and cross lingual. What we're actually doing in our research is saying, you know, go bigger
@@ -729,34 +729,34 @@ thinking about, you know, what's missing and what else we should be annotating. 
 there's all the interpretability angles and so forth too. It'd be really interesting to see how it
 goes. I'm still so hopeful that there's some more leverage to be had here.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="">
+<turn speaker="Matt Gardner" timestamp="">
 
 Have you been thinking about what's missing? What else we could get?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Luke Zettlemoyer" timestamp="">
+<turn speaker="Luke Zettlemoyer" timestamp="">
 
 No, I mean I don't, I don't have a good answer. I don't think we understand. I'm actually been
 mostly trying to think about how to design experiments to figure out what's missing rather than
 actually having any insight into what's missing yet. I just think sadly everything is so new that
 that's kind of where we are.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="">
+<turn speaker="Matt Gardner" timestamp="">
 
 I agree,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Luke Zettlemoyer" timestamp="">
+<turn speaker="Luke Zettlemoyer" timestamp="">
 
 But I hope that over the next few years we'll make some real progress on that. I have a little
 worried that the underlying pre-training is changing so quickly that we might need to take a pause
@@ -764,10 +764,10 @@ and see what, just kind of like probing the models now may not be relevant to th
 going to be out in nine months or 12 months. I'm not sure and maybe may not be. It makes me a little
 nervous.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="">
+<turn speaker="Matt Gardner" timestamp="">
 
 Going back to you mentioned Tom Dietterich's post. A lot of people have thought about this for a
 long time. I guess what we really need is a set of unit tests in some sense for different
@@ -775,10 +775,10 @@ capabilities. I think what we're doing now with these probes and building datase
 build unit tests. In some sense those tests will still be relevant no matter what the underlying
 models are.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Luke Zettlemoyer" timestamp="">
+<turn speaker="Luke Zettlemoyer" timestamp="">
 
 Yeah, I totally agree. I've actually even encouraged very students to think about, you know, pick
 your favorite linguistic phenomenon, get your friends together, label a few hundred examples,
@@ -787,33 +787,33 @@ if it is, then that's kind of cool and that's a finding and if it's not, that's 
 actually an opportunity to try to improve it and suddenly you're doing science and not just
 engineering, like no matter the outcome. It's kind of interesting.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="">
+<turn speaker="Matt Gardner" timestamp="">
 
 I agree.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Luke Zettlemoyer" timestamp="">
+<turn speaker="Luke Zettlemoyer" timestamp="">
 
 I think that would be a worthy goal. And you could imagine there's a lot of those kinds of projects
 to be done.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="">
+<turn speaker="Matt Gardner" timestamp="">
 
 Yup. It's a great time to be an LP. Yeah. Cool. This has been a really interesting conversation. Was
 there anything that you wanted to cover that we missed or any final thoughts?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Luke Zettlemoyer" timestamp="">
+<turn speaker="Luke Zettlemoyer" timestamp="">
 
 No, I'm just, you know, super excited I think it would be really interesting to see in the future,
 you know, how it all plays out with, you know, I'm sure there are plenty of people that believe that
@@ -824,25 +824,25 @@ small data setting is also quite interesting and arguably we should not forget t
 you know, you'd like to be able to do it quickly, you'd like to be able to do with little training.
 So, so I think that in a sort of lots of avenues where you can take this whole direction.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="">
+<turn speaker="Matt Gardner" timestamp="">
 
 Yeah. Great. Thanks Luke. This has been fun.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Luke Zettlemoyer" timestamp="">
+<turn speaker="Luke Zettlemoyer" timestamp="">
 
 Thank you.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="">
+<turn speaker="Pradeep Dasigi" timestamp="">
 
 Thanks Luke.
 
-</Turn>
+</turn>

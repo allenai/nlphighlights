@@ -159,9 +159,9 @@ def convert_episode_to_markdown(episode_name, transcript_filename):
         episode_file.write('type: episode\n')
         episode_file.write("---")
         for speaker, timestamp, text in turns:
-            episode_file.write(f'\n\n<Turn speaker="{speaker}" timestamp="{timestamp}">\n\n')
+            episode_file.write(f'\n\n<turn speaker="{speaker}" timestamp="{timestamp}">\n\n')
             episode_file.write(textwrap.fill(text, 100))
-            episode_file.write('\n\n</Turn>\n')
+            episode_file.write('\n\n</turn>\n')
 
 
 def parse_transcript_lines(transcript_lines: List[str]) -> List[Tuple[str, str, str]]:

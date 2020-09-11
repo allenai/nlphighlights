@@ -8,40 +8,40 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting work in natural
 language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is Matt Gardner and Waleed Ammar. We are research scientists at the Allen Institute for
 artificial intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:12">
+<turn speaker="Matt Gardner" timestamp="00:12">
 
 Today our guest is Jacob Buckman. Jacob did a master's degree in the language technologies Institute
 to CMU with Graham Neubig, he then did a Google AI residency and in a couple of weeks he will be
 starting a PhD program at Johns Hopkins to work with Jason Eisner, it's good to have you Jacob with
 us.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Buckman" timestamp="00:29">
+<turn speaker="Jacob Buckman" timestamp="00:29">
 
 Thanks so much for having me. Pleasure to be here.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:32">
+<turn speaker="Matt Gardner" timestamp="00:32">
 
 Today we are talking or we're talking about paper, got accepted to TACL called Neural Lattice
 Language Models. If you're familiar with language modeling, you would know that what we're trying to
@@ -51,10 +51,10 @@ neural network, like an LSTM that keeps a linear state and then tries to predict
 Jacob, you're introducing a lattice language model. What is this and how's it different from the
 linear LSTM?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Buckman" timestamp="01:07">
+<turn speaker="Jacob Buckman" timestamp="01:07">
 
 So the main motivation behind this is to include the sorts of inductive bias that lets us sort of
 intuitively understand that language does not happen one word at a time or one character at a time,
@@ -65,17 +65,17 @@ represent a sentence is one word at a time. You can think about that as a sort o
 for a flexible framework that allows all sorts of different lattice layouts that correspond to
 different inductive biases about the texts you're trying to model.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="01:59">
+<turn speaker="Matt Gardner" timestamp="01:59">
 
 Can you tell us what kind of inductive bias you're talking about here?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Buckman" timestamp="02:03">
+<turn speaker="Jacob Buckman" timestamp="02:03">
 
 Yeah. So the two we dive into in this work specifically one of them is this multi word token idea,
 where in general, the semantic content of a word is sometimes different. You know, in a non
@@ -90,19 +90,19 @@ single word level concept. So there's others that you've envisioned. But those a
 most, in my opinion, intuitively appealing versions of this model. But yeah, it can. It can be
 expanded to other cases as well.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="03:25">
+<turn speaker="Matt Gardner" timestamp="03:25">
 
 So what if I have a sentence like "I went to the white house" where here white house is something
 that has non compositional meaning in the United States. How does your language model treat this
 differently than just a linear LSTM?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Buckman" timestamp="03:39">
+<turn speaker="Jacob Buckman" timestamp="03:39">
 
 So a linear LSTM would predict first the probability that you see the word. So after you know, "I
 walked into the," you then want to predict the probability that you have the word white and then
@@ -119,37 +119,37 @@ probability that we get at one word at a time as well as the probability that we
 and then the bigram of white house. And by adding those two probabilities together, we get the
 overall probability of producing this string as a whole.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="05:03">
+<turn speaker="Matt Gardner" timestamp="05:03">
 
 So then if I'm understanding this right, you're basically doing joint segmentation and language
 modeling. Is that what's going on where you're marginalizing over the segmentation?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Buckman" timestamp="05:12">
+<turn speaker="Jacob Buckman" timestamp="05:12">
 
 Exactly. in this particular lattice structure, you would be doing it jointly with a segmentation.
 But in contrast to, you know, standard segmentation tasks, we don't have ground truth segmentations.
 We let the neural models sort of learn which segmentations it implicitly prefers based on, you know,
 this sort of end to end perplexity optimization task.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="05:37">
+<turn speaker="Matt Gardner" timestamp="05:37">
 
 Nice. And how, how do you know which things are chunks, which things you should chunk together, I
 guess? I think there's been a lot of work on like finding colocations in this kind of stuff. How do
 you probe this way?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Buckman" timestamp="05:51">
+<turn speaker="Jacob Buckman" timestamp="05:51">
 
 So we don't explicitly do this chunking at any point. The model is smooth, continuous, fully
 differentiable. So we basically are training it to consider all possible segmentations at all times
@@ -160,51 +160,51 @@ of a, a best guessed Greedy Approximation and say, okay, if it were to simply pi
 assigned to the highest probability to and ignore all the others, which chunks would it pick? But
 that actually doesn't explicitly get segmented out during the language modeling process itself.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="06:50">
+<turn speaker="Matt Gardner" timestamp="06:50">
 
 So you said all possible segmentations. Say I have a sentence with N words. Are you really
 considering segments up to length N, this sounds very, very nasty,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Buckman" timestamp="07:02">
+<turn speaker="Jacob Buckman" timestamp="07:02">
 
 Right? So that would be exponential, it'd be an exponentially large set of possible segmentations if
 we were to actually explicitly do each one. But by using basically a little dynamic programming
 trick, it's possible to get a lot faster and calculate the overall perplexity of this
 marginalization without actually doing each individual segmentation by itself.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="07:29">
+<turn speaker="Matt Gardner" timestamp="07:29">
 
 So you're doing dynamic programming to marginalize over segmentation in the context of a language
 model. Is that a fair characterization of everything that's going on?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Buckman" timestamp="07:40">
+<turn speaker="Jacob Buckman" timestamp="07:40">
 
 Yup, 100%
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="07:41">
+<turn speaker="Waleed Ammar" timestamp="07:41">
 
 So this will take care of the computational difficulty or complexity about it will not take over the
 large number of parameters that you need to represent in this model,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Buckman" timestamp="07:51">
+<turn speaker="Jacob Buckman" timestamp="07:51">
 
 Right. So in this particular lattice you run into the second issue of even the tokens themselves, is
 an exponential number of these. So in order to handle that, we borrow from sort of the simultaneous
@@ -218,20 +218,20 @@ language modeling machinery. But the general mathematical form of this model, fo
 talk about the multiple embeddings per word version of this model, doesn't in general require all of
 that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="09:02">
+<turn speaker="Waleed Ammar" timestamp="09:02">
 
 Well, so there's something I didn't quite get here. The original reason why we wanted to represent
 white house together because we think it's a different concept and we don't think it's compositional
 in meaning to add up or to compose the position of white and house. However, that's exactly how
 you're computing yet. Or maybe I misunderstood,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Buckman" timestamp="09:24">
+<turn speaker="Jacob Buckman" timestamp="09:24">
 
 Right, no, you're, you're 100% correct. So the one other piece that that fits into all this is we
 actually do have a finite number of non compositional embeddings as well, and when actually let's
@@ -247,10 +247,10 @@ good job of capturing a lot of the non-com positionality that we want to see and
 for future research. Is allocating these non compositional embeddings in a more useful or
 intelligent way rather than sort of just doing this ad hoc and gram approach.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="10:48">
+<turn speaker="Matt Gardner" timestamp="10:48">
 
 On the other hand, frequency based collocations actually seem like they make a lot of sense. I was
 just at ACL and Ryan Cotterell will give a talk about tradeoffs in linguistic complexity that made
@@ -261,18 +261,18 @@ very frequently seeing context. Otherwise new learners just won't be exposed to 
 will find the non-competition meeting. So you're right that there are better things that you can do
 than just frequency. It's not a bad first approximation.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Buckman" timestamp="11:37">
+<turn speaker="Jacob Buckman" timestamp="11:37">
 
 Right? Yeah, that was, that was our interpretation going into it as well. Especially in this
 specific lattice of multiple word tokens. It seemed reasonable.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="11:48">
+<turn speaker="Matt Gardner" timestamp="11:48">
 
 Okay. So then summarizing again you're doing a joint segmentation and language modeling and the
 benefit that you're hoping is that you can memorize some non compositional stuff into the, when you,
@@ -282,10 +282,10 @@ like doing this joint segmentation and language modeling must've been done befor
 a paper off the top of my head, but so is your contribution figuring out how to do this with an LSTM
 like with in the neural setting? Or has this really not been done before?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Buckman" timestamp="12:25">
+<turn speaker="Jacob Buckman" timestamp="12:25">
 
 So there's been, there's been a lot of it somewhat similar work. This end to end modeling at the
 multiple word level has not been done in this form before. And also the generalization to other,
@@ -295,10 +295,10 @@ way of representing this type of problem that emerges all over the place. When y
 linguistic intuition that doesn't correspond well to the, you know, one word at a time LSTM
 paradigm.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="13:03">
+<turn speaker="Matt Gardner" timestamp="13:03">
 
 So then your contribution then is figuring out, or at least part of it is figuring out how to get
 this to work in a lattice with neural techniques, right? So the complication here is that in a
@@ -307,10 +307,10 @@ lattice structure which will, it's like a directed graph and it will allow multi
 LSTM cell every time step you have to figure out how to handle that. You're going to want to explain
 this issue and figure it out. Tell us about how you solved it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Buckman" timestamp="13:32">
+<turn speaker="Jacob Buckman" timestamp="13:32">
 
 Yeah, absolutely. So as you, as you summarize very well, the key issue is that even if we can
 marginalize over the probabilities of a certain prefix of the lattice, which allows us to calculate,
@@ -324,10 +324,10 @@ best approximate this hidden state. So rather than having the true hidden state 
 exponentially many histories, we have a single hidden state that summarizes or approximates all the
 different types of information we would get during the many possible histories we could have seen.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Buckman" timestamp="14:43">
+<turn speaker="Jacob Buckman" timestamp="14:43">
 
 And we let the backdrop sort of decide which of these histories information content to prioritize.
 White house for example. Maybe if you know the white house, the white house came earlier in the
@@ -342,19 +342,19 @@ having this a single historical chain of events that a standard LSTM holds is an
 in constructing these sorts of models. And in the paper we explore a couple of different ways to do
 this approximation and compare them against each other as well.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="15:59">
+<turn speaker="Matt Gardner" timestamp="15:59">
 
 And it looked like the best performing one that basically computes the kind of attention over the
 inputs and weights them accordingly. So at least it gets a probability distribution that a lot of
 people think of these days. It's kind of like an attention,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Buckman" timestamp="16:15">
+<turn speaker="Jacob Buckman" timestamp="16:15">
 
 Right? It's very similar in that we're basically saying given a certain pre-fixed we know which
 chains of words are most likely to have gotten us here. So we know for example, whether at this
@@ -364,17 +364,17 @@ hidden sates that are generated by those two possibilities in proportion to the 
 actually reached this point. By going through that token, we ended up seeing the best performance
 out of the techniques we tried.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="16:49">
+<turn speaker="Matt Gardner" timestamp="16:49">
 
 So how big are these lattices? This sounds like it could really, really slow down language modeling.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Buckman" timestamp="16:54">
+<turn speaker="Jacob Buckman" timestamp="16:54">
 
 Yeah. And it certainly does, which is, which is definitely a weakness. One of the actual biggest
 issues is in terms of computational efficiency is the fact that we actually need to have the same
@@ -388,38 +388,38 @@ a bit slower, but it does correspond to a small amount of gains in perplexity ev
 the additional parameters into account. The bigger issue is just, you know, the runtime as well as
 fitting it on the GPU if you want to use a larger model.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="18:02">
+<turn speaker="Matt Gardner" timestamp="18:02">
 
 Yeah. we, we very often make tradeoffs performance versus runtime. Right. So it's, that's not a
 problem. I'm just curious. So how much is, is it actually slower? How much slower? Do you have the
 number?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Buckman" timestamp="18:13">
+<turn speaker="Jacob Buckman" timestamp="18:13">
 
 Yeah, so looking at the baseline LSTM, vanilla LSTM, the largest model, which is sort of the state
 of the art sized LSTM takes about half a second per batch and running a bigram lattice of this size
 takes about four and a half seconds per batch. So about nine times slower. So definitely a
 significant slow down there.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="18:35">
+<turn speaker="Matt Gardner" timestamp="18:35">
 
 I guess it's not as bad as it could be, but that is still quite slow down. Interesting. We haven't
 talked too much about the Multi sense lattices. Our examples have been about the collocations like
 white house. Can you give some more details on how you do the multi sense version?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Buckman" timestamp="18:53">
+<turn speaker="Jacob Buckman" timestamp="18:53">
 
 So in terms of marginalization, the idea is very similar and that we have sort of multiple possible
 ways we could have rolled out this sentence besides one word at a time. And we want to marginalize
@@ -434,51 +434,51 @@ of those. And what we do is we send the probability of predicting bank river and
 institution and by adding, those two probabilities together, you get the overall probability
 predicting that, that sequence of tokens again.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="20:06">
+<turn speaker="Matt Gardner" timestamp="20:06">
 
 Okay. So before you had something that looked a lot more like a directed a cyclic, like there was a
 lot more dense. I've had connections in this lattice going more places. But here basically you have
 a linear chain, but at every step you have to have two different arrows to the next node. Is that
 fair? So very difficult and very different kind of lattice.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Buckman" timestamp="20:28">
+<turn speaker="Jacob Buckman" timestamp="20:28">
 
 The math and most of the code works out exactly the same.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="20:33">
+<turn speaker="Matt Gardner" timestamp="20:33">
 
 Interesting. Can you combine these two? Does that work?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Buckman" timestamp="20:36">
+<turn speaker="Jacob Buckman" timestamp="20:36">
 
 You certainly can, but unfortunately it requires a lot of memory and time because of course you're
 doing now, let's say you have two different possible meanings for each bigram or for each trigram.
 Now you just have a absolutely enormous amount of things to consider. Essentially and it blows up to
 the point where I didn't attempted in this work.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="21:02">
+<turn speaker="Matt Gardner" timestamp="21:02">
 
 So how well does all of this work? You want to tell us about the experiments that you ran?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Buckman" timestamp="21:06">
+<turn speaker="Jacob Buckman" timestamp="21:06">
 
 Yeah, absolutely. So I ran a several experiments on both English and Chinese data. The English
 language experiments came from the billion word Corpus and the Chinese language experiments came
@@ -491,10 +491,10 @@ qualitatively or so to, to give some numbers on English using multiple embedding
 the perplexity from a 48 down to 43 points. And on the Chinese task, it goes from a 40.2 32 point
 baseline when using multi token chunks.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Buckman" timestamp="22:22">
+<turn speaker="Jacob Buckman" timestamp="22:22">
 
 And so one thing that's interesting is that on English, where you sort of have these spaces
 elimiting things already, but you have a larger amount of publicity, you actually see much bigger
@@ -504,19 +504,19 @@ chunks, you actually see much bigger gains from modeling these in a multi token 
 this is sort of very well aligned with our expectations and it's, it's it was cool to see it work
 out like that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="23:03">
+<turn speaker="Matt Gardner" timestamp="23:03">
 
 Nice. That, yeah, that's interesting and you got some, I was a little bit interested surprised by
 what I saw in your qualitative discussion where you actually looked at what sense is the model
 learned? Can you tell us about what you found here?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Buckman" timestamp="23:18">
+<turn speaker="Jacob Buckman" timestamp="23:18">
 
 Yeah, absolutely. It was a bit surprising to be honest. Somewhat disappointing to me too. But after
 thinking about it a bit, it's sort of makes sense. So the unintuitive finding here here was that
@@ -529,10 +529,10 @@ provide multiple initializations so initialize a different places so they, their
 are different and we let the model learn end to end how best to represent information in these
 different embeddings to capture the maximum amount of probability of the training distribution.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Buckman" timestamp="24:25">
+<turn speaker="Jacob Buckman" timestamp="24:25">
 
 So what we would expect, right? It sort of what I described before, if do have two embeddings for
 bank, then you want one of them to be embedding for bank, the financial institution and one of the
@@ -545,10 +545,10 @@ Japan. And that is the only time in the entire Corpus this data, that this embed
 of bank as used every other sense of bank including it's a bank holiday, which corresponds to the
 same semantic sense of bank as the previous example.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Buckman" timestamp="25:26">
+<turn speaker="Jacob Buckman" timestamp="25:26">
 
 All of these get bundled up in the other version of the bank embedding. And what this sort of means
 is that the model given the flexibility to do so chooses to overfit to sort of these syntactic
@@ -560,10 +560,10 @@ syntactic context than we often would like to believe. We often would like to be
 capturing some deep semantic in summation and these results sort of indicate that that may not be
 completely true.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="26:22">
+<turn speaker="Matt Gardner" timestamp="26:22">
 
 Yeah, I thought this was super interesting. I hadn't really thought about this before. Your paper
 had made me think a lot, which is a great thing and I, it made me think of why this entropy loss in
@@ -575,10 +575,10 @@ that instance, which is the most frequent instance. And then just use the other 
 all the rest, which is, it's kind of obvious when you like think about the math, but it's not
 something you would think about without seeing this. It's fascinating,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Buckman" timestamp="27:12">
+<turn speaker="Jacob Buckman" timestamp="27:12">
 
 Right? Yeah, it was. It was pretty surprising to me as well. Another thing that I found to be
 somewhat interesting is that certain words, there was only one mode, and this was actually, this
@@ -590,10 +590,10 @@ where if it can capture it in a single mode, it will, is happy to. It makes me i
 whether we could use this behavior to actually improve neuro lattice language models by dynamically
 assigning more or fewer embeddings by picking off one mode at a time.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Buckman" timestamp="28:05">
+<turn speaker="Jacob Buckman" timestamp="28:05">
 
 So in that sense, even though it's a bit disappointing to see it taking this, you know, as you said,
 this, this optimizing cross entropy in an in a, in a way that doesn't help us semantically, I'd be
@@ -604,27 +604,27 @@ unique modes. Of course, one semantic meaning would still have multiple modes fr
 syntactic contexts, most likely. But maybe we could do a, another form of clustering after that to
 group them together. That's a future direction of research potentially.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="28:48">
+<turn speaker="Matt Gardner" timestamp="28:48">
 
 Yeah. Interesting. Were there other cases besides just rodham that that only had a single sense that
 seems like pretty rare? Like you would only get this for very rare words.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Buckman" timestamp="29:01">
+<turn speaker="Jacob Buckman" timestamp="29:01">
 
 Yeah. So it took me a bit of digging to find it. I believe there were some other ones, but I
 unfortunately forgot what they were. That was the example I included in the paper. But but right, as
 you said, it's only very, rare very, unusual words. I think they were all names of people or places.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="29:19">
+<turn speaker="Matt Gardner" timestamp="29:19">
 
 Yeah. I had another conversation at ACL recently thinking about like using language models to do
 word sense induction and looking at this paper makes me a little bit skeptical that that will work
@@ -632,41 +632,41 @@ like we want it to. Right. Because we're a lot more likely to find syntactic sen
 senses. And I'm, I'm sure people that work on word sense induction. I have found this out at one
 time ago. It's just new to me.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Buckman" timestamp="29:44">
+<turn speaker="Jacob Buckman" timestamp="29:44">
 
 Yeah, it was new to me as well. Yeah.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="29:46">
+<turn speaker="Matt Gardner" timestamp="29:46">
 
 Interesting. Great. Jacob, thanks. This has been a really interesting conversation. Do you have any
 last thoughts before we conclude?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Buckman" timestamp="29:52">
+<turn speaker="Jacob Buckman" timestamp="29:52">
 
 Yeah. I just want to say thank you so much for having me. I'm excited it to see what did this sort
 of research goes.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Buckman" timestamp="29:58">
+<turn speaker="Jacob Buckman" timestamp="29:58">
 
 Great. Thanks for coming on. It's nice talking to you.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Buckman" timestamp="30:01">
+<turn speaker="Jacob Buckman" timestamp="30:01">
 
 You as well. Have a good one.
 
-</Turn>
+</turn>

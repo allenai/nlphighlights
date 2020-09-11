@@ -8,38 +8,38 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Pradeep Dasigi" timestamp="00:00">
+<turn speaker="Pradeep Dasigi" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting work in natural
 language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed" timestamp="00:06">
+<turn speaker="Waleed" timestamp="00:06">
 
 This is Matt Gardner and Waleed Amar. We are research scientists at the Allan Institute for
 artificial intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="00:12">
+<turn speaker="Pradeep Dasigi" timestamp="00:12">
 
 Hello, everyone. This episode's guest is Jonathan Frankel who is a PhD student at MIT. Welcome to
 the podcast episode Jonathan.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Franke" timestamp="00:19">
+<turn speaker="Jonathan Franke" timestamp="00:19">
 
 Thank you so much for having me.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="00:20">
+<turn speaker="Pradeep Dasigi" timestamp="00:20">
 
 Today. We are talking about the Lottery Ticket hypothesis. This work has been quite popular lately.
 After the original paper was published, sometime last year, there's been a lot of follow up work in
@@ -47,10 +47,10 @@ this area. We decided to chat with Jonathan about the Lottery Ticket hypothesis 
 provincially some of the followup work that's come out after the pruning paper was written.
 Jonathan, can you tell us about what exactly the Lottery Ticket hypothesis is?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Franke" timestamp="00:42">
+<turn speaker="Jonathan Franke" timestamp="00:42">
 
 First, just a little bit of context on why this works. It's important to understand the motivation,
 so we already know that the neural networks that we usually train are much larger than they have to
@@ -64,10 +64,10 @@ those extra connections in order for the model to learn? Was it that perhaps the
 requires a lot of capacity, but actually representing the final function requires very little
 capacity.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Franke" timestamp="01:30">
+<turn speaker="Jonathan Franke" timestamp="01:30">
 
 And so the goal of this work was to try to understand can we train these smaller models from the
 start? Now there've been previous experiments that have shown that if you take the model
@@ -80,10 +80,10 @@ pruned architecture, set each connection back to its original value, maybe that 
 differently. And we found that in the end that actually learns very effectively, well past the point
 where randomly initializing the sparse model causes it to reach lower and lower accuracy.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Franke" timestamp="02:14">
+<turn speaker="Jonathan Franke" timestamp="02:14">
 
 Using the original initialization for each connection causes it to get much better accuracy. And the
 hypothesis is, in a sense, a generalization of that phenomenon. We hypothesize perhaps in general
@@ -93,19 +93,19 @@ characterizes the empirical results that we found. It's, you know, not a theory,
 the universe. We don't have a proof for it, but it was a way of summarizing all of our observations
 on a pretty wide range of vision networks.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="02:46">
+<turn speaker="Pradeep Dasigi" timestamp="02:46">
 
 Thanks. That's a great summary. Thanks for also telling us the motivation behind the Lottery Ticket
 hypothesis. You mentioned pruning the network and finding sub networks within the larger network.
 Can you tell us about how exactly that pruning would work?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Franke" timestamp="03:00">
+<turn speaker="Jonathan Franke" timestamp="03:00">
 
 There are a lot of different strategies for pruning neural networks. If you can imagine a strategy,
 somebody who's published a paper on it, but the simplest way of putting a neural network is to train
@@ -116,19 +116,19 @@ practice, this is one of the most effective ways to prune it's been popular as a
 going back to the 1980s. We extended that strategy and then ask the question, what if you take the
 sub network that you get by pruning and take each connection back to its original value?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="03:34">
+<turn speaker="Pradeep Dasigi" timestamp="03:34">
 
 You mentioned that that's one of the many techniques that people have tried. Can you briefly
 summarize to us what other options people have used in the past and how they compare to the
 magnitude pruning that you just mentioned?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Franke" timestamp="03:45">
+<turn speaker="Jonathan Franke" timestamp="03:45">
 
 I can definitely summarize the other options. I don't want to talk too much about the comparison
 just because it's one of the big challenges right now is that it's very hard to compare these
@@ -145,10 +145,10 @@ filter or convolutional channel in the context of our natural language processin
 be pruning an attention head and these sorts of structured printing approaches are actually very
 popular in practice.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Franke" timestamp="04:41">
+<turn speaker="Jonathan Franke" timestamp="04:41">
 
 The idea is that if you prune a network connection by connection, you get a sparse matrix in the end
 and the sparse matrices are less efficient on most modern hardware. Whereas if you prune in a more
@@ -156,19 +156,19 @@ structured way, you may still get dense matrices that simply have smaller dimens
 much more efficient on CPU's. So in practice, people tend to favor structured pruning approaches
 where possible because it'll get you better speed up and better efficiency.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="05:02">
+<turn speaker="Pradeep Dasigi" timestamp="05:02">
 
 Cool. Yeah, that sounds good. So going back to magnitude pruning, which is a technique that you used
 in most of your work, what you mentioned does sound a lot like dropout. Can you tell us a bit about
 how it compares to dropout?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Franke" timestamp="05:14">
+<turn speaker="Jonathan Franke" timestamp="05:14">
 
 There are two big differences. One is that you can imagine my lottery ticket experiment is taking
 place in two phases. The first phase is you train the whole network and the second phase is you
@@ -181,10 +181,10 @@ have connections coming and going like in dropout. And the other big differences
 the full model or I train the sparse model in drop out. You're somewhat always training a sparse sub
 network the entire time, but you're training a different sparse sub network every time.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="05:56">
+<turn speaker="Pradeep Dasigi" timestamp="05:56">
 
 Right. So, you described to us how exactly pruning works and what exactly you're trying to do here.
 Is there a formal definition or a formal statement for the hypothesis, the Lottery Ticket hypothesis
@@ -198,10 +198,10 @@ really an empirical phenomenon. It's a statement about the kinds of networks we 
 practice on the kinds of tasks we typically use in practice. Not a statement about neural networks
 universally.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed" timestamp="06:45">
+<turn speaker="Waleed" timestamp="06:45">
 
 Interesting. I was wondering, depending on that method that you use for pruning, you will end up
 with a different kind of sub network. Right, so like you said, if you prune individual connections,
@@ -209,10 +209,10 @@ you'll have a very sparse matrix, but the original size of completion would stay
 curious to know if you've seen more robust or more common shapes for these subnetworks that tend to
 be winning tickets?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Franke" timestamp="07:08">
+<turn speaker="Jonathan Franke" timestamp="07:08">
 
 Somewhat. It varies depending on not only the architecture and the task, but also how you optimize
 the network. So I'm always nervous to make general statements beyond. There are definitely patterns,
@@ -224,10 +224,10 @@ architecture or the initialization. That would be the Holy Grail in my opinion. 
 just create these sparse networks from scratch by looking at enough of these lottery tickets and so
 far that's been a challenging task for me to take on.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed" timestamp="07:46">
+<turn speaker="Waleed" timestamp="07:46">
 
 Got it. And in terms of the implication, is one of these pruning methods easier to use in practice?
 For example, all of the insights that people have been using somewhat as a whole on this hypothesis
@@ -236,10 +236,10 @@ parameters or some of the original model parameters. This way we make sure that 
 some of the of the winning tickets. Right. I was wondering if you have any insights on just
 practical considerations when considering which method, which pruning method to use.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Franke" timestamp="08:17">
+<turn speaker="Jonathan Franke" timestamp="08:17">
 
 I'm not sure there are too many practical insights with respect to pruning in general from a lottery
 ticket phenomenon. I think one of the big points of emphasis for me when I present the work is that
@@ -252,10 +252,10 @@ you find one for one vision task, you can reuse it for another vision task and t
 way of taking advantage of the fact that once you've found one of these good initializations, it may
 be useful beyond precisely the original task you used it for.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Franke" timestamp="09:02">
+<turn speaker="Jonathan Franke" timestamp="09:02">
 
 Another insight we found is that typically in pruning, after you've pruned the network, you've
 actually lost a bunch of accuracy because you've just damaged the function you learned. So, you have
@@ -266,18 +266,18 @@ there. We actually get better performance in terms of the sparsity of the pruned
 matches the accuracy of the original network. So there are some implications, but I don't think it
 was kind of a centerpiece of the work.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="09:34">
+<turn speaker="Pradeep Dasigi" timestamp="09:34">
 
 Right. I wanted to chat a bit about how exactly you implemented the pruning procedure and what
 exactly you did for the experiments. Can you describe to us how exactly pruning worked?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Franke" timestamp="09:44">
+<turn speaker="Jonathan Franke" timestamp="09:44">
 
 Once you train a network to completion, you just train it following whatever procedure is standard
 for that particular network. The next step is to prune it and I stated earlier that you prune the
@@ -289,10 +289,10 @@ longer works properly and that's been a concern in the literature dating back, I
 one solution people typically took was to prune the lowest, say 20% of weights in each layer, or
 pick your favorite percentage, but to prune each layer separately.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Franke" timestamp="10:26">
+<turn speaker="Jonathan Franke" timestamp="10:26">
 
 The idea being that perhaps the weights will have similar distributions by layer, but the
 distributions may not necessarily be related to each other between layers. That was at least the
@@ -309,51 +309,51 @@ surprising phenomenon. If you pick the exact right layer-wise proportions, you'l
 doing that requires a lot of hyper parameter search and in fact the silly thing to do ends up being
 the best thing to do, in our experience, which was a kind of weird surprise.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed" timestamp="11:29">
+<turn speaker="Waleed" timestamp="11:29">
 
 I'm curious to know how large are the networks that you used for these experiments?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Franke" timestamp="11:30">
+<turn speaker="Jonathan Franke" timestamp="11:30">
 
 In the original paper, we focused on small vision networks, so small, fully connected networks and
 convolutional networks for MNIST and CIFAR10. In follow up work, we've extended this to large-scale
 convolutional residual networks for image net. We've had to change the procedure a little bit in
 doing so, but I think we may chat about that later.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed" timestamp="11:47">
+<turn speaker="Waleed" timestamp="11:47">
 
 You don't need to do the pruning coordinator.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Franke" timestamp="11:50">
+<turn speaker="Jonathan Franke" timestamp="11:50">
 
 That's correct. We found that up to models like Resnet 50 and Inception on image net, you can just
 prune globally and you'll in fact beat state of the art performance that other pruning methods have
 gotten. We've even matched the performance of a very fancy pruning method that used reinforcement
 learning to select the layer wise pruning percentages, which was a very surprising finding.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed" timestamp="12:08">
+<turn speaker="Waleed" timestamp="12:08">
 
 Do you observe large differences in percentage of weights from different layers?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Franke" timestamp="12:12">
+<turn speaker="Jonathan Franke" timestamp="12:12">
 
 Definitely the differences are often dramatic. For example, in a VGG style network, just kind of a
 standard convolutional network with say, 19 layers, we'll see that the first layer, which is very
@@ -361,19 +361,19 @@ small, only about 30,000 parameters will maintain, let's say about a third of it
 two thirds of its parameters. The last layer, which is exceedingly large. Perhaps a couple of
 million parameters will get pruned by more than 99%
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed" timestamp="12:33">
+<turn speaker="Waleed" timestamp="12:33">
 
 I think this is our feeling, right, because we have no reason to think that all the layers need to
 have the same number of parameters and maybe this simple method is enough to find out how many we
 need for each layer after the fact.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Franke" timestamp="12:45">
+<turn speaker="Jonathan Franke" timestamp="12:45">
 
 Exactly. We actually found that we used to prune the networks by 20% for each layer, but for this
 kind of network it became a big problem when the first layer has 30,000 parameters and in the last
@@ -386,19 +386,19 @@ with batch normalization. It's a topic that we're definitely conversing about in
 and plan to follow up on shortly because we think this is an important question for trying to
 understand the nature of optimization. Really.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="13:25">
+<turn speaker="Pradeep Dasigi" timestamp="13:25">
 
 Before we go and talk about your experiments with large networks, can you tell us a bit more about
 your findings on the simpler models that you looked at in your initial paper? You looked at
 feedforward networks and convolution. Can you describe to us those experiments?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Franke" timestamp="13:40">
+<turn speaker="Jonathan Franke" timestamp="13:40">
 
 Definitely. By and large for MNIST and CIFAR 10 we found that running this lottery ticket
 experiment, will find very small sub networks that match the performance of the original network.
@@ -415,37 +415,37 @@ much worse, it always declines the sparser the network is. Whereas in the lotter
 networks actually sometimes improved in accuracy or at least maintained accuracy down to very
 extreme sparsities.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="14:38">
+<turn speaker="Pradeep Dasigi" timestamp="14:38">
 
 Just to be clear, when you say training faster, you're talking about reaching, at least stopping
 earlier, correct? Or stopping at an earlier interation, correct?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Franke" timestamp="14:47">
+<turn speaker="Jonathan Franke" timestamp="14:47">
 
 We measured early stopping by the iteration of minimum validation loss on a separate holdout
 validation set, but even if you just look at the training curves, you'll see that the curve for the
 lottery ticket goes up faster and plateaus sooner than the corresponding network and plateaus at
 about the same place.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="15:02">
+<turn speaker="Pradeep Dasigi" timestamp="15:02">
 
 Okay. I guess intuitively it makes sense to me that a smaller network would train faster, but I
 don't have a very good intuition for why the accuracies of the smaller network would be higher than
 the validation network. Do have some explanation for that?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Franke" timestamp="15:17">
+<turn speaker="Jonathan Franke" timestamp="15:17">
 
 We have kind of vague intuition, but I don't think we have anything scientifically backed right now.
 Now, this is not a phenomenon unique to lottery tickets. This is actually a phenomenon we see in
@@ -456,19 +456,19 @@ may have been doing memorization or something like that. And so we've given the 
 to generalize better. That could be one hypothesis, but it's not something we've investigated
 rigorously. So I wouldn't put that on paper and submit that anywhere right now.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="15:49">
+<turn speaker="Pradeep Dasigi" timestamp="15:49">
 
 Sure. So for your simpler experiments in your pruning paper, you experimented with a feed forward
 architecture and the convolutional architecture. Did you see any interesting trends between or
 differences between the two architectures in the Lottery Ticket hypothesis?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Franke" timestamp="16:04">
+<turn speaker="Jonathan Franke" timestamp="16:04">
 
 I recall that we saw some differences in behavior from pruning convolutions versus printing fully
 connected layers and some very small countnets. I don't actually recall off the top of my head what
@@ -480,19 +480,19 @@ experiments we didn't even prune the fully connected layer because it was so sma
 It might've been on the order of hundreds of parameters where the other layers were on the order of
 millions.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="16:39">
+<turn speaker="Pradeep Dasigi" timestamp="16:39">
 
 Okay. Yeah, that makes sense. Let's chat about scaling of these experiments to larger models and you
 have some follow up on scaling up the Lottery Ticket hypothesis to larger margins as well. Can you
 tell us what the challenges were in doing so?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Franke" timestamp="16:53">
+<turn speaker="Jonathan Franke" timestamp="16:53">
 
 Definitely, I mean the key challenge, just to be completely blunt, is that the original experiment
 doesn't work. Once you get to a certain model, complexity or task size, one could conjecture many
@@ -505,10 +505,10 @@ does actually scale up and I think each of those ways ends up providing some int
 into how deep learning works in general and a lot of what I'm going to discuss actually we haven't
 even put in archive yet.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Franke" timestamp="17:37">
+<turn speaker="Jonathan Franke" timestamp="17:37">
 
 We found that one way in the original paper getting around this challenge was to lower the learning
 rate for the network which reduces overall performance but allows this phenomenon to work again kind
@@ -540,10 +540,10 @@ different samples of STD noise and then we want to compare these networks someho
 much did SGD noise really affect the optimization process by giving us how different were these two
 networks.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Franke" timestamp="19:48">
+<turn speaker="Jonathan Franke" timestamp="19:48">
 
 One way of doing this might be to look at the L2 distance between the networks and parameter space.
 And this actually shows a trend where the L2 distance is very large, when the lottery tickets don't
@@ -551,17 +551,17 @@ work. The L2 distance gets smaller and smaller and smaller and reaches some mini
 but it reaches some plateau of lower L2 distance. When lottery ticket phenomenon starts working, the
 networks seem more robust to STD noise in terms of where they land in parameter space.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed" timestamp="20:13">
+<turn speaker="Waleed" timestamp="20:13">
 
 When you do this, do you actually prune the parameters or do you just train the model to the end?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Franke" timestamp="20:17">
+<turn speaker="Jonathan Franke" timestamp="20:17">
 
 So for now, let's talk about the pruned networks, but actually this works on the full networks as
 well and that's kind of a cool result of this experiment that we weren't expecting but has us very
@@ -576,10 +576,10 @@ compare them is try to understand are they in the same minimum because you know 
 be very large and so L2 distance doesn't tell you very much about the lost landscape. It could be in
 a completely separate minimum. It could be in the same, what does small even mean in L2 distance.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Franke" timestamp="21:12">
+<turn speaker="Jonathan Franke" timestamp="21:12">
 
 So we tried actually a very simple experiment. We used this recent phenomenon called mode
 connectivity, which has shown that in a lot of cases the minima found by separate neural networks
@@ -597,20 +597,20 @@ stability. The networks that are connected in this way are stable to SGD noise b
 two different samples of SGD noise and they found the same linearly connected minimum. Whereas when
 they're separated by a peak, when loss increases, we call them unstable. Just um, some terminology,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed" timestamp="22:19">
+<turn speaker="Waleed" timestamp="22:19">
 
 I'm trying to wrap my head around the linear combination. So for any point in the middle between the
 two models, you pick some parameter, maybe like 0.1, right? And 0.9. So, any weight in this new
 network that you're building, you multiply all the parameters of the first model by 0.1 and added to
 0.9 times all the parameters of the second one.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Franke" timestamp="22:40">
+<turn speaker="Jonathan Franke" timestamp="22:40">
 
 That's correct. And this is, it's not something that intuitively should work. It's something that
 seems rather strange, but it's actually something that has a lengthy legacy. We were definitely not
@@ -628,36 +628,36 @@ between the minima. There's a piecewise linear path that can have at a minimum t
 connect the minima, but there isn't a linear path. And so this is a strange set of circumstances
 where we consistently find linear paths.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="23:49">
+<turn speaker="Pradeep Dasigi" timestamp="23:49">
 
 So, to summarize, you found that there is a linear path between the network after it's been trained
 to completion and at the state where it's been trained only for K the box, right to the point where
 you will be writing it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Franke" timestamp="24:01">
+<turn speaker="Jonathan Franke" timestamp="24:01">
 
 If you have a network at a particular iteration, K and you train two copies of it under different
 samples of SGD noise, those copies will always find a minimum in which they are linearly connected.
 So optimization will always find this linear region.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="24:14">
+<turn speaker="Pradeep Dasigi" timestamp="24:14">
 
 Did this also explain the results that you saw in your simpler models where you didn't actually have
 to define, you could actually reset the weights all to zero?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Franke" timestamp="24:23">
+<turn speaker="Jonathan Franke" timestamp="24:23">
 
 I'd be careful to say explain, but we did find in these simpler models that even, you know from
 iteration zero these sparse sub networks will always find linearly connected minima and from
@@ -668,10 +668,10 @@ Inception, I believe there are 100 separate layers in the model in various permu
 interconnections. So to us it was very surprising that one could do this on these large models and
 that the phenomenon scales in this way.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="24:57">
+<turn speaker="Pradeep Dasigi" timestamp="24:57">
 
 Yeah, that makes sense. Thanks. So for the rest of the time we have, I wanted to talk about some of
 the implications of the results that you saw in your work and also some of the followup work that
@@ -684,10 +684,10 @@ completion to inform your pruning, or you manage your pruning, part of it. Right
 that we should always start with an over parameterized model? Can we actually be clever about how we
 initialize these models into something else?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Franke" timestamp="25:48">
+<turn speaker="Jonathan Franke" timestamp="25:48">
 
 So the answer is right now I would say yes, but that is to say right now the easiest way to get a
 neural network to learn effectively is to start over parameterized. If you try to train a sparse
@@ -699,10 +699,10 @@ change which connections you have, add some new connections, remove some old one
 maintain a sparse network for the entirety of training and get very good performance. Nearly state
 of the art performance on these tasks without ever having needed an overparameterized model.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Franke" timestamp="26:29">
+<turn speaker="Jonathan Franke" timestamp="26:29">
 
 This is known as dynamic sparsity. I've been focused on static sparsity, given the lottery ticket
 phenomenon shows there's a good static sparsity pattern for these networks, but I think these are
@@ -717,18 +717,18 @@ an approach that allows us to prune early in training that realizes the opportun
 described. It's something that I'm very interested in and I've seen a lot of great papers on the
 subject that are trying to make progress by suggesting heuristics for doing so.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed" timestamp="27:21">
+<turn speaker="Waleed" timestamp="27:21">
 
 I see. Yeah, that, that does sound very exciting. Can you talk about the heuristics you just
 mentioned that would be more efficient in training?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Franke" timestamp="27:28">
+<turn speaker="Jonathan Franke" timestamp="27:28">
 
 On the pruning early and training side, there was a paper that was released simultaneously with our
 paper at ICLR last year called SNIP, which looked at a heuristic where your computer sensitivity
@@ -743,18 +743,18 @@ lottery ticket performance as the the ceiling, the the ideal that we would like 
 that in the next couple of years we'll see papers trying to slowly reach higher and higher toward
 that ceiling.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed" timestamp="28:19">
+<turn speaker="Waleed" timestamp="28:19">
 
 Just to get a sense of the difference, how long do you need to train the network to find the lottery
 tickets before you like your results?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Franke" timestamp="28:26">
+<turn speaker="Jonathan Franke" timestamp="28:26">
 
 We trained the network for the standard amount of time we need to train to the end. We found
 anecdotally that pruning less than about halfway through training produces much worse results.
@@ -771,19 +771,19 @@ definitely days where I wake up and and feel the more cynical view and days wher
 the more optimistic view and I'm very sympathetic to people who take both perspectives and I know
 that there are people who have very strong opinions on both sides of this.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed" timestamp="29:31">
+<turn speaker="Waleed" timestamp="29:31">
 
 Thank you for sharing this insight. Another thing I'm wondering about, you may have mentioned it
 already, but I'm not entirely sure. So if we were to, without actually resetting the values, do we
 get better or worse performance?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Franke" timestamp="29:43">
+<turn speaker="Jonathan Franke" timestamp="29:43">
 
 To prune without resetting the values and then you train it a little bit more from there? You'll get
 a little bit worse performance actually then resetting the values and retraining from there. And
@@ -795,27 +795,27 @@ from one of the papers that they looked surprisingly good and we then did a litt
 literature review and realize that we had beaten state of the art in a couple of settings. And
 that's surprising. I'm not entirely sure why that's the case.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Franke" timestamp="30:20">
+<turn speaker="Jonathan Franke" timestamp="30:20">
 
 I could probably speculate for awhile if you wanted me to. It's very interesting and it's something
 that I think should be taken into account when you want to prune a neural network. This might
 actually provide you with better performance for the same sparsity, which is kind of cool.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed" timestamp="30:32">
+<turn speaker="Waleed" timestamp="30:32">
 
 I would love to hear your explanation of this because you probably thought about it a lot more than
 other people.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Franke" timestamp="30:37">
+<turn speaker="Jonathan Franke" timestamp="30:37">
 
 The simplest explanation I could come up with at a high level and this is nowhere near rigorous
 enough to be empirically evaluated, is simply that if you prune a network and keep the trained
@@ -825,10 +825,10 @@ you prune and then rewind to an earlier iteration, you can kind of replay the op
 in this smaller subspace represented by the pruned network and perhaps that may lead the network to
 find an optimum that's a better fit for the sparsity level that it has.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Franke" timestamp="31:08">
+<turn speaker="Jonathan Franke" timestamp="31:08">
 
 And again, this is all far too high level and non rigorous for me to ever write down on a paper. But
 that might be one very simple perspective that one could take on the problem. It's something that
@@ -836,30 +836,30 @@ we're very curious about because this was just a complete surprise to us. I'm re
 little we know about neural networks and my experiments love to remind me of my own ignorance on a
 daily basis.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed" timestamp="31:28">
+<turn speaker="Waleed" timestamp="31:28">
 
 More reason to continue working in the same areas. Exactly. I think this is a beautiful scientific
 area particularly because not only do we know nothing, but sometimes we think we know something and
 we need to be reminded that we really know nothing. I think that's the most fun kind of place to do
 science.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="31:44">
+<turn speaker="Pradeep Dasigi" timestamp="31:44">
 
 Talking about some specifics of resetting. There was also this other paper from Uber I think, where
 they looked at how exactly you reset your model and how it affects your performance and they talked
 about some results and understanding the Lottery Ticket hypothesis better. Can you talk about that
 work a bit, briefly?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Franke" timestamp="32:02">
+<turn speaker="Jonathan Franke" timestamp="32:02">
 
 This paper is also going to be presented at NeurIPS this week and the team at Uber Hattie, Janice,
 Roseanne and, and Jason wrote an excellent paper that followed up on the lottery ticket paper. They,
@@ -872,10 +872,10 @@ thing they observed is they tried a bunch of other pruning heuristics, including
 prune the smallest weights instead of the biggest weights. What happens if you prune the weights
 that changed the most or increase in magnitude the most?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Franke" timestamp="32:44">
+<turn speaker="Jonathan Franke" timestamp="32:44">
 
 And they found that the magnitude increase heuristic, if I remember right, worked the best. It
 worked a little bit better than actually just looking at the pure magnitude of the weight. So I
@@ -892,10 +892,10 @@ achieve, if I remember, it's something like 80% accuracy on MNIST just by findin
 prune without ever training the network itself, and this actually there's been another paper that
 followed up on this on larger scale networks.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Franke" timestamp="33:44">
+<turn speaker="Jonathan Franke" timestamp="33:44">
 
 I think it came out last week where the authors, I believe they're at the Allen Institute showed
 that actually you can get up almost state of the art full performance on image net by taking very
@@ -906,20 +906,20 @@ have a lot of respect for the team at Uber for the really careful research they 
 observation and exploit it and for the team at the Allen Institute who I think took it to the next
 level.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="34:18">
+<turn speaker="Pradeep Dasigi" timestamp="34:18">
 
 Yeah, it does sound like a really exciting space. Lots of interesting work to do. And the thing I
 wanted to ask you about is that in your initial paper you hypothesized that the winning tickets are,
 which submit works would remain as winning tickets could somehow tell us about the inductor biases
 that are required or the end tasks. Do you have any insights related to that?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Franke" timestamp="34:37">
+<turn speaker="Jonathan Franke" timestamp="34:37">
 
 Not a lot so far, unfortunately. In the end of the original lottery ticket paper, I outlined three
 ways I imagined this might actually be practical. Way number one was perhaps we should take these
@@ -937,19 +937,19 @@ about as of right now. Simply because you know, figuring out the right way to an
 connection of neural networks, each of which has both different structure and different
 initialization gets very tricky.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="35:41">
+<turn speaker="Pradeep Dasigi" timestamp="35:41">
 
 Also, there's some followup work on sharing the transferability of winning tickets across tasks and
 whether the generalizability of these winning tickets is kind of like a prerequisite condition for a
 specific subnetwork being a winning ticket. Can you summarize those two results please?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Franke" timestamp="35:57">
+<turn speaker="Jonathan Franke" timestamp="35:57">
 
 There have been a couple of studies that have come out on this. I think the most comprehensive is
 from a team at Facebook and Ari, Hownon, McKayla and Yuan Dong found that you can actually take
@@ -961,10 +961,10 @@ and you preserve the same accuracy that you got from the original network. In fa
 sometimes the accuracy even went up from first finding a winning ticket based on a harder task and
 then transferring it down to a slightly easier task.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Franke" timestamp="36:37">
+<turn speaker="Jonathan Franke" timestamp="36:37">
 
 And so to me this is very exciting. This says that it may take a lot of time, energy and expense to
 find these lottery tickets, but once you found them, perhaps when we put out the next version of
@@ -975,19 +975,19 @@ initialization. So to me this is actually the most direct way to exploit the lot
 observations. The team at Facebook did a fantastic job. Just really extracting that insight and
 taking it to the extreme, showing how much we can get out of it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed" timestamp="37:13">
+<turn speaker="Waleed" timestamp="37:13">
 
 I mean, I don't know of any efforts to define the tickets, so instead of just like defining it as a
 set of weights in a given layer, define it as a more mathematical way so that you can generalize
 across different sizes. For example.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Franke" timestamp="37:25">
+<turn speaker="Jonathan Franke" timestamp="37:25">
 
 I'm not aware of any to date, but theory has always been my weakness as a computer scientist, so I'm
 hopeful that somebody will look at this from a more theoretical perspective. I will say that
@@ -997,19 +997,19 @@ tend to prefer taking a very directly empirical approach to these things because
 that's where we'll see phenomena that can later be codified and justified via theory. I tend to hang
 out on the very empirical side and I'm not aware of anything on the theory side right now.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed" timestamp="37:59">
+<turn speaker="Waleed" timestamp="37:59">
 
 I think that's fine. Still, the question that's in my mind is how do we take winning tickets that
 work in a certain model configuration and try to use them in a different model configuration where
 like the, maybe the hidden sizers are different.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Franke" timestamp="38:13">
+<turn speaker="Jonathan Franke" timestamp="38:13">
 
 Oh I see. I see. That, I've seen less of. I could imagine that perhaps you can build a network
 around what you have. So add some new neurons that are simply fully connected. It seems like the
@@ -1022,19 +1022,19 @@ quite well. So I think there are definitely ways of taking advantage of this eve
 necessarily line up cleanly. Neural networks are so malleable that you can get away with a lot of
 pretty ridiculous things like what I've done and they still work surprisingly well.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="38:55">
+<turn speaker="Pradeep Dasigi" timestamp="38:55">
 
 Great. Thanks a lot for summarizing your results and even talking about some of the follow up work
 that came after your paper was published. Is there anything else that you wanted to talk about that
 we may have missed?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Franke" timestamp="39:06">
+<turn speaker="Jonathan Franke" timestamp="39:06">
 
 Oh, there's, I think one more thing, which is more of a philosophical note perhaps or a research
 strategy note, and this was my first machine learning project, so to me, no, I, I feel like I won
@@ -1046,10 +1046,10 @@ exhibits the property that you're interested in, understand it there and only th
 I think in machine learning we tend to be so obsessed with large scale that we're not willing to
 start with very small networks.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Franke" timestamp="39:42">
+<turn speaker="Jonathan Franke" timestamp="39:42">
 
 You know, based on what I've said during our conversation, I think you both know that had I started
 trying to run the lottery ticket experiments on image net, I would have had a negative result and I
@@ -1062,10 +1062,10 @@ science that we really should be doing. The other big lesson I took away is I th
 before that really in a sense, if you want to understand neural networks as they work in practice,
 we have to be scientists about it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Franke" timestamp="40:25">
+<turn speaker="Jonathan Franke" timestamp="40:25">
 
 I think that it starts with the empirical observations that we wouldn't have necessarily predicted
 from the math, but we can justify once we go to the math. A lot of weird things happen when you
@@ -1079,20 +1079,20 @@ to me the big lesson was there's a lot of room for doing good, rigorous science 
 have to work at smaller scales in order to be quite that rigorous given how expensive it is to work
 at a lot of the large scales.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="41:09">
+<turn speaker="Pradeep Dasigi" timestamp="41:09">
 
 Great, thanks. Those are really important things to keep in mind. Thanks a lot, Jonathan, for
 joining us and chatting with us and I learned a lot chatting with you for this episode. Thanks
 again.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Franke" timestamp="41:18">
+<turn speaker="Jonathan Franke" timestamp="41:18">
 
 Definitely. Thank you so much for having me.
 
-</Turn>
+</turn>

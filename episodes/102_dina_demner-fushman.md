@@ -8,40 +8,40 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Garner" timestamp="">
+<turn speaker="Matt Garner" timestamp="">
 
 Welcome to the NLP highlights podcast where we talk about interesting work in natural language
 processing. The hosts are Matt Gardner, Waleed Amar and Pradeep Tasigi.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="">
+<turn speaker="Waleed Ammar" timestamp="">
 
 So, today our guest is Dina Demner Fushman who is investigator leading the IRN NLP research groups
 in the Lister Hill National Center for Biomedical Communications at the national library of medicine
 at national Institute of health. Welcome to the program, Dina.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dina Demnar-Fushman" timestamp="">
+<turn speaker="Dina Demnar-Fushman" timestamp="">
 
 Thank you.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="">
+<turn speaker="Waleed Ammar" timestamp="">
 
 When we met a few months ago, I realized there is a lot of NLP work happening in NLM and I wanted
 you to give us an overview of this work. So maybe could you start with just an overview of NLM and
 the NLP related tools that your groups are working on.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dina Demnar-Fushman" timestamp="">
+<turn speaker="Dina Demnar-Fushman" timestamp="">
 
 Yes, thank you. So, NLM has an intramural research program as do the other NIH institutes. The goals
 of these intramural research programs usually are to work on something that a university or a
@@ -53,10 +53,10 @@ center, but it all started about 10 15 years ago when we started thinking about 
 both image features and text queries and how do we do that? So my very first experience was because
 I didn't know any better, is concatenate the image and text vectors and searching for these.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dina Demnar-Fushman" timestamp="">
+<turn speaker="Dina Demnar-Fushman" timestamp="">
 
 And then we took it from there and now it's a service and we continue exploring. So that's an
 example of that, something that the industry will not do and that the university might not consider
@@ -68,10 +68,10 @@ researchers at the bench side that are working see for new drugs or new cancer p
 block them. So, to better deliver these services, we are also looking into tasks that are research
 but will have some implications for the NLM services.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dina Demnar-Fushman" timestamp="">
+<turn speaker="Dina Demnar-Fushman" timestamp="">
 
 An example of that is our medical text and extra, so to search a biomedical literature and the past,
 you really needed an experienced human indexer to go into the article and find out the key terms and
@@ -88,10 +88,10 @@ algorithms that extracts the most relevant terms, maps them to the control vocab
 presents to the indexers for their approval. So that's a sort of practice driven, very interesting
 abstractive summarization research.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="">
+<turn speaker="Waleed Ammar" timestamp="">
 
 Absolutely. And one of the things I think is most unique in this work is that unlike a lot of the
 work that happens in academia, PubMed, the tool of choice for most of the biomedical researchers and
@@ -103,10 +103,10 @@ published recently. So how can you address these aspects and to what extent thes
 research. I imagine there is a lot of practical considerations that are not necessarily research
 focused. I'm curious to know how much effort do you put on, how do you do this activities?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dina Demnar-Fushman" timestamp="">
+<turn speaker="Dina Demnar-Fushman" timestamp="">
 
 Right. So, it's really a collaboration between the index section, the other research arm of the
 national library of medicine and part of our one NLM intramural research program is the NCBI that
@@ -120,10 +120,10 @@ course, which ones are going to be of interest to PubMed and or indexers had to 
 articles and decide whether there should be an indexed or not, then put them into a different queue
 for indexing and whatnot.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dina Demnar-Fushman" timestamp="">
+<turn speaker="Dina Demnar-Fushman" timestamp="">
 
 So we looked into it from the perspective of learning and we applied several different algorithms
 and we found net we can very reliably say which 30% of the articles will be definitely out of scope
@@ -139,36 +139,36 @@ journals and the decision is made right there. Third, is automatically indexed a
 never goes through indexers. Another third just go straight to the indexers queue and then the
 remaining third is going to be reviewed by someone to decide where to route it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="">
+<turn speaker="Waleed Ammar" timestamp="">
 
 Thank you for explaining. I didn't realize that the separation in the groups and it's great that
 you're able to work together because sometimes it's not always easy to set up a collaboration
 between research groups and production groups.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dina Demnar-Fushman" timestamp="">
+<turn speaker="Dina Demnar-Fushman" timestamp="">
 
 Exactly.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dina Demnar-Fushman" timestamp="">
+<turn speaker="Dina Demnar-Fushman" timestamp="">
 
 I think the transition of PubMed to the new algorithm was one example of that collaboration and
 these new selectively indexed journals is another, and I hope we have more down the road because we
 have the knowledge of what methods could be applied right away and for the production people to take
 time and start exploring these area. It's not very efficient.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="">
+<turn speaker="Waleed Ammar" timestamp="">
 
 Totally. So, I imagine there are a lot of problems that you could be working on in this area because
 it's very under studied. Right? I think within the NLP literature I feel like biomedical
@@ -176,10 +176,10 @@ applications and literature based applications are very understudied. So I'm won
 prioritize and decide which ones to focus on, what to prioritize among all the possible things that
 you could be working on.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dina Demnar-Fushman" timestamp="">
+<turn speaker="Dina Demnar-Fushman" timestamp="">
 
 Right. Officially we have our board of scientific counselors, so this is in parallel to the peer
 review committee. So when you are deciding to submit to your grant proposal, when you are at the
@@ -191,10 +191,10 @@ researcher and I got together and we proposed it and then our board of scientifi
 Oh, "That's a great idea, go and explore it," so we did. We also have, sometimes the idea is coming
 top down because it is a priority for the library.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dina Demnar-Fushman" timestamp="">
+<turn speaker="Dina Demnar-Fushman" timestamp="">
 
 For example, consumer health questions. We all understand that people now have completely changed
 how they interact with their health providers. They first go online, they describe their symptoms,
@@ -207,10 +207,10 @@ Yahoo answers, people were giving more stars to the longer answers. So it did no
 answer was good or correct, but it was long. So, therefore it must be good. So, very often the
 consumers do not have the background to judge if the advice they're getting is sound.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dina Demnar-Fushman" timestamp="">
+<turn speaker="Dina Demnar-Fushman" timestamp="">
 
 That's why we started looking into providing answers just from the reliable sources. So one of the
 reliable sources that NLM offers to the public is Medline Plus. This is specifically articles
@@ -221,10 +221,10 @@ was our director's goal was to answer the questions that are coming to NLM custo
 with these reliable information automatically. So that's how our consumer health question answering
 project started.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="">
+<turn speaker="Waleed Ammar" timestamp="">
 
 Wonderful. This is really exciting. I didn't know about this and now I'm eager to go check it out
 after we finish the recording because, oftentimes I go check some websites like for specific
@@ -232,10 +232,10 @@ symptoms and it very quickly goes way deeper than I can understand, which is fin
 necessary for different people to open some information at different that is, which this is a very
 clearly targeted website with high credibility.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dina Demnar-Fushman" timestamp="">
+<turn speaker="Dina Demnar-Fushman" timestamp="">
 
 And we definitely need more of these. So, what was very interesting that the text retrieval
 conference track had a decision's track in 2019 and when they were proposing and discussing this
@@ -248,19 +248,19 @@ even I would say bio information, retrieval community, but that interest came ou
 domain. So it is really good to see that the interest is growing from the open domain researchers as
 well.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="">
+<turn speaker="Waleed Ammar" timestamp="">
 
 Yeah. Just to be the case that many NLP and IR people would refrain from working in this area
 because there is not enough data to work with. I think this is changing in part because of the
 efforts that your group is putting into the problems.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dina Demnar-Fushman" timestamp="">
+<turn speaker="Dina Demnar-Fushman" timestamp="">
 
 So it's still a huge issue for clinical text. Right, and you're absolutely right. NIH had a lot to
 do with the scientific literature becoming open or as open as possible. Everything that is funded by
@@ -271,18 +271,18 @@ to work with various organizations to see if they could release their data becau
 that as I put it recently, we have to get computer science students working on the clinical data if
 we wanted to see some progress.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="">
+<turn speaker="Pradeep Dasigi" timestamp="">
 
 Can you explain what you mean by clinical data and how that's different from the Medline texts that
 you described earlier?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dina Demnar-Fushman" timestamp="">
+<turn speaker="Dina Demnar-Fushman" timestamp="">
 
 Clinical notes is what you have in your electronic health record and even when you are visiting with
 your family doctor you are an outpatient but there is still some kind of record and it's a mixture
@@ -295,10 +295,10 @@ publications, they try to explain what's going on; it's structured, it's grammat
 typos. When you work with clinical text, it's really the opposite. You have lots and lots of
 abbreviations, lots of typos.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dina Demnar-Fushman" timestamp="">
+<turn speaker="Dina Demnar-Fushman" timestamp="">
 
 Very often we're looking at something, you know this, that patient have seen pneumonia or not. And
 what we found in mimic notes is that sometimes it will just have some term like pneumonia and then
@@ -309,25 +309,25 @@ it turns out of course the patient did not have a fever because the numbers are 
 often it is a copy paste issue. Often there are sort of table like structures that don't look like
 tables, exactly but they don't look like text either.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="">
+<turn speaker="Waleed Ammar" timestamp="">
 
 But at least, is it all electronic, right? You don't have to perform OCR on aggregate text.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dina Demnar-Fushman" timestamp="">
+<turn speaker="Dina Demnar-Fushman" timestamp="">
 
 No, you still have to, in some cases, very often actually something that is electronic will be
 printed out and given to the patient and then at the next location scanned in.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="">
+<turn speaker="Waleed Ammar" timestamp="">
 
 Okay. Right. So stepping back a little bit, when we think about bio NLP, I think of three distinct
 categories. NLP for scientific and biomedical documents and then NLP for clinical applications
@@ -340,10 +340,10 @@ of data and then transfer it to use it in a different hospital that uses a diffe
 about the other two categories? What do you see as like the key challenges in the other two areas
 for health consumers and for understanding the scientific biomedical research?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dina Demnar-Fushman" timestamp="">
+<turn speaker="Dina Demnar-Fushman" timestamp="">
 
 So, for understanding research, we need to build a bigger picture. We are relatively descent on
 understanding a given paper or solving a given task. For example, a couple of years ago there was
@@ -356,10 +356,10 @@ points. So, I think this is where we should be going with modeling for the liter
 clinical text, very often it is practical; we need these practical applications here in that
 hospital.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dina Demnar-Fushman" timestamp="">
+<turn speaker="Dina Demnar-Fushman" timestamp="">
 
 And I think the problem there is very often you don't need really new algorithms, sometimes very old
 ones, Sometimes regular expressions work just fine. And it is practically very useful. And I think
@@ -376,20 +376,20 @@ language, that is very hard to understand. So there's a lot of work there A: und
 complex needs and B: finding the answers and see translating these answers so that the consumer can
 understand these. Lots of work in all three areas remaining.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="">
+<turn speaker="Waleed Ammar" timestamp="">
 
 Absolutely. I talked recently to Asma Ben Abacha and learn about about the work that you guys are
 doing to summarize the questions and also to focus on trusted sources when you're delivering the
 answers. You have a tool that's kind of like in beta mode, I think now it's called CHiQA. I'd like
 to give it a shout out. I think it's https://chiqa.nlm.nih.gov/. It's really interesting.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dina Demnar-Fushman" timestamp="">
+<turn speaker="Dina Demnar-Fushman" timestamp="">
 
 And all comments are very welcome. So we had a community wide challenge here and we hope to have
 another one next year or get the data to the community and get the community interested in expanding
@@ -400,37 +400,37 @@ consumers their questions are in lay language and we need to merge the lay resou
 literature. And of course there is another area where doctors have questions that can be answered
 only by EHR data. So that's another area of research that's very interesting.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="">
+<turn speaker="Waleed Ammar" timestamp="">
 
 AHR data?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dina Demnar-Fushman" timestamp="">
+<turn speaker="Dina Demnar-Fushman" timestamp="">
 
 So for example, you can ask what is the highest blood pressure that patient ever had. And of course
 if you want to figure it out now, you will have to go into the electronic health record and pool all
 the blood pressure measurements for that patient and then rank them somehow. So the goal is to do it
 automatically.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="">
+<turn speaker="Waleed Ammar" timestamp="">
 
 Got it. To what extent do you think hospitals and medical providers are willing to incorporate these
 methods? We know that most of our models ever had more than, like 98% accuracy. That's a very
 generous, right? I don't know to what extent it's feasible or it'makes sense to incorporate any of
 these methods in a hospital setting or the surgeon support setting in the medical environment.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dina Demnar-Fushman" timestamp="">
+<turn speaker="Dina Demnar-Fushman" timestamp="">
 
 So our indexers are a lot like the doctors. They will want to be absolutely sure that these 30% are
 out of scope and these 30% have to go to the indexers. So I think if we develop the models where we
@@ -444,20 +444,20 @@ cohort, your conclusions will probably still be statistically significant. But i
 detect cancer earlier in the life system in these patients, then probably flagging everyone who
 you're not very sure about is it better? So it really all depends on what you're trying to achieve.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="">
+<turn speaker="Pradeep Dasigi" timestamp="">
 
 When you say the performance of the model is ninety nine percent, what kinds of test sets are you
 talking about? Surely, applications here looking at are more critical than many of the other NLP
 applications that most researchers look, right? So do you do anything special with how you make
 these test sets, how you split your trained test sets or something.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dina Demnar-Fushman" timestamp="">
+<turn speaker="Dina Demnar-Fushman" timestamp="">
 
 So, I think what we do even again who the indexers, after we are done with the models using the
 regular data sets. We take the data that is incoming that they would have had to evaluate anyway.
@@ -465,19 +465,19 @@ And then we ask them to evaluate the results specifically for that real life dat
 usually good about it. They're usually doing it and then they are more confident again and then they
 will go and say, okay, go ahead and implement the system because I'm satisfied.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="">
+<turn speaker="Waleed Ammar" timestamp="">
 
 Yeah. And I imagine some applications are still far from this 99 or 98% so, I imagine things like
 question answering for health consumer questions, which are very long and very complicated
 questions. I imagine these would be a lot lower.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dina Demnar-Fushman" timestamp="">
+<turn speaker="Dina Demnar-Fushman" timestamp="">
 
 Absolutely. I think the best we have seen in question entailment recognition in that challenge. So
 the idea of question entailment is, we have these frequently asked questions at NIH where the
@@ -490,10 +490,10 @@ blood thinners and then there is a subheading that talks about the aspects of th
 in the paper. So for example it will be, I don't know, complications, is probably not the right
 terms, but it's the idea that this is, this paper is about these complications.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dina Demnar-Fushman" timestamp="">
+<turn speaker="Dina Demnar-Fushman" timestamp="">
 
 The human agreement on those is in the 60s and we developed an algorithm that is at human
 performance right now, but what we are trying to do going forward is we work again with the indexers
@@ -504,56 +504,56 @@ agreed that they will go ahead and see how many of the things that we assign are
 many are well, okay the indexer would not assign it, but it's okay to keep it. So that's sort of
 going forward.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="">
+<turn speaker="Waleed Ammar" timestamp="">
 
 So, currently the workflow is for any new document that is to be indexed. The algorithm makes some
 predictions for the primary and secondary or, and the subheadings. And they are edited either by
 adding new headings or by removing the incorrect ones. And that happens for each document that goes
 through?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dina Demnar-Fushman" timestamp="">
+<turn speaker="Dina Demnar-Fushman" timestamp="">
 
 Each article that should be indexed from MedLine. Yes. So our index section has indexed a million
 papers this year.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="">
+<turn speaker="Waleed Ammar" timestamp="">
 
 Wow. How many indexers are there?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dina Demnar-Fushman" timestamp="">
+<turn speaker="Dina Demnar-Fushman" timestamp="">
 
 I believe one hundred and twenty.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="">
+<turn speaker="Waleed Ammar" timestamp="">
 
 That is a lot, I mean for this magnitude of data.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dina Demnar-Fushman" timestamp="">
+<turn speaker="Dina Demnar-Fushman" timestamp="">
 
 Yeah.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dina Demnar-Fushman" timestamp="">
+<turn speaker="Dina Demnar-Fushman" timestamp="">
 
 Yeah. Thank you for doing this service. This is amazing. So you mentioned the shared task for
 question entailment and I know that you're involved in many other workshops and shared tasks. Would
@@ -561,10 +561,10 @@ you like to tell us some of the other ones that you're involved in, targeting NL
 are interested in working more in this domain, suggesting areas where they can focus on if this is
 what you want to work on?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dina Demnar-Fushman" timestamp="">
+<turn speaker="Dina Demnar-Fushman" timestamp="">
 
 So the ongoing track is precision medicine, some kind of a clinical decision support track was
 running for a very long time. I think we started about 2012 and it's been ongoing and we've seen
@@ -574,17 +574,17 @@ to find really precise treatments for cancers. The researchers are given a descr
 patient and the cancer and the specific mutation and they have to find treatments that might work on
 that patient. So that's the ongoing task for 2020.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="">
+<turn speaker="Waleed Ammar" timestamp="">
 
 And how was the task set up? What does the output look like for a system like this.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dina Demnar-Fushman" timestamp="">
+<turn speaker="Dina Demnar-Fushman" timestamp="">
 
 So it's standard track, find relevant documents. And this year we also had the sub task of
 extracting treatments from these relevant documents and only two teams actually attempted extracting
@@ -597,10 +597,10 @@ sections are clear, but within the sections it is all free text and very often i
 if the adverse reaction was observed or if there was an interaction between these, the labeled drug
 and some other drug.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dina Demnar-Fushman" timestamp="">
+<turn speaker="Dina Demnar-Fushman" timestamp="">
 
 So, we've annotated several hundreds of these drug labels for adverse drug reactions and for drug-
 drug interactions and we've had several pack challenges on that topic. The collections are of course
@@ -610,10 +610,10 @@ challenge so anyone can use all of these. And the same goes for consumer health 
 and we released a lot of annotated questions. We used a question answer appears on summaries of the
 questions. So all of these are available.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="">
+<turn speaker="Waleed Ammar" timestamp="">
 
 Oh, so that's very relevant to a project I've been working on recently with Lucy Wang another FDA
 tool, where, we were extracting drug supplement interactions from scientific documents. And I'm
@@ -621,10 +621,10 @@ wondering, in your perspective, to what extent we want to extract these interact
 drug-drug or supplement-drug interactions from the scientific literature as opposed to the labels
 that are provided by FDA. I guess the supplements don't have FDA labels necessarily. Right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dina Demnar-Fushman" timestamp="">
+<turn speaker="Dina Demnar-Fushman" timestamp="">
 
 So, the supplement will be there only if it is mentioned in some drug labels. And there are very
 few. And of course supplements are not regulated by FDA. Right? So you will find that in the
@@ -637,10 +637,10 @@ communications that will give you the whole picture of what is that. You know? V
 very interesting study several years ago, people coming into the hospital and the first thing the
 nurses asked them was what drugs are you taking?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dina Demnar-Fushman" timestamp="">
+<turn speaker="Dina Demnar-Fushman" timestamp="">
 
 Of course they say something. Of course no one ever mentions the supplements they're taking. So
 unless the nurses specifically asks, are you taking a supplement? Then people would probably go
@@ -651,10 +651,10 @@ the two. So a lot of these prescribers information was incomplete because the pa
 stuff from elsewhere and taking these other things and a lot of what they told they are taking, they
 forgot about the other stuff.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="">
+<turn speaker="Waleed Ammar" timestamp="">
 
 When I think about incorporating a model like this, right, so let's say we want to help medical
 providers, I didn't flag basically potential interactions when a patient mentions the drugs they're
@@ -664,10 +664,10 @@ medical providers to use it. And I wonder to what extent medical professionals a
 designing the tasks and to what extent the results of a model that performs well on these tasks
 would be trustworthy.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dina Demnar-Fushman" timestamp="">
+<turn speaker="Dina Demnar-Fushman" timestamp="">
 
 That's a really good question. There are several organizations where the informatics professionals,
 the computer scientists and, and the practitioners come together. There is AMIA. So definitely there
@@ -682,50 +682,50 @@ there were so many alerts, they turn them off and then there was these fatal ale
 see because they turned off the alerts. So we have to be very judicious in when to actually send an
 alert.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="">
+<turn speaker="Waleed Ammar" timestamp="">
 
 Yeah, I do remember in various like hospital visits, hearing continuous alert systems like sounding
 and it seems like nobody's paying attention because just like it's just too many of them.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dina Demnar-Fushman" timestamp="">
+<turn speaker="Dina Demnar-Fushman" timestamp="">
 
 As with any signal, if it's constant, I think our brain just tunes it out.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="">
+<turn speaker="Waleed Ammar" timestamp="">
 
 Yeah. I really appreciate your perspective of this. I know you've been trained both as a medical, as
 an MD and as a computer scientist so you have PhD in both areas. It's pretty impressive that you did
 that. Congrats on that, and thank you for trying to bring the two fields together. That's really
 valuable service.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dina Demnar-Fushman" timestamp="">
+<turn speaker="Dina Demnar-Fushman" timestamp="">
 
 I'm not alone. There are many people that are trained in both and of course there is this area of
 Medical Informatics that tries to cover both and actually give formal education in both.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="">
+<turn speaker="Waleed Ammar" timestamp="">
 
 If someone wants to do a program like this, what they should be looking for?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dina Demnar-Fushman" timestamp="">
+<turn speaker="Dina Demnar-Fushman" timestamp="">
 
 If someone wants just an introductory level of what is it all about? There is the AMIA, American
 Medical Informatics Association, 10 by 10 and there are courses offered by different universities.
@@ -736,33 +736,33 @@ perspective of what are the clinicians thinking about what are their needs? And 
 online, but I think they have have a final meeting and the Medical Informatics Association
 conference.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="">
+<turn speaker="Waleed Ammar" timestamp="">
 
 Wonderful. All right. Is there anything else that you wanted to bring up in this episode before we
 close?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dina Demnar-Fushman" timestamp="">
+<turn speaker="Dina Demnar-Fushman" timestamp="">
 
 I think I'm fine. Thank you, and for asking all these wonderful questions.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="">
+<turn speaker="Waleed Ammar" timestamp="">
 
 Thank you so much for joining us, Dina.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="">
+<turn speaker="Pradeep Dasigi" timestamp="">
 
 Thanks a lot. It was nice talking to you.
 
-</Turn>
+</turn>

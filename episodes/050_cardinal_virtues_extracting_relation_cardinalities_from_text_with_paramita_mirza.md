@@ -8,49 +8,49 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting work in natural
 language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:05">
+<turn speaker="Waleed Ammar" timestamp="00:05">
 
 This is Matt Gardner and Waleed Ammar, we are research scientists at the Allen Institute for
 artificial intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:11">
+<turn speaker="Waleed Ammar" timestamp="00:11">
 
 Today our guest is Paramita Mirza a post doctorate researcher at the Max Planck Institute for
 Informatics. Paramita is interested in extracting temporal and causal relationships between events,
 harvesting common sense knowledge and understanding the semantics of numbers in natural language
 text. Welcome to the podcast Paramita.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Paramita Mirza" timestamp="00:33">
+<turn speaker="Paramita Mirza" timestamp="00:33">
 
 Hi, yes.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:35">
+<turn speaker="Waleed Ammar" timestamp="00:35">
 
 Today we will be discussing her ACL 2017 paper. Titled, . So the paper proposes the new task of
 extracting relation cardinalities what do you mean by relation cardinalities and why are they
 important?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Paramita Mirza" timestamp="00:52">
+<turn speaker="Paramita Mirza" timestamp="00:52">
 
 So maybe I should start with explaining them motivation behind this work. So we started from one
 research question related to knowledge base quality on understanding what or maybe more precisely
@@ -65,10 +65,10 @@ parent relation with Donald Trump. We just want to know how many entities are in
 relation with him and such information are often express with sentences like Trump has five children
 from three marriages or she just won her second Oscar for example.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Paramita Mirza" timestamp="02:12">
+<turn speaker="Paramita Mirza" timestamp="02:12">
 
 So these expressions are often used, especially for long tail entities where a non-important person
 is mentioned to have three children, but their names are unknown because they don't really matter.
@@ -85,10 +85,10 @@ answering which US presidents were married at least twice and also despite its f
 in text. So our study for this paper estimated that actually around 19% of numbers in Wikipedia
 articles are relation cardinalities.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="03:48">
+<turn speaker="Matt Gardner" timestamp="03:48">
 
 Yeah, I guess so I did my thesis on the NELL project where we were trying to build a knowledge base
 that was extracted from a bunch of texts and it was, I guess it's called the Never Ending Language
@@ -100,30 +100,30 @@ to guess how many things there are. We can give that information on priori, but 
 it from text then presumably you could do a better job at like bounding the growth of NELL or
 similar knowledge bases, like understanding what's going on. So yeah, really interesting problem.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Paramita Mirza" timestamp="04:43">
+<turn speaker="Paramita Mirza" timestamp="04:43">
 
 Yes, exactly. So yeah, our motivation is to improve relation extraction for example. So, as you
 said, it can be used to estimate how many things should we extract from the text for relation
 extraction and when we are already complete, then we should just stop extracting instead of
 expecting more false positives.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="05:10">
+<turn speaker="Waleed Ammar" timestamp="05:10">
 
 Right. So thanks for bringing up the NELL project. So in the paper you mentioned that the NELL
 tuples sometimes include things like Berlin 2016 attack has number of victims, 32 and also tuples
 from OpenIE Such as like Obama has two children. How are these kind of extractions different from
 what you're trying to do in this paper?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Paramita Mirza" timestamp="05:35">
+<turn speaker="Paramita Mirza" timestamp="05:35">
 
 The OpenIE methods, the one extract for example, this Obama has two children. The methods fail in
 understanding that two is actually the number of children of Obama. It's just, well you need further
@@ -131,19 +131,19 @@ processing right to understand that this is actually the relation cardinalities.
 output of OpenIE methods can be used to extract such cardinalities, but yeah, the method itself
 currently stops at that, at extracting such phrases, without understanding it more.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="06:16">
+<turn speaker="Waleed Ammar" timestamp="06:16">
 
 Do you expect using OpenIE as a preprocessing step and like funneling the output through another
 process to find the cardinality. Do you think that would be a reasonable way to approach this
 problem?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Paramita Mirza" timestamp="06:28">
+<turn speaker="Paramita Mirza" timestamp="06:28">
 
 That is one approach. So that's ideally we want to try to make sense of all numerals that appear in
 the text. Right? So in that case, one approach would be to employ OpenIE to extract the facts or
@@ -153,51 +153,51 @@ OpenIE results to predicates are difficult pass, right? So yeah, that's why we t
 around. So we start with predefined relation and a subject. And then what we are trying to estimate
 is how many objects should exist for a certain relation and that subject.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="07:27">
+<turn speaker="Waleed Ammar" timestamp="07:27">
 
 Right? So the paper focuses on four predicates, trying to predict the correct number of children,
 spouses, parts or administrative territorial entities.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Paramita Mirza" timestamp="07:37">
+<turn speaker="Paramita Mirza" timestamp="07:37">
 
 Yes.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="07:38">
+<turn speaker="Waleed Ammar" timestamp="07:38">
 
 Why is it important to predefine the list of predicates instead of keeping it open?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Paramita Mirza" timestamp="07:45">
+<turn speaker="Paramita Mirza" timestamp="07:45">
 
 The goal of our experiment is to show that we can build the model to extract these relation
 cardinalities from text. And the chosen predicates are the ones that we know that the relation
 cardinalities are indeed expressed in the text for such relation. So yeah, that's how we choose this
 four relations.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="08:10">
+<turn speaker="Waleed Ammar" timestamp="08:10">
 
 So the reason has to do with collecting label data then, right? Because these are the predicates for
 which it's was able to collect in an easier way. So that brings us to the question of how do you
 plug the label data? Could you elaborate on this?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Paramita Mirza" timestamp="08:25">
+<turn speaker="Paramita Mirza" timestamp="08:25">
 
 Right. So be focused on this Wikidata predicates. So they use Wikidata as our knowledge base and
 Wikipedia articles as our source text for evidence. For predicate we collected the subject entities
@@ -209,18 +209,18 @@ and negative examples, by labeling the numerals in the text that matches the obj
 knowledge base and if it matches then we consider it as a positive example. If it doesn't match then
 as a negative examples.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="09:36">
+<turn speaker="Matt Gardner" timestamp="09:36">
 
 How good is that assumption? Did you try to quantify how often this distant labeling scheme actually
 worked?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Paramita Mirza" timestamp="09:44">
+<turn speaker="Paramita Mirza" timestamp="09:44">
 
 Well for a system using distance supervision is that a manual labeling is tedious and for relation
 extraction, this supervision approach is often used so, and he thought that we have the knowledge
@@ -230,10 +230,10 @@ as our gold standard is, it's not really a good idea because knowledge base is i
 So yeah. We must do some techniques to deal with this incompleteness in the knowledge base if we
 want to use this as a gold standard.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="10:43">
+<turn speaker="Waleed Ammar" timestamp="10:43">
 
 So I'm curious to know is there, so just to make sure I understand you check the relation. For
 example, when you talk about children, you check the relations, for example, Barack Obama child X
@@ -241,51 +241,51 @@ and Barack Obama child Y. And then if you have two of these in the Wikidata, the
 the cardinality in this case is two and then you would go in the text and label any number two in
 the Barack Obama Wikipedia page as a positive example, is that right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Paramita Mirza" timestamp="11:18">
+<turn speaker="Paramita Mirza" timestamp="11:18">
 
 Yes.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="11:19">
+<turn speaker="Waleed Ammar" timestamp="11:19">
 
 So I'm curious to know, is there also a, like in Wikidata properties that tell you the number of
 children or actually the count that you are interested in and then you can use it as maybe a
 stronger signal for distance supervision.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Paramita Mirza" timestamp="11:34">
+<turn speaker="Paramita Mirza" timestamp="11:34">
 
 So for number of children, fortunately, yes, there is a relation called number of children, but this
 is not, it exists not for all relations in Wikidata. So only for a certain relation. And this, of
 course we can as our gold standard. And we showed that using this value from, from the Wikidata as
 our ground truth results in better performance for the models.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="12:07">
+<turn speaker="Waleed Ammar" timestamp="12:07">
 
 So when you train the model with this instead of counting the number of triples that exhibit this
 relation, you get better results. Is that what you're saying?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Paramita Mirza" timestamp="12:16">
+<turn speaker="Paramita Mirza" timestamp="12:16">
 
 Yes, we get around 10% improvement in F1 score.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="12:23">
+<turn speaker="Waleed Ammar" timestamp="12:23">
 
 The other thing that troubles me about this is the lower the numbers are like, I think that this
 assumption is reasonable when the number of relations is high. Like if we're talking about the
@@ -294,10 +294,10 @@ like many things that come in pairs. So if this person has two children, then it
 the numeral two would be incorrectly labeled as a positive example. Any thoughts on how to limit the
 severity of this assumption?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Paramita Mirza" timestamp="12:58">
+<turn speaker="Paramita Mirza" timestamp="12:58">
 
 So we tried also to understand which numerals can be useful for the learning methods and also which
 triple count can be useful for example as you said, like numerals one it occurs very frequently in
@@ -311,24 +311,24 @@ the learners. And so yeah, we should also try to understand which triple count i
 relation. Maybe for a spouse we could start from like a three spouses are a good way to estimate or
 to create the positive examples, for example.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="14:34">
+<turn speaker="Matt Gardner" timestamp="14:34">
 
 This is interesting, it just highlights the difficulty of distance supervision in general.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Paramita Mirza" timestamp="14:38">
+<turn speaker="Paramita Mirza" timestamp="14:38">
 
 Yes.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="14:39">
+<turn speaker="Matt Gardner" timestamp="14:39">
 
 For some relations it's a really reasonable assumption. Like, if your relation is city and country,
 city located in country, if I ever see a city in a country in the same sentence, it's very, very
@@ -338,18 +338,18 @@ And so for some relations this really works and for some relations it really doe
 just really interesting. I hadn't really thought of this cardinality issue and how, how it would
 affect distance supervision. But yeah, it seems really challenging to get this to actually work.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="15:17">
+<turn speaker="Waleed Ammar" timestamp="15:17">
 
 Right. So moving to the model the CRF (Conditional Random Field) based model you proposed in the
 paper, could you give a brief description of the model, what features you use?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Paramita Mirza" timestamp="15:25">
+<turn speaker="Paramita Mirza" timestamp="15:25">
 
 So there are two steps in extracting a relation cardinality, first we want to identify the numerals
 in the text that correspond to relation cardinalities, and then if there are several evidence in the
@@ -360,24 +360,24 @@ token T, so the current token and then the bigrams containing token and also to 
 the trained token, that's the feature set. Yes, we'll learn to label token as a relation cardinality
 or not. So this is just binary classification.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="16:29">
+<turn speaker="Waleed Ammar" timestamp="16:29">
 
 And do you feed it the full document or only the sentences which have numbers?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Paramita Mirza" timestamp="16:36">
+<turn speaker="Paramita Mirza" timestamp="16:36">
 
 Only sentences containing numbers or numerals.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="16:40">
+<turn speaker="Waleed Ammar" timestamp="16:40">
 
 One more detail there. Would it make sense to feed also as input since you already know, on a
 particular page, you know, who is the subject that you're interested in? And I was curious. So if
@@ -385,10 +385,10 @@ the same documents, maybe says the number of children Barack Obama has, and also
 but the page is about Barack Obama. So you probably want to only extract from the former one. Is
 there any features that helps you do this?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Paramita Mirza" timestamp="17:09">
+<turn speaker="Paramita Mirza" timestamp="17:09">
 
 Yes, that's the consolidation part problem. So in this work we just use a simple method choosing the
 cardinals, or the numerals identified with the highest marginal probability. So if in the in one
@@ -401,34 +401,34 @@ person's parents or the persons siblings its nothing related to the person. Righ
 be to first understand what is the subject entities of the statements and then to connect the data
 defined cardinalities to the subject.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="18:35">
+<turn speaker="Waleed Ammar" timestamp="18:35">
 
 And how about the different kinds of predicates that you deal with, do you have different labels for
 them or are they trained in separate models?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Paramita Mirza" timestamp="18:44">
+<turn speaker="Paramita Mirza" timestamp="18:44">
 
 For each relation we train a separate model. So yeah, the classification will be just for a certain
 given a relation, whether it's a cardinality of that relation or not.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="18:57">
+<turn speaker="Waleed Ammar" timestamp="18:57">
 
 Interesting. Yeah, it's a very interesting task. I think. There's a lot of future work that can be
 done to address this problem. Can you give us a brief, recap on the key results in the paper?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Paramita Mirza" timestamp="19:09">
+<turn speaker="Paramita Mirza" timestamp="19:09">
 
 Yes. So for in this paper we two experiments related to on how to improve the identifying part. So
 first one is just to regard all numerals in the text. And the second setting is just regard only the
@@ -444,19 +444,19 @@ example "John's second wife Mary" means that from these ordinals we can infer th
 spouses was at least two. And so, yeah. So this is one of the challenges that we encountered after
 we analyzed the results.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="21:25">
+<turn speaker="Matt Gardner" timestamp="21:25">
 
 So I see that your baseline number that you report for spouse is zero. What about just taking the
 majority label, which might be one or two or zero? I'm not sure what it would be in your data, but
 how well does that perform?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Paramita Mirza" timestamp="21:40">
+<turn speaker="Paramita Mirza" timestamp="21:40">
 
 Yeah, we didn't really experiment with that's, so our baseline, just because the idea is we'll
 extract the information from the text. Right? So we can of course analyze from the counts in the
@@ -465,10 +465,10 @@ say, okay, if there is a person then definitely one spouse. We didn't take that 
 what we want to make sure here is how well we can we extract this kind of information from texts. So
 from, yeah, so our baseline is just taking random number in a person page as the cardinality.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="22:29">
+<turn speaker="Matt Gardner" timestamp="22:29">
 
 Yeah, that's a good point. It highlights the difference between what you might call relation
 extraction and knowledge based completion or slot filling where one of them just cares about the
@@ -476,34 +476,34 @@ final truth value that you end up with. And the other one cares about understand
 sentence in some sense. Right. And so getting the final truth value might be relatively trivial.
 Whereas actually understanding the sentence as a whole lot harder.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Paramita Mirza" timestamp="22:53">
+<turn speaker="Paramita Mirza" timestamp="22:53">
 
 Yes.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="22:54">
+<turn speaker="Matt Gardner" timestamp="22:54">
 
 Yeah, that's a good point.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="22:55">
+<turn speaker="Waleed Ammar" timestamp="22:55">
 
 Yeah. But there is also an aggregation component in this work, right? Because even if you understand
 individual sentences, sorry if you're understand half of the sentences or all the sentences in this
 document, this may not be all the information you need. You may need to aggregate information from
 multiple documents in order to reach the correct cardinality. So yeah it's a difficult problem.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Paramita Mirza" timestamp="23:19">
+<turn speaker="Paramita Mirza" timestamp="23:19">
 
 Yes. So this is also, yeah, this is exactly one challenge that we found. So regarding this
 conditionality. So what you mentioned is aggregating numbers from different documents, right? But
@@ -512,10 +512,10 @@ several relations like children, often the sentences are for example, they have 
 daughter together. So here you have to sum up the number, but the numeral is to reach the final
 number.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="23:57">
+<turn speaker="Matt Gardner" timestamp="23:57">
 
 An interesting thing that we ran into with NELL was facts change over time. So if you're trying to
 predict who's the president of which country, NELL only has the capacity to represent one person in
@@ -525,10 +525,10 @@ cardinalities of things. But I'm not sure if it's actually worse or not, but do 
 intuition on how hard it is? Like how often these things change? How temporally dependent this
 cardinality is.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Paramita Mirza" timestamp="24:30">
+<turn speaker="Paramita Mirza" timestamp="24:30">
 
 Yes. For some relations, like a number of spouse, children, this is highly dependent, it evolves,
 right? This kind of information. So definitely yes. But here that's why we use the Wikipedia
@@ -537,17 +537,17 @@ latest information that we can get. This assumption will definitely change if we
 relation cardinalities from the web. So from various texts, from news, from a lot of other texts
 other than, Wikipedia articles for sure.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="25:17">
+<turn speaker="Waleed Ammar" timestamp="25:17">
 
 Do you have any other thoughts on this work before we conclude?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Paramita Mirza" timestamp="25:21">
+<turn speaker="Paramita Mirza" timestamp="25:21">
 
 Yeah, so in the beginning, when we started, so we started with numerals right, just numbers for
 extracting relation cardinalities. But then once we dive into the, looking into the text and which
@@ -560,10 +560,10 @@ something, so there is no number at all there, but for sure this kind of stateme
 phrases actually express the cardinality of spouse relations. So from a linguistic point of view,
 there are a lot of other expressions that we can play with and this is interesting.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="26:41">
+<turn speaker="Waleed Ammar" timestamp="26:41">
 
 Yeah, I really like this task because it highlights something that is very linguistically hard to
 capture. Like it's hard to define one linguistic phenomena that captures this task at the same time.
@@ -572,11 +572,11 @@ if we're able to reliably extract it. So yeah, I'm very excited to see what futu
 done on this data. So thank you very much for doing this work and it's been a great pleasure talking
 to you.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Paramita Mirza" timestamp="27:16">
+<turn speaker="Paramita Mirza" timestamp="27:16">
 
 Sure, thanks a lot for the opportunity.
 
-</Turn>
+</turn>

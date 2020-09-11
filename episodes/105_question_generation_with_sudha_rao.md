@@ -8,41 +8,41 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Welcome to the NLP highlights podcast where we talk about interesting work in natural language
 processing. The hosts are Matt Gardner, Waleed Ammar and Pradeep Dasigi.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="00:08">
+<turn speaker="Pradeep Dasigi" timestamp="00:08">
 
 Hello everyone. Today for this episode we are going to talk about question generation and we have as
 our guest today, Sudha Rao from Microsoft research where she's a senior researcher. She also wrote a
 thesis on generating clarification questions. Welcome to the program Sudha.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sudha Rao" timestamp="00:22">
+<turn speaker="Sudha Rao" timestamp="00:22">
 
 Thank you. Thanks for inviting me.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="00:24">
+<turn speaker="Pradeep Dasigi" timestamp="00:24">
 
 As I mentioned, we wanted to chat about question generation today. There's been a lot of work in
 answering questions and building systems for answering questions for various reasons, various
 purposes, but there's also been a lot of work in question generation. Why do we want to generate
 questions Sudha? Can you give us a brief overview of this field?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sudha Rao" timestamp="00:42">
+<turn speaker="Sudha Rao" timestamp="00:42">
 
 Sure. The area of question generation sort of started flourishing around 2010 where people were
 looking at automated methods to generate questions to assist reading comprehension style question
@@ -55,10 +55,10 @@ on question generation where the task was given a sentence or a paragraph and an
 paragraph generate a question that is answered by the span. So there've been several works from that
 point where people mainly use rule-based method.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sudha Rao" timestamp="01:40">
+<turn speaker="Sudha Rao" timestamp="01:40">
 
 So, given a sentence like John loved Ann, generate a question, like who loved Anne or who did John
 love and so on. So based on the answer, that you want to generate a question, and later on in 2017
@@ -72,20 +72,20 @@ you're given some sort of a context. Do you want to ask questions about missing 
 you're given an image you want to ask some natural questions about the image and so on. So that's
 the other sort of work on question generation.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="02:43">
+<turn speaker="Pradeep Dasigi" timestamp="02:43">
 
 Yes. Right. So fundamentally there seems to be a distinction in the two kinds of question generation
 research directions. There is some work which looks at question generation as an end in itself
 versus this other line of work which generates questions as a means to achieving something else. Can
 you tell us more about that distinction?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sudha Rao" timestamp="03:01">
+<turn speaker="Sudha Rao" timestamp="03:01">
 
 Right. The first style is the kind of work that I just spoke where you are trying to look at, "can I
 automate this process of generating questions given paragraphs," or "can I look at how good the
@@ -98,10 +98,10 @@ that we will use for the task of question answering. So that's been one work and
 several works on those lines and they have observed improvements in the question answering task by
 augmenting the data in this fashion.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sudha Rao" timestamp="03:57">
+<turn speaker="Sudha Rao" timestamp="03:57">
 
 And on the flip side they've also seen improvements in the question generation models by using this
 question answering as a reward for improving the question generation task in itself. So that's the
@@ -114,10 +114,10 @@ was entailment. They had a model that tried to do all three tasks simultaneously
 setup. The summarization, the entailment and the question generation and with learning to do all
 three things together, what they showed that each of the individual tasks are improved.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="05:00">
+<turn speaker="Pradeep Dasigi" timestamp="05:00">
 
 I see. When you are trying to generate questions as a way of evaluating natural language,
 understanding capabilities and systems, what exactly is the task that's being solved? So for
@@ -126,10 +126,10 @@ text generation as you mentioned earlier. Right. Are there any other semantic ta
 evaluated or semantic capabilities that are being evaluated there other than conditional next
 generation?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sudha Rao" timestamp="05:24">
+<turn speaker="Sudha Rao" timestamp="05:24">
 
 Yeah, so the clarification question generation work that I have been sort of involved in that it's
 not necessarily just looking at, can I ask a question about something that's already there in the
@@ -141,34 +141,34 @@ more in a natural scenario. So in the work that I've been involved in, what we l
 some textual context, can a model generate a question that points at missing information in a given
 context?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="06:13">
+<turn speaker="Pradeep Dasigi" timestamp="06:13">
 
 Okay. So what you're saying is that the task set up here is that you just have some context and
 you're generating questions for it. You don't have an answer in mind.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sudha Rao" timestamp="06:21">
+<turn speaker="Sudha Rao" timestamp="06:21">
 
 Right, exactly.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="06:23">
+<turn speaker="Pradeep Dasigi" timestamp="06:23">
 
 Does it mean that this is necessarily a harder task than generating questions when you have answewrs
 in mind because you need to have a comprehensive understanding of what's actually given in the
 context. Right. To figure out what's missing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sudha Rao" timestamp="06:34">
+<turn speaker="Sudha Rao" timestamp="06:34">
 
 Right, exactly. It's a bit difficult because you need to have more of a global view of things,
 right? So to understand what is a missing information in the human context as humans, what we would
@@ -185,10 +185,10 @@ easier because you know that the generated question should be answered by the an
 bit more defined whereas in the missing information scenario, it's less defined because there are
 several good questions that you could ask.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="07:42">
+<turn speaker="Matt Gardner" timestamp="07:42">
 
 I think it'd be helpful here to give some concrete examples to nail down what we're talking about
 when we talk about given an answer generated question. A lot of the times people think of SQuAD as
@@ -201,10 +201,10 @@ answer and generating a question is much more complex. So for example, take drop
 that has summaries of American football games, and I might have an answer that is two and two might
 show up in a few places in the paragraph.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="08:33">
+<turn speaker="Matt Gardner" timestamp="08:33">
 
 It might show up nowhere in the paragraph, but there are questions that I can ask where the answer
 is two and maybe the question I had in mind was what's the difference between this person's longest
@@ -213,10 +213,10 @@ constrained. Even given an answer as you were talking about earlier, it's just w
 the SQuAD problem, which is it turns out a relatively simple predicate argument structure problem
 that the question generation task is actually this simple. Does this make sense?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sudha Rao" timestamp="09:05">
+<turn speaker="Sudha Rao" timestamp="09:05">
 
 Yeah. I think that's a very good point. You're right that most of the time when people think of
 question they think of SQuAD, but the scenario that you just pointed out makes it much [more]
@@ -227,17 +227,17 @@ be one way of looking at it. But if the answer is something that's not explicitl
 context at all, if it's a more abstract answer and you're trying to generate a question, then again
 it becomes more difficult.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="09:41">
+<turn speaker="Matt Gardner" timestamp="09:41">
 
 Can you give a concrete example or two of what you mean by that?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sudha Rao" timestamp="09:45">
+<turn speaker="Sudha Rao" timestamp="09:45">
 
 So in the missing information scenario that we looked at, one of the datasets was an Amazon were
 given a product description. I want to ask a question about something that's missing in there. So
@@ -250,10 +250,10 @@ and there are these FAQ is that people tend to ask over these descriptions, righ
 one of our work is use this data to have triples of some context, a question and an answer, and then
 try to see given a new context, can the model generate a useful clarification question?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sudha Rao" timestamp="10:42">
+<turn speaker="Sudha Rao" timestamp="10:42">
 
 So that's one concrete example. The other that we looked at was from stock exchange forums. Where
 what we observed is a lot of times when people write a post about some issue that they are facing
@@ -265,10 +265,10 @@ they have, then somebody would ask what version of Ubuntu are you using? And the
 update that post. So again, we used this edit history information to create a dataset where there is
 some context, which is the original post that somebody had written.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sudha Rao" timestamp="11:33">
+<turn speaker="Sudha Rao" timestamp="11:33">
 
 And then there is this clarification questions that get asked in the comment section. And then there
 is an answer, which is this edit that somebody has made to the post. Now given this dataset, what we
@@ -280,10 +280,10 @@ what is the type of oil that you're using of something. So there is a lot of sor
 clarification questions out there and the work that I'm interested in is trying to look at can we
 have models that can generate such a clarification questions.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="12:23">
+<turn speaker="Pradeep Dasigi" timestamp="12:23">
 
 Another interesting aspect which you hinted at about the difference between the two kinds of
 question generation is that not only is the answer not provided to the model during training time,
@@ -291,30 +291,30 @@ but also it seems like the target generated questions are actually questions wri
 do not know the answer. Right. So it's seems like we're focusing on a different distribution of
 questions altogether.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sudha Rao" timestamp="12:44">
+<turn speaker="Sudha Rao" timestamp="12:44">
 
 Yeah, that's a good point. I did not think of it that way, but you're right. I mean as somebody
 who's asking the question doesn't know the answer here. So in theory, sort of look at the possible
 answers that you could generate and then use that information to see if this is a good question or
 not. Then the model is trying to think of what is a good question.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="13:02">
+<turn speaker="Pradeep Dasigi" timestamp="13:02">
 
 Right. Okay. Let's talk about how we would train these models and what kinds of learning algorithms
 we would use. So for the case where we had the answers available to us and we're generating
 questions, we'd gendered those answers. It seems like many people have used simple Seq2Seq models.
 Right. Can you give us more details on how you would go about it?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sudha Rao" timestamp="13:22">
+<turn speaker="Sudha Rao" timestamp="13:22">
 
 Sure. One of the first works that did this, what they did is they used the context and the question
 as source and target and used the Seq2Seq models that have been predominantly used for machine
@@ -326,10 +326,10 @@ tried to incorporate that in some way. They said that, okay this is the answer s
 and try to pay attention to that more when you're trying to generate the question because you want
 to generate a question for that particular answer span.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sudha Rao" timestamp="14:09">
+<turn speaker="Sudha Rao" timestamp="14:09">
 
 So there were these answer focused question generation models that use the attention based
 mechanisms to do that. They also used pointer generation models where you are trying to point at
@@ -342,10 +342,10 @@ right: what, which why, and this can be identify using NER information for examp
 person, if it's a location and so on. So these NER embeddings helped them to identify the question
 type better.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sudha Rao" timestamp="15:04">
+<turn speaker="Sudha Rao" timestamp="15:04">
 
 The co-reference resolution was helpful when there was mention of pronouns and there was actual
 mention of that pronoun in the entity referred to by the pronoun in an earlier section of the
@@ -357,34 +357,34 @@ then use this question type into the second model that actually generated the qu
 they looked at how can you use this question type information explicitly to generate better
 questions. So there've been several works on top of the basic Seq2Seg models.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="15:54">
+<turn speaker="Pradeep Dasigi" timestamp="15:54">
 
 So to summarize that, would it be fair to say that these are essentially Seq2Seq cross entropy kind
 of losses, which are augmented using the aditional information coming from say a co-reference model
 or an entity type identification model or something? Right.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sudha Rao" timestamp="16:08">
+<turn speaker="Sudha Rao" timestamp="16:08">
 
 Right.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="16:08">
+<turn speaker="Pradeep Dasigi" timestamp="16:08">
 
 And for your work in generating clarification questions, given that it's essentially a different
 learning problem, what kinds of learning algorithms did you use?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sudha Rao" timestamp="16:16">
+<turn speaker="Sudha Rao" timestamp="16:16">
 
 Actually in the previous work that uses reinforcement learning style reward approach where they use
 this question answer-board as a way to guide a better question generation model. So it is not just
@@ -396,10 +396,10 @@ rank these questions in the order of usefulness to the given context. So it was 
 task instead of actual question generation tasks. So for that what we did is given a context, we
 first had to retrieve these set of candidate questions.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sudha Rao" timestamp="17:10">
+<turn speaker="Sudha Rao" timestamp="17:10">
 
 So for that what we used is a retrieval model, which the high level idea that is given a context, I
 will look for other contexts in my training data that are very similar to the given context I look
@@ -412,10 +412,10 @@ perfect information tries to give us is, given a scenario and given that I can h
 possible actions that I could take, what I'm going to look at is for each of the actions that I
 could take.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sudha Rao" timestamp="18:07">
+<turn speaker="Sudha Rao" timestamp="18:07">
 
 What are the answers that I could get? So in my case, given a context and given a question that I
 could ask on this context, I'm going to look at what answers I would get and by looking at what
@@ -427,10 +427,10 @@ know what answer I will get. So I will think of possible answers that I could ge
 and that would allow me to decide if this is a good question or not. So that was the framework that
 we use in order to rank a set of candidate questions that we had.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sudha Rao" timestamp="19:01">
+<turn speaker="Sudha Rao" timestamp="19:01">
 
 So that was the first model. The second paper that we worked on was actually trying to generate the
 set a clarification question given a context. So for this as well, we use the whole EVPI idea or the
@@ -441,17 +441,17 @@ then we looked at given the context that we had and this answer, whether adding 
 original context increases the utility of the given context. If it does, then I will say that this
 is a good question, so we also frame the learning in similar way, but now using Seq2Seq models.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="19:54">
+<turn speaker="Pradeep Dasigi" timestamp="19:54">
 
 Can you tell us again how exactly you measured the utility here?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sudha Rao" timestamp="19:57">
+<turn speaker="Sudha Rao" timestamp="19:57">
 
 Sure. The utility was in both cases, a neural network model. Again, where it was trained for a
 binary classification task. Where the training data was, given a context and given the true question
@@ -463,26 +463,26 @@ which we'll take in the context question and also the answer. Sorry, I forgot to
 So it takes in the context question and answer and tries to tell me if this is a good question
 answer pair for this context or not.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="20:47">
+<turn speaker="Pradeep Dasigi" timestamp="20:47">
 
 So, how is this any better than simply training a binary classifier.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sudha Rao" timestamp="20:50">
+<turn speaker="Sudha Rao" timestamp="20:50">
 
 It is a binary classifier, so it's a feedforward neural network, which is a binary classifier giving
 me a value between zero and one. The only difference is I would use this information to guide my
 question generation model if that is what you were asking?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="21:04">
+<turn speaker="Pradeep Dasigi" timestamp="21:04">
 
 Right. How is this capturing the semantic nuances or whether it could capture the semantic nuances
 of the information contained in a question, right? I mean if you're just training a binary
@@ -490,10 +490,10 @@ classifier on whether this pair of context or this triplet of context question a
 triplet or not. And how would you even think about whether the information contained in the question
 is useful or not?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sudha Rao" timestamp="21:25">
+<turn speaker="Sudha Rao" timestamp="21:25">
 
 Right. So I think the motivation was from this, the stock exchange dataset that we had where you
 know, somebody edited the post to add that missing information, right? So you would say in that
@@ -510,10 +510,10 @@ was asked. So we tried to do that but then we had very little labels at that lev
 question or this post was resolved or not, so we couldn't use that, but there is at a high level, I
 think what I'm trying to say is there could be other ways of modeling this utility better.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="22:46">
+<turn speaker="Pradeep Dasigi" timestamp="22:46">
 
 Yeah. I think it's great that you looked at real data and tried to build a system which could
 actually work on real, noisy data, but then there are these limitations of this direction. The
@@ -521,10 +521,10 @@ clarification question that you actually see in the data is also dependent on wh
 Right? There is a lot of this user specific knowledge that cannot be modeled or is completely
 missing here. Right. We can't really do anything about it. Correct.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sudha Rao" timestamp="23:12">
+<turn speaker="Sudha Rao" timestamp="23:12">
 
 Yeah, that's definitely true. Like there are so many different people who ask questions. So in the
 stocks exchange scenario we did try to use some sort of features of the users to say whether this
@@ -536,18 +536,18 @@ people who have been answering questions for a long time who have been asking qu
 time and they would sort of ask more specific questions or targeted questions as opposed to other
 users. So there are some user attributes that you could account for in the modeling.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="24:05">
+<turn speaker="Pradeep Dasigi" timestamp="24:05">
 
 Okay. Now going to the second paper you mentioned actually use the generated questions, right? So
 can you tell us a bit more about generative model itself there?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sudha Rao" timestamp="24:14">
+<turn speaker="Sudha Rao" timestamp="24:14">
 
 Sure. So as I said, that idea was using Seq2Seq models at a lower level to generate the question
 given a context. And we also had an answer generator which would generate an answer given a context
@@ -560,10 +560,10 @@ zero and one given a context question and answer. Right? So it was trained offli
 as a reward function to fine tune the original question generator that you had using reinforcement
 learning approach.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sudha Rao" timestamp="25:13">
+<turn speaker="Sudha Rao" timestamp="25:13">
 
 More specifically, we used the mixer model from Facebook where the idea was instead of moving to RL
 directly, you eventually move to RL from like supervised learning. So for initial epochs you would
@@ -575,10 +575,10 @@ function as a reward. And as a followup, what we did is instead of keeping this 
 constant or having just an offline model, what we tried to do is look at can we also train that
 utility function along with the training of the question generator model.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sudha Rao" timestamp="26:12">
+<turn speaker="Sudha Rao" timestamp="26:12">
 
 And to do that we used a generative adversarial network model where we considered the question
 generator to be a generator and the utility calculator or the utility function to be our
@@ -590,34 +590,34 @@ the generator tries to fool the discriminator by trying to generate more real li
 case. And the discriminator is trying to distinguish correctly between real questions and the model
 generated questions. So we use this GAN approach to model the utility function into generation.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="27:04">
+<turn speaker="Pradeep Dasigi" timestamp="27:04">
 
 Just to clarify, is the onset generator conditioned on the gender question?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sudha Rao" timestamp="27:08">
+<turn speaker="Sudha Rao" timestamp="27:08">
 
 Yes, it is conditioned on the generated question. Yeah. We never looked at the true answer. We used
 the true answers only for pre-training, our answer generator. But when we move to the fine tuning
 using GAN models, we always looked at generated answers.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="27:25">
+<turn speaker="Pradeep Dasigi" timestamp="27:25">
 
 I see. Okay. So let's talk about evaluation. We are actually generating things here and generator
 models evaluation is generally tricky. So how did you evaluate these gendered questions and answers?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sudha Rao" timestamp="27:35">
+<turn speaker="Sudha Rao" timestamp="27:35">
 
 Sure. For the SQuAD, like question generation, since it's a generation model, predominantly the
 metrics people use is like BLEU, METEOR from the machine translation world. So that's the one kind
@@ -629,10 +629,10 @@ you use these MLE models, they tend to generate questions very often. So in the 
 often saw these MLE models generate questions like, Oh, what are the dimensions? Is this product
 from China? And so on because it's trying to optimize for the maximum likelihood estimation.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sudha Rao" timestamp="28:24">
+<turn speaker="Sudha Rao" timestamp="28:24">
 
 So that kind of issue is observed when you use Seq2Seq models using just the Emily's supervised
 learning objectives. So diversity, what it tries to measure is how diverse is your generated
@@ -644,10 +644,10 @@ metrics. More so because unlike the SQuAD question generation where you know, yo
 generate a question for a particular answer span. So the set of questions is limited. It's more
 about how you frame the question, right? It's all about trying to ask for a particular thing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sudha Rao" timestamp="29:18">
+<turn speaker="Sudha Rao" timestamp="29:18">
 
 Whereas in our scenario where we are trying to ask questions for missing information there could be
 multiple good questions. So it's hard to evaluate the model just based on a few set of references
@@ -662,10 +662,10 @@ it's asking for new information. The fourth thing that we looked at was whether 
 specific to the context or generic right. To look at whether it's generated a question like what are
 the dimensions?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sudha Rao" timestamp="30:23">
+<turn speaker="Sudha Rao" timestamp="30:23">
 
 That is sort of a good question for almost any product. I said the most products. So that's why you
 want to look at if it's asking something specific. So "What are the handles made up of?" Would mean
@@ -675,26 +675,26 @@ Would this question help somebody who's trying to decide whether to buy this pro
 evaluated the generated questions for these nuances and what we found that doing this kind of
 evaluation helps us distinguish generated questions better in terms of their quality.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="31:05">
+<turn speaker="Pradeep Dasigi" timestamp="31:05">
 
 Good, and according to these metrics how good were your systems doing?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sudha Rao" timestamp="31:07">
+<turn speaker="Sudha Rao" timestamp="31:07">
 
 What we found is for fluency and relevancy, most of our models were similar to the baseline models
 that we looked. So the baselines in our case with some retrieval models and some generation models
 using supervised learning and so on.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sudha Rao" timestamp="31:21">
+<turn speaker="Sudha Rao" timestamp="31:21">
 
 We found that all these models fair sort of equally when it comes to relevancy and fluency when it
 comes to seeking new information, they actually found the retrieval models to be the best because
@@ -705,17 +705,17 @@ specific that are useful to a potential buyer and so on. So I guess this idea of
 what answers you would generate and corporate that to guide your generation helps in this
 specificity and usefulness criteria,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="32:03">
+<turn speaker="Matt Gardner" timestamp="32:03">
 
 And how well did the reference questions do?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sudha Rao" timestamp="32:06">
+<turn speaker="Sudha Rao" timestamp="32:06">
 
 The reference questions were much better in compared to any of our models. For example, if the score
 was between one to five the reference questions were more like 4.5 and so on when it comes to
@@ -727,25 +727,25 @@ People tend to ask a lot of questions that are specific to themselves. Now the s
 not with respect to the context, but with respect to the user and that becomes less useful in
 general to the rest of the community. I would say.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="32:59">
+<turn speaker="Matt Gardner" timestamp="32:59">
 
 I guess that highlights what to me is the ill posed nature of this problem. Like if I'm trying to
 model what a person would ask about a product, I need to know information about specific users.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sudha Rao" timestamp="33:12">
+<turn speaker="Sudha Rao" timestamp="33:12">
 
 Right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="33:12">
+<turn speaker="Matt Gardner" timestamp="33:12">
 
 It's hard to wrap your head around like what's the right thing to do here is is this a good metric
 or not because you're right. If what I want to do is improve my product description then I want
@@ -754,10 +754,10 @@ what I want to do is help individual users get what they need out of it, that's 
 There are definitely people who need very specific information and so like how do you model this
 variance? It's hard.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sudha Rao" timestamp="33:38">
+<turn speaker="Sudha Rao" timestamp="33:38">
 
 Your absolutely right, and that's one of the criticisms I got in my thesis work, etc. , There is no
 end goal. We need to define what the end goal is. So in the stock exchange scenario, we said that
@@ -770,10 +770,10 @@ information is more necessary. So if we could model the user goal also when we a
 generate a question, this could be super useful. I would say. So that's what we don't do at this
 point.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="34:32">
+<turn speaker="Matt Gardner" timestamp="34:32">
 
 Yeah, I agree that when I saw that end goal description in your paper, I was like, yes, that's
 something I can definitely buy into. It seems like it would be really helpful, but on the other hand
@@ -784,10 +784,10 @@ other issues are very much dependent on their execution environment or whatever.
 need more detail, but how do you know the difference? How do you get a machine to know that
 difference? Like to suggest what things will be necessary. It seems really, really hard.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sudha Rao" timestamp="35:13">
+<turn speaker="Sudha Rao" timestamp="35:13">
 
 Yeah, really hard. Unless the machine has additional information about the involvement of the users.
 Say it's more difficult in the scenario that you explained. But maybe you're writing a word document
@@ -797,19 +797,19 @@ user goal because you have some sort of goal of this is the document that somebo
 finish or edit and so on. So if we could get some sort of user involvement information and if you
 could have a way of modeling it, then you could incorporate this user goal.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="35:51">
+<turn speaker="Pradeep Dasigi" timestamp="35:51">
 
 Okay. Yeah. Going back to some of the empirical observations you made, comparing your proposed
 approach to baselines, what do you think are the next steps at a high level in terms of building
 better models for say, generating clarification questions for the datasets that you looked at?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sudha Rao" timestamp="36:07">
+<turn speaker="Sudha Rao" timestamp="36:07">
 
 Right. I guess one of the things that I've been trying to think about is this modeling the user end
 goal in some way. You know, having a scenario where you know what the end goal is. So one of the
@@ -820,10 +820,10 @@ and say from somewhere you have a user attribute of some sort. You know they are
 like these vegetables more or the use these kinds of oils often and all. Then can you use that, use
 that attribute in some way to generate a more user specific question of some sort.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sudha Rao" timestamp="36:55">
+<turn speaker="Sudha Rao" timestamp="36:55">
 
 So that's one thing that I've been thinking about. The other is the work that we did recently was
 controlling the level of specificity of the generated questions. So what we looked at is can we have
@@ -835,10 +835,10 @@ want more high level questions. Whereas you are towards the finishing ends of yo
 description, you would want a more specific question. So sort of motivated by that fact we looked at
 can we control the level of specificity.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sudha Rao" timestamp="37:43">
+<turn speaker="Sudha Rao" timestamp="37:43">
 
 So that's one that we looked at. The other work that we have been doing right now is sort of
 interesting application of question generation. So the hypothesis there that we're trying to test
@@ -851,10 +851,10 @@ want to slip through the fact checking, right? So if they explicitly add some in
 checking systems can sort of identify and say this is incorrect and so on. But if they try to be
 ambiguous, then there is less danger of, you know, being caught by the fact checking system.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sudha Rao" timestamp="38:46">
+<turn speaker="Sudha Rao" timestamp="38:46">
 
 So they tried to be very ambiguous. So they would say a reporter said something, a judge said
 something, never mentioning the source of the report and never mentioning where the judge is from.
@@ -864,18 +864,18 @@ if I show some of these questions then the reader can make a decision for themse
 want to fully trust this article or not based on these are the information that could be missing in
 the given article.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="39:20">
+<turn speaker="Pradeep Dasigi" timestamp="39:20">
 
 That sounds more like identification of missing information problem. I mean you don't really have to
 generate questions for it, correct?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sudha Rao" timestamp="39:26">
+<turn speaker="Sudha Rao" timestamp="39:26">
 
 Sure. You don't have to, but question is just a way of phrasing the missing information and I think
 in generally I'm sort of interested in looking for missing information. I feel that question
@@ -883,19 +883,19 @@ generation is just a way of sort of asking for that missing information. The tas
 phrasing a question I believe is not a difficult task. What is more difficult is knowing what to ask
 about and that's the missing information. The setting. Yeah.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="39:52">
+<turn speaker="Pradeep Dasigi" timestamp="39:52">
 
 Great. One more question I had about your evaluation setup was that you used human evaluation for
 figuring out whether the generated question is useful or not, whether it's informative or whether
 it's asking for the right information or not, can even think about automating that process at all.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sudha Rao" timestamp="40:07">
+<turn speaker="Sudha Rao" timestamp="40:07">
 
 It's challenging. I've been trying to think of ways to do that but I don't have a concrete answer
 for the SQuAD like scenario. I've seen people use other tasks as a way of guiding or evaluating like
@@ -905,17 +905,17 @@ information scenario it's even more difficult. I think as Matt was saying, you h
 end goal of the user is to understand whether it's a good question or not. So for now I think we
 will have to rely on human evaluation for most part.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="40:46">
+<turn speaker="Pradeep Dasigi" timestamp="40:46">
 
 And did you think it was a problem? Was human evaluation fairly doable?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sudha Rao" timestamp="40:50">
+<turn speaker="Sudha Rao" timestamp="40:50">
 
 It's definitely hard. We had to annotate every generated question with at least five annotators to
 be able to get some sort of agreement between them. Also, it was difficult to define what you mean
@@ -930,17 +930,17 @@ we had to define is this useful only to this user who's asking or is this useful
 who have been using Amazon and so on. So it is difficult to do human evaluation in this scenario
 because you need to sort of define what you mean by any of these criteria.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="42:02">
+<turn speaker="Pradeep Dasigi" timestamp="42:02">
 
 Great. Yeah, thanks a lot. Is there anything that you wanted to say that we didn't ask you?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sudha Rao" timestamp="42:06">
+<turn speaker="Sudha Rao" timestamp="42:06">
 
 I guess in general, the other thing that I'm interested in right now is using one of these pre-
 trained big models and trying to see if we can generalize beyond domain. So most of the work that
@@ -951,19 +951,19 @@ how to ask a question very well and then use this utility information to guide i
 ask about. And that's like the missing information in that scenario. So I guess that's something
 that I'm interested in.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="42:48">
+<turn speaker="Pradeep Dasigi" timestamp="42:48">
 
 Great. Thanks. This was a really fun chat. Thanks a lot for telling us about your work. Also the
 work of question generation generating?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sudha Rao" timestamp="42:56">
+<turn speaker="Sudha Rao" timestamp="42:56">
 
 Yeah. I had a great time chatting as well. Thank you so much.
 
-</Turn>
+</turn>

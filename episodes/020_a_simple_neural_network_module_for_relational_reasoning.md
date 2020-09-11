@@ -8,23 +8,23 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting recent work in
 natural language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is Matt Gardner and Waleed Ammar, we are research scientists at the Allen Institute for
 Artificial Intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:13">
+<turn speaker="Waleed Ammar" timestamp="00:13">
 
 Today's paper is titled: A Simple Neural Network Module for Relational Reasoning. It was put on
 archive a few days ago, written by Adam Santoro and others at Deep Mind. So the paper addresses
@@ -38,20 +38,20 @@ called a relation and then you sum up these relations and feed it into another M
 layer perceptron to compute the overall embedding or representation of the relations among these
 objects in each set.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="01:21">
+<turn speaker="Waleed Ammar" timestamp="01:21">
 
 And the paper makes this nice analogy to CNNs and RNNs saying that the capacity to compute relations
 is baked into the relation network in the same way that the capacity to reason about spatial and
 translational translation invariant properties are built into the CNN and also in the same way that
 the capacity for reason about sequential dependencies is built into the recurrent neural networks.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="01:47">
+<turn speaker="Matt Gardner" timestamp="01:47">
 
 So what you described sounds really, really similar to me to similarity matrices that have been
 computed in NLP models, deep text models for a long time. So there's the decomposable attention
@@ -63,10 +63,10 @@ similarity between each word vector in a question, in each word vector and each 
 passage compute this similarity matrix that they then do further operations on. So am I missing
 something?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="02:35">
+<turn speaker="Waleed Ammar" timestamp="02:35">
 
 That's exactly right. You can use the functions used in both of these papers to replace the function
 that computes the relation between a pair of entities here in this in this model. And then I think
@@ -76,10 +76,10 @@ concerned about finding a similarity between the objects. While this is trying t
 relation in a dense vector. So if the output is not as clear, it's a vector in this time, but the
 end, we're still using neural networks to compute it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="03:21">
+<turn speaker="Matt Gardner" timestamp="03:21">
 
 Right. I guess I said similarity, but actually that's not what's computed in the decomposable
 attention model. It's this matrix of, it is a matrix of like similarity, something like a similarity
@@ -91,20 +91,20 @@ representation. So I called it a similarity matrix because you're doing this mat
 Anyway, it just seems like this is something that's been done for a long time and I'm not really
 sure what's new here.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="04:04">
+<turn speaker="Waleed Ammar" timestamp="04:04">
 
 Yeah, when I saw this paper, I didn't think this is the first time someone defines a function that
 estimates the relationship between pairs of objects in this fashion. I think maybe one nice thing
 here is that they're indicating that this is a thing. This is a module that you can instantiate and
 put in another model, which just putting more emphasis on the usefulness of this structure.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="04:36">
+<turn speaker="Matt Gardner" timestamp="04:36">
 
 Maybe I'm being a little bit pushing on this a little bit too much, but like if you're writing code
 and Keras or something, this is just a layer. I have a layer that is a matrix attention layer that
@@ -113,10 +113,10 @@ maybe Yoav Goldberg's post yesterday on criticizing deep learning papers that tr
 gotten me thinking about this, but I'm just really struggling to find out what's new here. It seems
 like they're claiming more than they should be.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="05:08">
+<turn speaker="Waleed Ammar" timestamp="05:08">
 
 I think the main thing that made this paper as popular as it is now on Twitter, is that the results
 we have on the CLEVR dataset are exceeding the human performance. So maybe I should spend a minute
@@ -132,17 +132,17 @@ automatically generated questions. And we know from previous work that you know,
 are very different than automatically generated language. So we know this, for example, from results
 on BAbi dataset, I'm sure Matt can talk for hours about.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="06:47">
+<turn speaker="Matt Gardner" timestamp="06:47">
 
 Let's not waste time. Talking about that dataset.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="06:50">
+<turn speaker="Waleed Ammar" timestamp="06:50">
 
 Right? So yeah, so to go back the to the paper, the, results in this paper show that adding this
 module, the relation network module to a neural network that's performing at the state-of-the-art
@@ -154,10 +154,10 @@ module to it, to reason about how each of these pairs of objects actually are re
 very big performance increase into about 20 or 19 point increase. And there results is 95.5%, which
 is a few points more than what the humans can do on this.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="08:06">
+<turn speaker="Matt Gardner" timestamp="08:06">
 
 So let me push back on that a little bit. I do think this is an interesting piece of work and it's
 good that people are looking at these models in this dataset. Like, I don't want to criticize the
@@ -169,10 +169,10 @@ know where the human performance came from. I haven't read like the CLEVR paper,
 this for sure, but when you make these out strong claims about like superhuman performance, you need
 to be really careful.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="08:52">
+<turn speaker="Matt Gardner" timestamp="08:52">
 
 Strong claims requires strong evidence and also they say a visual reasoning task, reasoning over
 what when, when you hear "superhuman performance on a visual reasoning tasks," you might think we
@@ -182,10 +182,10 @@ language reasoning. It's not natural language. So while this is an interesting r
 really careful about the scope of the claims that we make. Otherwise we're just going to go off the
 rails.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="09:23">
+<turn speaker="Waleed Ammar" timestamp="09:23">
 
 So I agree, yes, we should take these results with a grain of salt. I don't know honestly how well
 trained the humans who are performing this task or whether they were actually trying to explicitly
@@ -199,10 +199,10 @@ compute the relation between each pair of the entities using the relation networ
 these relation embeddings and feed them into another multi-layer perceptron and then make the
 prediction of the answer.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="10:37">
+<turn speaker="Matt Gardner" timestamp="10:37">
 
 So I'm looking at the specifics of the model and now I can see where the differences are between the
 previous similarity matrix kinds of things that I've seen. Or there's also this paper on like
@@ -215,10 +215,10 @@ question and each word in the passage, they have this between each pixel, each p
 image, right. And then this is parameterized not just by a vector of learned parameters, but also by
 the question vector.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="11:31">
+<turn speaker="Matt Gardner" timestamp="11:31">
 
 So you're given a question, you encode it with an LSTM and then you take that encoded vector and use
 it as part of the parameterization of this similarity function. And so yeah, you're doing
@@ -228,28 +228,28 @@ people have been thinking about these similar ideas. It's not to me some revolut
 network structure. It's just an application of ideas that people have had for a long time to a
 particular new problem, with good results.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="12:08">
+<turn speaker="Waleed Ammar" timestamp="12:08">
 
 They're not at all. And the like the group of pixels that the consider to be an object. This is
 really an abstraction that yeah, I don't think it's critical to this work. So I don't think this
 distinction is a novelty here
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="12:24">
+<turn speaker="Matt Gardner" timestamp="12:24">
 
 And I should be, I should be clear. I said each pair of pixels, I mean, each pair of the like max
 pooled top layer representation out of your CNN. So it's not like an individual pixel, it's like a
 representation of a group of pixels that you're comparing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="12:39">
+<turn speaker="Waleed Ammar" timestamp="12:39">
 
 Right. So one thing that they wanted to explore more closely is how does like, is this good because
 it addresses the relational aspect or the relational reasoning between objects, or is it good just
@@ -261,10 +261,10 @@ two types of questions they ask. One is relational and the other is non-relation
 a relational question would be "What is the shape of the object that is farthest from the gray
 object?"
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="13:36">
+<turn speaker="Waleed Ammar" timestamp="13:36">
 
 And another non-relational object question would be, "What is the shape of the gray object?" And the
 results are kind of interesting. They confirm their hypothesis that this relation network is really
@@ -278,10 +278,10 @@ there is a particular task in BAbi called basic induction task. And the best of 
 they look at performance at 55%. That's the DNC model. And their model with the relation network
 gives 98% accuracy on this task.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="15:01">
+<turn speaker="Matt Gardner" timestamp="15:01">
 
 So okay, let's talk about BAbi for just a minute. They show that they don't do too well on the three
 step task. So here, imagine a set, I guess I need to describe BAbi. So you get a list of sentences
@@ -292,10 +292,10 @@ notice is that this model does nothing to do multi-step kinds of reasoning. How 
 question right then? How can it possibly go backwards in time? In order to answer the question
 correctly? Well, you can imagine these questions are totally templated.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="16:01">
+<turn speaker="Matt Gardner" timestamp="16:01">
 
 And so you can imagine the model just learning that it can store the comparison it needs to do for
 the first step. In one part of it's hidden vector state and the comparison it needs to do for the
@@ -306,37 +306,37 @@ artificial and so templated, you can actually decompose all of the steps that yo
 supposedly multi-step process into just an aggregation of pairwise comparisons. Does this make
 sense?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="16:47">
+<turn speaker="Waleed Ammar" timestamp="16:47">
 
 It does.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="16:47">
+<turn speaker="Matt Gardner" timestamp="16:47">
 
 So, yeah, I would again, take this result in any results on BAbi with a huge grain of salt because
 it's not really language, it's incredibly templated and thus gameable in these kinds of ways. This
 model shouldn't be able to do anything multi-step, but it can solve BAbi without too much trouble.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="17:08">
+<turn speaker="Waleed Ammar" timestamp="17:08">
 
 So to wrap up this paper introduces a relation module. Were, whenever you have a set of objects and
 you want to characterize the relations between the objects or pairs of these objects, you can use
 this module to get it, and there are some results that suggest it may be a good fit for this.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="17:30">
+<turn speaker="Matt Gardner" timestamp="17:30">
 
 Okay. Thanks Waleed for telling us about this paper. Next time we'll have another interview with
 Maruan Al-Shedivat who will be talking to us about his paper called:Contextual Explanation Networks.
 
-</Turn>
+</turn>

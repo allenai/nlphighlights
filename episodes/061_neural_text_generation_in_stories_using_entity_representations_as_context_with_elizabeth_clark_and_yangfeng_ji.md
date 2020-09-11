@@ -8,23 +8,23 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting work in natural
 language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is Matt Gardner and Waleed Ammar, we are research scientists at the Allen Institute for
 artificial intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:12">
+<turn speaker="Waleed Ammar" timestamp="00:12">
 
 Great. Today our guests are Elizabeth Clark who is a PhD student at the University of Washington
 working on natural language generation and is a member of the sounding board, the UW team that
@@ -32,27 +32,27 @@ recently won the Amazon Alexa prize. And also we have in the room Yangfeng Ji, w
 postdoc at university of Washington and will soon be joining the university of Virginia as an
 assistant professor. So congratulations.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elizabeth Clark" timestamp="00:39">
+<turn speaker="Elizabeth Clark" timestamp="00:39">
 
 Thank you.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:39">
+<turn speaker="Waleed Ammar" timestamp="00:39">
 
 Yeah, the paper we're discussing, we're discussing today is titledNeural Text Generation in Stories
 Using Entity Representations as Context by Elizabeth Clark, Yangfeng Ji and Noah A. Smith. It won be
 outstanding paper award at NAACL 2018 an honor only given to four papers this year. So welcome to
 the podcast. What's the main motivation for this work?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elizabeth Clark" timestamp="01:02">
+<turn speaker="Elizabeth Clark" timestamp="01:02">
 
 So I've been working on story generation and collaborative story writing where you have a setup that
 involves a person sitting down and writing a story with the help of a computer. So specifically at
@@ -65,10 +65,10 @@ writing tasks. And so we found that one of the main things they talked about was
 that they felt that the suggestions that the model was generating, they didn't make sense with the
 broader context of the story.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elizabeth Clark" timestamp="02:01">
+<turn speaker="Elizabeth Clark" timestamp="02:01">
 
 And one common piece of that was the fact that they didn't refer back to any of the entities or
 characters that had already been discussed in the story. So one person said I wish that It'd paid
@@ -81,18 +81,18 @@ entities for doing things like language modeling and co-reference resolution. An
 a perfect solution to try and put that into two a story generations. It's done to try and address
 that issue.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="02:53">
+<turn speaker="Waleed Ammar" timestamp="02:53">
 
 That's very interesting. How does the system work with the users? How does it interact with the
 users?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elizabeth Clark" timestamp="03:00">
+<turn speaker="Elizabeth Clark" timestamp="03:00">
 
 So the sound that we have right now is turn-taking. So we just have a website and we begin with sort
 of visual prompts and we ask the person to write the first line of the story and then the computer
@@ -102,20 +102,20 @@ questions that are about how do you actually set up that collaboration. And then
 modeling side, how do you build models that will make suggestions better that are useful to the
 person.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="03:31">
+<turn speaker="Matt Gardner" timestamp="03:31">
 
 So are you viewing this mostly as an aid to creativity? Like what's the user story for writers here?
 Why is this useful? I guess some context. I like listening to a podcast called writing excuses,
 that's a bunch of authors talking about how they write. And I'm just thinking about how would these
 people actually use such a system. I'm just curious what your thought is.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elizabeth Clark" timestamp="03:50">
+<turn speaker="Elizabeth Clark" timestamp="03:50">
 
 Yeah, that's a great question. So when we did this user study, the people that came in to write with
 the system varied. So some of them were professional writers or hobbyists writers that wrote a lot.
@@ -132,26 +132,26 @@ educational tool for people learning how to write. You could see it being a tool
 authors. And the way that you build those interactions and again, even on the modeling side might
 look very different for those two different audiences.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="05:08">
+<turn speaker="Matt Gardner" timestamp="05:08">
 
 Yeah, that's really interesting.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="05:10">
+<turn speaker="Waleed Ammar" timestamp="05:10">
 
 So how does the model generate words, that's the main model the proposal from the paper or something
 that allows you to represent entities and generate the next words in the narrative. So how does the
 model work?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elizabeth Clark" timestamp="05:24">
+<turn speaker="Elizabeth Clark" timestamp="05:24">
 
 So the model that we proposed in this paper builds off a seek to seek baseline, which is what we had
 used in previous writing tasks. And so the, the context that that uses is the context of the
@@ -162,19 +162,19 @@ the entities in the story? Can we keep track of those in use information by what
 of those entities? What we've seen so far as an additional source of context as we generate the next
 sentence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="06:04">
+<turn speaker="Waleed Ammar" timestamp="06:04">
 
 So I guess let's zoom into the entity's component here. Cause I think that's the most interesting
 part. How does it work? You mentioned we're using some of the earlier predicting text entity, that's
 the components and how it works.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elizabeth Clark" timestamp="06:21">
+<turn speaker="Elizabeth Clark" timestamp="06:21">
 
 Sure. So I guess I can get the high level review and try to give a little bit more detail. But the
 basic idea is that as you go through out a text, every time you encountered an entity, there's a
@@ -188,30 +188,30 @@ and based on that decision. So if it decides the next word should refer to entit
 entity A's representation of the current time and uses that as another form of context as it
 generates.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="07:20">
+<turn speaker="Matt Gardner" timestamp="07:20">
 
 So is this a hard decision at every time step? So just thinking of like end to end learning about PR
 backpropagation through hard decisions. Doing an argmax is not differentiable so are you, are you
 actually making a hard decision about what, which entity is represented? And then if so, how do you
 actually train this thing?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yangfeng Ji" timestamp="07:41">
+<turn speaker="Yangfeng Ji" timestamp="07:41">
 
 So it is a hard decisions, and in this work we actually acquired the trained data to have the cor-
 reference information annotated. So to me is we have that part of the information and we don't need
 to decode a softmax because we don't have the ground truth. And we use the ground truth to guide the
 softmax to do a right decision about which entity we should use or if we should create a new entity.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="08:08">
+<turn speaker="Matt Gardner" timestamp="08:08">
 
 I see. So I guess you say you have the vector represent each entity and you select the entity and
 use that vector. Another very common thing to do would be to, for instance, have an attention over
@@ -219,10 +219,10 @@ entities and to a weighted sum of the entity vectors and use that instead. Right
 have to have labels for like which entity is actually being referred to you. So you could train this
 on more data. I assume you tried this at some point, did you, and if so, what happened?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yangfeng Ji" timestamp="08:38">
+<turn speaker="Yangfeng Ji" timestamp="08:38">
 
 So what you described is very similar to the part in the work that is trying to keep track of the
 entity What we do here is we want each entity representation to have a specific meaning about what
@@ -233,40 +233,40 @@ like a, you have a weighted sum and that will increase the potential of the mode
 we are particularly interested in, for example, text generation, we want entity representation to
 encode. Each individual entity information instead of just mixing them all together.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="09:31">
+<turn speaker="Waleed Ammar" timestamp="09:31">
 
 So I guess the difference here is that you're relying a little too much on the co ref model, but
 other than the state that the cor ref model is going to be doing, we don't really need any more
 additional annotation. It's the same training data.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="09:46">
+<turn speaker="Matt Gardner" timestamp="09:46">
 
 Okay. Yeah, you're right. You can just use the systems output. That makes more sense. Okay. Yup.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="09:53">
+<turn speaker="Waleed Ammar" timestamp="09:53">
 
 I guess that begs the question of how good is the co-ref?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yangfeng Ji" timestamp="09:56">
+<turn speaker="Yangfeng Ji" timestamp="09:56">
 
 Oh yeah, that's a, that's a reasonable question.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elizabeth Clark" timestamp="09:59">
+<turn speaker="Elizabeth Clark" timestamp="09:59">
 
 Not perfect. Definitely not perfect. So one thing that we've found in the data. So we got these
 automatic annotations and we saw that some of the entity mentions were I think over 70 words long or
@@ -276,20 +276,20 @@ interested in mainly character, characters were a very motivating part of this. 
 out but it's not perfect. So as we improve co-ref systems, we expect this model to preform betters
 as well.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yangfeng Ji" timestamp="10:32">
+<turn speaker="Yangfeng Ji" timestamp="10:32">
 
 Yeah. Another thing from the co-reference resolution result, what we find is it has a relativly high
 precision than recall, which means most of the time if we find there is a co-reference link it is
 correct. But there is another big trying to just miss the co-reference link, which is also, it's
 like it's okay to use this. I mean since the precision is not bad that precision is fine.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="11:00">
+<turn speaker="Waleed Ammar" timestamp="11:00">
 
 So there are different components in this model, there is the part that captures the context from
 three different sources of information; previous sentence, the current sentence, and the previous
@@ -299,86 +299,86 @@ this is an entity or not and each of these components have parameters. Right. Ho
 mentioned how you train, how you fit the model for the entities that to make the entities decisions.
 How about the other components? Are they trained independently?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elizabeth Clark" timestamp="11:36">
+<turn speaker="Elizabeth Clark" timestamp="11:36">
 
 So when the model makes a prediction, it predates all of the information that once, so it predict
 that it predicts whether what the word is, but it also generates all of these, the entity
 information as well, whether it refers which entity refers to how many words are in it, et cetera.
 Yeah. So it's making all of those predictions at once.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="11:57">
+<turn speaker="Waleed Ammar" timestamp="11:57">
 
 So it's the same training set and used to optimize all the parameters of the model together.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yangfeng Ji" timestamp="12:02">
+<turn speaker="Yangfeng Ji" timestamp="12:02">
 
 Yeah, untrained and trained.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="New Speaker" timestamp="12:05">
+<turn speaker="New Speaker" timestamp="12:05">
 
 I see.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yangfeng Ji" timestamp="12:05">
+<turn speaker="Yangfeng Ji" timestamp="12:05">
 
 All the information can be used predict the word, once the word is predicts. We can use this to
 discern to optimize other parameters.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="12:14">
+<turn speaker="Waleed Ammar" timestamp="12:14">
 
 That makes sense. And then have you update the entity embeddings. So you mentioned that you maintain
 one embedded for each entity throughout, but it's updated. And how does it that update happen?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elizabeth Clark" timestamp="12:23">
+<turn speaker="Elizabeth Clark" timestamp="12:23">
 
 That updating is a combination of the previous representation of the embedding and the hiddent
 state, those are combined to update the entity representation,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="12:33">
+<turn speaker="Waleed Ammar" timestamp="12:33">
 
 So they had a state for that from the LSTM representing the co-reference.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elizabeth Clark" timestamp="12:37">
+<turn speaker="Elizabeth Clark" timestamp="12:37">
 
 Right.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="12:39">
+<turn speaker="Waleed Ammar" timestamp="12:39">
 
 So it's a way to, a combination, it's a function of both these two entities make.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="12:45">
+<turn speaker="Matt Gardner" timestamp="12:45">
 
 So I think to recap that and as I understand the model, let me see if I have this right. You have a
 seek to seek model with attention. That's just given the previous sentence, generate the next
@@ -389,35 +389,35 @@ language model from prior work that tries to keep track of what entities are pre
 to generate words. And then you're mixing these two somehow. And that's your language generation
 model. Is that a fair characterization of what's going on?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elizabeth Clark" timestamp="13:31">
+<turn speaker="Elizabeth Clark" timestamp="13:31">
 
 Great. So we take each of the context vectors if you will, from each of these pieces and we combined
 them together into a single context vector, which we use to generate the next word.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="13:43">
+<turn speaker="Matt Gardner" timestamp="13:43">
 
 And how do you, how do you combine them into a single context vector?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elizabeth Clark" timestamp="13:47">
+<turn speaker="Elizabeth Clark" timestamp="13:47">
 
 So in this work we use just mass pooling to combine all the vectors together we didn't want to
 introduce any new parameters. And max pooling worked best out of a few different things that we
 tried. But you could think about other ways of taking these forms in context and combining them
 together.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="14:05">
+<turn speaker="Matt Gardner" timestamp="14:05">
 
 I guess both of them will generate a distribution over words that every time step you could imagine
 just mixing these two probabilities. Is that, does that make sense? Is it something you tried? Does
@@ -429,10 +429,10 @@ curious like is there anything interesting to say there about if it's better to 
 and let them model do something interesting or would you really get basically the same thing if you
 ensemble them at the end? I don't know.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="14:52">
+<turn speaker="Waleed Ammar" timestamp="14:52">
 
 I think one of the possible side effects of making this decision later is that for the component
 that just tries to predict the entities, it will tend to default as well be using the entities all
@@ -440,26 +440,26 @@ the time because many of the talkings are not. But I guess that actually the cen
 paper is that you need the entity information most of the time while you're generating a narrative
 text. So I take that back.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yangfeng Ji" timestamp="15:22">
+<turn speaker="Yangfeng Ji" timestamp="15:22">
 
 Oh, the entity, the entity representation has been used every single step to predict the word. It is
 used to predict into dimension also used to predict the word after this incident?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="15:36">
+<turn speaker="Waleed Ammar" timestamp="15:36">
 
 Yeah. Potentially it could also work for both. Cool. So how about the experiments? How do you, how
 did you experiment with this model? What tasks did you try?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elizabeth Clark" timestamp="15:48">
+<turn speaker="Elizabeth Clark" timestamp="15:48">
 
 So we had three different evaluations of the model. The first we really tried to look at the entity
 dimensions themselves, make sure that we can generate mentions to entities in appropriate way. The
@@ -471,10 +471,10 @@ appreciate in generating texts. So the first that was, I mentioned generation te
 this worked is we took stories. So, so the corpus we are using for all of this is the Toronto Book
 Corpus.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elizabeth Clark" timestamp="16:35">
+<turn speaker="Elizabeth Clark" timestamp="16:35">
 
 So we're training and testing it on adventure books specifically. And we took these passages from
 the book and we removed each of the entity mentions from them and we had the models go through and
@@ -485,111 +485,111 @@ that's the gold candidate. But then for the next step there will be two candidat
 previous entity mentioned and so on and so forth until at the end of the passage you can have over a
 hundred candidates in one list.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="17:20">
+<turn speaker="Waleed Ammar" timestamp="17:20">
 
 So it's really unfair to predict signal to predict the first, the first mentioned correctly. Right.
 I, it makes sense to predict that there is a new entity, but the name of the new entity is pretty
 much unknown. Right. That's how is that part of the evaluation?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elizabeth Clark" timestamp="17:38">
+<turn speaker="Elizabeth Clark" timestamp="17:38">
 
 So for this specific evaluation, the first one is actually trivial because there's only, there's
 only one candidate to choose from. So in that sense it is simpler. But yeah, if you were looking at
 this specific task and asking it to specifically generate some specific names, that might be
 difficult.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="17:57">
+<turn speaker="Waleed Ammar" timestamp="17:57">
 
 But you also, you're going read this, the surface forums row of the actual strings that were
 generated. Not just that there is a new cluster.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elizabeth Clark" timestamp="18:06">
+<turn speaker="Elizabeth Clark" timestamp="18:06">
 
 Right. That's a good point. So we did, we had three different versions of this. One was just
 generating clusters. One was generating the, the text itself. And one was both. Yeah. Making sure it
 was predicting the right cluster and the right string the right mentions and back to the right
 clusters.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="18:26">
+<turn speaker="Waleed Ammar" timestamp="18:26">
 
 And which one do you, would you consider to be like the most reliable or the most useful one in
 rating such a model?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elizabeth Clark" timestamp="18:33">
+<turn speaker="Elizabeth Clark" timestamp="18:33">
 
 So predicting both the cluster and mention of that is the most difficult and the most important. We
 expected to be able to not only know what words to predict or to generate, but also to know what
 those words are referring back to which entities in the story.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="18:49">
+<turn speaker="Waleed Ammar" timestamp="18:49">
 
 So how did the model fair on these tasks?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elizabeth Clark" timestamp="18:52">
+<turn speaker="Elizabeth Clark" timestamp="18:52">
 
 So the model that used both the representation of the previous sentence and the entity information
 was strongest across all of these three versions of the test and the entity model also performed
 well, which we would expect. So because that's the other baseline that we consider that uses the
 entity information. So those two were best at this entity related task, which is what we,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="19:18">
+<turn speaker="Matt Gardner" timestamp="19:18">
 
 Is this a language model? Would you call it a language model?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elizabeth Clark" timestamp="19:23">
+<turn speaker="Elizabeth Clark" timestamp="19:23">
 
 So it's getting a distribution of the vocabulary and generating it from that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yangfeng Ji" timestamp="19:31">
+<turn speaker="Yangfeng Ji" timestamp="19:31">
 
 You can use it as a language model, but it requires the co-reference information analyst dealing
 with the training.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="19:39">
+<turn speaker="Matt Gardner" timestamp="19:39">
 
 Right. But, but at test time you could evaluate it as a language model. Like, why, why not include
 perplexity just straight perplexity as a fourth option in this evaluation setting,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yangfeng Ji" timestamp="19:49">
+<turn speaker="Yangfeng Ji" timestamp="19:49">
 
 The motivation of this experiment we are simply trying to test the model particularly on the entity
 mentioned generation task and this is what like one sub task in text generation we actually
@@ -601,10 +601,10 @@ also as mentioned in this case it is not, in language model your value is like t
 including estimation and all the other tasks. In this case we just like a particular component in a
 sentence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="20:45">
+<turn speaker="Matt Gardner" timestamp="20:45">
 
 I guess going back to your original motivation, what you were, the end goal for this is to use this
 system. Just take the output text and show it to authors. And in that case you're just generating
@@ -612,28 +612,28 @@ text and perplexity doesn't seem like a totally useful metric there, but at leas
 just have text. And so in that sense using perplexities seems like a reasonable evaluation metric or
 at least one of the best ones we have for better or worse for this kind of system. Right.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elizabeth Clark" timestamp="21:15">
+<turn speaker="Elizabeth Clark" timestamp="21:15">
 
 Sure. Yeah. So I think, so the first two evaluations were sort of intermediate ones looking at the
 usefulness of the entity information specifically. I guess that in terms of zooming out to the text
 overall, that's the human evaluation that we did where we didn't include any of this entity
 information and just looked at the text itself.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yangfeng Ji" timestamp="21:34">
+<turn speaker="Yangfeng Ji" timestamp="21:34">
 
 I think the second experiment where we select the sentence is sort of like the language modeling
 tasks where we can compute the scroll of the next sentence based on context.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="21:47">
+<turn speaker="Waleed Ammar" timestamp="21:47">
 
 It's a variant, buy yeah, measuring for perplexity is much harder there's a lot higher expectations
 of the long will just to take between as few examples but it's like an unlimited number of options.
@@ -644,26 +644,26 @@ order to evaluate how good this language model is working for that task. And I t
 they know what they want to use this for, I think it makes sense to actually focus on the more
 extrinsic and say tests that focus on this use case.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="22:38">
+<turn speaker="Matt Gardner" timestamp="22:38">
 
 Yeah, I agree. That's a really good point. And Elizabeth's answer pointing to the human evaluation
 was I think, a great answer to my question. I agree.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="22:45">
+<turn speaker="Waleed Ammar" timestamp="22:45">
 
 So I guess that takes us to the next question, can you talk a little more about the human
 evaluation?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elizabeth Clark" timestamp="22:50">
+<turn speaker="Elizabeth Clark" timestamp="22:50">
 
 Sure. Yeah. So in this evaluation we took a story passages again and we had two models generate the
 next line of the passage. So we had the full model using the entity information and the
@@ -675,10 +675,10 @@ them any more details, pointing them to the fact to characters or anything like 
 chose one of these two sentences to continue the story. And then we just had a text box at the
 bottom for them to explain why they made the decision that they did.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elizabeth Clark" timestamp="23:40">
+<turn speaker="Elizabeth Clark" timestamp="23:40">
 
 And one of the things we wanted to get out of this evaluation was getting a better sense from what
 people actually pay attention to when they evaluate narrative text or story text that's been
@@ -690,10 +690,10 @@ co-ref was perfect. I loved the sentence so much more than the baseline, but the
 when it went wrong. So for example, there was one story where, where the seek to seek baseline had
 generated a sentence that had the word she and there were no female characters in the context.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elizabeth Clark" timestamp="24:33">
+<turn speaker="Elizabeth Clark" timestamp="24:33">
 
 And more people chose the full model sentence and said things like, Oh, there was a she in the other
 sentence that I, that didn't seem to fit with what had happened, but co ref was not the most
@@ -708,45 +708,45 @@ this. Hopefully helps with one, one piece of it, but people are expecting differ
 them said like, Oh, I thought there would be more directions to take the story and based on this
 sentence versus another. So there are a lot of open questions still in narrative text generation.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="25:52">
+<turn speaker="Waleed Ammar" timestamp="25:52">
 
 So I guess that leads to many more papers on this direction.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elizabeth Clark" timestamp="25:55">
+<turn speaker="Elizabeth Clark" timestamp="25:55">
 
 There is a lot to explore here.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="25:58">
+<turn speaker="Waleed Ammar" timestamp="25:58">
 
 Are you going to write your next five papers based on their suggestions.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elizabeth Clark" timestamp="26:03">
+<turn speaker="Elizabeth Clark" timestamp="26:03">
 
 One for each of that pieces of feedback that we got. Exactly.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="26:07">
+<turn speaker="Waleed Ammar" timestamp="26:07">
 
 And maybe could you just quickly tell us about the results for the second for the second task?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elizabeth Clark" timestamp="26:13">
+<turn speaker="Elizabeth Clark" timestamp="26:13">
 
 Oh, sure. So the second task was given a passage in two sentences. One sentence is the next sentence
 in the passage and the second sentence is a distractor sentence that comes from the same story but
@@ -755,27 +755,27 @@ gold or the distractors should continue the passage. And we found that the model
 representation and the previous sentence representation significantly outperformed the other
 baselines that correctly identifying which sentence should come next in the story.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="26:47">
+<turn speaker="Waleed Ammar" timestamp="26:47">
 
 I suppose this is primarily for, like, because of centering theory, because people to talk about the
 same entity; is that your intuition of why this would work there?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elizabeth Clark" timestamp="26:57">
+<turn speaker="Elizabeth Clark" timestamp="26:57">
 
 So I think it's, it's both the entity information but also that that representation of the previous
 sentence is helpful too because that the two baselines have one or the other and you need both in
 order to do well with this test.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="27:11">
+<turn speaker="Waleed Ammar" timestamp="27:11">
 
 All right, so I guess that concludes the discussion of this paper, but more broadly it seems like
 there is a lot more work on generation these days. I was a NAACL last month and I saw many papers
@@ -783,10 +783,10 @@ talking about generation test strings from traditional things like translation s
 also generating adversarial training examples or newer tests like collaborative storytelling. So any
 thoughts on what's driving the uptake in natural language generation?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elizabeth Clark" timestamp="27:40">
+<turn speaker="Elizabeth Clark" timestamp="27:40">
 
 Yeah, I think I mean we have models now that can take in a bunch of data and try to generate like
 responses and dialogue or stories or things like that. But I think now that it's kind of the seek to
@@ -803,10 +803,10 @@ about the creativity space, like moving away from like how do we support people 
 writing or poetry or I think language is a really important way that we interact. So if we can
 generate that the applications for it are really, really wide reaching.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="29:08">
+<turn speaker="Matt Gardner" timestamp="29:08">
 
 I guess another thing that I've been thinking about a lot recently and colored the, I guess was
 behind the language modeling questions I asked. We saw the ELMo paper at NAACL about using language
@@ -817,10 +817,10 @@ instance. And it seems like if you can get a good entity language model and have
 better contextualized word representations that are informed by this discrete notion of entities,
 maybe you should just have a better ELMo. Right. Does that make sense? Any thoughts on that?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="29:56">
+<turn speaker="Waleed Ammar" timestamp="29:56">
 
 Yeah, I think that makes a lot of sense. And I guess it depends on the tasks where you want to use
 ELMo for. If it's, especially if it's something that's like a narrative that I think that would make
@@ -831,27 +831,27 @@ of sense. That we try to squeeze in more information about the document or the k
 try to encode. All right. Any more thoughts on this paper or only on the area as a whole before we
 conclude?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elizabeth Clark" timestamp="30:41">
+<turn speaker="Elizabeth Clark" timestamp="30:41">
 
 No, just that we're, yeah. Excited to see what happens next. I think there's a lot of, as we saw in
 that human evaluation, there are a lot of open questions there, and we are excited to see what comes
 out of it next.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="30:53">
+<turn speaker="Waleed Ammar" timestamp="30:53">
 
 Awesome. Thank you very much for joining us.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elizabeth Clark" timestamp="30:55">
+<turn speaker="Elizabeth Clark" timestamp="30:55">
 
 Thanks for having us.
 
-</Turn>
+</turn>

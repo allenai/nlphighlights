@@ -8,23 +8,23 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting recent work in
 natural language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is Matt Gardner and Waleed Ammar. We are research scientists at the Allen Institute for
 Artificial Intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:11">
+<turn speaker="Waleed Ammar" timestamp="00:11">
 
 Today's paper is titled: Generalizing to Unseen Entities and Entity Pairs with Row-less Universal
 Schema . It was published at EACL 2017 and written by Patrick Verga, Arvind Neelakantan, and Andrew
@@ -38,10 +38,10 @@ then we can use to predict whether a particular relation holds between a pair of
 limitation of this approach is that it cannot make predictions for entities which have not been seen
 at training time. And the paper we're discussing today proposals a solution for this problem.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="01:18">
+<turn speaker="Matt Gardner" timestamp="01:18">
 
 So if you remember those models that we talked about in the universal schema paper, the original
 one, they had this entity model which essentially got an embedding for each entity and tried to
@@ -51,41 +51,41 @@ embedding for each relation and tried to learn which relations the entity like, 
 an entity pair participates in a particular relation rather you parameterize it with a dot product
 between these two vectors. Right? so the entity model already solves this problem, right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="02:00">
+<turn speaker="Waleed Ammar" timestamp="02:00">
 
 Not quite because in the entity model, you need to have an embedding for every entity. And if either
 entity does not exist in the training data, what you're trying to make predictions about them, you
 will not be able to use the entity model from that paper.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="02:16">
+<turn speaker="Matt Gardner" timestamp="02:16">
 
 Right. I guess. Yeah. So, the entity model helps with entity pairs that you didn't see at training
 time, but still if you see an unseen entity, you're going to have a hard time.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="02:29">
+<turn speaker="Waleed Ammar" timestamp="02:29">
 
 Right.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="02:30">
+<turn speaker="Matt Gardner" timestamp="02:30">
 
 Okay. So what do they do to solve this problem?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="02:34">
+<turn speaker="Waleed Ammar" timestamp="02:34">
 
 So to address this problem, instead of pre computing a vector representation for each row, they
 compute it on the fly. So you can do this at decoding time or a test time for even for new entity
@@ -100,10 +100,10 @@ which seems to work a little bit better, is to use full attention over the obser
 current row that you're trying to predict for and computer weighted average of the embedding of
 these columns. And then use it as the row embedding.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="03:48">
+<turn speaker="Matt Gardner" timestamp="03:48">
 
 So this sounds a lot like doing feature extraction. So given an entity or an entity pair and the
 graph or a knowledge based tensor I find all of the features that I can about that entity and entity
@@ -117,10 +117,10 @@ leverage. Like there's information there. Otherwise you're just hosed, right? If
 the tensor and either like the knowledge base, the formal component or the surface form component,
 if there's nothing, you just can't predict anything.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="04:47">
+<turn speaker="Waleed Ammar" timestamp="04:47">
 
 Absolutely. Yeah, that's right. I think the focus here is on the word by unseen they mean that this
 entity pair has not been seen as an example in training data. But at the same time, they're
@@ -132,10 +132,10 @@ little bit later in this paper. And also there is previous work that does this. 
 a pre-computed embedding for every column or having parameters associated with every surface
 pattern, you construct it again on the fly. So using LSTMs for example.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="05:46">
+<turn speaker="Matt Gardner" timestamp="05:46">
 
 So, if your model now says instead of learning an embedding for an entity, I'm going to extract some
 features for an entity, maybe using some embedding technique. What I wonder is how is this different
@@ -143,10 +143,10 @@ from other models that people have done? So the path ranking algorithm will take
 find paths in the graph that connect to the entity pair, use those as features. And then given those
 features, predict what relationship exists between them.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="06:14">
+<turn speaker="Matt Gardner" timestamp="06:14">
 
 Arvind Neelakantan, who's an author on this paper also had a composition, had a paper called:
 Compositional Vector Space Models for Knowledge Base Completion. I don't remember if that's the
@@ -159,10 +159,10 @@ and then composed those in another way. I think he took the max, like the most s
 vector for the relation he was trying to predict. And that now sounds very, very similar to what
 we're talking about here with row-less universal schema.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="07:10">
+<turn speaker="Waleed Ammar" timestamp="07:10">
 
 Right. actually this is one of my disappointments after reading the paper is that they didn't
 compare to any previous work, which those something related to predicting for unseen entity pairs
@@ -176,10 +176,10 @@ that's the baseline that they're comparing to. This is not terribly exciting, bu
 this alternative way of computing or predicting whether a relation exists is working well or working
 as well as the previous, as the baseline.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="08:21">
+<turn speaker="Waleed Ammar" timestamp="08:21">
 
 But the really interesting thing is what happens when the entity pairs are missing from the training
 set and that's basically where this method is going to be useful. And of course, the baseline model,
@@ -192,54 +192,54 @@ training time. Their results show improvements when doing this on top of pre-com
 embeddings. So that's the baseline model for universal schema, but not when computing the row
 embeddings on the fly using these segregation functions we talked about.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="09:20">
+<turn speaker="Matt Gardner" timestamp="09:20">
 
 So it seems like we've talked about a bunch of work on entity linking knowledge base completion,
 some knowledge base kinds of things. You've been presented in a bunch of papers on this topic. What
 high level takeaways do you have? Like what, has this informed your research direction? What are you
 going to do?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="09:41">
+<turn speaker="Waleed Ammar" timestamp="09:41">
 
 I feel like I'm still learning about this area. I'm relatively new to this space, so I feel like
 there's still a few other direction that I need to learn about, including work written by you.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="09:55">
+<turn speaker="Matt Gardner" timestamp="09:55">
 
 I don't know My work was some of the early work in this area and has been since since been
 superseded. So I don't know how relevant it is anymore.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="10:03">
+<turn speaker="Waleed Ammar" timestamp="10:03">
 
 Right, but the point is I don't think I'm ready to make a summary of the space just yet. Maybe in
 the next few episodes.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="10:11">
+<turn speaker="Matt Gardner" timestamp="10:11">
 
 Okay, cool.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="10:14">
+<turn speaker="Matt Gardner" timestamp="10:14">
 
 Okay. Thanks Waleed for telling us about that paper. Next time we will have our second interview,
 we'll be talking with im Rocktäschel at the University of Oxford about his recent paper titled: End-
 to-end Differentiable Proving.
 
-</Turn>
+</turn>

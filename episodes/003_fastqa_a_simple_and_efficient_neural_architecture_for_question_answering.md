@@ -8,23 +8,23 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting recent work in
 natural language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is Matt Gardner and Waleed Ammar. We are research scientists at the Allen Institute for
 Artificial Intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:12">
+<turn speaker="Matt Gardner" timestamp="00:12">
 
 Okay, today's paper is Making Neural QA as Simple as Possible but not Simpler by Dirk Weissenborn,
 Georg Wiese, Laura Seiffe at the Language Technology Lab at DFKI in Germany. And sorry for
@@ -39,10 +39,10 @@ from Wikipedia, which the authors of the dataset paper presented to people in Me
 crowdworkers and had them ask questions where the answer was constraints to be a span of text within
 the passage, within the paragraph.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="01:29">
+<turn speaker="Matt Gardner" timestamp="01:29">
 
 And if you think of the incentives of people on Mechanical Turk, they want to do this task very
 quickly so that they can get paid and move on to the next thing. And what ended up happening a lot
@@ -58,18 +58,18 @@ do. The really surprising thing to me was how often that actually exactly matche
 question was too. So this is what happened at least in I think the majority of the cases for the
 questions that we see in SQuAD.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="02:42">
+<turn speaker="Waleed Ammar" timestamp="02:42">
 
 So are you saying that we can substantially improve the size of our training data by generating
 questions than we already have the answers to them,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="02:51">
+<turn speaker="Matt Gardner" timestamp="02:51">
 
 That's a very interesting idea and indeed it's the subject of an ACL paper that we might cover some
 time. So yes, you can do this and maybe it helps. SQuAD is already pretty large, so maybe you don't
@@ -78,18 +78,18 @@ all you need to do for at least a lot, maybe a majority of the questions in this
 just do a literal overlap between the words in the question and the words in the passage and then
 find the part of that sentence that matches the question word. That's literally all you have to do.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="03:26">
+<turn speaker="Waleed Ammar" timestamp="03:26">
 
 And that was pretty much what BiDAF model, which you described in the previous podcast does. So
 that's really what you need to do in order to get pretty good performance on this task.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="03:37">
+<turn speaker="Matt Gardner" timestamp="03:37">
 
 Yeah. And I guess we saw that by looking at the output, like by looking at the interactive demo of
 the model and so you can arrive at the same conclusion in a few different ways. So in the previous
@@ -103,10 +103,10 @@ question in the passage and then found a similarity between each word in the que
 in the passage, and then did some complex operations and then smashed it back into the passage
 representation.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="04:32">
+<turn speaker="Matt Gardner" timestamp="04:32">
 
 This paper, and BiDAF also had like several deep layers in lots of different parts of the model.
 This paper pulls those out and replaces them with a single feature that is, is this question in the
@@ -118,10 +118,10 @@ then you do a bidirectional LSTM and then you output the span begin and Span end
 if you do this, you get basically very similar performance just with a single binary feature that
 you get with BiDAF.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="05:27">
+<turn speaker="Matt Gardner" timestamp="05:27">
 
 In addition, they add back in some of the other stuff that BiDAF did. So they add back in another
 feature that at first read, I thought was pre-computed but actually is pretty similar to this matrix
@@ -134,20 +134,20 @@ cause they're doing basically the same thing that BiDAF does. They're just pulli
 deep layers and showing that you don't need it to be so deep. And I think that that's an interesting
 point.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="06:13">
+<turn speaker="Waleed Ammar" timestamp="06:13">
 
 So the model described in this paper, also in the BiDAF paper we're really addressing some
 characteristics of the SQuAD dataset which allowed them to perform exceptionally well or very well
 on this task. But it's not clear to me that we're actually addressing the machine comprehension
 problem. Do you think we're, how much we're losing or gaining by focusing on datasets like SQuAD?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="06:41">
+<turn speaker="Matt Gardner" timestamp="06:41">
 
 I don't know. I think SQuAD was a really great contribution to the research field. It pushed people
 to look at question answering more broadly on a really large scale that people hadn't done before. I
@@ -159,78 +159,78 @@ little bit that we're discovering some problems. I think this is true of like an
 can build. Like it leads to some good research early on and then at some point gets saturated and
 you realize there are some problems with it and you move on to the next dataset.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="07:33">
+<turn speaker="Matt Gardner" timestamp="07:33">
 
 I think we might be getting close to that, especially as we're realizing how much overlap there is
 in the question words in the passage, I think, I don't know, just going off the cuff here, but it
 seems like you might get a better dataset by explicitly filtering out from SQuAD all of the things
 where it's obvious there was a copy paste.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="07:54">
+<turn speaker="Waleed Ammar" timestamp="07:54">
 
 That's a good idea.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="07:54">
+<turn speaker="Matt Gardner" timestamp="07:54">
 
 Because there are certainly questions in this very large dataset that are not just copy pasted and
 if you can focus on those, that's probably, my intuition is that the gap that remains between human
 performance and model performance is in those cases where there's not just this copy paste
 phenomenon.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="08:10">
+<turn speaker="Waleed Ammar" timestamp="08:10">
 
 Yeah. We can also, when we develop a new model, we can also do this for multiple datasets which do
 not share the same characteristics. So at least check the close style problems and question
 answering problem like SQuAD, which I believe the BiDAF paper actually did.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="08:27">
+<turn speaker="Matt Gardner" timestamp="08:27">
 
 Yeah. And there has also been recently a whole lot of other reading comprehension datasets released
 which have a larger gap between human performance and model performance. And so at least there's
 hope that we can continue making good and interesting progress on modeling this complex phenomenon.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="08:47">
+<turn speaker="Waleed Ammar" timestamp="08:47">
 
 Sounds good.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="08:49">
+<turn speaker="Matt Gardner" timestamp="08:49">
 
 Okay. So what paper are we going to do next time?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="08:51">
+<turn speaker="Waleed Ammar" timestamp="08:51">
 
 So next time we'll be inviting Chris Dyer to talk about his paper Recurrent Neural network Grammers
 and we'll see how it goes.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="08:59">
+<turn speaker="Matt Gardner" timestamp="08:59">
 
 Yeah, that sounds exciting.
 
-</Turn>
+</turn>

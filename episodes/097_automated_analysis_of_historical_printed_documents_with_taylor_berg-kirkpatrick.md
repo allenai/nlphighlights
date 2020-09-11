@@ -8,49 +8,49 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="">
+<turn speaker="Matt Gardner" timestamp="">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting work in natural
 language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="">
+<turn speaker="Waleed Ammar" timestamp="">
 
 This is Matt Gardner and Waleed Ammar we are research scientists for the Allen Institute of
 Artificial Intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="">
+<turn speaker="Matt Gardner" timestamp="">
 
 Okay. Today our guest is Taylor Berg-Kirkpatrick. Taylor is a professor at the university of
 California in San Diego. Prior to that he was at CMU and before that at Semantic Machines and
 Berkeley. Taylor, it's good to have you on the program.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 Thanks for having me. Excited to be here.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="">
+<turn speaker="Matt Gardner" timestamp="">
 
 Today we wanted to talk about some work that you did as a PhD student and then continuing on some
 applications of that work. This is on OCR of historical documents and then what you can do with
 these documents after you have OCR from them and you want to give us an outline of like why is OCR
 on historical documents hard?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 Yeah, well I can talk about why it's hard and I can talk about why it's useful to, as most people
 know, if you take an image of some modern text that was digitally typeset, super clean and you run
@@ -63,10 +63,10 @@ presses, which is like this big contraption where you're taking little metal sta
 into these kind of mechanical grooves and then you paint ink on it and you press it and so you get
 all kinds of noise from that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 You get variation in inking level across a document, across a page. When that groove sort of changes
 its straightness, you get wandering baselines of the text. Then also you have variability in the
@@ -84,18 +84,18 @@ they're still around but you can't really get access to them so all you have are
 you get, it looks like a terrible Xerox, like a really 1980s Xerox of a book that wasn't totally
 flat in the scanner until you got all these weird issues from that as well.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="">
+<turn speaker="Matt Gardner" timestamp="">
 
 I saw in one of your papers if two pages were next to each other for a long time you might get
 bleeding of ink from one page onto the other.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 Yeah that's a pretty common problem or in most cases actually bleeding back from the backside of the
 page it's bleeding kind of through the print on the opposite side of the page and so you're getting
@@ -105,10 +105,10 @@ solution to that because it's really a source separation problem. Like whatever 
 backside of the page is stuff that you can kind of subtract off the front side of the page and vice
 versa. And so the two recognition models should be talking to each other.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="">
+<turn speaker="Matt Gardner" timestamp="">
 
 Yeah, that's an interesting problem. We can come back to the interesting machine learning problems
 that are inherent in all of this and why this might be interesting just from a learning perspective.
@@ -118,10 +118,10 @@ recognize the text, I can translate it into Chinese or whatever. That doesn't re
 historical documents for these reasons. So if I want to get the text out of historical documents,
 what do I do? What kind of methods do people use to solve this problem?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 If you can imagine that people who consume this kind of technology and use it in their core
 research. You're talking about people in literature, people in history, people in the humanities who
@@ -134,10 +134,10 @@ be decent at historical documents. Those systems though I hate a little bit, cau
 systems are probably some combination of supervised methods, maybe some data augmentation, maybe
 some kind of rule based post correction, maybe some statistical post correction.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 And so that's one method which is you try to deal with the domain gap through various techniques.
 Like you try to get as much diverse supervised data as you can, even if it's at a domain and then
@@ -152,10 +152,10 @@ weird font that it doesn't look like any font you've ever seen before, but you k
 which means that each time an "A" was printed or a "B" was printed, it's going to be roughly the
 same shape.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 Like there'll be multiple stamps for an "A" in a given type case, but they're supposed to all look
 the same. Sometimes they get warped and stuff, but they're supposed to all look the same. And so
@@ -172,18 +172,18 @@ decipherment stuff like working on the Zodiac Cipher and other things. It looks 
 So you're kind of learning an emission model with a fixed transition model and trying to induce the
 latent sequence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="">
+<turn speaker="Matt Gardner" timestamp="">
 
 That's interesting. And so do you want to talk about some of the details of how the model actually
 works when you try to do an unsupervised model of OCR on this?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 Yes. From far away you're kind of thinking, HMM, text is the sequence of states, the transition is
 your language model, the emission is your type production model, and then you run forward backwards.
@@ -199,10 +199,10 @@ intuitive emission distribution on that would as you stayed in the "B" state giv
 looked like a B. You'd have to kind of remember how far through the B state you were in things like
 this, which is effectively making a sending Markov model,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 but if you view it, if yours is a Semi Markov model, then your emission model looks like we're
 printing a B right here between you know, pixel column, I have pixel column J. What should the
@@ -218,10 +218,10 @@ stuff like that. And I mean it's unsupervised learning problems like deciphermen
 knowledge you put into the model and the less details you have to learn from the unlabeled data, the
 more effective it will be.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="">
+<turn speaker="Matt Gardner" timestamp="">
 
 I guess, I don't know if this actually made it into your thesis. I don't, I don't know what your
 thesis title was, but in your PhD you had a series of papers that introduced particulars of the
@@ -230,10 +230,10 @@ to go look at those papers that kind of interesting and so in the learning some 
 there. I think we could move on from the particulars of this model. How well does it work? Can you
 actually get reasonable OCR on documents from this?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 It works pretty well. It works well enough that and a couple of larger projects that I'm working on
 right now where we're doing the next stage of trying to do computational bibliography in some sense
@@ -246,10 +246,10 @@ proceedings of the old Bailey courthouse in London as entertainment for the popu
 take the most extreme cases and write little Synopsys of them of the, of the rulings and then give
 them to the public.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 I think like weekly or something like this and this goes really far back into the early modern
 period and on on that data across a hundred or 200 year period, we found that we were getting on
@@ -261,10 +261,10 @@ probably change now. Like ABBYY FineReader is updating all the time. We also loo
 newspapers, which are harder in some cases because there's oftentimes like they've been more damaged
 with time or there's been more type setting noise.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 We were getting similar numbers there and systems like ABBYY FineReader were getting maybe like 50%
 of words right. So definitely for the periods that we looked at, we were getting market
@@ -274,49 +274,49 @@ to segment characters because maybe there was a huge amount of overthinking or m
 with a ton of ligatures, then everything goes wrong. So you'll go from like 80% accuracy to like 20%
 accuracy.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="">
+<turn speaker="Matt Gardner" timestamp="">
 
 Can you explain what a ligature is briefly for people who don't know?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 Yeah, a ligature, you can think of it as co articulation in speech. So for certain character bigrams
 T in an H when they appear next to each other, you might have a special stamp for the T and the H
 together that actually connects their glyphs and the glyphs might change because you know the H is
 following a T or vice versa.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="">
+<turn speaker="Matt Gardner" timestamp="">
 
 I think this is most common in modern fonts for like FI. It's really noticeable there,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 Right? Yeah. FI is, the classical example. Yeah.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="">
+<turn speaker="Waleed Ammar" timestamp="">
 
 So are you able to get good language models for this type of historical documents or is it hard to
 find data to train such models?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 It can be hard. Again, depending on the domain. What we found was sort of surprising is that the
 language model doesn't matter as much as you might expect. I did a lot of work on trying to get the
@@ -329,10 +329,10 @@ you're using a really high capacity language model, you'll overfit to the domain
 will hurt your performance and so maybe a six gram model if you're training on modern New York Times
 data is all you really want to learn about modern New York Times data.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 If you're going to then use that language while on old school text. Now what if you do have in
 domain data? Well, even in that case we saw you got summed gains from, using it, like take old
@@ -344,10 +344,10 @@ because the core of the problem is really the emission model. Once you have a pr
 what each character shape looks like and you can recognize them, then you don't really need much
 more than a simple language model to recognize the messed up characters that appear every so often.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 Like think of it like a closed task. Like suppose you know every character in a sentence except for
 one and you're trying to predict that masked character. How wide of an Ingram context do you
@@ -357,19 +357,19 @@ sense you might be expecting, they kind of use like word white lists, vocabulary
 saying let's stay in the vocabulary, otherwise we don't care. So a lot of the difficulties mostly on
 the admission side.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="">
+<turn speaker="Waleed Ammar" timestamp="">
 
 Interesting. So when it comes to the emission model, does it help or hurt to include data from in
 your unsupervised model training from multiple printers? Right. Because each of the different
 printers will have its own artifacts.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 Really good question. When you're doing supervised learning, you don't like the notion of
 overfitting and generalization doesn't quite mean the same thing. In theory. You could train this
@@ -382,25 +382,25 @@ Most characters in the alphabet will appear on a single page and the ones that d
 definition and often the language model can figure them out if you have the rest of the font figured
 out.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 So training on a single page seems to work fine and so there wasn't really a need to pull between
 different fonts and printers and things like this.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="">
+<turn speaker="Matt Gardner" timestamp="">
 
 That's really interesting.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 Yeah. The more common scenario though is that you actually want to transcribe an entire book and a
 book is usually printed at the same printing house using the same type case and usually was scanned
@@ -410,18 +410,18 @@ pronounced as I would've expected. This may also be an artifact of the, of this 
 model. I don't want it to sound like I'm saying that, you know, generally better language models
 aren't helpful for OCR and supervise OCR of other kinds of models.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 They may be extremely helpful, like maybe you want like a huge neural model, but for this
 unsupervised setting it didn't seem as helpful as you might have thought.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="">
+<turn speaker="Waleed Ammar" timestamp="">
 
 So I'm wondering how much of sharing of parameters do you think is necessary or useful when you're
 modeling different sizes of the font of the same, maybe in the same book or again, on the same page?
@@ -432,10 +432,10 @@ you don't know the width of each character in your font ahead of time. Is just t
 a separate set of parameters for G when it's 30 pixels wide for G when, it's 31 pixels wide for G
 when it is 32 pixels etc.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 Right? And so now you can effectively learn K different GS where K are the number of widths you're
 allowing the model to consider. That's clearly a bad idea because you might like learn A is one of
@@ -448,10 +448,10 @@ away from you in the Z dimension. So things kind of get compressed a little bit.
 thin G, just stop early, go through your template left to right once you get to, you know K pixels
 in the width of the thing you're generating, just stop.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 Okay, so you are doing some parameter sharing there, but you're doing in kind of the wrong way.
 You're saying that like different widths of Gs, all's chair like prefixes of their shape, which does
@@ -462,10 +462,10 @@ So here's what you really want and this is probably obvious now given this lead 
 say we have one big G template that is in some sense widthless. Okay? It is like what G would look
 like if you stretched it to a hundred pixels wide, no matter how wide it is in reality.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 Okay? Now when we generate from that template, we pick a width of the actual token we're going to
 generate and then you apply some kind of convolution essentially to downsample your super wide G. So
@@ -475,27 +475,27 @@ parameters in a smooth way across all that widths, that was like the most critic
 to work. The same reasoning applies to inking to offsets, to all these other things you want to
 share as much as possible into a single representation of each character in the font.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="">
+<turn speaker="Waleed Ammar" timestamp="">
 
 Yeah, that's a very cool insight. Thanks.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="">
+<turn speaker="Matt Gardner" timestamp="">
 
 so coming back to something you hit on earlier, there are, as you said, some interesting learning
 problems, some reasons to think this problem is interesting, not just from a historical document
 analysis perspective, but also from a just fundamental machine learning perspective. Do you want to
 talk about that for a bit?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 Yeah, sure. I can talk about, this is one of the reasons I continue to be interested in this
 problem. Apart from just the application side is also really cool. So like my group is both
@@ -509,10 +509,10 @@ simulating physical processes for which you really know all the underlying rules
 either Newtonian mechanics or kind of quantum physics to the extent you want to put it in your
 model.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 And really what you're doing is inference. You're kind of setting up a system that you know, the
 causal processes that allow it to unfold. And then you're watching what happens so you can draw some
@@ -524,10 +524,10 @@ Like that. It's some kind of perceptual process that we have some vague understa
 really have no general satisfactory causal understanding of right, and so what do we do in these
 cases? What we do, we don't write down the rules of the system.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 We don't know them. It's not directly an inference problem. It's a learning problem. Instead we go
 get a whole bunch of labeled data where we just caught humans doing the thing that we want to model
@@ -539,10 +539,10 @@ unsupervised learning that I find the most fun to some extent is right in the mi
 know something about the causal process, but there's a lot of details that are either very difficult
 to specify or you just don't know that you do want to learn from data.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 And so historical OCR, especially in the early modern period kind of satisfies that. Ideally you can
 build these cartoons of the printing press. You're not actually simulating the atoms in the printing
@@ -554,10 +554,10 @@ embedded in the system through modeling assumptions of what we don't know we try
 capacity model. And so the model we've been talking about I think isn't perfectly balancing those
 two ends is much more on the statistical cartoon side.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 We're kind of relying a lot on what we know about the printing press and learning only a little bit
 just to separate the front from the data. But if you wanted to generalize this kind of approach to,
@@ -569,10 +569,10 @@ but because there is some variance within each character type just like the vari
 as they're writing it and that variance won't look like simple overexposure underexpose or shifting
 up and down. There will be some kind of nonlinear warpings there.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 You really need to have some kind of neural net in your model. You need to have some part of the
 model's parameterization that can learn those kinds of difficult nonlinear transformations with out
@@ -586,20 +586,20 @@ perfectly right. And then we have models that are very rigid but embed a lot of 
 and we're trying to get both. But it's difficult to both have interpretable modeling assumptions and
 high capacity neural models in the same system.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="">
+<turn speaker="Matt Gardner" timestamp="">
 
 Yeah, I like that framing of things. So you talk about OCR as a general class of problems where you
 can get an interesting trade off here. Have you thought of other classes of problems where you see
 the same kind of trade off between like knowing about the underlying process versus needing to learn
 from data?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 All NLP to some extent like like we know linguistics, I don't think you can really call it a causal
 process in the same sense that with the printing press we're modeling the physical process that
@@ -611,10 +611,10 @@ break down at the edges on you know, Twitter data or kind of whatever domain dat
 about and rule based systems of old are super brittle and don't scale and have a lot of issues and
 so across NLP, like a problem of your choice.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 You can imagine putting syntax in. It seems like a good idea. In recent years we've been seeing a
 lot of gains without doing that and there's been some controversy like, well maybe we don't need
@@ -624,20 +624,20 @@ kind of impossible to collect in some sense it's like I'm thinking like kind of 
 research or semantic research in general. It's hard to get humans to write down their internal
 formalisms or give you direct annotation for it, so you kind of only get indirect supervision.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="">
+<turn speaker="Matt Gardner" timestamp="">
 
 Thanks. Those are interesting insights, so I think we've hit on historical OCR why it's hard, how
 you solve the problem, why it's interesting from a machine learning perspective. I think we could
 spend the rest of this time on what you're doing now, which is what interesting things can you do
 with this given a reasonably performant historical OCR system?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 Yeah, totally. It's one of the thing I just want to say is I'm not a historian. I'm not a
 bibliographer, so everything that we're kind of doing more on the applied side, we do in
@@ -650,10 +650,10 @@ presses. In order to do that, as we talked about, there's people, workers at the
 are taking the type, like the little metal stamps, assembling them and then printing it and they're
 doing this in parallel because they want to do it quickly.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 So they'll take the manuscript that they're supposed to make a printed book out of divided up page
 by page amongst a bunch of workers. Each worker is responsible for setting the type for some subset
@@ -665,10 +665,10 @@ they don't have too much white space at the end or they kind of don't stop at a 
 sentence. They are making up their own spellings to some extent because spellings weren't really
 standardized at the time.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 There maybe in some cases worried about running out of a particular stamp on a given page and I'm
 not 100% sure about that one. So they're kind of satisfying all these constraints and injecting
@@ -680,19 +680,19 @@ question mark to a comma, all kinds of stuff. It'd be like if your inkjet printe
 whatever decided like it was going to, you know, actually fundamentally change the text you're
 trying to print, which will be kind of scary.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="">
+<turn speaker="Matt Gardner" timestamp="">
 
 Can I clarify something? Do you have an original manuscript that has pages? Are you saying that I
 take a manuscript page and I say you composite or you do this page and then I give the next page to
 the next compositor so that like the compositor has no flexibility to like re-paginate.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 That's right. So the humanities effort that we did this in collaboration with was Hannah Alpert-
 Abrams who's not the NEH, and this is also with my student Maria Ryskina, and Dan Garrett and she
@@ -704,28 +704,28 @@ pages aren't going to be consecutive because there's going to be other folded pa
 and get stapled or bound together. And so that I think was the kind of guiding constraint behind who
 got what.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 They wanted to make sure that you were printing a set of these larger pages that were coherent so
 everybody could get folded together at the end. Well yeah, they weren't like choosing which page.
 They weren't going in order. Like they did some assignment process and then they printed it in the
 end and all got assembled.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="">
+<turn speaker="Matt Gardner" timestamp="">
 
 Wow. And so what were you trying to do? You were trying to decide, given a page who is the
 compositor?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 Yeah, so why might you care? Well, it comes back to the editing process. Shakespeare's first folio
 is the document that I think has received probably the most study along these lines. The reasoning
@@ -733,10 +733,10 @@ being that we're interested for historical reasons in kind of what the original 
 Shakespeare's plays were as they were performed historically and contemporaneously with Shakespeare
 as they were written by him in a manuscript.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 Those have been lost for the most part is my understanding. What is left is all these noisy
 duplicates from the printing press noisy because of the composite. Now as we've talked about, you
@@ -750,10 +750,10 @@ something where it ends in a question mark and you're like, I think probably thi
 cause it says on the first folio, but we know the compositor sometimes change out periods for
 question marks Willy nilly.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 Was that really in the performance of the play? Was that phrased as a question or was it phrased as
 a statement? Okay. Then you're going to ask, well this compositor the one who printed that page.
@@ -765,10 +765,10 @@ kind of these silent unacknowledged workers of the printing press era that had s
 but are often unnamed and unknown. So the extent to which you can kind of track them and what are
 doing. I think historians have told me that's of interest for historical reasons.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 So the task is you get all the images of all the pages of Shakespeare's first folio, the first
 printed edition of all his plays. There's kind of multiple versions of the system. The first version
@@ -780,10 +780,10 @@ then you go from the text of a collated modern edition, which you think of kind 
 standardized through the compositor which is partially a string transducer and partially kind of a
 visual spacing model. Since that was also part of their behavior to generate the data.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 And then you run this like a clustering model and when you get out is an assignment of pages to
 these different sets of behavior parameters and then for Shakespeare's first folio, because it was
@@ -796,36 +796,36 @@ means we're 80 or 90% correct about history. All this means is that if you embed
 assumptions that manual bibliographers did you get the same predictions whether or not they're right
 is that, you know, I can't really weigh in on that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="">
+<turn speaker="Matt Gardner" timestamp="">
 
 Yeah, that's really interesting. You were telling us about constraints on one compositor doing a
 particular set of pages because of the way that the page would be folded and actually inserted into
 a book. Can you inject those assumptions into your modeling process?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 You definitely could. And we wanted to though it's a huge pain because you have to go back and now
 kind of reconstruct the physical organization of the book you're talking about. And we were
 operating directly with document images though. You probably could kind of figure that out that that
 would be like, I mean that's something we talked about and it would be really cool to do.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="">
+<turn speaker="Matt Gardner" timestamp="">
 
 Yeah, that's a really interesting project. Any others you want to tell us about?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 Yeah, so something that we're working on now, and this is part of a larger NSF funded project with a
 collaboration between my group UCSD and then Chris Warren's group who's in the English department at
@@ -843,10 +843,10 @@ would be allowed to print whatever we want, not just write whatever we want beca
 can write a manuscript and no one reads it, but print whatever you want because there will be, you
 print a bunch of people are going to read.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 That's more dangerous. That's kind of more visible to the powers that be, you know. And so at the
 time a lot of thought about and arguments for freedom of press and things like this were themselves
@@ -859,10 +859,10 @@ today. One really interesting example that Chris Warren has told me about and ki
 focusing artifacts for this project is called Areopagitica. It's a pamphlet written by John Milton
 about freedom of press.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 And this is the kind of it brings, shows you the irony, right? It's a, it's a document about freedom
 of press being important and yet it's printed secretly because they're worried about getting
@@ -875,10 +875,10 @@ at the original physical artifact of a printed pamphlet or book and trying to co
 that lets you make a case for it having been printed by this particular printer in this particular
 printing house?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 Well again, kind of like in the case of compositor attribution, it looks like kind of manual
 detective work. Okay. So the biggest cue that I know about that Chris has told me about and kind of
@@ -890,10 +890,10 @@ book might tie you to a time period and location, but it's not going to tell you
 Okay. But as soon as that G the metallic stamp becomes physically damaged, like it gets cracked
 somewhere or it becomes warped, it becomes like a fingerprint.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 Right now whenever you see that particular kind of damage, you know it came probably from the same
 physical artifacts. All right. And so you say, okay great. So now maybe we can say these two clan
@@ -906,10 +906,10 @@ documents out there with the printer insignia on them and probably every printin
 about has some documents that is labeled with the printer. If we can find a damaged glyphs in common
 between Areopagitica for instance, and a newspaper or a book that wasn't controversial at the time.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 Now we have strong evidence that it came from that printer and so that's exactly what kind of these
 historians have done. They've gone through by hand, looked at individual character bounding boxes,
@@ -922,10 +922,10 @@ couple of ones you found in a book and look at the couple books you thought were
 do this for all books in the Eva collection, which is like one of the biggest collections of images
 that really modern documents.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 And you can think of this as like, it's also kind of a network problem, right? So there's kind of
 multiple stages. You want to first identify all the character bounding boxes. And so these, the
@@ -937,10 +937,10 @@ we don't have a lot of supervision for. So can you this unsupervised. And then f
 expose for each artifacts in your collection, the set of stamps that you think were present are used
 to print that document and now try to cluster them across all documents.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 Maybe injecting some prior knowledge that, you know, these two printing houses, shared type between
 them, these ones did not. This document probably didn't come from this one and do some kind of graph
@@ -949,18 +949,18 @@ joint process and you should kind of iterate and then kind of what you're findin
 problem informs, how you do the recognition and similarity problems and informs how you even do the
 OCR. And so that's kind of the longterm direction for that project.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="">
+<turn speaker="Waleed Ammar" timestamp="">
 
 That's pretty cool. A quick question here, how many printing houses in total or are we talking
 about?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 That's a good question. Yeah, I don't have a great answer to that. It kind of depends on the time
 period and this problem, it doesn't occur just in one decade, right? It occur like you have secretly
@@ -968,10 +968,10 @@ printed documents over hundreds of years and so at a given time we'd have to ask
 what I have in my head is that we're considering like maybe 10 to 20 printing houses at a time
 within some span.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="">
+<turn speaker="Matt Gardner" timestamp="">
 
 This is fascinating. The main thing I thought about as you talked about both of these projects is
 that again, from a like why is this an interesting machine learning problem? It's because
@@ -981,10 +981,10 @@ it's just gonna be totally ignored. It's useless, it doesn't, it doesn't do anyt
 order for this to actually be useful, it has to be interpretable in some sense. And this is, this is
 fascinating,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 Right? What you're actually looking for is the model's interpretation. And do you want that
 interpretation to be based in understood assumptions? The only way you can do this kind of research
@@ -997,20 +997,20 @@ complicated distributions that it's very hard to directly write down. So we want
 neural nets and the monitor machine learning is how do you balance those two things and that's what
 makes it extremely interesting to me from an email perspective.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="">
+<turn speaker="Matt Gardner" timestamp="">
 
 Yeah. Yeah. I feel like it, I did a whole lot of listening this episode, but this is stuff I haven't
 thought about very much. It's really interesting to hear you talk about them they are some really
 interesting problems. Thanks for talking about it. I think we're close to done here. Was there
 anything you wanted to talk about that we didn't hit on or any final thoughts?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 We've talked a bit about historical CR. I just want to like shout out to some other groups that
 there working on that as someone who knows a lot about historical OCR is David Smith, he's done some
@@ -1023,18 +1023,18 @@ more effort, how can we bring the community together, and there's a public synop
 his website. For anybody who's injured, what's the state of historical OCR? How what, what should I
 use if I want to do this? I would, I would start there.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="">
+<turn speaker="Matt Gardner" timestamp="">
 
 Great. Thanks. This has been really fun.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
+<turn speaker="Taylor Berg-Kirkpatrick" timestamp="">
 
 Cool. Yeah. Thank you guys for inviting me. It's super fun.
 
-</Turn>
+</turn>

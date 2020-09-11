@@ -8,48 +8,48 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt" timestamp="00:00">
+<turn speaker="Matt" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting work in natural
 language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed" timestamp="00:06">
+<turn speaker="Waleed" timestamp="00:06">
 
 This is Matt Gardner and Walleed Ammar. We are research scientists at the Allan Institute for
 Artificial Intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="00:12">
+<turn speaker="Matt" timestamp="00:12">
 
 Okay. Today our guest is Jonathan Berant who is an assistant professor at Tel Aviv University and
 the scientist with the Allen Institute for Artificial Intelligence Israel office. He is going to
 talk to us today about semantic parsing, which he has done a lot of work on at Stanford and other
 places. Jonathan, welcome. It's good to talk to you.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan" timestamp="00:29">
+<turn speaker="Jonathan" timestamp="00:29">
 
 Thanks. Thanks for inviting me. It's great to be here.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="00:32">
+<turn speaker="Matt" timestamp="00:32">
 
 So I guess to start off this topic, could you give us a brief overview of what semantic parsing is?
 That's probably broad.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan" timestamp="00:39">
+<turn speaker="Jonathan" timestamp="00:39">
 
 Yeah, sure. So semantic parsing is traditionally defined as task where you get as inputs, natural
 language utterance a question or maybe a command. And your goal is to map or translate it to meaning
@@ -57,20 +57,20 @@ representation that is executable. That's the key property. It's something that 
 particular context, like database knowledge graph, some environment, robotic environment or
 something like that. So translation from language to, a data base.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="01:13">
+<turn speaker="Matt" timestamp="01:13">
 
 So I hear some semantic parsing used in a few other ways. In the NLP community, for instance,
 semantic dependency parsing or people call parsing to abstract meaning representation or AMR. They
 call this semantic parsing. What's the difference between what you just described and these other
 tasks?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan" timestamp="01:31">
+<turn speaker="Jonathan" timestamp="01:31">
 
 Yeah, so I guess semantic parsing is ambiguous. I gave him a class on ESLEE a few years ago where I
 called it executable semantic parsing, just to be more precise. Both of these fields are about
@@ -85,10 +85,10 @@ meaning representation, which you know maybe QA SRL doesn't have a full meaningf
 but you get like the full meaningful representation in a particular context in the context that you
 have this program, you can execute it and get precise results or de-notation.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="02:39">
+<turn speaker="Matt" timestamp="02:39">
 
 So as you were talking I was thinking that maybe AMR and semantic dependencies are much more
 linguistic or tied to like the words in the utterance that you get. They're more lexical. There's an
@@ -98,10 +98,10 @@ language. But then I remember it actually semantic parsing has its roots in CCG 
 categorical grammar and other things, which actually were a lot more tied. And also you mentioned
 directly executable CCG had like Lambda Calculus. Is this directly executable enough?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan" timestamp="03:19">
+<turn speaker="Jonathan" timestamp="03:19">
 
 I mean it has, I mean meaningful representation, the form Lambda calculus, but there was no context
 in which you can execute it to see and verify whether what you got is correct. And about your
@@ -117,10 +117,10 @@ be more faithful to the actual application. You have some executer that has its 
 cannot stay very faithful to the linguistic structure that you get with the natural language. Does
 that make sense?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="04:28">
+<turn speaker="Matt" timestamp="04:28">
 
 Yeah. Great. Thanks. I guess I was pushing on this a little bit just to get the scope for what it is
 that we're talking about. There are a lot of things that in some sense try to map language to some
@@ -128,27 +128,27 @@ more abstract or formal meaning representation. There are a lot of different way
 talking today about a specific one where you could think of it as a program in some programming
 language or lambda calculus, something that we want to actually execute in some context as you say.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan" timestamp="04:57">
+<turn speaker="Jonathan" timestamp="04:57">
 
 Yeah, so I guess as I said, like in AMR, you know maybe some things are under-specified by the
 formalism. I don't think it encompasses all of formal semantics, right? But in semantic parsing in
 the particular context that you're at, it's a full meaning representation in the sense that you can
 execute,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="05:12">
+<turn speaker="Matt" timestamp="05:12">
 
 right? So in, in what circumstances might you want to actually do this?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan" timestamp="05:16">
+<turn speaker="Jonathan" timestamp="05:16">
 
 So the classical ones are things like a question answering. So let's say you have a large knowledge
 base and you want to ask which Hollywood actor had the most co-actors how do you say co-actor and I
@@ -160,10 +160,10 @@ those using the most natural way that we can, which is natural language. So mayb
 something like please, set a timer for 15 minutes before I have to leave to watch the, whenever,
 what was it?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan" timestamp="06:03">
+<turn speaker="Jonathan" timestamp="06:03">
 
 The Warriors Raptors game. So this, you know, it's quite complex. You need to have some meaning
 representation that will kind of interact with how much time it takes to get to a certain place.
@@ -178,18 +178,18 @@ parsing to answer questions over semi-structured tables. How can you can use sem
 algorithms to kind of like automatically fill forms or click on a bunch of buttons in a webpage in
 order to accomplish some tasks and so on.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed" timestamp="07:07">
+<turn speaker="Waleed" timestamp="07:07">
 
 So what kind of quality do we expect for some of these applications? Is it practical to expect them
 to be functional in the real world or is it still in the research phase?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan" timestamp="07:18">
+<turn speaker="Jonathan" timestamp="07:18">
 
 I mean I think, uh, if you have a specific domain and you want to build an assistant for that
 particular domain, nowadays it's possible to collect data and train supervised parsers such that
@@ -200,10 +200,10 @@ write grammars and do various things in order to make your learning problem easi
 it's actually out there in our phones, but it is limited in scope to a particular application that
 you're interested in and you build a semantic parsing for that application.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="08:05">
+<turn speaker="Matt" timestamp="08:05">
 
 So you've talked about question answering and instruction following virtual assistant kinds of
 stuff. One thing you did not mention was broad based natural language understanding like systems
@@ -211,27 +211,27 @@ that can actually read text and do stuff with it. Do you think this kind of sema
 role to play there in the future or is it just always going to be limited to these question
 answering command following kinds of application?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan" timestamp="08:30">
+<turn speaker="Jonathan" timestamp="08:30">
 
 Well I guess what do you mean by broad language understanding? I mean I think, you know, questions
 and commands are definitely part of natural language that is quite rich. I mean what is the role of,
 I dunno, machine translation and language understanding
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="08:47">
+<turn speaker="Matt" timestamp="08:47">
 
 That, that's a totally fair question. What I'm, what I meant was let's say I have a longer document
 and I want to understand what this document means. Do you see semantic parsing playing a role?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan" timestamp="08:55">
+<turn speaker="Jonathan" timestamp="08:55">
 
 Yeah. So I guess this is a little bit, uh, an open question. So definitely you can cast this as
 semantic parsing by combining semantic parsing information extraction. You can cast this reading
@@ -243,10 +243,10 @@ a query over that structured presentation. In 2014 we had a paper that tried to 
 the common approach nowadays with the end to end neural networks that are fully end to end
 differentiable but it has inspired work on the euro modular networks.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="09:42">
+<turn speaker="Matt" timestamp="09:42">
 
 Right. So I'm sure Jacob Andreas had sematic parsing in mind when he thought of neural module
 networks where you have these modules that are kind of like these subprograms. So I think it does
@@ -254,10 +254,10 @@ inspire language understanding in general and might play a role, you know, like 
 executing questions over structural representations, but some aspects of it can be considered part
 of broad language understanding I think.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="10:07">
+<turn speaker="Matt" timestamp="10:07">
 
 Great. Yeah. I want to come back to neural module networks a bit later, but I think for now we've
 gotten a good handle on what semantic parsing is. What we're talking about here, when we say
@@ -265,10 +265,10 @@ executable, semantic parsing and on places where you might actually use this. Do
 little bit about how you might build a system that translates from language to some kind of
 executable representation?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan" timestamp="10:27">
+<turn speaker="Jonathan" timestamp="10:27">
 
 So, at the highest level you have the model and the executor, right? So you have something that
 takes as input, natural language and outputs a program. Then you have the executor that takes the
@@ -282,10 +282,10 @@ exponentially with the size of the inputs, but it's also rules out a lot of the 
 impossible, you know, like programs that don't compile or various other constraints that you can
 impose on this.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan" timestamp="11:33">
+<turn speaker="Jonathan" timestamp="11:33">
 
 So basically there's no numbers here, right? It's just like completely structured. It's like a
 formal language thing. You have a formal language and you have some grammar and this, these are the
@@ -298,10 +298,10 @@ parser. So something that given an input and the possible outputs according to t
 actually output the program that has the highest probability. And because the search space is very
 large, this is a non treatable problem.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan" timestamp="12:23">
+<turn speaker="Jonathan" timestamp="12:23">
 
 Uh, you know, if your features decompose, you can do CKY, but nowadays they never decompose. So
 people do things like Bing search and basically have to solve the search problem of finding the
@@ -312,18 +312,18 @@ go into. So I guess these are the things, there's an executor, the model has a g
 statistical model and you have a parser for solving the argmaxproblem to finding the highest
 probability program and you have a learning algorithm.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="13:06">
+<turn speaker="Matt" timestamp="13:06">
 
 Wow. So that's a whole lot of moving parts for what sounded originally like a, a relatively simple
 problem of translating language to programs.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan" timestamp="13:14">
+<turn speaker="Jonathan" timestamp="13:14">
 
 Yeah, yeah. I mean it's like a sequence to sequence model, but you have a grammar that's constraints
 your output and just like a sequence-to-sequence model, you need to solve the argmax problem by
@@ -331,10 +331,10 @@ doing research and just like sequence-to-sequence model and you have some object
 maximum likelihood, so it's just like translation except there's a grammar on the outputs and then
 you can do also other stuff if you want, if that makes, simplifies it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="13:39">
+<turn speaker="Matt" timestamp="13:39">
 
 Yeah. Yeah, that, that might be nice for current listeners, I guess thinking five years ago before
 we moved to these seek-to-seek models, it was in fact a whole lot more complicated because you had a
@@ -343,10 +343,10 @@ program pieces that this word might map to and I have to do chart parsing to go 
 words up to a full program in really complex ways, but nowadays you can even just do a seek to seek
 model without a grammar at all and hope, cross your fingers, that it works.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan" timestamp="14:16">
+<turn speaker="Jonathan" timestamp="14:16">
 
 Yeah. I guess that transition was a bit abrupt though, right? Like, you know, a 2015, as you said,
 people were building logical forms or programs over the input. You get to like the input like a tree
@@ -358,10 +358,10 @@ second in time in the universe where I was working with Ice and Percy [Liang] an
 what's called a floating parser that was this like hybrid creature where you can uh, build a trees
 that are partially over their inputs.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan" timestamp="15:07">
+<turn speaker="Jonathan" timestamp="15:07">
 
 Some sub-trees actually aligned to your input and some sub trees don't. And you can have a stronger
 notion of compositionality and in a sense both model the fact that the structure of the program
@@ -372,19 +372,19 @@ little bit of a way to say that it has returned, but I don't think like the full
 explored in a very scientific way. or logically, do you agree? You've done a lot of work on that
 too.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="15:53">
+<turn speaker="Matt" timestamp="15:53">
 
 Yeah. Yeah. I agree. I was going to ask if you could comment on like the pros and cons of going from
 this CKY chart style parsing to the seek-to-seek models. Like what do you gain and what do you lose?
 You kind of touched on that in what you just said, but I wonder if you could expand on it a little.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan" timestamp="16:09">
+<turn speaker="Jonathan" timestamp="16:09">
 
 Yeah. So moving to sequence to sequence model, as you said, it just simplifies things a lot. You
 just have a fully differentiable end-to-end model where the way that you decode the output is
@@ -397,10 +397,10 @@ as higher. But on the other hand, your search space becomes huge, right? So now 
 unconstrained. You can do whatever you want in order to generate the program and you need to
 overcome this very difficult search problem where basically any program is possible.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan" timestamp="17:09">
+<turn speaker="Jonathan" timestamp="17:09">
 
 The lexicon was extremely useful in restricting the search space. If every word in the inputs can
 only map to like maybe 10 things, then the search space was much more manageable and you can do
@@ -410,10 +410,10 @@ really need any sophisticated search. Just a simple Bing search left to right or
 decoding trees will be enough. I don't think this is true. I don't think it's correct. I think at
 some point this breaks but for existing data sets that obtain similar performance.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="17:49">
+<turn speaker="Matt" timestamp="17:49">
 
 Yeah, I think there are. There are two places in particular where this breaks down. One is when you
 have weak supervision. That is instead of, instead of having my training data be my inputs, be
@@ -426,10 +426,10 @@ including one by your group, one from me, other people that show that you basica
 at all if you just try to do a search based training algorithm when all I have is a seek-to-seek
 model and answer supervision, you need some kind of additional lexical information.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan" timestamp="18:42">
+<turn speaker="Jonathan" timestamp="18:42">
 
 Yeah, I mean but both are groups trained from the denotations, right? So we still use this model
 where you don't have any exclusive alignment but you can do other stuff like you had the NAACL now,
@@ -439,10 +439,10 @@ constants that you have is you know you can have like thousands of possible know
 constants per word. I think there it would not work at all even for simple questions, probably. Well
 you can always maybe bridge that using embeddings or something.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="19:18">
+<turn speaker="Matt" timestamp="19:18">
 
 Yeah. Yeah. And the other place where this, this approach falls down I think, is when you have very
 templated or rather, it's really easy for the LSTM to memorize templates and not generalize to new
@@ -450,10 +450,10 @@ syntactic structures. And so there have been a few works that show that if you c
 split the data to have logical form structures be held out at test time, you show that these LSTM
 based models fall down pretty miserably at generalizing to new kinds of things.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan" timestamp="19:50">
+<turn speaker="Jonathan" timestamp="19:50">
 
 Yeah, I think this is a super, super important point. Like the whole point of semantic parsing. I
 mean regardless of like the the application, I think it's like in my head it's something very nice
@@ -465,17 +465,17 @@ to generalize to deeper trees, but this work by Dragomir Radev's student, Cather
 really showed that this is not the case, that it just memorizes templates. It's unclear to me. So I
 think there they did not have a grammar on the output side. Do you, do you remember?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="20:40">
+<turn speaker="Matt" timestamp="20:40">
 
 They didn't in that work? No.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan" timestamp="20:42">
+<turn speaker="Jonathan" timestamp="20:42">
 
 Right. So, I mean I'm wondering if you actually decode trees whether that would improve, but it was
 like a quite substantial hit in the accuracy. Actually I have a work in submission now. I don't know
@@ -484,24 +484,24 @@ the focus of our paper, but we also observe this very strong memorization effect
 think it's really important to investigate this further. I mean, this is ridiculous to some extent.
 It's just ridiculous.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="21:16">
+<turn speaker="Matt" timestamp="21:16">
 
 Yeah. It kind of defeats a lot of the original intent as you say.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan" timestamp="21:20">
+<turn speaker="Jonathan" timestamp="21:20">
 
 Yeah, yeah. If not here than where in a sense.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="21:23">
+<turn speaker="Matt" timestamp="21:23">
 
 So now that we've gotten more of an overview of all of the pieces of a semantic parser, it might be
 interesting to come back to neural module networks, which I asked Jacob Andreas about this on
@@ -509,10 +509,10 @@ Twitter a while ago, after a previous episode where we mentioned these and he ag
 saying that these are basically semantic parsers with learned execution modules. Do you want to
 expand on this or do you want me to,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan" timestamp="21:45">
+<turn speaker="Jonathan" timestamp="21:45">
 
 so, uh, neurological networks that was proposed by Jacob Andreas. The idea is that, uh, you have
 these modules whose parameters are tied that performed as specific functions. And so in images,
@@ -525,10 +525,10 @@ the property of color. So all these are there are, there's like a small sets of 
 one for finding objects, one for changing the attention from one object to the other based on some
 relation and so on.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan" timestamp="22:50">
+<turn speaker="Jonathan" timestamp="22:50">
 
 And these, each one of these modules is it's own neural networks that has parameters that are shared
 across all of the examples and the parameters of the networks are trained end to end. So you can, I
@@ -538,10 +538,10 @@ sentence, the input to the modules is the sentence and the output is the answer.
 are basically learning the executors. So you learn, given the word ball to find in the image, the
 object ball and you know, pick it from, from the image.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="23:32">
+<turn speaker="Matt" timestamp="23:32">
 
 So to summarize, we basically have two learning problems here. One is mapping language to a program.
 This is the traditional semantic parsing problem that we've been talking about this whole time. It's
@@ -551,10 +551,10 @@ typically with only the answer as supervision. And so this is an extremely hard 
 this is why I think it hasn't really been successfully used in language as of yet, though, we'll
 see.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan" timestamp="24:08">
+<turn speaker="Jonathan" timestamp="24:08">
 
 Yeah, I actually saw now in ICLR, I just read a paper by Josh Tenenbaum's group where they have
 something called neural concept learner. Did you see that where they do map the question into a
@@ -568,10 +568,10 @@ is executed with this differentiable executor that does things over vectors into
 think about it about it like a spectrum, right? Like a on one end of the spectrum there's like fully
 end to end differentiable models.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan" timestamp="25:06">
+<turn speaker="Jonathan" timestamp="25:06">
 
 So you know RNN CNNs there's the MAC architecture from Drew Hudson and Chris Manning that is just
 fully end to end differentiable. Maybe the architecture is kind of like biased towards reasoning.
@@ -584,20 +584,20 @@ by design. So I actually think this spectrum is super interesting in terms of li
 affect generalization, how does it affect sample complexity, how much data is needed. This is I
 think, a really interesting direction.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="25:58">
+<turn speaker="Matt" timestamp="25:58">
 
 Yeah, I agree with you as evidenced by the fact that I'm actively working in this space. So yes, I
 think this is very interesting. I'd like to move on to a different, but related topic. How does the
 programming language that you're parsing into affect the performance or the characteristics of your
 parser?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan" timestamp="26:16">
+<turn speaker="Jonathan" timestamp="26:16">
 
 So I don't think there was a lot of work on that. I think if I remember correctly, the original
 Zelle and Mooney paper on Geo880, they kind of like say briefly, you know, we're going to parse
@@ -609,10 +609,10 @@ calculus, like originating, I think the motivations were more linguistic for Mar
 It was more about like understanding of language rather than the application itself. So the logical
 forms and data sets were in this Lambda Calculus format.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan" timestamp="27:09">
+<turn speaker="Jonathan" timestamp="27:09">
 
 Then later there was a little bit of work on lambda DCS, uh, from, uh, Percy Liang. And then in
 recent years, there's like a lot of work on SQL just because it's very ubiquitous. It's everywhere.
@@ -624,10 +624,10 @@ how well it aligns with the natural language. So, you know, maybe in natural lan
 have these adjacent phrases that compose such that the meaning of the entire span is a function of
 the meaning of it's parts.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan" timestamp="27:59">
+<turn speaker="Jonathan" timestamp="27:59">
 
 But maybe on the former languages might not be like that. So maybe in SQL, you know, the way that
 they wrote it, they didn't think about parsing. They thought about, I don't know, other
@@ -639,10 +639,10 @@ things might be close to one another. And then the way that it's expressed, on t
 be very, very different. This problem of the fact that the way that the composition of the natural
 language is different from the composition of the formal language might make things harder.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan" timestamp="28:44">
+<turn speaker="Jonathan" timestamp="28:44">
 
 And this is evidenced by a recent paper where they show that when they translate sequel to some
 nicer language, they get substantial gains on the what the SPIDER data set from Yale. So this is
@@ -654,10 +654,10 @@ over Freebase. It's the people that were born in one country and are now we're l
 country. Uh, the fact that sometimes language has these high level phrases that mean very, very
 detailed things in that particular language can also cause problems.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan" timestamp="29:34">
+<turn speaker="Jonathan" timestamp="29:34">
 
 So in general, what we would want is that the formal language would align well with the natural
 language, the more it aligns well, I think the problem becomes easier even though, you know, when
@@ -667,20 +667,20 @@ things there, it probably should matter. I'm not sure if this is correct or not,
 language is nice, you might expect to generalize better compared to it before the language is very,
 very, doesn't align very well with the natural language.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="30:09">
+<turn speaker="Matt" timestamp="30:09">
 
 Yeah. That matches my intuitions a lot. We're getting a little bit low on time. I want to, I have
 two questions left that I want to be sure that we ask you. Um, the first one is what do you think
 are the most interesting current data sets for semantic parsing research? If I'm just getting into
 semantic parsing now, what should I focus my time on?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan" timestamp="30:27">
+<turn speaker="Jonathan" timestamp="30:27">
 
 So I don't know at least in my head, like there's various different interesting research questions
 and semantic parsing, and it depends a little bit on which one you want to focus on. Both of us have
@@ -692,10 +692,10 @@ question to sequel given a completely new database that you have never seen befo
 never seen this database. It has arbitrary names for columns and for tables, but you need to
 understand the language of the question well enough such that you can do that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan" timestamp="31:19">
+<turn speaker="Jonathan" timestamp="31:19">
 
 Sometimes people refer to this as zero-shot-semantic parsing in the sense that at test time your
 database is new. You haven't observed any examples from that database. I think the zero-shot set up
@@ -710,10 +710,10 @@ single question, you have a sequence of questions and then you also have problem
 interesting research questions about co-reference of entities and events. And this probably should
 also be interesting.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="32:27">
+<turn speaker="Matt" timestamp="32:27">
 
 I'll jump in here with the little comment about SPIDER. I was talking with a friend of mine who is a
 vice president of something at Tableau and he was very interested in hearing about Spider and wanted
@@ -725,10 +725,10 @@ answer complex queries over their customer's tables where I don't know a priori,
 build a specific model for each customer's table. I want a single model that can transfer across all
 of these.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan" timestamp="33:13">
+<turn speaker="Jonathan" timestamp="33:13">
 
 Yeah. So I was talking to Mark Johnson at NAACL, he expressed a similar thoughts. And also Ben, my
 student who, uh, as both of us know, did, a lot of them did most of the work for, our collaboration.
@@ -736,17 +736,17 @@ So he also has been approached already, but I think more than one person. So it 
 people, I think. I think they, they did something right with this data set and creating good
 datasets is hard as we know.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="33:37">
+<turn speaker="Matt" timestamp="33:37">
 
 Yeah. Okay. So, what other datasets, do you think are interesting for semantic parsing?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan" timestamp="33:42">
+<turn speaker="Jonathan" timestamp="33:42">
 
 Again, this is my own opinion and I'm definitely gonna forget stuff, but I really liked NLVR
 because, from a, you have [Yoav] Artzi, and the Cornell Group, Alane Suhr, I don't remember if there
@@ -758,10 +758,10 @@ one of the research issues in semantic parsing is what's called spuriousness. Th
 are training from denotations, that is you're only seeing questions and answers and not questions in
 programs, then you basically have to search for programs that get to the right answer.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan" timestamp="34:35">
+<turn speaker="Jonathan" timestamp="34:35">
 
 And in some cases the number of programs that get to the right answer is extremely large. So if your
 signal is just true, false, any program that returns true will be correct in the context of an
@@ -774,10 +774,10 @@ instructions. And then the only supervision that you get is what the word looks 
 we have a state, an initial state, what the word looks like in the beginning, a state, what the word
 looks like at the end and natural language instructions for how to manipulate the world.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan" timestamp="35:28">
+<turn speaker="Jonathan" timestamp="35:28">
 
 And there, the point is that the program is long so you have a very difficult search problem. So if
 you're interested in search algorithms and coming up with smart search algorithm or learning through
@@ -791,18 +791,18 @@ language composes into programs and then at test time you see completely differe
 language composes to programs. And this touches upon this generalization issue, which I think is
 very central.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="36:27">
+<turn speaker="Matt" timestamp="36:27">
 
 I noticed you didn't mention any of yours; complex web questions. Do you view that as a semantic
 parsing dataset?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan" timestamp="36:34">
+<turn speaker="Jonathan" timestamp="36:34">
 
 No, it's not. So complex web questions, we were aiming to view this more as a reading comprehension
 task where you are inspired by semantic parsing to do like kind of like what's called multi-hop
@@ -813,10 +813,10 @@ web questions and I think that's super cool. Yeah, I guess we did overnight, but
 using it anymore. And I did web questions in the past, but I don't recommend using that anymore. So,
 uh, yeah, this is what I think.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="37:15">
+<turn speaker="Matt" timestamp="37:15">
 
 okay. Cool. Yeah, I guess I agree that the interesting data sets to work on these days are the
 places where there are still interesting open research questions around say zero-shot-semantic-
@@ -830,10 +830,10 @@ text, but there is no given programming language. You probably need something li
 network or something along those lines. These to me feel like the interesting research directions
 still in semantic parsing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan" timestamp="38:19">
+<turn speaker="Jonathan" timestamp="38:19">
 
 Yeah. So I guess like I was trying to be strict among a definition of semantic parsing, but I think
 even at least for myself, the most, like what's the main drawbacks of semantic parsing? Maybe it's
@@ -848,19 +848,19 @@ some question and you want a very full compositional understanding of the questi
 just deterministically execute it and get an answer. And we, if we can do that for tables, for text,
 for the web, for images, then that would be super cool.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="39:27">
+<turn speaker="Matt" timestamp="39:27">
 
 Yeah. Great. This, has been a really fun conversation. We are getting close to out of time. Is there
 anything that you wanted to talk about that we didn't get to, that we want to talk about in the last
 bit?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan" timestamp="39:37">
+<turn speaker="Jonathan" timestamp="39:37">
 
 I guess one thing, maybe to mention, I think this is also like an interesting research problem. So
 we just touched upon this idea that semantic parsers should cover things that are not in knowledge
@@ -874,10 +874,10 @@ platforms that accommodate thousands of, natural language interfaces. Whether yo
 wants to have just one or a Google that wants to have like a million. I think there's a lot of
 interesting issues on how to deal with like very, very little data regime.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="40:45">
+<turn speaker="Matt" timestamp="40:45">
 
 yeah, I, this is a big problem, say with Alexa, if you want to build a skill, for instance, for
 Alexa, there was a startup that AI2 incubated a few years ago called Kitt.AI that got acquired by
@@ -887,10 +887,10 @@ acquired by Microsoft. I've reached out to people at Semantic Machines to have t
 podcast and they're not ready to yet, but hopefully they will soon and we'll get some more
 information about this kind of application.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan" timestamp="41:21">
+<turn speaker="Jonathan" timestamp="41:21">
 
 Yeah, I mean task-based dialogue, which I don't know anything about Semantic Machines, but I think
 this is something pretty central to what they do. Like task based dialogue in contextual semantic
@@ -901,18 +901,18 @@ all, I have worked on this, but I'm always conflicted whether like the solution 
 from people trying to build it or people in academia. I hope that's ideas coming from academia,
 inspire also people in the real world trying to build these things.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="42:06">
+<turn speaker="Matt" timestamp="42:06">
 
 Well, great. Thanks Jonathan. This has been really fun.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan" timestamp="42:08">
+<turn speaker="Jonathan" timestamp="42:08">
 
 Yeah, it was great. I had a great time.
 
-</Turn>
+</turn>

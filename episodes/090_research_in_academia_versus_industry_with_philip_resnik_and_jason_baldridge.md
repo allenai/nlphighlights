@@ -8,15 +8,15 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt" timestamp="00:00">
+<turn speaker="Matt" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting work in natural
 language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed" timestamp="00:06">
+<turn speaker="Waleed" timestamp="00:06">
 
 This is Matt Gardner and Waleed Ammar, we are research scientists at the Alan Institute for
 Artificial Intelligence. So a few weeks ago we asked for suggestions on topics you'd like us to
@@ -32,32 +32,32 @@ the cofounder of People Pattern a start up, which uses machine learning to impro
 Before joining Google in 2017, Jason was a tenured associate professor at University of Texas at
 Austin. Philip and Jason, thank you for joining us today.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="New Speaker" timestamp="01:13">
+<turn speaker="New Speaker" timestamp="01:13">
 
 Thanks.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Philip" timestamp="01:14">
+<turn speaker="Philip" timestamp="01:14">
 
 Great to be here.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed" timestamp="01:15">
+<turn speaker="Waleed" timestamp="01:15">
 
 So could you start by telling us how you decided to do the switch one way or the other and why you
 stayed since then?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Philip" timestamp="01:22">
+<turn speaker="Philip" timestamp="01:22">
 
 For me, I had looked at academic positions coming out of the phd, you know, at the time, I found it
 harder to wind up where I needed to be. And uh, you know, there were, there were two bodies involved
@@ -69,10 +69,10 @@ you're competing with people who are fresh out. And I had more or less resigned 
 to have to, if I want to get back into academia, you know, wait until I can try to make myself a big
 name 10 years from now and then, you know, get hired as, senior faculty.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Philip" timestamp="02:14">
+<turn speaker="Philip" timestamp="02:14">
 
 And in my case, it was really good fortune, honestly. I had some geographic reasons to change where
 I was living and I was scrambling around trying to figure out what I was going to do. And in my
@@ -85,17 +85,17 @@ then phd and then back to industry. And back to academia that it gave me sort of
 perspective on life in either one or the other. So, you know, these things work out the way they
 work out in life and I can't say I'm unhappy it happened.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed" timestamp="03:10">
+<turn speaker="Waleed" timestamp="03:10">
 
 All right, great. How about you, Jason.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jason" timestamp="03:12">
+<turn speaker="Jason" timestamp="03:12">
 
 Cool. So I think, you know, in my case, I could actually give you a number of examples, but this is
 not a binary switch, right? Where you're kind of carrying on multiple interests as you're going
@@ -107,10 +107,10 @@ on over to the Silicon Valley. This was 1998 where there were lots of big opport
 just get into industry right at that time. And so we considered that, but ended up deciding, hey,
 going to Scotland sounds pretty cool and working with Mark Seedman is awesome.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jason" timestamp="03:51">
+<turn speaker="Jason" timestamp="03:51">
 
 So, I did go with that. That said, I then ended up being part of a startup there that we got going.
 We actually got funding, um, to the tune of 200,000 pounds, um, that was promised, but then my co
@@ -122,10 +122,10 @@ had that decision right in front of me at that time. And actually Peter Norvig g
 He was at Google and I was asking him about this kind of decision about, oh, industry versus
 academia.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jason" timestamp="04:33">
+<turn speaker="Jason" timestamp="04:33">
 
 That was very much front and center in my mind. And the advice he gave was actually no matter where
 I go, I want to work with smart teams of people who are working on interesting problems. And I think
@@ -137,10 +137,10 @@ industry to academia then from academia to industry. And so I decided to go for 
 There were other factors. I was actually getting divorced from my wife. We had a two and a half year
 old daughter.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jason" timestamp="05:11">
+<turn speaker="Jason" timestamp="05:11">
 
 And having the university schedule at that time allowed me to have her with me during the summers.
 And that was kind of actually excellent flexibility that the academic life gave me at that time. Uh,
@@ -152,37 +152,37 @@ doing a lot of the programming while still being professor by day. And so that k
 constant thing in flux, like, you know, and then to sort of wrap it up, I got tenure and I was sort
 of thinking, well, what are my next steps?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jason" timestamp="05:52">
+<turn speaker="Jason" timestamp="05:52">
 
 Um, and then I'd sort of hoped that I could support my professor had that by having a startup that
 could of be a thing that I could get going and then, you know, sort of do one day a week going
 forward. That didn't really work out with People Pattern, but I learned a lot along the way and got
 to hang out with Philip quite a bit.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed" timestamp="06:07">
+<turn speaker="Waleed" timestamp="06:07">
 
 When did you start People Pattern?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jason" timestamp="06:08">
+<turn speaker="Jason" timestamp="06:08">
 
 I think that was 2013. Okay. So then ultimately, uh, I sort of wandered further and further away
 from just the core academic thing because I'd gotten much more of a taste of doing industry work
 through the consulting and through People Pattern and for various other reasons I can go into later,
 I decided I was going to jump and go all the way to, Google.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Philip" timestamp="06:26">
+<turn speaker="Philip" timestamp="06:26">
 
 So just to elaborate for a second on one or two things that Jason said. By the way, Jason mentioned
 flexibility, which is an important theme that comes up. Also the circumstances of my coming to
@@ -195,10 +195,10 @@ though, you mentioned moonlighting, Jason, is that one thing that seems to me to
 a bit is it used to be a very much an either or proposition to choose between academia and an
 industry where at major research universities, at least it was good
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Philip" timestamp="07:18">
+<turn speaker="Philip" timestamp="07:18">
 
 you were able to do working on the side, say like a day a week or something to do consulting or
 whatever, and you're starting to see a model now where an increasing number of people are actually
@@ -207,10 +207,10 @@ engaged with industry or consulting or startups at the same time and so the natu
 that people have to make has been changing because there are newer kinds of models for dividing your
 time then I think tended to exist in the past.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="07:47">
+<turn speaker="Matt" timestamp="07:47">
 
 I guess one interesting thing that stuck out to me from both of your stories was that how much your
 life circumstances affected how things turned out. It seems to me like that's pretty much always, I
@@ -224,10 +224,10 @@ Singh, but I guess I'm technically a UCI affiliated visiting scholar. Um, but I'
 don't have to worry about grant funding. It's a very interesting and nice mix between academic and
 industry research, but again, fully fully determined by a crazy series of, life circumstances.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed" timestamp="08:49">
+<turn speaker="Waleed" timestamp="08:49">
 
 So this reinforces what Philip was just saying that, it's not, it doesn't have to be one or the
 other, but also I think this is kind of a rare opportunity. Oftentimes people who are already like
@@ -236,10 +236,10 @@ in an industry. But someone who's just getting his phd. Yeah, they could do a po
 industry and academia, but I don't see a lot of opportunities for someone who's just starting to
 split their time.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Philip" timestamp="09:19">
+<turn speaker="Philip" timestamp="09:19">
 
 Yeah. I think that's largely because really any situation where you are working out the fit with an
 employer, the core question has to do with value and uh, you know, the way you deliver value is
@@ -256,10 +256,10 @@ the typical trajectory has really not had a chance to build up a solid track rec
 thing. There are certainly exceptions, but it's harder and I think that's why a people who are more
 established have more opportunities in the way that you're talking about.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jason" timestamp="10:36">
+<turn speaker="Jason" timestamp="10:36">
 
 That's absolutely true. I've actually recently moved to Austin as, uh, some of you know, and that
 was actually something that would not have been possible for me to do at Google two years ago. When
@@ -270,10 +270,10 @@ back to Austin and with the goal of not just being a singleton but of actually g
 and so it's a really exciting opportunity. But, it is again, one of those things that comes based on
 the back of what you've done before.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Philip" timestamp="11:12">
+<turn speaker="Philip" timestamp="11:12">
 
 Yeah. Although I will say that even for people starting out, there was a, there is a message here
 which is, there's a difference between the jobs that people have available and the job that you want
@@ -289,18 +289,18 @@ It's not, this person is good. They are this particularly shaped jigsaw puzzle p
 slop them in. It's not about the shape of the jigsaw puzzle piece, right? It's about the person
 who's good. How do we take the jigsaw puzzle and the piece and make them fit together?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jason" timestamp="12:19">
+<turn speaker="Jason" timestamp="12:19">
 
 That's a great point. Um, in fact, I think a lot of junior people underestimate their ability to
 guide and dictate what they're gonna do by showing their leadership early on. Exactly.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed" timestamp="12:28">
+<turn speaker="Waleed" timestamp="12:28">
 
 Yeah, that makes a lot sense. I remember when I joined AI2 I was expected to do one job and just
 like a few months later, I ended up starting like leading a team. And then I gave a course at the
@@ -309,10 +309,10 @@ it's just like things are evolving in strange ways. So what are other aspects, y
 about flexibility a fair amount. Can we talk about finance? How does this decision of working in
 industry or academia affects one's finances?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jason" timestamp="13:01">
+<turn speaker="Jason" timestamp="13:01">
 
 Well, it's a pretty clear difference. I would say. I mean as a professor you can consult and many
 professors increase their income by doing consulting and that can bring a lot of additional income
@@ -324,36 +324,36 @@ actually have four kids, so that's not cheap. So those kinds of factors can defi
 difference. The problem is is if you're being a professor and doing consulting, these are two jobs
 basically.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jason" timestamp="13:43">
+<turn speaker="Jason" timestamp="13:43">
 
 Right, and that means there's a lot of your time that goes to that and leaves less time for other
 things such as being with your family. So that's the additional cost you pay there. I am, I can say
 that I'm very happy now at Google with one job.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="13:54">
+<turn speaker="Matt" timestamp="13:54">
 
 Yeah. I was going to ask if universities are typically okay with you spending a day a week or do you
 have to do that on top of all of your normal five days or seven days or however much time you spend
 as a professor?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jason" timestamp="14:07">
+<turn speaker="Jason" timestamp="14:07">
 
 Well, UT Austin gives you one day a week that you can do that. Of course is not like your Friday,
 that's your Saturday.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Philip" timestamp="14:12">
+<turn speaker="Philip" timestamp="14:12">
 
 In general universities, at least the major research universities are okay with, and even
 encouraging, of people spending a day a week without asking it. And look, they know that if you're
@@ -365,10 +365,10 @@ decision because people who get, I wasn't getting a week's worth of work, but yo
 suppose, you know, people who get their week's worth of work done on Monday, are not gonna go away
 and like play golf the other four days.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Philip" timestamp="14:55">
+<turn speaker="Philip" timestamp="14:55">
 
 They're going to come back and do another week's worth of work on Tuesday and then do it again on
 Wednesday. Right? So universities know that by keeping the flexibility there for people, they're
@@ -382,10 +382,10 @@ Universities want an ecosystem where their researchers are interacting with the 
 research and who hire students and who fund research and who are consumers of the ideas and so
 forth.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Philip" timestamp="15:57">
+<turn speaker="Philip" timestamp="15:57">
 
 You know, the other thing that I would add, David Sedaris, the essayist, he writes a lot of funny
 stuff. In one of his essays, he talks about, sort of, the four burners theory. It's, it's worth
@@ -404,10 +404,10 @@ done, is a very different game where you are essentially married to the startup.
 that you're doing a startup and other stuff, just to let you know as a founder it's a much more
 tenuous proposition.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jason" timestamp="17:20">
+<turn speaker="Jason" timestamp="17:20">
 
 Yup. I want to return a little bit to the personal perspective on the financial question, which is
 it's not about the absolute numbers, it's about the financial security that you experience.
@@ -419,10 +419,10 @@ really mattered. And this was when, my son who's now 10, I needed to have daycar
 wanted that to be at the university. So I actually was responsible. I signed up to get him into the
 daycare thing
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jason" timestamp="18:03">
+<turn speaker="Jason" timestamp="18:03">
 
 well before he was born and the actual admit into the universities day care didn't come until he was
 like two years old. And this happened at a time, this was like around the 2008 downturn in the
@@ -433,10 +433,10 @@ easily get to him if something happened and just also would have been really nic
 right nearby, at the university. So I just asked like, Hey, can we get the dean to approve some kind
 of thing for me to get moved up in this darn list?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jason" timestamp="18:42">
+<turn speaker="Jason" timestamp="18:42">
 
 Um, I was responsible in all this stuff and they couldn't do it. The only way they could've done it
 is if I had had a competing offer from another university. And this is often the case with uh,
@@ -448,10 +448,10 @@ happened, I might still be at UT Austin today. I don't know. Like, you never kno
 possibilities are. But that was like an example of where my overall well-being was not, kind of,
 being taken care of.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jason" timestamp="19:18">
+<turn speaker="Jason" timestamp="19:18">
 
 And I was asking for something that I felt was simple and it turns out daycare's not a simple thing
 at universities, but go figure. So overall like you know, there's sort of your personal sense of
@@ -465,10 +465,10 @@ And at the startup I was worried about, would we be able to pay them next month?
 been a very nice thing in terms of my own mental well-being and respect to the overall financial
 security of my team.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Philip" timestamp="20:05">
+<turn speaker="Philip" timestamp="20:05">
 
 Staying on the finances one a little bit more, I guess one of the things that comes to mind for me
 also is why do people do what they do? You don't get a phd for the money. I mean, you don't take a
@@ -480,10 +480,10 @@ You're not gonna make that back in some sense. You can't plan on making that bac
 more than I could have planned to, you know, stay in industry for 10 years and then somehow, you
 know, assume I was going to be a big enough name to come back into academia.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Philip" timestamp="20:52">
+<turn speaker="Philip" timestamp="20:52">
 
 You can't, plan that. Right? And so that's not why you do it. So, the sense of security that you're
 mentioning, Jason, is very much more important than the exact dollar amounts. I think that's
@@ -495,31 +495,31 @@ people do stuff. Money is not even on that top part of that list. You can take a
 terms of opportunity costs, but if the big house was what you were after, you're probably not the
 kind of person to have been getting a phd in this field in the first place.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed" timestamp="21:47">
+<turn speaker="Waleed" timestamp="21:47">
 
 Fair enough. But, I will say that even getting a small house is not easy these days.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Philip" timestamp="21:52">
+<turn speaker="Philip" timestamp="21:52">
 
 Oh yeah.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jason" timestamp="21:52">
+<turn speaker="Jason" timestamp="21:52">
 
 It can be tricky in many of the markets.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed" timestamp="21:54">
+<turn speaker="Waleed" timestamp="21:54">
 
 Oh yeah. Thank you very much. I think that's a very helpful perspective on both sides. One of the
 main answers I get whenever I ask some of my friends who are in the job market for a faculty
@@ -528,10 +528,10 @@ related to flexibility, but it's also different in certain ways. So I wanted to 
 whether this is actually the case. If you think actually as a professor, you feel like you actually
 have more intellectual freedom, or not.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Philip" timestamp="22:26">
+<turn speaker="Philip" timestamp="22:26">
 
 Well, so this goes back to what I was saying earlier about value right, there is, you always need to
 deliver something to someone. When students come in, I always talk about sort of the Venn diagram
@@ -543,10 +543,10 @@ complete freedom. That said, you have a kind of control in academia that you don
 I would argue, I have argued that academia is actually more entrepreneurial than entrepreneurship
 because when you're an entrepreneur, and Jason, you've experienced this as well as I have, right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Philip" timestamp="23:21">
+<turn speaker="Philip" timestamp="23:21">
 
 You're coming up with an idea and then you have to figure out that it has value and convince
 somebody to support you to do it, right? And you kind of take that summit piece of new stuff and
@@ -560,10 +560,10 @@ part all the time, come up with a new idea, try to convince somebody that they s
 to work on it or find a way to work on it out of love for it, even if you don't have the money, get
 people interested in being involved in.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Philip" timestamp="24:14">
+<turn speaker="Philip" timestamp="24:14">
 
 And then you take it up to the top of the curve and instead of doing that whole sustainability
 thing, you turn around and go back down to the next idea and do it again. That is a kind of control
@@ -574,10 +574,10 @@ but that cycle of I have something, I have control over it. All I need to do is 
 people it's worth doing that. That's something that comes in academia without the same kind of risk
 or necessarily the same kind of barriers to that that you often see in industry.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jason" timestamp="24:54">
+<turn speaker="Jason" timestamp="24:54">
 
 Yeah, that's, that's absolutely true. I will say industry can come along with opportunities to have
 significant flexibility. One big difference is that academia, you get it for life if you stick
@@ -594,18 +594,18 @@ thing, I would sort of look to. And that has turned out to be true. My, intuitio
 have found that to be very true. I mean Fernando has been pushing me to solve harder and harder
 problems and ones that I'm really interested in.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed" timestamp="25:58">
+<turn speaker="Waleed" timestamp="25:58">
 
 So is this true for you as well as your direct reports or do you feel like it's more true for one or
 the other?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jason" timestamp="26:03">
+<turn speaker="Jason" timestamp="26:03">
 
 So we definitely do not have the model where people, say who finished a phd and join our research
 team are told what to do. That is not usually a good way to work with researchers. We do have
@@ -622,10 +622,10 @@ of going back to what we said earlier, there are tons of opportunities for junio
 higher level, I would say, where they are doing more definition, they're scoping out projects and
 things like that. You don't have to do that. But if you do do that, that turns out to be awesome.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Philip" timestamp="27:12">
+<turn speaker="Philip" timestamp="27:12">
 
 So I want to introduce an element of, maybe skepticism is too strong, but at least a distinction
 between what you have at Google, and this may even apply to Google, as well, in other places. I draw
@@ -637,10 +637,10 @@ provides the incentive and control over what you're doing in advanced developmen
 sometimes, and you see a mixture of, some research groups are going to have more of a flavor of
 advanced development.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Philip" timestamp="27:56">
+<turn speaker="Philip" timestamp="27:56">
 
 Some, you know, development groups will have maybe a little bit more flexibility for research and
 15% projects or 20% projects or whatever. But in an advanced development setting, you have to
@@ -657,10 +657,10 @@ I'm interested in your thoughts on this, sort of, like, this balance between jus
 because it connects to a business need vs. this is a really good idea. I get to work on it. It might
 or might not actually deliver something in the sense of technological transfer.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jason" timestamp="29:08">
+<turn speaker="Jason" timestamp="29:08">
 
 What I can say is that I'm very happy with the situation that I find myself in, with respect to
 intellectual freedom. There are various incentive structures, which I think you're alluding to,
@@ -673,10 +673,10 @@ considered kind of collateral that matters for these kinds of decisions. So, to 
 look at the incentive structures, I think a lot of the incentives that I'm experiencing are very
 similar to what you experience
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jason" timestamp="29:57">
+<turn speaker="Jason" timestamp="29:57">
 
 as an academic, say as a professor in a department, or a postdoc or something like that. There are
 plenty of opportunities at these larger companies, I would say, where you're not focusing on a
@@ -687,20 +687,20 @@ products. That said, there's actually been a shift in recent times to focus on m
 problems because things like natural language processing turn out to be really hard and if you're,
 there's always these problems where you can kind of look and go like, Whoa, if we
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jason" timestamp="30:31">
+<turn speaker="Jason" timestamp="30:31">
 
 can just get a bit more data, if we just tweak this model a little bit and then we run the right
 experiments, we're going to get something that will improve something that matters to the company,
 but if you do that, you maybe miss some opportunities to take a longer term perspective that could
 lead towards larger improvements overall.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Philip" timestamp="30:46">
+<turn speaker="Philip" timestamp="30:46">
 
 This leads to a question you should be asking if you're thinking about industry, which is what is
 the tech transfer model, right? Even if you are doing more basic research, what is the model for how
@@ -713,43 +713,43 @@ know, a quarter or a or half a year to be there with the engineering team? There
 different models for that. If you're going to do research in industry, you want to understand what
 the model for this is.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jason" timestamp="31:32">
+<turn speaker="Jason" timestamp="31:32">
 
 That's absolutely correct.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="31:33">
+<turn speaker="Matt" timestamp="31:33">
 
 Can I jump in and refine this question a little bit? So let's say I am someone graduating with a phd
 today and I'm on the faculty market and I'm also considering positions at say, Google research or
 Fair or some other research in industry. What would you say are the practical differences in my job
 description in the first year?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Philip" timestamp="31:52">
+<turn speaker="Philip" timestamp="31:52">
 
 The immediately obvious thing is in your first year as a faculty member, you are incredibly focused
 on publishing. If your dissertation stuff was not already published that it's getting out and
 building your, sort of, momentum on a research track, creating your research identity.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jason" timestamp="32:08">
+<turn speaker="Jason" timestamp="32:08">
 
 Creating your courses and teaching them.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Philip" timestamp="32:10">
+<turn speaker="Philip" timestamp="32:10">
 
 I was going right to their next right. You're just splitting your effort so that you are involved in
 that, in the teaching side. If you are as lucky as I think incoming academics should be, then you're
@@ -759,10 +759,10 @@ a linear decrease from one to the next. Um, right. This goes back to what you sa
 and having good leaders and people, right, who are going to help, you know, set an environment the
 way that it should be. In an academic position,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Philip" timestamp="32:42">
+<turn speaker="Philip" timestamp="32:42">
 
 if you are looking at an academic position, one of the things you want to understand and ask about,
 of junior faculty members, or look at the life experience there is to what extent do they have your
@@ -775,28 +775,28 @@ first year in industry. You know, you're like, hey, this is cool. You're spendin
 hands on keyboard developing new stuff. Right. Not consolidating your old stuff of getting on the
 track the rest of the way.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jason" timestamp="33:35">
+<turn speaker="Jason" timestamp="33:35">
 
 Yeah, and that's absolutely true. Although many people do still carry on the collaborations that
 they had started during their PhDs and still have the ability to wrap those up, you know, as, as it
 were, um, after joining an industry position.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Philip" timestamp="33:48">
+<turn speaker="Philip" timestamp="33:48">
 
 I absolutely agree with what you say. My first year at Sun actually was actually very postdoc-l.ike
 I was very fortunate that way. But I think that there's probably a wide range of variation across
 the different main companies that are doing research.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jason" timestamp="34:00">
+<turn speaker="Jason" timestamp="34:00">
 
 Yeah. I would like to stress as well, there are differences in being a person doing research in a
 more product focused setting, which exists both at Google and elsewhere or in a sort of research lab
@@ -807,10 +807,10 @@ lot of our discussions so far has been kind of the, you're in a research lab in 
 you're going to be in academia, maybe a professor or a postdoc or whatever. But oddly enough, a
 number of people join research labs and then move into product. And that's an interesting choice.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jason" timestamp="34:46">
+<turn speaker="Jason" timestamp="34:46">
 
 And there are a lot of good reasons for that. And one of those is that a lot of product problems are
 really darn interesting and then you have like these really rich problems, you have very clear
@@ -822,20 +822,20 @@ I think people sometimes write those off too quickly, but there's a lot of reall
 around that and you should talk to some of the people who maybe even made that switch after having
 joined the research lab in industry and then gone to product area within the same company.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed" timestamp="35:29">
+<turn speaker="Waleed" timestamp="35:29">
 
 Yeah, I think it goes back to the value proposition that Philip was mentioning earlier. Even
 individuals want to see that the work they're doing results in value for the society and different
 people value the concrete implementation and concrete heavy concrete solution for a problem, uh, out
 there. People can use it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Philip" timestamp="35:47">
+<turn speaker="Philip" timestamp="35:47">
 
 Yeah. I want to actually emphasize this stuff that you're talking about, Jason. We really should be
 doing more of it in academia, right? If the kind of person that you're talking about who is moving
@@ -848,10 +848,10 @@ the methods and trying to increase this, wow. This, let me see, let me see if I 
 technique or come up with a new technique to do this without actually thinking or possibly I may be
 overgeneralizing a little bit caring about like what's the problem I'm doing?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Philip" timestamp="36:40">
+<turn speaker="Philip" timestamp="36:40">
 
 There are some conferences, I don't know, some machine learning conferences, I can think of for
 example, where you know it may be a caricature but it's like, hey look at this cool new model. Well
@@ -862,29 +862,29 @@ benefit the academic research as well. So maybe as you say, you know, hey, don't
 advance. Maybe you need to go a step further and say, hey, let's actually rule that in, in terms of
 what it is that we are trying to get the people in academia to pay attention to, also.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed" timestamp="37:18">
+<turn speaker="Waleed" timestamp="37:18">
 
 Thank you. That was very helpful discussion of different aspects that people can think about. I want
 to make sure that we're, not spending all the time thinking about, talking about one, one aspect. So
 what are other important aspects that we haven't talked about so far?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="37:33">
+<turn speaker="Matt" timestamp="37:33">
 
 A career progression. I guess there are a lot of different end goals here, but one possible end goal
 is to be a well known researcher. I Dunno how other people think of this, but I kind of think of
 academic as kind of like a pyramid scheme where you get more people under you and eventually you
 make it to the top or close to the top. How does academia versus industry effect this?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jason" timestamp="37:50">
+<turn speaker="Jason" timestamp="37:50">
 
 I don't know. I'd almost like to say like the goal should be like you want to solve certain problems
 or certain classes of problems and then that should be your north star rather than, you know, some
@@ -896,10 +896,10 @@ always been true to his interest in the connection between computation language 
 he's sort of constantly monitoring those things and everything he does. And he's also tireless in
 sort of reading the literature in all of these spaces.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jason" timestamp="38:32">
+<turn speaker="Jason" timestamp="38:32">
 
 And so what I would actually sort of say is let's turn that around a little bit and be very
 reflective about what your research program is and what problems you want to solve. And then you can
@@ -908,17 +908,17 @@ either context, whether it's academia or industry, to make progress in some of t
 have more freedom as a professor to define your longterm research arc. But that's not to say you
 can't kind of piece it together through some mixture.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="38:59">
+<turn speaker="Matt" timestamp="38:59">
 
 Yeah, great answer.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Philip" timestamp="39:00">
+<turn speaker="Philip" timestamp="39:00">
 
 Yeah, absolutely. You need to actually figure out what you want first. Um, you need to have your
 goals in mind and then let the goals drive the decision making. And that is a very general
@@ -930,10 +930,10 @@ when you start a project, if you're leading a project actually that relates to t
 around the table and ask each person what is it that you're in it for? For some people it is, it's
 to become well known.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Philip" timestamp="39:41">
+<turn speaker="Philip" timestamp="39:41">
 
 For other people, they don't really care if anybody knows who they are as long as lots and lots of
 people are actually using the thing they built. Right? There is a whole spectrum of goals that
@@ -945,10 +945,10 @@ I mean, we have it easy compared to somebody who's trying to get a phd in Englis
 And why do people go through all of this at the bottom? Whether it's like, you know, being on a
 street corner or you know, teaching for, you know, a pittance.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Philip" timestamp="40:24">
+<turn speaker="Philip" timestamp="40:24">
 
 It's because they, they think that I'm going to be the one that makes it up to the top of the
 pyramid. You know, Mark is a wonderful example. Uh, you know, exemplar for me, he wasn't my advisor,
@@ -960,10 +960,10 @@ you're willing to take or the things you're willing to give up for the actual ex
 you're going to wind up with, which is the value of it, but also the probability that you're going
 to make it there.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jason" timestamp="41:05">
+<turn speaker="Jason" timestamp="41:05">
 
 I would add another thing in this, which is after being a professor for over a decade and then doing
 a startup and now being at Google, one of the things that really stuck out to me is when I worked on
@@ -978,10 +978,10 @@ longterm problems as professor as I wish I had and one of the kind of things I'm
 Google is I actually feel like I'm able to revisit some of those deeper longterm problems for the
 time being.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jason" timestamp="42:01">
+<turn speaker="Jason" timestamp="42:01">
 
 And so that's been really exciting for me, but I would sort of encourage anybody who's in an
 academic position to not get caught up in the cycle of, you know, getting papers out and things like
@@ -993,10 +993,10 @@ to the university at all to do a phd. My Gosh, I'm still flabbergasted by this, 
 academia, take that long perspective please, please, please. Because that's the place that should be
 the sacrosanct area to take the long perspective.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Philip" timestamp="42:45">
+<turn speaker="Philip" timestamp="42:45">
 
 Oh man, it should be, but the reality is so hard. I'm on sabbatical right now and what I mean, what
 is the point of a sabbatical? One of the traditional points of a sabbatical is to take a step back
@@ -1007,10 +1007,10 @@ funding, your DARPA and IARPA and, some of that stuff where, you know, the cycle
 projects and the cycle time of the students is out of sync. And so you know, you get money to do
 something, you have things you need to deliver. Oops, I need students.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Philip" timestamp="43:27">
+<turn speaker="Philip" timestamp="43:27">
 
 And so you get the students and then the project ends and now you need to keep those students funded
 as you were talking about earlier, Jason. So you do what you need to and so now, you right, do you
@@ -1025,10 +1025,10 @@ over the past, you know, whatever, five years, a lot of stuff during sabbatical.
 looking at, you know, brain stuff when you know the sabbatical, which I never did before, which is
 wonderful, but it's really hard and it always comes back to um, to paying the piper.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jason" timestamp="44:22">
+<turn speaker="Jason" timestamp="44:22">
 
 There was a really interesting argument I read a couple of years ago about looking at academia as
 now a mature industry. Where, in the early 19 hundreds, mid 19 hundreds and so on, it was
@@ -1044,10 +1044,10 @@ generational gaps between expectations about, well, why aren't you getting fundi
 like you should be able to get this. Well, it's a different story today. It's harder, like there's
 less overall stuff being thrown around or there are more people or both.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Philip" timestamp="45:26">
+<turn speaker="Philip" timestamp="45:26">
 
 So there's a show that you guys should do on the evolution of academia in this regard and sort of
 where research is taking place and the shift of a lot of the research activity into industry and
@@ -1060,18 +1060,18 @@ what's driving it. We're clearly not going to cover all of that in this conversa
 that you were just talking about Jason, I think is really the beginning of, of that very interesting
 conversation.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed" timestamp="46:14">
+<turn speaker="Waleed" timestamp="46:14">
 
 One of the things that are really important I think is stress level, which we kind of mentioned in
 passing but didn't spend a lot of time talking about.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Philip" timestamp="46:21">
+<turn speaker="Philip" timestamp="46:21">
 
 I would refer people to Charles Sutton's really wonderful session on this podcast about stress. I
 think that the discussion that you guys had with him was an enormously valuable one. My own thing
@@ -1085,10 +1085,10 @@ that, there are a lot of resources. And as faculty it's partly our job to make s
 needs to get themselves, you know, to a resource that can help them out, we need to make sure that
 we can help them do it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jason" timestamp="47:24">
+<turn speaker="Jason" timestamp="47:24">
 
 Yeah. And I mean there are cultural differences that I will say, in the kind of overall theme of our
 academia versus industry discussion here where certainly in academia, as Philip mentioned, you can
@@ -1099,10 +1099,10 @@ stuff is my hobby. Like I don't build train sets. I like to do NLP. Um, so I per
 doing NLP on a Saturday. That's all right. And in many ways now on the other hand, I have a family
 and I like to spend time with my wife and my kids and things like that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jason" timestamp="48:04">
+<turn speaker="Jason" timestamp="48:04">
 
 And so, one thing I have found is that in my role at Google in particular, I am much more able to
 keep things into a Monday through Friday sort of setting and Philip is making a face. Sorry. But
@@ -1114,10 +1114,10 @@ There is this idea that you do need to have some time to charge back up and also
 really recommend this book, why we sleep. I have been so much more protective of my sleep since
 reading it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jason" timestamp="48:49">
+<turn speaker="Jason" timestamp="48:49">
 
 An,d you will be too if you read it. So read Why We Sleep. And that's actually a big factor in
 reducing your stress no matter what situation you're in. And the final thing is a lot of it comes
@@ -1131,10 +1131,10 @@ thought that your job was to answer email, right? You remember that story and yo
 have to like change what my son's perception of what I do is, but we do tend to answer a lot of
 email as academics.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Philip" timestamp="49:40">
+<turn speaker="Philip" timestamp="49:40">
 
 We're driven by it. I mean, how many times have you had the experience where you sit down and like,
 okay, I'm just going to take care of the most important email and then get to this stuff that I'm
@@ -1148,10 +1148,10 @@ my typical reality, like actually reading papers and articles as opposed to just
 the most important stuff. So that I'm aware of what's going on, trying to synthesize stuff, trying
 to actually just have real conversations and so forth.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jason" timestamp="50:36">
+<turn speaker="Jason" timestamp="50:36">
 
 One of the things is if you are in a relationship or you have close people close by who are affected
 by your academic addiction, pay attention to that. Right? And my wife frankly, was not a huge fan of
@@ -1162,10 +1162,10 @@ being a professor and continuation. I think I could manage that much better now.
 assistant professor, the kind of doing my thing, run, run, run. I burned a few bridges there with my
 wife on that one.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Philip" timestamp="51:14">
+<turn speaker="Philip" timestamp="51:14">
 
 I agree, you have to pay a lot of attention. But all of this stuff we were talking about when we
 were talking about goals and how you make decisions and you're setting priorities and so forth. One
@@ -1173,27 +1173,27 @@ needs to realize that is a joint decision making. It needs to be a holistic join
 There's give and there's take and not everybody is going to, you know, get everything at one point
 or another. But, you absolutely have to take that into account when you're picking things up.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jason" timestamp="51:42">
+<turn speaker="Jason" timestamp="51:42">
 
 And to be clear I didn't burn bridges with my wife. I burned bridges between her and academia. And
 that kind of meant she really encouraged me to keep pushing and looking for things outside of it.
 So, we're good. I listened to her, but yeah, she would not. Yeah.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed" timestamp="51:55">
+<turn speaker="Waleed" timestamp="51:55">
 
 Anything else that you feel like we missed in this conversation? I did want to bring up that there
 is gonna be a panel about careers in NAACL. What's the day? It's gonna be a month,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Philip" timestamp="52:05">
+<turn speaker="Philip" timestamp="52:05">
 
 Right, So I am actually going to be moderating a panel on careers in NLP. That's part of the
 industry track at NAACL. NAACL is in Minneapolis of course, the week of June 3rd, the panel is, I
@@ -1205,10 +1205,10 @@ of the panel. I'll be helping to make sure that the panelists get stuff out also
 much looking forward to doing this and it's not definitely not going to be a repeat of what you've
 heard in this podcast. I think it's going to simply take it to the next step. So, people come.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jason" timestamp="52:58">
+<turn speaker="Jason" timestamp="52:58">
 
 Just to kind of wrap up, I think internships are a great way of testing industry waters and I would
 say furthermore to the point that I made earlier, don't just consider doing internships with the
@@ -1217,20 +1217,20 @@ research and development around product. That will really give you a sense of wh
 code at these companies and to solve these kinds of problems where you're really focused on a
 particular problem area and Dataset or application.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="53:23">
+<turn speaker="Matt" timestamp="53:23">
 
 I'll, jump in there. I did three internships at Google on products teams and that's where I learned
 how to code well and this was like the basis for like the code quality in NLP that a lot of people
 have commented on. So I would say that these actually helped more than just getting experience. It
 also helps with your ability to do good research in the future.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jason" timestamp="53:44">
+<turn speaker="Jason" timestamp="53:44">
 
 Absolutely. Absolutely. The other thing is no matter where you go, industry or academia, don't ever
 forget about your personal life, your friends, your family and things like that. I have talked to
@@ -1239,10 +1239,10 @@ stuff. I've written all these papers, but I feel a little bit alone now. So neve
 yourself, your personal self and cultivating relationships with people. Don't always chase the
 papers. Chase your own personal happiness as well.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Philip" timestamp="54:12">
+<turn speaker="Philip" timestamp="54:12">
 
 That's absolutely right. One thing that will help do that is to just be conscious. We spend so much
 of our time doing things because, well that seems like the thing to do. Why are you going for, you
@@ -1251,26 +1251,26 @@ opposed to, I really am interested in doing the work that I would do on this thi
 those four burners and actually reflect on which ones you're turning up and which ones you're
 turning down at various points. I could not agree more, Jason.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed" timestamp="54:45">
+<turn speaker="Waleed" timestamp="54:45">
 
 All right. Thank you so much for joining us today. That was a really fun conversation and I'm sure a
 lot people will enjoy listening to it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Philip" timestamp="54:51">
+<turn speaker="Philip" timestamp="54:51">
 
 Thanks so much.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jason" timestamp="54:52">
+<turn speaker="Jason" timestamp="54:52">
 
 Thank you so much for having us.
 
-</Turn>
+</turn>

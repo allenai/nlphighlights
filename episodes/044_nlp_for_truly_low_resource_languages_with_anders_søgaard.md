@@ -8,49 +8,49 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting recent work in
 natural language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is Matt Gardner and Waleed Ammar. We are research scientists at the Allen Institute for
 artificial intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:11">
+<turn speaker="Waleed Ammar" timestamp="00:11">
 
 Today our guest is Anders Søgaard. Anders is currently a professor in the computer science
 department at the University of Copenhagen. He's done a lot of interesting work in natural language
 processing and machine learning in particular today we would like to talk to him about some of his
 recent work in multi-lingual and cross-lingual NLP. Welcome to the podcast.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="00:33">
+<turn speaker="Anders Søgaard" timestamp="00:33">
 
 Well thanks. Thanks.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:35">
+<turn speaker="Waleed Ammar" timestamp="00:35">
 
 So you've been publishing a lot of papers recently on low resource languages and how to do NLP for
 these languages. Would you like to give us a brief overview on why this direction is interesting and
 what you've been doing in this area?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="00:50">
+<turn speaker="Anders Søgaard" timestamp="00:50">
 
 Yeah, sure. So we've been doing cross-lingual learning for a lot of different tasks, including a lot
 of low level tasks and I mean a lot of NLP today is sort of intent learning of things that we're
@@ -62,10 +62,10 @@ those languages, we typically don't have part of speech taggers and we don't hav
 been interested in whether we can transfer, you know some of the models that we have for more
 dominant and languages to these low resource languages.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="01:45">
+<turn speaker="Anders Søgaard" timestamp="01:45">
 
 Our particular line of work sort of grew out of maybe not a frustration that an observation that a
 lot of people working on cross-lingual learning, we're assuming access to resources that didn't seem
@@ -78,10 +78,10 @@ spoken in Nigeria, 10 million speakers plenty of sort of AI ready users, there b
 linguistic resources and definitely not sort the Europarl style parallel corpora dictionaries, et
 cetera.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="02:49">
+<turn speaker="Anders Søgaard" timestamp="02:49">
 
 So we asked here, what kind of assumptions can we really make about these truly low resource
 languages? What kind of data is available? And obviously the answer is that that really depends on
@@ -93,10 +93,10 @@ the first paper that I suggested we talk about today. We, we only rely on the Bi
 called If all you have is a bit of the Bible: Learning POS taggers for truly low-resource languages,
 because the Bible is definitely available for a lot of languages.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="03:46">
+<turn speaker="Anders Søgaard" timestamp="03:46">
 
 That's a terrible resource, right. Some of the Bibles that we're looking at are maybe 300 years old
 written with a different spelling convention compared to what people use today. And it's a very
@@ -104,18 +104,18 @@ specific domain. But really, you know let's see what we can do with the Bible. A
 know along the way we started looking at other resources, like the Watchtower turns out to be a
 little better than the Bible. Jehovah's witnesses monthly publication.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="04:23">
+<turn speaker="Waleed Ammar" timestamp="04:23">
 
 Do you mind explaining what the Watchtower is about? I think some of the audience would not know
 that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="04:28">
+<turn speaker="Anders Søgaard" timestamp="04:28">
 
 Yeah. So Jehovah's witnesses have this monthly publication called the Watchtower and it's translated
 with relatively good quality into some hundred languages every month. And the advantage of
@@ -124,28 +124,28 @@ practical stuff sort of, how to live your life in you know how to live a modern 
 to think about sending your kids to elementary school, what to think about coming to the doctor, et
 cetera. So it's a sort of, it's more general domain than the Bible.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="05:11">
+<turn speaker="Matt Gardner" timestamp="05:11">
 
 Are there other, is that it? Like, if we want to do NLP in some really remote language, is this
 really all that we have, the Bible and the Watchtower?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="05:22">
+<turn speaker="Anders Søgaard" timestamp="05:22">
 
 For any given language, there's a lot of stuff that we have, right? I'd love to talk about some of
 the work that we've done using resources like keystroke logs or you know, gaze data or speech data,
 stuff that might be available for, we're just thinking like what do we know is available for pretty
 much all the languages that we can think of and and sort of the Bible came to mind.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="05:48">
+<turn speaker="Anders Søgaard" timestamp="05:48">
 
 So the next step was to say like, okay, so if we want to use the Bible, right, we're going to be,
 we're going to be having really bad word alignments if we want to do things like annotation
@@ -156,18 +156,18 @@ that we want to use to transfer our models. So we need, we need regularization a
 whenever possible sort of hedge our bets and not necessarily commit to hard decisions because
 there's going to be a lot of uncertainty. in the pipeline.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="06:37">
+<turn speaker="Waleed Ammar" timestamp="06:37">
 
 So it might be helpful to the audience to give just a very brief overview on what annotation
 projection is all about before we talk about how to improve it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="06:48">
+<turn speaker="Anders Søgaard" timestamp="06:48">
 
 Sorry about that. Yeah, sure. So annotations projection of the idea that if you have a model for a
 language, like English, that you have a part of speech tagger you can transfer that by part of
@@ -178,10 +178,10 @@ over the part of speech labels from the English sentence to the corresponding Fr
 Tiv or whatever sentence. And then you basically, you train on that. There's a couple of problems
 you might get. You might not have word alignments to all words on the target side.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="07:47">
+<turn speaker="Anders Søgaard" timestamp="07:47">
 
 You might have multiple alignments into the same word, et cetera, but in our case because we wanted
 to regularize as much as possible because we knew that these alignments would be very noisy. We use
@@ -194,10 +194,10 @@ probability we get tags for all words and it's not a problem that you have multi
 into the same word cause in the end we're going to be voting anyway. And that's sort of our approach
 to annotation projection going back to David Yarowsky's work in 2001.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="09:07">
+<turn speaker="Matt Gardner" timestamp="09:07">
 
 So, doesn't this assume that languages express the same concepts using the same linguistic
 realizations? Like something that we in English might use a noun to describe might show up as a verb
@@ -205,10 +205,10 @@ or an adjective or some other, like these categories might not even be totally w
 languages. So it's like you're assuming that there's a rough correspondence between the structure of
 each of these languages. Does this assumption hold and like very distant language pairs?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="09:36">
+<turn speaker="Anders Søgaard" timestamp="09:36">
 
 Well, no. And that's a really good point, right? I have a bachelor's degree in linguistics. I did
 typology. And I do remember all these discussions, whether Thai has adjectives, et cetera, assuming
@@ -219,25 +219,25 @@ inducted bias than not having one. I like to think of these models as giving us 
 that we're interested in. And I think, you know, even a noisy signal might be better than not having
 one.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="10:44">
+<turn speaker="Matt Gardner" timestamp="10:44">
 
 Can you or has anyone characterized exactly how bad this problem is?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="10:51">
+<turn speaker="Anders Søgaard" timestamp="10:51">
 
 I don't, I dunno. I would assume that there's not really enough consensus among linguistic
 typologists to actually estimate that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="11:04">
+<turn speaker="Matt Gardner" timestamp="11:04">
 
 Oh, I guess not even like the outstanding issues on like what categories are language in fuzzy
 cases. I mean like when I actually have distant languages where nouns just show up as verbs. And
@@ -246,26 +246,26 @@ different construction to say a particular phrase and my word alignments will al
 verb because of just how the idioms align. So like how bad does this actually make it as you get
 farther away. Do you have any sense of that?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="11:42">
+<turn speaker="Anders Søgaard" timestamp="11:42">
 
 I don't, but it's a good question. Yeah, maybe somebody would.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="11:47">
+<turn speaker="Waleed Ammar" timestamp="11:47">
 
 There has been some work on using the typological properties of a language when you're doing this
 multi-lingual learning in order to leverage the idea that closer languages will tend to have similar
 representations.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="12:03">
+<turn speaker="Anders Søgaard" timestamp="12:03">
 
 I was about to mention that. And I think a lot of that work, so there's Oscar Täckström's work and
 there is there is more recent work on using genealogy or typological databases in different ways for
@@ -274,20 +274,20 @@ language families. A lot of that work is about parsing and I think their perform
 not, or there's no perfect correlation here because there's another factor which is the annotation
 guidelines also become messing up the picture of it. But yeah, that's that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="12:51">
+<turn speaker="Matt Gardner" timestamp="12:51">
 
 Okay. I guess your approach of going from lots of languages at the same time hopefully mitigates
 this at least a little bit. And, well, unless you're biased for all of your source languages being
 Indo-European or something, but, at least you might have a little better hope in the approach that
 you're taking to annotation production.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="13:10">
+<turn speaker="Anders Søgaard" timestamp="13:10">
 
 Well, I mean, that's the vast majority of the source languages in our case are definitely Indo-
 European. And you know, the question is whether sampling in better ways. I mean, that's in part what
@@ -298,36 +298,36 @@ typologically similar in some respects and not in others, et cetera. So our appr
 simple and just like the more evidence we have for something, the better. And we've looked at very
 simple approaches so far it's just a waiting step.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="13:59">
+<turn speaker="Waleed Ammar" timestamp="13:59">
 
 Yeah. But I think there's this idea that Matt mentioned probably motivated why we in multilingual
 learning, we care much more about tasks like course parsers tagging and dependency parsing instead
 of CFG parsing or the representations that you will transfer are very specific.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="14:16">
+<turn speaker="Anders Søgaard" timestamp="14:16">
 
 True. So,one thing that I can mention is that if language is a very incommandtrable or chop up the
 space in very different ways word alignment algorithms will suffer and we've used the confidence of
 the word alignments to weigh our projections, and that typically leads to better performance. And I
 guess that's sort of data-driven way of modeling that problem.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="14:49">
+<turn speaker="Matt Gardner" timestamp="14:49">
 
 Yeah, that makes a lot of sense.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="14:54">
+<turn speaker="Anders Søgaard" timestamp="14:54">
 
 But yeah, so, basically that's sort of the first thing we did. And you know, just showing that, even
 if all you have is the Bible, you can do slightly better than just, you know, doing part of speech
@@ -338,10 +338,10 @@ TACL paper. And again, we wanted to, so in dependency parsing projection is a li
 So in part of speech tagging you can look at the individual word, you can count up votes and you can
 take the majority vote to be your predicted part of speech.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="15:51">
+<turn speaker="Anders Søgaard" timestamp="15:51">
 
 Annotation projection for dependency parsing goes back to I think 2005. Rebecca Hwa's work where she
 would project dependencies if a head word had an alignment and a dependent word had an alignment.
@@ -352,10 +352,10 @@ target set into a tree. And her set up was sort of a bilingual set up with only 
 And we kind of knew that at least with the Bible, we would need more source languages. But also we
 wanted to hedge our bet.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="16:40">
+<turn speaker="Anders Søgaard" timestamp="16:40">
 
 So we wanted to commit to hard decisions as little as possible. And so running a parser, even an
 English parser on the English Bible, you're not going to get terribly good performance. So sort of
@@ -364,10 +364,10 @@ scores edge scores instead of edges. So not necessarily, so not doing the coding
 not actually you know, trusting that we could find the one best tree, but instead just projecting
 everything from a weight matrix from the graph based dependency parser.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="17:28">
+<turn speaker="Anders Søgaard" timestamp="17:28">
 
 And doing that, it became very easy to have multiple source languages cause we didn't have to we
 didn't get these individual edges. We just basically projected everything in the weight matrix
@@ -378,10 +378,10 @@ to sort of pass on the uncertainties and not have to commit until we were actual
 side and figuring out then what is the minimum spanning tree in the weights that we got from the
 source languages.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="18:26">
+<turn speaker="Matt Gardner" timestamp="18:26">
 
 So I get how you take a sentence on the source side, you run a dependency parser? You get marginals
 essentially and you project those, you also run some alignment model like IBM model one and you
@@ -389,83 +389,83 @@ align from lots of languages, words from source to target and you project these 
 clear on still is how you use that on the target side. Do you learn a model or do you just run
 decoding from these projected scores?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="18:57">
+<turn speaker="Anders Søgaard" timestamp="18:57">
 
 We just apply a minimum spanning tree algorithm to the weights that we get.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="19:01">
+<turn speaker="Matt Gardner" timestamp="19:01">
 
 Why not learn a model?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="19:03">
+<turn speaker="Anders Søgaard" timestamp="19:03">
 
 So that's kind of the next paper.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="19:06">
+<turn speaker="Matt Gardner" timestamp="19:06">
 
 Okay.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="19:08">
+<turn speaker="Anders Søgaard" timestamp="19:08">
 
 The EASL paper, which was a followup to this. So it's an the TACL paper. We just have the simple
 decoding algorithm.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="19:15">
+<turn speaker="Matt Gardner" timestamp="19:15">
 
 So, real quick before we get to that other paper, what about for part of speech tagging? I don't, I
 don't think we answered this question for the part of speech tagging work either.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="19:22">
+<turn speaker="Anders Søgaard" timestamp="19:22">
 
 For part of speech tagging, we just use the model from the 2015 paper.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="19:29">
+<turn speaker="Matt Gardner" timestamp="19:29">
 
 Sorry, I don't remember what, so like, do you learn a model from the target alignments or do you
 just use the projections?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="19:38">
+<turn speaker="Anders Søgaard" timestamp="19:38">
 
 We just use the projections, we just do the voteings in the ACL paper.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="19:43">
+<turn speaker="Matt Gardner" timestamp="19:43">
 
 Okay.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="19:43">
+<turn speaker="Anders Søgaard" timestamp="19:43">
 
 And again, this is a very simple paper. The new thing was just to sort of be able to do this multi-
 source transfer as well as like projecting scores rather than edges. And then there was this
@@ -474,18 +474,18 @@ better than, than fancier word alignment models which seemed too sensitive to wh
 differences. At least that one sort of our gut feeling. And that's also what we used for part of
 speech tagging.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="20:19">
+<turn speaker="Waleed Ammar" timestamp="20:19">
 
 So how many source languages were you able to use for this experiment? I guess the question is like
 how many languages can you rely on for this kind of transfer?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="20:29">
+<turn speaker="Anders Søgaard" timestamp="20:29">
 
 So I can't remember the number 20 something, I think. So in the part of speech tagging paper we did
 these two rounds where we would learn. So we had a hundred languages in the part of speech tagging
@@ -496,19 +496,19 @@ sources for working in target languages. And so we ended up in some experiments 
 source languages. We didn't look in very sophisticated ways of doing bootstrapping and I'm sure that
 there's ways of getting better performance that way.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="21:15">
+<turn speaker="Waleed Ammar" timestamp="21:15">
 
 Yeah. When I read this paper, where you transfer multiple parse trees and add up the weights? It
 seemed like a very intuitive approach and it was kind of, it's the sort of thing you think, Oh, why
 didn't people do this for a long time?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="21:29">
+<turn speaker="Anders Søgaard" timestamp="21:29">
 
 Yeah, no, it definitely makes transfer a lot easier and you don't need heuristics weight, which are
 also, you know, sensitive to annotation guidelines and linguistic differences between languages. So
@@ -525,18 +525,18 @@ that to produce weight matrices for new sentences with a mean square error loss.
 replicating weight matrices for sentences instead of building up trees. And then we do decoding at
 test time only. And that turns out to be a lot better.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="23:23">
+<turn speaker="Matt Gardner" timestamp="23:23">
 
 Can you give some more detail on exactly how this LSTM works? I didn't quite follow from that
 description.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="23:30">
+<turn speaker="Anders Søgaard" timestamp="23:30">
 
 Right. So the parser can work on any kind of matrix. So we also have experiments where we do like
 standard supervised parsing on a binary matrix. And so we have a matrix, which is the number of
@@ -546,27 +546,27 @@ quadratic feature teacher. So we run over the rows and the columns of this matri
 combine them in the end to come up with predictions that are that are column wise. And then we
 compute a loss using the means to the gold standard score matrix.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="24:44">
+<turn speaker="Matt Gardner" timestamp="24:44">
 
 I see. Yeah. You look looking at your paper, this is where you have a tensor LSTM. Right. So it's
 actually more complicated than, than just a linear chain LSTM. Okay. Interesting. So cool.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="24:58">
+<turn speaker="Waleed Ammar" timestamp="24:58">
 
 It's still not clear to me. How do you do a like given a matrix for one of the source languages for
 one of the sentences in the Bible or maybe for all the sentences in the Bible. How do you go from
 there to then you matrix for a new, for a new sentence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="25:16">
+<turn speaker="Anders Søgaard" timestamp="25:16">
 
 So, for training on the Bible, so like say our target language is Slovenian. We just like in the
 TACL paper, we project all the the scores over the alignments. We get a weight matrix, which has to
@@ -575,45 +575,45 @@ get a new sentence, which is Slovenia Newswire and we just apply that model. And
 decoding, minimum spanning tree decoding for that. And we get a tree that we can evaluate against,
 say, a test weight from a treebank.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="25:54">
+<turn speaker="Waleed Ammar" timestamp="25:54">
 
 I see. And the baseline I suppose would be to just get the spanning tree, the best spanning tree
 from each sentence and the Bible and then train a model on it. How does that compare?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="26:08">
+<turn speaker="Anders Søgaard" timestamp="26:08">
 
 It's a lot better. So basically there is in the paper we have a delexicalized baseline, which on
 average over the languages that we're looking at has an attachment score of about 40. And our model
 is at about 50, (48.5%), whereas the sort of TACL style like lets decode on the Bible and train on
 that gets a about 46%. So like an average of 2.5 Improvement.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="26:45">
+<turn speaker="Waleed Ammar" timestamp="26:45">
 
 That's interesting.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="26:48">
+<turn speaker="Matt Gardner" timestamp="26:48">
 
 So one common criticism that I hear about any kind of like, this isn't quite unsupervised, but it's
 in that same thing where you don't have any supervised annotations in your target language. A
 criticism is how many examples do I have to label to get the same performance? Like, is that
 actually easier than doing all of this work?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="27:12">
+<turn speaker="Anders Søgaard" timestamp="27:12">
 
 Well I mean that's a really interesting discussion. So it really depends on the language, right? So
 in general, I think the standard reply to that question is, sure once you have a set of trained
@@ -627,10 +627,10 @@ are willing to put on or to have like a little eye tracker on their laptop and r
 it might be possible to collect, you know, hyperlinks from online texts, but it's really hard to
 find annotators. So that's sort of another problem
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="28:26">
+<turn speaker="Matt Gardner" timestamp="28:26">
 
 Right, but if the number is just like a hundred examples and then I get the same performance,
 that's, a different scenario than if I need a thousand, 10,000. Like maybe I could find a linguist,
@@ -640,10 +640,10 @@ country. And so I need to bootstrap some services. They would have the resources
 linguist who could do a hundred annotations. And so the question is, does that get you enough or do
 you need more? Or is this better than that?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="29:04">
+<turn speaker="Anders Søgaard" timestamp="29:04">
 
 I mean, it's you can use a hundred sentences in a lot of different ways, right? And so that's one
 dimension. The other dimension is that a lot of those experiments in the literature evaluate on, in
@@ -654,10 +654,10 @@ over fitting. So the more sensitive your model is going to be to any kind of shi
 use a hundred sentences in a lot of different ways and for a lot of languages, I wish I had a
 hundred sentences.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="29:59">
+<turn speaker="Anders Søgaard" timestamp="29:59">
 
 It's an open question, whether it's sometimes better to have say dictionaries or other knowledge
 like other resources like knowledge bases or linguistic descriptions or entries and these
@@ -670,27 +670,27 @@ do with not just the Bible but for any, in any real setup. I would, you know, us
 that's available, whether it's keystroke logs or a tiny amount of a labeled data, a dictionary a
 knowledge base or whatever signal I can get from a neighboring languages.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="31:12">
+<turn speaker="Matt Gardner" timestamp="31:12">
 
 Yeah, that's a really good point.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="31:14">
+<turn speaker="Waleed Ammar" timestamp="31:14">
 
 So, going back to that paper, that ESL paper where do the late decoding I'm curious to know if we
 can use this approach to also train languages, train for other, like maybe high resource languages
 where you have multiple parsers and you kind of do a, some sort of co-training or you have multiple
 trees predicted for the same sentences and use the same model to predict,to learn a better model.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="31:43">
+<turn speaker="Anders Søgaard" timestamp="31:43">
 
 Right. That's a, that's an interesting thought. So one of the things that we worked on earlier is
 learning from multiple annotations which is kind of related. So the idea here being that in NLP
@@ -703,10 +703,10 @@ disagreement onto our models is sometimes beneficial. So specifically you can ha
 sensitive learning where we say like, let's penalize her models for saying something that no
 linguist would ever say, but less for something were linguists are likely to disagree.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="33:03">
+<turn speaker="Anders Søgaard" timestamp="33:03">
 
 And so one thing that you can do with this particular parser is that you can have a lot of people
 annotate a lot of sentences and they don't even have to produce trees if they don't like trees,
@@ -716,20 +716,20 @@ in the end. And the same way. Yes, you could do that. So I haven't thought about
 parsing, but for semantic parsing where this model would also apply you could potentially learn from
 sort of the sum of different semantic formulas.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="33:45">
+<turn speaker="Waleed Ammar" timestamp="33:45">
 
 Yeah. Makes sense. All right. So there was one other paper that's kind of not exactly in the same
 line as low resource languages, but is kind of related to multi-lingual parsing or multi-lingual
 learning. That title was; A Strong Baseline for Learning Cross-Lingual Word Embeddings from Sentence
 Alignments. Would you like to give us an overview on this paper?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="34:09">
+<turn speaker="Anders Søgaard" timestamp="34:09">
 
 Yeah, no, it's definitely true that it's not you know, the three others are kind of a it's kinda
 like a Lord of the Rings. So there's like three volumes lining up here, and then there's a fourth
@@ -743,10 +743,10 @@ them to the Bible and using the Bible for inducing embeddings. And then sort of 
 is that there's this really simple algorithm that works really well and a lot better than a lot of
 things that work really well on europarl or if you have access to more data.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="35:43">
+<turn speaker="Anders Søgaard" timestamp="35:43">
 
 A particularly interesting thing about the paper is so we started with this sort of observation that
 if you want to learn, Cross-lingual embeddings, right. So, typically when you learn embeddings, you
@@ -758,10 +758,10 @@ assume in the paper, you can try to predict a word from its neighboring words in
 but you can also try to predict it from the other words in the other language. And that's sort of
 the core of a lot of these algorithms.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="36:44">
+<turn speaker="Anders Søgaard" timestamp="36:44">
 
 And those are two different features basis. But there's actually a third space, which is the
 sentence ID in this aligned corpus. And some of the algorithms that have been proposed have sort of
@@ -774,10 +774,10 @@ matrix. So you basically just record, where in the Bible, do you see a word? Now
 is cross-lingual that's defined for both languages. So by just having these vectors saying where in
 the Bible, do I see a word you get a cross-lingual space.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="37:50">
+<turn speaker="Anders Søgaard" timestamp="37:50">
 
 And it turns out that just doing SVD or something on those vectors or on that matrix gives you
 really good embeddings. Specifically what we do to get good performance is either do positive PMI
@@ -792,10 +792,10 @@ some, I've, before I did my linguistics typology, bachelor's degree, I did philo
 a big fan of Vichtenstein. And to me this is a slightly Vichtensteinian in the sense of you know,
 defining a word by the situations in which it's used.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="39:12">
+<turn speaker="Anders Søgaard" timestamp="39:12">
 
 And you know, since we did this paper, we've looked into other sort of extra linguistic way or extra
 linguistic contexts. So for example, you can also look at a word distribution over YouTube videos
@@ -806,18 +806,18 @@ embeddings. And I think that's, that opens up sort of an interesting can of worm
 can we find sort of extra linguistic reference points and use those for either inducing cross-
 lingual embeddings or at least improving or regularizing our cross-lingual embeddings.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="40:11">
+<turn speaker="Waleed Ammar" timestamp="40:11">
 
 So one detail here that not clear. How do you evaluate the different methods for embedding the
 words?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="40:18">
+<turn speaker="Anders Søgaard" timestamp="40:18">
 
 Right. So that's a really good question cause there, there's so many ways you can evaluate
 embeddings, right. So we wanted to, I guess ideally we would have like a ton of different downstream
@@ -828,10 +828,10 @@ used. And one interesting thing there is that that enabled us to compare to word
 algorithms. And it turns out that one really competitive baseline here is just IBM-1 again which is
 something that people in cross-lingual embedding space typically do not use as a baseline.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="41:08">
+<turn speaker="Anders Søgaard" timestamp="41:08">
 
 And it turned out that was a lot better than some of the word embedding algorithms. So yeah,
 specifically, we learn the cross-lingual embeddings and then we have two tasks. One is given human
@@ -840,19 +840,19 @@ another word can we predict what word that is? And so a relatively simple task a
 is if you have a word in the bilingual dictionary, can you predict what the translation of that word
 is according to the dictionary?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="41:43">
+<turn speaker="Waleed Ammar" timestamp="41:43">
 
 Right. Yeah. I mean definitely the dictionary induction seems like a very reasonable evaluation. I'm
 kind of surprised that you're using word alignments cause it's kind of, I don't know, it's, for me
 it's kind of an archaic task at this point.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="42:00">
+<turn speaker="Anders Søgaard" timestamp="42:00">
 
 Yeah, right. I guess it's in some ways simpler than bilingual dictionary induction, but at the same
 time it's also sort of a meaning in context, which to some extent is more interesting than bilingual
@@ -861,19 +861,19 @@ data, you potentially get some of the less frequent senses to which you might no
 dictionaries. You might also have metaphor and things like that that would not be representative in
 dictionaries.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="42:39">
+<turn speaker="Waleed Ammar" timestamp="42:39">
 
 Makes sense. So any last thoughts about this paper? I'm also curious to know if you have any
 thoughts about the current state of things in multi-lingual learning. What's coming next? What
 should people work on when you're doing multi-lingual NLP?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="42:57">
+<turn speaker="Anders Søgaard" timestamp="42:57">
 
 I think, so I'm I spent today in at the Technical University of Darmstadt having one-on-one meetings
 with a lot of students, a lot of which work on cross-lingual learning. Also a lot of which work on
@@ -887,10 +887,10 @@ have English dependency parsing data and English part of speech tagging data and
 speech tagging data, maybe, you know, those three resources will give you a lot of correlations that
 will give you a basis for learning high quality Quechua dependence parses.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="44:18">
+<turn speaker="Anders Søgaard" timestamp="44:18">
 
 So I think that that sort of combination and multitask learning and cross-lingual learning is really
 interesting. I also think that there is a sort of third dimension, which is semi-supervised learning
@@ -904,10 +904,10 @@ sort of in the intersection of what's available for all these languages, but for
 there's going to be more data thats much more interesting to look at it. And I think people will
 hopefully do a lot of that in the future.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="45:34">
+<turn speaker="Matt Gardner" timestamp="45:34">
 
 Here's, a random question that what you just said made me think of, so we've talked today about
 cross- lingual transfer of feature word representations and of part of speech tags and of dependency
@@ -915,45 +915,45 @@ parsing. Has anyone ever thought about doing a cross-lingual learning of languag
 that even make sense? Like, could you build a better language model for Quechua by leveraging a
 trillion tokens of English,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="46:04">
+<turn speaker="Anders Søgaard" timestamp="46:04">
 
 Like a character base language model.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="46:07">
+<turn speaker="Matt Gardner" timestamp="46:07">
 
 Or word level?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="46:09">
+<turn speaker="Anders Søgaard" timestamp="46:09">
 
 I feel like I've seen work on this. I better not say anything.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="46:16">
+<turn speaker="Matt Gardner" timestamp="46:16">
 
 Okay.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="46:17">
+<turn speaker="Anders Søgaard" timestamp="46:17">
 
 I think somebody worked on that.I worried that I'm going to say something really stupid?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="46:28">
+<turn speaker="Matt Gardner" timestamp="46:28">
 
 That's fine. I'm just thinking about this because I get Waleed and Matt Peters at AI2 have done some
 work on using language models to improve performance on other NLP tasks. And this talks about multi-
@@ -963,10 +963,10 @@ how do we do better at information extraction on a small domain where we don't h
 data using a language model. So could you do the same transfer for language modeling? Like, I don't
 know. It just made me think about this and I don't know,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="47:14">
+<turn speaker="Anders Søgaard" timestamp="47:14">
 
 One of the things you can get from multi-task learning implicitly is domain adaptation by having
 another task in another language or in another domain in your target domain. And you know, there's
@@ -976,26 +976,26 @@ better performance on unseen words, for example. So, you know, you don't have to
 dots to get cross-lingual language modeling as a potential bridge here, I guess. But I haven't
 worked on that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="47:56">
+<turn speaker="Matt Gardner" timestamp="47:56">
 
 Okay. Interesting.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="47:59">
+<turn speaker="Waleed Ammar" timestamp="47:59">
 
 Yeah, that's exciting. Okay. Thank you very much for joining us for the recording and yeah, we'll be
 looking forward to more papers in your in your research.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Anders Søgaard" timestamp="48:08">
+<turn speaker="Anders Søgaard" timestamp="48:08">
 
 Thank you so much. Thanks for having me.
 
-</Turn>
+</turn>

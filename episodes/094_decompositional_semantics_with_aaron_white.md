@@ -8,46 +8,46 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting work in natural
 language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:05">
+<turn speaker="Waleed Ammar" timestamp="00:05">
 
 This is Matt Gardner and Waleed Ammar, we are research scientists at the Allan Institute for
 artificial intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:12">
+<turn speaker="Matt Gardner" timestamp="00:12">
 
 All right. Today our guest is Aaron White, who is an assistant professor in the Department of
 Linguistics at the University of Rochester. Aaron, welcome. It's nice to talk to you.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Aaron White" timestamp="00:19">
+<turn speaker="Aaron White" timestamp="00:19">
 
 Yeah, thanks for having me.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:21">
+<turn speaker="Matt Gardner" timestamp="00:21">
 
 Today, we wanted to talk about something that you have been working on that you call the
 Decompositional Semantics Initiative. Do you want to give us a brief description of what this is?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Aaron White" timestamp="00:31">
+<turn speaker="Aaron White" timestamp="00:31">
 
 Yeah, sure. So, before I actually say anything about the project itself, I do want to point out that
 the decompositional semantics initiative, or we often just call it de-comp for short, is actually a
@@ -59,25 +59,25 @@ project. So, I think what I'll do is, I'll start out first with sort of the over
 comp and then I can say a little bit about how we kind of implement those general goals depending on
 your interests.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="01:12">
+<turn speaker="Matt Gardner" timestamp="01:12">
 
 Right. Sounds good.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Aaron White" timestamp="01:13">
+<turn speaker="Aaron White" timestamp="01:13">
 
 Okay. So the big idea behind De-comp is really to rethink the prototypical approach to semantic
 representation and annotation that the field has been hacking on for the last few decades.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Aaron White" timestamp="01:24">
+<turn speaker="Aaron White" timestamp="01:24">
 
 And so, there's basically two major parts. The first is that we're interested in capturing semantic
 properties of sentences or really more generally, phrases that are both really simple for one and
@@ -92,10 +92,10 @@ two components. The second major component is that we treat semantic representat
 multi label and continuous where the interpretation of the continuity is in terms of likelihood,
 right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Aaron White" timestamp="02:18">
+<turn speaker="Aaron White" timestamp="02:18">
 
 So it's sort of the likelihood that particular properties actually hold. And so rather than building
 some big multi-class system with a bunch of nominal categories, we have this sort of multi label
@@ -108,10 +108,10 @@ realize you need the instrument, you'd annotate a little more, you need stimulus
 Cetera, and then you'd sort of keep iterating until you are at a point where you're like, okay, I
 can write an annotation manual.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Aaron White" timestamp="02:58">
+<turn speaker="Aaron White" timestamp="02:58">
 
 You write your a hundred page annotation manual and you deploy your undergrads to annotate a bunch
 of data. The big problem that we saw with that approach is that it often works a lot better in
@@ -128,10 +128,10 @@ So that means that you can accumulate more and more properties and give yourself
 looks like from the standard multi-class ontology. Arbitrarily fine-grained classes. Right. And the
 properties remain interesting.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="04:01">
+<turn speaker="Matt Gardner" timestamp="04:01">
 
 That was a good overview. Can we make it a little bit more concrete with a specific example. Let's
 take semantic role labeling, which you've been talking about. Once we identify some predicate,
@@ -146,10 +146,10 @@ would be the subject role, or maybe agent, depending on exactly how you're defin
 and his vegetables would be the object or theme or maybe there are a few other options you could
 have. How would you treat this differently with this decompositional semantics?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Aaron White" timestamp="05:03">
+<turn speaker="Aaron White" timestamp="05:03">
 
 So this is basically the first big data set that we put together under this project. So for semantic
 roles, whatever ontology does, agent, patient, instrument, et Cetera. The idea was to kind of
@@ -163,10 +163,10 @@ idea actually was that symantec roles aren't really discrete categories. They're
 and some underlying space, but defined by a bunch of simple properties and specifically simple
 properties that humans tend to care about, like causation, intention change, et cetera.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Aaron White" timestamp="05:56">
+<turn speaker="Aaron White" timestamp="05:56">
 
 It gets little more complex than that, but I think that's enough for our purposes. What our group
 did, and this is actually work led by Deon Risinger and Rachel Rudinger, who you talked to last
@@ -174,27 +174,27 @@ year, what we did was to turn each of the properties into a bunch of simple ques
 about pairs of predicates and arguments. So in the same way that in prop banking you might have
 given a zero to, I don't remember who the subject of you're refusing to eat case was,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="06:20">
+<turn speaker="Matt Gardner" timestamp="06:20">
 
 Joey.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Aaron White" timestamp="06:20">
+<turn speaker="Aaron White" timestamp="06:20">
 
 Yeah, Joey's an A0 and and his peas or whatever a is an A1. In our case what we're going to do is
 say, okay well we have the same sorts of predicate arguments structures, right? But what we're
 trying to do is actually label articular relational properties. Things like the questions I
 mentioned earlier, let's take a non negative case and we can talk about the negative cases later.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Aaron White" timestamp="06:41">
+<turn speaker="Aaron White" timestamp="06:41">
 
 But "Joey did eat his peas" or something like that. You might ask, did the peas cause the eating,
 well not really. Joey probably caused the eating right. Did the peas undergo a change during the
@@ -204,32 +204,32 @@ they're annotating, these sorts of things get accessed, well maybe, maybe not or
 definitely. Or definitely not. Or, I don't know. Like it's not really applicable in this particular
 case
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="07:13">
+<turn speaker="Matt Gardner" timestamp="07:13">
 
 And, things like volition. I guess maybe that's related to cause. was this person like doing
 something on purpose.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Aaron White" timestamp="07:19">
+<turn speaker="Aaron White" timestamp="07:19">
 
 That's right.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="07:20">
+<turn speaker="Matt Gardner" timestamp="07:20">
 
 What other kinds of questions do you ask about these arguments?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Aaron White" timestamp="07:24">
+<turn speaker="Aaron White" timestamp="07:24">
 
 One big one is change. So different kinds of change. One thing that linguists have been interested
 in beyond changes of state, like some light went from red to blue or something like that. Um, you
@@ -244,10 +244,10 @@ are sentience. The properties themselves were drawn pretty directly from this th
 and that's actually true of a lot of the other protocols that we've worked on. So this generosity
 protocol, as another case of this, that TACCL paper will be coming out on pretty soon
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="08:27">
+<turn speaker="Matt Gardner" timestamp="08:27">
 
 Just to come back to this example again. "Joey refused to eat his vegetables" or "Joey ate his
 vegetables." This example is pretty straight forward for semantic role labeling and so maybe it's
@@ -257,10 +257,10 @@ semantic roles are a little bit more fuzzy because the way that Joey acted on th
 the rock acted on the vase are very different. It's in these boundary cases where splitting things
 apart into these questions really helps you a lot more than the traditional case.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Aaron White" timestamp="09:04">
+<turn speaker="Aaron White" timestamp="09:04">
 
 Right? The classic contrast. It's very clear that Joey is an agent and Joey broke the vase. But like
 the rock is not. And so like you could totally imagine a verb that is exactly like break but where
@@ -271,10 +271,10 @@ tell you you're going to be better in sort of subject positions and some of thes
 tell you you're going to be better in object position and say change of state is one of those ones
 that is going to tell you, you probably want to show up an object position.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="09:42">
+<turn speaker="Matt Gardner" timestamp="09:42">
 
 Just to recap for listeners, we've described this general notion of taking what was some complex
 formalism and breaking it down into simpler pieces and annotating individual attributes, of some
@@ -285,10 +285,10 @@ this decomposed version of the semantics instead of trying to put it all into on
 of formalism. But there was another motivation that you mentioned that we haven't hit on very much.
 I wondered if you could say more about the ease of annotation.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Aaron White" timestamp="10:23">
+<turn speaker="Aaron White" timestamp="10:23">
 
 Yeah, so the other big tenant is we want to have properties that allow us to scale these annotation
 protocols and scale them in ways where people actually can agree on the answers to the properties.
@@ -300,10 +300,10 @@ language the way that humans do or to do tasks that are relevant to language in 
 humans can. Then we should be sort of annotating for properties that humans are able to annotate for
 with high agreement.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="11:07">
+<turn speaker="Matt Gardner" timestamp="11:07">
 
 Just to nail down the point, this also lets you get say people on Mechanical Turk, right instead of
 trained linguists or whatever, it dramatically decreases the cost of annotation and the complexity.
@@ -313,10 +313,10 @@ Meaning Representation. These were by Luke Zettlemoyer and students that take a 
 approach for very similar reasons, but for larger sentence level structures where I think your
 decompositional semantics fits more lexical kinds of semantics. Is that fair?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Aaron White" timestamp="11:44">
+<turn speaker="Aaron White" timestamp="11:44">
 
 I actually think I'll push back a little on that. While there aren't some superficial similarities
 between the QAStar work and de-comp when you kind of dig in a little deeper, I think the goals of
@@ -329,10 +329,10 @@ up. So like if I asked about whether Joe caused something to happen in that runn
 vase", you'd probably say yes because you know what break means and how it gets together with its
 arguments.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Aaron White" timestamp="12:30">
+<turn speaker="Aaron White" timestamp="12:30">
 
 But I also think that sort of example shows why de-comp isn't really more about lexical knowledge
 than sentential knowledge, as you noted for the case of QAStar. So something I know about break that
@@ -344,10 +344,10 @@ about the aspects of the sentence as a whole to answer questions about particula
 sentence. I actually think that this is maybe even more convincing in the case of some of the
 generosity stuff that we've been interested in.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="13:13">
+<turn speaker="Matt Gardner" timestamp="13:13">
 
 I really liked your answer to that question and just to make it even more clear, the rock broke the
 vase and Joe broke the vase in QASRL. You would ask the question, "did Joe break something" and "did
@@ -359,29 +359,29 @@ general, or I guess you're breaking things down and QASRL like breaking things d
 is, They're both using simpler questions that average people on the street could answer about
 language to try to get different kinds of annotations.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Aaron White" timestamp="13:57">
+<turn speaker="Aaron White" timestamp="13:57">
 
 That's right. I do think the distinction between having a span based output and a scalar output is
 one of the important distinctions between them, so obviously the fact that we're kind of looking for
 deeper Symantec properties is one, but the other is that it is quite a different task if you are
 trying to build a model to do it. Yeah.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="14:16">
+<turn speaker="Matt Gardner" timestamp="14:16">
 
 Okay, great. I think we've got a good handle on decompositional semantics as it applies to semantic
 role labeling. You've mentioned a few other areas in which you've applied this general idea. Do you
 want to tell us about them?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Aaron White" timestamp="14:25">
+<turn speaker="Aaron White" timestamp="14:25">
 
 Yeah, sure. So, and I actually think this is relevant to that distinction so I can get back to
 trying to convince you that they are different. Even if you're, even if you're already convinced,
@@ -394,10 +394,10 @@ event of running. Like it's kind of, it's space you temporarily bounded, right? 
 this time in the past where this event started and stopped. Well, if I say "Bo runs every day,"
 that's some sort of generalization over events that Bo participates in.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Aaron White" timestamp="15:13">
+<turn speaker="Aaron White" timestamp="15:13">
 
 And if I say "greyhounds run fast," that's a generalization about a kind of thing, namely the kind
 of thing, greyhound, you can definitely talk about each of these examples in a multi-class way. This
@@ -414,24 +414,24 @@ sort of a concatenation of all the features, right? So of all the features of th
 all the features of all of its argument, I think it's a nicely fine grained way to look at
 generisity.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="16:21">
+<turn speaker="Matt Gardner" timestamp="16:21">
 
 So can I push on this a little bit to be sure I understand?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Aaron White" timestamp="16:25">
+<turn speaker="Aaron White" timestamp="16:25">
 
 Yep.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="16:25">
+<turn speaker="Matt Gardner" timestamp="16:25">
 
 In your examples, it sounded like the distinctions you were making are largely tense, that this is
 already grammaticalised in English and other languages. In terms of tense. I'm sure there are
@@ -439,10 +439,10 @@ examples that make this break and I don't know what they are. Like "someone ran"
 typically episodic and we have other tenses to describe periodic things in the past. So what's
 different about what you're describing from grammaticalised tense?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Aaron White" timestamp="16:52">
+<turn speaker="Aaron White" timestamp="16:52">
 
 Tense is a good indicator when you know about particular properties of the kind of event you're
 talking about. It's definitely not a perfect indicator cause I can actually just change the "Bo runs
@@ -450,19 +450,19 @@ every day" sentence to "Bo ran every day before he died." Right. And in that cas
 a very similar kind of generalization, it's just that I'm talking about a past generalization as
 opposed to a current generalization.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="17:16">
+<turn speaker="Matt Gardner" timestamp="17:16">
 
 Yeah. And that's a really good example again of something where the meaning of the particular word
 depends on the rest of the context. This isn't a word level thing. It's the meaning of this word in
 the context of the sentence in which it appears.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Aaron White" timestamp="17:28">
+<turn speaker="Aaron White" timestamp="17:28">
 
 Yeah, and actually one thing we do in this paper is a bunch of ablations with like, okay, well what
 if you wanted to engineer a bunch of NLP features including tense and plurality and all this stuff.
@@ -473,10 +473,10 @@ a lot and could not, so this was with Elmo, so this was actually stuff done befo
 systems came out. But yeah, you can actually do surprisingly well with just these hand engineered
 features.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="18:06">
+<turn speaker="Matt Gardner" timestamp="18:06">
 
 Yeah. I want to come back to that point in a minute, but I don't think we should dive too much
 deeper into generisity. But maybe give a brief overview of what other kinds of things that there's
@@ -485,10 +485,10 @@ described event in text actually happen or not? So like in our earlier example, 
 his vegetables." Did the eating happen, this kind of thing is factuality. Are there any other
 aspects of de-comp? Any other things you're decomposing?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Aaron White" timestamp="18:32">
+<turn speaker="Aaron White" timestamp="18:32">
 
 Yes, I will say actually factuality is the tip of an iceberg that we will be pushing out a new data
 set on soon. Uh, and so with a quite a few more features and I won't say any more than that. We've
@@ -501,10 +501,10 @@ surface seems like it's not particularly decompositional. It's kind of a standar
 annotation. Just deployed on a crowd sourcing platform where you have all the senses that are
 available on wordnet.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Aaron White" timestamp="19:27">
+<turn speaker="Aaron White" timestamp="19:27">
 
 You have a highlighted noun, you click a check box for the senses that actually apply and then what
 we go back and do is ask OK for all the senses that do actually apply. What kind of super sense does
@@ -513,10 +513,10 @@ coarse rained entity types and so that actually gives us a way of doing multi la
 That's what we currently have in terms of annotation. So we also have systems that actually go about
 predicting these annotations as well. But that's what we have in terms of the actual annotations.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="19:58">
+<turn speaker="Matt Gardner" timestamp="19:58">
 
 Interesting. Yeah, those are some really interesting projects. I'll be interested to see more when
 they, when it comes out. Thanks. I think we've got a good handle on what the decompositional
@@ -526,10 +526,10 @@ is this trying to answer questions about language for linguists? Is this trying 
 that you hope will be used downstream by other NLP models or tasks? What do you see as the best case
 outcome of this research?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Aaron White" timestamp="20:32">
+<turn speaker="Aaron White" timestamp="20:32">
 
 Yeah, so I think the answer to that is we would like to stuff to be useful to both the NLP and the
 computation linguistics slash theoretical linguistics community. So from the NLP perspective, I
@@ -539,18 +539,18 @@ everyday people can answer questions about the properties we annotate with high 
 want a system that can do what ordinary people do, it should be able to annotate those properties
 correctly as well. Right.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="21:05">
+<turn speaker="Matt Gardner" timestamp="21:05">
 
 And even to take out the language of the probe. But these are things that are in language. We want
 our language systems to be able to do this.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Aaron White" timestamp="21:11">
+<turn speaker="Aaron White" timestamp="21:11">
 
 Yep, that's right. The hope is that there are actually further uses. Probing uses aren't the only
 ones that are going to be useful for practitioners. So another way you can imagine these things
@@ -562,10 +562,10 @@ controlling various kinds of generation models by say enforcing that entailment 
 generated text. So I think beyond just the kind of probing aspect, I think there is a lot of, I hope
 there's a lot of stuff that people will find this useful for.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="21:55">
+<turn speaker="Matt Gardner" timestamp="21:55">
 
 Right? This is related to something you brought up earlier when I said I wanted to come back to, and
 maybe this is more of a speculative question, so feel free to speculate. How much do you think all
@@ -573,10 +573,10 @@ of this knowledge of semantics falls out to the language modeling objective? Do 
 feasible that we can just learn this from Roberta or the next big pre-trained model? We'll just know
 all of this already.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Aaron White" timestamp="22:15">
+<turn speaker="Aaron White" timestamp="22:15">
 
 So I won't speculate in particular on whether that will happen. So I will say actually that as a
 linguist, not even as someone interested in NLP, but as a linguist, I'd actually be very happy if
@@ -586,10 +586,10 @@ access to. This is actually something I personally have a standing interest in s
 linguistically oriented work from my dissertation onward has focused on what kinds of semantic
 information you can pick up distributional properties.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Aaron White" timestamp="22:46">
+<turn speaker="Aaron White" timestamp="22:46">
 
 So for instance, this is actually one of the driving forces behind the sister project of de-comp and
 MegaAttitude project, which is more focused on kind of type level, lexical and structural
@@ -602,10 +602,10 @@ helping capture these properties within an NLI setting. Beyond use as sort of a 
 think there are legitimate reasons you could want to predict or at least pre train on the, on those
 sorts of properties for the purposes of downstream tasks.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Aaron White" timestamp="23:37">
+<turn speaker="Aaron White" timestamp="23:37">
 
 I've sort of already mentioned them, but for example, if you wanted to make different decisions for
 generic, habitual and episodic statements in how used in knowledge base construction or completion
@@ -618,10 +618,10 @@ you can, but at least it would be, it's useful data to understand whether you ca
 of course this is like all assuming that the language model pre-training will be enough for all the
 properties of interest.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Aaron White" timestamp="24:21">
+<turn speaker="Aaron White" timestamp="24:21">
 
 I'm not actually totally convinced about it. So for instance, we spent a lot of time in the
 genericity project really trying to get Elmo to predict some of the actually event level of
@@ -636,10 +636,10 @@ structured format based on our predicate argument extraction tool, Pred Pat, and
 bundled with a toolkit that supports arbitrary sparkle queries on top of those graph structures. So
 that's something to look out for in September.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="25:27">
+<turn speaker="Matt Gardner" timestamp="25:27">
 
 Yeah, this is really great. I definitely agree with this. At some level because you're making this
 annotation cheap. Presumably like you could go crazy, someone like Google or Facebook or maybe AI2,
@@ -651,10 +651,10 @@ linguistics. If we can get very cheap, useful annotations like you're doing with
 decompositional semantics initiative, then we could presumably just have better models in the end
 that know more about language. Right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Aaron White" timestamp="26:09">
+<turn speaker="Aaron White" timestamp="26:09">
 
 Yeah, that would be great. Our emails are on the website, so let us know if you guys are interested.
 And really this project is meant to be a big tent. It kind of grew out of a lot of work that was
@@ -663,18 +663,18 @@ years at Rochester, it is meant to be something that other people can contribute
 present other phenomena within a de-comp aligned framework. So we're very open to it being a big
 tent.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="26:39">
+<turn speaker="Waleed Ammar" timestamp="26:39">
 
 I also wondering to what extent the attributes that you defined are tied to English? Have you looked
 at other languages and what attributes would look like?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Aaron White" timestamp="26:48">
+<turn speaker="Aaron White" timestamp="26:48">
 
 Actually one of the original impetuses for this project was that we could actually extend a lot of
 these attributes beyond English. De-comp in general was driven by a Lorelei program, but, one thing
@@ -682,56 +682,56 @@ that is difficult is obviously crowd sourcing non-english data. So it's not some
 done at a large scale. We have done internal pilots on different languages, but we haven't really
 gotten annotations at a large scale. So that's a place that we would love to expand into.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="27:16">
+<turn speaker="Matt Gardner" timestamp="27:16">
 
 Just a very quick note, the LORELEI project was a DARPA project that was focused on low resource,
 natural language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="27:23">
+<turn speaker="Waleed Ammar" timestamp="27:23">
 
 That funded my PhD, so I'm very grateful. Yeah. It'll be interesting to see, maybe there are some
 attributes with higher entropy in certain languages and lower entropy in others.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Aaron White" timestamp="27:35">
+<turn speaker="Aaron White" timestamp="27:35">
 
 Yes. Yeah, I think that would be really interesting.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="27:38">
+<turn speaker="Matt Gardner" timestamp="27:38">
 
 That was all of this stuff that I wanted to talk about. Was there anything that you wanted to cover
 that we missed or any closing thoughts?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Aaron White" timestamp="27:44">
+<turn speaker="Aaron White" timestamp="27:44">
 
 No, I, I think that about covers it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="27:46">
+<turn speaker="Matt Gardner" timestamp="27:46">
 
 Great. Thank you. It was nice talking to you. This was an interesting discussion.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Aaron White" timestamp="27:48">
+<turn speaker="Aaron White" timestamp="27:48">
 
 Yeah, it was nice talking to you too. Thanks.
 
-</Turn>
+</turn>

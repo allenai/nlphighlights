@@ -8,40 +8,40 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting work in natural
 language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is Matt Gardner and Waleed Ammar, we are research scientists at Allen Institute for Artificial
 Intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:11">
+<turn speaker="Matt Gardner" timestamp="00:11">
 
 Okay. Today our guest is Sebastian Riedel. He is a researcher at Facebook AI research and a
 professor at University College London. I guess I first met Sebastian at the first automatic
 knowledge base construction workshop, AKBC. I enjoyed seeing Sebastian talk there and it's really
 great to have you on the program. Welcome.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sebastian R." timestamp="00:31">
+<turn speaker="Sebastian R." timestamp="00:31">
 
 Yeah, pleased to be here. Thanks for inviting me.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:32">
+<turn speaker="Matt Gardner" timestamp="00:32">
 
 Today we're going to be talking about knowledge based construction as a topic. It's something that
 Sebastian has worked on a lot and I dabbled in at least a little bit. My thesis was related to this.
@@ -49,10 +49,10 @@ I've not dealt with it a lot in the more recent years, but it's an important top
 Sebastian, maybe you could start this by just giving us a brief description of what knowledge base
 construction is and why people care about this.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sebastian R." timestamp="00:57">
+<turn speaker="Sebastian R." timestamp="00:57">
 
 So yeah, knowledge base construction, automatic knowledge base construction. I guess it's generally
 about taking text, but also more recently other kinds of modalities, and sort of representing the
@@ -66,10 +66,10 @@ extracted or produced based on texts and then that's called automatic knowledge 
 could be manually annotated and then like for me it's an interesting field because it sort of
 combines two angles.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sebastian R." timestamp="01:57">
+<turn speaker="Sebastian R." timestamp="01:57">
 
 One is that I think it's one of the few what I call like naturally occurring semantic
 representations in the world where people have been building even before we thought about NLP or
@@ -82,10 +82,10 @@ language maybe using personal logic and so let's build a dataset for that. Where
 exist, these databases, they exist freebase back then Wikidata, they exist, the Google knowledge
 graph, they exist a lot of biomedical knowledge graphs, right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sebastian R." timestamp="02:54">
+<turn speaker="Sebastian R." timestamp="02:54">
 
 That have been built even without any sort of like NLP in mind just because they seem to be
 reasonable and useful data structures for downstream users. So I think that's kind of interesting
@@ -98,10 +98,10 @@ of liking that. On the other hand, I think it's really interesting AI problem in
 have to build agents right, that go around and observe the world and somehow assemble what they
 observe and represent it in some kind of memory in order to later on access that knowledge again.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sebastian R." timestamp="03:52">
+<turn speaker="Sebastian R." timestamp="03:52">
 
 And so I think you can look at KBC or AKBC also as one hypothesis in terms of how agents can do this
 right? In the traditional AKBC world you sort of build these relational graphs? And the idea is then
@@ -113,10 +113,10 @@ fundamental question of how agents can go around the world, observe things repre
 compactly and then make inferences on top of it or share it and all of that. So, so it has these two
 angles that I find really exciting.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="04:39">
+<turn speaker="Matt Gardner" timestamp="04:39">
 
 Yeah, that's a really good description. And I hadn't thought about this like naturally occurring
 collections of facts perspective before. That's nice. IMDb is another example that you didn't
@@ -127,17 +127,17 @@ down about something. Then you start to think about how might this be used in a 
 setting. You could try to get super low level and think about, well what about finding sentence
 structure, parsing sentence structure. Like "I ate spaghetti with a fork."
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sebastian R." timestamp="05:20">
+<turn speaker="Sebastian R." timestamp="05:20">
 
 Yeah.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="05:20">
+<turn speaker="Matt Gardner" timestamp="05:20">
 
 If I know facts about forks, maybe that will help me know that fork should attack to the eating and
 not to the spaghetti. Whereas "I ate a spaghetti with meatballs." If I know about these things that
@@ -147,10 +147,10 @@ something like Elmo or Bert or whatever, we'll just pick up by seeing a whole bu
 what's different about these collections of facts that people write down? Does, does this question
 make sense?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sebastian R." timestamp="05:53">
+<turn speaker="Sebastian R." timestamp="05:53">
 
 Yeah, I think it makes it a sense and to me it points to one of sort of maybe disappointments. I I
 have with sort of AKBC in a sense that, well I think the kind of methods that we've developed and
@@ -162,10 +162,10 @@ hope that they are sort of a lot of maybe industry usages of it. But in terms of
 uses of it that we directly see, I haven't seen much and I think generally that's a problem of
 recall.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sebastian R." timestamp="06:41">
+<turn speaker="Sebastian R." timestamp="06:41">
 
 Like we don't have enough coverage of all the facts you need in a way. And the reason for that is
 that even if you give an AKBC system, the same knowledge or the same texts you'd give say Elmo or
@@ -178,10 +178,10 @@ downstream enrichment of NLP tasks. Like I think, uh, we have never seen anythin
 Elmo and Bert in terms of downstream performance increases in the AKBC world and I doubt that we'll
 necessarily get there.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sebastian R." timestamp="07:44">
+<turn speaker="Sebastian R." timestamp="07:44">
 
 I think when you, when you think about AKBC from the perspective of building these graphs of facts,
 entities and relations, then to me like the main point of that is because there are users who want
@@ -193,10 +193,10 @@ case. I think you use it if you want interpretable representations of knowledge 
 the human or some kind of other agent. But the minute that's machine learning agent you trained with
 some other downstream data, I think they'd be better representations for you to feed into.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="08:33">
+<turn speaker="Matt Gardner" timestamp="08:33">
 
 Yeah, that's, yeah, that's a really good perspective. I would feel like to push it a little bit more
 on the distinction between spaghetti and meatballs and forks and say Barack Obama and Michelle
@@ -206,10 +206,10 @@ but your web page knows or Wikipedia might know. I don't, I haven't checked if y
 page or what, but what is it that's different about these things such that Elmo does know about
 spaghetti's and forks but doesn't know about the facts that you might see in a collection of facts?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sebastian R." timestamp="09:07">
+<turn speaker="Sebastian R." timestamp="09:07">
 
 That's a good question. I like to point out at this point that we actually have been testing Elmo
 and Bert a little for that kind of relational knowledge. And it turns out, at least in sort of
@@ -224,10 +224,10 @@ big difference between that and we actually also looked a bit in common-sense kn
 Bert. Yeah. Sort of well known that it does that but it's sort of on a similar level, at least with
 some amount of types of relations that we're looking at.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="10:13">
+<turn speaker="Matt Gardner" timestamp="10:13">
 
 This is really interesting, I actually haven't heard anyone talk about trying to explicitly check
 for facts and stuff. We have some people starting to look into this a little bit. When open-AI GPT-2
@@ -244,10 +244,10 @@ think the name it associated with the U S energy secretary was Tom Hicks, which 
 of what kinds of facts are related, but it's not remembering at all the specifics of those facts.
 Right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sebastian R." timestamp="11:20">
+<turn speaker="Sebastian R." timestamp="11:20">
 
 Yes. That's probably even similar to what we have observed in some sense. And I in the sense that
 there would be example where it gets a completely wrong, right. But there are actually quite a few
@@ -256,10 +256,10 @@ extraction systems for these kinds of relations, they actually miss a lot of thi
 maybe not saying like Bert or GPT-2 gets it perfectly right, but it's not that far off. Right. And
 so relatively speaking, you know, that's still quite impressive.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="11:53">
+<turn speaker="Matt Gardner" timestamp="11:53">
 
 Yeah. Yeah, that definitely, and I, my intuition here, maybe you have other evidence, but my
 intuition is that the things that it can remember are things that had seen a lot because they're
@@ -272,10 +272,10 @@ weight's kinds of approaches work for things that I see a lot and that are menti
 knowledge based construction is particularly useful for things that I don't see a whole lot and I
 just want to remember. Does that make sense?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sebastian R." timestamp="12:41">
+<turn speaker="Sebastian R." timestamp="12:41">
 
 Yeah, I think that makes sense. I think that is probably true, its good thing to further test. I
 think you right that a relation extraction system. Like if the particular pattern in the text has
@@ -285,10 +285,10 @@ in the relation extraction system. So the output sometimes is relatively similar
 definitely a tale of things that the Ari system would get that like Bert or GPT-2 wouldn't get, due
 to what you said. I think that's, that's fairly true.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="13:17">
+<turn speaker="Matt Gardner" timestamp="13:17">
 
 Okay. Yeah. Great. This was interesting. Not exactly what I was intending on starting this
 discussion, but it was really interesting to talk about. Um, so I think we've gotten a good handle
@@ -297,10 +297,10 @@ on to talking about knowledge base construction. How did this come up as a field
 feels to me like it grew out of some other related methods. You have a lot more perspective on this
 than I do. How do people build these knowledge bases?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sebastian R." timestamp="13:43">
+<turn speaker="Sebastian R." timestamp="13:43">
 
 I guess it's usually some sort of pipeline that involves a couple of steps. First step is to figure
 out what are the entities and text using named entity recognition. Then you link these entities to
@@ -312,27 +312,27 @@ Obama refers to the president, Barack Obama most likely in Hawaii first place. A
 the phrase was born in and you have some model that you know knows that that means the birthplace of
 that entity is the other entity.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sebastian R." timestamp="14:40">
+<turn speaker="Sebastian R." timestamp="14:40">
 
 I think that in a nutshell is a, at least the traditional way of extracting or building knowledge
 bases. There are different variants of that. In terms of how you define or work with the schema that
 your knowledge base should have. Is it an open schema or is it like closed schema? Different ways of
 dealing with different amounts of supervision.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="15:01">
+<turn speaker="Matt Gardner" timestamp="15:01">
 
 Can I jump in here? Can you give an example of what you mean by open schema versus closed schema?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sebastian R." timestamp="15:05">
+<turn speaker="Sebastian R." timestamp="15:05">
 
 The closed schema is I have maybe an existing knowledge base and I decide I want a model four types
 of relations ahead of time. One being maybe born in, birth date, profession or employer and spouse,
@@ -340,10 +340,10 @@ let's say. And so you have these four relations and they are your schema and eve
 going to do with text with fit into that schema, any information in the text, that doesn't fit into
 that schema would just be discarded.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sebastian R." timestamp="15:36">
+<turn speaker="Sebastian R." timestamp="15:36">
 
 And then later on you can make inferences using that knowledge base that you construct, but only in
 terms of these four relations. So that's what I would call a closed schema information extraction.
@@ -357,25 +357,25 @@ like an actual predicates. These are the two options at the far ends of the spec
 then they are hybrids that combine the two of them. But I think like most importantly you have, I
 guess these two ends of the scale.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="16:38">
+<turn speaker="Waleed Ammar" timestamp="16:38">
 
 Yeah. Another interesting distinction between open and close I think has to do with what kind of
 entities you would like to represent in the knowledge base.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sebastian R." timestamp="16:45">
+<turn speaker="Sebastian R." timestamp="16:45">
 
 Yeah, that's a good point.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="16:46">
+<turn speaker="Waleed Ammar" timestamp="16:46">
 
 Do you want to have only needed entities? Which types of entities would you be interested in? Um,
 and I feel like this has a lot of applications on what relations will exist between them and also
@@ -385,10 +385,10 @@ things like Wikipedia tends to, I guess also Wikipedia has, has entities that ar
 that knowledge based construction community focused much more so on the named entity part. You have
 any thoughts on why that was the case?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sebastian R." timestamp="17:21">
+<turn speaker="Sebastian R." timestamp="17:21">
 
 Yeah, I don't know why that is the case that that's definitely true. I am not 100% sure why. Maybe
 maybe it's worthwhile to look a bit back into the history of it. I feel like a lot of KBC and
@@ -400,10 +400,10 @@ that would just maybe that has just stuck with the community. There must be a be
 actually not. Not a hundred percent sure. It's a good question. Why is that? It seems easier maybe
 and maybe that's one reason, but I also don't really know.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="18:17">
+<turn speaker="Matt Gardner" timestamp="18:17">
 
 Yeah, that's, that's my intuition that this is because it's a whole lot easier to find named
 entities and to know. It's a very well scoped, well defined problem to see a sentence like Barack
@@ -418,10 +418,10 @@ get these problems like his first three speeches. Maybe you would link this phra
 page for speech, but that's not actually what this is referring to. Like it's complex and so it's a
 lot easier and well scoped to just talk about the named entities.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sebastian R." timestamp="19:17">
+<turn speaker="Sebastian R." timestamp="19:17">
 
 Yeah, I think you're right it, and then I think what you said in the end makes a lot of sense as in
 I think the core problem with that isn't maybe so much the recognition of these phrases. I mean
@@ -430,10 +430,10 @@ the linking of those are the co-reference of those that it's just super hard. Li
 speeches, like is there a speech event that is specific that we'd want to link to or the general
 notion of speeches that seems really hard. Yeah, you're right. I think that's really the hard part.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="19:45">
+<turn speaker="Waleed Ammar" timestamp="19:45">
 
 I think also from a utility perspective, since many of these knowledge bases were tracked or
 constructed because we think people want to use them. I feel like most of the useful knowledge bases
@@ -441,10 +441,10 @@ are about name entities. Like if you think about IMDb most of the bioinformatics
 are, they're all centered. People care much more about curating the information for the named
 entities than they care about curating for just regular entities.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sebastian R." timestamp="20:10">
+<turn speaker="Sebastian R." timestamp="20:10">
 
 Yeah, that's true. And it might also be that they do care about that because also that's easier to
 annotate and produce. Then actual sort of other kinds of concepts or events they would have to link.
@@ -453,10 +453,10 @@ coherent knowledge base of events and concepts in a way that, or compared to how
 entity knowledge base. But yeah, I agree. I think knowledge bases that exist in the wild, are
 usually haw entities are searched as well.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="20:44">
+<turn speaker="Matt Gardner" timestamp="20:44">
 
 Yeah. Great. So going back to like how we construct these things, the general approach as we've been
 talking about you first detect what things you want to call entities and then you, you train some
@@ -466,10 +466,10 @@ a big part of on distance supervision. And I wonder if you could give an overvie
 this means. You mentioned it briefly as you were going through, but can you describe what this is
 for the listeners and what happened? Like the history of this, of this kind of approach?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sebastian R." timestamp="21:18">
+<turn speaker="Sebastian R." timestamp="21:18">
 
 Yes, I'm happy to. So generally again distance supervision is that, when you extract these relations
 in the traditional supervised setting, somebody goes over a lot of sentences and says, yes, that's a
@@ -482,10 +482,10 @@ annotate the sentences. And the simplest way of doing that is to say if I have a
 contains Barack Obama and Hawaii as a the birthplace of Barack Obama and I have a sentence that
 mentioned Barack Obama and Hawaii.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sebastian R." timestamp="22:20">
+<turn speaker="Sebastian R." timestamp="22:20">
 
 Then I'm just going to pretend that that sentence is expressing the relation birth place because I
 just assumed that when I mentioned Barack Obama and Hawaii, it must be because they are birth place
@@ -500,10 +500,10 @@ case of relation extraction. You can generalize that notion to name entity recog
 of other tasks. You have some sort of free signal of data that you convert and then turn it into a
 direct signal and do that in one way or another.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="23:31">
+<turn speaker="Matt Gardner" timestamp="23:31">
 
 Great. Um, there's, there's a related issue here of how much do I trust different sources of
 information. I don't remember how much this actually got addressed in the literature. I know a few
@@ -517,10 +517,10 @@ the training side because Barack Obama and Kenya won't have a relationship in my
 it's in my actual prediction side when I'm constructing the knowledge base and I see conflicting
 evidence, how do I deal with this? Are you, are you familiar with work that does this?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sebastian R." timestamp="24:26">
+<turn speaker="Sebastian R." timestamp="24:26">
 
 Um, actually, no. I think it must exist. I haven't really followed up on that, but I think it is
 something that always comes up actually every time I give presentations, that's the first thing that
@@ -533,10 +533,10 @@ particular source that helps you to down-weigh that fact or off-weigh that fact.
 aware of work in that space but that doesn't mean at all that it isn't there. I mean it should be
 there and maybe you know more about that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="25:18">
+<turn speaker="Matt Gardner" timestamp="25:18">
 
 All I remember is a few papers. I think there were, there was a small team at Google on the, related
 to the knowledge vault team that was trying to build a knowledge base that was thinking about this
@@ -547,10 +547,10 @@ reason that knowledge grafts haven't seen as much practical application like con
 basis hasn't seen as much practical application because it's just so hard to control for the noise
 that you get in your input.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sebastian R." timestamp="25:55">
+<turn speaker="Sebastian R." timestamp="25:55">
 
 Yeah. I mean actually so you mentioned this and I'm interested in your view on this. So you
 mentioned knowledge grafts haven't seen so much practical use, which I agree with. In the case of
@@ -563,10 +563,10 @@ these, but I'm curious about NELL for example, cause you have been a part of tha
 the sort of downstream user of that, like where are the downstream users of that, then and how did
 they look like?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="26:49">
+<turn speaker="Matt Gardner" timestamp="26:49">
 
 Um, NELL, the reason I said about what I did is I can't really think of any knowledge-based
 construction projects that had practical applications. And actually I'm looking at Waleed and
@@ -581,10 +581,10 @@ knowledge graphs don't have any applications, that the automatic construction of
 has been too noisy to actually be useful for people who are, who are building these things. Uh,
 except for um, semantic scholars. So Waleed do you want to tell us about that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="27:47">
+<turn speaker="Waleed Ammar" timestamp="27:47">
 
 Well, I think actually I would utter what you said. Uh, I'm not aware of any practical downstream
 use for automatically constructed knowledge bases including semantic scholar and semantic scholar.
@@ -596,10 +596,10 @@ because we only want to expose them to the user after the pass a certain thresho
 think that's kind of like the big question for automatic construction knowledge base community is
 can we put it in a state where it's actually usable for downstream users.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="28:38">
+<turn speaker="Waleed Ammar" timestamp="28:38">
 
 I think part of the problem is going to be the general accuracy and then part of it we'll have to do
 with how can we differentiate between things that are factual or things like where the author is
@@ -616,10 +616,10 @@ constructed but mostly no, we want to consolidate them somehow and there are man
 the data mining community that tried to do this. But yeah, I think this is also very, very
 important.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="29:58">
+<turn speaker="Matt Gardner" timestamp="29:58">
 
 Yeah. I'll jump in just to say here quickly that a lot of Sebastian talked about open information
 extraction earlier in this conversation and a lot of the more recent open information extraction
@@ -632,10 +632,10 @@ arguments that are expressed in text, can you detect whether the speaker was act
 truth of this statement or not? And that's definitely a preconditioned to like accurate extraction
 here. Right. So yeah, this is, this is a hard problem with a lot of moving parts to it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sebastian R." timestamp="30:51">
+<turn speaker="Sebastian R." timestamp="30:51">
 
 Yes. This is a really challenging, I'm also not a hundred percent sure whether the way to get this
 to build is very precise graphs that capture all of these conditions precisely and explicitly in a
@@ -646,29 +646,29 @@ detailed work on labeling this correctly on a couple of instances and then getti
 precision or a bit of recall out of our supervised methods. So like a guess the jury's still out on
 on that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="31:39">
+<turn speaker="Waleed Ammar" timestamp="31:39">
 
 Yeah. I think the challenge here has to do with the scale. Like you mentioned before, in order to
 specify this information in a knowledge graph, you have to make the schema rich enough to represent
 it and the more complex your schema as you know, you need more training data for it and it becomes
 hard to manage.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sebastian R." timestamp="31:55">
+<turn speaker="Sebastian R." timestamp="31:55">
 
 Yes, And it becomes harder and harder to annotate even right. Like a, the more complex this kind of
 schema and conditioning is, the harder it is to explain that to people in the right way and the more
 noisy your annotation gets. So I think, uh, sometimes feels like an uphill battle.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="32:11">
+<turn speaker="Waleed Ammar" timestamp="32:11">
 
 Yeah. But one of the things that I'm actually very excited about in Semantic Scholar has to do with
 extracting. So as you know, like people, researchers introduced new terms all the time in their
@@ -681,10 +681,10 @@ construct, um, like it's a much more targeted kind of extraction, for creating t
 or at least the entities in the knowledge bases and then the relations that relationships can come
 at a later time.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sebastian R." timestamp="33:03">
+<turn speaker="Sebastian R." timestamp="33:03">
 
 That sounds really good. Yeah. Maybe I just to sort of, not end but get to a more positive note
 because it sounded a bit like AKBC is just not working at all. I disagree with that, right? Like, I
@@ -695,10 +695,10 @@ there must be a lot of like use for that because we just see much inbound intere
 see much more inbound interest from industry then from researchers themselves, like researchers
 right now they're all on Elmo and Bert, right? Or all the other sort of exciting things out there.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sebastian R." timestamp="33:47">
+<turn speaker="Sebastian R." timestamp="33:47">
 
 But when it comes to talking to companies in their needs, the first thing they talk to me about is,
 often just, Oh, it will be great to have these knowledge bases automatically extracted from it. I
@@ -713,10 +713,10 @@ that we made there, you find them being used in big biomedical companies that ex
 protein protein interaction networks from text. Right. So I feel very positive about that, but I
 don't feel very positive about I guess academic reuse of knowledge bases.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="34:54">
+<turn speaker="Matt Gardner" timestamp="34:54">
 
 Yeah. Great. Thank you for clarifying that. I totally agree with you. Yes. That made me think I
 should rephrase what I said previously. It's more that we haven't figured out how to make knowledge
@@ -730,10 +730,10 @@ That's totally, it's just we don't see as much downstream uses of it in NLP beca
 know how to consume a knowledge base in language understanding models. And that's, that's an active
 area of research.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="35:47">
+<turn speaker="Waleed Ammar" timestamp="35:47">
 
 Yeah. I'm wondering also if we need to spend more time thinking about how can we help the curators
 of knowledge bases. So we know that some knowledge bases that are actively being maintained receive
@@ -744,57 +744,57 @@ reason why we are doing it semantic scholar because there are actually users who
 feedback on whether the things that we're extracting are correct or not. Right. I, yeah, I hope
 there are other efforts somewhere that are also copying this.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sebastian R." timestamp="36:26">
+<turn speaker="Sebastian R." timestamp="36:26">
 
 Oh yeah, that sounds great. I'm looking forward to your talk at the AKBC, a conference on, on that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="36:33">
+<turn speaker="Matt Gardner" timestamp="36:33">
 
 Yeah. I guess there were a bunch of things that I had listed that we could have talked about, but we
 are running out of time. Is there anything that we missed that you particularly wanted to talk about
 or want to highlight before we finish?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sebastian R." timestamp="36:45">
+<turn speaker="Sebastian R." timestamp="36:45">
 
 I'm not from the top of my head right now. I think we covered quite a bit of ground.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="36:49">
+<turn speaker="Matt Gardner" timestamp="36:49">
 
 One thing, we can conclude with this point, you mentioned before that there's this knowledge
 construction conference. Now that I've mentioned at the beginning that I met you at the first
 automatic knowledge base construction workshop and now it's a conference.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sebastian R." timestamp="37:02">
+<turn speaker="Sebastian R." timestamp="37:02">
 
 Yeah.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="37:03">
+<turn speaker="Matt Gardner" timestamp="37:03">
 
 Do you have anything to say about that whole process of like is this, is this the coming of age of
 the fields? Like what, what is this?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sebastian R." timestamp="37:09">
+<turn speaker="Sebastian R." timestamp="37:09">
 
 Yeah, I think that it's part of that there is generally a steady and increasing interest in this
 which we have seen over the past, but maybe even more so. I mean you mentioned sort of the KBC
@@ -808,20 +808,20 @@ to become that place and get people from these different areas together and to g
 where they can publish their work and discuss it with like minded people. So that's, I think, one of
 the main motivations behind it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="38:10">
+<turn speaker="Matt Gardner" timestamp="38:10">
 
 Yeah. Sounds great to me. Thanks for coming on. This has been a really interesting conversation.
 It's been good to talk to you.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Sebastian R." timestamp="38:15">
+<turn speaker="Sebastian R." timestamp="38:15">
 
 Yeah, yeah. Really enjoyable. Thanks so much for, for running this. I think that's much appreciated.
 Generally.
 
-</Turn>
+</turn>

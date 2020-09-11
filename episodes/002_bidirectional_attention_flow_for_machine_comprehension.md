@@ -8,23 +8,23 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting recent work in
 natural language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is Matt Gardner and Waleed Ammar. We are research scientists at the Allen Institute for
 Artificial Intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:12">
+<turn speaker="Matt Gardner" timestamp="00:12">
 
 Okay, today's paper is Bidirectional Attention Flow for Machine Comprehension by Minjoon Seo,
 Aniruddha Kembhavi, Ali Farhadi, Hannaneh Hajishirzi. These are folks at the University of
@@ -35,10 +35,10 @@ question about that passage where the answer is constraints to be a span of text
 And so a model needs to take these two inputs and predict as output a span. This, this paper was
 evaluated on this dataset called the Stanford question, answering dataset or SQuAD.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="01:05">
+<turn speaker="Matt Gardner" timestamp="01:05">
 
 And when it was submitted, this paper was originally submitted to archive in November. This was
 state-of-the-art, it got the best performance on this dataset. An ensemble of these models is still
@@ -46,17 +46,17 @@ pretty close to the top performance on the SQuAD leaderboard though single model
 gone down quite a bit. Because this is a really busy area there have been a lot of submissions
 recently.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="01:31">
+<turn speaker="Waleed Ammar" timestamp="01:31">
 
 So what is the high level overview of the paper?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="01:36">
+<turn speaker="Matt Gardner" timestamp="01:36">
 
 So at its core, what any technique that wants to answer SQuAD questions needs to do is match words
 in the question to words in the passage and then find some kind of type information. Like if you see
@@ -72,10 +72,10 @@ and the question to get them into the same relative space. And then you need to 
 matching. The tricky thing with this matching is that you'll have a different number of words in the
 passage and in the question.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="02:53">
+<turn speaker="Matt Gardner" timestamp="02:53">
 
 And so previous techniques will often take the question and smash it into a single vector instead of
 one vector per word in the question and then compute some attention given that question vector over
@@ -86,10 +86,10 @@ directional attention flow. Interestingly, I think this is pretty similar to a m
 decomposable attention on the Stanford Natural Language Inference dataset by Ankur Parikh and some
 others at Google New York where they similarly compute a matrix of attentions and then use that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="03:38">
+<turn speaker="Matt Gardner" timestamp="03:38">
 
 So I guess that task is a little bit different where you have a passage, or premise and hypothesis
 and you want to know does the premise entail the hypothesis? And so they decompose this using a
@@ -102,17 +102,17 @@ the passage, which then goes through another few deep biLSTMs and then you predi
 beginning, pass that through another biLSTM and then predict the span text you get. In the end,
 which span of text answers the question that was asked.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="04:38">
+<turn speaker="Waleed Ammar" timestamp="04:38">
 
 So in what way are the two models different?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="04:44">
+<turn speaker="Matt Gardner" timestamp="04:44">
 
 You mean the decomposable attention and bidirectional attention to flow. So decomposable attention
 was trying to do a natural language inference. And so in the end, given these two strings of texts,
@@ -123,27 +123,27 @@ is an index into the passage. And so it's not a simple classification decision. 
 output of this similarity matrix computation to go back and do something that's the same size of the
 passage so that you can predict which index to the passage has the answer.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="05:32">
+<turn speaker="Waleed Ammar" timestamp="05:32">
 
 That makes sense. So the paper also talks about the difference between a dynamic attention and the
 attention method that is proposed in the paper. Would you like to explain the difference between
 dynamic attention and this approach?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="05:47">
+<turn speaker="Matt Gardner" timestamp="05:47">
 
 I think you're actually a little more familiar with that because of your experience with machine
 translation.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="05:51">
+<turn speaker="Waleed Ammar" timestamp="05:51">
 
 Of course. So in machine translation, your job is to translate from a source sentence, a sequence of
 words in a source language to a sequence of words in a target language. And there as you're
@@ -155,24 +155,24 @@ scrabbling around the sentence all the time. So in that sense having some kind o
 attention which in this paper refers to it as dynamic attention makes sense as opposed in question
 answering this is not necessarily a useful thing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="06:45">
+<turn speaker="Matt Gardner" timestamp="06:45">
 
 Does dynamic attention also let you keep track of what things you've already translated?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="06:50">
+<turn speaker="Waleed Ammar" timestamp="06:50">
 
 Some versions of it allows you to do this? Yes.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="06:54">
+<turn speaker="Matt Gardner" timestamp="06:54">
 
 Okay, interesting. Another interesting thing to notice is that if you look at the SQuAD leader board
 results, all of the top results have this ensemble thing at the end. And so BiDaf, the bi-
@@ -182,17 +182,17 @@ ensemble model for almost all of these is about four points F1 so BiDaf on its o
 score. Whereas an ensemble, of BiDaf models gets 81 F1 score. It's just interesting that you always
 have to do this to get top performance on these tasks.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="07:31">
+<turn speaker="Waleed Ammar" timestamp="07:31">
 
 Right, so how does the BiDaf paper do the ensemble?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="07:35">
+<turn speaker="Matt Gardner" timestamp="07:35">
 
 So BiDaf is a description of a model architecture and you can train that model architecture given
 the SQuAD training set and evaluate it on the SQuAD test set. And this is a single model, but that
@@ -204,32 +204,32 @@ like P of X, Y for each span-start, span-ends possibility in the passage. And th
 of X, Ys over all 12 models and pick the ARG max the span that has the highest total probability
 assigned by all of the models together.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="08:33">
+<turn speaker="Waleed Ammar" timestamp="08:33">
 
 By any of the moments. Is that right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="08:37">
+<turn speaker="Matt Gardner" timestamp="08:37">
 
 It's not the, it's not the, the span that gets the highest individual probability score. It's the
 highest sum of probability scores across all 12 models.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="08:48">
+<turn speaker="Waleed Ammar" timestamp="08:48">
 
 I see. Okay.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="08:49">
+<turn speaker="Matt Gardner" timestamp="08:49">
 
 So the last thing I thought we could talk about with this paper is that Min has put up an
 interactive demo on the web, that you can actually play around with this model and how it does, I
@@ -239,10 +239,10 @@ answer a question about the paragraph and see how it does. And you can see that 
 on certain kinds of easy questions, but you can also really easily trick the model in really
 interesting ways.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="09:24">
+<turn speaker="Matt Gardner" timestamp="09:24">
 
 So here's an example that I like. This is found by Peter Clark. If you give the model the paragraph,
 "A dog's main job is to bark. A cat carries out the task of meowing." And then you give it the
@@ -255,10 +255,10 @@ there is with the first. And so it says, Oh, the answer is in the second sentenc
 out the entity, the phrase that best matches the question words like what task? And it says
 "meowing," even though the answer is totally wrong.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="10:26">
+<turn speaker="Matt Gardner" timestamp="10:26">
 
 Another interesting failure case of these models is in a demo paragraph. This one actually comes
 from SQuAD. It's a paragraph about the Superbowl 50. The last sentence is; so this is a paragraph
@@ -273,10 +273,10 @@ passage match almost exactly it's able to pull out the part of that sentence tha
 question except it misses that there's also additional information earlier in the paragraph that it
 could have used to give a better answer to the question.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="11:26">
+<turn speaker="Matt Gardner" timestamp="11:26">
 
 And also you can slightly tweak this question to make the model fail again in other interesting
 ways. So if you give bad grammar to the question and say what team have made 10 appearances in the
@@ -287,27 +287,27 @@ not clear what should do with a bad grammar in the question anyway. So that's in
 you change eight appearances to 10 appearances. So the question is now what teams have made 10
 appearances in the Superbowl? It gives you the same answer.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="12:10">
+<turn speaker="Matt Gardner" timestamp="12:10">
 
 It's not surprising that it gives you the same answer. This model doesn't have any capacity to
 reason about numbers, but it shows how easily these models can be misled by giving it questions that
 are similar to, but importantly different from word sequences that appear in the passage.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="12:29">
+<turn speaker="Waleed Ammar" timestamp="12:29">
 
 Right. So, Matt, you were working on this model and other models and so you probably have insights
 on how to address some of the problems that you just mentioned.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="12:43">
+<turn speaker="Matt Gardner" timestamp="12:43">
 
 Ooh. Personally I think, well if you want to get this eight versus 10 thing, right, you have to have
 some kind of formal representation of the meaning of this passage. Like you're not going to get a
@@ -317,38 +317,38 @@ happen. I think you need some kind of merging of semantic parsing in, in some fo
 of neural matching of question words to passage texts. Like, you, need something more formal or
 symbolic to do these more complex kinds of things. I don't think there's a way around that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="13:21">
+<turn speaker="Waleed Ammar" timestamp="13:21">
 
 That makes a lot of sense. Do you think we should just switch gears to doing symbol reasoning or do
 you think there is a way to combine the hybrid modeling approach where you can only do symbolic
 reasoning when you need to?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="13:35">
+<turn speaker="Matt Gardner" timestamp="13:35">
 
 I think that's an excellent question and it's definitely an open one. There's a lot of research
 ongoing in this area and I don't think this is solved at all. It's something that we're actively
 working on here. And lots of other people are working on it too. So we'll see how things play out. I
 guess
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="13:50">
+<turn speaker="Waleed Ammar" timestamp="13:50">
 
 So good.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="13:51">
+<turn speaker="Matt Gardner" timestamp="13:51">
 
 Okay. I think that's it for this week. Next time, or sorry for, that's it for today. Next time we
 will talk about a paper called: Making Neural QA as Simple as Possible but not Simpler.
 
-</Turn>
+</turn>

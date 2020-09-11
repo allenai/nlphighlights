@@ -8,40 +8,40 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Welcome to the NLP highlights podcast where we talk about interesting work in natural language
 processing. The hosts are Matt Gardner, Waleed Ammar and Pradeep Dasigi. Okay. Today our guests are
 Victor Sanh and Thomas Wolf who are research scientists at HuggingFace. Victor and Thomas, welcome
 to the program. It's good to have you.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Victor Sanh" timestamp="00:16">
+<turn speaker="Victor Sanh" timestamp="00:16">
 
 Hi guys. Thank you for having us. It's a real pleasure to be here.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Victor Sanh" timestamp="00:18">
+<turn speaker="Victor Sanh" timestamp="00:18">
 
 Hi everyone.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:19">
+<turn speaker="Matt Gardner" timestamp="00:19">
 
 So today we wanted to talk about model distillation in general and a specific NeurlPS workshop paper
 that made us think about this topic on what you called DistilBERT. To start us off, do you want to
 tell us what model distillation is?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Victor Sanh" timestamp="00:33">
+<turn speaker="Victor Sanh" timestamp="00:33">
 
 Yeah, sure. So model distillation is the idea that you can train a smaller model from the outputs of
 a bigger teacher. So usually you have like the same architecture but just like a smaller model
@@ -50,17 +50,17 @@ teacher. And the idea is that rather than training on the gold labels, you can t
 student to mimic the behavior of the teacher. And use the output distribution of the teacher so that
 the student can fit the distribution probability distribution of the teacher.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="01:05">
+<turn speaker="Matt Gardner" timestamp="01:05">
 
 So why do I want to do this? Why should anyone care about distillation?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Victor Sanh" timestamp="01:10">
+<turn speaker="Victor Sanh" timestamp="01:10">
 
 Yeah, that's a good question. One of the biggest reason we are doing distillation is to compress the
 models and having faster models for an inference papers, especially when you think about edge
@@ -68,25 +68,25 @@ application. So having inference directly on your phone, on your like edge devic
 that are production friendly, that speed is definitely one of the biggest requirements. Especially
 when you think about low latency constraints in servers.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="01:36">
+<turn speaker="Matt Gardner" timestamp="01:36">
 
 Wait, wait, are you telling me that leaderboard performance isn't the only thing that matters?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Victor Sanh" timestamp="01:42">
+<turn speaker="Victor Sanh" timestamp="01:42">
 
 Maybe in real life. Okay. It's like good to have a good performance then when you like type
 something on Google search, you don't want to wait a minute before having your results. Right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="01:52">
+<turn speaker="Matt Gardner" timestamp="01:52">
 
 Yeah, and just to drive this point home, I think one of the original papers that introduced model
 distillation was talking specifically about ensembles like we see on leaderboards. Often ensembles
@@ -95,10 +95,10 @@ as a single model. But imagine I have BERT, but I have an ensemble of like 10 BE
 hard to run, you can imagine 10 BERTs being much, much harder to run. And so we want to take these
 performant models and shrink them down as much as possible. Right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Victor Sanh" timestamp="02:19">
+<turn speaker="Victor Sanh" timestamp="02:19">
 
 Yeah, absolutely. Yeah. Like the original paper was working with ensembles and it's obviously
 driving like a lot of like the other [inaudible] race. So yeah, the teacher can be like a lot of
@@ -106,20 +106,20 @@ things. You can be an ensemble but it can also be like a, just a single model th
 that's what we did in DistilBERT. So like taking a really big BERT and try to compress it in a
 smaller version of BERT.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="02:43">
+<turn speaker="Matt Gardner" timestamp="02:43">
 
 So why should we expect this to work? You would think if I need all of these parameters to get my
 high-performance in the first place, why should I be able to get similar performance with a much
 smaller model? At some level? It seems very counterintuitive that this is even possible. What's
 going on here?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Victor Sanh" timestamp="03:01">
+<turn speaker="Victor Sanh" timestamp="03:01">
 
 I think there are several aspects to cover here. One of the biggest aspect here is over
 parameterization in our models. So it's very well known now that most of our models today in
@@ -132,30 +132,30 @@ have a really strong, really big model like to catch and to find this right set 
 the end do you really need all the rest? So just keep the semantic work at the end and discard the
 rest.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="04:00">
+<turn speaker="Matt Gardner" timestamp="04:00">
 
 Yeah, that's really interesting. I hadn't made that explicit connection before between the lottery
 ticket hypothesis and model distillation, but they're definitely related, or at least this whole
 pruning idea gives credence. It gives some validation to like why it should theoretically be
 possible to do distillation.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="04:18">
+<turn speaker="Pradeep Dasigi" timestamp="04:18">
 
 Yeah. Beyond the paramerization, would it also be the training objective being different because the
 smaller model is essentially trying to approximate the distribution of the larger model? Right, and
 the distribution of the larger model is that, after actually looking at all of the trending data.
 Right, so could it be that also?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Thomas Wolf" timestamp="04:37">
+<turn speaker="Thomas Wolf" timestamp="04:37">
 
 Yeah, I think there is a relation to, Oh, we actually understand what, what is an inductive bias in
 NLP? Right. We think a part of it is including the architecture, but another part is learned during
@@ -167,10 +167,10 @@ inputs pairing. Maybe is a bit sparse so maybe we could have more signal, but ye
 definitely the ideas in my head too. Like to try to catch this inductive bias that was learned by
 larger models.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="05:23">
+<turn speaker="Matt Gardner" timestamp="05:23">
 
 Yeah, and a way of paraphrasing all of this is to say perhaps that it may be very difficult, hard to
 say impossible, but maybe very difficult, to get the smaller model to learn the right internal
@@ -180,10 +180,10 @@ capture for whatever optimization reason to capture the right decision boundary,
 there, there are different learning algorithms with different objection functions that will let us
 compress it down without necessarily needing the data.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Thomas Wolf" timestamp="05:57">
+<turn speaker="Thomas Wolf" timestamp="05:57">
 
 I think there is an interesting set of experiments that could be done. For instance, if you take the
 recent T5 model by Google and it takes text-to-text-transfer-transformers, they trained a large
@@ -197,17 +197,17 @@ Like if we take these small models, we train them for long enough, kind of recov
 bias, even though they are small enough. So, I think the idea Victor, is that the lottery ticket
 would make us think we cannot.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Victor Sanh" timestamp="06:52">
+<turn speaker="Victor Sanh" timestamp="06:52">
 
 That's an open question.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="06:54">
+<turn speaker="Matt Gardner" timestamp="06:54">
 
 Yeah, those are good points. So we've talked about what model distillation is. We want to take a
 really big model and compress it down into something that has similar performance but with many
@@ -217,10 +217,10 @@ something to be smaller. What about how exactly we do this or we've kind of skir
 issue a little bit in how we've talked, but like what's the actual mechanism, the learning
 algorithm, whatever to get from the big model to the small model.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Victor Sanh" timestamp="07:26">
+<turn speaker="Victor Sanh" timestamp="07:26">
 
 So the canonical way today to do distillation is to compare the outputs distribution of the student
 and the teacher and to try to push the student distribution towards the teacher's distribution. So
@@ -233,10 +233,10 @@ for the teacher. That's like a really straightforward choice and it works pretty
 have distribution that the teacher is pretty well trained on. You use the same distribution input
 distribution for the students, so you worked pretty well.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Victor Sanh" timestamp="08:27">
+<turn speaker="Victor Sanh" timestamp="08:27">
 
 There is also some effect of size, so you don't necessarily need to use as much data as the original
 training. You can use like a subset, like maybe a third, maybe 50% of the original data, but
@@ -250,10 +250,10 @@ strong enough signal to train a distilled version of the teacher so the input do
 have to mean anything like in terms of semantics, in terms of language. Distribution is already a
 really strong so you know to train the distilled version.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="09:32">
+<turn speaker="Matt Gardner" timestamp="09:32">
 
 That's a really interesting result. I guess, fundamentally what we're trying to do is recover a
 decision boundary and all we need is something that will give us information about how close we are
@@ -267,10 +267,10 @@ Eric did some experiments that were really interesting. Our thought was that the
 Adversarial Examples are Features paper really just amount to model distillation, and I think he
 showed this in a really interesting way and that he took the model's incorrect predictions,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="10:30">
+<turn speaker="Matt Gardner" timestamp="10:30">
 
 So, take DEV data or something where the model predicts the wrong thing on like image
 classification. So, in MNIST or something, I'm taking a digit predicting what digit I'm looking at
@@ -282,10 +282,10 @@ model on this entirely incorrectly predicted data. Guess how well I do on the or
 with the original labels: better than random, significantly better than random, which is really
 quite strange. Like it's really counterintuitive that I can get not trivial performance.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="11:17">
+<turn speaker="Matt Gardner" timestamp="11:17">
 
 It's not amazing performance, but it's not trivial performance when I'm training only on incorrectly
 predicted data. And why? This is because that incorrectly predicted data tells me something about
@@ -296,20 +296,20 @@ original data distribution and it also doesn't have to have the original label. 
 some signal that tells me about what the original model"s decision boundary was, such that I can
 learn from that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Victor Sanh" timestamp="11:51">
+<turn speaker="Victor Sanh" timestamp="11:51">
 
 Yeah, absolutely. That's quite strange and I've, well I'm not sure if there were any experiments on
 this paper, but what happens then, when do you just grow the size of the datasets? You imagine that
 you have an unlimited data set of nonsense inputs or just incorrect labels? Can you actually recover
 like a strong performance metric but having like an unlimited data set?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="12:12">
+<turn speaker="Matt Gardner" timestamp="12:12">
 
 Yeah. Yeah. The the key is that it can't just be any incorrect label. It has to be the incorrect
 labels from the predictions of the original model. I'm just trying to recover the model. I'm not
@@ -321,10 +321,10 @@ how exactly you can do this. You get to dive into a little bit more detail on so
 dimensions. One is data, one is loss functions and the trivial experiment that I was talking about,
 we only use the label itself and not a distribution and we still got some distillation there.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="12:57">
+<turn speaker="Matt Gardner" timestamp="12:57">
 
 Whereas what you suggested is that I'm using the models, the entire probability distribution as my
 learning signal, getting the whole distribution instead of the argmax from the distribution is going
@@ -334,18 +334,18 @@ get like the model's hidden state, like try to mimic the model's internal hidden
 as another signal for distillation. Are there others like we can talk about how each of these works
 when we get more into DistilBERT, but are there other classes of things you might try to mimic?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Victor Sanh" timestamp="13:29">
+<turn speaker="Victor Sanh" timestamp="13:29">
 
 That's pretty much the two big classes of losses. So, on the distribution or on the embeddings and
 hidden states.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="13:35">
+<turn speaker="Matt Gardner" timestamp="13:35">
 
 And then there's also like the data, I'm not too familiar with model distillation literature. I
 don't know how much you know about all of it either. You said you could use the original training
@@ -353,48 +353,48 @@ data, Google showed you can use this nonsense data. Are there any insights that 
 like methods to find what data is the best to distill from? I imagine that makes a difference, but I
 don't know how much work there's been in that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Speaker 3" timestamp="13:58">
+<turn speaker="Speaker 3" timestamp="13:58">
 
 Seen any paper on that, but even the data we use to pre-train these large models, I think there is
 not enough research on that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="14:06">
+<turn speaker="Matt Gardner" timestamp="14:06">
 
 In other words, lots of really open questions that are ripe for more research, dear listeners.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Victor Sanh" timestamp="14:10">
+<turn speaker="Victor Sanh" timestamp="14:10">
 
 Yeah.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Victor Sanh" timestamp="14:11">
+<turn speaker="Victor Sanh" timestamp="14:11">
 
 Yeah. Well I guess like the research community hasn't really focused on data because somehow it can
 be seen as boring, like really looking into the data, but that's actually really sometimes what
 actually drives the performance at the end. So yeah, that's quite important.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="14:26">
+<turn speaker="Matt Gardner" timestamp="14:26">
 
 Yeah, definitely. I definitely think that's true.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Speaker 3" timestamp="14:29">
+<turn speaker="Speaker 3" timestamp="14:29">
 
 That's something we want to push and I don't know if you've seen like we've released like a very
 fast tokenization library recently, which is kind of related, I think. All these input pipelines,
@@ -402,20 +402,20 @@ like people don't pay enough attention to them, don't really play enough with th
 are very, not developed enough, like not fast enough to actually experiment a lot on this. So,
 that's one of our big goal is try to push the community to do more research on this side.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="14:55">
+<turn speaker="Matt Gardner" timestamp="14:55">
 
 Yeah. And your contributions in that area have been really good. So, thanks. Okay. I think at this
 point we have a decent handle on model distillation as something you might want to do and how it
 works. So maybe we can move to talking about your specific contribution here, which has a particular
 distillation of BERT. Do you want to tell us about that?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Victor Sanh" timestamp="15:12">
+<turn speaker="Victor Sanh" timestamp="15:12">
 
 Yeah, so we work on distilBERT, which is a distilled version of BERT. It's basically like the same
 architecture, so just the classical BERT, but with only six layers compared to 12 layers for the
@@ -428,20 +428,20 @@ two representations from the teacher and the students. And so we basically compr
 the layers. So we have 40% less parameters. And on GLUE, a benchmark for natural language
 understanding, we keep 99% of the performance of bert base on GLUE.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="16:12">
+<turn speaker="Matt Gardner" timestamp="16:12">
 
 So, you mentioned as we talked about earlier, trying to encourage the distilled model's hidden state
 to match BERT's hidden state as a distillation technique. This only works because of a particular
 parameterization that you chose, right? Where you made sure that the sizes of all the hidden layers
 aligned between the two models, is that right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Victor Sanh" timestamp="16:33">
+<turn speaker="Victor Sanh" timestamp="16:33">
 
 Yeah, so basically what we did in DistilBERT is initialized the student from the teacher. So,
 basically we only kept half of the layers so they are zero, two four, seven, nine, eleven and we
@@ -455,77 +455,77 @@ guide the student who was a good local minima for the student? Not necessarily f
 for the student and initializing from the teacher is already like a good boost to guiding for a good
 minima.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="17:43">
+<turn speaker="Matt Gardner" timestamp="17:43">
 
 You said there was a four point or so drop if I don't initialize the parameters in the way that you
 said?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Victor Sanh" timestamp="17:50">
+<turn speaker="Victor Sanh" timestamp="17:50">
 
 Yeah.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="17:50">
+<turn speaker="Matt Gardner" timestamp="17:50">
 
 I'm trying to wrap my head around what that four points actually means. I think a decent way to try
 to answer that question is take a model of the same size and train it from scratch. Does that make
 sense? Did, did you try that? What happens?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Victor Sanh" timestamp="18:04">
+<turn speaker="Victor Sanh" timestamp="18:04">
 
 Okay. If we take a model of the same size and train from scratch,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="18:09">
+<turn speaker="Matt Gardner" timestamp="18:09">
 
 Without any distillation at all,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Victor Sanh" timestamp="18:10">
+<turn speaker="Victor Sanh" timestamp="18:10">
 
 Without distillation, it's even worse.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="18:12">
+<turn speaker="Matt Gardner" timestamp="18:12">
 
 Do you know how much?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Victor Sanh" timestamp="18:14">
+<turn speaker="Victor Sanh" timestamp="18:14">
 
 I don't have like the figures in mind, but you can probably, I think you lose like one or two
 points. One or two points, like below the four points or...
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Victor Sanh" timestamp="18:24">
+<turn speaker="Victor Sanh" timestamp="18:24">
 
 Yeah, in addition to like the three or four points if you don't initialize from the teacher.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="18:29">
+<turn speaker="Matt Gardner" timestamp="18:29">
 
 If I can rephrase to see if I'm understanding what you're saying, right? There's essentially a gap
 between what I would get without any distillation at all using this model architecture and what I
@@ -534,92 +534,92 @@ lose about three fourths or two thirds of the improvement that I get from distil
 very little gain from distillation in some sense over just training the model from scratch unless
 for this particular model, I initialize it in this particular way. Is that true?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Victor Sanh" timestamp="18:58">
+<turn speaker="Victor Sanh" timestamp="18:58">
 
 Yeah, I think that's correct.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="19:00">
+<turn speaker="Matt Gardner" timestamp="19:00">
 
 That's really interesting to me.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="19:03">
+<turn speaker="Pradeep Dasigi" timestamp="19:03">
 
 So that means that proper initialization is more important than distillation, correct?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Victor Sanh" timestamp="19:07">
+<turn speaker="Victor Sanh" timestamp="19:07">
 
 The impact of the initialization is bigger than the impact of the distillation loss.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="19:12">
+<turn speaker="Pradeep Dasigi" timestamp="19:12">
 
 Okay.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="19:14">
+<turn speaker="Matt Gardner" timestamp="19:14">
 
 Yeah. That's another interesting question. If I just do the initialization and then train without
 the distillation objective, just train on the original task objectives, what happens? Did you try
 that?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Victor Sanh" timestamp="19:24">
+<turn speaker="Victor Sanh" timestamp="19:24">
 
 So, just initializing and training with a mass language modeling loss, right? That's what you're
 saying?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="19:30">
+<turn speaker="Matt Gardner" timestamp="19:30">
 
 Yeah. So do the initialization that you did.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Victor Sanh" timestamp="19:32">
+<turn speaker="Victor Sanh" timestamp="19:32">
 
 Yeah.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="19:32">
+<turn speaker="Matt Gardner" timestamp="19:32">
 
 And then use whatever objectives I want on the GLUE tasks except for the distillation objective.
 This is another way to just to try to get at this question of like what is the distillation actually
 giving you and can we tease apart the distillation from the initialization?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Victor Sanh" timestamp="19:43">
+<turn speaker="Victor Sanh" timestamp="19:43">
 
 I'm not sure we tried this experiment.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="19:46">
+<turn speaker="Matt Gardner" timestamp="19:46">
 
 It's fine. This work is good cause it makes me think and it raises a lot of questions and you
 produced a nice artifact in DistilBERT and you got me thinking about some really interesting
@@ -631,10 +631,10 @@ over its vocabulary at any particular point, I'm going to smooth that distributi
 potentially, and only match the smooth diversion instead of the original one. Can you comment on why
 this matters?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Victor Sanh" timestamp="20:33">
+<turn speaker="Victor Sanh" timestamp="20:33">
 
 Yeah, we were discussing that earlier because I think it's very interesting as well. In general, I
 think it's like a general theme in NLP that we want to enhance the small signal. And this reminds me
@@ -647,53 +647,53 @@ some part of the inputs are part of the output space. And we want to overemphasi
 signal. And you see that in many places, actually. Multi-Linguality when you train multi-lingual
 model, you also want to like overemphasize the rare words.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="21:27">
+<turn speaker="Matt Gardner" timestamp="21:27">
 
 So smoothing the softmax you're saying this overemphasizes the rare words,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Speaker 3" timestamp="21:33">
+<turn speaker="Speaker 3" timestamp="21:33">
 
 It overemphasizes the small signal more like it's not really the rare words, it's like the words we
 are very confident about in our case for MLM.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="21:43">
+<turn speaker="Matt Gardner" timestamp="21:43">
 
 Oh, okay. So if I have a distribution that has a long tail, it's got a clear mode, maybe a few words
 that it's got pretty high probability on it and a bunch that has got low but non-zero probability,
 the temperature is going to push the low ones down farther to zero and the mode up higher and so we
 are reducing as you say the effect of lower probability predictions.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Victor Sanh" timestamp="22:09">
+<turn speaker="Victor Sanh" timestamp="22:09">
 
 I think long tailed is probably the right underlying statistical concept here that we want to fight
 or like be better suited.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="22:17">
+<turn speaker="Matt Gardner" timestamp="22:17">
 
 This is definitely true in just learning in general when I have huge output spaces. I wonder if or
 how this interacts with distillation, in particular. If I want to fit a model's decision boundary,
 is it more or less important that I smooth out these quirks of the model's boundary for instance?
 It's an interesting question that I don't know.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Victor Sanh" timestamp="22:38">
+<turn speaker="Victor Sanh" timestamp="22:38">
 
 I think in the case of language, so what we are doing with the really large vocabulary, it's quite
 important in most of our language models, the distribution over the vocabulary can be extremely
@@ -704,60 +704,60 @@ outputs and you want to be able to capture this kind of uncertainty in language.
 spiked or smoother distribution is quite important for language. If you really want to cover all the
 possibilities in your vocabulary.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="23:26">
+<turn speaker="Matt Gardner" timestamp="23:26">
 
 Yeah, definitely.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Victor Sanh" timestamp="23:26">
+<turn speaker="Victor Sanh" timestamp="23:26">
 
 We could probably even take out the arg max in distillation it would work, right? A bit like you did
 for the like vessel example, right? You take out the main arg max and you just distill on the other
 one. Oh, it's almost the same. Yeah.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="23:38">
+<turn speaker="Matt Gardner" timestamp="23:38">
 
 Do you mean you tried it and you get similar results or you think it would be similar?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Victor Sanh" timestamp="23:43">
+<turn speaker="Victor Sanh" timestamp="23:43">
 
 We tried to remove in the free losses we just removed the real math language model. The modeling
 loss and impact was like less than a point, if I remember correctly.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="23:53">
+<turn speaker="Matt Gardner" timestamp="23:53">
 
 Say, also, I guess as the temperature goes to one extreme you're going to recover an ARG max.
 Exactly. Right. Yeah. There are questions here around what is the optimal temperature. Do you have
 any insight there for this particular task? Random search. Okay, and from that random search, did
 you find anything? Were there trends as you went up and down temperature? Do you know?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Victor Sanh" timestamp="24:13">
+<turn speaker="Victor Sanh" timestamp="24:13">
 
 I don't really have really strong experiments on that. We found like a really reasonable
 hyperparameter here and it worked for our experiments, so, but that's like a good question like how
 spike how smooth do you want your distribution to be?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="24:27">
+<turn speaker="Matt Gardner" timestamp="24:27">
 
 Right. Cool. Another thing that this paper really got me thinking about was how model distillation
 interacts with all of the "BERTology", the analysis stuff that people have been doing. I know lots
@@ -771,10 +771,10 @@ as a vehicle for analysis to further understand what's going on in BERT. Like I 
 distillation and then compare what I see in the distilled model versus the original model and do
 some interesting stuff that way. What do you think?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Victor Sanh" timestamp="25:27">
+<turn speaker="Victor Sanh" timestamp="25:27">
 
 Yeah, that's an extremely interesting question. So if look at like the attention patterns in
 DistilBERT and DistilBERTA and like the children of DistilBERT I would say, and somehow we found
@@ -789,10 +789,10 @@ computes a representation. Right. So having a probing task at a really high leve
 or maybe like at every single layers is, I think an approach that makes more sense than trying to
 compare like the embeddings or like where the embeddings are in the space.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="26:42">
+<turn speaker="Matt Gardner" timestamp="26:42">
 
 Yeah. I guess I was thinking what features of all of this analysis that's been done on BERT are
 preserved across distillation and if there are some, then maybe that tells us something interesting
@@ -803,18 +803,18 @@ distill it too far in some sense, can I detect what was lost and use that to get
 causal, might be too strong a word, but like some kind of insight into what actually was driving
 BERT's original performance. It's interesting to think about what you could do here.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Victor Sanh" timestamp="26:44">
+<turn speaker="Victor Sanh" timestamp="26:44">
 
 We haven't really analyzed really specifically what's happening to the syntax and to the semantics
 inside the layers.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Victor Sanh" timestamp="27:31">
+<turn speaker="Victor Sanh" timestamp="27:31">
 
 However, what we did, we've tried DistilBERT on the multilingual version of BERT, so the
 multilingual BERT basically, and there is definitely a question of capacity. I think it's especially
@@ -823,10 +823,10 @@ were on like low resources languages, so on Tai, on Vietnamese and languages whe
 that, that much data compared to English. So yeah, there's definitely a question of capacity. Does
 it mean that you can't recover some syntax and semantics? That's an open question here.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="28:07">
+<turn speaker="Matt Gardner" timestamp="28:07">
 
 My last big question for you, you kind of already addressed in that answer, which is like what do
 you lose when you do this model distillation or compression? And it sounds like, I could rephrase
@@ -836,33 +836,33 @@ language, rare words that you might miss out on in your lexicon, other kinds of 
 isn't as frequent that maybe BERT had originally in its model that you don't have in your distilled
 model. Do you think that's fair?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Victor Sanh" timestamp="28:40">
+<turn speaker="Victor Sanh" timestamp="28:40">
 
 I think that's a fair assessment. Yeah. I don't know how like a good intuition on the what other
 things, what other aspects you could lose. That's pretty much what I had in mind so far.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="28:50">
+<turn speaker="Matt Gardner" timestamp="28:50">
 
 Okay, cool.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="28:50">
+<turn speaker="Pradeep Dasigi" timestamp="28:50">
 
 Did you try with different ablations for sizes of the smaller model, would that give us some
 intuitions into what you might use?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Victor Sanh" timestamp="28:57">
+<turn speaker="Victor Sanh" timestamp="28:57">
 
 Yeah, we've actually tried to compress BERT even further by only taking a third, maybe a fourth of
 the layers. So going down to two or three layers by having the same initiation method. So taking the
@@ -875,35 +875,35 @@ kind of a sweet balance between the number of layers and the hidden size and if 
 threshold between this really sweet ratio that your transformer is not stable anymore. Which is kind
 of like surprising.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="29:59">
+<turn speaker="Matt Gardner" timestamp="29:59">
 
 Yeah. That's really interesting.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="30:00">
+<turn speaker="Pradeep Dasigi" timestamp="30:00">
 
 You also had some experiments of distillation before and after fine tuning, right? I mean
 essentially after pre-training and after fine tuning, were there any interesting trends there?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Victor Sanh" timestamp="30:10">
+<turn speaker="Victor Sanh" timestamp="30:10">
 
 What we observe is that if you have a really big data set, for instance on GLUE, MNLI is a quite big
 dataset, Quora question pair's a quite big dataset, on the other side, RTE textual entailment is
 quite small. If you have big datasets, having a second step of distillation doesn't help that much,
 but it will definitely boost the performance on smaller data sets, fine-tuning data sets.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="30:36">
+<turn speaker="Matt Gardner" timestamp="30:36">
 
 Great. Thanks. This has been a really interesting conversation. Are there any things that you wanted
 to talk about that we didn't cover or any last thoughts before we finish up? Maybe one last thing I
@@ -912,21 +912,21 @@ generalization. So, this is currently very interesting topic in general in deep 
 is an interplay with distillation where maybe distillation could be one way to probe, tease apart,
 these two things.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="31:01">
+<turn speaker="Matt Gardner" timestamp="31:01">
 
 Do you get more or better generalization on some out of distribution data from a distilled model
 than from the original model? That is indeed a very interesting question. Yes. Great. Thanks. It was
 nice talking to you. This is fun.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Victor Sanh" timestamp="31:14">
+<turn speaker="Victor Sanh" timestamp="31:14">
 
 Thanks for hosting us and thanks for doing the podcast. It's really an amazing one, I think. Thank
 you. That's nice to hear. Thank you.
 
-</Turn>
+</turn>

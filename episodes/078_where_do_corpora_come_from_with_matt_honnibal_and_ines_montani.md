@@ -8,23 +8,23 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting work in natural
 language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is Matt Gardner and Waleed Ammar. We are research scientists at the Allen Institute for
 artificial intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:12">
+<turn speaker="Matt Gardner" timestamp="00:12">
 
 All right. Today our guests are Matthew Honnibal and Ines Montani. You might know them as the people
 behind the spaCy library that a lot of us know and love. I guess in academia I think we mostly use
@@ -33,26 +33,26 @@ input to whatever model you want to do. Matthew and Ines might not think of it q
 preprocessing library. I probably gets a lot more use outside of academia for other things. Welcome
 to the program.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ines Montani" timestamp="00:37">
+<turn speaker="Ines Montani" timestamp="00:37">
 
 Yeah, Hi.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Honnibal" timestamp="00:37">
+<turn speaker="Matt Honnibal" timestamp="00:37">
 
 Thanks. And I'm actually, yeah, I think pre-processing is, you know, a very common use case, the
 library these days. But you know, often it is useful to pre-process with models as well, which is
 why spaCy ships with like an entity recognizer and stuff.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:50">
+<turn speaker="Matt Gardner" timestamp="00:50">
 
 It, there's a lot of nice stuff in there. But today we're not going to talk about spaCy. We're going
 to talk about something else you've been working on, which is, where do corpora come from? Do you
@@ -60,10 +60,10 @@ want to give us an outline of what you're doing here? I guess this is a talk, yo
 bunch of meetups recently. This is, and you've built a tool called prodigy and this is like the
 basis of that, right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Honnibal" timestamp="01:09">
+<turn speaker="Matt Honnibal" timestamp="01:09">
 
 So the high level idea behind this is when we were working with people who were doing commercial
 NLP. We found that annotation workflows and questions around annotation where actually some of the
@@ -74,10 +74,10 @@ develop tooling that we think actually helps people get these questions more rig
 you know, it gives you the work flows from these things and especially helps the data writer you
 know, basically do rapid prototyping.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="01:44">
+<turn speaker="Matt Gardner" timestamp="01:44">
 
 I guess we don't think about this as much as we probably should in academia and research. And I was
 trying to think about why. I guess I'm, I'm currently trying to build a data set right now, but it's
@@ -87,20 +87,20 @@ data because from a research perspective it's hard to get funding to like do a c
 where like you try different annotation methods and you see what works and it's hard to evaluate
 this kind of thing. But I guess you run into this kind of problem a lot though, right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Honnibal" timestamp="02:21">
+<turn speaker="Matt Honnibal" timestamp="02:21">
 
 Yeah. And I would say actually say that, you know, the problems in academia are a little bit
 different where when you're defining a new data set, you're usually thinking about defining a new
 task. As you say, the problem that we are really talking about much more is basically deciding what
 to do. Like how, you know, deciding how to solve some sort of problem.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ines Montani" timestamp="02:38">
+<turn speaker="Ines Montani" timestamp="02:38">
 
 Yeah. Yeah. So a lot of the problems we, we've seen really come down more to that. The problem
 definition and how do I design my labels scheme and how do I decompose the larger application that's
@@ -117,20 +117,20 @@ takes a lot to really find a label scheme that makes sense. Final level scheme t
 learn. And that's, that's really something we trying to solve with better tooling around this type
 of stuff.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="03:44">
+<turn speaker="Matt Gardner" timestamp="03:44">
 
 Yeah, I guess I could think of this is how do I do better at applications of natural language
 processing? Like I, we in the research community focus a lot more on like pushing boundaries for new
 stuff, but industry has a whole lot of problems with like, how do I take what people have done and
 apply it to my business problem, right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Honnibal" timestamp="04:01">
+<turn speaker="Matt Honnibal" timestamp="04:01">
 
 Exactly, so it's how do you compose these models together to make solutions? And there's a lot of
 choices in that that you know, fundamentally pretty hard to study from an academic perspective. And
@@ -142,18 +142,18 @@ either bit workflow and also workflows to help people annotate things. Fostering
 processes that work at a smaller scale so that people can try things out and try different putting
 togethers to see if they can, you know, basically come up with better solutions to this.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="04:41">
+<turn speaker="Matt Gardner" timestamp="04:41">
 
 Can you give a concrete example of the kind of process you're talking about and the prodigy will
 help people with?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Honnibal" timestamp="04:48">
+<turn speaker="Matt Honnibal" timestamp="04:48">
 
 Well, let's say that you've, you're working on a a type of problem where there's only a fixed number
 of the entities. So basically a lexicon will work pretty well in this type of problem. You might use
@@ -162,10 +162,10 @@ basically prodigy you will use the vectors to suggest a similar terms to what yo
 you can go to a lexicon pretty quickly this way and then you can use the lexicon to bootstrap an
 entity recognizer.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ines Montani" timestamp="05:13">
+<turn speaker="Ines Montani" timestamp="05:13">
 
 Yeah. Yeah. Often you might have some idea you want to train the model for you domain. Like we have
 a lot of users from finance to health care. Often the areas where you kind of don't know what will
@@ -176,17 +176,17 @@ approaches you want to invest in and try more of. And that's only possible if li
 you do this in a very quick way and you don't have to call a meeting, hire a bunch of people, put it
 on mechanical Turk, wait a few weeks, train your model and NCR.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="05:51">
+<turn speaker="Waleed Ammar" timestamp="05:51">
 
 So, what kind of evolution do you recommend that we do?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Honnibal" timestamp="05:53">
+<turn speaker="Matt Honnibal" timestamp="05:53">
 
 We recommend something like a bootstrapping type process where with very small questions is a
 technique that we have in prodigy where you basically run AB evaluation. And so even for something
@@ -200,10 +200,10 @@ running these things and you keep working at some point it does become useful to
 set and then you want to basically held that said the same way that you would for other
 methodologies.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ines Montani" timestamp="06:41">
+<turn speaker="Ines Montani" timestamp="06:41">
 
 Another little trick that we found to work quite well is we have one mode where you, if you have an
 evaluation set or some data you can hold back, you run several training rooms training experiments
@@ -215,10 +215,10 @@ more data of that type that your model will likely improve. Of course, it's not 
 answer, but you know, if your prototyping this can often be a good indicator to find out whether am
 I on the right track of, I'm a completely off and that's the type of question this can answer.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="07:29">
+<turn speaker="Waleed Ammar" timestamp="07:29">
 
 So the, the, this type of evaluation makes sense when we're trying to evaluate different approaches,
 but we know exactly what is the thing that we're trying to predict. But like you said before,
@@ -227,10 +227,10 @@ decompose the problem into smaller NLP sub problems, right? Or just like how do 
 decompose our problem into a series of predictions, which then we need to train a model for and it's
 not clear to me how do you use this approach in order to make this decision?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Honnibal" timestamp="08:00">
+<turn speaker="Matt Honnibal" timestamp="08:00">
 
 Ultimately it's like all the types of programming, right? So a model is just a function and in, you
 know, normally in programming you've always got these decisions about where to do the work, right?
@@ -243,10 +243,10 @@ putting this together, this sort of pipeline to solve a problem. So for instance
 might say or I'll try it fully N to N model that we'll do something like semantic roles as an entity
 recognition for a model.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Honnibal" timestamp="08:46">
+<turn speaker="Matt Honnibal" timestamp="08:46">
 
 Maybe you decide that that's going to be, you know, probably have a decent chance of success in your
 tasks. So okay, you try that out and then our recommendation is that you in a way that lets you
@@ -260,10 +260,10 @@ don't know whether that score actually correlates with success in your applicati
 think that basically closing the loop as quickly as possible, so you can try exploring the model is
 the answer to this.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="09:33">
+<turn speaker="Matt Gardner" timestamp="09:33">
 
 Yeah, that's a really good point. So if I could summarize so far, I think at a high level of what
 you want to do, the problem you're trying to solve is that if I want to apply NLP to my business
@@ -272,10 +272,10 @@ particular business use case. And you want to provide tools to make this easier 
 to do this. Right. I don't think we've actually described yet what your tools do. Do you want to
 tell us about prodigy or whatever else you recommend?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ines Montani" timestamp="10:04">
+<turn speaker="Ines Montani" timestamp="10:04">
 
 Yeah. So prodigy is, a developer tool, so it's a Python library you can install on your system. So
 you download it, run it, it comes with a web application that you can spin up as a command line
@@ -287,10 +287,10 @@ whole text, you can label spans in a text, you can make them manually editable w
 click and drag to highlight something. You can have an image, you can have HTML, so it's very free
 form and it's also open to your interpretation.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ines Montani" timestamp="10:48">
+<turn speaker="Ines Montani" timestamp="10:48">
 
 What this means in the end, what your labeling there. And we've really tried to focus on efficiency,
 speed, the annotation. The Interface really focuses on three main actions accept, reject and ignore.
@@ -299,10 +299,10 @@ helps the data quality. And if we really try to automate whatever a computer can
 on what we really need a human decision on, the quicker the human can make that decision the better
 because we get better data and more data. So that's the philosophy.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="11:19">
+<turn speaker="Matt Gardner" timestamp="11:19">
 
 Just from listening to that description. Someone might think that this is like a collection of say
 react components or I don't know what library are using, but like a, a set of like eb UI components
@@ -315,10 +315,10 @@ your materials, you talk about active learning and I'd like to get more informat
 exactly you do active learning in this kind of setting because I think that's really interesting. So
 how about we talk about this binary decision thing first? What is this?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Honnibal" timestamp="12:12">
+<turn speaker="Matt Honnibal" timestamp="12:12">
 
 Okay, so I would actually just clarify a little bit inside it. Now, even if you note, I'm not
 working in a binary interface. I think that a lot of the annotation tools do, that's an ideal, is
@@ -326,20 +326,20 @@ present really long documents with lots of decisions and complicated interaction
 you do a whole bunch of work for minutes at a time and then you submit that off. I think this really
 runs counter to the way that that application design works?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ines Montani" timestamp="12:35">
+<turn speaker="Ines Montani" timestamp="12:35">
 
 Yeah. Also how humans work in general. Like if yeah, we, we are quite bad at all things. If you ask
 a human to perform a series of these steps, they're most likely gonna make some mistake somewhere.
 And also in general, the more friction you have, the less satisfying the interaction. So that's,
 that's something, yeah, we did want to get across.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="12:53">
+<turn speaker="Matt Gardner" timestamp="12:53">
 
 Yeah, that, that's a good point. And it's one that I know a bunch of people are thinking about with
 NLP annotation in general. Like there's this QA SRL project that tries to take what is a complex
@@ -350,10 +350,10 @@ get the right questions and answers, this will give us pretty good arguments str
 thing, similar ideas with co-reference resolution. So, so yes, breaking stuff down into this is
 really good.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ines Montani" timestamp="13:24">
+<turn speaker="Ines Montani" timestamp="13:24">
 
 That's also something we've seen that basically often instead of focusing on every single thing you
 might want to annotate, often if you have a few small things, everything else will fall into place.
@@ -364,10 +364,10 @@ every instance, every instance of the, and then they're gonna make one mistake a
 your model trying to fit on that one example. And trying to come up with some theory. So yeah. Yeah.
 We've, we've basically, we've come to the exact same conclusion. Yup. Yeah.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Honnibal" timestamp="14:00">
+<turn speaker="Matt Honnibal" timestamp="14:00">
 
 Said slightly differently to build an intuition for this. If you're doing structured prediction,
 like the thing that makes structure prediction kind of attractive as an inference style or learning
@@ -383,10 +383,10 @@ the model if you spread this out and have different bits of each structure annot
 having all of the bits of one structure annotated completely. And then all of the bits of the next
 structure annotated completely and having bits of fewer structures.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="15:01">
+<turn speaker="Matt Gardner" timestamp="15:01">
 
 So this approach to annotation makes a lot of sense and it also motivates different types of
 algorithms for learning from them. Could you elaborate a little on what kind of, so why are the
@@ -395,10 +395,10 @@ annotation for the entire inputs that your trying to make prediction about. But 
 this is not the most efficient way to collect data. And I wonder is in your experiments, what turns
 out to be a better way to do this?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Honnibal" timestamp="15:27">
+<turn speaker="Matt Honnibal" timestamp="15:27">
 
 Just to preface this slightly, it's really only easy to do to binary style if you've got an initial
 model. So there's kind of a cold start problem to get over. So at some point you do need to, you
@@ -408,19 +408,19 @@ it's not efficient. But at some point I do think it's efficient to switch over t
 interface to basically build out the model and do this. So are you asking that the algorithms to use
 a like, you know the annotation process or,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="16:00">
+<turn speaker="Waleed Ammar" timestamp="16:00">
 
 So I guess there are two important questions here. One is how to pick which parts of the input that
 we should ask the annotator to work on. And then once we have this annotation, this incomplete
 annotation, how to use it to update our model.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Honnibal" timestamp="16:12">
+<turn speaker="Matt Honnibal" timestamp="16:12">
 
 What we do in open podiatry is basically just ask questions that try to maximize the uncertainty.
 You know, this is a form of active learning. What we found is, you know, a simple policy that people
@@ -435,10 +435,10 @@ to work on one label at a time because then you've got much less clicking in the
 you're only thinking about one part of the annotation scheme or things of that actually makes the
 annotation both go faster and be much more accurate.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="17:05">
+<turn speaker="Matt Gardner" timestamp="17:05">
 
 Earlier you, you brought up this idea of like if I knew where the root was or I knew where the what,
 which ones of these things were verbs, I could do a whole lot better. And that sounded like a really
@@ -446,17 +446,17 @@ interesting kind of active learning sampling strategy where like you're doing so
 kind of search, but it sounded like that's not what you're actually doing. Do you have any thoughts
 there?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Honnibal" timestamp="17:25">
+<turn speaker="Matt Honnibal" timestamp="17:25">
 
 You can argue the data, however you like in prodigy you know, it's just these piping screens.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ines Montani" timestamp="17:29">
+<turn speaker="Ines Montani" timestamp="17:29">
 
 Yeah. Yeah. And also you can decide when to update the models. So that's, yeah, you're writing your
 own logic as optional, but you can have a callback that's executed every time you get a new batch
@@ -469,10 +469,10 @@ paths because you're like, yep, model, try it again and going right this time. B
 of nice because it's also very motivating if you, if you're doing the annotation to really see the
 impact.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="18:11">
+<turn speaker="Matt Gardner" timestamp="18:11">
 
 So if I'm understanding right, then what you have built into prodigy already says, I'm going to
 sample based on the uncertainty of the model and show those particular decisions to the user, the
@@ -480,10 +480,10 @@ annotator. But you're not saying like, if I get this annotation and then train w
 will my model change? Or like if I can condition on this, how much does the rate, how much does
 uncertainty drop for my model for the rest of the sentence?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Honnibal" timestamp="18:37">
+<turn speaker="Matt Honnibal" timestamp="18:37">
 
 You're right that we're not, we're not doing it that way. You know, it might be easy to just
 describe in detail the card, like any outreach, recipe. Again, these are kind of subject to play
@@ -491,10 +491,10 @@ testing, which is the way that I think of this. And I actually really like to ex
 dependency parsing annotation strategies, like things like starting from the root down is, you know,
 I think that that's a reasonable thing to try with it, right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ines Montani" timestamp="18:58">
+<turn speaker="Ines Montani" timestamp="18:58">
 
 Because we also like consciously designed prodigy in a very modular way. So the idea is, for
 example, that the uncertainly sampling, that's a function that you can import, which is called
@@ -503,19 +503,19 @@ it sorts that. And then there's another one called prefer score, so you can writ
 Oh, let's try this kind of approach. So that's definitely something we've already built into the
 thing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="19:21">
+<turn speaker="Matt Gardner" timestamp="19:21">
 
 Yeah, that's a great way to do it. And I, what you have is great. I was just thinking like there are
 some really interesting and really cool stuff you could do with this like extensible framework that
 you, that you have that seem really cool.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Honnibal" timestamp="19:31">
+<turn speaker="Matt Honnibal" timestamp="19:31">
 
 One of the things that I find interesting about this is there's lots of decisions about minimizing
 the cognitive load on the annotator. You know, if you're only thinking about the information theory
@@ -527,10 +527,10 @@ have the annotators stream through all of the entities of the same like you know
 you know, you and you annotate all the, Elon Musks at once. Right now those are lots of useful and
 per sample basis. But you can click through them fast, right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Honnibal" timestamp="20:15">
+<turn speaker="Matt Honnibal" timestamp="20:15">
 
 So they'll flash up on the screen, you'll click through it and be like less than one in a second. So
 if you minimize diversity in the data and then the annotation speed goes up enormously. And
@@ -541,10 +541,10 @@ seconds ago was wrong. And this is the type of consideration that I think is, yo
 basically just have the play test new usability testing. It's not something that's easy to study in
 these kinds of experimental frameworks.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="20:51">
+<turn speaker="Matt Gardner" timestamp="20:51">
 
 Yeah, those were really good points. One thing, so we need to get back to where we didn't ever
 actually answer one of Waleed's questions, which is how do we, how do we learn in the presence of
@@ -552,10 +552,10 @@ these binary decisions? Right. So you, you're taking in some cases like a struct
 dependency parse or a part of speech tag sequence and you're breaking it down into a bunch of binary
 decisions. But I might not have all of them annotated for your particular example. How do I learn?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Honnibal" timestamp="21:19">
+<turn speaker="Matt Honnibal" timestamp="21:19">
 
 Right? So let's take the model is suggested "Amazon is a person. "And you've clicked reject, right?
 And maybe that's the only annotation you have about the whole sentence. So all you know about these
@@ -569,10 +569,10 @@ something like that, allocating some probability to a Amazon being a person wher
 update the weights such that that doesn't happen so that you can see already that, okay, there is a
 path here is the thing got a current standard model and we know how to make it better.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Honnibal" timestamp="22:12">
+<turn speaker="Matt Honnibal" timestamp="22:12">
 
 We've got a distribution out of the thing and we know what distribution we would prefer instead, or
 at least a feature of the distribution of it. And so even without the details of this, you should be
@@ -583,10 +583,10 @@ then we basically do this sort of multi labeled soft max procedure where we say 
 such that these parses get zero probability and then re normalize the scores on these other ones
 that they sum to one and an update the weights with that type of distribution.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="22:51">
+<turn speaker="Waleed Ammar" timestamp="22:51">
 
 So one risk that we're doing here is that we might be shifting the probing distribution to something
 that's also wrong. So maybe maybe we have three types a person, organization and location the return
@@ -597,10 +597,10 @@ problem? As, I mean there is like, it feels like there is a trade off between gi
 information in each data point as opposed to doing a lot of alterations with smaller information.
 Does this make sense?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Honnibal" timestamp="23:30">
+<turn speaker="Matt Honnibal" timestamp="23:30">
 
 Yes. The note that we might be updating towards the distribution that's still unideal but we can't
 be more wrong than we were because we still output something that you know, the score is still
@@ -610,10 +610,10 @@ whatever the ratio between those two classes won't change. It's just that they'l
 likely than they were because they've stolen the weight off person and so we're still moving in the
 right direction, which is, you know, all you ever hope to do for gradient.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="24:03">
+<turn speaker="Waleed Ammar" timestamp="24:03">
 
 That makes total sense. I think the question more about like practically at what point does this
 fall apart if we have a hundred different categories. For example, if you have a classification text
@@ -621,18 +621,18 @@ classification problem, this asking about each class doesn't seem like every eff
 Well maybe it isn't. Or is there a cutoff where a, if your number of presses will be under a certain
 limit, this doesn't become a very good way to do it anymore.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Honnibal" timestamp="24:29">
+<turn speaker="Matt Honnibal" timestamp="24:29">
 
 In practice, if you're starting from a model that's pretty bad, then it's hard. If the model's
 already like pretty decent, then it works really well.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ines Montani" timestamp="24:36">
+<turn speaker="Ines Montani" timestamp="24:36">
 
 Yeah, and also if you look at it for more of an application context, okay, your company, you have a
 model that works, you analyzing large volumes of text and you just want to have the best possible
@@ -642,19 +642,19 @@ predictions and that's what you care about. And so that's also a big use case. W
 Sophia and it's okay how long you want it to be better and even 1% increase overall can already mean
 a lot to you financially, for example, to your company.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="25:09">
+<turn speaker="Waleed Ammar" timestamp="25:09">
 
 Another thing that I'm curious about is what kind of limitations do we have when we use prodigy in
 terms of defining the model itself? Are we allowed to design our own models or are we restricted to
 a certain class of models?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ines Montani" timestamp="25:23">
+<turn speaker="Ines Montani" timestamp="25:23">
 
 No, I mean you can design any, anything you want to label. If you can get that on the screen somehow
 you can label it. Like of course there's some restrictions. If you actually want to have your own
@@ -672,10 +672,10 @@ what I'm trying to find out? And at the end of it, you get the data out. Like it
 say for some things and make sense to annotate more statically. Take your Corpus at the end, have
 the gold standard quotes that you've produced and entering from that. So that's all possible.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Honnibal" timestamp="26:29">
+<turn speaker="Matt Honnibal" timestamp="26:29">
 
 Yeah. So you know it's just this Python script and you just need to write generated at outputs. If
 you want to use other sources, then you would output at topple of let's say for example are the
@@ -685,32 +685,32 @@ pretty simple. Like, you know, one of our like, you know, little mottoes is let 
 you know, we think that it's a lot easier if you can just write this in python and then use that as
 the big chunk of the API for that sort of customization.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="27:02">
+<turn speaker="Waleed Ammar" timestamp="27:02">
 
 Right? So this would allow Matt for example, to try a different way of deciding which data points to
 annotate and maybe compared to what you were doing and see what works better.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ines Montani" timestamp="27:11">
+<turn speaker="Ines Montani" timestamp="27:11">
 
 Yeah, absolutely.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Honnibal" timestamp="27:11">
+<turn speaker="Matt Honnibal" timestamp="27:11">
 
 Certainly
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="27:12">
+<turn speaker="Matt Gardner" timestamp="27:12">
 
 Great. So I think the last question that I had was along this line of we're trying to fine tune a
 model, right? You've said a few times in this conversation that there is the cold start problem. You
@@ -722,10 +722,10 @@ domain adaptation kinds of stuff. And we've seen a lot of work recently in natur
 processing research along the lines of pre-trained language models like ELMo and BERT and other
 kinds of things. How do you see this changing what you do going forward?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Honnibal" timestamp="28:02">
+<turn speaker="Matt Honnibal" timestamp="28:02">
 
 So we've been looking forward to being able to pre train what we call the encode step or like the
 LSTM step or you know, whatever type of widget we are using to make the, the vectors context
@@ -739,34 +739,34 @@ plausible accuracy, of some text cut tasks. Right. That means it takes you 15 mi
 cut. That's really good. And that fits exactly with what we're intending with, you know, rapid
 prototyping and having just, you know, you have an idea and try it out.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="28:52">
+<turn speaker="Matt Gardner" timestamp="28:52">
 
 Let me make sure I understand. You're basically saying these things just make our lives way easier
 because the prodigy tool is designed exactly for the use case that these large pre-trained models
 enable. Right.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Honnibal" timestamp="29:02">
+<turn speaker="Matt Honnibal" timestamp="29:02">
 
 Yeah.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="29:03">
+<turn speaker="Matt Gardner" timestamp="29:03">
 
 It's been really nice talking to you. Do you have any final thoughts or anything you wanted to talk
 about that we missed?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Honnibal" timestamp="29:08">
+<turn speaker="Matt Honnibal" timestamp="29:08">
 
 Well, actually one thing that hasn't come up that I think is a bit different from the way a lot of
 people are designing annotation tools, especially commercially is that, you know, we really think
@@ -777,10 +777,10 @@ will keep getting better or whatever is actually much less useful than people th
 works entirely offline. The data never has to leave your servers, which we think makes them tool
 much more useful.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ines Montani" timestamp="29:40">
+<turn speaker="Ines Montani" timestamp="29:40">
 
 Yeah. This is also how we did, we wanted to design other tools that we working on in the future. So
 for example, at the moment we are working on a more services extension that actually let's use a
@@ -791,25 +791,25 @@ users full control of their data. So basically there data stays on the cluster t
 they control. We never see any of that. And they can still have the full experience of a service
 without having to compromise on the data privacy.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="30:17">
+<turn speaker="Matt Gardner" timestamp="30:17">
 
 Yeah. Great. Thanks for coming on. It was nice talking with you.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Honnibal" timestamp="30:19">
+<turn speaker="Matt Honnibal" timestamp="30:19">
 
 Cool. Thanks
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ines Montani" timestamp="30:20">
+<turn speaker="Ines Montani" timestamp="30:20">
 
 Thanks.
 
-</Turn>
+</turn>

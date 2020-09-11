@@ -8,23 +8,23 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting recent work in
 natural language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is Matt Gardner and Waleed Ammar. We are research scientists at the Allen Institute for
 Artificial Intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:11">
+<turn speaker="Waleed Ammar" timestamp="00:11">
 
 So today's paper is Recurrent Neural Network Grammars written by Chris Dyer, Adhiguna Kuncoro,
 Miguel Ballesteros, Noah Smith. Today we're very pleased to have Chris Dyer with us on the podcast.
@@ -35,26 +35,26 @@ language processing and machine learning. Chris lives in London and in his spare
 settle. On a more personal note, Chris was my PhD advisor at CMU and I learned so much from him. It
 is a true pleasure finding an excuse to meet with you again, Chris.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Chris Dyer" timestamp="00:59">
+<turn speaker="Chris Dyer" timestamp="00:59">
 
 Well thanks Waleed, it's a great pleasure for me too.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="01:03">
+<turn speaker="Waleed Ammar" timestamp="01:03">
 
 Okay. So the one sentence summary about this paper is that it describes a probabilistic model for
 generating sentences with an explicit phrase structure. And this can be used for both parsing and
 language modeling. So what gets you most excited about this work, Chris?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Chris Dyer" timestamp="01:23">
+<turn speaker="Chris Dyer" timestamp="01:23">
 
 I think what I really like about this is that it's a generative model that works really, really well
 on a problem that we usually think is best solved with discriminative methods. So parsing for
@@ -69,20 +69,20 @@ sentences are generated. We simplified it in various ways and it's not perfect, 
 essentially a generative model. And so to model this using a generative approach and seeing good
 performance is to me almost a confirmation of the idea of syntax.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="02:53">
+<turn speaker="Waleed Ammar" timestamp="02:53">
 
 Okay, great. So one of the new themes in this paper compared to previous work in transition based
 parsing is that it constructs the parse tree in a top down fashion rather than a bottom up fashion.
 Could you explain the difference between the two and why one is better than the others or what are
 the differences?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Chris Dyer" timestamp="03:15">
+<turn speaker="Chris Dyer" timestamp="03:15">
 
 Right. So a top down process is a more natural order for the generation of a parse tree, so if you
 go back to these phrase structure parse trees, they really were characterized in terms of a top down
@@ -93,10 +93,10 @@ things like parent and grandparent annotations to build better grammars for gene
 parsing back in the days when we were doing count based or smoothing based approaches to inferring
 probabilistic grammars. And those worked really well.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Chris Dyer" timestamp="04:16">
+<turn speaker="Chris Dyer" timestamp="04:16">
 
 In fact, when you conditioned on a sort of very long history going all the way up the tree, you got
 very, very beautiful grammatical sentences. It was just very hard to estimate them because the data
@@ -106,18 +106,18 @@ the tree. But we're going to use neural networks to control the capacity of the 
 than having a massive sparse model we're going to have everything embedded in a low dimensional
 space. And that'll make the estimation problem a little easier.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="04:51">
+<turn speaker="Waleed Ammar" timestamp="04:51">
 
 Absolutely. So we can think of this as a more elaborate, more expressive way of generating sentences
 compared to a CFG an SNN based on a CFG parsing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Chris Dyer" timestamp="05:10">
+<turn speaker="Chris Dyer" timestamp="05:10">
 
 Right, right. So I think, to me what this model does is it says, well, we want to model this big
 joint distribution on trees and strings. And we know that we might've gotten some details of our
@@ -129,10 +129,10 @@ important information for making good decisions about what the next bit of struc
 And so RNNs tend to build in this bias where they can see gradients flow more easily to things in
 the recent past rather than in the distant past.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Chris Dyer" timestamp="06:10">
+<turn speaker="Chris Dyer" timestamp="06:10">
 
 And so in some sense, what this model is doing is it's making things that are syntactically recent
 also close in the RNNs that are parameterizing this work and things that are close by sequentially
@@ -142,19 +142,19 @@ the human mind, the language faculty isn't sensitive to things that happen nearb
 the standard temporal mark of assumption, but rather things that are close by in these syntactic
 structures.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="06:55">
+<turn speaker="Matt Gardner" timestamp="06:55">
 
 But don't you actually get both of them because because you're embedding the buffer and you're
 embedding the stack, can you actually look at the weights that are learned to actually tease apart
 what's actually going on here?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Chris Dyer" timestamp="07:08">
+<turn speaker="Chris Dyer" timestamp="07:08">
 
 Yeah, that's a great question. I put that in because of course I didn't trust myself to give up on
 that on sequentiality too much because, well, we know sequential models work really, really well. So
@@ -163,17 +163,17 @@ this paper that just came out at EACL a couple of weeks ago in Valencia. And he 
 ablating the model. And we actually found that when we got rid of the encoding of the buffer we did
 better then when we had it in there.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="07:44">
+<turn speaker="Matt Gardner" timestamp="07:44">
 
 Oh, that's surprising.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Chris Dyer" timestamp="07:44">
+<turn speaker="Chris Dyer" timestamp="07:44">
 
 So that was actually the best possible result that I could have hoped for. And, and a real surprise,
 in fact, I thought, well, language is partially sequential. There actually are some interesting
@@ -189,35 +189,35 @@ this up actually was to say that, they point out that people aren't actually per
 either. About 10% of the time you'll say the wrong word and agree with the most recent noun rather
 than the one you should have agreed with.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Chris Dyer" timestamp="09:06">
+<turn speaker="Chris Dyer" timestamp="09:06">
 
 So I always thought, well, really what we need is probably a little bit of both. So I'm going to
 have both the sequential encoding of the buffer and also the tree encoding that comes through the
 stack. But I was happy to see that if we got rid of them we could do better.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="09:20">
+<turn speaker="Matt Gardner" timestamp="09:20">
 
 Interesting.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="09:21">
+<turn speaker="Waleed Ammar" timestamp="09:21">
 
 Yeah, that's really interesting. One of the things that I found most exciting about this paper also
 is the intuition that you can modify or adapt the parser transitions to generator transitions. Could
 you tell us a little more about this and how did you come up with this idea?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Chris Dyer" timestamp="09:45">
+<turn speaker="Chris Dyer" timestamp="09:45">
 
 Well, basically what we're doing is we're defining a distribution over these structures and trees
 are, can be enumerated in a whole bunch of different ways. You can traverse them in unambiguous way.
@@ -230,10 +230,10 @@ distribution. So in particular in this with RNNs where you can expect the RNN, o
 RNN will remember anything important from the past you can actually justify this using the chain
 rule.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Chris Dyer" timestamp="11:05">
+<turn speaker="Chris Dyer" timestamp="11:05">
 
 And so it's not always the case that there's a very obvious set of transitions that you can define.
 So in some cases you can't compute in an easy way the set of transitions that would let you build a
@@ -248,19 +248,19 @@ the kind of metaphor I had in mind. But I think it is maybe not the best way of 
 work actually. It's just basically decomposing a complex structure in terms of the chain rule and
 these structure building operations.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="12:36">
+<turn speaker="Matt Gardner" timestamp="12:36">
 
 That's interesting. When I read this paper I thought it was a, I read it as a pretty natural
 transition from your dependency parsing stack LTMS to constituency parsing. It sounds like you're
 hedging on that characterization level.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Chris Dyer" timestamp="12:50">
+<turn speaker="Chris Dyer" timestamp="12:50">
 
 I guess it was also a completely natural transition for me too, which is why I did this. On the
 other hand, maybe a better way of saying it is I think transition based parsing sort of misses the,
@@ -272,19 +272,19 @@ these automata will consume inputs and other ones will just generate things or m
 of the two. And so I don't think I really appreciated that until I started using these things to
 build generative models.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="13:49">
+<turn speaker="Matt Gardner" timestamp="13:49">
 
 I see. Do you think you could similarly, just as how for this constituency parsing work, you have a
 discriminative version and a generative version, could you go back and make the dependency parser
 generative?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Chris Dyer" timestamp="14:01">
+<turn speaker="Chris Dyer" timestamp="14:01">
 
 Yeah, sure. And people have done this. There's a paper by Jan Buys who is a PhD student finishing at
 the University of Oxford right now working with my colleague Phil Blunsom and he has exactly that, a
@@ -296,19 +296,19 @@ you can do here. I think this question though of you know being able to compare 
 down generation orders is going to be particularly interesting to look at in the dependency case. So
 it'll be interesting to see what those results are.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="15:15">
+<turn speaker="Matt Gardner" timestamp="15:15">
 
 Yeah, do you have enough results yet to know if your generative model, so your result in this paper
 was that generative models did better than discriminative models. Do we have enough results in the
 dependency parsing case that it holds there too?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Chris Dyer" timestamp="15:31">
+<turn speaker="Chris Dyer" timestamp="15:31">
 
 No. We just literally got this implemented last week and we only have very, very preliminary
 results. In fact, we can just generate things from it right now we can't actually parse with it yet
@@ -318,10 +318,10 @@ follow on work that I think has been very interesting was done by a student of D
 will be coming out at ACL this summer where they develop a beam search algorithm for decoding
 directly from this RNNG model. And they are able to then show some interesting stuff.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Chris Dyer" timestamp="16:25">
+<turn speaker="Chris Dyer" timestamp="16:25">
 
 One is that the algorithm that we use to do posterior inference which was based on important
 sampling, well important sampling is a biased estimator and it basically drags the distribution that
@@ -335,19 +335,19 @@ F on section 23, which for those poor souls worried about parsing accuracy on se
 phenomenally good result. We've seen just a huge set of improvements over the last couple of years
 with the neural networks on this task. So I think it's time to work on a different tasks.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="17:45">
+<turn speaker="Waleed Ammar" timestamp="17:45">
 
 Do you think that the generative model works better than this third model really because it is a
 better fit for how that data is generated? Or is there a different hypothesis that you have about
 why this is the case?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Chris Dyer" timestamp="17:59">
+<turn speaker="Chris Dyer" timestamp="17:59">
 
 That's a good question. I think there are two things. One, I would like to say it's a better fit two
 we've got some other work coming out this year. Well hopefully it's in review at ICML right now
@@ -359,10 +359,10 @@ have higher asymptotic errors, but approach to the error rates more rapidly. Tha
 better sample complexity. Those poled also empirically with big fancy neural network generative
 models.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Chris Dyer" timestamp="19:00">
+<turn speaker="Chris Dyer" timestamp="19:00">
 
 And also compared to big fancy neural discriminative models. So the original work was very
 theoretical, but it relied crucially on linearity and condexity and all of this stuff that we've
@@ -373,32 +373,32 @@ Treebank and just the 40,000 sentences that are available from the Penn Treebank
 hypothesis might be that we are doing better because we are working with a more sample efficient
 learner namely this generative estimator rather than the discriminative one.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="19:54">
+<turn speaker="Matt Gardner" timestamp="19:54">
 
 That's really interesting.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="19:55">
+<turn speaker="Waleed Ammar" timestamp="19:55">
 
 Yeah. I'm looking forward to reading the paper when it comes out.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Chris Dyer" timestamp="20:00">
+<turn speaker="Chris Dyer" timestamp="20:00">
 
 Well, you can find the ICML one, that's on archives somewhere. Dani Yogatama is the first author so
 you can check that out.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="20:08">
+<turn speaker="Matt Gardner" timestamp="20:08">
 
 I have one more kind of higher level point. In your intro to this paper, you talk about Chomsky's
 work on hierarchical nature of language and you say that sequential models are apriori inappropriate
@@ -409,10 +409,10 @@ It's going to have a bounded length of course, cause it's like saving the stack 
 But you could make the argument that just with a sequential model, language isn't nested enough.
 Maybe it can learn whatever hierarchy it needs just in the sequential depth of this biLSTM.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Chris Dyer" timestamp="21:01">
+<turn speaker="Chris Dyer" timestamp="21:01">
 
 Yeah, that's absolutely right. I mean this is the this is the classic argument. So we know that
 humans have only a limited capacity for center embedding probably three words. Sometimes people
@@ -424,10 +424,10 @@ making the wrong generalizations? And I think the problem with sequential models
 more apt to make the wrong kinds of generalizations that no human would make. And part of, you know,
 longterm we want to bring human intelligence and artificial intelligence closer together.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Chris Dyer" timestamp="22:02">
+<turn speaker="Chris Dyer" timestamp="22:02">
 
 Our artificial agents will behave more naturalistically and by doing this we will also learn
 something about what humans are doing in their heads maybe, which will be scientifically
@@ -437,25 +437,25 @@ that we can't possibly learn with these models that are wrong. And in fact, we h
 amounts of data and we know that these models can be excellent on them. So the question is really
 more of one of sample complexity.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="22:44">
+<turn speaker="Matt Gardner" timestamp="22:44">
 
 Yeah, that's a really good point.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="22:46">
+<turn speaker="Waleed Ammar" timestamp="22:46">
 
 Great. Are there any other things you'd like to discuss on this paper or new research you're working
 on that is relevant?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Chris Dyer" timestamp="22:59">
+<turn speaker="Chris Dyer" timestamp="22:59">
 
 So I'm still continuing on this with recurrent neural network grammars. I think there is a lot to be
 done still with unsupervised learning and using them in conditional generation contexts. We started
@@ -467,24 +467,24 @@ something like caption generation or translation modeling, then the training, th
 data starts to become a lot more expensive. So I'm optimistic that we'll see some positive results
 there too.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="23:59">
+<turn speaker="Waleed Ammar" timestamp="23:59">
 
 Excellent. Thank you so much for joining us today and hopefully we will see you again.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Chris Dyer" timestamp="24:05">
+<turn speaker="Chris Dyer" timestamp="24:05">
 
 Thanks guys. It was great.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Speaker 6" timestamp="24:09">
+<turn speaker="Speaker 6" timestamp="24:09">
 
 Well, thank you Chris for talking with us. That was a really fascinating conversation. A note to any
 of you listeners, if you want to similarly be on this podcast and talk with us about your paper,
@@ -493,4 +493,4 @@ paper that came up in this conversation, which is what I think of as the precurs
 we've talked about today. It's called Transition-Based Dependency Parsing with Stack Long Short-Term
 memory, and it was by Chris Dyer and other people in his group.
 
-</Turn>
+</turn>

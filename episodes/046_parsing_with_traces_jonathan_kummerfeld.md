@@ -8,64 +8,64 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting recent work in
 natural language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is Matt Gardner and Waleed Ammar. We are research scientists at the Allen Institute for
 Artificial Intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:11">
+<turn speaker="Matt Gardner" timestamp="00:11">
 
 Okay. Today our guest is Jonathan Kummerfeld who finished a PhD at Berkeley with Dan Klein about a
 year and a half ago. And he, since then he's been a postdoc at the University of Michigan. His
 thesis work was on Graph Parsing. He's currently developing a Conversational Academic Adviser,
 Jonathan, it's great to have you with us.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Kummerfeld" timestamp="00:31">
+<turn speaker="Jonathan Kummerfeld" timestamp="00:31">
 
 Thanks for having me.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:32">
+<turn speaker="Matt Gardner" timestamp="00:32">
 
 So today we'll, talk about your recent TACL paper called Parsing with Traces and I guess as they go
 into the fourth algorithm and a structural representation. This was a, I guess you were just telling
 us this was the core of your thesis work.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Kummerfeld" timestamp="00:47">
+<turn speaker="Jonathan Kummerfeld" timestamp="00:47">
 
 Yeah, that's right. So this is sort of the large chunk that really was half the thesis. And so I
 wrapped it up and then it was published a TACL, but presented EMNLP a couple of months ago.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="01:00">
+<turn speaker="Matt Gardner" timestamp="01:00">
 
 So the title is Parsing with Traces. What is the trace?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="01:04">
+<turn speaker="Matt Gardner" timestamp="01:04">
 
 Right. So first I should say a disclaimer. I am not a linguist in a sense. I took a couple of
 courses during PhD, but that's it. So I'm sure there are technicalities, the definitions that I will
@@ -74,10 +74,10 @@ that we don't see in the surface form, but linguists believe is there. And to ma
 you take an example, like "I like books." Very short sentence, and then you think of if we convert
 that into a question, you know, "What do I like?"
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Kummerfeld" timestamp="01:41">
+<turn speaker="Jonathan Kummerfeld" timestamp="01:41">
 
 You could interpret that transition from the statement to the question as being the books was
 converted into this "wh" phrase. And then the "wh" phrase moved to the front of the sentence. And so
@@ -88,19 +88,19 @@ Jonathan likes books." And change that into "What does Waleed believe that Matt 
 likes?" And you still have this trace, it's just going right across the entire sentence. So the idea
 of this is to capture that movement and sort of express it in the structure of the parse.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="02:34">
+<turn speaker="Matt Gardner" timestamp="02:34">
 
 But, wait a minute. If I'm like a new PhD student, maybe the only thing I've heard of is dependency
 parsing. So you just get this whole tree, like what, where does this movement even show up? Like how
 do you, how do you annotate this? What are you talking about?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Kummerfeld" timestamp="02:49">
+<turn speaker="Jonathan Kummerfeld" timestamp="02:49">
 
 Right? So yeah, so depending on which formalism you've grown up with, you'll see different things
 here. Actually every formalism for syntactic representations, and apologies to linguists here, maybe
@@ -116,20 +116,20 @@ structure as part of the overall syntactic representation. And then when you do 
 dependencies, usually you throw away those bits and say, well, we're just going to get the
 structural part of the parse
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="04:04">
+<turn speaker="Matt Gardner" timestamp="04:04">
 
 Yeah, I guess if you're confused about what we're talking about to your, I would say definitely just
 look at an actual Penn treebank parse. Go look at it, go look at the data and you will see sentences
 where there's this crazy blank that linguists think should be there, there are good reasons for it.
 But you don't see this in the dependency parse. Yup. So great.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Kummerfeld" timestamp="04:24">
+<turn speaker="Jonathan Kummerfeld" timestamp="04:24">
 
 I'd also add to that one thing you find there are all sorts of null phenomena that occur in the
 treebank. So it's not just traces like this. You get all sorts of other things going on and the
@@ -138,17 +138,17 @@ and now get on with your parsing algorithm. So step one was always throw them aw
 what we'll be talking about is how I say, well, let's not throw them away. Let's try to actually
 retain them.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="04:56">
+<turn speaker="Matt Gardner" timestamp="04:56">
 
 Why did people throw them away in the first place?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Kummerfeld" timestamp="04:59">
+<turn speaker="Jonathan Kummerfeld" timestamp="04:59">
 
 So the problem these structures introduced is that they make your parses complicated in a very
 particular way, which is that they break independence assumptions. So one of the things that makes
@@ -159,17 +159,17 @@ outside it are independent. Now, once you have these non-local trace connections
 assumptions break. So as a starting point, when we're looking at algorithms, it was convenient to
 say let's not worry about them. Let's try and get the core structure first.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="05:48">
+<turn speaker="Waleed Ammar" timestamp="05:48">
 
 So, how does the dependency parsing formalism avoid this problem or does it?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Kummerfeld" timestamp="05:54">
+<turn speaker="Jonathan Kummerfeld" timestamp="05:54">
 
 So generally they avoided just by not including it. So the dependency parse is a tree and it leaves
 out edges that would have created a graph structure. Now there is a decision of which edge you leave
@@ -178,36 +178,36 @@ keep the trace edge, in which case you lose productivity but keep the tree. So p
 different ways of doing this and in some languages there's no way of escaping that non productivity.
 But yeah, at the end of the day they make a decision and throw away part of it to get a tree.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="06:35">
+<turn speaker="Matt Gardner" timestamp="06:35">
 
 And so what your work wants to do is instead of just giving us a tree structure, either a
 constituency, parse that's removed traces or a dependency parse that is inherently just a tree. What
 you want is to parse a sentence into a graph structure that preserves these trace or null elements
 that linguists say are there.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Kummerfeld" timestamp="06:53">
+<turn speaker="Jonathan Kummerfeld" timestamp="06:53">
 
 Exactly.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="06:53">
+<turn speaker="Matt Gardner" timestamp="06:53">
 
 So how do, how actually before we get to how you would want to do this, maybe we should talk a
 little first about why. Why should we care? Like what, what could you, if you could recover this
 structure, what could you do with it?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Kummerfeld" timestamp="07:05">
+<turn speaker="Jonathan Kummerfeld" timestamp="07:05">
 
 Right. So I should note one of the thing, you know, we've been talking about these structures, but
 to give a sense, they're pretty rare in a sense. I mean, you know, 50% or so of sentences have them,
@@ -222,10 +222,10 @@ information extraction, we're just not capturing all of the relations. If you th
 question answering we're not able to structure our question as directly and we have to implicitly
 get the question being asked.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="08:22">
+<turn speaker="Matt Gardner" timestamp="08:22">
 
 Ya, so on the Aristo project here at AI2 some people built by hand, a system that takes a declare a
 an interactive question that has this "wh" phrase and tries to undo "wh" movement. Let me back up a
@@ -234,43 +234,43 @@ And what we really want to do is have a declarative sentence that we can decide 
 false. And then you can score these multiple choices against each other that way. But to get a
 declarative sentence, you have to undo this "wh" movement.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Kummerfeld" timestamp="08:52">
+<turn speaker="Jonathan Kummerfeld" timestamp="08:52">
 
 Right.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="08:52">
+<turn speaker="Matt Gardner" timestamp="08:52">
 
 And that actually is, maybe you could write, you can write down some rules to get you part of the
 way there, but there are some complex things and if you had a trace that just told you where the
 "wh" work was, it would be a whole lot easier to do to undo this movement.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Kummerfeld" timestamp="09:06">
+<turn speaker="Jonathan Kummerfeld" timestamp="09:06">
 
 Right, right. Yeah, no, exactly. And I mean that is sort of what we're recovering here though. Of
 course, it's not easy to recover the trace either. So this is why the task is not straightforward.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="09:19">
+<turn speaker="Matt Gardner" timestamp="09:19">
 
 Yeah. And just another, to give one other concrete example you mentioned information extraction
 coordinate structures. Like if I have an "and" you want, you want to tell us what's going on with
 this kind of structure,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Kummerfeld" timestamp="09:34">
+<turn speaker="Jonathan Kummerfeld" timestamp="09:34">
 
 Right. So I'll just read through the, it's not a complete sentence. This is just a chunk. So "cooked
 soup today and curry yesterday" Now what's going on here is that whoever is staying this clearly
@@ -286,20 +286,20 @@ of that information but without traces you kind of have to settle for one or the
 stuck. You're leaving out some information or saying just the conjunction is the head, in which case
 you've got this weird thing where you cooked and what does that even mean?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="10:57">
+<turn speaker="Matt Gardner" timestamp="10:57">
 
 Yeah. And this leads to some interesting problems and information extraction. So if you're trying to
 recover predicate argument structure so that you can find open IE relations or something that you
 can use for whatever to fill slots or something with information extraction. You have to deal with
 these conjunctions and it's easy to get it wrong, but if you had trace it would be a lot easier.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Kummerfeld" timestamp="11:23">
+<turn speaker="Jonathan Kummerfeld" timestamp="11:23">
 
 And one other application that you know, I know less about but I think comes up is for machine
 translation where in different languages you have different patterns of what gets dropped from the
@@ -308,19 +308,19 @@ so you just don't have it in your input, but then you need to produce it on the 
 versa. And if you had the null elements and their relation to the rest of the sentence, that could
 potentially help you in the translation process.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="11:53">
+<turn speaker="Matt Gardner" timestamp="11:53">
 
 Yeah, that's a good point. Great. So I guess we've talked about what we're talking about, why we
 might want to parse with graphs. Your, the paper is actually quite dense and there's a lot of nice
 nuggets in there. Do you want to do your best to tell us how you can do this parsing?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Kummerfeld" timestamp="12:13">
+<turn speaker="Jonathan Kummerfeld" timestamp="12:13">
 
 Right. This is the scary part. I suppose I would characterize this work as having a lot of little
 ideas which work together to achieve this goal of trace parsing. And it's tricky when you have lots
@@ -337,19 +337,19 @@ chunk separately. So okay, that's fairly straight forward. We have one rule. The
 items that are next to each other and the constraint is they have to be adjacent and you combine
 them to produce a new item at a high level.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="13:42">
+<turn speaker="Matt Gardner" timestamp="13:42">
 
 Oh, sorry to interject real quick. So just to be totally clear, this is something like I have a rule
 that says "S" a sentence goes to the "S" the non terminal, goes to NPVP maybe you would've seen this
 rule and it's this rule that lets us join adjacent structures.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Kummerfeld" timestamp="13:59">
+<turn speaker="Jonathan Kummerfeld" timestamp="13:59">
 
 Exactly. Yes. And though we have to be careful. So there are two types of rules here. So one type of
 rule is sort of grammatical rule like you just described. So "S" to NPVP now I can also say that X
@@ -361,10 +361,10 @@ the graph case? Well, the problem we hear is that we want say our noun phrase to
 somewhere else in the sentence. And so that independence assumption breaks, we can't do this nice
 decomposition.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Kummerfeld" timestamp="14:56">
+<turn speaker="Jonathan Kummerfeld" timestamp="14:56">
 
 And the solution is essentially to make the items more complicated and then have additional rules
 for what decides whether they can combine. So before I said the only requirement is two Items
@@ -375,10 +375,10 @@ say, can you combine two items? So it's essentially impossible to describe the s
 a paper, even in a talk, you know, give me an hour and a whiteboard and we'll see how we go. But I
 would say the core idea. So which actually the core idea was not mine.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Kummerfeld" timestamp="15:50">
+<turn speaker="Jonathan Kummerfeld" timestamp="15:50">
 
 It was something that I built on. This comes from Emily Pitler's work in 2012, one of the first TACL
 papers actually. She had this idea that rather than having a continuous span of the sentence be your
@@ -390,10 +390,10 @@ okay, since I don't have just simple spans, how do I decide whether things can c
 this whole set of rules saying that, you know, if you have two continuous items, they can combine
 but not if that external point is inside one of the spans.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Kummerfeld" timestamp="16:48">
+<turn speaker="Jonathan Kummerfeld" timestamp="16:48">
 
 And in some cases you can combine three items and in that case they have to obey these additional
 constraints. And essentially it turns into a huge number of rules about these structural properties.
@@ -405,19 +405,19 @@ properties like uniqueness to guarantee properties of the derivation. So I don't
 get into all of those right now, but that at a high level, that's kind of what we're doing and it's
 how it works. In order to get a graph structure out.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="17:46">
+<turn speaker="Waleed Ammar" timestamp="17:46">
 
 So it might be helpful to give the intuition of why, why it makes sense to combine an item which has
 just one word external to it. And what does it mean for this to to combine with an adjacent item in
 terms of the one-endpoint space?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Kummerfeld" timestamp="18:08">
+<turn speaker="Jonathan Kummerfeld" timestamp="18:08">
 
 Right. Okay. So yeah, I'll explain that. So the one key idea that makes all this work, and again,
 this comes from Emily Pitler's work and we've sort of built on it is this idea of one-endpoint-
@@ -429,10 +429,10 @@ you have an edge in your mind. Now look at every single edge that crosses "E" so
 of edges that set of edges. They all share one-endpoint. So maybe they all start at word 16 and then
 those edges go to words five, seven and nine.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Kummerfeld" timestamp="19:09">
+<turn speaker="Jonathan Kummerfeld" timestamp="19:09">
 
 But they all start at word 16, and they all cross your original edge "E" that's a valid one-
 endpoint-crossing. If that set of crossing edges had multiple end points on both sides, then it's
@@ -445,19 +445,19 @@ this one-endpoint-crossing notion, that external point is the point shared by al
 of edges that go from there to somewhere in the sentence and cross your edge "E". And so with these
 items, we're able to capture those structures and maintain that property of one-endpoint-crossing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="20:21">
+<turn speaker="Waleed Ammar" timestamp="20:21">
 
 Perfect. And I may add that the significance of this particular constraint is that it allows us to
 increase the coverage of the parse trees in the tree banks that we commonly use significant to 97.
 Is that a right number?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Kummerfeld" timestamp="20:38">
+<turn speaker="Jonathan Kummerfeld" timestamp="20:38">
 
 So the original work of Emily Pitler was looking at trees and there we do see this dramatic increase
 in coverage across multiple languages well into the 90s. In our work we're focused on English. And
@@ -471,51 +471,51 @@ you can get coverage as low as sort of 70%. It turns out you have to carefully c
 transformation from the Penn Treebank to a dependency structure to get really high coverage with
 one-endpoint-crossing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="21:51">
+<turn speaker="Matt Gardner" timestamp="21:51">
 
 What kind of coverage can you get over the Penn Treebank if you don't handle any of these
 phenomenon? Like if you just totally throw out no elements?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Kummerfeld" timestamp="22:01">
+<turn speaker="Jonathan Kummerfeld" timestamp="22:01">
 
 Right? So in that case you got 100% so no elements the entire source of all of these ones. Without
 them you get projective tree structures in all as well.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="22:11">
+<turn speaker="Matt Gardner" timestamp="22:11">
 
 Right, I meant, I meant the other way around because we're throwing that away. How much of the
 actual tree bank are we miss representing?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Kummerfeld" timestamp="22:18">
+<turn speaker="Jonathan Kummerfeld" timestamp="22:18">
 
 I see, great. By throwing that away, we, if you do it at a sentence level, we're losing about 50% of
 sentences. Now as I said, if you consider these arcs, there are only one per sentence also. So as a
 percentage of arcs, it's actually extremely small. Sort of 3% or 4%. But of course that, you know,
 overall the sentence is still there. Yeah, that's the trade off.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="22:49">
+<turn speaker="Matt Gardner" timestamp="22:49">
 
 Interesting.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Kummerfeld" timestamp="22:50">
+<turn speaker="Jonathan Kummerfeld" timestamp="22:50">
 
 So one thing I should add then about this representation question is it's kind of interesting to see
 what decisions impact this. The mechanism we're doing essentially is you take the constituency parse
@@ -526,10 +526,10 @@ phrases and things like that. And some of those decisions are things that lingui
 about a lot. And I don't know the details in that, but for us, we could do this simple experiment
 and say, okay, if we set the head to be this or that, what happens to our coverage?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Kummerfeld" timestamp="23:41">
+<turn speaker="Jonathan Kummerfeld" timestamp="23:41">
 
 And a couple of things that came up. One was that if you use the auxiliary verb as the head, that
 creates a lot of one-endpoint-crossing violations. So instead you want the main verb to always be
@@ -540,10 +540,10 @@ perspective. And here we kind of have a I don't know, mathematical I guess argum
 if we believe one-endpoint-crossing is somehow a meaningful representation of language, which I
 think is an open question as to whether that's the right structure.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="24:33">
+<turn speaker="Waleed Ammar" timestamp="24:33">
 
 Sorry, just to clarify, you're saying that in the past when we did this kind of conversion, we made
 decisions that are very practical and may ignore some of the linguistic perspectives on how the
@@ -551,10 +551,10 @@ conversion should work. And now I'm extrapolating a little bit. I'm saying maybe
 parser we can incorporate more linguistic input into the conversion process and say, Oh, it does
 actually make sense to use the auxiliary verb as the head verb.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Kummerfeld" timestamp="25:08">
+<turn speaker="Jonathan Kummerfeld" timestamp="25:08">
 
 So not quiet. Again, I don't know the linguistics background in particular. I know, you know, for
 example, Stanford dependencies they made a bunch of different versions with different motivations
@@ -566,37 +566,37 @@ this one. So they kept that one. For this to work, we have to undo some of those
 actually find that with our head rules, parsing is harder in some ways. but we can cover more of the
 sentences.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Kummerfeld" timestamp="26:00">
+<turn speaker="Jonathan Kummerfeld" timestamp="26:00">
 
 So it's this trade off in kind of coverage versus accuracy. Of course the end of the day we want
 both and there's an entire modeling question. This paper doesn't get into which would be an
 important direction for future work.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="26:15">
+<turn speaker="Matt Gardner" timestamp="26:15">
 
 Great. That was a nice high level explanation of some really complex work. Thanks for describing
 this. Maybe we can talk now about how well it works,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Kummerfeld" timestamp="26:25">
+<turn speaker="Jonathan Kummerfeld" timestamp="26:25">
 
 Right, so in terms of how well it works, there are a couple of different factors here. So this paper
 is all about inference rather than modeling. So the numbers in terms of accuracy are not going to be
 stellar. I want to prepare everyone for that. But the goal here is basically coverage. And in terms
 of coverage, you know, we get up to around 97% of sentences and that's, you know, 99.5% of edges.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Kummerfeld" timestamp="26:51">
+<turn speaker="Jonathan Kummerfeld" timestamp="26:51">
 
 So in that sense its a success, you know, we have this extremely high coverage of the structures we
 observe in the Penn Treebank and from an algorithmic perspective, we've got this end of the fourth
@@ -609,10 +609,10 @@ sitting in front of that end of the fourth, which is not so nice. It turns out a
 you need to encode additional information on the ends of every item to say things about structural
 properties.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Kummerfeld" timestamp="27:47">
+<turn speaker="Jonathan Kummerfeld" timestamp="27:47">
 
 So it's actually there's an extra term of S to the fourth, which is the number of structural non
 terminals on each word. And there are about a thousand of those. So, you know, we're looking at
@@ -623,10 +623,10 @@ bigger than what we see in actual English. So if you throw out all of those rule
 during the generation of the gold structures, you get it down to something like 6 or 700. I can't
 remember exact name number off the top of my head.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Kummerfeld" timestamp="28:40">
+<turn speaker="Jonathan Kummerfeld" timestamp="28:40">
 
 627 so you can throw away a large number, those rules and still have full coverage over the Penn
 Treebank. Which of course leaves open the question of is there an even more restrictive space out
@@ -638,10 +638,10 @@ accuracy. And here as I said, we're sort of, we're running out of pages in the p
 you know, the whole inference story. The model here is extremely simple. Essentially it's a first
 order model with a bunch of surface features.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Kummerfeld" timestamp="29:36">
+<turn speaker="Jonathan Kummerfeld" timestamp="29:36">
 
 So this, by that I mean things like should there be an edge between these two words and here are
 what the words are and their neighbors. We don't have any second order features so this edge
@@ -651,17 +651,17 @@ straight linear models. So, with all those caveats are now actually reveal numbe
 88 or so on the standard Penn Treebank section 23 for trees. So that's quite a bit lower than sort
 of the state-of-the-art systems. But still reasonable.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="30:18">
+<turn speaker="Matt Gardner" timestamp="30:18">
 
 And, state-of-the-art systems get like 92 on this metric?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Kummerfeld" timestamp="30:22">
+<turn speaker="Jonathan Kummerfeld" timestamp="30:22">
 
 Right, so state-of-the-art systems get around 92. I think the best number I've seen anywhere like 94
 point something with a combination of neural models running for days and things. It's very, very
@@ -677,18 +677,18 @@ the whole tree to make these decisions. So I suppose my view is on the modeling 
 getting results, they're in the ballpark of reasonable, but their is certainly seems scope for
 improvement.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="31:44">
+<turn speaker="Matt Gardner" timestamp="31:44">
 
 Just to be clear on the Penn Treebank metric, you're producing a graph with no elements and so to
 evaluate on the tree metric, you're doing the standard throw away all of the null elements.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Kummerfeld" timestamp="31:56">
+<turn speaker="Jonathan Kummerfeld" timestamp="31:56">
 
 Exactly, yes. Yeah. And one interesting thing actually is we can also run our parser with null
 elements disabled. Of course. You know, you leave out some rules and if we train with the head rules
@@ -697,10 +697,10 @@ recall in this space we gained back you know, about one to 1.5 points in accurac
 clearly there is this modeling trade-off and by making the design decisions we did to improve
 coverage, we have cost ourselves inaccuracy.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="32:35">
+<turn speaker="Matt Gardner" timestamp="32:35">
 
 Interesting. So my last question then is I hear a lot these days, I don't know quite what I think
 about this criticism, but I hear a lot of people say that syntax is dead. We have all, like people
@@ -711,10 +711,10 @@ you are doing the opposite saying no dependency parses aren't good enough. We ne
 down this linguistic rabbit hole that at least some people might call it that, and get these even
 more complex structures. So what would you say to people who make these arguments?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Kummerfeld" timestamp="33:24">
+<turn speaker="Jonathan Kummerfeld" timestamp="33:24">
 
 So I have a few thoughts on that. I mean at a high level, I suppose my view is, you know, I'm a very
 empirical person. We'll see what happens basically. I think with many of these kinds of structures
@@ -726,10 +726,10 @@ general. And when I started working on this originally I was working on AMR pars
 Treebank parsing. And the, you know, AMR is another case where you have graph structures. You have
 this re entrances, which mean you know, you want to be able to get a complete graph.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Kummerfeld" timestamp="34:22">
+<turn speaker="Jonathan Kummerfeld" timestamp="34:22">
 
 And we see it coming off elsewhere. You look at your UCCA or if you look at the enhanced
 dependencies in universal dependencies. So I would say it's not purely syntax. This sort of
@@ -741,10 +741,10 @@ the surface form of text in a way that could potentially be useful. And it's a c
 community to figure out how to make them useful in these neural network models where having a graph
 structure as input is a bit of a challenge rather than some linear form.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="35:19">
+<turn speaker="Matt Gardner" timestamp="35:19">
 
 Yeah, I would say I'm, I said at the beginning, I wasn't really sure where I fall on this, but
 actually I think I'm pretty clearly in your camp where I think this is actually useful just to give
@@ -753,17 +753,17 @@ Try to think about doing this in an end-to-end neural seq2seq kind of model wher
 question and an answer and your output is a declarative sentence. Doing a seq2seq model means you
 need a bunch of labeled examples,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Kummerfeld" timestamp="35:50">
+<turn speaker="Jonathan Kummerfeld" timestamp="35:50">
 
 Right.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="35:50">
+<turn speaker="Matt Gardner" timestamp="35:50">
 
 Whereas if I can just build a parser that knows how to parse questions and leaves a trace, I don't
 need any, labeled examples. I just any labeled examples of this transformation and I just need to
@@ -771,10 +771,10 @@ know what the structure of a language is and I'm done and so I actually, it'd be
 end-to-end model here where if you have a graph parser that does the right thing, it'd be a whole
 lot easier.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Kummerfeld" timestamp="36:12">
+<turn speaker="Jonathan Kummerfeld" timestamp="36:12">
 
 Well, and going on that idea one step further, if you wrote your system to do that, interpret the
 parse that way you could then take it and apply it to other languages and have it work there too,
@@ -784,20 +784,20 @@ way. At the same time, you know, who knows what deep learning will come up with 
 years from now, maybe, we'll just have some completely new architecture and, you know, words will go
 in and magic come out the other side. We'll see.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="36:54">
+<turn speaker="Matt Gardner" timestamp="36:54">
 
 And I guess we shouldn't, we should be a little bit careful here. It's not really a dichotomy
 between structure and neural nets because in part of your work, you're using a biLSTM to predict
 stuff and you could imagine using a neural net to predict the structure. It's just, it's this
 ambiguous structure helpful.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Kummerfeld" timestamp="37:14">
+<turn speaker="Jonathan Kummerfeld" timestamp="37:14">
 
 No, that's a very good point. Yeah, that's very true. And, and I think actually the next step on
 this work, and I've mentioned a few times this sort of the inference piece, which is what this paper
@@ -810,25 +810,25 @@ pruning was more accurate than the linear one. So that's not a big surprise. And
 about that is it improves speed cause you can prune more, but it also improves accuracy because the
 pruning means you've got your fewer things that could potentially be incorrect to choose from.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Kummerfeld" timestamp="38:10">
+<turn speaker="Jonathan Kummerfeld" timestamp="38:10">
 
 So if we can make the modeling better, it will improve both speed and accuracy, which are the two
 places where I, you know, what to go further with this work.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="38:18">
+<turn speaker="Matt Gardner" timestamp="38:18">
 
 Great. Any last thoughts before we conclude?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Kummerfeld" timestamp="38:25">
+<turn speaker="Jonathan Kummerfeld" timestamp="38:25">
 
 I suppose one of the thing on sort of a methodological point, which is a, I don't know if this will
 you know, I think it's good to talk about these things. So this work actually only got in on the
@@ -837,33 +837,33 @@ rejected twice. I had great angst and pain in that process. So you know, I think
 I've been quite happy with how it turned out. And I think if you have a paper you're working on for
 NAACL this coming up you know, and it doesn't get in don't lose hope.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="39:00">
+<turn speaker="Matt Gardner" timestamp="39:00">
 
 Thanks that we all need that encouragement cause the review process can seem pretty random
 sometimes.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Kummerfeld" timestamp="39:07">
+<turn speaker="Jonathan Kummerfeld" timestamp="39:07">
 
 Right.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="39:08">
+<turn speaker="Matt Gardner" timestamp="39:08">
 
 Thanks. It's nice talking to you.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jonathan Kummerfeld" timestamp="39:10">
+<turn speaker="Jonathan Kummerfeld" timestamp="39:10">
 
 You too. Thank you very much.
 
-</Turn>
+</turn>

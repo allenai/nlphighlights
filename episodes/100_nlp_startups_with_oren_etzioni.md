@@ -8,23 +8,23 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting work in natural
 language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is Matt Gardner and Walleed Ammar. We are research scientists at the Allen Institute for
 Artificial Intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:12">
+<turn speaker="Waleed Ammar" timestamp="00:12">
 
 Okay. This episode is geared towards helping NLP researchers and practitioners who are interested in
 starting a company or joining an early stage startup. So today our guest is Oren Etzioni. Oren Is
@@ -35,18 +35,18 @@ which got acquired by Thomson Reuters, Farecast by Microsoft and Decide by eBay,
 the Seattle's a venture capital Madrona and is actively helping severally IBS startups in the AI2
 Incubator. So welcome to the program.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Oren Etzioni" timestamp="00:52">
+<turn speaker="Oren Etzioni" timestamp="00:52">
 
 Thank you Waleed and I should say that I've learned a lot from you and from Matt. So pleasure to be
 here.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:59">
+<turn speaker="Waleed Ammar" timestamp="00:59">
 
 Thank you. One might argue that successful researchers and successful entrepreneurs have a lot in
 common. Both tend to be good at identifying important problems, come up with original solutions and
@@ -55,10 +55,10 @@ significance of their contributions. At the same time, my anecdotal evidence sug
 small fraction of the researchers follow that path. What are some of the complimentary skills you
 think researchers need in order to also be good entrepreneurs?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Oren Etzioni" timestamp="01:27">
+<turn speaker="Oren Etzioni" timestamp="01:27">
 
 It's a great question and I would say that I very much agree with you and I would add that
 researchers are poised to be leaders in startups. Another huge thing with a startup is uncertainty,
@@ -70,10 +70,10 @@ sometimes people in academia have a certain degree of conservatism. I know this 
 both my parents were professors and as somebody who got into academia, I was a professor at UW for
 25 years. Startups initially were the furthest thing from my mind.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Oren Etzioni" timestamp="02:18">
+<turn speaker="Oren Etzioni" timestamp="02:18">
 
 I was like, Hey, what I want to do is get tenure, but I realized over time that there is a really
 fantastic and creative enterprise in doing a startup. It's not all okay about the money. I'm going
@@ -85,10 +85,10 @@ incubator, but more broadly in the Bay area, even in Pittsburgh and other places
 Angels, VCs, people who founded companies before who were very eager to talk to super sharp
 technical people and to brainstorm startup ideas. So I think all those are things in favor of it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Oren Etzioni" timestamp="03:18">
+<turn speaker="Oren Etzioni" timestamp="03:18">
 
 I would say one reason that it's not necessarily what say 50% of the researchers do is that it does
 require a level of commitment and a level of willingness, for lack of a better phrase, to get on a
@@ -97,19 +97,19 @@ that there is a lot of stress in a startup that's even more than the stress of t
 in by the deadline and you know, gnashing your teeth over what reviewer number two said. It's the
 next level of stress and not everybody's up for that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="03:56">
+<turn speaker="Waleed Ammar" timestamp="03:56">
 
 Yeah, that makes sense. Another aspect that I would like to ask about your personal experience with,
 is how do you go from being a professor at UW thinking about writing grants, teaching advising
 students to creating the head space and time necessary to actually pursue, a new start up,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Oren Etzioni" timestamp="04:16">
+<turn speaker="Oren Etzioni" timestamp="04:16">
 
 Well, I think the best startups come from passion. It's so hard in the beginning to know, gosh, this
 is going to be a huge business and we can look at examples. For example, Google, which is a startup
@@ -124,19 +124,19 @@ start and that you can do easily, even in the context of all the academic issues
 you can do that if you have a passion for a particular subject matter for a particular technology
 and you say, wow, this could really make a difference.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="05:24">
+<turn speaker="Waleed Ammar" timestamp="05:24">
 
 Got it. So I guess the main additional skill that you suggested that people actually need is be
 willing to sacrifice a lot of their time and work, having a passion for the startup they're
 interested in.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Oren Etzioni" timestamp="05:35">
+<turn speaker="Oren Etzioni" timestamp="05:35">
 
 I think it's, it's a passion and it's the desire to take these really cool thing that you've built
 or that you've contemplated and bring it to the real world. So it's one level of reality to say,
@@ -149,26 +149,26 @@ take it from the paper and demo stage to a prototype and ultimately to a product
 passion for the subject, but passion for really getting it into the hands of people. Right? Because
 if ultimately people or organizations are not using your product, then nothing happens.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="06:38">
+<turn speaker="Waleed Ammar" timestamp="06:38">
 
 Yeah, it makes sense.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="06:38">
+<turn speaker="Matt Gardner" timestamp="06:38">
 
 Yeah. I guess at some sense. A researcher's job is to take an idea from inception to prototype and
 entrepreneur's job is to take an idea from prototype to actual user's hands. Is that fair? Like you,
 you need different skills and it's different motivations for doing both of these things.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Oren Etzioni" timestamp="06:55">
+<turn speaker="Oren Etzioni" timestamp="06:55">
 
 I think that's a great observation. The thing that I would say is it's still a journey, right? So it
 may take us a year or sometimes more, when we get from our initial research idea, initial
@@ -180,10 +180,10 @@ We had a ELMo, which was created at AI2, and that led to BERT. BERT then led to 
 these other transformer based architectures. The point is that now we have a real discontinuity in
 the abilities of NLP systems, right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Oren Etzioni" timestamp="07:51">
+<turn speaker="Oren Etzioni" timestamp="07:51">
 
 These types of systems with some fine tuning are getting very strong results across a wide range of
 tasks. Usually if you follow up on that, the next thing that happens is products that are based on
@@ -194,18 +194,18 @@ say, gosh, I'd love to get NLP to make the world a better place. Maybe in the co
 analysis and the context of translation, there's so many potential applications. If you're
 interested in that, then that's the time to start thinking about a potential startup.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="08:38">
+<turn speaker="Waleed Ammar" timestamp="08:38">
 
 Yeah. So when you think about assessing early stage startups, what kind of factors do you consider
 as an investor or as a stakeholder?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Oren Etzioni" timestamp="08:47">
+<turn speaker="Oren Etzioni" timestamp="08:47">
 
 Well, the first startup I did, spinning out of the university of Washington, we had really great
 technology. This is back in the mid nineties so this is eons ago. We had a phenomenal technical
@@ -218,10 +218,10 @@ know the line "there's no me in team." If folks get along well, that's important
 of tension between them or a conflict of discord early on, that's a bad sign because things, right,
 once they get on the roller coaster, things are just going to get tougher from there.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Oren Etzioni" timestamp="09:41">
+<turn speaker="Oren Etzioni" timestamp="09:41">
 
 So you look at that and then you look at what's called the pain point. So do they just have a
 technology? Sometimes companies start that way or they also have an idea about how to use that
@@ -233,10 +233,10 @@ because you have the ability to sort my email, you know, using a NLP methods, ma
 other situations where you say wow, this is a real pain point. So my most successful startup, which
 was called Farecast, predicted airfare fluctuations.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Oren Etzioni" timestamp="10:32">
+<turn speaker="Oren Etzioni" timestamp="10:32">
 
 And it dealt with the question of when do I buy my airline ticket? And we wrote a paper on it
 initially back in 2003 it appeared in KDD. And in response to that paper, we got a lot of people
@@ -250,19 +250,19 @@ interested. They would pay for it, they would come to our website, et cetera. So
 combination of a genuine pain point and the technology that could help solve that pain point and a
 team that suggests that you have some of the key ingredients for an exciting startup.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="11:32">
+<turn speaker="Waleed Ammar" timestamp="11:32">
 
 Yeah, thank you. That makes sense. So I guess when you think about some of the more recent startups,
 which look very successful, like Lime and BERT, which do like micro mobility kind of services, more
 of a vitamin, right? Not something that you need to do.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Oren Etzioni" timestamp="11:45">
+<turn speaker="Oren Etzioni" timestamp="11:45">
 
 You know, that's where some judgment really comes in. Let's look at Uber taxis, you know, we use
 them, we use buses. I didn't have a notion that could be radically disrupted by much cheaper, much
@@ -274,10 +274,10 @@ there. And of course the same is true for Lime. And so on. So I think part of th
 realize where pain points are that you might not see them. I saw a talk from a guy at Apple who
 pointed out how annoying the little stickers are on fruit and said, why do we have to have those?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Oren Etzioni" timestamp="12:38">
+<turn speaker="Oren Etzioni" timestamp="12:38">
 
 Now again, I don't know that we need a start up for getting stickers off of fruit, but when he said
 that, I was like, wow, I didn't think about that. It was right in front of me and I didn't think
@@ -290,10 +290,10 @@ great a startup idea. Wouldn't it be great if we could use a lot of the gamifica
 come up over recent years to build a language learning apps that really keep you motivated and
 engaged.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Oren Etzioni" timestamp="13:31">
+<turn speaker="Oren Etzioni" timestamp="13:31">
 
 Oops. Ah, that's a company called Duolingo, spun out of CMU out of Luis von Ahn team, right. Who was
 one of the you know, huge giants of gamification. Now that's last I look, it's a billion company,
@@ -305,10 +305,10 @@ Seattle, which of course themselves were startups not to long ago. Really any, a
 university, others has a whole bunch of contracts sitting there in some Dropbox or some other folder
 and you don't have the key metadata associated with those.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Oren Etzioni" timestamp="14:26">
+<turn speaker="Oren Etzioni" timestamp="14:26">
 
 You don't know. When do they terminate? Who's insuring it, who's the customer, very basic entity in
 relation extraction type of ideas and if you were able to extract that information automatically
@@ -317,18 +317,18 @@ helpful to the organization, to the legal departments, et cetera, and so spun ou
 called Lexicon.AI does exactly that. They're getting great traction with customers. They have a
 paper on their work in NeurIPS this year, so they're pushing hard on that technology and off you go.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="15:03">
+<turn speaker="Waleed Ammar" timestamp="15:03">
 
 Makes sense. Other factors that people sometimes consider are things like IP or whether this team
 has published on this concept before or not. How do you evaluate and assess these aspects?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Oren Etzioni" timestamp="15:15">
+<turn speaker="Oren Etzioni" timestamp="15:15">
 
 Again, I want to emphasize to the listeners that you often don't have all the pieces in place, so if
 you have a passionate team, smart people, you have problems you're interested in, you may develop
@@ -340,10 +340,10 @@ field. So if you've published, if you have strong credibility, even if you're ea
 I think that's great. I think if you're a grad student and you have a hankering for this, it may
 make sense to to join a startup particularly early on.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Oren Etzioni" timestamp="16:08">
+<turn speaker="Oren Etzioni" timestamp="16:08">
 
 So, you know, not everybody has to be a founder has to grow through the very difficult phase of, you
 know, can we get funded that tremendous uncertainty. One way to get into it is to join a startup.
@@ -359,19 +359,19 @@ things like that, you've got responsibilities. It's harder to say, I'm just goin
 into an exciting adventure with, you know, this big roller coaster ride. But since, so the best time
 everybody should do it and the best time to do it is early on in your career.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="17:22">
+<turn speaker="Waleed Ammar" timestamp="17:22">
 
 Yeah, that makes sense. And even though many of the very successful startups were co-founded by
 people later in their age I think several of them made several attempts before when they were
 younger.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Oren Etzioni" timestamp="17:33">
+<turn speaker="Oren Etzioni" timestamp="17:33">
 
 Another piece of advice that I love to give people ask me. Okay. What's your advice for having a
 successful startup? I say go immediately to your second startup because the first one is often a
@@ -380,20 +380,20 @@ and we say, wow, how did that person do that? But often behind that is previous 
 iterations these startups aren't like Athena springing full-blown from Zeus' head and Tada. There's
 a lot of twists and turns involved
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="18:05">
+<turn speaker="Matt Gardner" timestamp="18:05">
 
 And so what if I'm say a grad student applying for jobs or maybe a researcher who sometimes feels
 like the research cycle feels a little bit repetitive and not very impactful because most papers
 don't get read. Someone who's thinking about, well, maybe do I want to stay in research? Do I want
 to do a startup? What advice would you give to someone trying to think through what they should do.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Oren Etzioni" timestamp="18:28">
+<turn speaker="Oren Etzioni" timestamp="18:28">
 
 Well, let me just do a quick side tour into one of my favorite rants, which Matt and welded you've
 heard many times before, but maybe some of the listeners haven't. If you're concerned about the
@@ -405,10 +405,10 @@ CV. So I would say if you're a researcher and you feel that way, don't buy into 
 have to publish lots of papers instead buy into the notion of what would be a really impactful paper
 a paper that would have a lasting scientific impact.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Oren Etzioni" timestamp="19:15">
+<turn speaker="Oren Etzioni" timestamp="19:15">
 
 And if I don't have a great idea for one, let me keep looking. It's not about who publishes the most
 papers by the time they die, no more than it's whoever has the most toys by the time they die wins.
@@ -423,19 +423,19 @@ and maybe you'll do better next time, maybe you won't, but at least you gave it 
 say if you're thinking that way, you should consider giving a shot and then there are various things
 we can do to make that shot be more likely to succeed.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="20:20">
+<turn speaker="Waleed Ammar" timestamp="20:20">
 
 I guess on the flip side, what if it's, I get to be your age and I think, Oh, I should have been a
 professor. I wish I had stuck with academia and gotten tenure and become someone really famous,
 inducted into various academic societies. I had that opportunity. But instead I did a startup.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Oren Etzioni" timestamp="20:36">
+<turn speaker="Oren Etzioni" timestamp="20:36">
 
 Right? So that's the beautiful thing about our academic system. It's not an either or choice. So
 that's really a, a false dichotomy. As a grad student, you can take a year off, no problem. As an
@@ -446,10 +446,10 @@ without losing your academic career. Something that's really special about AI2 i
 because we have both the nonprofit research arm and the incubator, we actually allow people to share
 their time very fluidly across both activities.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Oren Etzioni" timestamp="21:22">
+<turn speaker="Oren Etzioni" timestamp="21:22">
 
 So for example, Xnor.ai which is a vision-based startup started by Ali (Farhadi) and Mohmmad
 (Rastegari) at AI2 for quite some time after they started it and up until the present time, they've
@@ -461,20 +461,20 @@ people to have a positive impact. And really the only constraint we put on this 
 believe in AI for the common good. So we don't do startups and evolve ad targeting or surveillance
 user data in general. We want your startup to also help make the world a better place.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="22:13">
+<turn speaker="Waleed Ammar" timestamp="22:13">
 
 So let's say I decided to take a dive in the startup world and took a year off of my faculty
 position or of my research work and went all in. What are some of the mistakes that you've seen many
 startups do over and over and you think maybe not everyone has to relearn the same lesson over and
 over?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Oren Etzioni" timestamp="22:31">
+<turn speaker="Oren Etzioni" timestamp="22:31">
 
 I would say the two have to know your strength and weaknesses, right? So one of the hardest things
 in the world is to look in the mirror and really see what you're seeing. So typically if you're
@@ -487,10 +487,10 @@ world is very secretive. Okay, I've got this idea, I've got to protect my IP, I'
 But actually a lot like research, you want to talk to as many people as possible and get their
 feedback.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Oren Etzioni" timestamp="23:19">
+<turn speaker="Oren Etzioni" timestamp="23:19">
 
 Plenty of them are going to be negative. When we did Farecast, a lot of people said, you can't do
 it. Technically the airlines won't let you do it from a business perspective, you won't be able to
@@ -502,10 +502,10 @@ from people where it's not their first rodeo. Read as much as possible. There's 
 the web about how to build startups, how to test your ideas. Let me mention by the way, another key
 idea which comes from the lean startup literature.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Oren Etzioni" timestamp="24:07">
+<turn speaker="Oren Etzioni" timestamp="24:07">
 
 Often we think as computer scientists, okay, I've got an idea, I need to first build it right, and
 then we can test it. The building something, even a prototype can take six months or more and you're
@@ -516,19 +516,19 @@ So I think that getting experimental feedback, we're all CMU alumni, right? Comp
 empirical inquiry. We want to get that external feedback, not just for my own crazy ideas, but from
 a data from potential users as quickly as possible.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="24:53">
+<turn speaker="Waleed Ammar" timestamp="24:53">
 
 That makes sense. I think a startup really fails when you run out of money, right? That's a
 condition that at which you say like, okay, let's start up failed. How do we get there? What are the
 common failure modes that get us there?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Oren Etzioni" timestamp="25:05">
+<turn speaker="Oren Etzioni" timestamp="25:05">
 
 The most common failure mode that I see is people getting excited about something that's really a
 feature, not a product. So for example, I mentioned, you know, prioritizing emails. That's a feature
@@ -541,10 +541,10 @@ say, wow, I've got this technology. It's amazing. It's good for this. It's good 
 horizontal, that's fine. But typically you need to find what's called a vertical, a particular
 market, a particular set of users, a particular product and application to use your product.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Oren Etzioni" timestamp="26:04">
+<turn speaker="Oren Etzioni" timestamp="26:04">
 
 So I think the lack of focus is a real problem and lack of focus can take many different directions.
 Even if I've chosen a market, maybe I'm wanting to build too many features, right? I can't
@@ -558,10 +558,10 @@ the money that you've raised too quickly. You want to have a pace in kind of lik
 a marathon or half marathon, right? You can't just start at a sprint pace. You need to have a plan
 for the run and you need to pace yourself.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="27:03">
+<turn speaker="Waleed Ammar" timestamp="27:03">
 
 Yeah, it makes sense. So one of the things that you mentioned is partnering with people. Say If I'm
 a researcher, an NLP researcher, maybe I can cover the technical aspect or at least I know how to
@@ -571,10 +571,10 @@ computer science students who are interested in building startups. But it's hard
 the computer science side, it's hard for me to assess how good they are. Right. So what are some of
 the considerations you'd recommend people think about when they're taking their business partners?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Oren Etzioni" timestamp="27:37">
+<turn speaker="Oren Etzioni" timestamp="27:37">
 
 Right. Well, I have to confess that I don't think that a business student is an ideal partner,
 typically for a computer scientist. So no disrespect to business students, but they're really quite
@@ -587,18 +587,18 @@ thinking of going into, then they're going to be learning this along with you. A
 ideal partner. The ideal partner is somebody who's already poised to make a contribution, who
 already knows a bunch of things that you don't know.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="28:31">
+<turn speaker="Waleed Ammar" timestamp="28:31">
 
 I think also incubators like AI2's incubator help matching the skill sets that are necessary. And it
 seems like there's a growing culture of incubators across the country. So
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Oren Etzioni" timestamp="28:40">
+<turn speaker="Oren Etzioni" timestamp="28:40">
 
 That's very true. So in Seattle there are three. We're the newest one where an AI first incubator,
 but also a Madrona venture labs. Pioneer square labs. There are absolutely incubators and meetup
@@ -610,10 +610,10 @@ particularly, you've already done some of the basic research yourself on the web
 open to that. Very generous. I hope I don't get a ton of emails, but actually if I do, I shouldn't
 mention that our incubator is open to people outside of Seattle.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Oren Etzioni" timestamp="29:28">
+<turn speaker="Oren Etzioni" timestamp="29:28">
 
 So while we're based in Seattle, if people want to come here, you know, explore joining our
 incubator, we definitely have conversations everywhere and one huge conviction, which is pretty
@@ -623,17 +623,17 @@ in NLP and over the next five years there are going to be some incredible NLP st
 going to have impact on translation, on search, on speech, new products, and so now is a great time
 to do an NLP startup.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="30:06">
+<turn speaker="Waleed Ammar" timestamp="30:06">
 
 All right. Is there anything else that you wanted to bring up before we wrap up?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Oren Etzioni" timestamp="30:10">
+<turn speaker="Oren Etzioni" timestamp="30:10">
 
 I guess I would just point out that actually startups are not just moneymakers, my son, for example,
 works for a nonprofit startup trying to make the world a better place. This podcast is actually a
@@ -643,33 +643,33 @@ lot of listeners. Again, I don't think we're ready to monetize this, but that's 
 need. It's a wonderful thing. So I want to congratulate both of you on your quite successful podcast
 startup.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="30:46">
+<turn speaker="Matt Gardner" timestamp="30:46">
 
 Thank you.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="30:46">
+<turn speaker="Waleed Ammar" timestamp="30:46">
 
 Yeah, thank you. I think this is going to be the hundredth episode, so it's kind of like, it's a
 milestone for our podcast, so.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Oren Etzioni" timestamp="30:52">
+<turn speaker="Oren Etzioni" timestamp="30:52">
 
 Perfect. Well, thank you very much for talking to me and way to go.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="30:57">
+<turn speaker="Waleed Ammar" timestamp="30:57">
 
 All right. Thank you Oren.
 
-</Turn>
+</turn>

@@ -8,38 +8,38 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt" timestamp="00:00">
+<turn speaker="Matt" timestamp="00:00">
 
 Hello and welcome to the NLP Highlights podcast where we talk about interesting work in natural
 language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed" timestamp="00:06">
+<turn speaker="Waleed" timestamp="00:06">
 
 This is Matt Gardner and Waleed Ammar, we are research scientists at the Alan Institute for
 Artificial Intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="00:12">
+<turn speaker="Matt" timestamp="00:12">
 
 All right, today our guest is Zhou Yu who was an assistant professor at the University of
 California, Davis. Zhou welcome to the program.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Zhou" timestamp="00:18">
+<turn speaker="Zhou" timestamp="00:18">
 
 Thank you Matt.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="00:19">
+<turn speaker="Matt" timestamp="00:19">
 
 Today we wanted to talk about dialogue research. We've been doing these area overview episodes and
 people requested talking about dialogue methods and chat bots and this kind of thing. Zhou led the
@@ -48,10 +48,10 @@ these kinds of open ended dialogue systems and so we thought Zhou would be a gre
 to tell us about dialogue research and what's going on there. Zhou, do you want to start off by
 telling us what is a dialogue system, what do we mean when we say dialogue?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Zhou" timestamp="00:53">
+<turn speaker="Zhou" timestamp="00:53">
 
 Yes, so when we talk about dialogue mostly is where the context is with respect to question
 answering. So dialogues mainly have multiple turns. So basicly, I say something, you say something
@@ -66,34 +66,34 @@ while it would also depend on the output. If the Dialogue system is speaking bac
 more spoken dialogue system. If the dialog system is texting back to you, then it's more a text
 based dialogue system.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="02:00">
+<turn speaker="Matt" timestamp="02:00">
 
 When you say a speech dialogue versus a text dialogue, I imagine that all systems take spoken
 language as input and produce spoken languages output will, in the inside still be working with text
 and not a speech signal. Is that true?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Zhou" timestamp="02:16">
+<turn speaker="Zhou" timestamp="02:16">
 
 Yeah, that's a big difference in terms of what we call spoken dialogue systems or text-based
 dialogue systems. Both of them are very popular.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="02:25">
+<turn speaker="Matt" timestamp="02:25">
 
 Yeah. I guess it's a whole lot easier to interact with something with your voice.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Zhou" timestamp="02:28">
+<turn speaker="Zhou" timestamp="02:28">
 
 Yeah. So they have advantages and disadvantages, right, on both sides. So for a spoken dialogue
 system, it's much easier to interact with your voice for sure. Especially if it's used for special
@@ -101,37 +101,37 @@ scenarios, for example, in car navigation where you can't really type. Sometimes
 scenarios, people like to talk to it better than typing to it. Also, interacting with your smart
 phones.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="02:55">
+<turn speaker="Matt" timestamp="02:55">
 
 Yeah. And I guess, Microsoft research has some Twitter chat bots and those are all texts. You're not
 going to have speech on Twitter. So yeah, I guess there are a lot of different applications.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Zhou" timestamp="03:05">
+<turn speaker="Zhou" timestamp="03:05">
 
 Yeah. So certain company's customer service systems are text-based, so again, type in, right, so you
 can also call in basically type in systems has the advantage of it basically skip the automatic
 speech recognition process so basically it's a little bit easier to process text information.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="03:24">
+<turn speaker="Matt" timestamp="03:24">
 
 Yeah. One thing I'm still not totally clear on, you've mentioned in this discussion so far a whole
 lot of different possible dialogue systems like we mentioned customer assistance; things like Siri
 and Alexa and question answering systems. Is there a way to categorize the different areas of
 dialogue research? How do dialogue researchers think about all of these different applications?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Zhou" timestamp="03:47">
+<turn speaker="Zhou" timestamp="03:47">
 
 We are mostly saying the tasks are very different from each other or the domain of the conversation
 domain is different for every task. But in general, people may say a task oriented system or a non-
@@ -141,37 +141,37 @@ is basically what people usually call social chat bot. That doesn't really have 
 the major motivation for building such a system is to engage people in engaging conversation so for
 entertainment purposes or for exploring what is AI?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="04:35">
+<turn speaker="Matt" timestamp="04:35">
 
 Yeah, I guess you could think of what you're calling non-task oriented systems also. It's just a
 different, much more open-ended task. I've looked a little bit into the Alexa Prize. The end goal is
 to have an engaging conversation with a person that lasts for something like 20 minutes. And so you
 do have a task, it's just defined in terms of this vague notion of engagement.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Zhou" timestamp="04:57">
+<turn speaker="Zhou" timestamp="04:57">
 
 Yes.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="04:57">
+<turn speaker="Matt" timestamp="04:57">
 
 If you want to train a system, you've got to have some reward function or loss function, somehow.
 And, I guess that's how you would try to train this for these more open ended systems in the end. So
 can you give some more examples of what a task oriented dialogue system, as you've defined it? What
 kinds of systems are these? Is Siri task oriented?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Zhou" timestamp="05:23">
+<turn speaker="Zhou" timestamp="05:23">
 
 It really is. I would say Siri is mostly task oriented. It is composed of different individual,
 smaller systems. That completes one single task and they merge them together. So for example, one
@@ -185,10 +185,10 @@ all these different purposes of learning. Also, we say, we can help in terms of 
 applications. For example, when the nurse is doing the discharge, you can replace it was a
 conversational system.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Zhou" timestamp="06:26">
+<turn speaker="Zhou" timestamp="06:26">
 
 Or, if people are doing interviews, such as clinical interviews, to screen depressions or PTSDs or
 these kinds of different mental disorders, you can also use a conversational system to help you or
@@ -202,51 +202,51 @@ negotiate things, or I want to persuade you, you want to persuade me. So it can 
 that humans can do. But what we mostly focus on is the language behavior, less on the nonverbal or,
 actual physical behaviors.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed" timestamp="07:36">
+<turn speaker="Waleed" timestamp="07:36">
 
 So, are there methods that transfer across different tasks, or is it mostly like a, every task is
 completed or ends?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Zhou" timestamp="07:44">
+<turn speaker="Zhou" timestamp="07:44">
 
 That's a good question. Yes. S,o right now in the industry, everything is trained on one particular
 domain and everything is trained from scratch. They didn't really leverage other tasks. So our
 recent paper we submit to ACL is actually doing exactly what you were talking about, leveraging
 other domain information to help a domain that has less training examples or less annotated data.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed" timestamp="08:11">
+<turn speaker="Waleed" timestamp="08:11">
 
 Just to be sure, are you making a distinction between the domain and the task or are you using them
 as synonyms?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Zhou" timestamp="08:18">
+<turn speaker="Zhou" timestamp="08:18">
 
 No, we mostly think domain and the task as the same.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed" timestamp="08:21">
+<turn speaker="Waleed" timestamp="08:21">
 
 Okay. So, what you're describing now is work which transfers from a task and a domain to a different
 task and domain?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Zhou" timestamp="08:28">
+<turn speaker="Zhou" timestamp="08:28">
 
 Between tasks. So, in dialogue system, a lot of times when we say task and domain, they are actually
 the same thing, what we did before is we used meta learning to try to learn general models using
@@ -260,20 +260,20 @@ request information and they all have this kind of provide information that are 
 users. So basically you can basically learn these syntactic information for these tasks and transfer
 it to a different task, but also have these kinds of dialogue acts.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed" timestamp="09:34">
+<turn speaker="Waleed" timestamp="09:34">
 
 So you mentioned transferring the data. How about the models themselves that are used for each of
 the different tasks? Do they tend to be, aside from your latest work on this problem, do people
 typically use completely different methods or are they methods that generally work well for a large
 variety of tasks?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Zhou" timestamp="09:53">
+<turn speaker="Zhou" timestamp="09:53">
 
 So, I have to clarify. One thing is my previous work is transferring the model. Not really data. We
 are learning the model from multiple tasks and trying to use that model to adapt the model to a new
@@ -287,19 +287,19 @@ transferable. We have been working on campus restaurant, the bus information req
 time. The major reason is it's really hard to collect these kinds of multi-domain data and
 annotating these data regularly requires a lot of effort as well.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed" timestamp="11:03">
+<turn speaker="Waleed" timestamp="11:03">
 
 So maybe something that would help clarify this is, can you give us a quick overview of how dialogue
 systems work for task oriented or non-task oriented dialogues? What, are the basic building blocks
 of these systems?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Zhou" timestamp="11:16">
+<turn speaker="Zhou" timestamp="11:16">
 
 So dialogue system, traditionally we separate them into a couple of different tasks. First is called
 natural language understanding. So you have a sentence, for example, where, I want Italian food. I
@@ -311,10 +311,10 @@ these information about the slots, then what we usually do is called, dialogue s
 dialogue state is basically something you can think about in reinforcement is similar as well, the,
 history. Basically things you want to track over time. In the restaurant domain,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Zhou" timestamp="12:13">
+<turn speaker="Zhou" timestamp="12:13">
 
 basically things you wanted to track are what type of food you want, how many people you wanted to
 book the restaurant for, where do you want to go? So these kinds of areas. So, these information you
@@ -326,10 +326,10 @@ what you need to do is, based on the history, what should we do, so what the sys
 the user based on certain information that you learned over how humans do that. You basically plan,
 Oh, if I already have the food type already have the area, I already have the number of people.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Zhou" timestamp="13:04">
+<turn speaker="Zhou" timestamp="13:04">
 
 Then the only thing that I'm missing is whether you want an expensive restaurant or a cheap
 restaurant. Then the system basically plans out, oh this slot is missing then we should pick this
@@ -340,10 +340,10 @@ into a natural language surface flow? Basically people are saying like what pric
 So, basically that's some natural language you want to generate in the end. So basically this is
 like the whole pipeline.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="13:43">
+<turn speaker="Matt" timestamp="13:43">
 
 Yeah, thanks. That was a super helpful example and it made me think about connections to research
 that I've done. We typically call this a semantic parsing where you translate language, some natural
@@ -356,26 +356,26 @@ execute on this program. The program produces some output and maybe sends it to 
 you just continue this way. It's just semantic parsing that, as you go, changing your execution
 state. Did that sound like a reasonable approximation of what you said?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Zhou" timestamp="14:40">
+<turn speaker="Zhou" timestamp="14:40">
 
 Yes,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="New Speaker" timestamp="14:40">
+<turn speaker="New Speaker" timestamp="14:40">
 
 But I think one key difference though between how we typically think of semantic parsing and what
 these dialogue systems do is that, there are pieces of this dialogue management system that are also
 learned. Is that true or is it all pretty much written by hand?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Zhou" timestamp="14:58">
+<turn speaker="Zhou" timestamp="14:58">
 
 Yeah. So it really depends on how you design your system. But, mostly, the slots are predefined. So,
 basically what is the information you need in the dialogue manager? If you think about the whole
@@ -387,10 +387,10 @@ have the logical form, then you generate the natural language out of it. So, def
 use semantic parsing to do language understanding. So basically parsing the natural language
 sentence of the human into a logical form.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="15:50">
+<turn speaker="Matt" timestamp="15:50">
 
 Yeah, and I think this also gets Waleed's earlier questions about what things are transferable. If
 we think of this still in this terms of semantic parsing, or the natural language understanding
@@ -400,10 +400,10 @@ It sure seems like the dialogue management stuff has to change depending on what
 Whereas there's probably some way to transfer some components of the model that goes from language
 to program or slots or however you want to call that. Is that fair?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Zhou" timestamp="16:27">
+<turn speaker="Zhou" timestamp="16:27">
 
 Yes, definitely. This is what I usually call, like these are separate modules, but you can combine
 these modules together into more end to end in an encoder decoder framework. So for example one of
@@ -419,17 +419,17 @@ specifically only used quite popular was like a chit chat that sometimes context
 it's not that useful, but still, for a task oriented system, you want it to control these logics,
 then it's harder just use one encoder decoder to solve everything.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed" timestamp="17:49">
+<turn speaker="Waleed" timestamp="17:49">
 
 Can you tell us a little bit more about how you represent the state and logic management system?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Zhou" timestamp="17:52">
+<turn speaker="Zhou" timestamp="17:52">
 
 Yes. So the states how you represent them somehow is defined by experts. Here particularly, we have
 annotations. So we have human-human conversation, and then people as an expert, will label these
@@ -440,26 +440,26 @@ why a lot of times a lot of, human efforts are put in to designing these states.
 similar to your reinforcement learning, right? So if it's discreet states, you actually define it
 yourself.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed" timestamp="18:46">
+<turn speaker="Waleed" timestamp="18:46">
 
 So one particular state value would be; I already know which restaurant or which cuisine that the
 user is interested in and what time do you want to go. But I don't know how many people are going.
 So that would be one value of the state.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Zhou" timestamp="18:59">
+<turn speaker="Zhou" timestamp="18:59">
 
 Yes. You can think about it as a sequence; Italian, cheap. Yeah, and that's it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="19:05">
+<turn speaker="Matt" timestamp="19:05">
 
 And so what I wonder about this is why would I want to predict the next state with a seek to seek
 model or is that basically having the seek to seek model predicting the next program, which
@@ -467,10 +467,10 @@ implicitly, you're basically just abstracting away the program at all. And inste
 like language to slot, I go from language to next state. Is that what's going on in this encoder
 decoder model that you were talking about?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Zhou" timestamp="19:31">
+<turn speaker="Zhou" timestamp="19:31">
 
 Yes. So in dialogues, especially if we have specific goals we want to complete, we will design these
 dialogues states. And then now basically we say, the encoder decoder, we wanted to decode the states
@@ -482,17 +482,17 @@ decoder to see if the states are correct. All right, so basically I had this kin
 supervision to make sure that my logic is correct once I think my logic is correct I use my logic to
 produce a system utterance
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed" timestamp="20:18">
+<turn speaker="Waleed" timestamp="20:18">
 
 I'm a little confused by what you mean by the state is correct here?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Zhou" timestamp="20:22">
+<turn speaker="Zhou" timestamp="20:22">
 
 So, for example, I have user utterance coming in and I have some histories, right? I want to make
 sure the first decoder, the decoded output is the police state, which is what we call, dialogue
@@ -502,24 +502,24 @@ human human conversation label it with these dialogue states. It's a supervised 
 basically, I tell you that if the user says this and what the history is, you have to decode this
 type of dialogue state to me, you can't make errors.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed" timestamp="21:00">
+<turn speaker="Waleed" timestamp="21:00">
 
 So the supervision happens at the level of the state values.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Zhou" timestamp="21:03">
+<turn speaker="Zhou" timestamp="21:03">
 
 Yeah, so basically you have this extra supervision from the human.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="21:07">
+<turn speaker="Matt" timestamp="21:07">
 
 Yeah, I guess so. The difference here seems like I could alternatively have human utterance and
 slots supervision and then I write the state change code myself where I have my like encoded in my
@@ -528,10 +528,10 @@ to the next state. What you're saying is is instead I replaced that dialogue man
 with just these annotated state sequences and predicted those directly removing the need for the
 program. Do you have any intuition about when you would want to do each one of these two options?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Zhou" timestamp="21:45">
+<turn speaker="Zhou" timestamp="21:45">
 
 Yeah, so, you can think about you have at, NLU you have dialogue state tracking, you have dialogue,
 policy planning, you have natural language generation. You have this kind of four components. So you
@@ -544,10 +544,10 @@ supervision might be good enough by sort of the task as much more difficult. The
 more annotations. For example, the dialogue act of the system, the user is dialogue act or slots
 values
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Zhou" timestamp="22:40">
+<turn speaker="Zhou" timestamp="22:40">
 
 could help it better. So it really depends on how difficult the task is. So we also did another
 paper recently as trying to understand what type of task would be helpful in integrating or
@@ -562,10 +562,10 @@ you what this is the restaurant you're looking for, where for these kinds of pro
 scenario, you wanted to collect some information from the human and then you're trying to say, why
 don't you try this solution?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Zhou" timestamp="23:43">
+<turn speaker="Zhou" timestamp="23:43">
 
 And then tell the user, "have you tried this solution" and tell you, Oh, this solution doesn't work.
 And then the system has to re-plan because it didn't work and it gave me this output, I need to ask
@@ -574,17 +574,17 @@ complicated. That's why we find like separating these out like individual models
 them share some information so for a hidden state. It's actually a more efficient compared to only
 giving them the dialogue state of supervision.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="24:14">
+<turn speaker="Matt" timestamp="24:14">
 
 Oh that's interesting.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="New Speaker" timestamp="24:14">
+<turn speaker="New Speaker" timestamp="24:14">
 
 So it really depends on how complex your task is. Ideally the perfect world is you have a lot of
 data and all the data is annotated with all the possible annotations we have. Then it's basically
@@ -592,10 +592,10 @@ you'll get pretty much perfect scores. But then if you have limited data, so bas
 limited number of conversations, then the only thing you can do is make sure, all the annotations
 you annotated are fed into the model.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Zhou" timestamp="24:42">
+<turn speaker="Zhou" timestamp="24:42">
 
 Then you probably can get a better performance. But sometimes all of them you annotate are not
 necessary. You can get rid of certain, for example, dialogue NLU understanding for restaurants
@@ -608,10 +608,10 @@ to put all these kinds of human efforts to actually generate these. Then it's no
 different tasks so it's a trade off between if you want a better system? You want to know either to
 collect more data or you either want it to provide a more annotation for a limited set of data.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="25:36">
+<turn speaker="Matt" timestamp="25:36">
 
 Interesting. Thanks. That was a good overview. I guess just to summarize the conversation so far
 we've talked about what dialogue research is that there are these two main ways of thinking about
@@ -623,10 +623,10 @@ Right. The next interesting thing to talk about is how do you evaluate the outpu
 Do you look at the text, that is output? Do you look at some external signal like task completion
 rate? How do you know how well you're doing here?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Zhou" timestamp="26:25">
+<turn speaker="Zhou" timestamp="26:25">
 
 So mostly yeah, we look at task completion rate for task oriented system for example, booking a
 restaurant is you have to get the restaurant name and that name has to be corrected, fitting all the
@@ -638,10 +638,10 @@ thing. So we look at as in comparison right, which one is more efficient. Even i
 complete the goal like, system, A completed going five turns and system B completed in seven turns
 and A on average is more efficient than B.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Zhou" timestamp="27:17">
+<turn speaker="Zhou" timestamp="27:17">
 
 or A is better in this. There are all these kind of other things that we will look at as when we
 talk about evaluation, right? A lot of times people are just evaluating on the existing data set
@@ -654,10 +654,10 @@ saying, Hey, I built my own user simulator, I simulate how user would actual act
 the evaluate on the user simulator is how you build the, or use the simulator is a big factor in the
 evaluation process.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Zhou" timestamp="28:15">
+<turn speaker="Zhou" timestamp="28:15">
 
 If you build a really simple user simulator---for example 'A' comes in and I just say 'B', then it's
 very easy to max out the user simulator you can always do it correctly. We also recently are trying
@@ -669,10 +669,10 @@ performance is. This is mostly for a task oriented system, but for a non task or
 the evaluation metric definitely is a lot more fuzzy. One universal thing that we agreed on is if we
 give you this particular setting,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Zhou" timestamp="29:08">
+<turn speaker="Zhou" timestamp="29:08">
 
 if the user is voluntarily interacting with this particular system, key things, basically the longer
 he is willing to stay in the conversation, the better the system is. So, basically, the length of
@@ -684,10 +684,10 @@ of the how good the system is for a social chat bot. Individually, for turn wise
 would use in terms of appropriateness or coherence. In this context, if I reply the system replied
 this, do you think it's coherent?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Zhou" timestamp="29:59">
+<turn speaker="Zhou" timestamp="29:59">
 
 Another thing is called diversity. Example of the system, if you use just a sequence-to-sequence
 model, a lot of times the system would generate a very boring, tedious sentence. Things like I like,
@@ -699,10 +699,10 @@ say coherence, it's really hard to evaluate automatic coherence. A lot of people
 you can build a classifier on an annotated corpus of coherence and an incoherence sentence and try
 to use that as a classifier to prediction score and you sentence that you see.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Zhou" timestamp="30:54">
+<turn speaker="Zhou" timestamp="30:54">
 
 But this is also a bias in terms of, if your trained corpus and you're tested corpus are very
 different from each other and it's really hard to say the predictor score is actually very useful.
@@ -718,10 +718,10 @@ dilemma in dialogue system, because there are multiple turns, you can't collect 
 system corpus that covers all the possible with expanding tree, but how people would have diverged
 when they're responding to the system.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="32:09">
+<turn speaker="Matt" timestamp="32:09">
 
 Yeah. So that was really fascinating. That was a lot more different ways to evaluate this than I was
 expecting. That's a really hard and interesting problem. I think to wrap up, the last question that
@@ -729,10 +729,10 @@ I have is what are the open problems that you see in dialogue research? Where sh
 from here? Are there exciting areas, areas that are super hard and seem intractable right now? Where
 do you see research going?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Zhou" timestamp="32:35">
+<turn speaker="Zhou" timestamp="32:35">
 
 So I have certain interest definitely, one is learning with less supervision for example, labeling
 dialogues are extremely difficult. Collecting dialogue corpus is extremely difficult. Can we build
@@ -745,10 +745,10 @@ to obtain all these kinds of dialogues and we require for you to build a machine
 model? So, if you need less of these data, less of these annotation, then the people would actually
 be more acceptable of using the ML based system and mostly ML based system,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Zhou" timestamp="33:42">
+<turn speaker="Zhou" timestamp="33:42">
 
 if it can generalize towards different domains that will basically help the system industry people
 to actually deploy one type of pipeline, just change the training data or change something to adapt
@@ -761,10 +761,10 @@ on as well, as how do we just step out of these kind of question information req
 dialogue system, these collaborative dialogue systems to go into a more competitive goal dialogue
 systems that involves topics such as negotiation, recommendation, persuasion.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Zhou" timestamp="34:45">
+<turn speaker="Zhou" timestamp="34:45">
 
 So it's now like, oh, we all know perfectly well what I want to do and what the system wants to do
 and we do things together. Now the system has its own goal the user has their own goal. We're trying
@@ -774,35 +774,35 @@ to negotiate prices. If the system wanted to be helping patients to persuade the
 their drug on time, persuade the patient to do exercise all the time, right? So these type of, these
 kinds of competitive goals, systems are very important but very difficult to train and model.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="35:30">
+<turn speaker="Matt" timestamp="35:30">
 
 Yeah, I listened to a podcast called intelligence squared US debates where they bring in a bunch of
 people every episode to debate some topic. And not very long ago there was an episode that had, I
 believe it was a system from IBM Watson that was participating in the debate against the human. Yes.
 Which was interesting.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Zhou" timestamp="35:51">
+<turn speaker="Zhou" timestamp="35:51">
 
 Yes. Argumentation generation is also very important in framing some of these.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="35:56">
+<turn speaker="Matt" timestamp="35:56">
 
 Great do you have any last thoughts, anything you wanted to talk about that we didn't cover before
 we finish?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Zhou" timestamp="36:01">
+<turn speaker="Zhou" timestamp="36:01">
 
 One more thing is about, expanding dialogue system into multiple modalities. So that's also my, a
 PHD theses, right now we are talking about the system's input is text or audio. What if we have much
@@ -817,19 +817,19 @@ complex and now it goes into this kind of human-robotic collaboration. But these
 connecting areas in dialogues that is, I think, as future research and would bring much more complex
 problems, which is more exciting to solve.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt" timestamp="37:16">
+<turn speaker="Matt" timestamp="37:16">
 
 Yeah. Great. That sounds really interesting. Thanks Zhou for coming on and talking to us. This was a
 really interesting conversation.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Zhou" timestamp="37:21">
+<turn speaker="Zhou" timestamp="37:21">
 
 Sure. Good to talk to you guys too.
 
-</Turn>
+</turn>

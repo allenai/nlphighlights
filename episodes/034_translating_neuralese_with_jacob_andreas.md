@@ -8,23 +8,23 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting recent work in
 natural language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is Matt Gardner and Waleed Ammar. We are research scientists at the Allen Institute for
 Artificial Intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:12">
+<turn speaker="Waleed Ammar" timestamp="00:12">
 
 All right. Our guest today is Jacob Andreas he will be talking to us about his paper titled,
 Translating Neuralese and it's a paper co authored by him and Anca Dragan and Dan Klein. Jacob is a
@@ -34,10 +34,10 @@ using language as a prop for understanding model behavior. In particular, it tri
 neuralese messages used to coordinate among decentralized agents by translating them into natural
 language. So what's the motivation for this line of work?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Andreas" timestamp="00:53">
+<turn speaker="Jacob Andreas" timestamp="00:53">
 
 So there's been a bunch of interests. I mean really going all the way back to like the early
 nineties, but again in the last couple of years on learning sort of multiagent strategies in an end-
@@ -49,10 +49,10 @@ have been a bunch of different ways proposed for doing this. And if you want, we
 of the details about how that works. But basically the modern version of this thing, these just look
 like big RNNs.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Andreas" timestamp="01:38">
+<turn speaker="Jacob Andreas" timestamp="01:38">
 
 You have a bunch of little agents implemented as little neural nets and they're sending messages to
 each other over some kind of vector value communication channel. And so these agents are all talking
@@ -65,19 +65,19 @@ trying to solve here is given access to one of these kinds of pre-trained multia
 use this communication. Can we take that communication and turn it into something that people can
 understand?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="02:26">
+<turn speaker="Matt Gardner" timestamp="02:26">
 
 Do you think it's even really practical to be learning the communication? So like if I'm designing
 some multi-agent system under what circumstances, like in, in a practical situation of what I really
 want to learn the communication policy instead of just defining it apriori.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Andreas" timestamp="02:44">
+<turn speaker="Jacob Andreas" timestamp="02:44">
 
 Yeah. So the self driving car example is actually probably a terrible example because anything
 that's a safety critical application, you'd probably want to know ahead of time. What's actually
@@ -90,18 +90,18 @@ of, you know, in non-safety critical robotics applications or like gameplay or d
 yeah. Agents for video game AIs or whatever. These kinds of things might actually be quite
 effective.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="03:38">
+<turn speaker="Waleed Ammar" timestamp="03:38">
 
 So the paper focuses on deep communicating policies or DCPs, could you give me an example of a DCP
 for those folks who are not familiar?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Andreas" timestamp="03:47">
+<turn speaker="Jacob Andreas" timestamp="03:47">
 
 Yeah, so I mean, the simplest version of one of these kinds of policies that we're talking about
 that you can imagine is something that plays a referring discretion game. And so this is something
@@ -113,10 +113,10 @@ that's going to allow the listening player to identify the image that the speaki
 to talk about. And so, you know, when people play this game, the speaking players literally
 generating some kind of natural language description of the image that they're trying to refer to.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Andreas" timestamp="04:34">
+<turn speaker="Jacob Andreas" timestamp="04:34">
 
 But you can also set up kind of a end-to-end neural models that, you know, the speaker slips up some
 representation of both of the images produces some kind of hidden state vector, passes that hidden
@@ -127,19 +127,19 @@ being these kinds of games. And if you unroll these over multiple steps, then yo
 things that people started to look at more recently in the literature where you can actually have
 you know, sort of agents interacting in real time with each other.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="05:19">
+<turn speaker="Waleed Ammar" timestamp="05:19">
 
 Right. So a key contribution of this work is the framework that you came up with to compare the
 messages used in a policy that uses deep learning, to messages used in a human policy. Could you
 elaborate on this and walk us through the two kinds of visions used in this formulation?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Andreas" timestamp="05:37">
+<turn speaker="Jacob Andreas" timestamp="05:37">
 
 Yeah. So the sort of what makes us an interest, you know, this is basically a machine translation
 problem in the sense that I have messages in this neuralease language that my learn model is
@@ -152,10 +152,10 @@ setting. And basically what makes this possible is the fact that even though we 
 of parallel machine translation data we do know in some sense how these messages ground out in the
 world, right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Andreas" timestamp="06:27">
+<turn speaker="Jacob Andreas" timestamp="06:27">
 
 That we get to observe, not just sort of vectors detached from any kind of context, but actually,
 you know, sort of the message that my learned agents sent when it was in a particular state of the
@@ -167,10 +167,10 @@ they're generating those messages. And it's through that through that grounding 
 states of the world that we're actually there, we're able to build something that looks like a
 translation system. And I can talk about how that is done at length.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="07:14">
+<turn speaker="Matt Gardner" timestamp="07:14">
 
 Yeah, that's, that's interesting. I, guess I've seen a lot of work at least a few papers recently on
 if I have two big piles of text in two different languages but no parallel text, how do I learn
@@ -179,10 +179,10 @@ in this paper, but I guess the difference is you have this external notion of so
 in order to do this mapping. Can you tell us exactly how you view the grounding that lets you bridge
 these two?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Andreas" timestamp="07:46">
+<turn speaker="Jacob Andreas" timestamp="07:46">
 
 So actually before I do that to talk about you know, when in, sort of normal NLP, normal machine
 translation settings, there's this kind of view of machine translation is decipherment where I sort
@@ -195,10 +195,10 @@ target language model then that would let me solve the problem. So when people m
 comparable corpora for doing these things in machine translation land or whatever that's basically
 what's going on.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Andreas" timestamp="08:41">
+<turn speaker="Jacob Andreas" timestamp="08:41">
 
 And I guess the other way in which the problem that we have here is hard is that we also don't have
 comparable corpora. We can't assume that the strategy that our humans are using and our robots are
@@ -220,10 +220,10 @@ the speaker sent. And rather than even really trying to recover exactly what the
 what we tried to do is we build a model that takes us from that message onto the belief that a sort
 of optimal listener forms about the state that the speaker might be in upon hearing that message.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Andreas" timestamp="10:34">
+<turn speaker="Jacob Andreas" timestamp="10:34">
 
 And we can do that for our agents. We can do that for our humans when we have examples of humans as
 well. And now we have a kind of common space of representations in which to do translation. This
@@ -231,18 +231,18 @@ common space of representation is basically the space of distributions that the 
 we might be in. And then we don't even necessarily need to assume you know, that our human agents
 and our automated agents are choosing to talk about the same things.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="11:03">
+<turn speaker="Waleed Ammar" timestamp="11:03">
 
 Oh, here are we talking about distributions over observations or over actions that are possible in
 this state?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Andreas" timestamp="11:13">
+<turn speaker="Jacob Andreas" timestamp="11:13">
 
 Over observations essentially. I mean, you know, you can sort of do different versions of this
 depending on whether your environment as a whole is partially observed or totally observed. You
@@ -253,17 +253,17 @@ whether there might be also further information that neither person knows about 
 matter in this framework. But yeah, basically you can think about it as the speaker is going to see
 some kind of feature vector and we want to compute the distribution over those feature vectors.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="11:59">
+<turn speaker="Matt Gardner" timestamp="11:59">
 
 Yeah. Can you give an example of this to make it a little more concrete?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Andreas" timestamp="12:02">
+<turn speaker="Jacob Andreas" timestamp="12:02">
 
 Yeah, so I mean, I think again in the the like simple one-step referring expression game is, is an
 easy way to think about this. So what's the information that both people observe? They both observe
@@ -274,18 +274,18 @@ distribution over how that bit has been assigned. So given that the speaker said
 how much do I think it's the picture on the left and how much do I think it's a picture on the
 right.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="12:43">
+<turn speaker="Matt Gardner" timestamp="12:43">
 
 Good. And I think in your paper you mentioned two different kinds of groundings and this is just one
 of them, right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Andreas" timestamp="12:49">
+<turn speaker="Jacob Andreas" timestamp="12:49">
 
 This is one of them. Yeah. And then the more complicated one that we look at in the paper we have
 this sort of challenging driving game where there are two cars that are both trying to get through
@@ -299,18 +299,18 @@ the other car might be in and all of the sort of goals that it might have, the p
 trying to reach. As it crosses this intersection that's essentially the space of distributions that
 that we're trying to learn in.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="13:39">
+<turn speaker="Matt Gardner" timestamp="13:39">
 
 Okay. Is there any other way to look at what beliefs get induced by these messages? So this is
 [inaudible]
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Andreas" timestamp="13:47">
+<turn speaker="Jacob Andreas" timestamp="13:47">
 
 Yeah, so I mean, you know, one thing that you can do is to basically like sum of the outer max over
 them or whatever in the course of sort of generating natural language translations of these things.
@@ -326,49 +326,49 @@ what you kind of want to happen there is that that puts most of its maps on the 
 on the wrong image and in these kinds of driving games that you wind up with a coherent clusters of
 states.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="15:01">
+<turn speaker="Matt Gardner" timestamp="15:01">
 
 Okay. So I guess then what you're saying is we know that a translation of a neural message into
 English or some other language is good if it induces if both messages induce the same kinds of state
 representations, beliefs about states in the listener of each of these respective languages. Right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Andreas" timestamp="15:24">
+<turn speaker="Jacob Andreas" timestamp="15:24">
 
 That's exactly,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="15:24">
+<turn speaker="Matt Gardner" timestamp="15:24">
 
 And in your paper you also presented a different way of defining a good translation based on what
 actions the speaker might take. Is that right? Like you had, the speaker view and a listener view.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="15:38">
+<turn speaker="Waleed Ammar" timestamp="15:38">
 
 I guess the symantic view I think was the one that you're adopting in the paper and there's the
 pragmatic view of what makes for a good translation.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="15:49">
+<turn speaker="Matt Gardner" timestamp="15:49">
 
 You want to tell you want to tell us about the second one?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Andreas" timestamp="15:51">
+<turn speaker="Jacob Andreas" timestamp="15:51">
 
 Yeah, so I mean basically, well, yeah, kind of like you just said, you know, if we're trying to
 generate translations that are grounded out in some kind of task with some kind of associated reward
@@ -389,25 +389,25 @@ AI and really kind of understanding like what's the information content of these
 the strategy that the agent is employing. We decided to focus more on these kind of explicitly
 belief oriented ways of doing translation.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="17:39">
+<turn speaker="Matt Gardner" timestamp="17:39">
 
 Yeah, that makes sense.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="17:40">
+<turn speaker="Waleed Ammar" timestamp="17:40">
 
 All right. So are the representations are the messages used in the neuralese policy? Are they
 assumed to be continuous? Or are we assuming that there's some discrete set of symbols?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Andreas" timestamp="17:57">
+<turn speaker="Jacob Andreas" timestamp="17:57">
 
 Yeah, so here all the message space is continuous right. And this is you know, we're kind of,
 there's two lines of work on this learning communication stuff. There are a couple of papers that
@@ -422,20 +422,20 @@ get used in the real world. And to the extent that learning these continuous mes
 much easier thing. These seem like the more interesting kinds of systems to study from that point of
 view.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="19:07">
+<turn speaker="Matt Gardner" timestamp="19:07">
 
 I'm looking at the equations in your paper in section five where you talk about how you actually
 decide what is a good translation, we've been talking about the intuition for what makes a
 translation good. You have some math that formalizes this. And I'm wondering if it makes sense to
 try to explain that in podcast form. I don't know if you want to do that for us?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Andreas" timestamp="19:29">
+<turn speaker="Jacob Andreas" timestamp="19:29">
 
 Really. It's like the math is actually not that complicated, right? It's basically, you know, once
 you have the core intuition that what makes a good translation is that it induces the same belief in
@@ -448,10 +448,10 @@ or even necessarily like the best way of doing it. But it was, you know, kind of
 that you write down once you have this sort of core intuition about how to go about doing
 translation.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Andreas" timestamp="20:25">
+<turn speaker="Jacob Andreas" timestamp="20:25">
 
 Other sort of mathy things in the paper. I mean, one of the cool things is that even though, you
 know, we talked about the difference between doing translation in a way that kind of respects the
@@ -463,17 +463,17 @@ that you're not going to do too bad on the downstream reward function even when 
 optimizing it for optimizing for it explicitly, as long as you make kind of reasonable assumptions
 about how smart your listener is.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="21:17">
+<turn speaker="Matt Gardner" timestamp="21:17">
 
 Yeah, that's cool. So can you tell us how well this actually worked?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Andreas" timestamp="21:22">
+<turn speaker="Jacob Andreas" timestamp="21:22">
 
 Yeah, so I mean we've talked about some of these tasks a little bit already, but we're looking at
 three different games in this paper. Two of the games are these kinds of like single step referring
@@ -485,19 +485,19 @@ expression game with photographs of birds. And then finally, the last thing that
 here again, was this a two player driving game where these cars are trying to get through an
 intersection without crashing into each other.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="22:11">
+<turn speaker="Waleed Ammar" timestamp="22:11">
 
 So the goal of the of this work is not to improve the performance of the coordination. It's rather
 to measure how well can we do by interpreting these messages. So what metrics do you use in order to
 evaluate this?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Andreas" timestamp="22:32">
+<turn speaker="Jacob Andreas" timestamp="22:32">
 
 So the way we think about evaluating these kinds of problems is, one, you know, we have this
 criteria of can we, are we inducing the correct belief about the state that the speaker was in? And
@@ -509,10 +509,10 @@ messages you should be able to do that reasonably well. And the cool thing is on
 for this kind of representation function that you have you know, sort of, can I get from an earliest
 message back to states?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Andreas" timestamp="23:23">
+<turn speaker="Jacob Andreas" timestamp="23:23">
 
 I can now evaluate a translation model by saying, okay, I'm going to take this neuralese message,
 I'm going to translate it, and then I'm going to see if I can get from that translated message again
@@ -524,10 +524,10 @@ maybe unsurprisingly in this setting by explicitly doing this kind of belief ori
 translation rather than learning a direct mapping from neuralese messages to natural language
 messages that happen to have been entered in the same state.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Andreas" timestamp="24:14">
+<turn speaker="Jacob Andreas" timestamp="24:14">
 
 The other evaluation that we look at is this downstream task performance thing. So even though it's
 not something that we're optimizing for explicitly, you know, we have some theoretical evidence that
@@ -539,10 +539,10 @@ this translation layer. And we see how well playing this game together by the tr
 actually do. And then you can do it in the opposite direction also for these kinds of asymmetric
 games where, you know, maybe other human speaking in a robot listening.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Andreas" timestamp="25:03">
+<turn speaker="Jacob Andreas" timestamp="25:03">
 
 And there again you do quite well in the referring expression games. There are conditions under
 which you can actually do better in that setting than humans do speaking to other humans because the
@@ -552,34 +552,34 @@ substantially worse than, you know, either humans playing with humans do or robo
 robots, but still much better with this kind of belief oriented way of doing translation than with
 something more direct and more like a classical machine translation model.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="25:42">
+<turn speaker="Matt Gardner" timestamp="25:42">
 
 That's interesting it looks like you can actually translate pretty well when you have this given
 grounding. I guess that makes me think a lot of other kinds of, people are thinking a lot these days
 about interpreting neural models because they're really quite opaque a lot of the time.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Andreas" timestamp="25:57">
+<turn speaker="Jacob Andreas" timestamp="25:57">
 
 Yeah.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="25:58">
+<turn speaker="Matt Gardner" timestamp="25:58">
 
 Do you have any thoughts on how you could push this forward to actually interpret other kinds of
 neural models where you don't have some strong notion of grounding that you're leveraging here?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Andreas" timestamp="26:10">
+<turn speaker="Jacob Andreas" timestamp="26:10">
 
 Yeah, I mean, so for any neural model, right, there's some notion of grounding, which is just you
 know, you have your input data which is some representation of some kind of world state and your
@@ -591,10 +591,10 @@ computed in that last layer on a given input as the message that the first half 
 network, which is some kind of speaker sends to the second half of the neural network, which is some
 kind of listener.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Andreas" timestamp="26:57">
+<turn speaker="Jacob Andreas" timestamp="26:57">
 
 And you can actually use these same kinds of techniques to come up with some sort of representation
 of what's actually going on there. And you know, all that's really saying again is that like I have
@@ -610,20 +610,20 @@ explanations, rather than just visualizing sort of collections and training exam
 same thing that we're doing here and saying, okay, now what sentence do I have to produce to give me
 the same distribution over training examples,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="28:09">
+<turn speaker="Matt Gardner" timestamp="28:09">
 
 Right? When you mentioned cutting the network in half and treating that as a message, I guess if you
 really want to use the same method that you used here, you'd have to also get humans to write
 language corresponding to it or as a message in a similar spot in the network, right? So you can
 actually do the translation that you did in this work.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Andreas" timestamp="28:30">
+<turn speaker="Jacob Andreas" timestamp="28:30">
 
 Right? But the cool thing is that for a surprisingly large number of tasks that we care about, that
 kind of natural language data is either easy to collect or already exists. So if you think about you
@@ -631,27 +631,27 @@ know, doing image recognition, for example you know, we have these huge image ca
 which are all about pairing photographs with natural language strings. And that's exactly the kind
 of data that you potentially need to learn one of these sorts of models.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="29:00">
+<turn speaker="Matt Gardner" timestamp="29:00">
 
 Interesting.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="29:02">
+<turn speaker="Waleed Ammar" timestamp="29:02">
 
 Well, thank you. This was a very interesting paper very different than most papers we read in NLP
 conferences. I wonder if you'd like to give us a very brief description of the following the next
 paper that you published in the same direction of interpreting deep representations in NLP the paper
 titled:Analogs of Linguistic Structure in Deep Representations.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Andreas" timestamp="29:32">
+<turn speaker="Jacob Andreas" timestamp="29:32">
 
 Yeah. So this is actually very closely related to the thing that we were just talking about here of
 can we sort of apply these techniques to more general machine learning models. And so what we did in
@@ -666,10 +666,10 @@ annotations, but they're like, the data is, you know, without going into too muc
 about compositionality and we have, you know, sort of people using negation and conjunction and
 disjunction.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Andreas" timestamp="30:44">
+<turn speaker="Jacob Andreas" timestamp="30:44">
 
 And we have ground truth logical annotations for all of the natural language utterances in this
 dataset. And so this means that you know, in this paper we're really building something that looks
@@ -685,19 +685,19 @@ even though this thing has been trained without natural language data at all, yo
 in this vector space of messages that looks a lot like kind of familiar compositional structures
 that we have in natural language.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="31:50">
+<turn speaker="Waleed Ammar" timestamp="31:50">
 
 Perfect. Thank you very much for the for introducing this paper, I am looking forward to read it.
 And thank you again for joining us for this recording.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jacob Andreas" timestamp="32:00">
+<turn speaker="Jacob Andreas" timestamp="32:00">
 
 Yeah, thanks a lot.
 
-</Turn>
+</turn>

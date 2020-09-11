@@ -8,23 +8,23 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting work in natural
 language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is Matt Gardner and Waleed Ammar, we are research scientists at the Allen Institute for
 Artificial Intelligence,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:12">
+<turn speaker="Waleed Ammar" timestamp="00:12">
 
 Our guest today is Dirk Weißenborn. Dirk is a PhD student at DFKI German Research Center for
 Artificial Intelligence working with Hans Uszkoreit and Feiyu Xu, he's interested in representation
@@ -35,10 +35,10 @@ with Tomas Kocisky and Chris Dyer. So the paper proposes, a method for incorpora
 knowledge related to a particular example by dynamically refining word embeddings. Could you tell us
 a little more about the motivation for doing this work Dirk?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Weißenborn" timestamp="00:59">
+<turn speaker="Dirk Weißenborn" timestamp="00:59">
 
 Sure. So in order to understand the motivation about our work, we need to understand the limitations
 of nowadays neural architectures and how we employ them. Usually we train our models on static
@@ -51,10 +51,10 @@ techniques. I believe that with techniques that we have available at the moment 
 current unsupervised learning techniques are not sufficiently powerful at extracting abstract
 knowledge from unlabeled data yet.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Weißenborn" timestamp="01:53">
+<turn speaker="Dirk Weißenborn" timestamp="01:53">
 
 So for instance, it's very hard to extract simple information about words, for example, which words
 are synonyms and antonyms to each other. So when we use word embeddings, for instance, the most
@@ -70,20 +70,20 @@ that. This is to provide explicit data background knowledge. So we don't try to 
 knowledge and in form of parameter somehow implicitly, but we just give the model the knowledge that
 it needs in order to solve the task at hand on the fly.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="03:06">
+<turn speaker="Waleed Ammar" timestamp="03:06">
 
 Basically what you're saying. Instead of having to provide parametrization for the different kinds
 in which the knowledge may be available. You're going to use the word embeddings as the basis for
 representing this knowledge and we're going to consume the background knowledge and somehow induce
 this information in word embeddings. So what was the approach you use to operationalize this?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Weißenborn" timestamp="03:32">
+<turn speaker="Dirk Weißenborn" timestamp="03:32">
 
 Exactly. So as you already mentioned, we operationalized the approach of integrating background
 knowledge through the use of word embeddings. So we basically, we use word embeddings here in this
@@ -93,17 +93,17 @@ of them as being static, but now we basically make the word embeddings dynamic. 
 integrate background knowledge, explicit background knowledge, so written texts directly into the
 word representations before we processed the task at hand. So this is the basic idea.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="04:12">
+<turn speaker="Waleed Ammar" timestamp="04:12">
 
 How do you pick which background knowledge you're going to use?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Weißenborn" timestamp="04:16">
+<turn speaker="Dirk Weißenborn" timestamp="04:16">
 
 Yeah, so this is somehow task dependent of course. So at the moment how we solved this in the paper
 is depending on the task, we kind of have an heuristic that retrieves potentially relevant
@@ -117,10 +117,10 @@ retrieve information that connects those two sequences tighter with each other. 
 concepts that are connected in sequence one with concepts that are connected with concepts in
 sequence two. Right.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="05:20">
+<turn speaker="Matt Gardner" timestamp="05:20">
 
 So just to be sure I'm understanding what's going on, your goal is to incorporate background
 knowledge that we find as written text into some kind of reasoning model. So question answering or
@@ -129,10 +129,10 @@ your process, you have some baseline model, which is I guess some LSTM we can ge
 bit more. And then you retrieved some background knowledge given the question in the passage and
 that background knowledge then gets used how? What exactly do you do here?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Weißenborn" timestamp="05:52">
+<turn speaker="Dirk Weißenborn" timestamp="05:52">
 
 So what we do is basically we try to find the list of as we call it in the paper assertions,
 assertions are basically simple facts about the word in written text and natural language. And once
@@ -142,19 +142,19 @@ background knowledge, it is basically incorporating at the moment it's used as t
 the word and like the context around it to refine its representation, it's word representation based
 on that knowledge, that piece of knowledge that we gave to the model.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="06:38">
+<turn speaker="Matt Gardner" timestamp="06:38">
 
 And so what you mean here is, so you have say an LSTM, probably a bi-directional LSTM that you're
 running on these textual assertions that are your background knowledge. You're taking the output of
 the LSTM for each word as your new embedding for that word.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Weißenborn" timestamp="06:52">
+<turn speaker="Dirk Weißenborn" timestamp="06:52">
 
 Oh right. It's not new. It's we used that output of, for example of BiLSTMs of course, now one word
 can occur multiple times, right? In the context in the background of a piece of background knowledge
@@ -167,17 +167,17 @@ and then we perform a weighted update by a weighted edition with the old represe
 representation of the word that we basically gathered by pooling over all occurrences of the LSTM
 states or whatever you use that we get from reading the background knowledge.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="07:56">
+<turn speaker="Matt Gardner" timestamp="07:56">
 
 And then what happens to this new representation? How does it get used?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Weißenborn" timestamp="08:00">
+<turn speaker="Dirk Weißenborn" timestamp="08:00">
 
 Then we have basically updated our word embedding matrix and because most of our neural NLU models
 that we are using rely on the use of word embeddings. You basically just give the task model that
@@ -186,18 +186,18 @@ fixed word embeddings that we usually use and that's all there is. It's really k
 the task. So you just uptake your word embedding matrix and use the updated, as we call it, refined
 word embedding matrix to basically employ your task model on top.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="08:40">
+<turn speaker="Waleed Ammar" timestamp="08:40">
 
 And I suppose the model parameters that are used to refine these word embeddings are trained jointly
 with the end task.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Weißenborn" timestamp="08:48">
+<turn speaker="Dirk Weißenborn" timestamp="08:48">
 
 Yeah, that's also important, right? That the models or the reading module is trained jointly with
 the task model on top. So there might be interesting ways of using this reading module to share
@@ -205,20 +205,20 @@ between tasks. Maybe so, QA can share the same reading module with NLI and so on
 yet, but this is a possibility as well. But as of now we just use it as part of our end-to-end model
 for the task.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="09:14">
+<turn speaker="Matt Gardner" timestamp="09:14">
 
 So if we remove the pooling operation that you have between lemmas, like if I see the same word in
 multiple background assertions and in the question or in the passage for instance, you do this
 averaging pooling operation. If we remove that, are you basically just adding another LSTM another
 layer of LSTM on the bottom? Is that right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Weißenborn" timestamp="09:34">
+<turn speaker="Dirk Weißenborn" timestamp="09:34">
 
 For example, if you would do that, then it's not possible anymore to update your word embedding
 matrix, but then you can also not incorporate your background knowledge as well. Right, because the
@@ -228,27 +228,27 @@ you don't have any background knowledge, then it's very similar to employing bas
 LSTM. So I guess two layers of LSTM thats, correct. Yeah. Not only that, you have kind of a skip
 connection between the layers with the way it updates, but that's correct.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="10:21">
+<turn speaker="Waleed Ammar" timestamp="10:21">
 
 So in the paper you mentioned two things in order to combine these different, the word embedding
 difference reading steps, right? There's the maxpooling and there's the gated. Could you give us
 some intuition on why we need this instead of taking just the last embedding? Did you try to use the
 last embedding? Do you think it would work?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Weißenborn" timestamp="10:41">
+<turn speaker="Dirk Weißenborn" timestamp="10:41">
 
 I am not sure that I understand the question completely. What do you mean by the last embedding?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="10:47">
+<turn speaker="Waleed Ammar" timestamp="10:47">
 
 Oh, sorry. After the word, all the contexts and the related background information has been
 consumed. We might think that like the final product of this, the final word embedding. After
@@ -256,10 +256,10 @@ updating with all this information, will be the ones to use because it's like th
 one, but of course it's most affected by the most recent texts that you used. So perhaps that's why
 we need to do maxpooling.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Weißenborn" timestamp="11:14">
+<turn speaker="Dirk Weißenborn" timestamp="11:14">
 
 So. Yeah. One thing is then you're basically would do an update, on the update on your word
 embeddings would be the same for words. That would be one thing that's maybe not good. A second
@@ -267,57 +267,57 @@ thing is that you mentioned the most comprehensive is the last state which is no
 because we're employing bi-directional LSTM. So at each point you basically have information about
 the whole context. So at each position in the text you're reading,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="11:44">
+<turn speaker="Waleed Ammar" timestamp="11:44">
 
 Sorry, I think I didn't make myself clear. There are multiple reading steps in this approach. So the
 first example that you give in the paper first you read the premise and then you read the hypothesis
 and then you read the assertions and you do maxpooling here after each, in order to get a
 representation for a particular word after.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Weißenborn" timestamp="12:06">
+<turn speaker="Dirk Weißenborn" timestamp="12:06">
 
 Wow. Okay.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="12:08">
+<turn speaker="Waleed Ammar" timestamp="12:08">
 
 Instead of taking maxpooling,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Weißenborn" timestamp="12:10">
+<turn speaker="Dirk Weißenborn" timestamp="12:10">
 
 We do everything in parallel. Is that what you,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="12:12">
+<turn speaker="Waleed Ammar" timestamp="12:12">
 
 You can basically take the last representation for the word people based on the most recent reading
 step which has already consumed all the previous steps.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Weißenborn" timestamp="12:22">
+<turn speaker="Dirk Weißenborn" timestamp="12:22">
 
 So basically what you're saying is that we don't have to iteratively incrementally update our
 embedding matrix, but just we update it once?,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="12:34">
+<turn speaker="Waleed Ammar" timestamp="12:34">
 
 No, actually I, we can probably take this offline after after the podcast, but another question I
 had was how to pick which, how many digging steps you use, how to design these, in the example you
@@ -327,10 +327,10 @@ have combined that premise and the hypothesis because they're like the example t
 comprehend. Do you have any insights on how to choose these? How to organize our reading steps in a
 given task?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Weißenborn" timestamp="13:17">
+<turn speaker="Dirk Weißenborn" timestamp="13:17">
 
 Right. If you, for example, let's start with the assertion. So if you would basically read each
 assertion individually and then read the next one, then you would impose kind of a reading order and
@@ -342,10 +342,10 @@ order basically now the reading steps because they had different types of inputs
 the type premise, the other has the type hypothesis, the other has to type assertions. So that's why
 we chose three here.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Weißenborn" timestamp="14:12">
+<turn speaker="Dirk Weißenborn" timestamp="14:12">
 
 For question answering it's similar question, context or odd question to supporting context
 documents and the assertions. But I understand that of course we could basically process in parallel
@@ -354,19 +354,19 @@ to read the hypothesis when you already have read the context of the premise tha
 model. Yes, it's kind of a trade off. It might be, it might help, it might not help. So that's just
 a design edition here it's, I am not sure whether it's really necessary.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="14:47">
+<turn speaker="Waleed Ammar" timestamp="14:47">
 
 Another possible thing to experiment with to see if the order in which we present this information
 makes a difference. So if we first read the assertions and then read the hypothesis, a neighborhood
 premise does it make any difference, I'd be curious to know if that's the case.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Weißenborn" timestamp="15:02">
+<turn speaker="Dirk Weißenborn" timestamp="15:02">
 
 Yeah. So we had experiments on that as well and it didn't, so you could basically change premise
 hypothesis around and it didn't make a big of a difference. So we just stuck with this order. But
@@ -378,10 +378,10 @@ receiving at the moment. Is it receiving the premise, is it receiving the hypoth
 assertions and this is kind of an important feature for the model test to know where does this text
 come from? What's the source of this text?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="15:49">
+<turn speaker="Matt Gardner" timestamp="15:49">
 
 Yeah, I would guess the maxpooling operation that you do in computer vision, the motivation for the
 maxpooling is to give, it gives the model some like a convolutional networks some kind of
@@ -389,27 +389,27 @@ translation and variance. And the analogy in this setting is for mutation in var
 ordering that you're passing these things. I would expect it to be like your result is very
 intuitive because that's what I would expect to get from the maxpooling operation.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Weißenborn" timestamp="16:14">
+<turn speaker="Dirk Weißenborn" timestamp="16:14">
 
 Yes.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="16:15">
+<turn speaker="Matt Gardner" timestamp="16:15">
 
 So the way that you're doing this background knowledge and incorporation is by updating word
 embeddings that get fed into your end task model. Do you have any intuition for what exactly this
 model is? Like how is this actually using the background knowledge? Like, do you have some kind of
 explanation for what's actually going on here?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Weißenborn" timestamp="16:34">
+<turn speaker="Dirk Weißenborn" timestamp="16:34">
 
 Yes. so now it really depends, so there are some simple things that the model can extract. For
 example, when it's reading for example, for question answering the question, it might simply just
@@ -421,10 +421,10 @@ plotted this once as well. How do the embeddings change from the rich node to th
 basically see that model adds kind of information that's orthogonal to the information that was
 already there in the unrefined word embeddings.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Weißenborn" timestamp="17:29">
+<turn speaker="Dirk Weißenborn" timestamp="17:29">
 
 So it's not trying to move around the semantics of the words, but it's kind of adding information in
 a way, background information to these models. But in general, it's really hard to say what exactly
@@ -437,10 +437,10 @@ somehow. So it is somehow sensitive to the semantics of the information that it'
 But how exactly it does it is hard to say really. I would say it basically it learns to store those
 kinds of information, like features basically just in the memory. Yeah.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="18:35">
+<turn speaker="Matt Gardner" timestamp="18:35">
 
 So as I was reading this paper, I thought there've been some recent papers showing that LSTM is
 basically, or at least you can view it, a simplified view of them is what you're doing is
@@ -451,17 +451,17 @@ probably after you're averaging over like a billion words and so what you're doi
 particular way of getting background knowledge is enhancing links between the question in the
 passage or the premise and the hypothesis.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Weißenborn" timestamp="19:15">
+<turn speaker="Dirk Weißenborn" timestamp="19:15">
 
 Exactly.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="19:15">
+<turn speaker="Matt Gardner" timestamp="19:15">
 
 That would have been there, that you would certainly have seen these support associations in
 word2vec. It's just may have been washed out by a large training set and now you're forcing these
@@ -471,10 +471,10 @@ for people or something like this. You're pushing the vector for people closer t
 group and then this strengthens the association between the premise and the hypothesis and your
 input.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Weißenborn" timestamp="19:49">
+<turn speaker="Dirk Weißenborn" timestamp="19:49">
 
 This somehow, yes, this is part of the story definitely I would say. So what you're doing basically
 is you make stronger connections between your premise and hypothesis, make it basically easier for
@@ -484,34 +484,34 @@ the counterfactual reasoning. So thre is a bit more going on than just making th
 if you just make things similar then you cannot really, then you don't know really what the
 difference between what antonym and synonym means and things like that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="20:28">
+<turn speaker="Matt Gardner" timestamp="20:28">
 
 Yep. That's a good point.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Weißenborn" timestamp="20:29">
+<turn speaker="Dirk Weißenborn" timestamp="20:29">
 
 So there is a bit more going on. I'm sure there is definitely. And that was also the initial idea of
 this model that you have that you really kind of try to push those closer. But obviously that cannot
 be all.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="20:45">
+<turn speaker="Waleed Ammar" timestamp="20:45">
 
 Could you tell us more about the experimental results? So you mentioned that you experimented with
 two tasks, question answering and textual entailment. Can you give us the highlights of the results?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Weißenborn" timestamp="20:58">
+<turn speaker="Dirk Weißenborn" timestamp="20:58">
 
 Yeah, of course. So let me start maybe by question answering. So what we could show there basically
 that we got consistent improvements when basically introducing our idea. Bye. On a baseline task
@@ -524,10 +524,10 @@ having two stacked LSTM so the model is a bit more powerful, but we test that as
 happens if we have our baseline models? So without the reading architecture but using two layers of
 LSTMs or biLSTMs and the model did not improve performance.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Weißenborn" timestamp="21:58">
+<turn speaker="Dirk Weißenborn" timestamp="21:58">
 
 So it's not that we have now more parameters or more computation complexity, but it's really that
 our reading architecture and especially this pooling of word occurrences helps a lot. If we then add
@@ -539,10 +539,10 @@ inference and there we could not improve on SNLI. So it's basically it stayed th
 and with knowledge, but on multiNLI you can really see the differences again. So we argued in the
 paper as well SNLI has a lot of peculiarities.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Weißenborn" timestamp="22:59">
+<turn speaker="Dirk Weißenborn" timestamp="22:59">
 
 It's really not a good test bed in general for our approach because the vocabulary there is very
 limited. The sentences are very short. The domain is very narrow. It's basically image captions and
@@ -551,27 +551,27 @@ improvements again. And yeah, another highlight is basically that in the low dat
 remove training data and dimensionality of our model, then there the improvements get even higher.
 So really low data regimes, our model or our basically refinement strategy helps even more.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="23:38">
+<turn speaker="Waleed Ammar" timestamp="23:38">
 
 I didn't understand that last part. What do you mean by removing the training data?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Weißenborn" timestamp="23:42">
+<turn speaker="Dirk Weißenborn" timestamp="23:42">
 
 So basically by reducing the amount of training that we give to the model, because these dataset a
 very, very large, one thing we might want from like extracting background knowledge is that our
 models are not that data hungry anymore. And we could show that improvements are more substantial
 when you have a lower or a less training data.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="24:01">
+<turn speaker="Waleed Ammar" timestamp="24:01">
 
 So Okay. Can I go back to the QA results when you're only including the context instead of the
 background knowledge? This sounds a lot like context sensitive word embeddings. So there are several
@@ -579,10 +579,10 @@ previous papers that try to basically just get a better representation of the wo
 given context instead of using the same embedding for every word. And this sounds very similar, do
 you have any thoughts on how this is different without using the background knowledge?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Weißenborn" timestamp="24:31">
+<turn speaker="Dirk Weißenborn" timestamp="24:31">
 
 So, one thing were it differs again is here that we do the pooling of word occurrences and the other
 big differences that these other systems with the contextualized word representations are pre-
@@ -592,28 +592,28 @@ representations that come out of these contextualized word representations as st
 for our model. So our model basically refines embeddings on the fly kind of, and it's basically task
 specific. Whereas the other one is unsupervised and trained in an unsupervised fashion.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="25:14">
+<turn speaker="Matt Gardner" timestamp="25:14">
 
 Actually I wouldn't have thought this was context sensitive because you still have a tight level
 embedding matrix, right? Because the pooling that you're doing across four instances of the same
 word..
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="25:28">
+<turn speaker="Waleed Ammar" timestamp="25:28">
 
 Thats only for a given example. So my understanding is that you have a different embedding for each
 different example in the dataset. So it's sensitive to the example, not sensitive to the particular
 token.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Weißenborn" timestamp="25:40">
+<turn speaker="Dirk Weißenborn" timestamp="25:40">
 
 It's kind of sensitive to the entire context of the task of this task instance. You could say it's
 an contextualized with respect to the instance of the task that you're processing. So to the entire
@@ -621,27 +621,27 @@ context, whereas in contextualize word representations that are used most of the
 don't use any pooling, it is rather really contextualize to this specific appearance of a token. So
 there are definitely some differences there.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="26:09">
+<turn speaker="Waleed Ammar" timestamp="26:09">
 
 Yeah, I think that's an important difference for an absolute model.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="26:11">
+<turn speaker="Matt Gardner" timestamp="26:11">
 
 And I guess in the way that you're doing things, if I get a sentence like "I may have done that in
 May or June, I don't remember." The word may there it may be your lemmatiser figures out that these
 are different lemmas but assuming it doesn't, both instances of may there would get the same
 representation, you would pool across those. Right.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Weißenborn" timestamp="26:30">
+<turn speaker="Dirk Weißenborn" timestamp="26:30">
 
 I would pool across those, but to starting representations of those two would be different because I
 don't start with the lemma word embeddings I start with the real word embedding. So then I would
@@ -652,10 +652,10 @@ sensitive, whereas the other may, the word or exterior word won't be updated. So
 that can happen with the current approach that we're taking. But the model can learn to
 differentiate between these.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="27:17">
+<turn speaker="Matt Gardner" timestamp="27:17">
 
 So it seems like to me as I read papers that published on SQuAD and TriviaQA kinds of models, a
 really key feature of these is some kind of bi-directional attention or attention matrix between the
@@ -664,20 +664,20 @@ is improvements over a baseline that doesn't do this. And so I wonder to what ex
 capturing the same information that a bi-directional kind of attention would capture and if your
 improvements would help, if you had a richer model to start with.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="27:50">
+<turn speaker="Waleed Ammar" timestamp="27:50">
 
 Before going into this, for the TriviaQA tasks, the baseline one was even outperforming the state-
 of-the-art] results even without adding any of the proposed methods. I don't know. It seems like the
 baseline on TriviaQA or not, are not true enough. I don't know. That's actually something I was
 wondering about.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Weißenborn" timestamp="28:08">
+<turn speaker="Dirk Weißenborn" timestamp="28:08">
 
 Yeah, so that's the problem with TriviaQA at that time was that the kind of the way the different
 papers or experiments were done were not all equal. They used different amounts of context to answer
@@ -689,18 +689,18 @@ such that the TriviaQA basically results get much, much better. Yeah. So it's a 
 is something that, yeah, because of TriviaQA that happens because of TriviaQA and people not
 properly using it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="29:10">
+<turn speaker="Waleed Ammar" timestamp="29:10">
 
 How about the question that Matt was asking, do you think what you're doing now with the reading
 steps to refine the embeddings resembles in any way like the bidirectional attention?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Weißenborn" timestamp="29:24">
+<turn speaker="Dirk Weißenborn" timestamp="29:24">
 
 So this is a very good question. If you think about it somehow, yes, it's kind of hard because the
 maxpooling operation that you're doing and integrating that back into the word representations
@@ -713,18 +713,18 @@ information so we could say there's something similar somehow going on. Only tha
 computational model for doing that, but use a very straightforward putting operational over lemmas.
 Yep. Was that clear?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="30:27">
+<turn speaker="Matt Gardner" timestamp="30:27">
 
 Yep, I get the. I don't know. Looking at the ESIM results where you take a state-of-the-art model
 already and try to improve it with your method. It seems a lot less compelling.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Weißenborn" timestamp="30:39">
+<turn speaker="Dirk Weißenborn" timestamp="30:39">
 
 Yes, yes, definitely. Yeah. As I said, this is really, it makes also sense that it's less compelling
 because part of it is really exactly this, right, this mechanism. So that already kind of captures a
@@ -734,25 +734,25 @@ ESIM, it makes a big difference because if you have not enough training data, th
 good attention weights but our model, since it's hard and it's kind of hard coded attention, it does
 a much better job. So yeah.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="31:19">
+<turn speaker="Matt Gardner" timestamp="31:19">
 
 Yeah, that's an interesting point.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="31:21">
+<turn speaker="Waleed Ammar" timestamp="31:21">
 
 Right. So my last question about the paper has to do with run time performance. How much additional
 time should we expect if we use this approach?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Weißenborn" timestamp="31:31">
+<turn speaker="Dirk Weißenborn" timestamp="31:31">
 
 Right. So that that really depends. You know, it depends. One on the encoder that you use for your
 reading modules and now here we use biLSTMs, which are known to be quite slow. Maybe one could use
@@ -764,10 +764,10 @@ basically everything at every position. But in general, if you say your task mod
 then you should expect around twice the run time, right? Because you're basically having to run two
 biLTMS plus the run time that you need for the assertions.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Weißenborn" timestamp="32:29">
+<turn speaker="Dirk Weißenborn" timestamp="32:29">
 
 And that really depends on how many assertions you give to the model. But since the assertions are
 very small in the case of concept map, that's not that actually that you lose in terms of of runtime
@@ -776,32 +776,32 @@ needs much more computation than the reading module. So it depends on your task 
 system itself is very complex, then it's negligible. If your task system very easy and very simple,
 then it will of course double the run time for instance.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="33:09">
+<turn speaker="Matt Gardner" timestamp="33:09">
 
 So I have one more question. The motivation for this paper was how do we incorporate background
 knowledge into our models, right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Weißenborn" timestamp="33:17">
+<turn speaker="Dirk Weißenborn" timestamp="33:17">
 
 Yeah.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="33:17">
+<turn speaker="Matt Gardner" timestamp="33:17">
 
 How well do you think you've captured that goal?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Weißenborn" timestamp="33:21">
+<turn speaker="Dirk Weißenborn" timestamp="33:21">
 
 So I think that we could show that our models are able to incorporate background knowledge in a
 semantically useful way. We have experiments for like counterfactual reasoning and things like that.
@@ -819,45 +819,45 @@ just from concept maps and yeah, so this is upcoming. So I think we are able to 
 important information from heterogeneous sources. So yes. So I think we kind of achieved what we
 went out for.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="35:04">
+<turn speaker="Matt Gardner" timestamp="35:04">
 
 Yeah, that's really interesting to hear. I was particularly wondering about the limitations of this
 triple store, concept map like can these same methods apply to more complex kinds of background
 knowledge, harder kinds of questions. So yeah, I'll be really interested to see the updated version.
 That sounds pretty cool.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Weißenborn" timestamp="35:18">
+<turn speaker="Dirk Weißenborn" timestamp="35:18">
 
 Yeah. So short answer to that is yes, it also works with unstructured when you incorporate
 unstructured background knowledge.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="35:27">
+<turn speaker="Waleed Ammar" timestamp="35:27">
 
 Yeah. I thought that was very clever, saying that to convert a knowledge based tupoles to natural
 language , it never occurred to me that would be an effective way to equate background knowledge.
 Glad it works. All right. Thank you very much for joining us Dirk.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Weißenborn" timestamp="35:43">
+<turn speaker="Dirk Weißenborn" timestamp="35:43">
 
 Well, thank you.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="35:44">
+<turn speaker="Matt Gardner" timestamp="35:44">
 
 Thanks.
 
-</Turn>
+</turn>

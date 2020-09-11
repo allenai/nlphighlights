@@ -8,23 +8,23 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting recent work in
 natural language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is Matt Gardner and Waleed Ammar, we are research scientists at the Allen Institute for
 Artificial Intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:12">
+<turn speaker="Waleed Ammar" timestamp="00:12">
 
 Today our guest is my Maruan Al-Shedivat, Maruan is a PhD student in the machine learning department
 at Carnegie Mellon University advised by Eric P. Xing. His research interests are in learning theory
@@ -32,17 +32,17 @@ information theory, representation learning, including various latent variable m
 interested in applications in healthcare and natural language. It's a great pleasure to have you
 with us today. Maruan
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Maruan Al-Shedivat" timestamp="00:36">
+<turn speaker="Maruan Al-Shedivat" timestamp="00:36">
 
 Thank you. Waleed. It's a great for you to have me.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:41">
+<turn speaker="Waleed Ammar" timestamp="00:41">
 
 All right. So we're going to talk about the paper that you put on archive recently. The paper is
 called: Contextual Explanation Networks. And the main motivation or professional explanation
@@ -50,10 +50,10 @@ networks is that low interpretability of standard neural network values, which m
 them in mission critical problems. Could you describe an example problem where contextual
 explanation network can help?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Maruan Al-Shedivat" timestamp="01:10">
+<turn speaker="Maruan Al-Shedivat" timestamp="01:10">
 
 Right. So the original motivation was exactly as you said. That, we'd like to have models that are
 powerful, but at the same time interpretable. And a motivating example would be, for example, a
@@ -65,10 +65,10 @@ we give this example in the paper it's a small motivation to consider you have t
 you have different data for that patient. So you'd like to make a prediction whether a patient has
 some sort of condition, for example, heart arrhythmia.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Maruan Al-Shedivat" timestamp="02:12">
+<turn speaker="Maruan Al-Shedivat" timestamp="02:12">
 
 And in this case you can have multiple variables that could contribute to the risk of having heart
 arrhythmia. For example, diabetes, smoking, blood pressure and medical history, previous part
@@ -79,18 +79,18 @@ multiple visits. So we would like to build a model that would sort of, you know,
 interpretable prediction such as a doctor's explanation, but at the same time the accurate enough to
 match the actual risk.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="03:07">
+<turn speaker="Waleed Ammar" timestamp="03:07">
 
 Right. So the inputs here are going to be some text that represents what we know about this patient
 and also a set of categorical attributes.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Maruan Al-Shedivat" timestamp="03:17">
+<turn speaker="Maruan Al-Shedivat" timestamp="03:17">
 
 Right, so the vision is that like, if we design a model of this class for healthcare, the input
 would be text or it can be also images. And right now healthcare databases are growing and they're
@@ -98,18 +98,18 @@ becoming a pretty vast in terms of the types of data that you can collect about 
 you can have some sort of very specific crisp attributes that you'd like to interpret your decision
 in terms of.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="03:44">
+<turn speaker="Waleed Ammar" timestamp="03:44">
 
 All right, so what exactly do you mean by an explanation here in this paper? And how can we
 interpret this explanation?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Maruan Al-Shedivat" timestamp="03:51">
+<turn speaker="Maruan Al-Shedivat" timestamp="03:51">
 
 Right? so in this paper we define an explanation as a probabilistic model, as a conditional
 probabilistic model that conditions on the attributes and gives you a probability of a target or an
@@ -122,17 +122,17 @@ this problem of the restrictiveness of this class we say that the explanations a
 this probabilistic model is valid in a certain context. And this context can be specified by let's
 say, a deep neural network or something else.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="04:56">
+<turn speaker="Matt Gardner" timestamp="04:56">
 
 Do you think you lose anything by making this restricted class of models?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Maruan Al-Shedivat" timestamp="05:02">
+<turn speaker="Maruan Al-Shedivat" timestamp="05:02">
 
 That's true. That's a great question. So of course you lose something. For example your targets,
 let's say your, targets, let's say not just scalars, but some sort of vector output. And then there
@@ -142,18 +142,18 @@ any dependencies between these dimensions. So for example, you're trying to pred
 conditions that are somehow interrelated or something like that. If your model completely factorizes
 over these dimensions, you will not be able to capture some correlations between those.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="05:54">
+<turn speaker="Waleed Ammar" timestamp="05:54">
 
 So I'm missing a little bit of information here. How does making the explanation condition the
 context make it interpretable? Rather, what do you mean by context for this composition?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Maruan Al-Shedivat" timestamp="06:10">
+<turn speaker="Maruan Al-Shedivat" timestamp="06:10">
 
 Right. So for the context we we say that any data representation such as images or text or raw text
 that is processed by whatever model that we're enough to learn from this from this data modality
@@ -165,17 +165,17 @@ the class of linear models from the class of linear models whose features are so
 attributes such that we can relate weights to every single attribute. And then in this case, the
 weight will have a very specific meaning.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="07:11">
+<turn speaker="Waleed Ammar" timestamp="07:11">
 
 I see.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="07:12">
+<turn speaker="Matt Gardner" timestamp="07:12">
 
 So this sounds pretty similar to some work that was by Sameer Singh and some co-authors that I guess
 was a post-hoc explanation. I guess that works says these models are really complex and it's really
@@ -186,10 +186,10 @@ decisions surface at that point. And so I'm pretty sure you mentioned this in th
 you, can you tell us, like what are the trade offs involved in doing this post-hoc thing versus
 putting it in the model? Like what do you think?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Maruan Al-Shedivat" timestamp="07:56">
+<turn speaker="Maruan Al-Shedivat" timestamp="07:56">
 
 Right, so initially we thought that it's a great idea to do this post-hoc interpretation. But the
 problem is that when you construct a model post-hoc you don't actually use that model in the first
@@ -206,25 +206,25 @@ experiments, in this case, if there's something wrong with the representation in
 you're trying to interpret the model the performance will deteriorate while with the line framework.
 It's not the case.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="09:34">
+<turn speaker="Matt Gardner" timestamp="09:34">
 
 Interesting.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="09:37">
+<turn speaker="Waleed Ammar" timestamp="09:37">
 
 So this is a lot of teasing for our audience. Could you explain to them what the context of
 explanation is, what you actually do, how do they work?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Maruan Al-Shedivat" timestamp="09:47">
+<turn speaker="Maruan Al-Shedivat" timestamp="09:47">
 
 Right, right. I probably should have started from first explaining how it works and then, go into
 details. But so let's let's look at an example. So what happens? So consider a different application
@@ -237,73 +237,73 @@ what we do, we use the softt attention mechanism to retrieve a model from this d
 work parameters of that model from the dictionary. And then we applied this model to the attributes
 that we'd like to make prediction.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="11:02">
+<turn speaker="Matt Gardner" timestamp="11:02">
 
 So, so does that mean that you have this dictionary of weights associated with linear your models
 and you're actually doing a weighted sum over all of these givens, like some attention over each,
 over all of the explanations in the dictionary? Is that, is that right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Maruan Al-Shedivat" timestamp="11:18">
+<turn speaker="Maruan Al-Shedivat" timestamp="11:18">
 
 That's, correct. That's correct. So in practice, what happens is that the dictionary becomes pretty
 sparse, and also the attention vector becomes extremely sparse. So technically in practice what
 happens is that we select one element from the dictionary all the time.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="11:34">
+<turn speaker="Matt Gardner" timestamp="11:34">
 
 Okay.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Maruan Al-Shedivat" timestamp="11:35">
+<turn speaker="Maruan Al-Shedivat" timestamp="11:35">
 
 And even if the dictionary is sort of over parameterized we observe and practice that's a lot of
 elements will just die out by themselves.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="11:42">
+<turn speaker="Matt Gardner" timestamp="11:42">
 
 Do you enforce that sparsity particularly, or is it just?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Maruan Al-Shedivat" timestamp="11:44">
+<turn speaker="Maruan Al-Shedivat" timestamp="11:44">
 
 That's right. We do enforce it. We opened an aligned organization on the entire dictionary.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="11:50">
+<turn speaker="Matt Gardner" timestamp="11:50">
 
 Okay.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="11:51">
+<turn speaker="Waleed Ammar" timestamp="11:51">
 
 So, I think this refers to the constraint of the deterministic map is that what you're mentioning.
 So, how does this compare to the deterministic encoding and the Mixture of Experts? Like two
 different modeling this direction?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Maruan Al-Shedivat" timestamp="12:05">
+<turn speaker="Maruan Al-Shedivat" timestamp="12:05">
 
 Right. So dictionary the sort of the constraint deterministic map where we use the dictionary is not
 the only one. So the, the easiest one would be to amid this dictionary and try to predict parameters
@@ -320,18 +320,18 @@ classical mixture of experts models. So maybe one, difference is that mixture of
 context. And in all these models, usually context and attributes are the same representation, but in
 this case we would separate them into two different conditions.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="13:39">
+<turn speaker="Waleed Ammar" timestamp="13:39">
 
 I see. So the paper compares the explanations generated by the contextual explanation network and
 the post-hoc explanations could you shed some light on the results of this comparison?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Maruan Al-Shedivat" timestamp="13:54">
+<turn speaker="Maruan Al-Shedivat" timestamp="13:54">
 
 Right. So there are two results. So one of them is theoretical results and the, and the other one
 that I've already mentioned is more like empirical results. So the theoretical results says that
@@ -340,10 +340,10 @@ post-hoc methods, or we're trying basically to locally approximate the decision 
 contextual explanation network, we will recover the explanation that the network used in the first
 place.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Maruan Al-Shedivat" timestamp="14:32">
+<turn speaker="Maruan Al-Shedivat" timestamp="14:32">
 
 So this means basically that the explanation's generated by the networks are consistent with the
 post-hoc interpretations. In this particular case. So it also tells us that if post-hoc whatever
@@ -355,10 +355,10 @@ are constructed. And the idea here is that so if you add noise to the attributes
 decorrelate your targets and the attributes. So whatever your model conditional model that you're
 trying to build, basically we're trying to predict from noise some outcome.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Maruan Al-Shedivat" timestamp="15:44">
+<turn speaker="Maruan Al-Shedivat" timestamp="15:44">
 
 And this in the worst case when that, when the noise level is pretty high this should lead to
 basically random prediction. And that's what we observe with contextual information networks. So
@@ -371,27 +371,27 @@ post-hoc manner, in post-hoc approximation, because we're fitting those local li
 actual predictions, they still match locally the departments of the original model. But the
 interpretations are providing in terms of pretty much noise. Does that make sense?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="17:00">
+<turn speaker="Waleed Ammar" timestamp="17:00">
 
 It does, yes.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="17:01">
+<turn speaker="Matt Gardner" timestamp="17:01">
 
 So I have a high level question. What, I've seen a bunch of work, I guess people are really
 interested these days and how to make these models interpretable. Do you think that showing like
 linear feature weights is the ends like, is this good enough? Should we be looking for something
 more? Like what do you think about the future of work on interpretability?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Maruan Al-Shedivat" timestamp="17:29">
+<turn speaker="Maruan Al-Shedivat" timestamp="17:29">
 
 I don't know, in my opinion. Both methods should be used sort of together. Because visualizing
 feature weights allows you to somewhat debug the model that you trained on your data and just see
@@ -400,10 +400,10 @@ explanation of why the model makes this or that prediction. So but it gives you,
 of other information that probably could be used for improving, you know training procedures. Of,
 these models. So there's neural networks.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Maruan Al-Shedivat" timestamp="18:11">
+<turn speaker="Maruan Al-Shedivat" timestamp="18:11">
 
 In my opinion, like an explanation is by definition, like explanation, for example, I explained to
 you a concept in math rights. I, tell you, I tell you a model that you can further take and then use
@@ -414,39 +414,39 @@ way, an interesting way an interesting extension would be to try to combine wher
 visualize, but at the same time, you can relate your visualizations to explanations in terms of some
 sort of crisp features.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="19:01">
+<turn speaker="Matt Gardner" timestamp="19:01">
 
 Interesting. Thanks.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="19:03">
+<turn speaker="Waleed Ammar" timestamp="19:03">
 
 Thank you very much for for spending the time to talk to us. And yeah, I hope to see you soon.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Maruan Al-Shedivat" timestamp="19:09">
+<turn speaker="Maruan Al-Shedivat" timestamp="19:09">
 
 All right. Thanks so much for having me.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="19:12">
+<turn speaker="Waleed Ammar" timestamp="19:12">
 
 Bye. Bye.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Maruan Al-Shedivat" timestamp="19:12">
+<turn speaker="Maruan Al-Shedivat" timestamp="19:12">
 
 Bye
 
-</Turn>
+</turn>

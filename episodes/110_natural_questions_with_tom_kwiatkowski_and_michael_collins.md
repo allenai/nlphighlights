@@ -8,47 +8,47 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Welcome to the NLP highlights podcast where we talk about interesting work in natural language
 processing. The hosts are Matt Gardner, Waleed Ammar and Pradeep Dasigi.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:08">
+<turn speaker="Matt Gardner" timestamp="00:08">
 
 Okay. Today our guests are Tom Kwiatkowski and Mike Collins who are both research scientists at
 Google and Mike is also a professor at Columbia University. Mike and Tom, welcome to the program.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Michael Collins" timestamp="00:18">
+<turn speaker="Michael Collins" timestamp="00:18">
 
 Thank you.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tom Kwiatkowski" timestamp="00:19">
+<turn speaker="Tom Kwiatkowski" timestamp="00:19">
 
 Thanks. Thanks for having us
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:21">
+<turn speaker="Matt Gardner" timestamp="00:21">
 
 Today. We wanted to talk about natural questions, which is a dataset that you both were involved in
 creating that was released, I guess about a year ago now. And we thought it would be nice to talk
 about what this data set is and what has come out of the last year of research on it. So do you want
 to start off by telling us what is natural questions?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tom Kwiatkowski" timestamp="00:40">
+<turn speaker="Tom Kwiatkowski" timestamp="00:40">
 
 Yeah, so this is a dataset that we brought out. The focus is on question answering against a
 Wikipedia. And I guess the novelty of this, you know, there are a few novelties in the test set, but
@@ -61,10 +61,10 @@ paragraph that contains all of the information required for any person to sort o
 infer the answer to the questions any showed, any person this piece of text along with the question,
 they'd say, yes, I'm pretty confident that I know what the answer to this question is.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tom Kwiatkowski" timestamp="01:36">
+<turn speaker="Tom Kwiatkowski" timestamp="01:36">
 
 So that's a long answer. The short answer is just basically a span describing an entity or some
 entities in that text which can succinctly also answer the question. So those are our definitions.
@@ -75,10 +75,10 @@ on the page to really infer the answer is a hard thing and is a very natural thi
 when they're looking for information. So we would like our computers to be able to do the same
 thing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="02:13">
+<turn speaker="Matt Gardner" timestamp="02:13">
 
 So I guess fundamentally what you have then is a search query paired with a Wikipedia page and you
 want to say where in this Wikipedia page is the answer, if anywhere, which I guess is pretty related
@@ -88,10 +88,10 @@ paragraph from a Wikipedia page and we need to return an answer. So I guess, how
 the differences or what your motivation was given existing resources? Why build this other one? What
 was, missing that you were trying to capture here?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Michael Collins" timestamp="02:50">
+<turn speaker="Michael Collins" timestamp="02:50">
 
 So there are a couple of things. Firstly in SQuAD questions were written by people who'd read an
 underlying paragraphs and then were making a question about that paragraph and so It's obviously
@@ -107,30 +107,30 @@ think the problem of reading an entire Wikipedia page which can consist of many 
 deciding that there's not an answer on the page or identifying the paragraph that contains that
 answer is probably the more challenging part of the natural questions task.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Michael Collins" timestamp="03:58">
+<turn speaker="Michael Collins" timestamp="03:58">
 
 If you're given a paragraph and told there is an answer in it, then extracting that short answer is
 probably the easiest part of the process because at that point, and it's maybe more able to
 shortcuts to be frank, statistical shortcuts. So we were very interested in the problem of actually
 identifying which paragraph on a page contained an answer.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="04:17">
+<turn speaker="Matt Gardner" timestamp="04:17">
 
 Yeah, that's great. That's a good summary. I and I totally agree with what you just said. What I
 wonder still is what made you like what's your interest, your research interest in this particular
 problem? Like what goal are you trying to solve in the end by encouraging systems that solve this
 task? What do you think people will do?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tom Kwiatkowski" timestamp="04:38">
+<turn speaker="Tom Kwiatkowski" timestamp="04:38">
 
 Well, you know, we are interested in systems that are useful to users and help people get the
 information they're looking for. And so we do think that actually building, you know, on data which
@@ -142,10 +142,10 @@ resources out there. But we also have a certainly higher level view on this, whi
 do think that many of the greatest advances in NLP over the last decades really have been driven by
 very real, you know, real world tasks.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tom Kwiatkowski" timestamp="05:31">
+<turn speaker="Tom Kwiatkowski" timestamp="05:31">
 
 So I'm talking really about machine translation, speech recognition here and we think that, you
 know, while there's lots of really exciting work at the moment on trying to find challenged tasks
@@ -156,10 +156,10 @@ naturally occurring data is less likely to be something that is just going to fi
 statistical regularities that occur in, for instance, you know, trivia question answering or
 answering questions that have been written by an annotator who's very heavily primed.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="06:29">
+<turn speaker="Matt Gardner" timestamp="06:29">
 
 Yeah. Yeah, those are good points. Well, I think we'll come back to this question of like targeted
 phenomena versus end-to-end or some natural question distribution later on in the discussion. I
@@ -169,10 +169,10 @@ creating this. Like are you trying to like encourage research that would help Go
 better search results? Or is that not really a motivation here? Is it more just basic language
 understanding research?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tom Kwiatkowski" timestamp="07:04">
+<turn speaker="Tom Kwiatkowski" timestamp="07:04">
 
 I think both of the above really. I think we would like to encourage it. We don't expect people to
 build, you know, a system that we can use out of the box. There are all sorts of other requirements
@@ -180,10 +180,10 @@ when you're trying to build an end-to-end user system, but we would love to enco
 natural language understanding research, which would allow us to build better systems for sure.
 Yeah.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Michael Collins" timestamp="07:25">
+<turn speaker="Michael Collins" timestamp="07:25">
 
 Yeah. I guess to add a little bit to that, yeah, I think there are two sides to it that we
 definitely view question answering is a really, really useful task. It's many, many information
@@ -196,10 +196,10 @@ top of it. And I think in getting real user questions and seeing the distributio
 would get from annotators and so on, it actually uncovered a lot of interesting properties of
 questions which hinge on really core, semantic and pragmatic phenomenon.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="08:14">
+<turn speaker="Matt Gardner" timestamp="08:14">
 
 Yeah, yeah. That's great. Part of why I asked this question is I've seen Fernando Pereira talk a
 bunch about retrieval as like why it's a fundamental and like the perhaps the fundamental NLP task
@@ -211,10 +211,10 @@ said that this is a query entered into a Google search box paired with a Wikiped
 can you say about how the data was actually collected and what it looks like? What else is there
 that someone should know?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Michael Collins" timestamp="08:59">
+<turn speaker="Michael Collins" timestamp="08:59">
 
 So it was a fairly info process. We came up with some annotation guidelines. We kind of crowdsourced
 the annotations as Tom was saying, they have to select a long answer if they can find one on the
@@ -226,10 +226,10 @@ started to pool annotator resources. Actually for a portion of the data. We got 
 data that led to some interesting results in that we were curious about getting upper-bounds or
 estimates of upper-bounds of performance on the task.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Michael Collins" timestamp="09:44">
+<turn speaker="Michael Collins" timestamp="09:44">
 
 And one thing we found, which is, I mean it's fairly obvious in hindsight if you just do the
 analysis is that just taking a single user and a single random user and evaluating their accuracy, I
@@ -242,10 +242,10 @@ were good. One interesting offshoot of that. Was there [was] a good number of qu
 answers are essentially correct but reasonable people could quibble about the correctness of an
 answer.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Michael Collins" timestamp="10:37">
+<turn speaker="Michael Collins" timestamp="10:37">
 
 And I think that actually future research might be a particularly interesting topic and that there
 are nuances, there are conditions under which an answer is correct it's natural for human to say,
@@ -253,26 +253,26 @@ well if by this he meant that then this is the answer. If by this part you meant
 answer, all kinds of pragmatic effects are coming in here where you have to sort of make a best
 guess as to what a user is referring to in a question.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="10:59">
+<turn speaker="Matt Gardner" timestamp="10:59">
 
 Do you have any annotations of that kind of stuff?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Michael Collins" timestamp="11:02">
+<turn speaker="Michael Collins" timestamp="11:02">
 
 We have evaluations where we categorize answers as you've being wrong unequivalently correct or
 correct but debatable and by debatable we literally meant the four of us so called experts could sit
 around and have a lively discussion for a few minutes about whether something was correct or not.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tom Kwiatkowski" timestamp="11:21">
+<turn speaker="Tom Kwiatkowski" timestamp="11:21">
 
 If the question is who was the first person to see the earth from space and there's a document
 saying, Yuri Gagarin was the first person in space. Some of the experts basically Mike had an issue
@@ -282,28 +282,28 @@ correct. Most people would quite like to see this answer but actually there is, 
 reasonable doubt in maybe if we really wants to nail this down. You would want to go and sort of see
 a photo of the Vostok spacecraft.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Michael Collins" timestamp="11:55">
+<turn speaker="Michael Collins" timestamp="11:55">
 
 Or to go deeper is space and outer space, are they the same thing? Seriously. This is the kind of
 thing that comes up all the time in these questions. I mentioned this to Fernando and he started
 talking about parabolic flights. I think the early days is sort of exploration and you know, how
 high do you have to get up to be in space.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="12:16">
+<turn speaker="Waleed Ammar" timestamp="12:16">
 
 Was there anything surprising about when you did the analysis and looking at, you know, precision to
 what extent people are consistent?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tom Kwiatkowski" timestamp="12:25">
+<turn speaker="Tom Kwiatkowski" timestamp="12:25">
 
 The thing that really is surprised me was working out that there was this category of correct with
 the data or things, right? So, you know, when we were collecting the data, we did, what people will
@@ -315,10 +315,10 @@ know, we just keeping looking at these inter annotator agreement and the numbers
 the stuff coming back from them and they look great. But the inter-annotator agreement was pretty
 low. So that was when we all just sat down.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tom Kwiatkowski" timestamp="13:05">
+<turn speaker="Tom Kwiatkowski" timestamp="13:05">
 
 We said, okay, we have to go through these things. And we realized straight away, you know, after a
 long meeting where we were actually getting two examples that fundamentally that Mike and I would
@@ -330,10 +330,10 @@ important thing that we came up with in this paper is, you know, it's often in t
 talk about human performance and you know, then sometimes computers get superhuman performance that
 can lead to, you know, all sorts of breathless news articles and things.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tom Kwiatkowski" timestamp="13:56">
+<turn speaker="Tom Kwiatkowski" timestamp="13:56">
 
 And people ask me, do you really think your computers should be superhuman understanding language
 and that's not even remotely what we are talking about. Right? The computer can be superhuman at
@@ -349,26 +349,26 @@ the thing we saw is like, it's fairly easy to get very high precision from annot
 maybe not. You sort of have to let and hunt sometimes. And in that case you have to get multiple
 annotations, certainly for eval.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="15:01">
+<turn speaker="Matt Gardner" timestamp="15:01">
 
 So can you tell us more about how you decided if a particular query was a question that should go
 into the data?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Michael Collins" timestamp="15:07">
+<turn speaker="Michael Collins" timestamp="15:07">
 
 Just a set of heuristics really, which we're looking for. Wh questions. I think that was one of the
 main ones, right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tom Kwiatkowski" timestamp="15:15">
+<turn speaker="Tom Kwiatkowski" timestamp="15:15">
 
 There was a lens, there was a lens cut off. We wanted things to be interesting and one of the
 easiest ways we got that was to just say it should have any saying words, things with wh question.
@@ -381,19 +381,19 @@ replicate them, of course you don't have access to a huge number of Google searc
 don't want to, we didn't want to be reliant on any sort of, you know, funky question classifier that
 no one else could build.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Michael Collins" timestamp="16:03">
+<turn speaker="Michael Collins" timestamp="16:03">
 
 And the piercings we assigned would be high recalls because the annotators could actually mark
 things as not being not a valid question. And so I think the paper has some analysis where post-talk
 we looked in and tried to see if there are questions we missed and we got most of them.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="16:19">
+<turn speaker="Matt Gardner" timestamp="16:19">
 
 Yeah, I remember that. In your paper there's like one example of a why question, but when you have a
 random sample later in the paper with a bunch of examples, they're basically no questions like that.
@@ -401,10 +401,10 @@ I ask about this because it's asking why something happened is very different fr
 factoid kind of question. And I wonder if you know like what percentage of the data has this like
 requires a longer answer or this like why kind of explanation.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tom Kwiatkowski" timestamp="16:46">
+<turn speaker="Tom Kwiatkowski" timestamp="16:46">
 
 So I can't say specifically why. What we can say is you know, of the data, you know, as we both
 mentioned, many of the questions don't have an answer. So this, you know, somewhat thing over
@@ -414,47 +414,47 @@ know, someone has gone to the work and said, okay, the information is here, but 
 succinctly answered with a short piece of text. So some of those will be why questions? I certainly
 not all. Why questions?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="17:27">
+<turn speaker="Matt Gardner" timestamp="17:27">
 
 Does that number include yes, no questions or do yes, no questions have short answers
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tom Kwiatkowski" timestamp="17:31">
+<turn speaker="Tom Kwiatkowski" timestamp="17:31">
 
 That does not include yes, no questions actually in the original dataset. Yes, no questions. Were
 only about 1% of the data.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="17:38">
+<turn speaker="Matt Gardner" timestamp="17:38">
 
 Okay.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tom Kwiatkowski" timestamp="17:39">
+<turn speaker="Tom Kwiatkowski" timestamp="17:39">
 
 There was a follow up piece of work called the boolean questions where we all sample those.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="17:44">
+<turn speaker="Waleed Ammar" timestamp="17:44">
 
 I imagine it's a lot harder to get agreement on the long answers. Have you seen that multiple long
 answers tend to be unequivocally correct?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tom Kwiatkowski" timestamp="17:55">
+<turn speaker="Tom Kwiatkowski" timestamp="17:55">
 
 Yes. So we tell people to take the first one on the page, but the answer is yes. You know, sometimes
 the same information is just repeated multiple places on the page. So it's not always the case. You
@@ -464,43 +464,43 @@ Having said that, we do ask them to take the first on the page that pretty good 
 again we have some analysis of actually how many of the examples will have multiple long answers and
 it's relatively few and it's very rarely more than two.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="18:31">
+<turn speaker="Waleed Ammar" timestamp="18:31">
 
 Gotcha. Yeah. I imagine it's a little hard to like it is easier to say we want the first answer but
 it's harder to say when to stop because you could take only the first two sentences or you could
 take the entire paragraph cause it's often quite related.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tom Kwiatkowski" timestamp="18:43">
+<turn speaker="Tom Kwiatkowski" timestamp="18:43">
 
 Oh no. Sorry. So the long answer is actually an HTML bounding box. So the annotation tool that we
 gave to people only let them click on like the full paragraph.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="18:52">
+<turn speaker="Matt Gardner" timestamp="18:52">
 
 Yeah, that's a good way to get the higher agreement cause I can imagine lots of variation if you let
 them select arbitrary spans.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tom Kwiatkowski" timestamp="19:00">
+<turn speaker="Tom Kwiatkowski" timestamp="19:00">
 
 And that is a thing that we saw a bit more in the short answers. Right. And our inter-annotator
 agreement goes down a bit on, on the short answers.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="19:08">
+<turn speaker="Matt Gardner" timestamp="19:08">
 
 Fair enough. I think my, my last question on like trying to understand what's in this data. I have a
 way of thinking about these reading comprehension datasets of like what, what kind of phenomenon or
@@ -511,10 +511,10 @@ more complex to answer a question. I wonder what percentage of the natural quest
 and you might not know the answer to this, but like how often is it just like simple paraphrase,
 finding an argument extraction like SQuAD. Do you know
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tom Kwiatkowski" timestamp="19:53">
+<turn speaker="Tom Kwiatkowski" timestamp="19:53">
 
 You know, one thing to note is that the input format is very different the task is very different.
 So, natural questions. There are a few decisions that the system has to make it first has to decide,
@@ -528,10 +528,10 @@ actually really one of the hardest tasks for our current systems because they lo
 love to do word matching and they think, Oh, there's some good paraphrases here and lets just guess
 at it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tom Kwiatkowski" timestamp="20:42">
+<turn speaker="Tom Kwiatkowski" timestamp="20:42">
 
 Right. so deciding whether to answer is sort of the hardest thing. You know, the system also still
 have some way to go in terms of finding the paragraph. Once you get down to something where you know
@@ -540,10 +540,10 @@ task. But again, because the questions are not sort of written by annotators bei
 paragraph even if it is just paraphrase, finding, it's often much harder than the stuff you seen
 SQuAD which is honestly the, you know, very loosely paraphrasing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="21:14">
+<turn speaker="Matt Gardner" timestamp="21:14">
 
 Right, right. Yeah. I guess I'm not trying to like trivialize natural questions and make it more
 like SQuAD. I'm just trying to understand what you need to do to answer the questions and definitely
@@ -556,25 +556,25 @@ evaluating it without any other training on natural questions given the original
 assuming for all the questions where there is a long answer, see if you can recover the short answer
 and then that would get at my question at least a little bit.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Michael Collins" timestamp="22:07">
+<turn speaker="Michael Collins" timestamp="22:07">
 
 Again, we think that identifying the short answer once you know the paragraph contains an answer we
 think that's probably not the most interesting part of the task.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="22:14">
+<turn speaker="Matt Gardner" timestamp="22:14">
 
 Okay.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tom Kwiatkowski" timestamp="22:16">
+<turn speaker="Tom Kwiatkowski" timestamp="22:16">
 
 Also, to answer your question that's a very good suggestion Matt. I have, we have not ever done
 that. I don't know why we've never done that. I would suspect that it would do pretty badly. I'm
@@ -583,10 +583,10 @@ I do know that people have used SQuAD as extra training data to get a little gai
 questions which is nice. But I think just training on SQuAD, I would guess that it would not do very
 well.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="22:43">
+<turn speaker="Matt Gardner" timestamp="22:43">
 
 It especially like the earlier models that were just trained on SQuAD and with no pre-training cause
 they're going to be very, very heavily affected or influenced by the, very trivial lexical overlap
@@ -594,18 +594,18 @@ and a lot of the SQuAD questions. But something that's like that has Roberta and
 on SQuAD to do the argument extraction. Maybe it would be a little more, a little more robust to
 paraphrase, but
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tom Kwiatkowski" timestamp="23:03">
+<turn speaker="Tom Kwiatkowski" timestamp="23:03">
 
 Yeah. Well well I, you know, I encourage you to try it or maybe we will, someone should do it. Yeah.
 Yeah.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="23:10">
+<turn speaker="Matt Gardner" timestamp="23:10">
 
 Cool. Yeah. And I guess I'm, again, my whole point here is just trying to understand like what do
 you need to answer these questions? And to Mike's point, it sounds like at least Mike thinks that
@@ -615,29 +615,29 @@ plenty of questions for, like DROP questions for example, we're given a paragrap
 It's not at all trivial. It's not a simple argument extraction. I wouldn't expect a system to just
 do really well given the paragraph itself.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Michael Collins" timestamp="23:47">
+<turn speaker="Michael Collins" timestamp="23:47">
 
 Well remember that for maybe a quarter of our cases they don't even pick a short answer because it's
 not possible. So those are probably the cases where something more is needed. But the, yeah, for
 three quarters of the case where they pick a long answer, there is a short answer and those are
 probably more extractive entity style answers for sure.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="24:08">
+<turn speaker="Matt Gardner" timestamp="24:08">
 
 Great. So it's been a year since natural questions was released and what has happened since, do you
 want to tell us how things have progressed, how happy you are with the progress? What do you think?
 And I guess I'm specifically asking about like modeling stuff on this data.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tom Kwiatkowski" timestamp="24:24">
+<turn speaker="Tom Kwiatkowski" timestamp="24:24">
 
 Yeah. You know, there's been some activity on the leaderboard. The numbers have gone up quite
 significantly. There's still a bit of a gap to what we think is possible. Many of the things that
@@ -649,10 +649,10 @@ they using these large pre-trained language models, as with everyone else that h
 quite nice modifications where they have some architectural modifications but also have really
 worked out how to represent a document.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tom Kwiatkowski" timestamp="25:17">
+<turn speaker="Tom Kwiatkowski" timestamp="25:17">
 
 Right. So one of the issues that we have with our current huge retrain language models is you can't
 actually fit an entire document into whichever accelerators we want to use and you have to some
@@ -663,10 +663,10 @@ thing that has been quite important for this task, and I think we are still work
 working out the sort of how to calibrate the models work out whether or not to answer. And so I
 think there's been some nice gains coming from basically better ways of doing negative sampling.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tom Kwiatkowski" timestamp="26:03">
+<turn speaker="Tom Kwiatkowski" timestamp="26:03">
 
 One of the ways to calibrators you know, how many like answerable things you show and how many
 unanswerable things do you show, right. Where there's been some stuff there that's sort of modeling
@@ -677,10 +677,10 @@ know, some basically says a statement and says, is it true that someone says a s
 basically it becomes a sort of a entailment finishing task. I'm sure I'm missing things. Mike, do
 you have other things?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Michael Collins" timestamp="26:48">
+<turn speaker="Michael Collins" timestamp="26:48">
 
 Not that I can think of. I think, you know, I think to flip that question around, I think I could
 talk a little bit about what I think could be some really exciting directions in the future. And I
@@ -694,17 +694,17 @@ they prove that they're really doing that. How can we really build models that a
 interpretable and understandable? I think that that is going to be a huge, huge problem going
 forward.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="27:42">
+<turn speaker="Matt Gardner" timestamp="27:42">
 
 I definitely agree.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tom Kwiatkowski" timestamp="27:44">
+<turn speaker="Tom Kwiatkowski" timestamp="27:44">
 
 Yeah. Just sort of a belief, they haven't looked at predictions that the current models are pretty
 good at sort of identifying things that look like pretty valid answers, you know, really could be
@@ -717,72 +717,72 @@ where they're much less good at recall. They get bored reading an article, but I
 precision, actually understanding, okay, like no, this is the wrong thing that's been talked about
 here.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="28:35">
+<turn speaker="Matt Gardner" timestamp="28:35">
 
 But I guess if you're assuming a decent retrieval system that probably gives you the right, assume
 that the question is answerable given the right paragraph on the web. And I can retrieve probably
 the right paragraph for you. I guess you can understand why current systems do that because you are
 pairing them with a plausible Wikipedia document, right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tom Kwiatkowski" timestamp="28:56">
+<turn speaker="Tom Kwiatkowski" timestamp="28:56">
 
 It's a plausible one. It's not always the correct one. And also do remember that our definition of
 correctness is not just that it has to be the right answer, right? It's that the paragraph has to
 contain all of the information required for anyone who maybe doesn't even know about this topic to
 fully agree that this is the right answer. Right.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="29:15">
+<turn speaker="Matt Gardner" timestamp="29:15">
 
 I see.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tom Kwiatkowski" timestamp="29:16">
+<turn speaker="Tom Kwiatkowski" timestamp="29:16">
 
 So sure. I mean, if the paragraph was talking about the right actor, but it might not be talking, it
 might not even mention the movie. Right? So, you know, do we know that that's the right answer under
 our definition of correctness, that's not a good answer.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="29:32">
+<turn speaker="Matt Gardner" timestamp="29:32">
 
 Did you, did you evaluate that? Like how often does that happen? I'm imagining like in that, in that
 exact case would the long answer actually the, as the paragraph that just says Batman and not Dark
 Night,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tom Kwiatkowski" timestamp="29:44">
+<turn speaker="Tom Kwiatkowski" timestamp="29:44">
 
 Sorry. So the long answer would not be given if it doesn't have all of the information required.
 Right. Under our definition. So,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="29:51">
+<turn speaker="Matt Gardner" timestamp="29:51">
 
 Yeah, under your definition, right, I'm just wondering about the actual annotators, how they applied
 that definition. Cause it seems hard to get people to agree there. Like, I can imagine myself as an
 annotator selecting that paragraph.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tom Kwiatkowski" timestamp="30:05">
+<turn speaker="Tom Kwiatkowski" timestamp="30:05">
 
 I mean, that's our definition. And as Mike said earlier under that definition, we got 90% backers
 according to ourselves. And we are pretty strict. Like that 10% had some, you know, had some correct
@@ -791,20 +791,20 @@ under our definition, yes, 90% of it was correct. We, you know, we were lucky to
 dedicated annotators who we actually managed to work over an amount of time to train them to get use
 to this definition.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="30:34">
+<turn speaker="Matt Gardner" timestamp="30:34">
 
 Great. So Mike, you mentioned like what kind of research you would like to see and I agree, but I
 would ask a more specific question. What, kind of research would help us actually solve natural
 questions maybe to pose this another way? What, what's missing, what's not being solved and what is
 needed to solve it?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Michael Collins" timestamp="30:52">
+<turn speaker="Michael Collins" timestamp="30:52">
 
 That's a great question. I mean I feel that to really solve these kind of tasks we not might be
 models that really need to keep track of discourse structure, the set of entities and references in
@@ -815,39 +815,39 @@ so on where we can push models towards having to do that. Because having models,
 keeping track of entities and discourse and the propositions outlined, and discourse seems
 problematic to me. I don't think these systems are really understanding language.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="31:38">
+<turn speaker="Matt Gardner" timestamp="31:38">
 
 I definitely agree with you on that point. I wonder though about natural questions because you're
 assuming that I have a single paragraph that has all of the information needed to answer the
 question. And so doesn't that assume that I'm not going to have discourse that connects it to
 previous parts of the document.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Michael Collins" timestamp="31:56">
+<turn speaker="Michael Collins" timestamp="31:56">
 
 Yeah, but even the disclose effects within single paragraphs can be fairly significant. Right, co-
 reference bridging imply documents everywhere. One interesting experiment is just take a sentence
 out of context and Wikipedia and see if it makes any sense, see if it's interpretable. You will see
 that there are all kinds of referential effects and implied arguments about the things in there.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="32:25">
+<turn speaker="Matt Gardner" timestamp="32:25">
 
 Yeah. Great. I guess my last line of questioning here you mentioned in your paper about like what,
 and we talked about this earlier, so like what is a benchmark, a good benchmark for natural language
 understanding and if we solve natural questions, do we understand language?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Michael Collins" timestamp="32:45">
+<turn speaker="Michael Collins" timestamp="32:45">
 
 It's a good question. We were trying to come up with a good benchmark for question answering and I
 will say that I think it will push research and semantics and pragmatics but it certainly wasn't
@@ -857,18 +857,18 @@ with me and really interact with me the way human would then I think it would fu
 language but we may have to build all kinds of tasks on the way to that. And you know question
 answering is one of them I guess.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="33:20">
+<turn speaker="Matt Gardner" timestamp="33:20">
 
 I guess you say question answering like it sounds like what you mean when you say question answering
 is open domain give me a search bar and have me answer a question.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Michael Collins" timestamp="33:30">
+<turn speaker="Michael Collins" timestamp="33:30">
 
 There are going to be many variants. Yeah. This is just one variant and there are many all of which
 are interesting. which are different, it's actually it's, yeah I think it's a mistake to lump them
@@ -876,10 +876,10 @@ all into the same category. That's part of the problem. Machine translation, spe
 fairly well defined, you know, task which or you say it is clear what you mean. Question answering
 actually lumps in a lot of, some are related but also rather different tests.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="33:55">
+<turn speaker="Matt Gardner" timestamp="33:55">
 
 Yeah, I guess an alternative approach, one that I am pushing in my research agenda quite a bit so I
 am a little bit biased here but is you can use questions to probe whatever you want and you're using
@@ -892,10 +892,10 @@ them? And I wonder what your thoughts are on like what's the I, it's, I don't kn
 either way is better, but do you have any thoughts on like which one of these is like possibly more
 fruitful in pushing natural language, understanding research?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="34:48">
+<turn speaker="Waleed Ammar" timestamp="34:48">
 
 I think the question answering like a definition in national questions is trying to assess, you
 know, the question answering as a task that humans ask that like an actual information need and it
@@ -906,10 +906,10 @@ framing it as a question answering problem makes it easier for us to get annotat
 of the models that we know already work well for question answering. So it feels like they're very
 orthogonal.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="35:35">
+<turn speaker="Matt Gardner" timestamp="35:35">
 
 Yeah, I'll give a better posing of what I was trying to say, which might help clarify some things.
 It's like, so natural questions is great. The question that started this was like if we solve
@@ -918,10 +918,10 @@ is like what would a linguist want to see in order to be convinced that the mach
 language given some natural questions result? Like what would have to change about natural questions
 in order to really be convincing in this regard.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tom Kwiatkowski" timestamp="36:06">
+<turn speaker="Tom Kwiatkowski" timestamp="36:06">
 
 Yeah. And that question repeat sort of what Mike said. I don't think there's any results on natural
 questions that would make me feel that the machine understood language. And I'm not sure that we
@@ -932,10 +932,10 @@ help us understand ways of probing our models and understand ways and sort of wo
 what do they and do they not capture and Mike also talked about many of the, phenomenon that we
 think will be very important for natural questions.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tom Kwiatkowski" timestamp="36:44">
+<turn speaker="Tom Kwiatkowski" timestamp="36:44">
 
 I think in parallel it would be amazingly good to have linguists help us understand, you know, to
 what extent the models are actually capturing these phenomena. I'm sometimes a little bit wary of
@@ -949,18 +949,18 @@ where I'm a little bit more skeptical. But in general I think linguistic probing
 strongly encourage people to work on them in parallel working on other sort of more general tasks
 like natural questions.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="37:46">
+<turn speaker="Matt Gardner" timestamp="37:46">
 
 Fair enough. Yeah. I completely agree with what you say about picking up on biases in the training
 data sounds like we're basically in agreement on this point.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Michael Collins" timestamp="37:56">
+<turn speaker="Michael Collins" timestamp="37:56">
 
 But coming back to what might be convincing in terms of whether the machine can really understand
 language. If we come back to that Yuri Gagarin example, you know, who was the first person to see
@@ -975,18 +975,18 @@ at the moment, I think we're still at the early stages where we're just sort of 
 snippets or paragraphs, but I hope we can start building towards these more sort of sci-fi
 scenarios.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="38:56">
+<turn speaker="Matt Gardner" timestamp="38:56">
 
 Yeah. Great. Great answer. Okay, I lied. One more question. Is there anything that you would've done
 differently if you could go back and build natural questions again?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Michael Collins" timestamp="39:06">
+<turn speaker="Michael Collins" timestamp="39:06">
 
 I think this is not well understood, but I do wonder if there's some way we could have up sampled
 and down sampled certain portions or stratified samples in that you, there are quite a lot of
@@ -998,10 +998,10 @@ think there are plenty of interesting questions there. So you, we wanted to foll
 distribution, which I think was the sort of default decision and it was an okay decision, but I
 think exploring out little turns would have been interesting.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tom Kwiatkowski" timestamp="39:53">
+<turn speaker="Tom Kwiatkowski" timestamp="39:53">
 
 Yeah, I mean I think that would be good. It's very hard to do. It would be also very hard to do that
 without destroying the fording again in the devices though and since you mentioned entertainment
@@ -1012,10 +1012,10 @@ is insane you know, everyone's been in a relationship with everyone else. And th
 know, which time is being asked about. So some of these things, you know, maybe topically, lots of
 interesting, but to actually to some of us but can be very linguistically interesting.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tom Kwiatkowski" timestamp="40:43">
+<turn speaker="Tom Kwiatkowski" timestamp="40:43">
 
 Other things, I mean, you know, just talk about Mike mentioned active learning. I mean, I think
 another thing that maybe we're moving towards as a community, which I think is a good thing is the
@@ -1031,18 +1031,18 @@ something this year. Maybe it's not going to be so big. Maybe it's not going to 
 but we're going to get feedback, see what people do and then we integrate that feedback and see waht
 version two looks like.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="41:46">
+<turn speaker="Matt Gardner" timestamp="41:46">
 
 Have you thought about what might come next? Like what is, what would a version two or a harder
 version or a next step look like?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tom Kwiatkowski" timestamp="41:54">
+<turn speaker="Tom Kwiatkowski" timestamp="41:54">
 
 One thing I can say is that there's been some very exciting work recently. The user's natural
 questions also has some of its use other datasets. The natural question seems to be the most widely
@@ -1058,47 +1058,47 @@ there. And I think that was an exciting actually next step. And I think it's pro
 amenable to some of the sort of statistical regularities the we sort of see the models latching onto
 on the Google comprehension task.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="43:12">
+<turn speaker="Matt Gardner" timestamp="43:12">
 
 Right. Great. This has been a really fun conversation. Any final thoughts or things you really
 wanted to talk about that we didn't get to?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Michael Collins" timestamp="43:20">
+<turn speaker="Michael Collins" timestamp="43:20">
 
 I think we covered a lot of ground.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="43:22">
+<turn speaker="Matt Gardner" timestamp="43:22">
 
 Great. This is fun. I'm looking forward to the next year.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Michael Collins" timestamp="43:26">
+<turn speaker="Michael Collins" timestamp="43:26">
 
 Yeah, thanks very much. Thank you.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="43:27">
+<turn speaker="Matt Gardner" timestamp="43:27">
 
 Thanks for coming on.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tom Kwiatkowski" timestamp="43:28">
+<turn speaker="Tom Kwiatkowski" timestamp="43:28">
 
 Thank you so much for having us. Thanks.
 
-</Turn>
+</turn>

@@ -8,23 +8,23 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting work in natural
 language. Processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is Matt Gardner and Waleed Ammar. We are research scientists at the Allen Institute for
 artificial intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:12">
+<turn speaker="Waleed Ammar" timestamp="00:12">
 
 Okay. Today our guest is Dirk Hovy. Dirk is an associate professor of neural science in the
 department of marketing at Bocconi University. His research focuses on computational social
@@ -32,25 +32,25 @@ sciences. He's interested in integrating socio linguistic knowledge into NLP mod
 going to talk about his new paper title Increasing In-Class Similarity by Retrofitting Embeddings
 with Demographic Information. Welcome to the program.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Hovy" timestamp="00:35">
+<turn speaker="Dirk Hovy" timestamp="00:35">
 
 Alright, thank you for having me guys.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:37">
+<turn speaker="Waleed Ammar" timestamp="00:37">
 
 So this work is one step in a directions that you're passionate about. Which is all about making NLP
 about people. Again, could you tell us a bit more about this?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Hovy" timestamp="00:46">
+<turn speaker="Dirk Hovy" timestamp="00:46">
 
 Yeah, so yeah, this is something that I'm really interested in. NLP is great and has achieved a lot
 of things by modeling language as a computational problem, as an engineering problem, which can be
@@ -65,10 +65,10 @@ models both more performative and hopefully fair because they can accept the fac
 language changes over time and between people, I now work in a social science environment, so I work
 a lot with people for whom language is a signal.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Hovy" timestamp="01:53">
+<turn speaker="Dirk Hovy" timestamp="01:53">
 
 So they want to use some data that they have to find out something about society and they sometimes
 have external knowledge that they want to incorporate into that. And so this whole work on
@@ -80,18 +80,18 @@ linguistic information in word embeddings for example. And so this paper is sort
 concept where we show that if we use retrofitting, you can actually capture a lot of information
 that's not necessarily present in the text that will work.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="02:45">
+<turn speaker="Waleed Ammar" timestamp="02:45">
 
 Yeah. That's very interesting. Could you tell us a little bit more about the tasks that you're
 trying to do in this paper and what do they tell looks like?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Hovy" timestamp="02:53">
+<turn speaker="Dirk Hovy" timestamp="02:53">
 
 So in this paper we show how the model works on two tasks, both of which are from author attribute
 prediction. So we look at predicting author age and author gender from texts. The data we're using
@@ -104,10 +104,10 @@ increase the similarity within each of the classes that we have. So for example,
 we have 10 classes and we're trying to make people within each class, speakers within each class
 more similar to each other.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Hovy" timestamp="03:51">
+<turn speaker="Dirk Hovy" timestamp="03:51">
 
 So the idea behind this is something called homophily, which is also sometimes translated as birds
 of a feather flock together. What that basically means is you have a lot in common with people who
@@ -120,10 +120,10 @@ age, they're in the same age group for example. And so what we can do with retro
 okay, we've learned author embeddings, we've learned document embeddings with Dr. Beck based on the
 words that people use.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Hovy" timestamp="04:45">
+<turn speaker="Dirk Hovy" timestamp="04:45">
 
 And we represent each of the people in our training data as a vector. But we can now move these
 vectors around a little bit in the embedding space to make them more similar based on the class
@@ -136,10 +136,10 @@ thousand times until you're sort of satisfied with the distribution of magnets o
 that what we have is actually a 300 dimensional fridge. So we can actually make a lot more of these
 clusters.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="05:36">
+<turn speaker="Waleed Ammar" timestamp="05:36">
 
 That's an excellent summary and a nice way to visualize it. So let's dive into the details then. So
 each author is represented by however many reviews the wrote in this data set, right? And then you
@@ -147,10 +147,10 @@ use doc to vec, which is an extension of word to vec to, to embed these document
 Right. And then you have an embedding for each author which you try to retrofit. Could you tell us a
 little more about, cause I think some people may not be aware of what retrofitting really means.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Hovy" timestamp="06:06">
+<turn speaker="Dirk Hovy" timestamp="06:06">
 
 So the basic idea behind retrofitting is to increase the similarity between embeddings word
 embeddings originally in this case document embeddings. The same principle applies based on outside
@@ -163,19 +163,19 @@ And so retrofitting is the process by which you iteratively draw the embeddings 
 embedding space by essentially several times multiplying the original embedding of each word with
 the average, the centroid over its neighbors in the new retrofit embedding space,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="07:12">
+<turn speaker="Waleed Ammar" timestamp="07:12">
 
 Right. So, and then in your case, the edges, the things that connect people is actually the label
 that is given to them in the training set. But you could also use other signals that you know about
 these authors. Would this help at all in the setup that you've been experimented with?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Hovy" timestamp="07:28">
+<turn speaker="Dirk Hovy" timestamp="07:28">
 
 Yes, absolutely. So we did a couple of changes from the original paper, there they basically used
 semantic lexicons to change word embeddings to retrofit word embeddings according to that semantic
@@ -187,20 +187,20 @@ class. So for all the 20 year olds, everybody who is a 20 year old is connected 
 year olds and so we're trying to draw all of the 20 year olds closer together in the bedding space,
 all of the 30 year olds, all of the 40 year olds and so on and so forth.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="08:15">
+<turn speaker="Waleed Ammar" timestamp="08:15">
 
 Would it help to add also additional demographics that you're not targeting for this task? My
 understanding is that you have different models or you do separate retrofitting for when you're
 trying to predict the age you use the age signal and when you try to predict the gender you only use
 the gender signal. Would it help to use multiple signals at the same time?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Hovy" timestamp="08:34">
+<turn speaker="Dirk Hovy" timestamp="08:34">
 
 That is a very good question. Yes, so theoretically this should be possible that we can actually do
 both. We can, we can apply all the external information that we have. We haven't tried that yet, but
@@ -217,19 +217,19 @@ that ruler in between and say, okay, this is the decision boundary. And in real 
 the case. Right? Things are extremely messy. And so what we're trying to do with this retrofitting
 is essentially just increase the space between the classes in our embedding space.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="09:52">
+<turn speaker="Waleed Ammar" timestamp="09:52">
 
 Presumably you're optimized for, you're using a neural network, the network already has the capacity
 to do this except the optimization may be harder. You're making the optimization easier by doing
 this.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Hovy" timestamp="10:02">
+<turn speaker="Dirk Hovy" timestamp="10:02">
 
 Exactly. This is essentially a pre-processing steps. So it is separate from the process that induces
 the representations. So in this case, Doc2vec or word2vec and it is separate from the classification
@@ -242,10 +242,10 @@ process. But it takes longer, it's more costly. And in this case we sort of save
 that trouble by basically preparing the embedding space beforehand and making it easier, in the end
 to find a linear decision boundary.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="11:02">
+<turn speaker="Matt Gardner" timestamp="11:02">
 
 So I'm trying to understand some of the details of how this actually works and whether you are
 improving the nearest separability. But I think to dig into this detail, we need to talk about one
@@ -253,10 +253,10 @@ more aspect of what's in your paper that we haven't mentioned yet. And this is t
 that you learn from your original space to this retrofitted space. Can you tell us about that and
 then I'll ask you some questions about it?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Hovy" timestamp="11:23">
+<turn speaker="Dirk Hovy" timestamp="11:23">
 
 Yes. So one thing that differs between what we're doing and the original work is that we essentially
 are trying to learn the way how we can induce retrofitting from the training data on the training
@@ -270,10 +270,10 @@ embedding or representation learning algorithm as the training data. So as long 
 produce representations of new unseen data, we can then apply this translation matrix to get the
 class separability that we've learned on the training data.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="12:28">
+<turn speaker="Matt Gardner" timestamp="12:28">
 
 Yeah, and I guess this is an issue for your work where it wasn't really for the original
 retrofitting to semantic lexicons work, because the prior work just used side information that was
@@ -282,10 +282,10 @@ class label, which means I can't do this at test time, I need some other way. So
 is linear separability because what you're doing in the end is a linear transformation on the same
 data space. How does that change linear separability it's just a linear transformation.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Hovy" timestamp="13:03">
+<turn speaker="Dirk Hovy" timestamp="13:03">
 
 Well, what it does is it increases the in class similarity and it should increase the separability
 or improve the separability within classes. So in the limit, it should hopefully be linearly
@@ -296,10 +296,10 @@ point where the classes are completely linearly separable, but this is something
 currently exploring, so when I say linearly separable I that that's probably a misnomer I should say
 trivially separable or more easily separable. Yes.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="13:55">
+<turn speaker="Matt Gardner" timestamp="13:55">
 
 Yeah. We're looking at the math in your paper. I was wondering what exactly is going on here. You
 have this parameter that changes a mixture between the Doc2vec vector, like your original
@@ -311,10 +311,10 @@ regression to the class and then your prediction is doing another logistic regre
 that, which should I, as you say, be trivial, right, because they're already basically trying to be
 predicted to these centroids,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Hovy" timestamp="14:40">
+<turn speaker="Dirk Hovy" timestamp="14:40">
 
 So in the original paper there are weights attached to the original embedding space and the retrofit
 space that can sort of control how aggressively we retrofit in each iteration. In the original
@@ -329,19 +329,19 @@ a little bit more on the information you get from the outside lexicon, from the 
 information, and depending on what your data looks like and what the task looks like, that alpha
 should be tuned on a dev set.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="15:48">
+<turn speaker="Waleed Ammar" timestamp="15:48">
 
 So presumably if you tried to fit the translation matrix just for each of the labels separately,
 you'll get a much better matrix, but you can't apply to the test set. Do you have a measure of how
 much better your translation matrix will minimize the least squares.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Hovy" timestamp="16:03">
+<turn speaker="Dirk Hovy" timestamp="16:03">
 
 It's not perfect, but we've experimented a little bit with training either on the retrofitted
 training data or on the original data transformed by the translation matrix, which is an
@@ -359,10 +359,10 @@ retrofitting with the translation and then applying that to unseen test data, we
 significant improvements even on something as arcane or foreign to NLP or different from NLP I
 should say as the MNIST. The prediction of numbers from images.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="17:29">
+<turn speaker="Matt Gardner" timestamp="17:29">
 
 Yeah. And so your prediction method in the end, at least in this paper, I'm not sure what you did on
 MNIST. Is logistic regression on top of these translated vectors. And so that's literally, I have my
@@ -371,10 +371,10 @@ linier matrices right next to each other is a linear matrix. And so why does thi
 like why, why can't you just learn this in the original, like an in a weight matrix directly on top
 of the original vector?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Hovy" timestamp="18:00">
+<turn speaker="Dirk Hovy" timestamp="18:00">
 
 Oh, you absolutely could. And I mean there are ways in which you could do this. This goes back to
 the graph. convolutional learning in practice graph convolutional learning has a lot more parameters
@@ -387,10 +387,10 @@ to use on top of this. Another thing we're exploring right now is to actually, i
 least square approximation for the translation matrix to learn a non linear transformation matrix or
 a network essentially that does that, but this is something that that we're currently looking into.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Hovy" timestamp="18:55">
+<turn speaker="Dirk Hovy" timestamp="18:55">
 
 The really interesting essence here for me is that the retrofitting process allows us two things.
 One is we can increase the similarity within classes, but also we can bring external knowledge to
@@ -400,36 +400,36 @@ information as well. So we have another EMNLP paper where we essentially show th
 geographic information to embeddings that we've learned for cities, we can reconstruct dialect areas
 much more precisely than we could learn them from the raw textual data.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="19:36">
+<turn speaker="Waleed Ammar" timestamp="19:36">
 
 So on this point, it's not clear to me why is this better than adding them as additional features in
 the classifier that you learn at the end. You can always add more features in addition to the
 embedding.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Hovy" timestamp="19:46">
+<turn speaker="Dirk Hovy" timestamp="19:46">
 
 That's true. So you mean in the case of geographic information?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="19:50">
+<turn speaker="Waleed Ammar" timestamp="19:50">
 
 Well, I mean in general you were saying part of the appeal of this method is that allows you to
 incorporate more features that are not linguistic when you're instructing embeddings for construct.
 And I'm wondering why is this, if the goal is to do classification afterwards, then you can add them
 in addition. So you can calculate the embedded with other features.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Hovy" timestamp="20:07">
+<turn speaker="Dirk Hovy" timestamp="20:07">
 
 You could potentially also do that. In this case, you can bring relational knowledge to bear sort of
 how the different instances in your data relate to each other. Right. So because it's a graph that
@@ -438,19 +438,19 @@ binary matrix you can just say are these two connected or not, but you can also 
 point number or you can have a continuous value in your connection graph. Basically expressing that
 this instance is more or less similar to some of these other matrices.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="20:39">
+<turn speaker="Waleed Ammar" timestamp="20:39">
 
 It's a very powerful idea. Of course. I guess one question that popped in my mind when I read the
 paper is how expensive is this to do? There's a lot of connections between all pairs of examples of
 this for the theme label.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Hovy" timestamp="20:48">
+<turn speaker="Dirk Hovy" timestamp="20:48">
 
 That is an excellent question and that was something that I was very concerned about at first
 because when I first started playing with retrofitting and the original paper makes an explicit
@@ -467,10 +467,10 @@ learning the translation matrix and then applying that whole thing to the held o
 is the remainder of the 100,000 and what we see is that even where we do it for the 10,000 we get
 relatively fast results.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Hovy" timestamp="22:05">
+<turn speaker="Dirk Hovy" timestamp="22:05">
 
 So the training time took between several minutes to maybe a couple of hours. So the way we
 implemented it was actually through sparse matrices and both constructing and then multiplying those
@@ -484,52 +484,52 @@ restrict things and say, alright, each word is only connected to all the other w
 occurred at least twice in the same city and so that brought down the size of that graph to a
 manageable amount so that we could actually compute it in a reasonable amount of time.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="23:08">
+<turn speaker="Matt Gardner" timestamp="23:08">
 
 I guess in this particular instance, the set of neighbors is the same for every class and you could
 just compute that once up front, right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Hovy" timestamp="23:16">
+<turn speaker="Dirk Hovy" timestamp="23:16">
 
 Yes. You can do all of these computations up front, sort of on the training data that you have. So
 constructing the graph is like one of the first steps and you can do that at a single time.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="23:25">
+<turn speaker="Matt Gardner" timestamp="23:25">
 
 Yeah. In each iteration, in part of your equation, you're competing as sum over the whole
 neighborhood because that neighborhood is actually shared across every instance of every class. You
 only really have to do it once and you can dramatically speed up your competition.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Hovy" timestamp="23:37">
+<turn speaker="Dirk Hovy" timestamp="23:37">
 
 Yeah. Because it's the, it's the same for every member of that class. Yes, absolutely. And so that
 is one of the things that makes it very, very fast because you can keep reusing that average, the
 mean of that neighbor. Yes, absolutely.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="23:48">
+<turn speaker="Waleed Ammar" timestamp="23:48">
 
 So how well does all of this work? Can you tell us a little more about the experiment that you did
 and the results?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Hovy" timestamp="23:54">
+<turn speaker="Dirk Hovy" timestamp="23:54">
 
 Yes. So I mean, the fact that it was published at, at EMNLP got accepted typically means that things
 work. Right. so we did look into how well does it work and, and how much better does it work. Then
@@ -540,10 +540,10 @@ but it's still not as good as the retrofited, and I thought, Ooh, okay, good. So
 have two tasks. We have a age prediction and gender prediction. And in both cases the retrofitting
 does improve significantly in many cases over the un-retrofit or the bag of words model.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Hovy" timestamp="24:41">
+<turn speaker="Dirk Hovy" timestamp="24:41">
 
 What we see is that on age prediction where we have 10 classes, we actually see a much, much bigger
 difference between the retrofitted and the original embedding space in terms of performance of the
@@ -556,10 +556,10 @@ performance of the original embedding space and basically see how oftentimes is 
 better than the performance on the entire data. And so we can also construct a confidence interval
 and we see that four H prediction and particular using a very small alpha.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Hovy" timestamp="25:41">
+<turn speaker="Dirk Hovy" timestamp="25:41">
 
 So that means relying a lot more on the homophily information on the age information that we have
 rather than on the linguistic information gives us about up to two, two and a half F1 points. For
@@ -568,20 +568,20 @@ around with the alpha parameter a little bit to find an optimal case. And one th
 probably say is as your training size gets larger, typically the difference gets a little bit
 smaller. So if you get more and more data, the two methods tend to perform more. Similarly
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="26:17">
+<turn speaker="Waleed Ammar" timestamp="26:17">
 
 So, the figures I'm seeing in the paper in figure two they're very compelling. And thank you for re-
 running the experiments like a hundred times to be able to measure this. The competence intervals,
 but you're saying if you drew the curve farther to include the entire dataset, the two curves get
 closer then.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Hovy" timestamp="26:34">
+<turn speaker="Dirk Hovy" timestamp="26:34">
 
 So typically what we see is that the two curves for the embeddings and the retrofit embeddings do
 converge. The more training instances you have or go towards convergence in one case for using
@@ -590,17 +590,17 @@ lot faster. So that means even at the largest training size setting we have with
 there is still a huge gap between the retrofit embeddings as input to the model and the regular
 original Doc2vec embeddings and then also the bag of word's embeddings.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="27:10">
+<turn speaker="Waleed Ammar" timestamp="27:10">
 
 Great. That's really cool. Do you have any last comments about this work before we conclude.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Hovy" timestamp="27:14">
+<turn speaker="Dirk Hovy" timestamp="27:14">
 
 Well. So the two or three points I would like to make is echoing the points of the original
 retrofitting paper. It's very easy to implement. It's very fast to run. The things I would like to
@@ -615,18 +615,18 @@ then make it easier for the model to find a good solution. And so retrofitting i
 in which we can actually make it easier for our networks or for our nonlinear models. Find a good
 starting point and to find a good solution.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="28:22">
+<turn speaker="Waleed Ammar" timestamp="28:22">
 
 Yeah. I'm really excited to learn more about the results that you have for the other one, where was
 the other paper was it also at EMNLP.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Hovy" timestamp="28:30">
+<turn speaker="Dirk Hovy" timestamp="28:30">
 
 The other paper is also accepted at EMNLP where we're actually trying to capture dialects. So in
 this case, this is not a prediction task. What we're doing is we're actually looking at anonymous
@@ -642,18 +642,18 @@ have been made by social linguists over the years. Oh yeah. And maybe I should s
 paper is with Christoph Purschke and it's called Capturing Regional Variation with Distributed Place
 Representations and Geographic Retrofitting.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="29:40">
+<turn speaker="Waleed Ammar" timestamp="29:40">
 
 Sounds really cool and exciting. Look forward to, I think. Thank you for joining us today.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Dirk Hovy" timestamp="29:45">
+<turn speaker="Dirk Hovy" timestamp="29:45">
 
 Thanks so much for having me and thanks for listening.
 
-</Turn>
+</turn>

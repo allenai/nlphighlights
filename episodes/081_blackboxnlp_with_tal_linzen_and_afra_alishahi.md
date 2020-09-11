@@ -8,57 +8,57 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting work in natural
 language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is Matt Gardner and Waleed Ammar, we are research scientist at the Allen Institute for
 Artificial Intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:12">
+<turn speaker="Matt Gardner" timestamp="00:12">
 
 All right. Today our guests are Tal Linzen and Afra Alishahi who are cognitive scientists joining us
 today talking about a workshop that they co-organized at EMNLP last year 2018 Tal is an assistant
 professor at Johns Hopkins University and Afra is an associate professor at Tilburg University. Tal
 and Afra, welcome.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Afra Alishahi" timestamp="00:32">
+<turn speaker="Afra Alishahi" timestamp="00:32">
 
 Thank you for having us.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tal Linzen" timestamp="00:32">
+<turn speaker="Tal Linzen" timestamp="00:32">
 
 Thanks for having us Matt.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:33">
+<turn speaker="Matt Gardner" timestamp="00:33">
 
 Today we wanted to talk about this workshop because from my perception it was one of the most well
 attended and most well liked workshops at ELMNP. I was at part of it and I liked it a lot. So we
 wanted to hear what you had to say about what you thought of it. So can you tell us at a high level
 like what was this workshop about?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tal Linzen" timestamp="00:49">
+<turn speaker="Tal Linzen" timestamp="00:49">
 
 The motivation for the workshop is that we have a new generation of models in NLP that are based on
 neural networks. And those models seem to work pretty well in general, but we don't understand why
@@ -68,19 +68,19 @@ worked internally. So the goal of this workshop was to bring together people who
 understand how these models work coming from different perspectives, including machine learning, and
 a linguistics, psychology, and neuroscience and so on.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="01:33">
+<turn speaker="Matt Gardner" timestamp="01:33">
 
 So what do you think the cognitive side, as I said at the beginning, both of you are cognitive
 scientists. What's the cognitive science angle here? How does this fit into understanding neural
 nets?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Afra Alishahi" timestamp="01:45">
+<turn speaker="Afra Alishahi" timestamp="01:45">
 
 Well, it seems that a lot of the current architectures are actually much more suitable for
 simulating tasks that humans do well. So it could be really interesting to see what kind of
@@ -97,19 +97,19 @@ to do, many people are not necessarily concerned about how these models work, bu
 reaction, the response that we received to the workshop kind of proved us wrong because we got
 submissions and also attendance from a very wide range of audience.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Afra Alishahi" timestamp="03:09">
+<turn speaker="Afra Alishahi" timestamp="03:09">
 
 It seems that at least in theory, many, many people are interested in knowing how neural networks
 work and what the internal structure looks like and what kind of representations they use, even if
 they're not necessarily interested in how the human brain works.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tal Linzen" timestamp="03:24">
+<turn speaker="Tal Linzen" timestamp="03:24">
 
 I would also add that there are maybe a couple of things that cognitive science can help with. So I
 think what Afra talked about was mostly why understanding how neural networks work is urgent for
@@ -123,10 +123,10 @@ this deep understanding of the task, what it really means to understand the stru
 or to interpret a sentence is something that is very developed in cognitive science and maybe a
 little bit less in NLP.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tal Linzen" timestamp="04:28">
+<turn speaker="Tal Linzen" timestamp="04:28">
 
 So that's something that I, I felt in the workshop that, the workshop really benefited from
 cognitive scientists. And the, the other thing that's not so much cognitive science traditionally
@@ -137,35 +137,35 @@ numbers and we need to make sense of them and connect them to what we think the 
 the brain might be. So again, I think that that tradition can be applied to analyzing artificial
 neural networks in the same way that we analyze neural networks in the brain.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="05:16">
+<turn speaker="Matt Gardner" timestamp="05:16">
 
 Yeah. I guess to rephrase just a little bit using a phrase, I think I got from you Tal; cognitive
 scientists have a lot of experience trying to probe something that is a black box that has language
 capacity, which is a human, right? And so we can use those methods to try to also probe these other
 black boxes that have apparently or may have some kind of language capacity.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tal Linzen" timestamp="05:38">
+<turn speaker="Tal Linzen" timestamp="05:38">
 
 Yeah. So that's a great way to put it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="05:40">
+<turn speaker="Waleed Ammar" timestamp="05:40">
 
 Sorry, I haven't attended a workshop so I have a hard time like imagining what an example of of
 those methods, could you give an example?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Afra Alishahi" timestamp="05:47">
+<turn speaker="Afra Alishahi" timestamp="05:47">
 
 So there were actually a few families of techniques that repeated themselves in terms of things that
 we saw in the submissions and also in the "invited talks".I think the invited talks actually great
@@ -182,10 +182,10 @@ representations are projected on and see whether there are structures similariti
 I think maybe Tal can talk a little bit more about that. All the formal linguistics and artificial
 languages.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tal Linzen" timestamp="07:04">
+<turn speaker="Tal Linzen" timestamp="07:04">
 
 Yeah. So I, I think that, there are experiments that people did with a synthetic data that were
 quite interesting in that that's something that maybe you don't see as much in a NLP but would be,
@@ -197,10 +197,10 @@ formalism. So in principle if we want to model language and the way that we thin
 it's a model we need to be able to model as many levels of embedding for example, as an infinite
 number of levels of embedding.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tal Linzen" timestamp="07:55">
+<turn speaker="Tal Linzen" timestamp="07:55">
 
 Right? So in natural language you don't have a lot of cases of that. So we go to a synthetic
 language and see how well, you can learn in that case and I think you can derive theoretical results
@@ -213,27 +213,27 @@ about, generalization. So you train, an RNN language model on English and Englis
 you see how it generalizes to constructions that indicate how well it learned various syntactic
 rules.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tal Linzen" timestamp="08:51">
+<turn speaker="Tal Linzen" timestamp="08:51">
 
 So if it learned, filler gap dependency, we had the really talk about that or if it learns the
 agreement dependencies between different elements of the sentence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="09:02">
+<turn speaker="Matt Gardner" timestamp="09:02">
 
 Can you give us a little more detail on like filler gap and, and these other tests. I think a lot of
 our listeners probably don't have a strong linguistics background and could benefit from
 understanding a bit more.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tal Linzen" timestamp="09:13">
+<turn speaker="Tal Linzen" timestamp="09:13">
 
 Yeah. So, when you ask a questions in English, there are certain things that you're not
 grammatically allowed to ask questions about in a sentence. So let's say the original sentences, "I
@@ -241,10 +241,10 @@ ate pizza and cookies," then you're not allowed to by the rules of being in gram
 grammar police will arrest you if you ask the question, "What did you eat pizza and?" To mean, what
 is the thing that you ate in addition to pizza?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tal Linzen" timestamp="09:46">
+<turn speaker="Tal Linzen" timestamp="09:46">
 
 So that seems like a pretty arbitrary restriction. Why are not allowed to ask that question? "What
 did you eat pizza and?" Because you cannot ask questions like, "What did you eat your pizza with?"
@@ -257,18 +257,18 @@ generalization task. You ask the model whether it can detect that something is a
 ungrammatical even though we didn't see it at all in training and humans have very clear judgments
 about this kind of a sentence,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="10:39">
+<turn speaker="Matt Gardner" timestamp="10:39">
 
 How do you actually ask the model that? Do you have like some training data to say grammatical or
 not or use some threshold? Like what do you do?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tal Linzen" timestamp="10:46">
+<turn speaker="Tal Linzen" timestamp="10:46">
 
 So there is the transfer approach, which you just mentioned where you have some, when you fine tune
 the model on some examples of grammatical and ungrammatical sentences. But I think that the more
@@ -280,10 +280,10 @@ probability to "are" then to "is" because books are plural. So that's, you don't
 model to do any additional task. You just look at the probability distribution that it generates
 over the vocabulary.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="11:36">
+<turn speaker="Matt Gardner" timestamp="11:36">
 
 That doesn't really tell you anything about grammaticality. Right? Or does it, because you could
 imagine the systems still might have some sense of grammaticality like it might give a say these are
@@ -291,10 +291,10 @@ probabilities, right? And it goes say 20% probability to "are" and 19% probabili
 basically thinks both of them are equally grammatical even though it ranks one of them higher. So
 what do you, what do you make of that?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tal Linzen" timestamp="11:59">
+<turn speaker="Tal Linzen" timestamp="11:59">
 
 That is a very legitimate objection. I hope that the difference between these two verbs that are
 equally, semantically plausible into context, the, the only possible difference between them is in
@@ -306,10 +306,10 @@ it shows the difference between these two words that are matched for all of thei
 indicates that it learned something about the grammar of English. It might not be a categorical
 distinction, but that gradient distinction is grammatical.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="12:48">
+<turn speaker="Matt Gardner" timestamp="12:48">
 
 Okay. Yeah. There, there've been a lot of papers recently, some of them at Blackbox NLP, some of
 them at other places that look at these probing tasks to try to say like what kinds of phenomena do
@@ -317,10 +317,10 @@ our pre-trained language models like Bert or Elmo or whatever Cove do they captu
 that's been a really big trend recently and we've learned some interesting things from it. Afra,
 were there any other high level trends that you saw at the workshop that you want to talk about?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Afra Alishahi" timestamp="13:17">
+<turn speaker="Afra Alishahi" timestamp="13:17">
 
 Yes, actually since you mentioned this does not fit classifiers. There were a bunch of papers that
 tried to argue against them, which started a very interesting conversation. I personally found this
@@ -334,10 +334,10 @@ specifically the work of, John Bowman shows that even if you use a randomly init
 then take their activations on the hidden layers and then try to train some classifier for example,
 for the part of speech tags, you will get an off chance accuracy.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Afra Alishahi" timestamp="14:18">
+<turn speaker="Afra Alishahi" timestamp="14:18">
 
 So that means that probably it's just that this layer is, you know, hidden layers are still carrying
 some of the information which is already included in the word embeddings and therefore, you know,
@@ -349,10 +349,10 @@ at the correlations between the kind of representation that you get in say a lan
 trained specifically for predicting the next common word and similarly structured architecture model
 which learns to actually predict the next part of speech tags.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Afra Alishahi" timestamp="15:11">
+<turn speaker="Afra Alishahi" timestamp="15:11">
 
 And then if you project these, their internal representations of these two models and try to look at
 the correlations between the two, maybe that's the more reliable key or signal than if you actually
@@ -365,10 +365,10 @@ classifiers. Also some predictions that you make based on the activation layers 
 model that's trained on a certain task. We all use them very liberally and maybe we shouldn't really
 be know jumping to conclusions if we get some off performers in this problem task.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="16:10">
+<turn speaker="Matt Gardner" timestamp="16:10">
 
 Yeah, that's really interesting. We had a project recently with a student who was trying to do some
 additional probing kinds of stuff and after seeing some of this work and talking to folks at ACL and
@@ -378,10 +378,10 @@ just be learning something from random vectors from, from the training data itse
 the way we approached this was we said let's look at random as a baseline and then like get some
 upper bound and then look at improvement over random as evidenced that it's learning something.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Afra Alishahi" timestamp="16:55">
+<turn speaker="Afra Alishahi" timestamp="16:55">
 
 It is important to keep in mind that there is a lot already encoded in the word embeddings
 independent of the tasks that the model is actually optimized on and this really easily gets
@@ -392,17 +392,17 @@ not necessarily be relevant to the task that is optimized, but kind of lingering
 the correlations to blow out of proportion. So it's important to set up experiments properly and use
 really informed baselines, not just, you know, the maximum.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="17:42">
+<turn speaker="Matt Gardner" timestamp="17:42">
 
 Yeah.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tal Linzen" timestamp="17:42">
+<turn speaker="Tal Linzen" timestamp="17:42">
 
 So I think in this context, a paper that got the best paper award at the workshop was very
 interesting. That's by Mario Giulianelli and other people. The issue that I think that they started
@@ -419,20 +419,20 @@ classifier tells you to do changes the behavior of the original model. Then you 
 confident that the model is in fact using the information that the agnostic classifier is picking up
 on. So I thought that that was a, a really nice approach.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="19:09">
+<turn speaker="Matt Gardner" timestamp="19:09">
 
 Can you explain this a little more? So I have say a pre-trained language model and then I'm doing a
 diagnostic classifier on say filler gap dependencies and then I'm fine tuning or back propping
 through my language model itself. And then I'm saying if my model changes a lot that means there's
 stuff there. Well, okay, I'm trying to understand the conclusion.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tal Linzen" timestamp="19:32">
+<turn speaker="Tal Linzen" timestamp="19:32">
 
 Yeah, so, so what the, the thing that you are doing is you're telling your diagnostic classifier
 what the correct answer is and then you are trying to see how you would need to change the hidden
@@ -443,10 +443,10 @@ need to change in the original state of the language model such that diagnostic 
 correct part of speech and then you see if changing the original hidden layer accordingly improves
 the behavior of the language model.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Afra Alishahi" timestamp="20:18">
+<turn speaker="Afra Alishahi" timestamp="20:18">
 
 Basically proposing an intervention mechanism. So instead of trying to fiddle with your model, try
 to use an external tool to see where you can intervene halfway through the training in order to get
@@ -459,51 +459,51 @@ middle information or what kind of information is included in the network. Bring
 original task training and try to reset the activation layers on the right track and see what
 they've actually been. It improves the performance of the original task.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="21:22">
+<turn speaker="Matt Gardner" timestamp="21:22">
 
 Okay. I'm still trying to understand how this is, is this the same as like standard fine tuning on
 some end tasks like what is different here?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Afra Alishahi" timestamp="21:32">
+<turn speaker="Afra Alishahi" timestamp="21:32">
 
 You have an original end task, right? You have the language modeling objective, right? But then you
 have this side-branch that you have a classifier that feeds off your original model and you're
 basically trying to use the output of is classifier as the intervening in the, adjustment of the
 weights of your original language model in order to perform the better than the original.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="21:54">
+<turn speaker="Matt Gardner" timestamp="21:54">
 
 To do better language modeling. So this is like multitask training.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Afra Alishahi" timestamp="21:58">
+<turn speaker="Afra Alishahi" timestamp="21:58">
 
 Yeah, it is. And idea this similar is just the setup is different, right? So you don't have these
 two parallel tasks that you are actually optimizing at the same time you are focusing on one of
 them, but you're using the second one as an occasional tuning techniques.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="22:14">
+<turn speaker="Matt Gardner" timestamp="22:14">
 
 Okay.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tal Linzen" timestamp="22:14">
+<turn speaker="Tal Linzen" timestamp="22:14">
 
 For me the part that was exciting about the paper is not that it gives you a way to do multitask
 learning by direct supervision of the internal representations as opposed to the some like soft max
@@ -513,54 +513,54 @@ idea of diagnostic classifier as something that tells you something about how th
 than as a practical tool. Though it could also be as a practical tool. But I think in that case it
 is not so different from multitask learning.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="22:51">
+<turn speaker="Matt Gardner" timestamp="22:51">
 
 And so you know that the model is using it because you get large gradients or what's the exact
 mechanism here? How do you know that the model is using the information from the scaffolding task or
 whatever you want to call it?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Afra Alishahi" timestamp="23:04">
+<turn speaker="Afra Alishahi" timestamp="23:04">
 
 Because if you actually try to improve the performance of the diagnostic classifier, but addressing
 the internal wave of the language model, then the language model performance goes up too. So if you
 try to strengthen the representation of parts of speech facts, in this case, for example, your
 position of the next coming work becomes more accurate.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="23:27">
+<turn speaker="Matt Gardner" timestamp="23:27">
 
 Okay. Yeah, that makes sense. So we've talked about a couple of interesting trends. Interestingly
 contradictory, we should use probing tasks and probing tasks, have problems,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Afra Alishahi" timestamp="23:37">
+<turn speaker="Afra Alishahi" timestamp="23:37">
 
 complimentary.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="23:39">
+<turn speaker="Matt Gardner" timestamp="23:39">
 
 Yeah. any other, are there any other trends or anything you would highlight from like all of the
 papers in Blackbox, it's kind of hard to summarize. I think he had 40 something papers in the
 workshop, but was there anything else that you would bring out as like an interesting trend from,
 from what you saw?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Afra Alishahi" timestamp="23:56">
+<turn speaker="Afra Alishahi" timestamp="23:56">
 
 Yeah, quite a large number of papers were submitted on the idea that maybe we should just work on
 the architectures themselves who make the dynamic of the model more interpretable. For example, if a
@@ -570,18 +570,18 @@ outcome or some rule-based represent representations, then the model itself help
 learned. So that was a very dominant trends. I was actually surprised at how many papers or you
 know, abstracts off in that direction.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="24:39">
+<turn speaker="Matt Gardner" timestamp="24:39">
 
 What are the mechanisms that people use to make these claims? Is it mostly attentions or is there
 something else?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Afra Alishahi" timestamp="24:45">
+<turn speaker="Afra Alishahi" timestamp="24:45">
 
 Quite a few papers use attention mechanisms and then analyze them, but that wasn't very surprising
 or, you know, novel, although the way some people dealt with this was new. but as I said, the
@@ -592,19 +592,19 @@ sense of not all of them work or as in, you know, not all of them actually impro
 architectures, but they're much easier to explain and some of them actually do improve their
 performance.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="25:28">
+<turn speaker="Matt Gardner" timestamp="25:28">
 
 Interesting. Yeah. And I guess that makes learning a whole lot harder cause if you have a discreet
 latent variable, you have problems with backpropagation but you might gain something very useful by,
 by doing that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Afra Alishahi" timestamp="25:40">
+<turn speaker="Afra Alishahi" timestamp="25:40">
 
 And also another line, that was relatively popular was to use some sort of, manipulation or
 preprocessing of the input as an analysis tool. So what happens if we pre-process our input data in
@@ -614,34 +614,34 @@ some extent. But there are also, there were quite a few papers for which present
 data sets from annotated sentences for particular types of phenomenon, which you can then use for
 analyzing the strengths and weaknesses of your model and what is sensitive to and what is not.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="26:23">
+<turn speaker="Matt Gardner" timestamp="26:23">
 
 Yeah. Great. So you're doing another iteration of Blackbox NLP this coming year. What conference is
 it going to be associated with or co-located with?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tal Linzen" timestamp="26:33">
+<turn speaker="Tal Linzen" timestamp="26:33">
 
 With the ACL in Florence? Yeah.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="26:36">
+<turn speaker="Matt Gardner" timestamp="26:36">
 
 So what do you think are the interesting open questions that you hope people will address this year?
 Like we learned a bunch from last year. There's still things we need to figure out. What are you
 hoping to see.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tal Linzen" timestamp="26:48">
+<turn speaker="Tal Linzen" timestamp="26:48">
 
 First I should say that me and Grzegorz are involved in organizing it. But most of the work, done by
 Yonatan Belinkov and Dieuwke Hupkes who joined us this year. I think one thing that Yonatan
@@ -651,18 +651,18 @@ interesting visualizations and, tantalizing, qualitative results. But we need, t
 science of interpretation than we do now. So I think that that would be an important next frontier
 in this, in this area.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="27:32">
+<turn speaker="Matt Gardner" timestamp="27:32">
 
 And I guess, going back to what we said at the beginning, it's one that cognitive science might have
 some interesting things to say about,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tal Linzen" timestamp="27:39">
+<turn speaker="Tal Linzen" timestamp="27:39">
 
 That is an interesting question. I, we'll need to think about it. I don't have a solution for this
 issue off the, off the top of my head. But I think that if we solve this issue in a artificial
@@ -672,10 +672,10 @@ cognitive science, vision and to maybe a lesser extent in language as a percent 
 It's important for us to understand these models as much as it is for NLP folks. And maybe even
 more.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Afra Alishahi" timestamp="28:14">
+<turn speaker="Afra Alishahi" timestamp="28:14">
 
 So let me just say something in addition to what you just said. I'm not going to be part of their
 organization team for the next BlackboxNLP. But, it so happened that we had some sort of a local
@@ -693,10 +693,10 @@ different approaches and how reliable or how consistent they are to what extent 
 complimentary or actually contradictory, but I guess it needs to be fleshed out more and thought
 about.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="29:39">
+<turn speaker="Matt Gardner" timestamp="29:39">
 
 Yeah, that's a great point. I guess we're in a really interesting time in NLP these days where we
 have these crazy huge models that no one really understands, I don't think has ever happened before.
@@ -704,17 +704,17 @@ And so it's, I guess, thank you for putting together this workshop. It's a very 
 right now. Are there any last thoughts or something you wanted to talk about that we missed before
 we conclude?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Afra Alishahi" timestamp="30:03">
+<turn speaker="Afra Alishahi" timestamp="30:03">
 
 I can't think of anything actually.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tal Linzen" timestamp="30:05">
+<turn speaker="Tal Linzen" timestamp="30:05">
 
 Uh, no, I think that's all that I wanted to say. I would also say that it was a really fun workshop
 to organize and, that I really enjoyed all of the 50 odd papers that were presented in the, in the
@@ -725,25 +725,25 @@ just very difficult to have conversations about a shared topic. And I think that
 enabled those kinds of conversations in the poster sessions and also at the talks. That was a huge
 advantage of having a smaller and more focused, venue.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="30:56">
+<turn speaker="Matt Gardner" timestamp="30:56">
 
 Yeah. Great. Thanks. Thanks for coming on. This is a really interesting conversation.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Afra Alishahi" timestamp="31:00">
+<turn speaker="Afra Alishahi" timestamp="31:00">
 
 Thank you for having us.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tal Linzen" timestamp="31:00">
+<turn speaker="Tal Linzen" timestamp="31:00">
 
 Thanks.
 
-</Turn>
+</turn>

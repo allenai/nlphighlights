@@ -8,42 +8,42 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Welcome to the NLP highlights podcast where we talk about interesting work in natural language
 processing. The hosts are Matt Gardner, Waleed Ammar, and Padeep Dasigi.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:08">
+<turn speaker="Waleed Ammar" timestamp="00:08">
 
 So today we'll be talking about ethics in NLP research with our guest, Emily Bender. Emily is a
 professor at University of Washington affiliated with the department of linguistics as well as the
 department of computer science and engineering. She's also the director of the competitional
 linguistics laboratory at UW. Welcome to the program Emily.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Emily Bender" timestamp="00:26">
+<turn speaker="Emily Bender" timestamp="00:26">
 
 Thank you so much for having me on.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:27">
+<turn speaker="Waleed Ammar" timestamp="00:27">
 
 The reason I know that you're interested in this topic is I'm following you on Twitter and I keep
 listening to all your comments about it. So we wanted to talk more. So could you provide an example
 of what can go wrong when NLP researchers don't pay attention to ethical consideration? Just to
 motivate the conversation?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Emily Bender" timestamp="00:45">
+<turn speaker="Emily Bender" timestamp="00:45">
 
 Yeah, I have lots of examples and I think it depends a little bit if we're thinking about what
 happens just in the research context or if we're thinking about when the technology that we're
@@ -62,10 +62,10 @@ we know as developers of the software there's tremendous amounts of uncertainty.
 responsibility to make that uncertainty visible and actionable at the other end. That's one I think
 very well. These examples are all very emotional. But that's an example.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="02:05">
+<turn speaker="Waleed Ammar" timestamp="02:05">
 
 Yeah, I mean honestly I can relate quite a bit. I have a lot of people, friends who got arrested for
 like political reasons and it's really terrible. Right? So I guess one point that is not clear to me
@@ -74,10 +74,10 @@ says that it's automatically translated, doesn't actually like let you guess. So
 the company needed to say or like provide in addition to this translation or this note for the
 communication to be more ethical?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Emily Bender" timestamp="02:36">
+<turn speaker="Emily Bender" timestamp="02:36">
 
 Yeah, so it's a hard problem to solve, but I think there's some things that could be done. And so
 one thing might be to develop a UI that shows something about confidence, right? We translated this
@@ -94,20 +94,20 @@ assumed. So that would be a kind of transparency. And that I think we as a resea
 an education obligation to basically let the public know that all of this is fallible. And that's at
 odds with the incentives that we have to talk about how cool our research is. Right.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="03:47">
+<turn speaker="Pradeep Dasigi" timestamp="03:47">
 
 Would it have helped if we also showed, if there's a company that was doing the translation would
 have also showed some sort of an accuracy instead of a confidence because if they had a way of
 estimating how well they would do say on automated data and if we can show some sort of estimate of
 the accuracy and how good the translation system is, would that have happened?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Emily Bender" timestamp="04:08">
+<turn speaker="Emily Bender" timestamp="04:08">
 
 Yeah, I love that idea. So that it's not just confidence in this particular example, but over time
 with this language pair, this is our estimate of accuracy. That sounds like a great bit of
@@ -118,10 +118,10 @@ that's a wonderful visual clue to the uncertainty of the machine, right. That wh
 changing over time, I think that's just a very immediate notion that okay, the first thing it wrote
 isn't necessarily right. And so therefore maybe everything is writing isn't necessarily right.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="04:44">
+<turn speaker="Waleed Ammar" timestamp="04:44">
 
 Yeah. And I know that the US designers put a of effort into trying to weigh different
 considerations, but I imagine the can probably put more weight on the ethical side of things. The
@@ -129,10 +129,10 @@ conversion I've been involved with in the past in a variety of places did not pu
 on ethics. Yeah. Thank you for bringing this up. So now I think you wanted to provide two examples,
 one from the industry or like an actual views and another from research.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Emily Bender" timestamp="05:10">
+<turn speaker="Emily Bender" timestamp="05:10">
 
 Yeah. So the research actually have, I think three quick examples that all fall under the heading of
 setting up a task in such a way that it reifies notions of you can predict X from Y when in fact you
@@ -145,10 +145,10 @@ output. A second one along those lines is a shared task being run this year. Tha
 was initially framed predicting intellectual ability from text snippets and there, what was called
 intellectual ability was actually IQ scores.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Emily Bender" timestamp="06:04">
+<turn speaker="Emily Bender" timestamp="06:04">
 
 And there's tremendous amounts of research showing that IQ scores don't measure what they purport to
 measure. So there's a validity problem there between the output label and how it's being framed. But
@@ -160,10 +160,10 @@ have data X and data Y. And so we say, okay, well let's set this up. Let us as a
 input and Y is output without thinking through why is that a reasonable task? And I have one more
 example of that from a published paper that was aiming to predict faces from voices.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Emily Bender" timestamp="06:50">
+<turn speaker="Emily Bender" timestamp="06:50">
 
 So the input is voice recordings and the output is generated images of faces. And again, I want to
 ask what is it that makes you think that that information is there, why does it make sense to go
@@ -175,10 +175,10 @@ on all of these, let's say racist assumptions in some cases. Then we are basical
 to reinforce that racism. And that's a, I think another kind of ethical risk that we need to be
 aware of, especially as there's so much media attention to the work that we're doing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="07:35">
+<turn speaker="Waleed Ammar" timestamp="07:35">
 
 So I'd like to isolate two aspects here. One, the scientific endeavor of finding whether you can or
 cannot predict Y from X , from the actual, like the social consequences of having the public believe
@@ -188,10 +188,10 @@ research inquiry in its own right to see if we can, if it's possible to predict 
 the other way around or the IQ score from something that people would write. I would find reading
 the results of this paper intriguing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Emily Bender" timestamp="08:12">
+<turn speaker="Emily Bender" timestamp="08:12">
 
 So I think that if people are asking, genuinely asking the question, can we predict X from Y and
 looking at, well what are the steps? What's the information in X that would allow us to predict Y,
@@ -200,24 +200,24 @@ to throw a neural net and give it X as input and Y is output in this one closed 
 are undoubtedly artifacts and undoubtedly the neural net can build on those artifacts to do better
 than baseline.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="08:37">
+<turn speaker="Waleed Ammar" timestamp="08:37">
 
 Got it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Emily Bender" timestamp="08:37">
+<turn speaker="Emily Bender" timestamp="08:37">
 
 So those are, it's sort of a mismatch of methodology to question I think.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="08:41">
+<turn speaker="Waleed Ammar" timestamp="08:41">
 
 Yeah, that makes a lot of sense. I think that bridges the gap in understanding and yeah, if the goal
 is to understand the correlation, then it doesn't make sense to throw a neural network at it. So
@@ -226,10 +226,10 @@ this episode discussing ethical considerations. Shifting to what NLP researchers
 targeting. What are day to day? Things that we do commonly, which we should pause and think before
 we do them.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Emily Bender" timestamp="09:10">
+<turn speaker="Emily Bender" timestamp="09:10">
 
 Yeah, I think we should always pause and think. And I think this is going to be a theme in this
 discussion that I think things are moving too fast, but there's lots of different ways of
@@ -242,10 +242,10 @@ graduate students? What is the work we're asking of people and are we compensati
 I should say in the case of working with graduate students, are we setting reasonable expectations
 of the amount of time someone's actually doing work in a week?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Emily Bender" timestamp="09:56">
+<turn speaker="Emily Bender" timestamp="09:56">
 
 Right? So these are related, right? If you have a salary graduate student and you expect 80 hour
 work weeks of them, you are not compensating them fairly. But it's another important angle on it.
@@ -261,10 +261,10 @@ PR step is a part of the research process and that's where those examples that I
 before about, you know, are we doing societal harm by claiming to be able to predict Y from X is a
 consideration under the research process heading.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="10:55">
+<turn speaker="Waleed Ammar" timestamp="10:55">
 
 Got it. So going back to exploiting people who are involved in the research, right. I think this is
 an important problem and it's not clear to me for someone who actually wants to do the right thing,
@@ -275,10 +275,10 @@ these countries. Is the minimum wage, is the right thing, the target or not. Som
 require more skill. I don't know. Do you have any thoughts on that? If someone wants to, you know,
 be on the right, how can they do this without spending, you know, all their time thinking about it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Emily Bender" timestamp="11:35">
+<turn speaker="Emily Bender" timestamp="11:35">
 
 Exactly. You're absolutely right that there's hard questions there. And the last thing you said I
 think puts a pin in it that we don't want to have to keep solving these problems ourselves over and
@@ -292,19 +292,19 @@ and say, you know, we use crowdworkers for this and following so-and-so methodol
 that we were doing X, Y, and Z to compensate them fairly. And then that becomes part of the ongoing
 practice of the field. And it's not this insurmountable problem each time we start to do it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="12:23">
+<turn speaker="Waleed Ammar" timestamp="12:23">
 
 So what's a good venue to put together something like this? These guidelines. Do you think it's like
 something that we should be publishing about or is it just like one of the research groups put
 together methodology and just put it on the internet and invite other people to comment on it?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Emily Bender" timestamp="12:38">
+<turn speaker="Emily Bender" timestamp="12:38">
 
 So it's definitely important that it'd be out there and accessible. And I think that actually having
 a peer review step would be even better. And so, you know, a good venue well possibly, so now in
@@ -315,17 +315,17 @@ fairness, accountability and transparency. It was FAT ML in machine learning and
 actually it's broader than that and that's going on this week actually in Barcelona. And so a
 conference like that might also be a venue for that kind of a publication.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="13:13">
+<turn speaker="Waleed Ammar" timestamp="13:13">
 
 Yeah. Wonderful.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="13:14">
+<turn speaker="Pradeep Dasigi" timestamp="13:14">
 
 Beyond submitting to a specific track would it makes sense to do, I mean I have seen many dataset
 papers in recent times include information about how exactly they got it this information from crowd
@@ -334,10 +334,10 @@ took. Would it make sense for reviewers to actually to actually look for this in
 they, is it a responsibility of the reviewers to look into this information and figured out if there
 are any ethical considerations here and include that in the review process?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Emily Bender" timestamp="13:46">
+<turn speaker="Emily Bender" timestamp="13:46">
 
 Yes, absolutely. So I think there's, there's two different questions here. One is, you know, someone
 could write a best practices paper about here's how you do it and that should be published somewhere
@@ -351,35 +351,35 @@ said nothing about compensation. So I asked that, I said instead of saying were 
 fairly, I said, how did you make sure they were compensated fairly presupposing that that's
 obviously what you would do, right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="14:34">
+<turn speaker="Waleed Ammar" timestamp="14:34">
 
 Yeah. Also to applaud the efforts at AI2. So I used to work at AI2 and at some point we realize that
 we're doing a lot of work collecting a lot of data from crowdsourcing and we put together a
 committee to set such guidelines. I don't think it's public. Maybe we should try to see if AI 2 can
 make it more public.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Emily Bender" timestamp="14:52">
+<turn speaker="Emily Bender" timestamp="14:52">
 
 That would be tremendously valuable.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="14:54">
+<turn speaker="Waleed Ammar" timestamp="14:54">
 
 Okay. So let's move on to the next, I think you want it to provide common risks in both the research
 process and the outcomes of the research. Do you want to shift gears to the second?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Emily Bender" timestamp="15:04">
+<turn speaker="Emily Bender" timestamp="15:04">
 
 Sure. Yeah. So this is risks of the resulting technology. So here this is, we're building something.
 And we are motivating it in the introduction to the paper by saying we're going to solve this
@@ -391,10 +391,10 @@ to work on that. And then stumbling into problematic things. So we should ask ou
 deploy this, do we run the risk of amplifying existing biases in society? And the answer is almost
 always yes. So then the question is, well, what can we do about it?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Emily Bender" timestamp="15:45">
+<turn speaker="Emily Bender" timestamp="15:45">
 
 How can we mitigate that? And so some examples here are in Safiya Umoja Noble's work Algorithms of
 Oppression. It's a 2018 book. She documents how search engines, which sort of present themselves as
@@ -407,10 +407,10 @@ language is used on the internet and Robin Spear points out that a lot of the we
 words with other things that you aren't necessarily thinking about as you are developing the
 software.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Emily Bender" timestamp="16:33">
+<turn speaker="Emily Bender" timestamp="16:33">
 
 And so it's really important to test for things like this. Another early example is Latanya Sweeney
 documents in a communications of the ACM paper from 2013 called Discrimination in Online Ad
@@ -423,19 +423,19 @@ so someone types in your name to try to find your research and they get the subl
 maybe you're a criminal. So these are examples of amplifying existing biases in society that you
 know, if the technology is broadly used, you have to be very careful about.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="17:23">
+<turn speaker="Waleed Ammar" timestamp="17:23">
 
 Yeah, these are really hard questions because the incentives that come into play for advertisers and
 have little to do with ethics. Right. And I wonder like I don't, I don't expect you to give us like
 a solution for all the ethical problems. So I'm not gonna ask this question. Yeah.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Emily Bender" timestamp="17:37">
+<turn speaker="Emily Bender" timestamp="17:37">
 
 The first step is to be aware of them and then to not look away. Right? So this is the first step of
 solving things. If you're not even willing to look, then you can't help at all right. So that was
@@ -448,10 +448,10 @@ weren't deliberately trying to hurt someone with machine translation. Another ex
 companies that are proporting to provide virtual interviewers that make decisions about people based
 on their voices.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Emily Bender" timestamp="18:21">
+<turn speaker="Emily Bender" timestamp="18:21">
 
 And this is, you know, meant to solve the problem of there being too many applicants. And so the
 poor screeners can't get through them fast enough. Or maybe it's trying to say, well, the machine
@@ -466,10 +466,10 @@ the loop in the 911 system, right? And you've got someone who, like my in-laws f
 Indian English and the nine one one system is not ready for Indian English. Right. I definitely do
 not want them unable to contact 911 because a stupid machine can't understand them, you know?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="19:22">
+<turn speaker="Waleed Ammar" timestamp="19:22">
 
 Totally. Yeah. And I honestly, I can relate to this because like many people who are not native
 English speakers already have trouble communicating with people who are taking the phone calls even
@@ -477,10 +477,10 @@ without having any inflammation. So it's only, it can only get worse. Well that'
 it may be better, but only if people who are building the N>P technology actually have this in mind
 to your point.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Emily Bender" timestamp="19:43">
+<turn speaker="Emily Bender" timestamp="19:43">
 
 Exactly. Exactly. It needs to be tested. And then a fourth example there is if you've got hate
 speech filters built in to say social media, right? That's definitely coming from positive
@@ -493,10 +493,10 @@ to have some negative side effects that are particularly harmful to already marg
 this is all examples of something being used widely and causing harm, but it's not being used
 maliciously.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Emily Bender" timestamp="20:33">
+<turn speaker="Emily Bender" timestamp="20:33">
 
 It's just sort of a side effect. Right? Third category is technology that can be used on purpose in
 harmful ways. So you might remember the Tay chatbot that Microsoft deployed and then had to take
@@ -514,10 +514,10 @@ by any particular example because they are basically random. But it could lower 
 ability to go find reliable information by just flooding the zone with fake news. So there's lots of
 potential for actual deliberate harm as well.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="21:49">
+<turn speaker="Waleed Ammar" timestamp="21:49">
 
 I think I mentioned in our conversation, right, that's not clear to me how any one person or any one
 group decide if a methodology they're taking or the actions they're taking to avoid some of these
@@ -527,10 +527,10 @@ not easy to evaluate because the effects are very nuances and there are so many 
 into play. It's not easy to measure the outcome. It's not clear to me what is a measurable outcome
 that we can agree on.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Emily Bender" timestamp="22:25">
+<turn speaker="Emily Bender" timestamp="22:25">
 
 Yeah. I think that we are never going to be able to claim that we have solved any of these problems,
 right? It doesn't, it doesn't fit that sort of a mindset. And so what do we do? Well, the first
@@ -541,10 +541,10 @@ still worthwhile to try to make it better. And honestly, that's true in everythi
 NLP, right? When we say a problem is solved, it's because we've gotten to, you know, 99% accuracy on
 the standard test set. Right.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="23:04">
+<turn speaker="Waleed Ammar" timestamp="23:04">
 
 So I think what you're saying is currently you think the researchers working in NLP don't spend
 enough time thinking about this problem in the first place and we're not trying to solve the problem
@@ -552,10 +552,10 @@ necessarily, but we're trying to get more of us think about it and spend more ti
 and you don't want it to be, you don't think it should be 100% of our time. Obviously it should be
 something that we deliberately discuss and think about.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Emily Bender" timestamp="23:26">
+<turn speaker="Emily Bender" timestamp="23:26">
 
 Yes. And that we plan time to think about that when we're planning the next research project. We
 actually build in time to think about, okay, who are we going to talk to to understand how this
@@ -568,10 +568,10 @@ general or that we've done this well and the problem in general when in fact we'
 the problem in English for this genre, for speakers from this era talking about these topics and we
 don't really know that it generalizes beyond that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Emily Bender" timestamp="24:09">
+<turn speaker="Emily Bender" timestamp="24:09">
 
 So by building in time to ask those questions I think is important. And then also allocating time
 for talking to the public, which is why I'm, part of why I'm delighted to be doing this podcast. I
@@ -581,18 +581,18 @@ is not just, you know, the Goodwill and the hard work of all of the researchers.
 actual regulation and we aren't going to get that regulation unless we have an educated public that
 knows to push for it and is able to educate their legislators as well.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="24:43">
+<turn speaker="Waleed Ammar" timestamp="24:43">
 
 Yeah totally, so I'd like to make sure that we have time to discuss a set of guidelines that you
 compiled and shared few months ago for directing the efforts of research groups.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Emily Bender" timestamp="24:52">
+<turn speaker="Emily Bender" timestamp="24:52">
 
 I think I want to sort of put a little bit of context around them, which is that these questions
 alone, they're focused very narrowly on task development and there's some other things that they
@@ -611,33 +611,33 @@ detailed metadata that should go with it. So with those things in context, then 
 question of when I am designing a task or what I'm choosing to work on a task, does it make sense?
 And that's what these questions are about.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="26:05">
+<turn speaker="Waleed Ammar" timestamp="26:05">
 
 So basically these are a set of questions that if I'm going to propose a shared task in some
 workshop or create a dataset and put it in a paper, I should try to address both while designing the
 data and when I'm disseminating the work.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Emily Bender" timestamp="26:20">
+<turn speaker="Emily Bender" timestamp="26:20">
 
 Yeah, exactly. And we should expect to when we're reviewing work that people have done this. Right.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="26:25">
+<turn speaker="Waleed Ammar" timestamp="26:25">
 
 Right. And in your opinion it should be ground for rejection if some of these are not addressed.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Emily Bender" timestamp="26:30">
+<turn speaker="Emily Bender" timestamp="26:30">
 
 Yeah, exactly. Just like used to be in ACL papers that you didn't have to have evaluation on held
 out data or you didn't have to have a standard metric and then we came around to, well no actually
@@ -645,19 +645,19 @@ we can't really learn from what's going on here if we don't have held out data c
 generalizes and metrics that are either, you know, well motivated elsewhere and just picked up where
 the paper's motivating the metric is. I see this as similar.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="26:50">
+<turn speaker="Waleed Ammar" timestamp="26:50">
 
 No, I agree. I think one challenge here is that it's very subjective. Like whether someone is
 actually addressing any of these concerns or not. And I think it will largely depend on whether the
 person reviewing the work actually spends themselves enough time thinking about it. Right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Emily Bender" timestamp="27:05">
+<turn speaker="Emily Bender" timestamp="27:05">
 
 Yeah, but that's true for everything about what we review. Right. You can say that certain parts of
 it are more objective, right? If someone has made a mistake in one of their equations, you would
@@ -670,10 +670,10 @@ capital all correlate with ways of speaking that relate to the education system 
 on. This isn't subjective. It's just not taught in classes that are typically taken by computer
 science students.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="27:50">
+<turn speaker="Waleed Ammar" timestamp="27:50">
 
 Yeah. Fair. I want to focus on one distinction between trying to be fair and addressing the full
 spectrum of people who may benefit from a particular technology and making a proof of concept or
@@ -682,10 +682,10 @@ solve the problem. Right? I think we kind of started with a narrow problem state
 future other people, if this turns out to be an interesting and useful outcome, other people can
 build on it and build a wider scope.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Emily Bender" timestamp="28:22">
+<turn speaker="Emily Bender" timestamp="28:22">
 
 You and I are both looking at these questions but we haven't said them out loud yet. So for the
 listening audience would probably go through the questions. I think they fit in well in both of
@@ -700,20 +700,20 @@ am I doing thoughtful science here or am I just picking up a set of numbers, cal
 throwing a neural net at it? And I think that, you know, in our guise as reviewers, we want to be
 valuing and rewarding the thoughtful science
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="29:17">
+<turn speaker="Pradeep Dasigi" timestamp="29:17">
 
 We should probably also be concerned about whether the input has any more information then we want.
 Right? I mean, sometimes it's possible that the inputs have unintended correlations with things we
 are not interested in or that we actually avoid the model from being classified. Right? So that's
 probably, is it?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Emily Bender" timestamp="29:33">
+<turn speaker="Emily Bender" timestamp="29:33">
 
 Yeah, absolutely. And when we're talking about language data, that is always going to be the case.
 Language carries so much information. So if we're claiming that our model is able to predict Y from
@@ -726,10 +726,10 @@ range of uses. And so this question becomes, I think less pointed, you know, thi
 reviewing process, I could imagine that there's going to be some misses where people say, well, you
 didn't tell me how your predicate argument structure parser was going to be worked.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Emily Bender" timestamp="30:18">
+<turn speaker="Emily Bender" timestamp="30:18">
 
 You know, you're going to be used. And then it's like, okay, yeah, but that's less directly relevant
 here. But what are possible misuses of this technology and how can they be minimized? And that might
@@ -741,10 +741,10 @@ technology, then in order for it to have benefits to society, it's going to need
 along these lines. And that, the people who have expertise to build those regulations are lawyers,
 but the lawyers don't necessarily know what the technology can do.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Emily Bender" timestamp="31:08">
+<turn speaker="Emily Bender" timestamp="31:08">
 
 And it's on us to say this is what can happen. Now let's try to build the societal structures that
 prevent that from happening because we also want these beneficial applications of this technology.
@@ -759,10 +759,10 @@ know, Lagos to do named entity recognition in tweets or something. You need to h
 between training data and deployment and you're only going to be able to get those good matches if
 there's documentation about where the data came from.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="32:05">
+<turn speaker="Waleed Ammar" timestamp="32:05">
 
 Yeah, that makes a lot of sense. I think all of these points are important to mention in our
 proposal to think about. The thing that I'm struggling with a little bit here is how can we make it
@@ -772,10 +772,10 @@ but in order for this to be done at scale, I think we want to align the incentiv
 think this goes back to your point earlier, that if the reviewers of our peer reviewed work care it
 enough then they would have a stronger incentive for everyone to adopt it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Emily Bender" timestamp="32:43">
+<turn speaker="Emily Bender" timestamp="32:43">
 
 Yeah, absolutely. So I think bringing it into reviewing is important. And I think also, not
 necessarily just focusing on, but highlighting the aspects of the discussion where it really isn't
@@ -789,10 +789,10 @@ the way you think is going to work? And one of the things that I'm really intere
 I'm, we haven't gotten started yet, we're still seeking funding, but I'm with some colleagues
 including Bernease Herman, Brandeis Marshall and Hal Daumé III.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Emily Bender" timestamp="33:35">
+<turn speaker="Emily Bender" timestamp="33:35">
 
 I'm working on designing shared tasks with evaluations that take into consideration not only the
 percent match against the gold standard, but actual things like differential impacts of different
@@ -802,17 +802,17 @@ let's see if I improve my model in this way or I changed the training regime in 
 that affect my results? It's right there in the mix as you go. Rather than being a separate thing
 that you think about maybe before and after.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="34:06">
+<turn speaker="Waleed Ammar" timestamp="34:06">
 
 Yeah, that sounds really exciting and it will directly address this point of incentive here.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Emily Bender" timestamp="34:10">
+<turn speaker="Emily Bender" timestamp="34:10">
 
 But then the other thing I want to say is that we should look to all of the people in the humanistic
 fields. So everyone doing digital humanities, everyone doing you know, psychology, sociology who
@@ -828,10 +828,10 @@ collaboration, for example, with colleagues in human computer interaction, human
 engineering, science, technology and society, sociology, anthropology, psychology, et cetera. I
 think that de siloing is going to be an important part of this as well.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="35:15">
+<turn speaker="Waleed Ammar" timestamp="35:15">
 
 Yeah, that makes sense. There's also like, since you're mentioning how other fields are like
 addressing these questions, you know in medical research they have IRB boards, I don't remember what
@@ -840,10 +840,10 @@ the research that's being done and it's like it's a systematic solution, every l
 institution would have an IRB board and the work needs to pass IRB review before it's published. Do
 you think it makes sense to implement something like this and it'll be, or an ML research,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Emily Bender" timestamp="35:49">
+<turn speaker="Emily Bender" timestamp="35:49">
 
 So it might, I think it's worth stepping back a little bit to see you. Why institutions have those
 IRBs, and it's partially because of, you know, really harmful work that was done in early medical
@@ -856,10 +856,10 @@ most of the other sciences do, right? If you think about what it takes to actual
 experiment in biology or particle physics or if we move to the social sciences, psychology or
 sociology, you have to come up with your careful plan.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Emily Bender" timestamp="36:40">
+<turn speaker="Emily Bender" timestamp="36:40">
 
 And if there are people involved, then there's the IRB and then you do the actual, you know,
 sampling of your cultures or you know, harvesting of plants or observing part of the night sky or
@@ -876,79 +876,79 @@ in somewhere and I think it'll make us feel better about building it in if we lo
 in other fields and see what doing science looks like for them as opposed to what it looks like for
 us.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="37:47">
+<turn speaker="Waleed Ammar" timestamp="37:47">
 
 Yes. Well thank you. I think this has been a very interesting conversation. We're almost out of
 time. Is there anything else that you wanted to bring up that we didn't already discuss?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Emily Bender" timestamp="37:56">
+<turn speaker="Emily Bender" timestamp="37:56">
 
 I think we managed to cover it. I guess the remark that I'd like to end with is that we should slow
 down the pace and it will be good for everyone. It'll be good for the society that benefits because
 we will have done more thoughtful software creation and it will be good for us as researchers
 because we'll have better work life balance.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="38:14">
+<turn speaker="Waleed Ammar" timestamp="38:14">
 
 Yeah, thank you. I don't know if all the grad students out there will find it easy to change their
 mindset. I know that I was much more in a rush when I was a grad student because you know, fears,
 competition and there's a need to publish often I think it's gonna take time for this culture of
 change to happen. But I do agree with you. I, and I hope a field will slowly go a little bit slower.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Emily Bender" timestamp="38:36">
+<turn speaker="Emily Bender" timestamp="38:36">
 
 Yeah, I hope so too. And I hope that the people who are established take the lead in making that
 change rather than pushing their grad students. And adding the stress, basically finding ways to
 make space for their grad students to do more thoughtful work and more impactful work.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="38:49">
+<turn speaker="Waleed Ammar" timestamp="38:49">
 
 Yeah. I do want to thank you on this note because I know several of your students who when you're
 not around, would commend you and how much care you put in designing the deliverables so that people
 don't have to work in holidays and things like this. So I think it's very well perceived. Thank you
 for taking the lead on this and being more proactive than most.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Emily Bender" timestamp="39:11">
+<turn speaker="Emily Bender" timestamp="39:11">
 
 Oh, I'm glad to hear that and I hope that, I hope that more will follow suit.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="39:14">
+<turn speaker="Waleed Ammar" timestamp="39:14">
 
 All right. Thank you, Emily. It has been a pleasure having you.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Emily Bender" timestamp="39:16">
+<turn speaker="Emily Bender" timestamp="39:16">
 
 Thank you very much.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="39:17">
+<turn speaker="Pradeep Dasigi" timestamp="39:17">
 
 Thanks Emily.
 
-</Turn>
+</turn>

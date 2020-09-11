@@ -8,23 +8,23 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting recent work in
 natural language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is Matt Gardner and Waleed Ammar. We are research scientists at the Allen Institute for
 Artificial Intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:11">
+<turn speaker="Matt Gardner" timestamp="00:11">
 
 All right. Today's paper is titled Arc-swift: A Novel Transition System for Dependency Parsing. This
 is a short paper at ACL 2017 by Peng Qi and Chris Manning at Stanford University. To motivate this
@@ -35,10 +35,10 @@ between the words. So the root of the tree is generally the main verb of the sen
 will have dependency edges to say it's subject and its object if it has propositional phrase
 attachments.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:58">
+<turn speaker="Matt Gardner" timestamp="00:58">
 
 All of these you need to, to construct this tree in order to show the dependency relationships
 between the words. And the way that you do this is you initialize some transition based parser. You
@@ -50,10 +50,10 @@ label. And the way that parsers actually do this is by maintaining a couple of d
 called a stack and a buffer. And the actions typically boil down to shifting things from the buffer
 to the stack so that you can delay head decisions.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="01:57">
+<turn speaker="Matt Gardner" timestamp="01:57">
 
 And then after you've pushed enough things onto the stack, you can pop some off and connect them and
 possibly push it back on depending on the particular transition system that you're using. So the
@@ -64,10 +64,10 @@ you put it onto the stack. So in a simple sentence like "They told him a story."
 that you'll take is a shift and you'll move "they" the first word on the buffer onto the stack. And
 then the other actions that you can do are left attached and right attach.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="02:45">
+<turn speaker="Matt Gardner" timestamp="02:45">
 
 And both of these actions will pop two things off of the buffer, off of the stack, connect to them
 in some relationship, either with the left word or the right word being the head, depending on which
@@ -79,10 +79,10 @@ then you reduce him and make it the indirect object. And then you push a and the
 pop off a story, you attach the story, you put story back and then you pop off told and story and
 you attach, told to story.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="03:32">
+<turn speaker="Matt Gardner" timestamp="03:32">
 
 And it's probably hard to follow this in audio. But that's okay. So we've done this series of shifts
 and reduces in order to in order to construct this dependency tree. Okay. So the tricky thing about
@@ -93,10 +93,10 @@ to it. And so this can make modeling hard because you have to delay some attachm
 the node's children are finished. And maybe in some cases you don't want to do this because it'd be
 easier from a modeling perspective to make some attachments earlier rather than later.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="04:28">
+<turn speaker="Matt Gardner" timestamp="04:28">
 
 And so this motivates this different transition system called Arc-eager, which I'll spare you the,
 like detailed walk through on this one, but it adds, it changes the behavior of left and right
@@ -108,19 +108,19 @@ know you've done a bit of work with dependency parsing with a bunch of papers on
 particularly multi-lingual dependency parsing. But do you have any insight on Arc-standard versus
 Arc-eager? Which one should you use?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="05:21">
+<turn speaker="Waleed Ammar" timestamp="05:21">
 
 So I actually asked people who are experts on this. So Miguel Ballesteros told me that for some
 languages arc-eager works better and for others arc-standard works better. It's not clear where we
 should use which so it seems to be an open problem.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="05:41">
+<turn speaker="Matt Gardner" timestamp="05:41">
 
 I guess that now we finally arrive at the contribution of the paper that we're talking about today,
 which is a new transition system called Arc-swift. And so for both of these transition systems that
@@ -129,10 +129,10 @@ attachments you make. That is in order to attach two words to each other, they e
 be on top of the stack or one word has to be on the top of the stack and one word at the beginning
 of the buffer.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="06:13">
+<turn speaker="Matt Gardner" timestamp="06:13">
 
 And so you have to delay some decisions, some attachment decisions until you get to this state. And
 then you can attach things and then you can do shifts or pops or reduces or whatever in order to get
@@ -145,17 +145,17 @@ and hopefully spend your modeling efforts better. Instead of trying to make the 
 how long do I have to wait before I can actually make this attachment? It can just make the
 attachment as soon as it thinks it can.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="07:06">
+<turn speaker="Waleed Ammar" timestamp="07:06">
 
 So when you actually make it, that's when you remove the dependent from the stack?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="07:12">
+<turn speaker="Matt Gardner" timestamp="07:12">
 
 Yeah. You do pop off the thing that you just attached to the stack. There's some detailed
 constraints on exactly what you're allowed to attach things to with these left and right attachment
@@ -175,27 +175,27 @@ do. Whereas in this arc-swift when you decide the with, when you're looking at w
 make the attachment decision to attach it to wherever it needs to be directly instead of having to
 delay the decision in some cases.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="08:53">
+<turn speaker="Matt Gardner" timestamp="08:53">
 
 So they evaluate this on standard dependency parsing datasets and show that they get the differences
 seem tiny. But that's just with that's true of dependency parsing in general, cause the numbers are
 already so high, they get like a 0.4 or so percent improvement when you use a model, like when you
 use this new transition system with the same model versus the old transition systems.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="09:24">
+<turn speaker="Waleed Ammar" timestamp="09:24">
 
 This is which languages.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="09:27">
+<turn speaker="Matt Gardner" timestamp="09:27">
 
 So they evaluated on Penn Treebank in like with PennTreebank converted to Stanford dependencies and
 some English universal dependency dataset. So yeah, they only evaluated on English here. And they
@@ -203,18 +203,18 @@ have some analysis on in which kind of dependence this helps most with. And you 
 prepositional phrase attachment and conjunctions with the arc-swift in particular than you do with
 the previous dependency transition systems.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="10:00">
+<turn speaker="Waleed Ammar" timestamp="10:00">
 
 So that's great. These are the hardest things to, parse. So even if we make a little bit of progress
 on these hard problems, that's so valuable.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="10:11">
+<turn speaker="Matt Gardner" timestamp="10:11">
 
 So ya, this was a short paper. So a short episode but I thought it was an interesting little piece
 of work. I guess I've thought a lot about transition based models in general because we just built a
@@ -223,12 +223,12 @@ look like, what actions are available to you is really important, a really impor
 decision. And so this is a nice contribution giving a new transition system to a very well studied
 problem and showing a significant though somewhat small gain.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="10:46">
+<turn speaker="Waleed Ammar" timestamp="10:46">
 
 Thank you for presenting this paper Matt. Next time we will talk about a paper titled: pix2code:
 Generating Code from a Graphical User Interface Screenshot.
 
-</Turn>
+</turn>

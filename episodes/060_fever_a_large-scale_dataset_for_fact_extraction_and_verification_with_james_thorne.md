@@ -8,48 +8,48 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting work in natural
 language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:05">
+<turn speaker="Waleed Ammar" timestamp="00:05">
 
 This is Matt Gardner and Waleed Ammar. We are research scientists at the Allan Institute for
 artificial intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:12">
+<turn speaker="Matt Gardner" timestamp="00:12">
 
 All right, so today our guest is James Thorne who is a PhD student at the university of Sheffield
 working with Andreas Vlachos. He is interested in fact checking, dabbled a little bit in semantic
 parsing, but is more interested these days in and how we know what things are correct and welcome to
 the podcast. James.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="James Thorne" timestamp="00:28">
+<turn speaker="James Thorne" timestamp="00:28">
 
 Thank you. It's great to be here. Honored to be among so many good guests on the season.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:33">
+<turn speaker="Matt Gardner" timestamp="00:33">
 
 So the paper we'll be talking about is called FEVER: a large-scale dataset for Fact Extraction and
 VERification. So James, can you tell us about what the motivation is for building this dataset?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="James Thorne" timestamp="00:44">
+<turn speaker="James Thorne" timestamp="00:44">
 
 Yeah, sure. So a large number of systems that we use today, information that is extracted from the
 web. So you can imagine semantic search or question answering on a new additional parsing system.
@@ -61,19 +61,19 @@ isn't accurate or consistent with our view of the world. So rather than focusing
 we focus on verifying the sources. We're starting from a to allow these systems to kind of be able
 to talk to a broader range of questions.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="01:27">
+<turn speaker="Matt Gardner" timestamp="01:27">
 
 I see. So this sounds similar to something like fake news detection. I know this has been in the
 news a lot recently. People have been thinking about this. I've talked to people that are working in
 this kind of thing. How, how does what you're working on fit into this whole fake news thing?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="James Thorne" timestamp="01:43">
+<turn speaker="James Thorne" timestamp="01:43">
 
 Okay, So our motivation isn't just fake news and we should be a bit careful with talking about the
 term fake news by itself. Our motivation in this work is to identify misinformation and that's where
@@ -82,33 +82,33 @@ in this work we kind of focus on the encyclopedic domain for work and trying to 
 Dealing with journalism requires a large volume of world knowledge, which kind of isn't captured to
 the same degree in a machine readable format that we have in Wikipedia.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="02:15">
+<turn speaker="Matt Gardner" timestamp="02:15">
 
 I see. So you're less interested in people that are actually trying to deceive you then did someone
 make a mistake? Is that, is that fair?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="James Thorne" timestamp="02:23">
+<turn speaker="James Thorne" timestamp="02:23">
 
 That's correct.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="02:24">
+<turn speaker="Matt Gardner" timestamp="02:24">
 
 So how then I guess I feel like I've seen a bunch of data sets related to this. Why do we need a new
 one? What's different about yours?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="James Thorne" timestamp="02:32">
+<turn speaker="James Thorne" timestamp="02:32">
 
 Yeah, it's great that this area's become an exciting taste or an exciting topic to research. So I
 think when we consider available resources, there's like three axes. We need to look at kind of the
@@ -125,10 +125,10 @@ In the fake news challenge, the data is provided kind of in pairs and the system
 classification. But I think being able to reason about what information is needed to verify a source
 is very challenging and still an open research problem.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="03:47">
+<turn speaker="Matt Gardner" timestamp="03:47">
 
 Yeah. Interesting. I thought about this a bit a while ago. Turns out one of the first episodes we
 did on this podcast was a paper that was trying to find news articles citations for statements in
@@ -138,10 +138,10 @@ for. And in that case you're just like, what news article should I cite, which i
 news article should like entail the claim, right? This is kind of the same problem. Do you, would
 you, would you distinguish this like how is this different or the same?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="James Thorne" timestamp="04:28">
+<turn speaker="James Thorne" timestamp="04:28">
 
 It's a really interesting paper, and I wish I'd known more about it earlier, but I think in that
 paper they highlight two challenges. The first is being able to identify sentences which require
@@ -155,10 +155,10 @@ examples where you can find supporting articles. In FEVER we've got both correct
 incorrect information on new challenges to be able to find evidence to refute the claim or to state
 where we don't have enough information to make a fully informed decision.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="05:24">
+<turn speaker="Matt Gardner" timestamp="05:24">
 
 Yeah, that's really interesting. I definitely think your data set is, is new and different and and
 interesting on its own. I just think it's interesting to think about like how else could you get
@@ -172,28 +172,28 @@ sort of help readers if the citations are missing. Like there are a lot of inter
 can do, not just with this like fact verification but are similar along the same lines. It's really
 interesting
 
-</Turn>
+</turn>
 
 
-<Turn speaker="James Thorne" timestamp="06:13">
+<turn speaker="James Thorne" timestamp="06:13">
 
 That's a great followup, I think one of the interesting challenges with FEVER is rather than finding
 just relevant sentences as you do with the information retrieval task, we want to find a diverse set
 of evidence which kind of as a provides more thorough background and just things by themselves.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="06:32">
+<turn speaker="Waleed Ammar" timestamp="06:32">
 
 So it might be easier for the listeners to like keep up with this conversation if they actually know
 what, how the dataset was constructed, can you give us a brief overview of how you constructed these
 datasets?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="James Thorne" timestamp="06:44">
+<turn speaker="James Thorne" timestamp="06:44">
 
 I'll first describe what the data set looks like and then I'll go on to say how we constructed it.
 So the dataset is 185,000 claims. These are human annotated factoid sentences, which may be true or
@@ -205,10 +205,10 @@ extracted from a sentence from Wikipedia. Annotators were given a sentence at ra
 most popular pages last year in August. And annotators were asked to extract simple facts, one per
 sentence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="James Thorne" timestamp="07:34">
+<turn speaker="James Thorne" timestamp="07:34">
 
 So you can imagine a sentence containing or saying Keanu Reeves is an American actor, director. He
 stared in The Matrix and was born in October. There are multiple facts. So the annotator would
@@ -221,35 +221,35 @@ happens, where a different annotator without knowledge of where the original sen
 from the original factors generated from is asked to find the evidence by labeling sentences which
 supports or refute that claim.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="08:30">
+<turn speaker="Waleed Ammar" timestamp="08:30">
 
 So the first one includes both identifying effect and also creating an alternative, like another
 fact can be derived from it right from it or that contradicts, is that right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="James Thorne" timestamp="08:42">
+<turn speaker="James Thorne" timestamp="08:42">
 
 Yes. so the first is to extract the original claim, the extract the claims from the original
 sentence. And the second stage is to mutate it to the point where we don't know if it's true or
 false.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="08:53">
+<turn speaker="Waleed Ammar" timestamp="08:53">
 
 So the final product is a set of instances and each innocence contains one claim and one evidence
 either in favor or against.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="James Thorne" timestamp="09:02">
+<turn speaker="James Thorne" timestamp="09:02">
 
 There are cases where the fact or a claim may not be able to be fully supported or refuted by just
 one sentence. So 20% of our data approximately contains multiple sentences as evidence. And this
@@ -258,34 +258,34 @@ a claim. An example of this might be, Phill Collin's is a Gemini. So to answer t
 refute this, we need to first look at Phil Collins, his birthday, which we see maybe in May, and
 then we also need to go to Gemini and look at what date range a Gemini would be.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="09:38">
+<turn speaker="Waleed Ammar" timestamp="09:38">
 
 So in order to construct this example the first phase of the notations the annotator needed to
 identify these two facts and combine them when they, they're writing the case that right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="James Thorne" timestamp="09:50">
+<turn speaker="James Thorne" timestamp="09:50">
 
 Oh, of course. Well it's just to the evidence finding. So with the claim, the annotator wouldn't
 know whether this true or false.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="09:55">
+<turn speaker="Waleed Ammar" timestamp="09:55">
 
 I see. So in the claim generation, the only used one of the facts and the may not be any of the
 facts that are actually end up end up in the dataset. Is that right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="James Thorne" timestamp="10:06">
+<turn speaker="James Thorne" timestamp="10:06">
 
 So I clarify this again. I think you might've misinterpreted what I'd said. There's two stages of
 claim generation and then one third of the stage claim verification. So in the claim generation step
@@ -297,25 +297,25 @@ claims in our dataset. The next part is where the annotators are different set o
 labeling the claims by selecting evidence from other pages without knowledge of where the claims
 generated from.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="10:57">
+<turn speaker="Waleed Ammar" timestamp="10:57">
 
 Yes, yes. Makes sense. Thank you.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="James Thorne" timestamp="11:00">
+<turn speaker="James Thorne" timestamp="11:00">
 
 What corpus are you looking at when you're generating evidence, but what can the annotators actually
 use as evidence to decide if the claim is true or false?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="James Thorne" timestamp="11:09">
+<turn speaker="James Thorne" timestamp="11:09">
 
 Yeah. So all the facts in this dataset can be answered using Wikipedia. I think it'd be important to
 consider different sources in a promote setting, but we want our experiments to be closed world in a
@@ -323,25 +323,25 @@ way which is repeatable and this experimental setting. So our modeling decision 
 Wikipedia corpus as correct with respect to evidence. And the challenge we present is to find the
 evidence in supporting or refuting sentences to backup a claim which was generated from Wikipedia.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="11:41">
+<turn speaker="Matt Gardner" timestamp="11:41">
 
 Yeah. So I guess you're assuming that you have some corpus that you assume that everything in that
 corpus is correct for better or for worse, right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="James Thorne" timestamp="11:49">
+<turn speaker="James Thorne" timestamp="11:49">
 
 Yes.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="11:50">
+<turn speaker="Matt Gardner" timestamp="11:50">
 
 In my PhD we worked on the never ending learning project where we were trying to extract information
 from the web. And we thought a lot about, well, what if there's wrong information on the web? And
@@ -349,25 +349,25 @@ there's plenty of it. And so you have to think about, well, what sources should 
 actually address that problem in NEL, but we thought about it a lot. Here you're saying this is,
 we're just setting that problem aside cause it's hard, right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="James Thorne" timestamp="12:15">
+<turn speaker="James Thorne" timestamp="12:15">
 
 I think verifying the source of the information is important, but it's a orthogonal research
 problem.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="12:20">
+<turn speaker="Matt Gardner" timestamp="12:20">
 
 Right.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="James Thorne" timestamp="12:20">
+<turn speaker="James Thorne" timestamp="12:20">
 
 And there's many ways if you go about verifying a source, so you can verify the content in the
 source. You could verify the originator of the source or you could verify the style in which the
@@ -376,25 +376,25 @@ clickbait detection, trust rank and subjective language detection. And so our mo
 treated Wikipedia is correct in assumption. And then we would assume that this verification of
 source can be done in a followup or different work.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="12:56">
+<turn speaker="Matt Gardner" timestamp="12:56">
 
 Alright, cool.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="12:58">
+<turn speaker="Waleed Ammar" timestamp="12:58">
 
 I wanted to ask about the second secondary claim labeling part it seems like a difficult task. Was
 this crowd sourcing?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="James Thorne" timestamp="13:05">
+<turn speaker="James Thorne" timestamp="13:05">
 
 So the annotators we had for our task were actually temporary staff of our research lab. So this
 meant we could train them professionally and we could maintain like a continuous dialogue with our
@@ -404,17 +404,17 @@ the style, the way we generated these claims. Yeah. The, the way we generated th
 our annotation interface allowed the annotators to generate the claims would have a great impact on
 the types of claims generated as well.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="13:45">
+<turn speaker="Waleed Ammar" timestamp="13:45">
 
 Oh, you mean it's easier to verify or harder to verify
 
-</Turn>
+</turn>
 
 
-<Turn speaker="James Thorne" timestamp="13:49">
+<turn speaker="James Thorne" timestamp="13:49">
 
 In order to do these mutations the annotators have to be creative with the types of new information
 they introduce. And so by providing, in our pilot studies, we found by providing, making something
@@ -427,10 +427,10 @@ annotators who operated without time constraints. And yeah, it was important for
 measure this when we were generating a task and also provides an insight into what the kind of
 expected human level performance would be in a time constraint setting.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="14:57">
+<turn speaker="Matt Gardner" timestamp="14:57">
 
 I guess you don't really have to annotate all of that, the annotation that you really need is just
 does this claim, does this evidence support this claim? Or refute this claim, but if you want to
@@ -439,10 +439,10 @@ of like relation extraction or slot filling kind of work, it's not that typical 
 measure this recall in this particular way. So it's nice that that your dataset has some nice
 measures of this.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="James Thorne" timestamp="15:27">
+<turn speaker="James Thorne" timestamp="15:27">
 
 Yes, there are also to follow up, this would be like finding multiple needles in a haystack. And I
 think often the simplest explanation as a way to often the most right. And so we had to incorporate
@@ -450,10 +450,10 @@ that into our guidelines where given the time constraints annotators were asked 
 earliest occurrence of evidence on a page or the simplest explanation rather than these really
 convoluted explanations which may be difficult for a human to understand.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="15:53">
+<turn speaker="Matt Gardner" timestamp="15:53">
 
 Interesting. So another related piece of work, there's been a few papers recently from a couple of
 different groups that look at what they're calling annotation artifacts and when you are generating
@@ -471,30 +471,30 @@ entailed or not. This work came out around the time you were building this datas
 this probably wasn't much on your mind when you were doing this, but any thoughts on how this
 might've affected your dataset set? Have you tried to measure this since this other stuff came out?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="James Thorne" timestamp="17:15">
+<turn speaker="James Thorne" timestamp="17:15">
 
 Yes. It's a really interesting, really interesting topic looking at bias in our datasets. And we
 have done some studies in subsequent experiments and we find comparable to the multi NLI dataset, we
 can find the 50 to 55% of our claims can be answered on the hypothesis only level if we're just
 looking at supportive, refuted or not enough information or applying that label to the claims.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="17:39">
+<turn speaker="Matt Gardner" timestamp="17:39">
 
 Yeah, that's interesting. So, and in this case, by the setup random, the labels are evenly split
 between the supported refuted and not enough evidence and not enough info. So you have 33% chance
 will be random, so you can get, you said 50 yes or so. So yeah, significantly above chance, but at
 least it's not way higher than that. So that's good.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="James Thorne" timestamp="18:01">
+<turn speaker="James Thorne" timestamp="18:01">
 
 Yes. And it also shows that the artifacts problem is equally as problematic to us as the SNLI style
 of our datasets if we ignore the requirement for evidence. But that's not the whole story with our
@@ -503,10 +503,10 @@ needed to support or refute that claim. And that's incorporated into our scoring
 there may be other biases and that which we haven't fully observed, which aren't same as as SNLI
 that may be fleshed out in subsequent experiments or as part of the shared task.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="18:35">
+<turn speaker="Matt Gardner" timestamp="18:35">
 
 Oh, sorry. Let me back up for just a minute. You said so from the paper you ran an experiment where
 you run your full model, which can access evidence. So you're given the claim it can go look at the
@@ -514,43 +514,43 @@ corpus to try to find evidence and then given whatever evidence it fines, it tri
 whether the claim is supported, refuted or not enough info. And in that setting where you're not
 evaluating what the evidence is is good or not, you get 50% accuracy. Is that right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="James Thorne" timestamp="19:04">
+<turn speaker="James Thorne" timestamp="19:04">
 
 Sorry, this might require a bit more explanation as well. And so in our data set, we report two
 types of scores. There's the label only accuracy and there's the conditional accuracy on finding the
 right evidence. So looking at the label only accuracy, this hypothesis only style evaluation, gives
 us a score of about 50%, which is comparable to the multi NLI datasets.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="New Speaker" timestamp="19:34">
+<turn speaker="New Speaker" timestamp="19:34">
 
 I'm realizing now that we haven't even described what the baseline system does. So maybe that'd be
 good to talk to talk about first and then we can come back to this question.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="James Thorne" timestamp="19:42">
+<turn speaker="James Thorne" timestamp="19:42">
 
 Sure.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="19:42">
+<turn speaker="Matt Gardner" timestamp="19:42">
 
 So you want to describe what the, what is your baseline system on this data set? How does it work?
 What does it do?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="James Thorne" timestamp="19:48">
+<turn speaker="James Thorne" timestamp="19:48">
 
 Okay. So our baseline system is a pipeline of two components. We first retrieved the right evidence
 and then we do a classification as to whether the evidence supports or refutes the claim. Once we've
@@ -562,83 +562,83 @@ is a label accuracy, which only looks at whether we're getting the right claims 
 or not enough information. And then the second metric is a conditional label accuracy on the right
 label given the evidence we found.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="James Thorne" timestamp="20:42">
+<turn speaker="James Thorne" timestamp="20:42">
 
 So we in our data set, we've labeled the correct evidence and we'd only give the scote if we find
 the correct evidence and apply the correct label.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="20:52">
+<turn speaker="Matt Gardner" timestamp="20:52">
 
 How does that work when there's not enough evidence?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="James Thorne" timestamp="20:55">
+<turn speaker="James Thorne" timestamp="20:55">
 
 So by default not enough evidence claim if we don't find any evidence, we could mark that as not
 enough evidence. But in reality with our retrieval system, we're finding noisy information from
 Wikipedia, which we think is right, which doesn't fully support or refute a claim. So we've had to
 negatively sample evidence in that case and train a three-way classifer.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="21:22">
+<turn speaker="Matt Gardner" timestamp="21:22">
 
 I see. Okay. So you have a model you use, there's nothing even really trained right, for the
 retrieval components, where you are selecting documents and then selecting sentences.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="James Thorne" timestamp="21:33">
+<turn speaker="James Thorne" timestamp="21:33">
 
 No, we just run it by similarity. And we learn the thresholding parameters within the threshold
 which is five documents and five sentences through kind of a good search on the final accuracy
 score.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="21:46">
+<turn speaker="Matt Gardner" timestamp="21:46">
 
 Okay, so you have a model that does retrieval over the corpus to get documents and then select
 sentences from there and then you run decomposable attention given the sentence to decided if claim
 is entailed, not entailed or not enough information.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="James Thorne" timestamp="22:03">
+<turn speaker="James Thorne" timestamp="22:03">
 
 This is correct.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="22:03">
+<turn speaker="Matt Gardner" timestamp="22:03">
 
 or sorry supported, refuted or not information. Right. This model looks at the sentences you
 retrieved, right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="James Thorne" timestamp="22:12">
+<turn speaker="James Thorne" timestamp="22:12">
 
 Yes it does.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="22:14">
+<turn speaker="Matt Gardner" timestamp="22:14">
 
 Okay, so then if I understand right, your model first does some similarity based retrieval, it finds
 some documents then it grabbed sentences from those documents and then given those sentences it runs
@@ -650,41 +650,41 @@ in this second setting, this is comparable to the bias. Annotation reflects stuf
 about earlier in the second setting, you're still looking at the corpus, right? You're not just
 taking the claim itself on learning a classifier on the claim, giving nothing else, is that right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="James Thorne" timestamp="23:00">
+<turn speaker="James Thorne" timestamp="23:00">
 
 So in the second setting where we're looking at the claim only, I tried to classify by itself and
 ignore the corpus.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="23:06">
+<turn speaker="Matt Gardner" timestamp="23:06">
 
 Oh, I didn't. Okay. I didn't catch that from the paper. That's interesting. I didn't know that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="James Thorne" timestamp="23:10">
+<turn speaker="James Thorne" timestamp="23:10">
 
 I'm sorry. Which, which, no, sorry. Are you talking about the comparison to the SNLI style
 hypothesis only artifacts or are you talking about the paper? Yeah, there were, I didn't ask the
 question very well, I guess.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="23:24">
+<turn speaker="Matt Gardner" timestamp="23:24">
 
 Okay. Sorry,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="James Thorne" timestamp="23:27">
+<turn speaker="James Thorne" timestamp="23:27">
 
 If we can rewind. So to follow on from your question. The first, setting where we consider the labor
 accuracy given the evidence we find is the main scoring objective for the FEVER task. The second
@@ -692,37 +692,37 @@ where we consider just the label accuracy, we don't consider it for the rankings
 but it's a, it's a diagnostic indicator to see how well are classified does given the evidence we
 found.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="23:50">
+<turn speaker="Matt Gardner" timestamp="23:50">
 
 Yeah. Great. And I totally agree with that. Selecting the correct evidence is the right metric like
 that. Yes, definitely. And that's what you should use for ranking. I was just curious about
 annotation artifacts and to what extent they're actually there. And it is a little bit irrelevant
 because you have to find the evidence to, I'm just curious.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="James Thorne" timestamp="24:07">
+<turn speaker="James Thorne" timestamp="24:07">
 
 Yeah. But if we considered just the three-way classification without any evidence on our claims only
 we see a similar sort of pattern, the other annotation artifacts datasets despite the fact we've
 used a different method for generating the annotations.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="24:25">
+<turn speaker="Matt Gardner" timestamp="24:25">
 
 Right. Okay. Cool. So how well does your baseline system work when you're, when you use your full
 metric where you're actually evaluating the evidence scoring?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="James Thorne" timestamp="24:37">
+<turn speaker="James Thorne" timestamp="24:37">
 
 Yeah. So a headline score is about 32% the evidence selection score. Yeah. So a headline figure is a
 FEVER score of 32%, which is conditional accuracy given the right evidence. We find if we ignore the
@@ -731,29 +731,29 @@ We find that the major bottleneck here is the evidence retrieval part of our sys
 classifier. But the way we go about training our classifier effects how it works in this noisy
 environment where we take evidence from an IR system as well.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="25:16">
+<turn speaker="Matt Gardner" timestamp="25:16">
 
 So what do you think is the main bottleneck to performance? 30% seems pretty low. I guess extracting
 the right claims seems like, or sorry, the right evidence for a claim. If you have a really large
 corpus that could be kind of hard. So like what, what's the main, I guess, the lowest hanging fruit
 to improve performance here?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="James Thorne" timestamp="25:34">
+<turn speaker="James Thorne" timestamp="25:34">
 
 I think the easiest area for improvement is the evidence retrieval system. So at the moment it's
 modeled as a ranking problem, TF-IDF, similarity between evidence pages and the claim. And by
 changing the system I would expect to see the easiest gains on our final pipeline score.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="25:58">
+<turn speaker="Matt Gardner" timestamp="25:58">
 
 So 33% 32% seems pretty low for this kind of dataset so I guess if you have to extract evidence from
 a large corpus that can be kind of challenging. So maybe it's not actually as bad as it sounds, but
@@ -761,93 +761,93 @@ what, having looked at this data set and built a baseline, what do you think is 
 fruits here? Like how would you improve the model? The, I think the easiest area for improvement
 would be on the evidence retrieval system.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="James Thorne" timestamp="26:22">
+<turn speaker="James Thorne" timestamp="26:22">
 
 So at the moment we model it as a TF-IDF based information retrieval system, but I believe there's
 much more smart ways to go about doing this. And then I think another compounding factor is the fact
 that the intelligent classifiers operated in a noisy environment. And so making this more resilient
 to noisy evidence we found could also be an area for improvement.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="26:44">
+<turn speaker="Matt Gardner" timestamp="26:44">
 
 Interesting. So did, as we talked about earlier, the retrieval component here is entirely like
 standard IDF method trained. No, no real model except a threshold. Did you try experimenting with
 like even just training the sentence selector given the five documents that you retrieved, does that
 work?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="James Thorne" timestamp="27:04">
+<turn speaker="James Thorne" timestamp="27:04">
 
 It does and it's kind of a follow up work. I'm planning on releasing so in that case we're modeling
 the sentence selection as a textual entitlement task as well, in a joint environment and there's
 some interesting gains but it's not as at the moment it's currently not as significant as gains as
 I'd have liked to have got.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="27:26">
+<turn speaker="Matt Gardner" timestamp="27:26">
 
 Any, any teaser on numbers that you get from this.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="James Thorne" timestamp="27:31">
+<turn speaker="James Thorne" timestamp="27:31">
 
 Sadly it's only a four or 5% improvement.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="27:33">
+<turn speaker="Matt Gardner" timestamp="27:33">
 
 Okay. Interesting.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="James Thorne" timestamp="27:35">
+<turn speaker="James Thorne" timestamp="27:35">
 
 I think, yeah, the limitations here is also on the fact and that, with only five documents, we can
 only fully support or refute 55% of claims in our system. So I definitely think that improving the
 initial document retrieval part of the pipeline, would be the easiest opportunity for gains in this
 case.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="28:00">
+<turn speaker="Matt Gardner" timestamp="28:00">
 
 Is that 55% of those that have a supported or refuted label, or is it 50% of the total data.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="James Thorne" timestamp="28:07">
+<turn speaker="James Thorne" timestamp="28:07">
 
 Not those which have a supported, refuted label.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="28:10">
+<turn speaker="Matt Gardner" timestamp="28:10">
 
 Cool. You told us before the podcast that you have a shared task in a workshop coming up on this
 dataset. Is that right? Want to tell us about it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="James Thorne" timestamp="28:16">
+<turn speaker="James Thorne" timestamp="28:16">
 
 Yes. So at EMNLP 2018 we are hosting the first extraction on site, sorry, the first workshop on fact
 extraction in verification, that's called FEVER. And our website is fever.ai and we're currently
@@ -855,19 +855,19 @@ looking for paper submissions on topics related to information verification and 
 retrieval and information extraction system descriptions of participants to the shared task. The
 deadlines coming up very soon. So yeah, get started on working I guess.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="28:47">
+<turn speaker="Matt Gardner" timestamp="28:47">
 
 Cool, thanks. This was a really interesting discussion on a nice dataset. Thanks for coming on, it
 was nice talking to you.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="James Thorne" timestamp="28:52">
+<turn speaker="James Thorne" timestamp="28:52">
 
 Thank you.
 
-</Turn>
+</turn>

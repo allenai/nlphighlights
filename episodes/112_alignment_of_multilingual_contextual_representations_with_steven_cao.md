@@ -8,31 +8,31 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Welcome to the NLP highlights podcast where we talk about interesting work in natural language
 processing. The hosts are Matt Gardner Waleed Ammar and Pradeep Dasigi.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:09">
+<turn speaker="Matt Gardner" timestamp="00:09">
 
 Okay. Today our guest is Steven Cao, who is an undergraduate at the University of California at
 Berkeley, doing undergraduate research with Dan Klein and with PhD student, Nikita Kitaev, who is
 also at Berkeley. Steven, welcome to the program.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Steven Cao" timestamp="00:23">
+<turn speaker="Steven Cao" timestamp="00:23">
 
 Thank you. Thank you for having me.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:25">
+<turn speaker="Matt Gardner" timestamp="00:25">
 
 I've been thinking a lot about multi-lingual stuff, especially with transformers, like how do
 multilingual representations work inside of a transformer? And Steven and collaborators had a nice
@@ -40,10 +40,10 @@ paper at ICLR 2020 that deals with this in a pretty nice way. The paper's titled
 Alignment of Contextual Word Representations. So I thought Steven, to get us started, can you give
 us just an overview of what a multilingual transformer is?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Steven Cao" timestamp="00:52">
+<turn speaker="Steven Cao" timestamp="00:52">
 
 Yeah, so basically I like to explain it with multilingual BERT, but with regular BERT, you train on
 just English, Wikipedia and you do mask language modeling, which means you mask a word, and then you
@@ -54,35 +54,35 @@ and somehow this has the effect of having a transformer where the representation
 languages in the sense that if you train on English data, you'll achieve reasonable accuracy on
 other languages without any data from those languages.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="01:41">
+<turn speaker="Matt Gardner" timestamp="01:41">
 
 How do you actually, so the only thing that seems like it's multilingual in there is that I have
 some shared vocabulary and I'm training that my representation of that shared vocabulary to work on
 multiple languages. Is that correct?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Steven Cao" timestamp="01:54">
+<turn speaker="Steven Cao" timestamp="01:54">
 
 Yeah, that's why it was surprising to me at first because you're just concatenating the Wikipedias,
 and you're computing your word peace vocabulary on that. But there are some like hypotheses from
 previous papers that go into more detail on how that might be occurring.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="02:09">
+<turn speaker="Matt Gardner" timestamp="02:09">
 
 Do you have any summary of what those are?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Steven Cao" timestamp="02:11">
+<turn speaker="Steven Cao" timestamp="02:11">
 
 Yeah, so if you recall the unsupervised alignment work in the non contextual case, there's one paper
 by Mikel Artetxe where he did. So in the unsupervised case you have a dictionary of word pairs, but
@@ -91,10 +91,10 @@ of two languages that tries to minimize the distance between word pairs in that 
 he did is he alternated between inducing the dictionary using nearest neighbors with your aligned
 embeddings and then also using the bigger dictionary to now realign your embeddings.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Steven Cao" timestamp="02:53">
+<turn speaker="Steven Cao" timestamp="02:53">
 
 And then once you have better alignments, you then add more words to your dictionary and then you
 repeat. So the theory by Telmo Pires in his ACL paper titled: How Multilingual was BERT, he had a
@@ -107,25 +107,25 @@ then you get to align things that are co-occurring with those and then co-occurr
 that co-occur with them. And so, and then you get like a pretty good alignment afterward. So I
 really liked this theory and I think it makes a lot of sense.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="03:47">
+<turn speaker="Matt Gardner" timestamp="03:47">
 
 And so this is in some sense assuming that when people use numbers in texts in different languages,
 the way they use those numbers is going to be similar across the languages.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Steven Cao" timestamp="03:58">
+<turn speaker="Steven Cao" timestamp="03:58">
 
 Yeah. And I guess URLs as well or like names like Barack Obama or stuff like that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="04:05">
+<turn speaker="Matt Gardner" timestamp="04:05">
 
 Yeah, yeah, yeah, definitely names also. And even like, let's say we assume a handwritten small,
 many to many alignment dictionary like apple and monzana for Spanish or something. I give a few word
@@ -137,18 +137,18 @@ reflection of the human experience and so that's why this works because people t
 things across different cultures and languages and whatever. I feel like that has to be what like
 the assumption behind what's making this work.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Steven Cao" timestamp="04:53">
+<turn speaker="Steven Cao" timestamp="04:53">
 
 Yeah, definitely makes sense. Like I guess if you had a completely different culture then it might
 not work as well because they'd talk about things totally differently.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="05:02">
+<turn speaker="Matt Gardner" timestamp="05:02">
 
 So I guess then there's this question. So like languages have, even if like word co-occurrences are
 similar across different languages. The way that languages put these things together is going to be
@@ -164,10 +164,10 @@ across both of these languages even though the word order and the composition mi
 different between these languages. So again, I guess the question is, how does this actually work?
 Does it work? How does it work?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Steven Cao" timestamp="06:16">
+<turn speaker="Steven Cao" timestamp="06:16">
 
 Yeah, that's a good point. And I guess I don't really have a good answer to like how that actually
 works, but my intuition on it is just going back to the masked language modeling objective. And
@@ -180,10 +180,10 @@ because like the languages you're getting in, you don't know which language you 
 special token or anything. So that would be my hypothesis. Just that like in this objective you
 learn to get correlations with like distance rather than like absolute position.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="07:18">
+<turn speaker="Matt Gardner" timestamp="07:18">
 
 Interesting to think about this. Yeah because one way to test that hypothesis is to look at the
 informativeness of the positional encodings or something across different languages or across a
@@ -197,27 +197,27 @@ anything about the syntactic relationship across the different languages and so 
 something but maybe it's using its previously unused capacity like I don't know, there's just lots
 of interesting questions here.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Steven Cao" timestamp="08:15">
+<turn speaker="Steven Cao" timestamp="08:15">
 
 Yeah, that's very interesting.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="08:16">
+<turn speaker="Matt Gardner" timestamp="08:16">
 
 And I guess your paper tries to get at least one small piece of answering this puzzle and so we
 should probably move now to talking about your work and so you tried to take the contextual
 representations and the multilingual model, multilingual transformer and aligned them. Do you want
 to give us an outline of what, what's going on in this paper?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Steven Cao" timestamp="08:36">
+<turn speaker="Steven Cao" timestamp="08:36">
 
 Yeah. So, we looked at multi-lingual BERT and we saw that it had some zero-shot performance. And
 intuitively you would expect that the only way you can achieve zero-shot performance is if the
@@ -233,18 +233,18 @@ regular alignment we have contextual alignment. And then we looked at whether al
 zero-shot performance, whether you can improve zero-shot performance with alignment and these sorts
 of things.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="09:55">
+<turn speaker="Matt Gardner" timestamp="09:55">
 
 Okay, so you enforced this alignment between the languages using, or you encoded it into a loss
 function that you could directly optimize. Do you want to tell us about how you did that?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Steven Cao" timestamp="10:03">
+<turn speaker="Steven Cao" timestamp="10:03">
 
 Yeah, so intuitively if you have a parallel corpus with word pairs, then if you want the embeddings
 to be aligned then you'll want the embeddings for two word pairs to be similar. So like cat in one
@@ -256,10 +256,10 @@ that there are a lot of degenerate solutions like the model can just output zero
 then it gets perfect alignment. So you want to also preserve the structure of the embedding space or
 like what about the embedding space that makes it useful?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Steven Cao" timestamp="10:57">
+<turn speaker="Steven Cao" timestamp="10:57">
 
 So we did this by fixing the embeddings for one of the languages and letting the embeddings for the
 other language move toward that. So you add an extra term where you take, you freeze the initial
@@ -269,64 +269,64 @@ the initial model and then you penalize that distance. So you have two terms, th
 distance and then the distance between English and your previous language or your foreign language.
 And then you try to minimize both of those.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="11:35">
+<turn speaker="Matt Gardner" timestamp="11:35">
 
 So just to paraphrase back to be sure I understood, you're taking all of the confidant alignments
 that you have in a parallel corpus. And you're saying my representation of these parallel words
 should be the same?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Steven Cao" timestamp="11:46">
+<turn speaker="Steven Cao" timestamp="11:46">
 
 Yes.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="11:47">
+<turn speaker="Matt Gardner" timestamp="11:47">
 
 And I should change my representation of these words such that they're the same but not too
 different from my original encoding.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Steven Cao" timestamp="11:53">
+<turn speaker="Steven Cao" timestamp="11:53">
 
 Yeah, exactly.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="11:55">
+<turn speaker="Matt Gardner" timestamp="11:55">
 
 So this sounds like basically identical to what you would do in the non contextual case other than
 you have a function on top of, you don't just take a base word embedding. You have a
 contextualization function on top of that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Steven Cao" timestamp="12:07">
+<turn speaker="Steven Cao" timestamp="12:07">
 
 Yeah, exactly.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="12:08">
+<turn speaker="Matt Gardner" timestamp="12:08">
 
 Is that fair?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Steven Cao" timestamp="12:10">
+<turn speaker="Steven Cao" timestamp="12:10">
 
 That's part of it. But at the same time, in the non-contextual case, people use matrices, so they
 would apply a matrix to one of the embedding spaces and the matrix was constrained to be orthogonal,
@@ -335,57 +335,57 @@ what we're doing is we have a contextualization function on top of the embedding
 we're changing the weights of both the embedding matrix and the contextualization function. So we're
 just changing all the weights and we're not using any matrices at all.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="12:44">
+<turn speaker="Matt Gardner" timestamp="12:44">
 
 Because the contextualization function is already sufficiently parameterized to do whatever you
 want.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Steven Cao" timestamp="12:49">
+<turn speaker="Steven Cao" timestamp="12:49">
 
 Yea, basically.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="12:51">
+<turn speaker="Matt Gardner" timestamp="12:51">
 
 I guess this sounds, when you say it like that, it seems like a pretty simple idea, but it also
 seems like it should work pretty well.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Steven Cao" timestamp="12:58">
+<turn speaker="Steven Cao" timestamp="12:58">
 
 Yes. So it does work pretty well.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="13:00">
+<turn speaker="Pradeep Dasigi" timestamp="13:00">
 
 Yeah. Just to be clear, you keep saying word pair, so the assumption here is that we arewith one-to-
 one alignment, correct?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Steven Cao" timestamp="13:09">
+<turn speaker="Steven Cao" timestamp="13:09">
 
 Yeah. So we'll start with a parallel corpus. We'll run an IBM model in both directions to get word
 alignments. We'll keep the intersection and then we'll keep the one-to-one alignments from the
 intersection.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="13:22">
+<turn speaker="Pradeep Dasigi" timestamp="13:22">
 
 Okay. So I guess we'll talk about the specific details of the corpus and have you, I mean, what do
 you do with these alignments and maybe the limitations and all of that later, but I just wanted to
@@ -393,10 +393,10 @@ make a quick point that when you're relying on one-to-one, alignments would prob
 possible one-to-many alignments and many-to-one alignments, which could also be a lot more
 informative, correct?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Steven Cao" timestamp="13:45">
+<turn speaker="Steven Cao" timestamp="13:45">
 
 Not quite, because we're taking the intersection first and then we're taking the one-to-one
 alignments. So if you have a one-to-many alignment in one of the IBM model directions, it'll be one-
@@ -405,17 +405,17 @@ alignments can only pick one alignment. So when you take the intersection, a wor
 words aligned to it in the other language will have to pick one of them and then that'll already be
 one-to-one. And then we just keep that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="14:14">
+<turn speaker="Pradeep Dasigi" timestamp="14:14">
 
 Okay. Okay. Yeah. All right that makes sense.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="14:17">
+<turn speaker="Matt Gardner" timestamp="14:17">
 
 But I guess this still has an issue where if I have two words, say like pick up, I picked something
 up and I have a word and a verb and a particle in English, which is always just encoded as a single
@@ -423,10 +423,10 @@ verb in some other language because they've grammaticalized, I forget the word l
 the particle with it in English or just had a verb that had the meaning that that English needs a
 particle for in the first place. They just had a verb for it. What would happen in that case?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Steven Cao" timestamp="14:51">
+<turn speaker="Steven Cao" timestamp="14:51">
 
 What would happen is that the single word in the other language would just get one of the words. So
 as an example, if you have would "like to" in English, like I would like to go, there's a single
@@ -434,45 +434,45 @@ German word, I'll probably not pronounce this correctly, but is "möchte" which 
 and it gets aligned to like and the "would" and the "to" are just like thrown out. But that's okay
 cause we have contextual embeddings so the "like" is actually "would like to," if that makes sense.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="15:19">
+<turn speaker="Matt Gardner" timestamp="15:19">
 
 Interesting. Yeah. This makes me think of like whether word alignments here is actually the right
 place to do this alignment. Even the token level contextual embedding if this is the right place to
 do an alignment.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Steven Cao" timestamp="15:33">
+<turn speaker="Steven Cao" timestamp="15:33">
 
 Yeah. I've thought about doing sub-word alignment, like first run the corpus through BERT's, sub-
 word vocabulary and then do like fastAlign on top of that instead of just the like the words as
 their units. I think it would also work, maybe work better, but I haven't tried it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="15:52">
+<turn speaker="Matt Gardner" timestamp="15:52">
 
 But I guess assume that German word got just a single word piece. You still have the same problem,
 right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Steven Cao" timestamp="15:58">
+<turn speaker="Steven Cao" timestamp="15:58">
 
 Yeah. I guess the sub-word thing would take care of instruction or morphology where you have like ed
 like played is maybe it's the into "play" and "ed" and then you'd align "play" and "ed" separately.
 But you're right in that like single word units that are really common would not be broken up.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="16:17">
+<turn speaker="Matt Gardner" timestamp="16:17">
 
 Yeah. That's being perhaps a bit optimistic about the morphology that you can recover from a word
 piece alignment or a word piece segmentation. But point taken still though, I wonder, we could take
@@ -490,10 +490,10 @@ token and it's not at all, it seems unlikely to get like a shared representation
 if I could have like some, again magical single vector representation for the content of a sentence,
 then perhaps I could enforce alignment better there. Is this making any sense at all?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Steven Cao" timestamp="17:41">
+<turn speaker="Steven Cao" timestamp="17:41">
 
 Yeah, that makes sense. Like I guess you could think of the BERT CLS token as being the sentence
 encoding and then you could try aligning the CLS tokens. So we did try this where you take the
@@ -504,17 +504,17 @@ all this computation to get all of the embeddings and you throw all of them away
 CLS embeddings when you could have just aligned like 70% of the words or however many had
 alignments.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="18:22">
+<turn speaker="Matt Gardner" timestamp="18:22">
 
 That's really interesting.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Steven Cao" timestamp="18:24">
+<turn speaker="Steven Cao" timestamp="18:24">
 
 I think that the vectors are contextual kind of alleviates some of the issue where you have like a
 huge word in Hungarian that means that has like a bunch of infection and then you have like multi
@@ -522,10 +522,10 @@ words in English. The fact that it's contextual, means that you would hope that 
 words in English would have enough information to encapsulate the meaning of the whole phrase and
 then if you align that to the huge word in Hungarian, then it should just work.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="18:53">
+<turn speaker="Matt Gardner" timestamp="18:53">
 
 Okay. Yeah, that's a good point to use some slightly different terminology that makes more sense to
 me. Each phrase has a head and you could imagine that you get some head alignment between the
@@ -533,27 +533,27 @@ languages and so the vector for the head encodes, all of its arguments ore the w
 just aligning the head might be sufficient in your loss function to get useful similarity. That's a
 really good point.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Steven Cao" timestamp="19:15">
+<turn speaker="Steven Cao" timestamp="19:15">
 
 That would be the hope at least.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="19:17">
+<turn speaker="Matt Gardner" timestamp="19:17">
 
 Yes. Yes. You said that it, that the CLS embedding doesn't work as well as the token level
 alignment. I still wonder about that conclusion based on the datasets that you used, but we should
 probably talk about the experiments that you ran before we get back to that question. So do you want
 to tell us about what exactly you ran and what the outcome was?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Steven Cao" timestamp="19:33">
+<turn speaker="Steven Cao" timestamp="19:33">
 
 Yeah, so first we looked at alignment. So for alignment we have Europarl as our dataset and we had
 five languages each paired with English. We had Bulgarian, German, Greek, Spanish and French. And we
@@ -566,10 +566,10 @@ neighbor and then you check whether the nearest neighbor matches the ground-trut
 by fastAlign. In that experiment we saw that if you run alignment, it makes the accuracies go up by
 a lot, which is probably not that surprising given that you're basically optimizing the objective.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Steven Cao" timestamp="20:35">
+<turn speaker="Steven Cao" timestamp="20:35">
 
 And one nice thing is that base BERT is like kind of bad for aligning Bulgarian and Greek with
 English, but it's better for Spanish and French probably cause they're more similar with English.
@@ -583,10 +583,10 @@ good, like Spanish and French. It goes up by 1%. And then for the languages that
 like Bulgarian and Greek, it goes up by like 5% so that kind of matches our intuition, that better
 alignment leads to better zero-shot. And then we also had some analysis after that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="21:42">
+<turn speaker="Matt Gardner" timestamp="21:42">
 
 Yeah, very nice. One thing I'll point out, going back to my earlier question is that all of these
 languages that you used are Indo-European. They share a common ancestor and so you might think that
@@ -595,10 +595,10 @@ probably at least a somewhat reasonable token alignment using the token alignmen
 embedding could be expected to help. And I wonder if your experiment would give you the same result
 if you used some very different languages from entirely separate language families.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Steven Cao" timestamp="22:14">
+<turn speaker="Steven Cao" timestamp="22:14">
 
 Yeah, that's a good point. We did do some experiments with Hungarian, Polish and Swedish and it
 works roughly the same for those. And then we tried Chinese, Arabic and Urdu and those experiments
@@ -607,10 +607,10 @@ original experiments, we use 200,000 sentences per word pair and for this later 
 10,000 per word pair, but we saw that the zero-shot for these three languages, Chinese, Urdu and
 Arabic still went up by like roughly 1% but we haven't tried it on 200,000.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="22:52">
+<turn speaker="Matt Gardner" timestamp="22:52">
 
 One other things I've been thinking about is that you haven't heard of this episode yet, but in our
 last episode we talked to John Clark about TyDi QA, which is a multilingual question answering
@@ -625,10 +625,10 @@ seeing because your model has picked up on something about translationese. And i
 something other than translationese, maybe it wouldn't work so well would, what are your thoughts on
 this?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Steven Cao" timestamp="23:52">
+<turn speaker="Steven Cao" timestamp="23:52">
 
 Yeah, I actually hadn't thought about this before you mentioned it, but it's a very good point
 because we're computing token level alignments and the alignments are going to be way better for
@@ -644,34 +644,34 @@ layers. So there might be something there and it might be better to align the ea
 something like that. So there are a lot of confounds here but it's definitely a good point. That
 translationese, is like a big factor in this.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="25:11">
+<turn speaker="Matt Gardner" timestamp="25:11">
 
 That's really interesting. So just to be a little bit more clear on your dependency parsing
 experiments, you said you didn't see gains from the contextual alignment relative to a like a word
 level rotation.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Steven Cao" timestamp="25:24">
+<turn speaker="Steven Cao" timestamp="25:24">
 
 Oh no. Like after you run alignment then you compare base BERT and aligned BERT, and aligned BERT
 has like worse performance for English, like even though you're.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="25:36">
+<turn speaker="Matt Gardner" timestamp="25:36">
 
 for English, Okay.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Steven Cao" timestamp="25:37">
+<turn speaker="Steven Cao" timestamp="25:37">
 
 So that means that like it's capability to model syntax is going down and like not just the
 alignments and like I wasn't sure whether like the gap between English and other languages was
@@ -679,10 +679,10 @@ smaller or not or anything like that. But these are like kind of brief experimen
 wouldn't read too much into it cause there's like a lot more to be done there but it is a negative
 result for sure.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="26:02">
+<turn speaker="Matt Gardner" timestamp="26:02">
 
 Yeah, I hear what you're saying and I think there are so many open questions here. It's really
 interesting. So much to understand about what's going on in this multilingual stuff. I think I had
@@ -696,55 +696,55 @@ overall tokens in your alignment loss function. So I wonder if there's any kind 
 you saw between performance or accuracy or utility of this cross lingual alignment. Based on how
 much of the data actually was aligned.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Steven Cao" timestamp="27:03">
+<turn speaker="Steven Cao" timestamp="27:03">
 
 Yeah. Actually across all the languages, the alignment percentage was roughly similar. So for French
 it's like 0.65 or 0.66, 0.67. And then for Bulgarian it's like 0.72 and everything's between that.
 So like ranging from between 0.65 or so and 0.72 or so.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="27:25">
+<turn speaker="Matt Gardner" timestamp="27:25">
 
 And so that, you mean like 72% of your tokens had a one-to-one alignment? Is that what you mean?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Steven Cao" timestamp="27:29">
+<turn speaker="Steven Cao" timestamp="27:29">
 
 Yeah.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="27:29">
+<turn speaker="Matt Gardner" timestamp="27:29">
 
 That's surprising. That's not what I expected to hear.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Steven Cao" timestamp="27:32">
+<turn speaker="Steven Cao" timestamp="27:32">
 
 Yeah. I don't know that much about word alignment as a problem. So yeah. I don't have any insight on
 this.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="27:39">
+<turn speaker="Matt Gardner" timestamp="27:39">
 
 Yeah, me either.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="27:39">
+<turn speaker="Pradeep Dasigi" timestamp="27:39">
 
 Yeah, I was just wondering, so your objective, I just had a quick question about your objective and
 how it relates to the retrofitting idea that people used to talk about in the pre-contextual
@@ -754,18 +754,18 @@ knowledge base could do. In a sense what you're doing sounds very similar with c
 embeddings and trying to align them across languages. Right? I mean, would you agree that's a fair
 comparison?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Steven Cao" timestamp="28:16">
+<turn speaker="Steven Cao" timestamp="28:16">
 
 Yeah, I think that's similar. I'm not too familiar with the retrofitting work, but it does sound
 similar to what we're doing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="28:23">
+<turn speaker="Pradeep Dasigi" timestamp="28:23">
 
 Yeah, I think related to that. I was wondering if it would make sense to focus on specific word
 classes. Say for example, you want to make sure that maybe you want all the nouns in your data to be
@@ -773,25 +773,25 @@ aligned. I mean, would it make sense to like put a greater weight on specific wo
 opposed to other word classes? And do you think it's it would make sense to modify that objective
 and if you'll get anything based on that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Steven Cao" timestamp="28:51">
+<turn speaker="Steven Cao" timestamp="28:51">
 
 Yeah, I actually thought about this about like, whether you can align, not just meaning, but like
 syntax.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="28:57">
+<turn speaker="Pradeep Dasigi" timestamp="28:57">
 
 Right!
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Steven Cao" timestamp="28:59">
+<turn speaker="Steven Cao" timestamp="28:59">
 
 So like can you make sure that similar syntactic structures across languages have similar embeddings
 and you have syntax embeddings or something like that. And I do think it makes a lot of sense. The
@@ -805,36 +805,36 @@ alignment to where you have an objective and you have training data and you don'
 in this case you just need like data across different languages and you can think about doing
 alignment for other things too. I think it's very interesting.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="30:03">
+<turn speaker="Pradeep Dasigi" timestamp="30:03">
 
 Yeah, that's a good point. That's really a good point. So the fact that you don't need aligned or
 parallel sentences for what you just described I think is interesting. You could just take, maybe
 even Wikipedia document in many different languages which talk about probably similar things and
 which are not necessarily aligned and you could still use them.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Steven Cao" timestamp="30:22">
+<turn speaker="Steven Cao" timestamp="30:22">
 
 Yeah, you could use document level parallelism and then like get a document embedding and align the
 document embeddings. That's also pretty interesting.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="30:31">
+<turn speaker="Matt Gardner" timestamp="30:31">
 
 This question reminded me also of some analysis that you did in the paper on how aligned different
 word classes were do you want to tell us about that analysis?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Steven Cao" timestamp="30:42">
+<turn speaker="Steven Cao" timestamp="30:42">
 
 Yeah, so what we did is we split the test data into different sections. So we had like, we split it
 by part of speech and then we looked at open-class, we saw a pattern. So if you look at the accuracy
@@ -846,10 +846,10 @@ highest. So the part about lexicali overlapping categories, having high alignmen
 explanatory. But the part about open-class and closed-class, I think the hypothesis that we had kind
 of piggybacks off of Telmo Pires hypothesis about like the ripple effect of co-occurring words.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Steven Cao" timestamp="31:37">
+<turn speaker="Steven Cao" timestamp="31:37">
 
 So the whole point of the mass language modeling objective is that you capture word co-occurrences.
 So if you look at the co-current statistics of like the word apple, you can swap apple for so many
@@ -864,34 +864,34 @@ you can't swap in one determiner for another as easily. So perhaps that leads to
 And this obviously depends on like the syntactic relationship between the two languages, but that
 was like the conclusion that we were led to.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="32:54">
+<turn speaker="Matt Gardner" timestamp="32:54">
 
 Interesting. Yeah, it was a nice, nice little piece of analysis. Great. This has been a really
 interesting discussion. I think I have asked all of my questions. Was there anything that you wanted
 to talk about that we didn't get to or any final thoughts before we conclude?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Steven Cao" timestamp="33:05">
+<turn speaker="Steven Cao" timestamp="33:05">
 
 Not really. I had a lot of fun, so thank you for this.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="33:12">
+<turn speaker="Matt Gardner" timestamp="33:12">
 
 Great. Thanks for coming on.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Steven Cao" timestamp="33:13">
+<turn speaker="Steven Cao" timestamp="33:13">
 
 Yeah, thank you for having me.
 
-</Turn>
+</turn>

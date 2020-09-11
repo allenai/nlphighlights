@@ -8,23 +8,23 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting recent work in
 natural language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is Matt Gardner and Waleed Ammar, we are research scientists at the Allen Institute for
 Artificial Intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:11">
+<turn speaker="Waleed Ammar" timestamp="00:11">
 
 So today our guest is Noah Smith. Noah Smith is an associate professor of computer science and
 engineering at the University of Washington. Previously he was an associate professor of language
@@ -35,26 +35,26 @@ interests include statistical natural language processing, especially unsupervis
 learning and applications of natural language processing. It's a great pleasure having you in the
 room Noah.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="00:51">
+<turn speaker="Noah Smith" timestamp="00:51">
 
 Thanks. Thanks for having me.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:54">
+<turn speaker="Waleed Ammar" timestamp="00:54">
 
 So we are very interested in the paper that you published at the ACL 2017. It's title is: Deep
 Multitask Learning for Semantic Dependency Parsing. Could you tell us more about semantic dependency
 parsing?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="01:06">
+<turn speaker="Noah Smith" timestamp="01:06">
 
 Sure. so semantic parsing in general is basically the problem of mapping natural language sentences
 into structured representations of their meaning. And in the most sort of classic form, semantic
@@ -67,10 +67,10 @@ arguments in which role that argument was filling. Relatively flat, sometimes ca
 representation. So semantic dependencies are kind of a newer variant of semantic representation that
 has some of the nice properties of both of these.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="02:03">
+<turn speaker="Noah Smith" timestamp="02:03">
 
 I guess when you look at a semantic dependency parse on paper, it looks like it's a graph where the
 words are vertices and then you've got labeled edges. Linking usually predicates to arguments,
@@ -84,18 +84,18 @@ differentiates semantic dependency parsing from syntactic dependency parsing. An
 structures do not, I believe it's a constraint in these datasets that the structures don't have
 directed cycles. So you're basically dealing with directed acyclic graphs.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="03:09">
+<turn speaker="Waleed Ammar" timestamp="03:09">
 
 Yeah. I thought that was an interesting choice that wanted to exclude any acyclic graphs. Why is
 that case?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="03:17">
+<turn speaker="Noah Smith" timestamp="03:17">
 
 So I guess the theoretical answer might be that the theories say you don't need directed cycles. But
 one of the things that I remember about the construction of this dataset was that sometimes they got
@@ -107,18 +107,18 @@ definitely, it's always worth asking, you know, what's going on with the formali
 the things we tried to poke out a little bit with our model later in the paper. You know, what's
 similar and different across these three formalisms.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="04:04">
+<turn speaker="Matt Gardner" timestamp="04:04">
 
 Do you have a simple example of the difference between syntactic dependencies and semantic
 dependencies?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="04:09">
+<turn speaker="Noah Smith" timestamp="04:09">
 
 Yeah. So one kind of structure would be if you have a control, so you have like, "The boy wants to
 go to New York." No, "The boy wants to go to Seattle." So in that sentence I mean it's beautiful
@@ -127,18 +127,18 @@ would probably be the agent of both of them. Right. And so you have two edges li
 verbs into boy. But in a traditional syntactical parse, you don't get that kind of acyclic structure
 and boy only gets to be the subject of one thing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="04:50">
+<turn speaker="Waleed Ammar" timestamp="04:50">
 
 So what do you think is attractive about doing it as a dependency relationship instead of just
 predicate arguing structure, like OntoNotes style SRL.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="05:00">
+<turn speaker="Noah Smith" timestamp="05:00">
 
 Yes. So I think the you know like many problems in NLP, there's always more than one way to look at
 the core of the problem. And just like in syntax, you have phrase structure syntax like in the
@@ -149,10 +149,10 @@ algorithmically you could use graph based algorithms that were, that had really 
 constants. So, basically, everything always depends on the length of the sentence in some polynomial
 way. But there wasn't like this big explosion based on the size of the grammar.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="05:43">
+<turn speaker="Noah Smith" timestamp="05:43">
 
 So there was a big move, you know, 10 years ago from more phrase structure oriented approaches to
 syntax to dependencies and people started kind of putting that over to semantics. So there was a
@@ -168,19 +168,19 @@ sitting down and annotating this directly. And so I think a lot of people believ
 isn't a proven thing, but a lot of people tend to believe that dependencies may be easier for people
 to annotate. They may be a more natural way to get data, not labeled data.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="07:03">
+<turn speaker="Waleed Ammar" timestamp="07:03">
 
 Right. I was also working on relation extraction these days. And it seems to me that semantic
 dependency parsing maybe a more of a natural fit for helping relation extraction then doing
 predicted argument structure. It fits the fits the problem more.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="07:22">
+<turn speaker="Noah Smith" timestamp="07:22">
 
 Yeah, that's good to hear. I think, I actually don't think that it's radically different from more
 span based representations. I think actually that while when you formally define the problem, you're
@@ -192,17 +192,17 @@ group were drawn to this is that we've always been fans of dependency syntax as 
 was in your thesis. And so being able to port ideas from dependency syntax over into semantics is
 kind of exciting. And it's one of the things we did in this paper.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="08:13">
+<turn speaker="Waleed Ammar" timestamp="08:13">
 
 So what is the base model that's used in the paper?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="08:16">
+<turn speaker="Noah Smith" timestamp="08:16">
 
 Yeah, so the base model is you have to kind of think of it at two levels. At the lower level you're
 going to represent every word by a vector. Okay. And the vector you're going to represent the word
@@ -213,10 +213,10 @@ the biLSTM across. And all that really does is it contextualizes each of these w
 you have a new word vector that tells you, here's the word that I'm looking at right here in
 position four in the sentence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="09:00">
+<turn speaker="Noah Smith" timestamp="09:00">
 
 And this is how we're going to represent it, given everything that's happening to its left into its
 right. Okay. That's the first part. The second part of the model takes pairs of those vectors
@@ -228,18 +228,18 @@ approximate decoder called AD^3, which is basically you can think of it as a rea
 inference method for dealing with very general factor graph problems that you can express as an
 integer linear program.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="09:52">
+<turn speaker="Matt Gardner" timestamp="09:52">
 
 We've talked a bit in this podcast and resent episodes about transition based parsers could you do
 this with transition based parsing? What would be challenging about this problem?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="10:03">
+<turn speaker="Noah Smith" timestamp="10:03">
 
 So you could, and in fact we had a paper last year, Swabha Swayamdipta my PhD student and some other
 collaborators had a paper at CoNLL last year where we looked at a semantic dependency parsing
@@ -250,10 +250,10 @@ people who do dependency parsing with transition based models like Joakim Nivre 
 collaborators have developed ways to do that. You add this extra swap operation so that you can, you
 can get some edges that cross over each other.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="10:44">
+<turn speaker="Noah Smith" timestamp="10:44">
 
 And that was what we did in Swabha's work and for that data set for that task. Again, it's a
 different data set. Then this one says not really directly comparable. That worked pretty well and
@@ -265,10 +265,10 @@ you' have non-projectivity it might start to become less clear and you might hav
 carefully design the transitions set. So yeah, I guess there's in my opinion, there's sort of two
 flavors of parsing right now.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="11:30">
+<turn speaker="Noah Smith" timestamp="11:30">
 
 There's the transition base, let's make it fast as fast as can be linear time, greedy processing.
 And you know, we've done work in that area, some of Waleed's thesis work, use those techniques. And
@@ -281,25 +281,25 @@ about what you can represent. And we're interested in the constraint set and I t
 there's room in the world for both of the kinds of approaches, but it would be interesting to try
 doing something similar with a stack based approach I think.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="12:22">
+<turn speaker="Matt Gardner" timestamp="12:22">
 
 Okay. Yeah.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="12:22">
+<turn speaker="Waleed Ammar" timestamp="12:22">
 
 So the paper is about multitask learning for all three formalisms at the same time. How do you do
 this?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="12:28">
+<turn speaker="Noah Smith" timestamp="12:28">
 
 Right. So we have a couple of different ways to do it. And the first one is, is the easiest to
 understand because it's an idea that's about 10 years old now. So people may be familiar with Hal
@@ -310,10 +310,10 @@ and that actually works better than things that have been published before. So t
 first resolve. And then we said, okay, can we share, what can we share across these three different
 datasets so that we get better performance on some or all of them.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="13:11">
+<turn speaker="Noah Smith" timestamp="13:11">
 
 And the idea is that in the Hal Daume work, you had, you basically took every feature. This is back
 in the days where you had hand engineered features. But you could do the same thing for neural
@@ -325,10 +325,10 @@ score that comes from the general biLSTM that's shared across all the formalisms
 scored both by the domain general and the domain specific feature learner. And then you train end-
 to-end.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="14:00">
+<turn speaker="Noah Smith" timestamp="14:00">
 
 The whole thing goes into the same inference engine. You predict each of the each of the different
 parses in each of the three formalisms on its own. And then when you back prop you back prop both
@@ -339,50 +339,50 @@ was used for all three formalisms and you're basically learning features that ar
 three jobs and then the multi-layer perceptrons are separate for each of the tasks. So that was sort
 of the first version, the frustratingly easy.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="14:46">
+<turn speaker="Waleed Ammar" timestamp="14:46">
 
 Right. So in the paper there are like you score every edge, with three components. One that only
 looks at the pair of words and another that looks at the predicates, the predict word another that
 looks at also the label.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="15:05">
+<turn speaker="Noah Smith" timestamp="15:05">
 
 Right. I think technically there was one that looked just as the parent, one that looked at the
 parent and child and one looked at the parent, child, and label together.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="15:12">
+<turn speaker="Waleed Ammar" timestamp="15:12">
 
 Right. So I'm a little surprised that you didn't share the parameters for the MLPs for the multi-
 layer perceptrons that score they predicate only and the predicate and child across the different
 formalisms.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="15:26">
+<turn speaker="Noah Smith" timestamp="15:26">
 
 Yeah, we could have done that. I don't remember why we didn't.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="15:31">
+<turn speaker="Waleed Ammar" timestamp="15:31">
 
 Right. So what is the second method that he used to to do multitask learning?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="15:35">
+<turn speaker="Noah Smith" timestamp="15:35">
 
 Right. So the second method is where we really start to exploit this sort of factor graph view of
 the parsing problem. So remember we said earlier that we're scoring basically we're scoring each
@@ -395,10 +395,10 @@ people started building parsers that looked at higher and higher order factors. 
 edges that are adjacent to each other or that have the same parent or the chain together to form, to
 link a grandparent, parent and child.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="16:31">
+<turn speaker="Noah Smith" timestamp="16:31">
 
 And some people have also done this in semantic dependency parsing. I believe this was how Andre
 Martins won the challenge in 2014 on these datasets. By having a second order parser, maybe third, I
@@ -414,17 +414,17 @@ pair of words. That's really important. There are other ways you could conceive 
 was the first most obvious thing to try. So if you're considering linking two words, you're also
 going to consider whether another one of your sister formalisms is going to link those two words.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="17:43">
+<turn speaker="Waleed Ammar" timestamp="17:43">
 
 So could you talk in more detail about how you do the scoring?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="17:48">
+<turn speaker="Noah Smith" timestamp="17:48">
 
 Yeah. So that's one of the parts of the paper that we revise it quite heavily after after the
 reviewers give us feedback cause it was, on the surface it's a little complicated. So the basic idea
@@ -435,10 +435,10 @@ I don't say anything too terribly wrong. No, it's fine. So you're basically taki
 of vectors and you're gonna do this six times out because you've got a labeled arc in each of the
 three tasks.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="18:43">
+<turn speaker="Noah Smith" timestamp="18:43">
 
 And each of those labeled arcs has a parent and a child. So you can imagine this six dimensional or
 six mode tensor where you've got a massive number of parameters because you're multiplying these six
@@ -448,10 +448,10 @@ some work by Lei et all. 2014 where we say, look, this huge tensor is going to b
 So we're actually going to represent it as a product of some smaller smaller tensors smaller
 matrices that get multiplied out.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="19:30">
+<turn speaker="Noah Smith" timestamp="19:30">
 
 And so those are actually going to be the parameters. And so we basically, there's a nice little
 equation in the paper that shows how you can get this outer product by rearranging terms. And you've
@@ -462,20 +462,20 @@ have to instantiate that tensor it's only mentioned once or twice in the paper. 
 are still matrices. But this is a way of getting, this is essentially a way of scoring groups of RX
 together across the formalisms between a fixed pair of words.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="20:22">
+<turn speaker="Matt Gardner" timestamp="20:22">
 
 So going back a bit to this third order semantic dependency parse where you're considering three
 edges at a time, would it help, do you think if you had syntax of just two, like syntactic
 dependencies and did like a multifast with semantic and syntactic. I guess you kind of talked about
 that with Swabha's work.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="20:38">
+<turn speaker="Noah Smith" timestamp="20:38">
 
 I think it's a really cool idea and we certainly talked about it. And it's potentially something we
 would try. One of the reasons we didn't prioritize it for this paper was that when we did the simple
@@ -483,10 +483,10 @@ single task semantic dependency parser first without using any syntax at all, we
 state-of-the-art. And so I think that doesn't, you know, some people will take that to me.oh, you
 don't need, syntax. I don't know if that's true.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="21:04">
+<turn speaker="Noah Smith" timestamp="21:04">
 
 I'm not, I'm not willing to go there yet. But I certainly think it's interesting, you know, a very
 natural way to treat syntax in this model would be, it's just another task. You do it alongside
@@ -500,10 +500,10 @@ know, use that to give you more features instead of a biLSTM run some other netw
 embeds a word in it's syntactic context and just feed into this. Just a preview of some work that's
 making its way through , the review system.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="22:06">
+<turn speaker="Noah Smith" timestamp="22:06">
 
 One thing we've tried on another semantic parsing task is something we call scaffolding, where you
 don't have a syntactic parser, you don't have explicit syntactic features, but you introduce another
@@ -515,20 +515,20 @@ well it performs. You're not using it as a parser, but it guides your representa
 know a little bit about syntax and we found that that works really nicely in another setting we'll
 discuss it maybe in a future podcast episode.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="22:52">
+<turn speaker="Matt Gardner" timestamp="22:52">
 
 This brings me to another question that I had. So it seems like the whole point of this multitask
 learning stuff is essentially to do better representation learning. There's been a lot of people
 thinking about representation learning with these deep neural nets these days. Like, do you have any
 high level thoughts on these directions? Like is multitask the way to go?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="23:11">
+<turn speaker="Noah Smith" timestamp="23:11">
 
 I think it's a cool way to go because you know, I guess one, coming back to the formalism thing, I
 love all of these different formalisms but none of them quite completely captures everything there
@@ -541,10 +541,10 @@ away from things like the Wall Street Journal and start looking at other kinds o
 other languages and all of them at different times are going to capture different pieces of the
 puzzle.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="23:56">
+<turn speaker="Noah Smith" timestamp="23:56">
 
 And so I think the multitask is nice because, especially in the neural setting, because it automates
 the discovery of what's shared and what's not. You don't to know. You don't have to have a cross
@@ -552,18 +552,18 @@ theory theory. Each theory can kind of do its own thing. And to the extent that 
 you can share and leverage you do. And if the tasks were not helpful to each other, then we wouldn't
 have gotten a gain. And that I think kind of would have been interesting as well.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="24:25">
+<turn speaker="Waleed Ammar" timestamp="24:25">
 
 Do you think there's any general representation, learning for language that will be useful across
 all of NLP?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="24:31">
+<turn speaker="Noah Smith" timestamp="24:31">
 
 I go back and forth believing that those things exist are discoverable. I mean I do think that there
 is in, you know, for most of us there is kind of a language processing capability that we use when
@@ -576,18 +576,18 @@ field and we're thinking long term about what it might be useful for. I don't, I
 gonna necessarily help tomorrow's question answering or information extraction or MT systems, but
 maybe in 10 years, maybe in 20 years we'll start seeing some more unification maybe.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="25:29">
+<turn speaker="Waleed Ammar" timestamp="25:29">
 
 Okay. So this sounds great. What are the main highlights and the results that you found in the
 experiments?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="25:35">
+<turn speaker="Noah Smith" timestamp="25:35">
 
 Yeah, so basically we talked about two different ways of of doing the multitask learning and you can
 do either one by itself or you can do them both together. And we found doing them both together
@@ -598,19 +598,19 @@ find that kind of exciting that, you know, maybe maybe we're moving towards some
 broad coverage semantics. So yeah, so I there's a lot of little details in there, but I think those
 are the big take aways.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="26:22">
+<turn speaker="Waleed Ammar" timestamp="26:22">
 
 It was interesting to see a very honest statement here in the paper saying by looking at undirected
 overlap between unlabeled arcs, we discovered that modeling only arcs in the same direction may have
 been a design mistake. I thought that was very interesting. Do you have any comments on this?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="26:38">
+<turn speaker="Noah Smith" timestamp="26:38">
 
 Yeah, so if we, you know, if you always have to, at some point you have to just decide, okay, we've
 got our 8 pages, let's submit this to a conference and then, you know, we can write more papers
@@ -622,10 +622,10 @@ labels are going to be in with the direction of the arcs is going to be. And so 
 formalisms the one, the one called PSD, it's based on the Prague dependency formalism reverse the
 direction of some of the arcs.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="27:28">
+<turn speaker="Noah Smith" timestamp="27:28">
 
 And so we, I think we missed out a little bit by not having a cross task factor that allowed a
 reverse arc in the Prague data to be scored together with an arc in the other direction on the other
@@ -634,24 +634,24 @@ problem. You could have the direction of the arc, the, you know, another thing i
 sources. There's a lot of different ways to fix it. The most obvious I think is is just have more
 cross task factors or maybe replace some of the ones we used with some more carefully chosen ones.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="28:04">
+<turn speaker="Waleed Ammar" timestamp="28:04">
 
 So exciting this means the potential for this method is really above the results that you've shown.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="28:11">
+<turn speaker="Noah Smith" timestamp="28:11">
 
 Yeah, I think there's, I think there's still a lot more things to try.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="28:15">
+<turn speaker="Matt Gardner" timestamp="28:15">
 
 All right. So one more question. I've been doing a lot of work on question answering kinds of things
 and information extraction recently. And it looks like models there are moving towards just end-to-
@@ -660,10 +660,10 @@ SRL, you just have a biLSTM, learn all the semantics that you need and then oupu
 I don't know what do you think we should use? Do you think this is the way to go? Do you think
 semantic dependencies are helpful for some downstream actual task?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="28:44">
+<turn speaker="Noah Smith" timestamp="28:44">
 
 So I guess it's going to depend on a number of factors. So I think when you have very large amounts
 of data this kind of structure may be less important. But I think that when you are, when you're
@@ -674,10 +674,10 @@ general purpose open domain question answering. Like these things are always abo
 particular and there's always, you know, extra questions like what are the databases or corpora that
 are kind of available to help answer your question.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="29:40">
+<turn speaker="Noah Smith" timestamp="29:40">
 
 My suspicion that if like tomorrow you were tasked with building a new question answering system for
 a very specific domain for which you didn't have much to go on. And you were trying to learn sort of
@@ -691,45 +691,45 @@ current evaluations for things like IE and QA. But I think in the long run if we
 purpose tools for dealing with language, then we should pay a lot of attention, a lot more attention
 to abstract representations that linguistics has already discovered.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="30:44">
+<turn speaker="Matt Gardner" timestamp="30:44">
 
 Yeah, I guess I could summarize that as if you want to use machine learning in order to do some
 task, you need features somewhere. And if you don't have enough data to do representation learning,
 you do the representation learning yourself by hand and maybe these formalisms that linguists have
 come up with is a good way to do that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="31:01">
+<turn speaker="Noah Smith" timestamp="31:01">
 
 It might be a shortcut. Right.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="31:04">
+<turn speaker="Waleed Ammar" timestamp="31:04">
 
 All right. Thank you very much for making the time for recording this. Noah, it's always good to
 find an excuse to talk to you.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="31:11">
+<turn speaker="Noah Smith" timestamp="31:11">
 
 Thanks for coming by and I'll I'll close by acknowledging my coauthors Hao Peng and Sam Thompson
 whose work this is, and I hope people will come see the work presented at ACL in Vancouver next
 month.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="31:22">
+<turn speaker="Waleed Ammar" timestamp="31:22">
 
 Thank you.
 
-</Turn>
+</turn>

@@ -8,23 +8,23 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting work in natural
 language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is Matt Gardner and Waleed Ammar. We are research scientists at the Allen Institute for
 artificial intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:11">
+<turn speaker="Waleed Ammar" timestamp="00:11">
 
 Today our guest is Alex Irpan. Alex started in reinforcement learning during his undergrad at UC
 Berkeley. After his undergrad degree. He joined Google brain residency program for a year and at the
@@ -35,10 +35,10 @@ bit about the motivation for writing this post. So it's, I think that the, this 
 check on the hype around reinforced learning. Could you talk about why this hype exists and why it's
 harmful?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Alex Irpan" timestamp="00:57">
+<turn speaker="Alex Irpan" timestamp="00:57">
 
 Sure. So I guess the reason the hype exists has to do with essentially how cool it is when you get
 reinforcement learning to work. So I know that back in 2015 when DeepMind had their first results on
@@ -50,10 +50,10 @@ like appearing and it had been building up for a while, but sort of like I feel 
 watershed moments in the field for why it's interesting to work on them. Why, people wanted to work
 on them in the first place.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Alex Irpan" timestamp="01:54">
+<turn speaker="Alex Irpan" timestamp="01:54">
 
 And I suppose that the problem here is that a lot of times when you see these demos, they're always
 at the end of the research process when everything's working and what isn't clear from this is like
@@ -66,18 +66,18 @@ learning in particular, then it really builds this wave of hype, which I felt wa
 by the reinforcement learning techniques at the time. And that was why I started thinking about
 writing this blog post and then started working on it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="02:56">
+<turn speaker="Waleed Ammar" timestamp="02:56">
 
 So when you say at the time, do you feel like your opinion changed about this over the past few
 months?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Alex Irpan" timestamp="03:03">
+<turn speaker="Alex Irpan" timestamp="03:03">
 
 I feel like it's, it's getting better. I think there are still a lot of random weird things that
 show up when you do reinforce learning research, but I would say that what I feel has changed for
@@ -89,10 +89,10 @@ piece of saying as of like the moment that I was writing to post reinforcement l
 large number of issues within it, but I think they'll get better and I think they have gotten a bit
 better.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="03:57">
+<turn speaker="Waleed Ammar" timestamp="03:57">
 
 Yeah. One point that rang a bell for me is that oftentimes people work on a problem and rediscover
 the same issue that other people have discovered before. After all the work. And I think this is a
@@ -101,10 +101,10 @@ who really want to get something to work for the test at hand, many of them woul
 reinforcement learning is mature enough to be used for that purpose and your post suggests that this
 is not the case.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Alex Irpan" timestamp="04:27">
+<turn speaker="Alex Irpan" timestamp="04:27">
 
 Yeah. so my feeling is that there like some aspects of machine learning that are a lot more, I
 suppose studied or like proven to be not too annoying to get working. And reinforcement learning is
@@ -113,10 +113,10 @@ wanted to write this post in terms of essentially, so that when people would ask
 use RL for their problem, I could tell them that it's likely isn't a good idea unless you have good
 reasons for why you specifically need reinforcement learning versus some other technique.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="05:05">
+<turn speaker="Waleed Ammar" timestamp="05:05">
 
 Alright. So, in the rest of the post, you listed a number of limitations of current methods. And I'd
 like to go over them and discuss them a little bit more. So the first one you mentioned is that deep
@@ -126,10 +126,10 @@ cannot be simulated this way. And it seems like simulated environments have this
 aspects to them. On the one hand, the enable a lot of progress in deep reinforced learning research
 but also the diverted the attention away from this fundamental limitation of the methods.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Alex Irpan" timestamp="05:48">
+<turn speaker="Alex Irpan" timestamp="05:48">
 
 Yeah, I feel like that simulation is a very important tool for RL research for the reasons that you
 described that it does let you collect enough data to start asking questions about what can our
@@ -141,10 +141,10 @@ on, then then you start getting into issues of do I actually have enough data fo
 do I actually have enough time to collect all of the data I would need if you have access to
 something which will generate that data if you give it enough time.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Alex Irpan" timestamp="06:43">
+<turn speaker="Alex Irpan" timestamp="06:43">
 
 I would say that the one thing that I've sort of changed my mind about since writing the post is
 that there are some real world problems that are somewhat more stimulatable or somewhat easier to
@@ -154,17 +154,17 @@ copies of the same program. And then this can often be good enough for getting l
 difficulties of having lots of samples can often come down more to just like when you need to work
 with real hardware or you need to interact with real humans or things like,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="07:24">
+<turn speaker="Matt Gardner" timestamp="07:24">
 
 Could you give a concrete example to demonstrate?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Alex Irpan" timestamp="07:28">
+<turn speaker="Alex Irpan" timestamp="07:28">
 
 Sure. So I guess I work on brain robotics right now and a lot of what we do is trying to apply
 machine learning techniques, Onto real world robots and, and this sense it's really changed a lot of
@@ -179,17 +179,17 @@ papers that do work primarily in simulation, but a lot of the questions surround
 it's nice that this works in simulation, but we want it to actually run on a real world robot at the
 end of the day.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="08:36">
+<turn speaker="Waleed Ammar" timestamp="08:36">
 
 Alright.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="08:37">
+<turn speaker="Matt Gardner" timestamp="08:37">
 
 Yeah. I think that's a really interesting point about cost conscious learning in general. I know a
 bunch of work in natural language processing that thinks about data annotation in a cost conscious
@@ -200,10 +200,10 @@ there are any insights on that we can get from reinforcement learning in real wo
 real robots that can apply to these cost-conscious kinds of problems that we have in NLP. Any
 thoughts there?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Alex Irpan" timestamp="09:21">
+<turn speaker="Alex Irpan" timestamp="09:21">
 
 I'm not sure if I have a good answer for it off the top of my head, but I would agree that there
 does seem to be the shared link there of what do you do when your data does cost something to
@@ -215,50 +215,50 @@ our robots. Because once you, once you've saved videos of execution, then you ca
 on these as much as you want offline without having to actually run your real world robot. The main
 problem is that doing learning from this data can be a lot trickier. So there, there are trade offs.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="10:24">
+<turn speaker="Matt Gardner" timestamp="10:24">
 
 Yeah. Interesting. Good point. Can we dig in a little bit more into the sample complexity issue too?
 You have a nice figure in your paper about the rainbow DQN,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Alex Irpan" timestamp="10:38">
+<turn speaker="Alex Irpan" timestamp="10:38">
 
 Right.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="10:38">
+<turn speaker="Matt Gardner" timestamp="10:38">
 
 That shows dramatically lower sample efficiency, sample inefficiency, higher sample efficiency on
 these Atari games. But even this model you say still gets, still takes 83 hours of playing an Atari
 game or the, all of these Atari games in order to match human performance.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Alex Irpan" timestamp="10:58">
+<turn speaker="Alex Irpan" timestamp="10:58">
 
 Yeah.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="10:59">
+<turn speaker="Matt Gardner" timestamp="10:59">
 
 And where, where as a human within just a couple of minutes can understand what the game is about
 and get at least reasonable performance. So what do you think any intuitions about the gap there?
 How can we close this gap?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Alex Irpan" timestamp="11:13">
+<turn speaker="Alex Irpan" timestamp="11:13">
 
 Yeah, I've talked to a few people about this since; I guess when I got blog posts feedback generally
 it was good, but sort of this still like 83 hours point was one of the main sticking points for
@@ -269,10 +269,10 @@ video games or human priors for Atari, which studied this where essentially what
 took an Atari game and they changed the visuals. So for example, instead of like keys looking like
 he's in doors looking like doors, your keys are like blue squares and your doors are red squares.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Alex Irpan" timestamp="12:01">
+<turn speaker="Alex Irpan" timestamp="12:01">
 
 And then they got a bunch of human participants to play these games and timed how long it took them
 to solve them. And they showed that the more you make the game look less like a real world game, the
@@ -283,27 +283,27 @@ from scratch. So they're always like relearning everything. Whereas humans have 
 knowledge that they're able to do these like quick adaptations towards playing the different Atari
 games. And that's what lets them learn really well.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="12:44">
+<turn speaker="Matt Gardner" timestamp="12:44">
 
 Yeah, that's a, that's great that, that was my guess as to what happened. It's, it's good to hear
 you say the same thing. It was like if I see an asteroid coming at my spaceship as I'm playing one
 of these Atari games, I'm pretty sure that I need to move. This notion of common sense and how do we
 get machines to have common sense. It's a hard problem.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Alex Irpan" timestamp="13:07">
+<turn speaker="Alex Irpan" timestamp="13:07">
 
 Right? Yeah.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="13:09">
+<turn speaker="Waleed Ammar" timestamp="13:09">
 
 All right. So the next point in your post was around performance. You mentioned that if you just
 care about final performance, many problems are better solved by other methods. And as one of the
@@ -312,10 +312,10 @@ that an off the shelf Monte Carlo research algorithm outperforms the DQ net on t
 at the time and its been a while since 2014. I wonder if this is still true of the recent deep
 reinforcement learning methods if they're still outperformed by traditional methods.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Alex Irpan" timestamp="13:48">
+<turn speaker="Alex Irpan" timestamp="13:48">
 
 Yeah, so I got curious about this and I double checked the numbers. And so it turns out that the
 baseline DQN that was first proposed does generally performed worse than these tree search methods.
@@ -327,10 +327,10 @@ does a lot better and some models to learned approach those a lot better. And it
 unclear why exactly that is. I would assume it's just something about how the different games are
 structured.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="14:39">
+<turn speaker="Waleed Ammar" timestamp="14:39">
 
 Well I mean I think the thing that point's still valid and you attribute this kind of slower start
 for deep reinforcement learning methods is that it's hard to include any problem specific
@@ -338,10 +338,10 @@ information as part of the algorithm because of the oral setup which making the 
 it needs to be really. So could you elaborate on why this is difficult? Why it's hard to incorporate
 problem specific information?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Alex Irpan" timestamp="15:07">
+<turn speaker="Alex Irpan" timestamp="15:07">
 
 Sure. Yeah. So a lot of the ways RL algorithms get motivated is by saying you have some set of
 States and some set of actions and if you're in a state and take this action, you go to another
@@ -354,10 +354,10 @@ it's not getting captured in this derivation and your algorithm isn't able to ma
 information. This is all sort of like very hand-wavy and not really like a mathematical argument
 more as like an intuitive one.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Alex Irpan" timestamp="16:05">
+<turn speaker="Alex Irpan" timestamp="16:05">
 
 So maybe an analogy I would make is like if you, if you have like a bunch of metal cubes and they're
 scattered all across the room and you want to assemble them in one place one way to do it is to like
@@ -369,10 +369,10 @@ approach is working because you know your cubes are made out of metal. Whereas y
 works for objects that aren't metal cubes but it's going to be a bit slower. So hopefully that
 analogy makes it make more sense.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="16:51">
+<turn speaker="Waleed Ammar" timestamp="16:51">
 
 I think it does. But at the same time we designed these methods and we designed the model that's
 used to predict the actions. And like you mentioned later in the post, we can instead of a model
@@ -380,10 +380,10 @@ three setup, you can, you can have a model of the word that you, that makes it e
 these problem specific information. So I wonder why this hasn't been as common as, as it seems to
 be, yeah.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Alex Irpan" timestamp="17:23">
+<turn speaker="Alex Irpan" timestamp="17:23">
 
 Yeah. I think that is just that making models of the real world seems pretty difficult at least
 empirically where if you can have a nice model of how things work, then a lot of the papers in the
@@ -395,20 +395,20 @@ which ones aren't. If you just try to read the literature and it really just rel
 people who have experience trying to build models of different kinds of systems or worlds to see
 what what is and isn't doable.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="18:14">
+<turn speaker="Waleed Ammar" timestamp="18:14">
 
 Okay. Okay. So in, in light of this discussion, do you have any thoughts on why the research on deep
 reinforcement learning has attracted so much attention even without necessarily achieving the best
 results, even with a simulated environments that are not really like representing word; for the most
 part real world scenarios,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Alex Irpan" timestamp="18:36">
+<turn speaker="Alex Irpan" timestamp="18:36">
 
 I guess it comes back to seeing what your final learn policy does, where it is very gratifying to
 see that you, you provide an image of this Atari game and your model outputs an action which
@@ -423,10 +423,10 @@ some way. And that what's exciting about this is that doing neural net inference
 than doing this full search process. So there's something about knowledge going into the net in some
 way, which is interesting.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="19:51">
+<turn speaker="Waleed Ammar" timestamp="19:51">
 
 I see. All right. So moving to the next question. The next point in your post is around reward
 functions. And you mentioned how hard it is to design a reward function, which actually encourages
@@ -434,10 +434,10 @@ the desirable behaviors of the model, and is learnable. Could you talk a little 
 how your choice of the reward function is related to getting stuck in a local optima and the
 different choices that we might have?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Alex Irpan" timestamp="20:18">
+<turn speaker="Alex Irpan" timestamp="20:18">
 
 So I would say that when, when humans design reward functions for different tasks, normally what
 happens is you, you try to identify things that you think are helpful for solving the problem and
@@ -449,10 +449,10 @@ tricky part is that then your learning algorithm is like what at the sites to do
 what constants you pick here. And furthermore, the actual behavior it learns can depend quite a bit
 on whether you've selected these constants correctly.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Alex Irpan" timestamp="21:14">
+<turn speaker="Alex Irpan" timestamp="21:14">
 
 And, and I think that there is like the open AI boat racing game that showed that for if you do this
 like incorrectly, you get into cases where your agent learns that it should just keep picking up
@@ -461,47 +461,47 @@ wanted your agent to learn in the first place. So, so sometimes like you pick co
 work the first time and sometimes they don't and it's just hard to figure out when is, when is this
 going to happen or when it isn't.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="21:45">
+<turn speaker="Matt Gardner" timestamp="21:45">
 
 I guess the point for all of this is to help in the search so that you can presumably get to the
 reward that you actually care about faster.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Alex Irpan" timestamp="21:53">
+<turn speaker="Alex Irpan" timestamp="21:53">
 
 Right? Yeah. So the whole point is that you're trying to bias the learning in some way that gets you
 to the final thing you actually care about. And if you do the biasing poorly, then you don't get to
 the thing you care about. But if you don't add in this biasing at all, it can be tricky to do enough
 exploration to see what the successful states look like essentially.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="22:17">
+<turn speaker="Matt Gardner" timestamp="22:17">
 
 Do people remove the biases? Like I'm, I'm imagining I do some initial search to help the model find
 a good end state and once I find a good end state presumably I have a trajectory that will get me
 back and I can remove some of the biases. Do people do this?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Alex Irpan" timestamp="22:37">
+<turn speaker="Alex Irpan" timestamp="22:37">
 
 I, think people can do something like that. So I'd say that's, that's getting close to the idea of
 expert demonstrations and imitation learning and so on where you, you give data but you know,
 represents your final success state and then try to have the model learn to reproduce that behavior.
 And I do think that's a promising line of research in terms of how to get around these problems.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="23:04">
+<turn speaker="Waleed Ammar" timestamp="23:04">
 
 Is this roughly similar to, like, the counter part of this inspired learning would be having
 defining an objective function in terms of how, how different your predictions are from the gold
@@ -510,10 +510,10 @@ problem, you may come up with more creative regularization that like how the mod
 neighborhood or the parameters set up that that you're interested in. Would this be a reasonable
 approximation of what's going on?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Alex Irpan" timestamp="23:40">
+<turn speaker="Alex Irpan" timestamp="23:40">
 
 I think it sounds reasonable enough. So I would say that generally when you add regularization in a
 supervised learning model, it normally helps you. Whereas in reinforcement learning, when you're
@@ -522,36 +522,36 @@ helps you or hurts you. But I think the, maybe the common point is that you have
 care about and then the regularization you're adding on top that you think will help you achieve
 that objective.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="24:15">
+<turn speaker="Waleed Ammar" timestamp="24:15">
 
 Yeah. It's, I guess it sounds closer to a auxiliary test at an auxiliary tasks when you, when you
 care about one problem but there are some like related tasks that we think you think would help you
 with there. And sometimes they don't. They do. Sometimes they don't.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Alex Irpan" timestamp="24:29">
+<turn speaker="Alex Irpan" timestamp="24:29">
 
 Yeah.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="24:30">
+<turn speaker="Waleed Ammar" timestamp="24:30">
 
 All right. So another point you make is that deep reinforcement learning has yet to have its image
 net for control moments. So it's about how we over-fit to the environments when we are training
 these models and you give several examples of how existing models fit to arbitrary characteristics
 of the environment. Could you elaborate on one of the examples to clarify this point?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Alex Irpan" timestamp="24:52">
+<turn speaker="Alex Irpan" timestamp="24:52">
 
 Sure. So, in the post itself, I talked about two papers, one of which I worked on, one in which I
 didn't. And the way both of these papers showed this problem can occur is that they played using two
@@ -567,10 +567,10 @@ learning time it, it does a good job of like tacking the opponent and then you s
 the other agent acts and then it sort of just runs into walls a bunch and like doesn't really move
 anywhere.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="26:11">
+<turn speaker="Waleed Ammar" timestamp="26:11">
 
 Yeah, that sounds a lot like what we face in, in supervised machine learning where oftentimes we
 like to think of the datasets we're training on as if we're trying to build a model for this task.
@@ -579,10 +579,10 @@ And if you take another dataset addressing the same task, it does significantly 
 same problem here or is there a like a unique characteristic of the problem in deep reinforcement
 learning that make it fundamentally different?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Alex Irpan" timestamp="26:46">
+<turn speaker="Alex Irpan" timestamp="26:46">
 
 I think it's, I think there's like the same underlying root cause and it's that parts of how
 reinforcement learning work make the problem more apparent later. So in reinforcement learning it's
@@ -595,10 +595,10 @@ data, which is partially controlled by what you've learned so far. And because o
 into these weird feedback loops where you just spiral off into very different parts of the state
 space depending on what happens.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="27:42">
+<turn speaker="Waleed Ammar" timestamp="27:42">
 
 Right. And recently, at least in the NLP domain, we started having efforts to combine, like you have
 like kind of combo tasks where you can, you can evaluate a one model or one approach on a variety of
@@ -606,10 +606,10 @@ tasks to kind of reduce the risk of overfitting to any of them. I don't know if 
 way to address this problem in NLP or in supervised machine learning. But I wonder if there's like
 similar efforts in the deep RL space.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Alex Irpan" timestamp="28:17">
+<turn speaker="Alex Irpan" timestamp="28:17">
 
 Yeah, I think they're similar efforts are happening there or there are, they're starting to happen.
 So I know opening, I has a, they have their retro game contest, which is essentially a, it's a
@@ -621,19 +621,19 @@ levels. And I think that this is like a good step in terms of trying to have ben
 where the challenge is not just learning to do control and like one instantiation of your video game
 or environment, but across like a wider distribution.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="29:13">
+<turn speaker="Matt Gardner" timestamp="29:13">
 
 I find it really surprising that this isn't how standard evaluation already works. Like it seems too
 much like cheating to evaluate in the same environment that you were trained on. Why don't people
 switch environments more often?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Alex Irpan" timestamp="29:26">
+<turn speaker="Alex Irpan" timestamp="29:26">
 
 So I would say the reason people don't switch environments more often just has to do with where
 reinforcement learning was at that time where or even if you are acting in the same environment that
@@ -645,10 +645,10 @@ able to learn more things now. That's why we're starting to see this shift towar
 set environments because people actually have some expectation that they'll be able to solve their
 train set environments and then they can start studying generalization.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="30:17">
+<turn speaker="Matt Gardner" timestamp="30:17">
 
 Yeah, I guess so Waleed started this point on talking about an ImageNet moment for reinforcement
 learning, like you mentioned in your post, I guess the, and similarly a glove or word to VEC moment
@@ -661,10 +661,10 @@ learning problem. But it doesn't seem like they're, I, I'm having a hard time ev
 where is the representation learning to do in a general reinforcement learning task cause they're
 all so different.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Alex Irpan" timestamp="31:11">
+<turn speaker="Alex Irpan" timestamp="31:11">
 
 Yeah. I think that's a, that's a good point. And what I would guess what happened was that you would
 just have to start adding restrictions over what kinds of reinforcement learning tasks you care
@@ -675,75 +675,75 @@ example. I think this is based off, like there's some like developmental psychol
 but I don't really actually want to try to explain it cause I don't know any of it and I don't want
 those people to get mad at me.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="31:57">
+<turn speaker="Matt Gardner" timestamp="31:57">
 
 Yeah. Yeah. That's a really good point. So I was thinking of like, what am I inputs, but also like,
 I think what you're saying is that for real world scenarios, if I want to do reinforcement learning,
 that's actually in the physical environment I can get some representation learning on a model like
 model of how the world behaves.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Alex Irpan" timestamp="32:16">
+<turn speaker="Alex Irpan" timestamp="32:16">
 
 Yeah. Right,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="32:16">
+<turn speaker="Matt Gardner" timestamp="32:16">
 
 Right. Yeah, that's a really good point.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="32:18">
+<turn speaker="Waleed Ammar" timestamp="32:18">
 
 Yeah. I suppose the current benchmarks don't lend themselves to any improvements if you use ImageNet
 kind of features.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Alex Irpan" timestamp="32:25">
+<turn speaker="Alex Irpan" timestamp="32:25">
 
 Yeah, I guess right now basically it's just Atari games look a lot different from ImageNet things or
 real world images. I mean,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="32:35">
+<turn speaker="Waleed Ammar" timestamp="32:35">
 
 Yeah. And I love the humorous quote that you take from Jacob Andreas saying that "Deep RL is popular
 because it's the only area in ML where it's socially acceptable to train on the test set."
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Alex Irpan" timestamp="32:49">
+<turn speaker="Alex Irpan" timestamp="32:49">
 
 Yeah, I like that to from Jacob, it's like, I wish it were less true, but it kind of is.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="32:59">
+<turn speaker="Waleed Ammar" timestamp="32:59">
 
 It's pretty fun. All right. So the next point in the post talks about stability. And I always
 actually, I didn't realize that until I read your posts how much variance one should expect in Deep
 RL models even beyond what we see in supervise neural models. So yeah. So what are some of the
 reasons behind this extra variance?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Alex Irpan" timestamp="33:22">
+<turn speaker="Alex Irpan" timestamp="33:22">
 
 I think it goes back to the point I was making about the cyclical nature of the data you're
 receiving depending on what you have learned so far. And, what I'm guessing is happening is that
@@ -756,10 +756,10 @@ mostly stays flat. And then it just sort of, it just depends on when does it loc
 right thing or not. And I think this is where a lot of the variance comes from. Just these things
 that can oftentimes come down to a random chance on when you see the takeoff versus when you don't.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="34:24">
+<turn speaker="Matt Gardner" timestamp="34:24">
 
 I guess my intuition on this, you could tell me if I'm right or wrong, is that in the most general
 reinforcement learning case, I just have a state machine that's taking actions and at some point
@@ -770,27 +770,27 @@ find something good and maybe sometimes you won't. And unless you have a better 
 with some stronger reward signal to guide the initial stages of the search, you're just gonna have a
 hard time on a whole lot of variance. Is that fair?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Alex Irpan" timestamp="35:09">
+<turn speaker="Alex Irpan" timestamp="35:09">
 
 Yeah, that, that sounds pretty fair.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="35:11">
+<turn speaker="Waleed Ammar" timestamp="35:11">
 
 Alright. Which reflects on the updates that you get to the model in, in a supervised mode, you will,
 you'll have a data set and you'll be shuffling your data points, but it is the same data set
 basically, right? Depending on which path you take. When you're turning your model and deep RL,
 you'll be exposed to different updates.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Alex Irpan" timestamp="35:30">
+<turn speaker="Alex Irpan" timestamp="35:30">
 
 Yeah, right. I think there are also like a few, I'm not sure if there's anything published for this
 but I know that some people have done some experiments trying to understand what does your reward
@@ -800,19 +800,19 @@ reward and then like a plateau after learning the task. So I guess it goes back 
 question of like when you're in this like flat Valley there, like everything sort of looks about the
 same and you just have to hope that you randomly move towards the cliff eventually.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="36:12">
+<turn speaker="Waleed Ammar" timestamp="36:12">
 
 So you put together a short list of success stories in deep RL research and you identify some of the
 common themes or common properties that you recommend or like to minimize frustration over
 researcher who was doing any work in this area. Do you, would like to walk us through the list?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Alex Irpan" timestamp="36:32">
+<turn speaker="Alex Irpan" timestamp="36:32">
 
 Sure, yeah. So one thing that helps a lot for RL is that if, if you actually can just generate a lot
 of data than, than a lot of times you, you can be fine because of like, like reinforcement learning
@@ -823,10 +823,10 @@ gets hard for reinforcement learning is when you basically need to do say, like 
 order to succeed if you have to do, if you'd have to make by 10 correct decisions in a row before
 you receive positive reward, then it's very hard for random exploration to actually do this.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Alex Irpan" timestamp="37:24">
+<turn speaker="Alex Irpan" timestamp="37:24">
 
 Whereas if you only need to do maybe like two or three things correct in a row, it gets a lot
 easier. I guess the question of like how easy it is to randomly do the correct thing or not is like
@@ -839,10 +839,10 @@ their Dota 2 AI as well. And in both cases, somehow when you have agents playing
 themselves, there's something about the process that makes learning like get a lot faster in terms
 of like exploring new strategies and so on.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Alex Irpan" timestamp="38:22">
+<turn speaker="Alex Irpan" timestamp="38:22">
 
 And I'm sure there are lots of like intuitive arguments you can make for it in terms of like agents
 like being in competition with one another and so on. I don't have super great intuitions for why it
@@ -856,19 +856,19 @@ sometimes get weird results. But a lot of times doing this sort of reward shapin
 moving in the right direction so to speak, it is just important for the problem and it is just
 something you have to do.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="39:27">
+<turn speaker="Waleed Ammar" timestamp="39:27">
 
 Yeah. I got mixed signals from the post whether you're recommending the reward signal to be shaped
 or or just like one at the end of the episode. It seems like from what you're saying now you, you do
 think it's best to have a shape reward if you know how to design it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Alex Irpan" timestamp="39:49">
+<turn speaker="Alex Irpan" timestamp="39:49">
 
 Yeah. I think what I would recommend is that you should try a more sparse reward first. And if
 that's learnable, then you don't really need to do anything more. But if that isn't learnable, then
@@ -877,32 +877,32 @@ it this way is that generally sparse rewards are less gameable than shaped rewar
 learn your reward that is less game of war or less likely to misrepresent what things you want, then
 you should just do that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="40:23">
+<turn speaker="Waleed Ammar" timestamp="40:23">
 
 Alright. Any other thoughts before we conclude?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Alex Irpan" timestamp="40:27">
+<turn speaker="Alex Irpan" timestamp="40:27">
 
 No, not really. I guess this was fun to do. Yeah.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="40:31">
+<turn speaker="Waleed Ammar" timestamp="40:31">
 
 Thank you very much.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Alex Irpan" timestamp="40:33">
+<turn speaker="Alex Irpan" timestamp="40:33">
 
 Yeah, thanks.
 
-</Turn>
+</turn>

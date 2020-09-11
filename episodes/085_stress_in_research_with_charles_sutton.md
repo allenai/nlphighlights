@@ -8,23 +8,23 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting work in natural
 language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is Matt Gardner and Waleed Ammar, we are research scientists at the Allen Institute for
 Artificial intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:12">
+<turn speaker="Waleed Ammar" timestamp="00:12">
 
 So today we'll be talking about stress and research. I had my share of stress during the Phd, so I'm
 all too familiar with how destructive stress can be both professionally and personally. Naively, I
@@ -37,25 +37,25 @@ research spans a broad range of applications of probabilistic methods for machin
 including software engineering, natural language processing, computer security, queuing theory, and
 sustainable energy. Charles welcome to the program.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Charles Sutton" timestamp="01:03">
+<turn speaker="Charles Sutton" timestamp="01:03">
 
 Thank you. I'm delighted to be here.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="01:05">
+<turn speaker="Waleed Ammar" timestamp="01:05">
 
 Many researchers experience stress but, so few are willing to discuss it, let alone write about it
 in a blog. What's the back story behind writing this series?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Charles Sutton" timestamp="01:15">
+<turn speaker="Charles Sutton" timestamp="01:15">
 
 Yes. Well, the first impetus behind the series goes back to when I was a postdoc, about 10 years
 ago. And I distinctly remember thinking at some point maybe when I was working on my job
@@ -67,10 +67,10 @@ think about it for 10 years. And then maybe a year or two ago I was kind of thin
 where my career was going again. I was, you know, planning a lot of international moves and things
 like that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Charles Sutton" timestamp="02:07">
+<turn speaker="Charles Sutton" timestamp="02:07">
 
 And I started to feel, and I mean there's always been stress, no matter how high you go, no matter
 how far you go, it's always a companion. It changes. I think the sources of stress do change as you
@@ -82,19 +82,19 @@ I thought that, maybe if I could figure out what was going on inside my head and
 sources of stress that it would be a little bit easier for me to live with them. So that's, that's
 really where it came from.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="02:57">
+<turn speaker="Waleed Ammar" timestamp="02:57">
 
 Yeah. And like from where I come, I feel like it was literally assuring to see that you, and I'm
 sure many others are experiencing similar stress or like even more than I have and it feels like,
 okay, I'm not, I'm not necessarily a complete failure. So that was good.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Charles Sutton" timestamp="03:11">
+<turn speaker="Charles Sutton" timestamp="03:11">
 
 Yeah, absolutely. I think that's one of the most important things is just to realize, you know,
 you're not alone. The structure of the research career, and this is one of the things that I really
@@ -107,10 +107,10 @@ always going to be people above you, right? There's always going to be people wh
 you, who have had more impact, who have helped more people, and you're always going to look up and
 say, gosh, why can't I do what they do?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Charles Sutton" timestamp="04:06">
+<turn speaker="Charles Sutton" timestamp="04:06">
 
 Or you get farther along in your career and you're like, gosh, maybe I'm past it. The field's moving
 on, maybe I won't be able to keep up. So no matter where you get in your career, no matter who you
@@ -118,18 +118,18 @@ talk to, I mean there might be a few people who have truly excessive reservoirs 
 but I think they're in the minority. I think the vast majority of researchers who you'll talk to,
 they're going through the same kinds of stress as you are.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="04:30">
+<turn speaker="Matt Gardner" timestamp="04:30">
 
 So we've been using the word stress here, but what you just described sounds a lot to me like
 imposter syndrome. Are these the same thing? Would you distinguish them?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Charles Sutton" timestamp="04:38">
+<turn speaker="Charles Sutton" timestamp="04:38">
 
 That's a good question. I think I would distinguish them, but they're closely related. I think
 imposter syndrome, is a key source of stress? It's not the only source of stress, but it's
@@ -138,19 +138,19 @@ manifests and bothers you psychologically as a researcher or as a creative perso
 But there are lots of ways that self doubt can creep in. And Imposter Syndrome is one of them, but
 there's lots of other ways.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="05:12">
+<turn speaker="Waleed Ammar" timestamp="05:12">
 
 Yeah, I like how you're structured. You're serious and talking about sources of stress and how you
 can cope with each of them. So the first one that you called, the tournament and the ax, I really
 like that title. Could you elaborate on this a little?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Charles Sutton" timestamp="05:25">
+<turn speaker="Charles Sutton" timestamp="05:25">
 
 Yeah, absolutely. So that was maybe the first part where I was trying to think about what is it
 about research that makes it so stressful? Because you know, on the surface you would think it's the
@@ -162,10 +162,10 @@ we all have as researchers, and you know, where does it come from? And a lot of 
 structure of the research career, right? So we think of tenure track faculty in the United States as
 being this kind of famously brutal up and out kind of system.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Charles Sutton" timestamp="06:12">
+<turn speaker="Charles Sutton" timestamp="06:12">
 
 And that's true. But at every point in the research career you have similar gate posts, markers,
 right? Which are up or out. You know, some people get through and some people don't. So whether it's
@@ -177,10 +177,10 @@ the up. And then the other part of it is the out, you know, some of these compet
 you lose them and it's okay. Right. You know, if you don't win a major award, well lots of people
 have great careers without winning that award.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Charles Sutton" timestamp="06:57">
+<turn speaker="Charles Sutton" timestamp="06:57">
 
 So it's so it's okay. But a lot of things like, you know, getting into a PhD program or getting a
 research job, it's kind of an explicit ax where if you don't meet this bar, you won't be able to
@@ -191,10 +191,10 @@ I know I can keep going. I know I can progress. There's a lot of points where I 
 by competing with other people and you don't know what's going to happen, you know, whether you will
 face the ax or not.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Charles Sutton" timestamp="07:34">
+<turn speaker="Charles Sutton" timestamp="07:34">
 
 You don't know that until you get farther into the competition. So that I think is a kind of big
 source of stress. And I thought it was really interesting that there are lots of careers, you know,
@@ -207,10 +207,10 @@ how to manage it is that there are a lot of different steps. So one is just to a
 how smart you are, no matter how motivated you are, there are always going to be people out there
 who are smarter than you.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Charles Sutton" timestamp="08:23">
+<turn speaker="Charles Sutton" timestamp="08:23">
 
 And they're always going to be people out there who are better at research than you. Even if you're
 Albert Einstein, you're going to sit late at night and think about, oh, I'm not sure if I'm going to
@@ -222,10 +222,10 @@ are pretty nice, right? So that one type of thing is to really think more collab
 competition. I'm not gonna lie to you, the competition is there, but thinking too explicitly about
 it, it doesn't help.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Charles Sutton" timestamp="09:04">
+<turn speaker="Charles Sutton" timestamp="09:04">
 
 You know, you start getting angry, you start getting jealous and that kind of stuff, it never helps.
 It always hurts. So that's one kind of thing. So one key thing is to accept and celebrate that there
@@ -237,10 +237,10 @@ the only thing, right? There are other parts of putting yourself out there and b
 enough to have a good career. So you need to accept that it is a game and you're playing the game,
 you're trying to move up.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Charles Sutton" timestamp="09:48">
+<turn speaker="Charles Sutton" timestamp="09:48">
 
 But if you don't make it, it doesn't mean you're a bad person. And in fact, to have the courage to
 say, you know what, this game isn't for me. I need to move into another career where I can have a
@@ -250,24 +250,24 @@ should celebrate. So that's, so that's one thing that I think is super important
 you're playing a game. Sometimes the best move is not to play. Even if you win or lose, it doesn't
 mean you're a bad person. It's just how you did in the game that day.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="10:27">
+<turn speaker="Matt Gardner" timestamp="10:27">
 
 Can I jump in here?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Charles Sutton" timestamp="10:28">
+<turn speaker="Charles Sutton" timestamp="10:28">
 
 Please
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="10:29">
+<turn speaker="Matt Gardner" timestamp="10:29">
 
 Just to give a bit of personal experience; out of all of your blog posts on this topic. This was the
 one that resonated with me the most because I feel this a lot and about a year ago my sister had
@@ -279,10 +279,10 @@ research and I was ready to just get a job as a software engineer. I guess part 
 just the whole stress of this tournament. Like, I think like every month, at least for the last five
 years, I would very seriously consider just leaving research cause it's so stressful.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="11:18">
+<turn speaker="Matt Gardner" timestamp="11:18">
 
 And here I finally was ready to just do it. Long story short, things turned out well so that I was
 able to stay at AI2 from Irvine. And I liked my position now, but I, yeah, this whole like
@@ -293,10 +293,10 @@ It's, I guess the way I put it is it feels a lot like you have the stress of bei
 have to market yourself, you have to do all of this stuff. You don't get the pay out of being an
 entrepreneur. Um, and so like it's, it's, it's hard. It's really hard.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Charles Sutton" timestamp="12:02">
+<turn speaker="Charles Sutton" timestamp="12:02">
 
 Yeah. I think that's, uh, you know, that's a really common reaction is, you know, is to look up and
 say, wait, you feel stressed? What, you know, what, why, why do you feel threatened? What? Why? But
@@ -305,10 +305,10 @@ say, do I want to keep playing the game or not? You know, is it worth it to me i
 as a whole to keep being a researcher? And you know, we all went through that, we all had to make
 that decision.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="12:29">
+<turn speaker="Waleed Ammar" timestamp="12:29">
 
 Another thing that I feel like sometimes it helps me reason about this and like go to a more sane
 state is realizing that our results in this tournament are not the result of a controlled
@@ -317,10 +317,10 @@ and also I currently have, are pursuing different goals in life that results in 
 not tell me how valuable I am, but maybe this is touching on the next one that you wanted to talk
 about.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Charles Sutton" timestamp="12:57">
+<turn speaker="Charles Sutton" timestamp="12:57">
 
 Perhaps, yeah, yeah. I think that's completely true. That there's lots of things that go into being
 more successful or less successful as a researcher. I think some of it has to be luck. I don't know
@@ -331,18 +331,18 @@ leap and say, look, this career isn't the best for me. You have to disassociate 
 I almost want to say academic brainwashing of thinking that how good you are as an academic or a
 researcher is a measure of self-worth because it's not.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="13:42">
+<turn speaker="Waleed Ammar" timestamp="13:42">
 
 Right. So that's basically the next point that you had in your list of sources of stress conflating
 your worth as a person with your worth as a researcher. How would you suggest people cope with this?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Charles Sutton" timestamp="13:53">
+<turn speaker="Charles Sutton" timestamp="13:53">
 
 Yeah, so this is really one of my favorite strategies that we're going to get to because I think
 it's just super important to be able to disassociate these things. It's super important to be able
@@ -354,10 +354,10 @@ you're happy about everything. You feel like you're a good person, but it's also
 When things go poorly, you get a couple of papers rejected, your experiments don't work, and all of
 that, you know, you feel down in everything, right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Charles Sutton" timestamp="14:44">
+<turn speaker="Charles Sutton" timestamp="14:44">
 
 You feel down in your entire life. You know, we have this hero worship of the most successful
 researchers that we know. And you know that that's good to some extent, but it can conflate, right?
@@ -368,10 +368,10 @@ career and where I'm at. And that's not the same thing, as who I am as a person.
 ways to get to that and I don't think I know all of them. If any of you know other ways that can
 help, you know, please. One story that I really liked is there's a story about Richard Feynman.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Charles Sutton" timestamp="15:29">
+<turn speaker="Charles Sutton" timestamp="15:29">
 
 So we talk about this, right? We talk about how even people who are way smarter and way more
 accomplished than us have this kind of stress and self doubt. So in one of his books, probably it
@@ -382,10 +382,10 @@ that he would just start saying, look, you know, these people hired me. Maybe th
 maybe not, but that's not my problem. I'm just going to do what's fun to me. If it works out well,
 great. If it works out poorly, AH, who cares? It's not my problem whether I'm doing well or not.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Charles Sutton" timestamp="16:11">
+<turn speaker="Charles Sutton" timestamp="16:11">
 
 So he started working on problems that were fun to him, that led to some of the work that
 contributed to his Nobel prizes. So I think really thinking about where is the fun coming from and
@@ -398,10 +398,10 @@ getting, you know, depressed about anything because you have to compartmentalize
 tell in the blog post is about this wonderful series of novels from Patrick Rothfuss, which is
 called "The Kingkiller Chronicles."
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Charles Sutton" timestamp="17:01">
+<turn speaker="Charles Sutton" timestamp="17:01">
 
 And in that book there's a type of magic that depends on being able to split up your consciousness
 and believe contradictory things at the same time. And I think that's exactly what you have to do in
@@ -413,10 +413,10 @@ the time. So while you're doing research, that could be the most important thing
 you, but then, you know, you get home and you know, play with your dog or something and then you can
 be more dispassionate about it and realize, okay, there's lots of things going on in life.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Charles Sutton" timestamp="17:47">
+<turn speaker="Charles Sutton" timestamp="17:47">
 
 So learning how to separate that thing is I think important. You know, one thing that helped with me
 was being able to separate professional relationships from personal relationships. So there are
@@ -428,10 +428,10 @@ those two things and be like, this person is a great, great person, great guy, g
 separate from my opinion of them as a researcher. Right? Once I learned how to do that for other
 people, then maybe I can learn to do that for myself as well.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="18:35">
+<turn speaker="Waleed Ammar" timestamp="18:35">
 
 Yes. Something that resonated with me also is in the early days of my PhD I felt like I was very
 obsessed with this idea of how my research work defines my self-worth, that it consumed almost all
@@ -440,19 +440,19 @@ have other things going on in your life. You have to consciously decide that I'm
 time to do other things, to take care of my relationships and I don't know, play sports to the
 things that I enjoy doing. It doesn't always just happen.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Charles Sutton" timestamp="19:04">
+<turn speaker="Charles Sutton" timestamp="19:04">
 
 Yeah, that's right. I think it's super important to have backup sources of self-worth, right? Other
 things you do that are also important to you and can keep you going when things aren't going so well
 in your career.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="19:16">
+<turn speaker="Matt Gardner" timestamp="19:16">
 
 Yeah, and I guess this isn't just it, this isn't just about research. Other jobs have this too. I
 just read an article recently in, from The Atlantic called "The Religion of Workism is Making
@@ -460,10 +460,10 @@ Americans Miserable" is says, it's basically a kids these days kinds of argument
 are too focused on work. But I think all of us are facing this. It's really easy to get too caught
 up these days in work life balance going way too far towards work. I feel that myself a lot.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Charles Sutton" timestamp="19:42">
+<turn speaker="Charles Sutton" timestamp="19:42">
 
 Yeah, I think it's absolutely right that there are a lot of other professions where people don't
 always have the right work life balance. And in fact, I think very few, if any of the sources of
@@ -475,18 +475,18 @@ have coming up to spend a lot of your, you know, physical time at work, maybe fo
 period of time, there's still a sense of emotional balance. So feeling like work isn't the only
 thing that's going on in your life, even if you do spend a lot of time.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="20:38">
+<turn speaker="Waleed Ammar" timestamp="20:38">
 
 Totally. So the next point that you had in your list is flexibility. So "Flexibility Can Be a Double
 Edge Sword". Could you tell us a little bit more about this?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Charles Sutton" timestamp="20:48">
+<turn speaker="Charles Sutton" timestamp="20:48">
 
 Yeah. One of the things that we talked about earlier is that stress is ongoing throughout your
 career, but the kinds of stress that you run into can change, as you progress in your career. And I
@@ -500,10 +500,10 @@ you have to do. So there are lots of different almost mini managers or mini sour
 assigning work to you and they don't know about each other and they don't particularly care about
 each other.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Charles Sutton" timestamp="21:58">
+<turn speaker="Charles Sutton" timestamp="21:58">
 
 So you have to be the one to prioritize. And that's actually a key part of intellectual freedom
 because part of intellectual freedom is deciding what to think about, right? If you don't have the
@@ -514,10 +514,10 @@ say yes some of the time, cause you know, reviewing has to get done. And if you 
 should review papers and so on. So you have to say yes to some things, but you also have to keep
 things manageable. So every time you do have to say no, you can feel a little bit guilty about it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Charles Sutton" timestamp="22:42">
+<turn speaker="Charles Sutton" timestamp="22:42">
 
 And that's how prioritizing itself can become a source of guilt because even if you decide, okay, I
 really have to prioritize this project over this other project, you feel a little bit bad that you
@@ -527,36 +527,36 @@ that because you can't get everything done, it doesn't help anybody to say yes t
 and then not do a good job. Right. That's worse than saying no. So you know, if you keep that in
 mind that I can help assuage your guilt perhaps a little bit.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="23:17">
+<turn speaker="Waleed Ammar" timestamp="23:17">
 
 Yeah. I managed a team for a short period of time. I was able to relate to some of the thoughts that
 you had about being a faculty member. I feel like it's something that everyone who has a role that
 like connects multiple people in the research would have to endure.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Charles Sutton" timestamp="23:33">
+<turn speaker="Charles Sutton" timestamp="23:33">
 
 Yeah, I mean management is a huge source of little tasks that have to be done urgently and that
 makes it extra hard to juggle things. So it may be difficult to have too much sympathy for your
 professors, but you know, have a little bit if you can.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="23:50">
+<turn speaker="Waleed Ammar" timestamp="23:50">
 
 Alright. So do you have any thoughts on a coping, I guess saing "no" basically is the main coping
 strategy for this one, right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Charles Sutton" timestamp="23:55">
+<turn speaker="Charles Sutton" timestamp="23:55">
 
 Yeah. And this will bleed into the next one because these two are closely related. One coping
 strategy is that there are a lot of skills involved in being a good administrator and the more of
@@ -567,10 +567,10 @@ number of satirical advice talks like that. One thing that I remember him saying
 now let's you say yes later, right? You might be sad about saying no to this reviewing request, but
 it makes it easier for you to say yes to the next one.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Charles Sutton" timestamp="24:45">
+<turn speaker="Charles Sutton" timestamp="24:45">
 
 That might be a lot closer to your area. Another piece of advice that I got from another blog post
 is if you imagine yourself having a yearly budget of these types of service activities, like, okay,
@@ -581,37 +581,37 @@ right? If I say yes to this thing that isn't really as important for me to do, d
 harder for me to do something that's more important to me later? So if you think about the cost of
 saying yes, you know that also makes it a lot easier.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="25:27">
+<turn speaker="Waleed Ammar" timestamp="25:27">
 
 Yeah. Now when I look at the quality of reviews, I feel like it's totally reasonable to have fewer
 reviews and a higher quality that that would be a move in the right direction.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Charles Sutton" timestamp="25:36">
+<turn speaker="Charles Sutton" timestamp="25:36">
 
 Yeah, I should be clear. I'm not telling you to say no to reviewing assignments. Probably more often
 than not. If it's one of your main conferences, you should say yes, but as you get more senior?
 There will be too many things. And even after you do service to help your most important activities,
 there will still be too much to do.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="25:54">
+<turn speaker="Waleed Ammar" timestamp="25:54">
 
 So when you talk next about the tsunami of logistics and the dangers associated with it, I didn't
 realize this as a danger before. How, how important is it to keep our unconscious mind free to do
 the most important kind of work? Would you like to talk a little bit about this?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Charles Sutton" timestamp="26:09">
+<turn speaker="Charles Sutton" timestamp="26:09">
 
 Yeah. So this is another trap that comes to you as you become more senior as you become a manager or
 as you become a professor, is that there are so many little decisions that you have to make. Like
@@ -623,10 +623,10 @@ that you lose your unconscious mind. Right? Because one of the most important pr
 that you have is to be able to set your unconscious mind on a problem. And it's running in the
 background and that informs your thinking about it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Charles Sutton" timestamp="26:58">
+<turn speaker="Charles Sutton" timestamp="26:58">
 
 So if your unconscious mind is thinking about what do I say in the next email to my boss, then it's
 not thinking about what your next paper should be about. And you know, that's going to be a problem
@@ -639,10 +639,10 @@ without taking so much of your attention that you're not able to do deep thought
 comes down to it, when you're a researcher, it's the deep long term thought that's what you're hired
 for.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Charles Sutton" timestamp="27:47">
+<turn speaker="Charles Sutton" timestamp="27:47">
 
 That's what your value add is. Not that you're really good at setting up meetings. So here, I don't
 know that there's, in terms of how you cope with this, I think to cope with this, you're looking at
@@ -654,10 +654,10 @@ then that's fine, right? Whatever works for you. You need a way to get them out 
 onto paper because you need your head to be doing other things. And a big thing about all of these
 things about how to deal with stress is having self knowledge, right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Charles Sutton" timestamp="28:42">
+<turn speaker="Charles Sutton" timestamp="28:42">
 
 You need to understand how you think and what works best for you. So in this like logistical
 tsunami, the thing you need to realize is what time of the day am I most creative, right? In what
@@ -669,10 +669,10 @@ know, don't have your alarm going off every time you get an email, whoever sent 
 can wait an hour until you respond. So it's super important to realize my creative time is the most
 important time I need to set aside time for that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Charles Sutton" timestamp="29:30">
+<turn speaker="Charles Sutton" timestamp="29:30">
 
 And then the other things are just learning to be a better administrator, right? When a decision
 doesn't really matter, you have to settle it quickly. You have to decide quickly, you know, if it
@@ -687,20 +687,20 @@ job must you spend less effort in order to make time for other things. So I thin
 about, protecting your unconscious mind is about trying to take all of these small choices that you
 have to make and make them as efficiently and in as little time as possible.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="30:33">
+<turn speaker="Waleed Ammar" timestamp="30:33">
 
 Yeah. It takes some conscious effort in order to achieve this. People who tend to be a perfectionist
 will want to perfect every email and every, every piece of work. So you end with a personal note
 about how self-doubt manifest itself in your mind and how you deal with it. Would you like to share
 this with us?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Charles Sutton" timestamp="30:49">
+<turn speaker="Charles Sutton" timestamp="30:49">
 
 Yeah. Yeah. I can talk a bit about this. So we talked a little bit earlier about imposter syndrome.
 If I think personally about myself, I don't feel like an imposter, but I certainly feel self doubt
@@ -711,10 +711,10 @@ keep up with that? You know, can I do that forever? So I am being modest but may
 So when I say I just don't think I'm good enough, I'm good enough to get the job I got I guess. But
 you know, I have my own standards for where I want to be in research and I haven't gotten there yet.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Charles Sutton" timestamp="31:35">
+<turn speaker="Charles Sutton" timestamp="31:35">
 
 And so a lot of what I did to try to manage myself doubt is is just to learn to accept that. Right?
 So I don't try to get rid of my stress. I don't try to diffuse it. I just learned to accept that
@@ -725,10 +725,10 @@ as long as I can. If it's not good enough, that's my employer's problem, not min
 didn't make the silly decision to hire me. As long as somebody is willing to hire me and they're
 willing to pay me money to do things that I like to do, then I'm going to do it, right.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Charles Sutton" timestamp="32:17">
+<turn speaker="Charles Sutton" timestamp="32:17">
 
 There's a sense in which you can think that self doubt is actually a form of ego that you're
 thinking, I'm not good enough. Well, it doesn't matter how good you are, it matters what you do,
@@ -745,17 +745,17 @@ to get into research, you think that's the person you should be, and there's no 
 yourself against that standard as long as you like what you're doing, just keep doing it for as long
 as you can.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="33:28">
+<turn speaker="Waleed Ammar" timestamp="33:28">
 
 Yeah. I will try to adopt this mentality going forward. Sounds Fun.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Charles Sutton" timestamp="33:33">
+<turn speaker="Charles Sutton" timestamp="33:33">
 
 Yeah. I tried to push my thoughts away from myself, right? If I look at my career, I'm like, well,
 okay, there's some people better than me. There's some people worse than me, but if I look at the
@@ -767,10 +767,10 @@ have to stop and say, what's a problem? That's important. Where I have an edge w
 of my talents, you know, that's okay, but just stepping back and thinking, am I good enough? It's
 not really a good use of time.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="34:15">
+<turn speaker="Waleed Ammar" timestamp="34:15">
 
 Yeah. This is also related to something that I've been thinking about. AI is a crowded field machine
 learning and natural processing and vision and a lot of people are trying to do the same things in
@@ -778,17 +778,17 @@ slightly different ways and it seems like this is not the most efficient use of 
 capacities. So I feel like that's another way to think about why it's helpful to choose carefully
 what you're working on.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Charles Sutton" timestamp="34:36">
+<turn speaker="Charles Sutton" timestamp="34:36">
 
 Yeah, I think that's totally right.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="34:37">
+<turn speaker="Matt Gardner" timestamp="34:37">
 
 I guess one other coping strategy that I've found, I feel like a lot of research is like a publicity
 game in order to survive and to to make it to the next step of the tournament. You need people to
@@ -800,10 +800,10 @@ indulge myself and talk about stuff that I do, but just talk about other people 
 conversations about other people's work. Then you don't have to think so much about just publicizing
 yourself and how awkward that can be.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Charles Sutton" timestamp="35:16">
+<turn speaker="Charles Sutton" timestamp="35:16">
 
 Yeah, I think that's a great point, which is that you have to do some self promotion in order to
 survive as a researcher and if you have a lot of self doubt that makes it a lot more difficult to do
@@ -819,26 +819,26 @@ helps you instrumentally. It just helps you learn more and it helps people notic
 That's my next series of blog posts is how to do networking, but until then, you can read Phil Agre
 Networking on the Network.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="36:25">
+<turn speaker="Waleed Ammar" timestamp="36:25">
 
 Okay, perfect. Looking forward to it. All right, so any other thoughts before we conclude this
 episode?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Charles Sutton" timestamp="36:31">
+<turn speaker="Charles Sutton" timestamp="36:31">
 
 No. Thank you so much for having me. I've really enjoyed this conversation.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="36:35">
+<turn speaker="Waleed Ammar" timestamp="36:35">
 
 Likewise. Thank you very much.
 
-</Turn>
+</turn>

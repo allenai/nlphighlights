@@ -8,23 +8,23 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting recent work in
 natural language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is Matt Gardner and Walleed Ammar we are research scientists at the Allen Institute for
 Artificial Intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:11">
+<turn speaker="Waleed Ammar" timestamp="00:11">
 
 Today our guest is Roi Reichart. Roy is an assistant professor at Technion Institute in Israel. He's
 interested in a variety of topics in NLP and machine learning. Especially learning with little or no
@@ -34,27 +34,27 @@ for Natural Language Processing: Testing Significance with Multiple Datasets. It
 publication at TSEL 2017. The authors are Rotem Dror, Gili Baumer, Marina Bogomolov and Roi
 Reichart. Roi, welcome to the podcast.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Roi Reichart" timestamp="00:59">
+<turn speaker="Roi Reichart" timestamp="00:59">
 
 Hey. Hi. Very nice to be here.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="01:02">
+<turn speaker="Waleed Ammar" timestamp="01:02">
 
 Thank you. So the paper challenges the standard practice of reporting results in NLP community and
 proposes, a new framework for doing replicability analysis. Could you start by telling us the
 difference that you, you mentioned that the paper between replicability analysis and reproducibility
 because that's kind of something tha we don't talk about very often in NLP.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Roi Reichart" timestamp="01:25">
+<turn speaker="Roi Reichart" timestamp="01:25">
 
 Yeah, I agree. It's definitely not something that we talk about very often. So I think that what we
 were mostly worried about is that there is something inherent in language. I mean the multiple
@@ -68,18 +68,18 @@ in the statistical literature and at least to the the best of our knowledge. And
 more about taking well on algorithm and reproducing its results in a well defined setup. And so of
 course we, in this paper we were worried about the first problem and not the second,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="02:58">
+<turn speaker="Waleed Ammar" timestamp="02:58">
 
 All right. Hypothesis testing Is an established method, many NLP researchers use it to establish
 credibility of the results. So why, do you think that this is not a sufficient,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Roi Reichart" timestamp="03:14">
+<turn speaker="Roi Reichart" timestamp="03:14">
 
 So the thing that we were concerned about in this paper was not checking for statistical
 significance, which is like you'll say something that we do quite a lot in NLP. By the way, during
@@ -89,10 +89,10 @@ for ACL, but given that in many papers, the right statistical significance test 
 not what we were worried about. We were worried about the question of, suppose that you compare two
 algorithms on 10 or 20 or 30 datasets, which for many problems now it's quite standard.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Roi Reichart" timestamp="04:15">
+<turn speaker="Roi Reichart" timestamp="04:15">
 
 What conclusions can you draw from that? And naturally, I mean, and I think that this is something
 that many people are well aware of. If you just count the number of datasets for which you get a P
@@ -100,18 +100,18 @@ value below a pre-defined threshold, this is not something statistically valid. 
 very easy to see that. Right? So the question was what you should really do and that was the main
 problem that we address in this paper.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="04:46">
+<turn speaker="Matt Gardner" timestamp="04:46">
 
 Can you give just a simple example for why that isn't statistically valid for people who haven't
 read the paper yet?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Roi Reichart" timestamp="04:53">
+<turn speaker="Roi Reichart" timestamp="04:53">
 
 Yeah, sure, of course. So the thing is that, let's take a simple example, which were given the paper
 and suppose that you have hundred datasets. And let's say that you assume independence between these
@@ -129,10 +129,10 @@ in many other scientific disciplines. It was, I mean, I think that the biologist
 maybe aware of, very worried about because it's something that they, you know, they deal with, but
 you know, you hear it from psychologists and from many other people that do experimental work.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="06:50">
+<turn speaker="Matt Gardner" timestamp="06:50">
 
 So I've seen a bunch of papers or at least a few papers that try to be smart about this. And they
 mentioned something called the Bonferroni correction and, so I think this is where you just divide
@@ -140,26 +140,26 @@ the alpha value by the number of tests that you do so that you make the expected
 still work out right. So is this sufficient? So this is related to what you did, is that good
 enough?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Roi Reichart" timestamp="07:14">
+<turn speaker="Roi Reichart" timestamp="07:14">
 
 Yeah, so to be honest, it's related only the name. I mean, because one of the methods we employ is
 called the Bonferroni method or the Bonferroni criteria, they are all different names, but it just
 the same Bonferroni but not the same math.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="07:30">
+<turn speaker="Matt Gardner" timestamp="07:30">
 
 Okay.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Roi Reichart" timestamp="07:30">
+<turn speaker="Roi Reichart" timestamp="07:30">
 
 And, and it's true, this is definitely the first thing that comes to mind. And it makes lots of
 sense to divide the alpha by, for example, by N the number of datasets. The problem with that is
@@ -169,32 +169,32 @@ let's take the previous example, if you add 0.05 and you divide it by hundreds. 
 you can't is a case where one algorithm outperforms the other, you should get a P value below 0.05
 divided by hundred. Right? And this will rarely happen.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="08:29">
+<turn speaker="Matt Gardner" timestamp="08:29">
 
 Yeah,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Roi Reichart" timestamp="08:29">
+<turn speaker="Roi Reichart" timestamp="08:29">
 
 It's a good trick. But it really depends on the number of datasets you have and, you know, the
 confidence that you require. So with many datasets it's just that it just doesn't work.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="08:43">
+<turn speaker="Matt Gardner" timestamp="08:43">
 
 So what's your solution to this problem?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Roi Reichart" timestamp="08:47">
+<turn speaker="Roi Reichart" timestamp="08:47">
 
 Okay. So the solution, you know, I don't want to get into, you know, all the fine grain data and all
 that, but the main idea is quite simple. The main idea say the following, when you have let's say a
@@ -205,10 +205,10 @@ number of errors when you do that. And it turns out that there are many methods,
 wouldn't say many, but there are a number of methods in the statistical literature that can do two
 things that we thought can be important for NLP.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Roi Reichart" timestamp="09:49">
+<turn speaker="Roi Reichart" timestamp="09:49">
 
 So they can do the following, they can bound, upper bound, the probability to make a type one error,
 meaning the probability to reject the null hypothesis when it's true, I mean when it's, when it's
@@ -221,10 +221,10 @@ solutions but maybe not. I mean it's hard to tell. I mean it's, it's subject for
 thing is that we assume that we don't, we cannot model the dependency between different NLP
 datasets.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Roi Reichart" timestamp="11:16">
+<turn speaker="Roi Reichart" timestamp="11:16">
 
 So for example, I can maybe say that if they have a pass corpus in Greek and a pas corpus in Arabic,
 they are in some sense independent. But if I take two, samples, let's say the Wall Street Journal
@@ -233,18 +233,18 @@ with the tolerance between them, but I don't know how to model it. So the Fisher
 there is no dependency between the datasets and these quiet straightforwardly helps, for example,
 for multiple languages. And the Bonferroni method
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="12:09">
+<turn speaker="Matt Gardner" timestamp="12:09">
 
 Sorry. Do you think that's true even for say, I don't know Spanish and French or languages that are
 really close.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Roi Reichart" timestamp="12:15">
+<turn speaker="Roi Reichart" timestamp="12:15">
 
 Exactly. This is, it's a very good question. It's a very good question and this is exactly why I
 said that. And we run very explicitly in different parts of the paper that we expect the community,
@@ -253,10 +253,10 @@ we think that, you know, these are good methods as long as we make this assumpti
 either a dependency or not. And then you know, you can use the Fisher method when use independence
 Bonferroni when you use some dependence. Fine. But yeah,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="12:58">
+<turn speaker="Matt Gardner" timestamp="12:58">
 
 So you probably don't want to go too much into the math. The Fisher method involves like a formula
 has some Chi squared stuff. The Bonferroni method seemed a little more easy to explain intuitively.
@@ -264,10 +264,10 @@ Do you want to give a stab at giving? So like the Bonferroni correction that som
 read in previous papers, just dividing by the total number of experiments. And this method that you
 proposed in your paper is similar. Do you want to give an intuitive explanation for that?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Roi Reichart" timestamp="13:28">
+<turn speaker="Roi Reichart" timestamp="13:28">
 
 I think that I would agree with you when it comes to the holm procedure. I mean, in the paper we
 actually address two different problems, right? One is counting the number of hypothesis and the
@@ -280,18 +280,18 @@ In these models. When you go to the counting question, you can see that you can 
 more liberal and let your methods count it much or maybe count many more cases when actually you
 have an effect. And this is, I think it's a very big difference from,the Bonferroni correction.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="15:04">
+<turn speaker="Matt Gardner" timestamp="15:04">
 
 Okay. Yeah. Do you want to then explain what these two questions are? Like what exactly do you mean
 by this count question and the identification question. I don't think we've covered that yet.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Roi Reichart" timestamp="15:14">
+<turn speaker="Roi Reichart" timestamp="15:14">
 
 Of course. So actually there is something here that is maybe a little bit counter-intuitive. When
 you do your hundred comparisons you can ask two questions. One is very general, I did a hundred
@@ -304,10 +304,10 @@ English and Chinese, right? If it's English and Chinese and not from Spanish, ma
 I'd be a little bit confused why it was like that? So of course the identification question gives
 more information, right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Roi Reichart" timestamp="16:38">
+<turn speaker="Roi Reichart" timestamp="16:38">
 
 On the one hand it may sound a little bit counter intuitive that you get different answers to this
 question, but when you consider the fact that you get more information from the identification
@@ -318,10 +318,10 @@ counting questions tells you that there are 50 languages where the effect orders
 identification question, tells you exactly for which languages the effect counts and it's a
 different thing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="17:44">
+<turn speaker="Matt Gardner" timestamp="17:44">
 
 I see. So let me try to give an intuitive explanation for this holm procedure for the identification
 question because I think there's a really nice intuitive explanation and you can tell me if I got
@@ -333,10 +333,10 @@ from the smallest to the biggest, it's not as strict as the Bonferroni correctio
 statistically valid and it's more powerful because you're not dividing everything by N does this
 fair?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Roi Reichart" timestamp="18:37">
+<turn speaker="Roi Reichart" timestamp="18:37">
 
 Yeah. It's a fair explanation. There's one thing that I think is important to consider here, that
 the holm procedure, it's only relevant for the cases where you know that there are dependencies
@@ -353,18 +353,18 @@ this is maybe one of the reasons that we do call for, you know, for maybe a simp
 more complicated method that we consider the dependencies, but we consider this to be a first
 necessary step towards the solution of these problems.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="20:08">
+<turn speaker="Waleed Ammar" timestamp="20:08">
 
 Okay. So how what can we draw as conclusions from the results that from the experiments that you
 provided in that paper comparing the different methods?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Roi Reichart" timestamp="20:19">
+<turn speaker="Roi Reichart" timestamp="20:19">
 
 Okay. So in the paper we tried to experiment with a relatively large number of applications we had
 only 10 pages, right. But we had four different applications and these applications had different
@@ -376,10 +376,10 @@ was that when you expect or when you assume independence between the datasets, f
 lingual cases, If you just count as P values below the alpha number you will be too optimistic. So
 in those cases we should be more strict.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Roi Reichart" timestamp="21:38">
+<turn speaker="Roi Reichart" timestamp="21:38">
 
 On the other end. And that was maybe a bit surprising for us in those cases when there are probably
 dependencies, so does this very simple erroneous counting of this cases where the P value was below
@@ -390,10 +390,10 @@ are independent, yeah they were too optimistic, but when you would assume that t
 dependent, the conclusions were actually too strict and you could, you could come up with more cases
 where the F points. So it goes both ways.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="22:52">
+<turn speaker="Matt Gardner" timestamp="22:52">
 
 That's interesting. This makes me a little bit nervous because how do I know if my datasets are
 independent or not? Because like with, with the Bonferroni method versus with the Fisher method I'm
@@ -403,10 +403,10 @@ method, you get six. And with a Fisher method you get 16. So if I assume they ar
 power. But if I assume they are independent, I gain power. So how do I know which assumption is
 correct?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Roi Reichart" timestamp="23:25">
+<turn speaker="Roi Reichart" timestamp="23:25">
 
 Yeah, yeah. This is, you know, I'm not trying to not try to convince you that it's simple, but it's
 a good question. But you know, it's part of the dealing statistics, right? I mean, we have to do
@@ -417,10 +417,10 @@ under, you know, one assumption you get 6 under another assumption you get 16 an
 how, I mean, we'll have to, you know, this is also some kind of a conclusion, right? And you know, I
 think that in our field, which is very much engineering driven and for good reasons, right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Roi Reichart" timestamp="24:23">
+<turn speaker="Roi Reichart" timestamp="24:23">
 
 I mean, we develop applications that change the world. I mean, it's a good thing. I think that
 sometimes it's hard to work with such conclusions. But in other fields like biology, when you
@@ -430,10 +430,10 @@ will be part of the ablation analysis. Maybe we want to have one number, but we 
 something more like a more general discussion or more in depth discussion. It's a good question. I'm
 confused too.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="25:10">
+<turn speaker="Matt Gardner" timestamp="25:10">
 
 So, this makes me think of a related point. I've seen some papers recently. I'm thinking of one from
 EMNLP that was trying to reproduce a particular named entity recognition result. There's also a
@@ -446,10 +446,10 @@ you look at leaderboards is the researcher will sample from this training distri
 the max. But, that can be really misleading because there's actually a distribution here. Does this
 work in your paper give us any insight into solving this issue?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Roi Reichart" timestamp="26:16">
+<turn speaker="Roi Reichart" timestamp="26:16">
 
 So to be honest, one thing to remember, I think, you know, they say that and we hear it all the
 time, right, that the we reinvent research every few years we invent everything from scratch, right?
@@ -461,10 +461,10 @@ weren't results with the best hyper parameters. So I remember that my first work
 learning for parsing and there the order of the example in the pool was very significant and I
 didn't know what to do.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Roi Reichart" timestamp="27:10">
+<turn speaker="Roi Reichart" timestamp="27:10">
 
 And I ended up you know, it was my first work as a PhD student. I ended up averaging over a hundred
 cases, but of course the variance was very big. So I think that if you want to take our method and
@@ -480,10 +480,10 @@ propose in the paper. One of the papers I think talk about distribution of, cons
 distribution of numbers, and not, you know, one specific number and I think this is more straight
 forward.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="28:33">
+<turn speaker="Matt Gardner" timestamp="28:33">
 
 Okay. Yeah, I review, I've reviewed lots of papers that don't even report any amount of statistical
 significance and just say, Oh Hey, we evaluated this once on the leaderboard and we got the max and
@@ -491,10 +491,10 @@ I think these are the papers and your paper. Do a good job at pointing out these
 really want to make statistically valid conclusions, we really need to be careful about what exactly
 we're reporting. So thanks for doing this work.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Roi Reichart" timestamp="28:56">
+<turn speaker="Roi Reichart" timestamp="28:56">
 
 Yeah, thank you. I just want to to maybe to add one more comment. I think that another thing that
 can come up, another positive effect that can come up from this line for work on replicability and
@@ -506,10 +506,10 @@ review a paper and the paper reports very good results on three datasets. Right 
 to know if those were the three datasets they were a mistake and they just happen to get very good
 results they wrote a paper and they sent it for revision.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Roi Reichart" timestamp="29:48">
+<turn speaker="Roi Reichart" timestamp="29:48">
 
 Or if they tried on 300 cases and they just report on three, right. Now, if you don't have means for
 summarizing the results, you can't really ask anyone to evaluate on 300 datasets, right? Because
@@ -521,26 +521,26 @@ are willing to take this risk of making this assumption, you can summarize a ver
 experiments with one data, and this can lead to a better standardization of experiments in our
 field, I think this can be an important contribution here.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="30:57">
+<turn speaker="Matt Gardner" timestamp="30:57">
 
 Yeah, I agree.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="30:58">
+<turn speaker="Waleed Ammar" timestamp="30:58">
 
 Thank you very much for recording with us and yeah, I hope the community will start using some of
 these methods.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Roi Reichart" timestamp="31:05">
+<turn speaker="Roi Reichart" timestamp="31:05">
 
 Thank you very much for inviting me.
 
-</Turn>
+</turn>

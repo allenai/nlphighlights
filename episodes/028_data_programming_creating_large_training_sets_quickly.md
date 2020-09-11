@@ -8,23 +8,23 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting recent work in
 natural language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is Matt Gardner and Waleed Ammar, we are research scientists at the Allen Institute for
 Artificial Intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:11">
+<turn speaker="Waleed Ammar" timestamp="00:11">
 
 Today's paper is titled Data Programming: Creating Large Training Sets, Quickly. It was published in
 2016 a few months ago, written by Alexander Ratner and other colleagues at Stanford University. So
@@ -40,10 +40,10 @@ are written by a domain expert and are meant to rapidly train a machine learning
 programming, instead of manually labeling each example, you would describe the process by which the
 points could be labeled by providing a set of heuristic rules which they call labeling functions.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="01:49">
+<turn speaker="Matt Gardner" timestamp="01:49">
 
 Hold on a minute. You just said automatically generate a whole bunch of training data. And we've
 talked about a whole bunch of automatically generated training sets in NLP like the BAbi dataset and
@@ -51,10 +51,10 @@ various like the CLVR dataset, other kinds of so-called question answering datas
 automatically generated text. So this makes me a little bit nervous. Is this paper about
 automatically generating something that is supposed to be language but isn't actually language.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="02:14">
+<turn speaker="Waleed Ammar" timestamp="02:14">
 
 No. Thanks for clarifying. No. So here I'm talking about generating the labels, the input. So
 there's often like a pair that we're interested in an input which is in NLP is the gradient sentence
@@ -67,10 +67,10 @@ relevant approach in distance supervision you're assuming that some of the knowl
 that you have in the, so you assume that you have a knowledge base with a bunch of relations between
 entities and so you instantiate within the text relations between the mentions of these entities.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="03:31">
+<turn speaker="Waleed Ammar" timestamp="03:31">
 
 And assume that the, at least some of the instances will establish this relationship. Some of the
 textual mentions will establish this relationship in the knowledge base. You can think of this paper
@@ -83,25 +83,25 @@ idea of construct like using multi-view learning. Like if you have multiple clas
 different features, you can bind their predictions basically in clever ways to a whole bunch of
 unlabeled data.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="04:39">
+<turn speaker="Waleed Ammar" timestamp="04:39">
 
 So this is kind of in the same spirit, but it's a different way of doing it. Yeah. And there is like
 there's a few other related work that's discussed on the people.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="04:52">
+<turn speaker="Waleed Ammar" timestamp="04:52">
 
 So can you describe exactly what this model is doing?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="04:56">
+<turn speaker="Waleed Ammar" timestamp="04:56">
 
 Right. So the paper focuses on a binary classification problem, right? So we have a logistic
 regression model. We're trying to minimize the logistic loss using a linear model. And we assume
@@ -109,10 +109,10 @@ that we don't have label data. And sometimes we would, and the like the framewor
 label data when you have it, which is nice and important. But what this framework allows you to do
 is to specify a bunch of labeling functions. So these labeling functions takes the input.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="05:39">
+<turn speaker="Waleed Ammar" timestamp="05:39">
 
 So we'll call the input X and the output Y and the output in this case. So the input X is just going
 to be something that you can featurize you can like pass it through a feature, like extract features
@@ -125,10 +125,10 @@ predict whether a given gene has a causal effect on a disease, the input in this
 pair the gene and, and disease pair and the output and maybe the context which occurs around them in
 a sentence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="06:57">
+<turn speaker="Waleed Ammar" timestamp="06:57">
 
 And then the output is going to be +1. If we know that there is a relationship between them, there's
 a relationship -1. If we don't, if we know that there isn't and otherwise it's going to be zero. And
@@ -139,35 +139,35 @@ specific words or phrases in the context that's between the two entities. And so
 words in between the string between the gene and the disease includes the string not cause, then
 you'd assume that this is a negative example.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="07:55">
+<turn speaker="Waleed Ammar" timestamp="07:55">
 
 And then you can also like do clever things like you can just like create whatever you want. In the
 end you're using your favorite programming language to write this.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="08:04">
+<turn speaker="Matt Gardner" timestamp="08:04">
 
 This sounds like we're just writing feature extractors to get features for a logistic regression
 classifier. What, what's different? What am I missing here?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="08:12">
+<turn speaker="Waleed Ammar" timestamp="08:12">
 
 The difference is that we're treating these the values that you're returning are not going to be fed
 into the classifier the descrimitive classifier they're going to be used as labele data. So as the
 class you are trying to predict, they have a very specific symmantic.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="08:34">
+<turn speaker="Matt Gardner" timestamp="08:34">
 
 So I think then the difference is instead of writing a bunch of feature extractors that give me
 binary one hot features to say this feature is present or it's not, I'm making some assumptions
@@ -181,24 +181,24 @@ positive. And if I see this other feature, it's very likely that the label shoul
 write down a bunch of these assumptions and those are my labeling functions and I'm going to use
 them in some smart way.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="09:38">
+<turn speaker="Waleed Ammar" timestamp="09:38">
 
 Yeah, that's exactly what they're proposing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="09:40">
+<turn speaker="Matt Gardner" timestamp="09:40">
 
 Okay.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="09:40">
+<turn speaker="Waleed Ammar" timestamp="09:40">
 
 And of course there are many other features that you can define. And are likely to be useful, but
 you cannot confidently say most of the time this feature would indicate that the label is negative
@@ -207,10 +207,10 @@ use, because of the model, they use at the end, those use hand features in addit
 agree. Yeah. These labeling functions are typically things that we would include in the feature
 space.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="10:19">
+<turn speaker="Matt Gardner" timestamp="10:19">
 
 And so now this is sounding really similar to me to co-training where I have a, I guess co-training
 is you have different feature sets and you would train weights for the feature sets independently or
@@ -221,27 +221,27 @@ you're going to be hosed. But if I just have each of my independent feature sets
 setup as a single feature, that then gets away for downstream of this logistic regression classifier
 that [inaudible]
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="11:07">
+<turn speaker="Waleed Ammar" timestamp="11:07">
 
 You could have used the same intuition to train two separate models. Yes. This is different in
 several ways. Like one clear way in which it's different. You don't need label data in order to
 train the individual classifiers. But yeah, I guess I didn't say yet how they're using the label
 data.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="11:30">
+<turn speaker="Matt Gardner" timestamp="11:30">
 
 Okay, so let me let you continue.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="11:33">
+<turn speaker="Waleed Ammar" timestamp="11:33">
 
 Okay. So once you define these labeling functions, the next step is to define a generative model for
 generating the labeling functions and the class labels. So you're not just, this was confusing to me
@@ -249,17 +249,17 @@ when I read the paper. The Generative model is not trying to generate the input 
 it's not trying to generate the natural language. It's only trying to estimate the labeling function
 and the class labels which is not typically the way we use the generative model.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="12:06">
+<turn speaker="Matt Gardner" timestamp="12:06">
 
 Yeah, that sounds pretty, pretty different,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="12:08">
+<turn speaker="Waleed Ammar" timestamp="12:08">
 
 Right but anyway, so the, there are like two versions of the generative model, one of them assume
 that the labeling functions are independent and the other one assumes that there are some
@@ -270,10 +270,10 @@ learn these dependencies in a vector graph. And so I don't think the like the sp
 generative model are very important. But at the end what you get is you get a confidence score. I
 would, yeah, I'd call it a confidence score in each labeling function.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="13:08">
+<turn speaker="Waleed Ammar" timestamp="13:08">
 
 And also a measure of how often this labeling function actually produces a label because every
 labeling function has an option to upward zero, meaning I don't know how to label this thing. And so
@@ -290,10 +290,10 @@ function has one parameter that like signifies its accuracy, the degree to which
 instances. So is something that I didn't completely understand in the papers. That was all very
 clear,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="14:54">
+<turn speaker="Matt Gardner" timestamp="14:54">
 
 It sounds really similar to me to work on. How do you do confidence estimate like accuracy
 estimation of people, crowdworkers on mechanical Turk. So there are a number of crowdsourcing papers
@@ -302,19 +302,19 @@ crowdsourcing platform and no labels at all to begin with. You need to both deci
 actual labels and which people should I trust and how much and it seems like a very, very similar
 problem to what's going on here so.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="15:28">
+<turn speaker="Waleed Ammar" timestamp="15:28">
 
 That would be, that would be the maybe if but it requires that you're very careful with the labeling
 functions. You're assuming that if there is a lot of disagreement between the labeling function,
 then they're like, they're not, they're not good.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="15:43">
+<turn speaker="Matt Gardner" timestamp="15:43">
 
 Yeah. You're, relying on being able to figure out through consensus, the correct labels for at least
 some of your data points. And if like it's totally gameable if you have some adversarial workers.
@@ -322,10 +322,10 @@ But under some reasonable assumptions you can do all right. And I guess if you'r
 paper you're doing this data programming and you're assuming that the person who's writing these
 labeling functions is not out to get the learning algorithm. Yeah. So it's probably, okay.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="16:15">
+<turn speaker="Waleed Ammar" timestamp="16:15">
 
 Yeah. So that's also suggested maybe, and like an extension of this would be try and learn the
 parameters of listener to model using a small amount of, a small amount of label data. There's a
@@ -336,10 +336,10 @@ to give different weights to different training examples. So that's basically th
 You train any kind of discriminate model that you like, but give a different weight to each of the
 training examples or automatic generation depending on using this generative model.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="17:16">
+<turn speaker="Waleed Ammar" timestamp="17:16">
 
 So it's a pretty flexible framework. I'd say. I wasn't very clear on the guarantees. It makes
 because there is like various assumptions that are made throughout the paper. So, I'm not sure to
@@ -350,10 +350,10 @@ is one which is very rarely the case. And in the experiments, they compare this 
 own baseline where they defined some heuristics on how to apply the same labeling functions. So we
 have a bunch of labeling functions written.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="18:10">
+<turn speaker="Waleed Ammar" timestamp="18:10">
 
 You can either ask a domain expert to write a bigger function like another function that calls these
 labeling functions to deterministically predict the correct label or use the unit programming
@@ -363,10 +363,10 @@ filling. So it's similar to like distance supervision the distance supervision m
 don't compare to distance supervision or like any other well established a baseline in this area. So
 that was a little disappointing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="19:03">
+<turn speaker="Matt Gardner" timestamp="19:03">
 
 I guess. For those who aren't familiar, slot filling is the task of given an incomplete knowledge
 base. This is really popular in like DARPA grants. And so it's often about like terrorist attacks or
@@ -375,10 +375,10 @@ will be like, for instance, a bombing who did it, how many injuries there were, 
 And each of these is a slot that you need to fill by looking at some collection of documents. And so
 it's relation extraction, essentially inaggregate over a corpus of documents.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="19:44">
+<turn speaker="Waleed Ammar" timestamp="19:44">
 
 Right. And since we're doing binary classification here, we're only like looking at one of these
 slots at a time and trying to unfold it. So they also show that you get consistent improvements when
@@ -395,63 +395,63 @@ labeling functions in one of the domains or the application they had 146 labelin
 only imagine how long it takes to write these. But uyeah, the conflict seemed to be very low like
 the maximum conflict reported is 2% of the cases, which were labeled.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="21:45">
+<turn speaker="Matt Gardner" timestamp="21:45">
 
 So did this seem like a method that you would want to use in your work?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="21:49">
+<turn speaker="Waleed Ammar" timestamp="21:49">
 
 I think it's interesting. It's a very practical method. I would wait and see if other people also
 managed to get good results with it. But I potentially, yeah, if I had the ability that I could try
 many different things at the same time. That would be one of the things I want to try for sure. I
 guess
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="22:18">
+<turn speaker="Matt Gardner" timestamp="22:18">
 
 Seeing the pitch in the paper and the way that you pitched it, it seems to me more like if you don't
 know much of what you're doing with machine learning or fancy algorithms, here's a simpler way for
 the lay person to get involved in doing machine learning. Is that a bad characterization of what's
 going on or is that fair?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="22:39">
+<turn speaker="Waleed Ammar" timestamp="22:39">
 
 No, I don't think it's fair because just being good at machine learning doesn't obviate the need for
 training data and like all this unsupervised learning methods are not good enough, basically. When
 you don't have labeled data, you don't just hire someone who's good at machine learning. You also
 hire someone who can annotate data for you or can compile a CLVR data set for you. That's important.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="23:11">
+<turn speaker="Matt Gardner" timestamp="23:11">
 
 Yeah. Okay. I can see that. So this, so this is more a method to quickly get or get without too much
 work, a bunch of labels for a bunch of unsupervised data that you have unlabeled data. Right.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="23:25">
+<turn speaker="Waleed Ammar" timestamp="23:25">
 
 And use them in a conservative way. Without trusting them too much. That's the thing that I think is
 important.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="23:35">
+<turn speaker="Matt Gardner" timestamp="23:35">
 
 Okay. So the thing that made me think about this differently was that in addition to just getting
 some kind of labels, you're also making assumptions about the model that is going to come out on the
@@ -459,10 +459,10 @@ other end. So that means it's like a more limited kind of thing you can do. It's
 here's a new way to get me more data, more labels quickly. It's if I'm willing to constrain myself
 to use a particular class of models, here's a way to do it in a reasonable way.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="24:02">
+<turn speaker="Waleed Ammar" timestamp="24:02">
 
 Yeah. Well the constraint is not actually very restrictive. If you ask me like you typically have,
 it's very easy to give a different weight to every tuning example. And that's really the constraint
@@ -475,12 +475,12 @@ comparing heuristic method that the authors wrote, which I trust they did a good
 diligence to do this in a careful way. But it's not, it's not as compelling a result as if you had
 an existing method that is comparable.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="25:13">
+<turn speaker="Matt Gardner" timestamp="25:13">
 
 Yeah. Okay. Thanks Waleed for telling us about this paper and for the interesting discussion. Next
 time we will talk with Graham Neubig about some of his recent work.
 
-</Turn>
+</turn>

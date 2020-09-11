@@ -8,48 +8,48 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting work in natural
 language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:05">
+<turn speaker="Waleed Ammar" timestamp="00:05">
 
 This is Matt Gardener and Waleed Ammar, we are research scientists at the Allen Institute for
 artificial intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:11">
+<turn speaker="Matt Gardner" timestamp="00:11">
 
 Okay. Today our guest is Jieyu Zhao who is a PhD student at UCLA working with Kai-Wei Chang, and she
 is focused recently on issues of gender bias in natural language processing systems. Jieyu, welcome
 to the program. It's nice to have you.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jieyu Zhao" timestamp="00:27">
+<turn speaker="Jieyu Zhao" timestamp="00:27">
 
 Hi, thank you for inviting me here.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:30">
+<turn speaker="Matt Gardner" timestamp="00:30">
 
 And today we'll be talking about a recent paper titled Gender Bias in Coreference Resolution:
 Evaluation and Debiasing Methods. So first off for our listeners, can you tell us what coreference
 resolution is, in case they're not familiar with this?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jieyu Zhao" timestamp="00:47">
+<turn speaker="Jieyu Zhao" timestamp="00:47">
 
 Yeah. So when people write articles, they usually use different ways to mention people, location, or
 organizations for example, there are journalists talk about the president of the US the sentence may
@@ -59,19 +59,19 @@ of president Donald Trump or The President or, He, refers to the same person. So
 resolutions is a search task to figure out the phrases, referring to the same entity in that given
 text. So it's allow all of the fundamental steps for computer to understand the article.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="01:35">
+<turn speaker="Matt Gardner" timestamp="01:35">
 
 Great. And so what, how then does gender bias play into this? All we're trying to do is decide what
 things refer to which people are or which noun phrases refer to the same thing. How can this be
 biased?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jieyu Zhao" timestamp="01:47">
+<turn speaker="Jieyu Zhao" timestamp="01:47">
 
 Yeah, so like the example I gave you above the co-reference resolution system can recognize the
 gender pronoun he refers to the president and in the sentence however when they have some new
@@ -79,35 +79,35 @@ reports about, the chancellor of Germany who is a female, the model cannot link 
 she to The Chancellor. So this is the bias we talked about in our paper. And also a concurrence of
 publication by Ben's group at John Hopkins also find the same issue with the co-reference systems.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="02:20">
+<turn speaker="Matt Gardner" timestamp="02:20">
 
 So to give a little bit more detail, what you mean is if I see a gendered pronoun, the fact that
 it's gendered is going to affect the way my model behaves.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jieyu Zhao" timestamp="02:31">
+<turn speaker="Jieyu Zhao" timestamp="02:31">
 
 So yeah, so like if you have, for example The President and he in the same sentence, so the co-
 reference system can make correct decision that this He refers to The President. If you kind of
 change, he to she in the same context, most of the times the co-reference system will fail. They can
 all link she to The President.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="02:56">
+<turn speaker="Matt Gardner" timestamp="02:56">
 
 And why do you think that happens?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jieyu Zhao" timestamp="02:58">
+<turn speaker="Jieyu Zhao" timestamp="02:58">
 
 Yeah, so it's the co-reference systems have a lot of different things to make predictions and
 sometimes it may use some features from the lexical or from your grammar, but also there is some
@@ -116,10 +116,10 @@ get confused by the gender because like your training data set is still biased t
 fuzzy used is bias. The model gets confused by the gender hint so it will get confused and make
 wrong decisions.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="03:36">
+<turn speaker="Matt Gardner" timestamp="03:36">
 
 So how do you know that the system is actually biased? Like what if your test data also has? So
 presumably as you said, I see a lot of associations between particular genders and particular nouns
@@ -127,10 +127,10 @@ like president or secretary or something. If my test data also has bias, how can
 like how do I actually diagnose the bias in my model? What's the metric that I can use to diagnose
 this?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jieyu Zhao" timestamp="04:07">
+<turn speaker="Jieyu Zhao" timestamp="04:07">
 
 Yeah. So we all think about this questions like a wave. The first experiment that we did is that we
 swap the gender pronoun in that test dataset. And then we want to see if there is any difference in
@@ -143,48 +143,48 @@ differently, so we then come with our new window biased dataset, so in this data
 of other things. You just, so you either gender things all some, some grammar rules to test the
 model to see if the model still biased, in our dataset.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="05:26">
+<turn speaker="Matt Gardner" timestamp="05:26">
 
 Okay, great. So before we dig into the window bias data set, you introduced, can we talk about the
 details of this first experiment that you ran?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jieyu Zhao" timestamp="05:34">
+<turn speaker="Jieyu Zhao" timestamp="05:34">
 
 Yeah.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="05:34">
+<turn speaker="Matt Gardner" timestamp="05:34">
 
 So you, so you said you swapped the gender of pronouns in OntoNotes.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jieyu Zhao" timestamp="05:40">
+<turn speaker="Jieyu Zhao" timestamp="05:40">
 
 Yeah.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="05:41">
+<turn speaker="Matt Gardner" timestamp="05:41">
 
 Does that, does that work in all cases? Like say I see someone like I see father and then I see the
 pronoun he, and these are labeled as co referent. If I just swap he with she, I'm going to have a
 hard time. Right? I've like changed the data.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jieyu Zhao" timestamp="05:56">
+<turn speaker="Jieyu Zhao" timestamp="05:56">
 
 Yeah. So before we change the data what we are first do is we anonymize the data set because we
 have, like you said, the father all, we have some names like Joe or Mary can gave a hit until the
@@ -192,10 +192,10 @@ gender. So we first anonymize the data set and then we swap the gender pronoun a
 with the gender hints like waiter or waitress, then we swap on the test dataset and they want to see
 if the performance of the model is very different or not.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="06:32">
+<turn speaker="Matt Gardner" timestamp="06:32">
 
 I can understand the motivation for doing this with common nouns like we don't want for fairness
 reasons, we don't want certain noun phrases to be associated too highly with, particular genders.
@@ -203,76 +203,76 @@ But is that also true of names? Like say, John. Like do you really want to like 
 it would help a co reference model to be able to associate names at least clearly gendered names
 with gender. And so, why anonymize those?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jieyu Zhao" timestamp="07:04">
+<turn speaker="Jieyu Zhao" timestamp="07:04">
 
 Yes. We anonymize those names also.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="07:10">
+<turn speaker="Matt Gardner" timestamp="07:10">
 
 Yeah. And I'm wondering if that's really desirable, like if you really should do that or not.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jieyu Zhao" timestamp="07:16">
+<turn speaker="Jieyu Zhao" timestamp="07:16">
 
 I think we should do that because if you don't anonymize a name, then you just, swap the gender
 pronoun because the name is John we know is male, but you'll put a she in a sentence it will make
 the sentence not make sense. So we want to make all the dataset kind of a large dataset I guess. So
 we anonomize those names.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="07:40">
+<turn speaker="Matt Gardner" timestamp="07:40">
 
 Yeah, just like if I want to actually do this for my training data, it seems like it would hurt the
 performance of my system if I'm not able to use very obvious cues that like are aren't unfair to
 use.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jieyu Zhao" timestamp="07:52">
+<turn speaker="Jieyu Zhao" timestamp="07:52">
 
 So like our experimental results also show like they did, this anonymize. We have some drops in our
 performance. Yeah. It shows in our results.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="08:03">
+<turn speaker="Waleed Ammar" timestamp="08:03">
 
 So the thing that I was, I'm still not sure about is what's the like what was the intention? Like
 whats the best case scenario, I guess out of the experiment. What are we trying to accomplish?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jieyu Zhao" timestamp="08:13">
+<turn speaker="Jieyu Zhao" timestamp="08:13">
 
 Because I know that data set is bias. We want to see if we swapped the gender pronouns, if the model
 still gets similar performance, or very different preformance on the new swapped dataset.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="08:27">
+<turn speaker="Waleed Ammar" timestamp="08:27">
 
 And the assumption is if we get better performance, this means that bias is hurts. The bias that
 exists, the natural biases that exist in the data hurts the overall performance of the coref system.
 Is that the hypothesis?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jieyu Zhao" timestamp="08:45">
+<turn speaker="Jieyu Zhao" timestamp="08:45">
 
 The hypothesis is this like, we want to find a way to figure out that gender bias in the model. So
 one way is like if we have a male bias dataset and a female biased dataset, if the model performs
@@ -280,91 +280,91 @@ really different on these two dataset, it's means the model is biased, so it's l
 correct predictions with the he and the president, but it can't link she to the president, so the
 performance on these two biased data set will be very different.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="09:19">
+<turn speaker="Waleed Ammar" timestamp="09:19">
 
 And, and when you say the performance in the dataset, you mean if you change both the training tests
 or just a training data or just the test data?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jieyu Zhao" timestamp="09:27">
+<turn speaker="Jieyu Zhao" timestamp="09:27">
 
 The test data, we just want to evaluate if the model we have now is biased or not.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="09:35">
+<turn speaker="Waleed Ammar" timestamp="09:35">
 
 So when you anonymize all the than the reference that happened before the pronoun and you keep the
 he and she pronounces the same, is that right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jieyu Zhao" timestamp="09:50">
+<turn speaker="Jieyu Zhao" timestamp="09:50">
 
 Oh, so it's like they anonymize those common names and then they swap the gender pronoun from he to
 she, from she to he, we make that swap and then they test the performance on the original test data
 set and on this swapped data set. We want to see if the performance on these co-reference system is
 really different on these two datasets or not.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="10:17">
+<turn speaker="Waleed Ammar" timestamp="10:17">
 
 So the fact that it didn't change that much I think that's what you're saying. So what does this
 tell us?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jieyu Zhao" timestamp="10:24">
+<turn speaker="Jieyu Zhao" timestamp="10:24">
 
 So it's like on the benchmark alternate data set. So there are a lot of hints for the model to make
 predictions. So when there are enough hints to make the correct prediction the model is less biased
 to the gender, to the gender hint. So we want to find that a way to see if we can compare the gender
 hints to a smaller set, of settle other future hints.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="10:58">
+<turn speaker="Matt Gardner" timestamp="10:58">
 
 So you take OntoNotes, which is a very common core reference dataset. You anonymize the test data
 only you train it as normal. Is that right? Or do you, do you anonymize the training data also?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jieyu Zhao" timestamp="11:13">
+<turn speaker="Jieyu Zhao" timestamp="11:13">
 
 We did several things and the first thing, yeah, the first thing is the way, okay. So, so let me see
 it this way. So in our paper, the results part, we trained on the anonymized training dataset.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="11:26">
+<turn speaker="Matt Gardner" timestamp="11:26">
 
 Okay.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jieyu Zhao" timestamp="11:26">
+<turn speaker="Jieyu Zhao" timestamp="11:26">
 
 Yeah. Yeah. So a lot of my, the training and a test.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="11:30">
+<turn speaker="Matt Gardner" timestamp="11:30">
 
 Okay. And, and do you swap? So, so you say you anonymize and then your gender swap including
 pronouns and like gendered nouns like mother and father, you do some fancy stuff on mechanical Turk
@@ -372,108 +372,108 @@ to mine these and then you swap those two, which is pretty nice. And so do you a
 training data to when you test, when you test on the swap data or do you keep the training data the
 same?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jieyu Zhao" timestamp="11:59">
+<turn speaker="Jieyu Zhao" timestamp="11:59">
 
 I keep the training data the same.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="12:01">
+<turn speaker="Matt Gardner" timestamp="12:01">
 
 Okay. So, so if for instance, there's a big correlation between secretary and she in the training
 data that I'm going to have, and I swap the test data so that I see secretary and he if my model
 gets that wrong, then I'm going to conclude that there's some amount of bias.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jieyu Zhao" timestamp="12:20">
+<turn speaker="Jieyu Zhao" timestamp="12:20">
 
 Yeah. So yeah. So we'll see base results from just from the performers.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="12:25">
+<turn speaker="Matt Gardner" timestamp="12:25">
 
 Okay. Yep. Okay. I think I've got a handle on this experiment so far. So you said it dropped a
 little bit, how much did it drop when you did that?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jieyu Zhao" timestamp="12:34">
+<turn speaker="Jieyu Zhao" timestamp="12:34">
 
 Oh, you mean when we did the anonymize?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="12:37">
+<turn speaker="Matt Gardner" timestamp="12:37">
 
 So when you, when you test on the gender swap diversion OntoNotes, what's the performance
 difference?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jieyu Zhao" timestamp="12:44">
+<turn speaker="Jieyu Zhao" timestamp="12:44">
 
 Oh, so, Oh, we don't have this results on file now but I think the performance is a very similar,
 these alternate test dataset. Yeah. So it's not all very good way to detect the bias in co-ref.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="12:59">
+<turn speaker="Matt Gardner" timestamp="12:59">
 
 But that doesn't, it doesn't that mean that in a practical use, the model isn't actually that
 biased? Am I understanding that right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jieyu Zhao" timestamp="13:07">
+<turn speaker="Jieyu Zhao" timestamp="13:07">
 
 No, I don't think so. It's like the overall performance is good, but it's, the model can perform a
 really bad on the minor group, on the female part because we analyze the data set. We found like in
 the alternative data set about over 80% told a person entities are male. So, even though a lot of
 performance rated bad on the minor group, the overall performance is still good.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="13:34">
+<turn speaker="Matt Gardner" timestamp="13:34">
 
 But if I've gender swapped them, then now in my swapped version, 80% are female. But I guess you're
 saying still the cases where you have an ambiguous decision that would be decided by gender are a
 very small part of this data set. So you don't really see a big difference.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jieyu Zhao" timestamp="13:48">
+<turn speaker="Jieyu Zhao" timestamp="13:48">
 
 I guess like in the alternate dataset, they have long sentences, and they have a lot of other
 features so the model can use those features to make pretty good predictions.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="14:00">
+<turn speaker="Matt Gardner" timestamp="14:00">
 
 Okay. Yeah. Cool. And so then what you did next was you created a particular diagnostic dataset to
 like isolate some particularly problematic cases and see what happens. So can you tell us about this
 data set?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jieyu Zhao" timestamp="14:15">
+<turn speaker="Jieyu Zhao" timestamp="14:15">
 
 Yeah. So this dataset that we created centered around the people entities are referred to by the
 occupations. So I'll review you the labor statistics from the U S departmental of labor to associate
@@ -485,10 +485,10 @@ sentence. The first type is a pro stereotypical career path sentence for example
 hired a secretary because he was overwhelmed by the clients. So in those sentences, if we want to
 make practical co-ref decisions, the model needs some word knowledge.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jieyu Zhao" timestamp="15:20">
+<turn speaker="Jieyu Zhao" timestamp="15:20">
 
 And the second type is like the sentence the physician called the secretary and asked her to cancel
 the appointment. So in this type of sentences, that gender pronoun, we always refer to the second
@@ -505,10 +505,10 @@ see how the model will leverage different signals. For example how their gender 
 the model, especially with type two, they show that even though that grammar rule should be enough
 to me that correct. correct predictions, the models still make mistakes due to the gender bias.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="17:01">
+<turn speaker="Matt Gardner" timestamp="17:01">
 
 Yeah. That's really interesting. I liked how you set up this data set. It seems like you're pitting
 three competing influences on the model. One is background knowledge. Like how well you understand
@@ -522,10 +522,10 @@ overwhelms its knowledge of background knowledge or common sense, whatever you w
 it's, it's notion of syntax, which is really interesting. And so what did you find when you
 evaluated systems on this?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jieyu Zhao" timestamp="18:04">
+<turn speaker="Jieyu Zhao" timestamp="18:04">
 
 Yeah, so we evaluated three different systems. One is a rule based system. One is a feature based
 system and a one state of the art end to end deep learning based system. So we found that all the
@@ -535,10 +535,10 @@ on the affluent score on the pro stereotypical and anti stereotype dataset said 
 the 40% difference and the neural network system mad the second bias made that difference around
 26%. The feature based system, the last one, is around 10% difference.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="18:53">
+<turn speaker="Matt Gardner" timestamp="18:53">
 
 So just to be super clear about what, these numbers mean, that you were talking about, you said a
 40% difference. So the way you've set this data set up each pronoun that you're trying to resolve
@@ -550,10 +550,10 @@ relies on its biases it gets it wrong. Yeah. Interesting. So yeah, so there's di
 versus 37 is about a 40% difference. So which means very clearly this, this model doesn't rely on
 grammar or common sense.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="19:51">
+<turn speaker="Matt Gardner" timestamp="19:51">
 
 It relies on it's gender bias to make decisions and in difficult cases, that's a pretty nice
 demonstration. What I was particularly surprised because you would think a rural based system would
@@ -562,20 +562,20 @@ you would think it would be able to figure out that this sub clause has to share
 subject with the main clause. But it doesn't figure that out. Like it's, the worst bias system in
 this type two setting. That seems really weird to me.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jieyu Zhao" timestamp="20:31">
+<turn speaker="Jieyu Zhao" timestamp="20:31">
 
 Yeah. So we also think all the models should have, because the grammar rules came, can provide
 enough hint for the model to make predictions, but we found that all the modles is confused by like
 gender hint, so it just, ignored all the grammar rules. So the model performed really bad, also
 fount that it preformed really bad on type two dataset.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="20:57">
+<turn speaker="Matt Gardner" timestamp="20:57">
 
 Yeah. I'm just surprised. I remember like reading the papers that came out for some of these
 handwritten systems and I thought they would have taken into account this syntax rule first, but
@@ -584,17 +584,17 @@ it's a different paper that I'm remembering that you evaluated but yeah. Anyway,
 found this a surprising result that the rule based system did so poorly on the syntax constraint. I
 thought it would have done better.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jieyu Zhao" timestamp="21:25">
+<turn speaker="Jieyu Zhao" timestamp="21:25">
 
 Yeah. We also found this problem but yeah. We didn't do much deep dive into this direction. Yeah.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="21:33">
+<turn speaker="Matt Gardner" timestamp="21:33">
 
 Okay. So I guess to summarize that part then you created a new dataset that tried to balance these
 three different or tried to diagnose which of these three factors the model used the most. You found
@@ -602,10 +602,10 @@ that overwhelmingly they're using their gender bias instead of relying on common
 And so then you introduced a method to fix the gender bias or make it less of an issue. You want to
 tell us about how you did that?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jieyu Zhao" timestamp="22:02">
+<turn speaker="Jieyu Zhao" timestamp="22:02">
 
 Yeah. So there can be bias in the co-reference system. In our work we found that the bias can come
 from the data set it's trained on some external resources they use. For the data set a bias we
@@ -618,51 +618,51 @@ and then we conducted the post-processing method proposal by Tolga Bolukbasi and
 2016 to reduce the bias in the word embedding and also we also combined these two method and try to
 reduce the bias in our system.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="23:14">
+<turn speaker="Matt Gardner" timestamp="23:14">
 
 And just to give some numbers to how well this worked, looks like you went from about a 26%
 difference in the state of the art neural system to not statistically different.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jieyu Zhao" timestamp="23:25">
+<turn speaker="Jieyu Zhao" timestamp="23:25">
 
 Yeah. So yeah, so like we reduced the difference from 26 to 1% for the neural based system and also
 for the feature based. So we reduce difference from 11 to 2% and we did a statistical analysis and
 improve that. The difference after our model is no longer significant.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="23:45">
+<turn speaker="Matt Gardner" timestamp="23:45">
 
 Yeah. That, that's a nice success result.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jieyu Zhao" timestamp="23:50">
+<turn speaker="Jieyu Zhao" timestamp="23:50">
 
 Thank you,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="23:50">
+<turn speaker="Matt Gardner" timestamp="23:50">
 
 Cool. so just to wrap up this discussion, I think it's really interesting so we've talked just now
 about how you can find bias in co-reference systems. You had a paper last year about finding similar
 bias and language and vision kinds of datasets. How, pervasive is this problem across NLP do you
 think?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jieyu Zhao" timestamp="24:15">
+<turn speaker="Jieyu Zhao" timestamp="24:15">
 
 Yeah, so we have evidence to show like several other NLP tasks are bias. For example the machine
 translation task. For example, we want to translate Turkish to English and Turkish is a gender
@@ -673,18 +673,18 @@ and all of the other thing, there's another paper talking about gender bias in S
 don't remember clearly the title of the paper. So things like the gender biases widely exist in the
 NLP tasks.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="25:10">
+<turn speaker="Matt Gardner" timestamp="25:10">
 
 Do you think there are general methods that can solve it once for all of these problems or do we
 always have to think about this every time we build a model on some new system.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jieyu Zhao" timestamp="25:20">
+<turn speaker="Jieyu Zhao" timestamp="25:20">
 
 Yeah. So like we said, there could be different ways for a model to get biase maybe from the data
 set or from the resources files or maybe from the model itself. So like the method we proposed
@@ -693,34 +693,34 @@ generic way to reduce the bias, but also like the model itself, the bias from th
 maybe need some specific ways for those different models. So we could have some generic method but
 for different models we will still need some specific ways to reduce the bias.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="26:02">
+<turn speaker="Matt Gardner" timestamp="26:02">
 
 Well, great. Thanks. It was really, really nice talking to you Jieyu, you've done some really
 important work. We really need to be careful about systems that we build and you've done a great job
 highlighting problems, so thanks for your work.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jieyu Zhao" timestamp="26:16">
+<turn speaker="Jieyu Zhao" timestamp="26:16">
 
 Yeah, thank you.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="26:17">
+<turn speaker="Matt Gardner" timestamp="26:17">
 
 It was nice talking to you. See ya.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jieyu Zhao" timestamp="26:18">
+<turn speaker="Jieyu Zhao" timestamp="26:18">
 
 Yea, see you.
 
-</Turn>
+</turn>

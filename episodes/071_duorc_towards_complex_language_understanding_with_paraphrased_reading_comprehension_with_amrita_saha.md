@@ -8,23 +8,23 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting work in natural
 language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is Matt Gardner and Waleed Ammar. We are research scientists at the Allen Institute for
 Artificial Intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:12">
+<turn speaker="Matt Gardner" timestamp="00:12">
 
 All right. Today our guest is, Amrita Saha who is a research engineer at IBM research in Bangalore,
 India who has been there for several years working on various kinds of question answering stuff.
@@ -33,25 +33,25 @@ called DuoRC. This is a paper published in ACL this year, 2018 and the title of 
 towards complex language understanding with paraphrased reading comprehension. Amrita welcome to the
 program.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Amrita Saha" timestamp="00:43">
+<turn speaker="Amrita Saha" timestamp="00:43">
 
 Yeah, thanks Matt.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:44">
+<turn speaker="Matt Gardner" timestamp="00:44">
 
 So it feels like there've been a whole lot of question answering data sets released recently. Can
 you tell us about what's unique about this, what was your motivation was for creating this one?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Amrita Saha" timestamp="00:57">
+<turn speaker="Amrita Saha" timestamp="00:57">
 
 So recently like we've seen two streams of our RC datasets one towards this factual question
 answering, towards the factual passages. And the other towards the passages. So recently, like in
@@ -64,10 +64,10 @@ passage can have a lesser overlap. And then that led to core data sets like triv
 cetera. And in the narrative passage on the type of question answering area, they were newer data
 sets coming up here movie QA and narrative QA, but otherwise certain problems again with those.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Amrita Saha" timestamp="02:01">
+<turn speaker="Amrita Saha" timestamp="02:01">
 
 So movie QA, again, it had the issue of high lexical overlap between the question and the passage
 and narrative QA posed two kinds of problems. So one was very similar to movie QA. And they're also,
@@ -79,10 +79,10 @@ challenges. So not only RC, it has probably summarization problems. And secondly
 way of evaluation because the gold answers come from the plot summaries, whereas the machine is
 supposed to look at the entire book and answer.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Amrita Saha" timestamp="02:54">
+<turn speaker="Amrita Saha" timestamp="02:54">
 
 And these two answers may actually be input. They might be very different. So that's where we are
 trying, looking at this narrative passage type of question answering problems, especially over these
@@ -97,10 +97,10 @@ these plots and call up with questions along with that also come up with the ans
 question and the answer are being created from the same passage we expect this will be a simpler
 task and there'll be high level of lexical overlap between the impression and the plot.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Amrita Saha" timestamp="04:09">
+<turn speaker="Amrita Saha" timestamp="04:09">
 
 Next, we have gotten a few questions from this and this is actually a long thing to around 86,000
 questions in our data set and we call this as the self RC. Does, which we expect to be simpler. And
@@ -118,20 +118,20 @@ comparable to the movie QA or the simpler of the narrative QA dataset. What the 
 should be harder than either of these. So all of the contemporary narrative, RC datasets included
 like preface RC supposed to be a tougher for each of these.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="05:45">
+<turn speaker="Waleed Ammar" timestamp="05:45">
 
 What measure of difficulty for the dataset, like how well the humans can do on it. So I was
 wondering when you presented that question, the fourth step question that's already been asked about
 the shorter version, how often does the answer coincide with that version of the answer that the
 person who also provided a question asked?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Amrita Saha" timestamp="06:03">
+<turn speaker="Amrita Saha" timestamp="06:03">
 
 Yeah, so we actually checked to an extent. So sometimes the answer might be actually very different
 from the two plots. And it's true. Let's say the question is "Who killed Mr. X?" And in one place
@@ -143,10 +143,10 @@ check card overlap off how many times it matches or not. So that gave us like a 
 around 67 questions just before that. Also around 13% of the paraphrase, RC questions are not even
 answerable from the second or the paraphrasen plot.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Amrita Saha" timestamp="06:56">
+<turn speaker="Amrita Saha" timestamp="06:56">
 
 So only we can only for the remaining of the questions we can do this kind of statistics. But we had
 see around roughly the overlap was around 50% in those cases where the question was really answered
@@ -160,10 +160,10 @@ questions are not directly there in the passage. So it might be synthesize by di
 and every annotator might be synthesizing it in a different way, but we'll still do some kind of
 word level match to figure out whether they're talking about the same thing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="08:08">
+<turn speaker="Matt Gardner" timestamp="08:08">
 
 I guess when we talk about human performance, one way to try to get at this is like agreement
 between annotators and so if, if all I take is like, yeah, having consensus to get like the final
@@ -173,24 +173,24 @@ person besides that to give annotations and see how much they agree or, measure 
 annotators district, like the original annotators disagreed on the these to get some upper bound on
 agreement with the machine. Right.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Amrita Saha" timestamp="08:45">
+<turn speaker="Amrita Saha" timestamp="08:45">
 
 Right.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="08:45">
+<turn speaker="Matt Gardner" timestamp="08:45">
 
 Do you have any sense of how that is?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Amrita Saha" timestamp="08:47">
+<turn speaker="Amrita Saha" timestamp="08:47">
 
 Yeah. Going forward, I think yeah, we did not have this for the paper but some important points.
 It's more like a skyline that we need to establish to what extent these questions are answerable,
@@ -200,19 +200,19 @@ annotators came up with the same answer. But I agree like we should have a separ
 we take a completely other set of annotators and see if these questions are really answered. Yeah,
 that makes sense. Definitely.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="09:22">
+<turn speaker="Waleed Ammar" timestamp="09:22">
 
 Another question I had, would it make sense to have, given what you mentioned about the answer
 possibly taking multiple different forms and all of them are correct, but it makes sense to include
 multiple answers for this kind os asl.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Amrita Saha" timestamp="09:35">
+<turn speaker="Amrita Saha" timestamp="09:35">
 
 Yeah. Actually we do have multiple answers for each of these questions. Roughly. I think we have two
 to three unique answers on an average because after taking a consensus, at least unexpecting at
@@ -221,10 +221,10 @@ we take the blue or when we take the accuracy, we take the, we do that multiple 
 do the accuracy. At least it should match that particular answer which was given by at least two
 annotators. But it does have multiple references for each multiple answers.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="10:09">
+<turn speaker="Matt Gardner" timestamp="10:09">
 
 Okay. You gave a good overview at the beginning of a lot of the aspects of this work and we kind of
 dove into some details on human performance on this dataset. I think it'd be nice to dig into some
@@ -232,10 +232,10 @@ more detail on some of the things that you talked about. You started off by maki
 QA data sets that I hadn't really heard of before or hadn't I hadn't considered with narrative style
 QA and I forget what term you used.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Amrita Saha" timestamp="10:32">
+<turn speaker="Amrita Saha" timestamp="10:32">
 
 Yeah. So reason why I was talking about these two distinctions is that narrative styling and
 [inaudible], it gives a very different flavor of difficulty. So one of the things like probably a
@@ -248,10 +248,10 @@ understand the Philadelphia is a city that might probably help me do the inferen
 not be using. The fact that James Cole is a person, even though let's say James Cole is really a
 person in freebase, I probably should not be using information to infer something.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Amrita Saha" timestamp="11:31">
+<turn speaker="Amrita Saha" timestamp="11:31">
 
 So inferring which part can be fiction, which part can be a worldly fact is one of the distinctive
 factors. The other things are also this narrative question answering might bring different kinds of
@@ -264,10 +264,10 @@ But of course the main challenges which we are talking about is probably this co
 because even if they look at each of these questions, I mean I think almost all of these questions
 require this matter of common sense reasoning.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="12:32">
+<turn speaker="Matt Gardner" timestamp="12:32">
 
 So I think the first problem that you mentioned of like a knowledge base for real facts versus like
 fiction facts. We could probably get around that because I don't know like Harry Potter, fan fiction
@@ -280,10 +280,10 @@ like narrative style datasets and more factoid kinds of data sets is interesting
 question distribution that you get out from these two different kinds of datasets is different. Do
 you have any sense of if that's true?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Amrita Saha" timestamp="13:24">
+<turn speaker="Amrita Saha" timestamp="13:24">
 
 Yeah, it's possible. So we specifically focused on objective kind of questions. So we expected
 mostly what, which kind of questions only, and very few of these very descriptive how or causal
@@ -298,10 +298,10 @@ this external auxiliary knowledge and it may come from a knowledge basis. It may
 common sense repository or it may come from other modalities. Also. We didn't focus on that, but
 that was one of the motivations looking at some of the real world tasks itself.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="14:40">
+<turn speaker="Matt Gardner" timestamp="14:40">
 
 Yeah, I think that's a good point. That when constructing the dataset and when looking at the
 questions, building a system, you might think, I don't really want to have anything external, but
@@ -314,18 +314,18 @@ that are also stored in some knowledge base too. I don't know if it's too plausi
 you have a bunch of common sense stored in some neural networks weights, but no one's really
 thinking this out yet. Interesting.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="15:26">
+<turn speaker="Waleed Ammar" timestamp="15:26">
 
 Another distinction in this data set is that you allow the answers to be not exact sentence from the
 passage. Could you tell us a little more about this? Why is this important?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Amrita Saha" timestamp="15:35">
+<turn speaker="Amrita Saha" timestamp="15:35">
 
 Yeah. So actually if you look at the self RC task, which is the simpler of the two. So around 70% of
 the questions are direct spans what we did see that initially we did not have this constraint as
@@ -338,10 +338,10 @@ questions. But again, like not too many of these had this particular characteris
 up two guidelines saying that come from, let's see if you can answer it directly from the span and
 then a noted like annotate that particular span.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Amrita Saha" timestamp="16:28">
+<turn speaker="Amrita Saha" timestamp="16:28">
 
 But we did not enforce them to always answer from a given span. If the question was actually on. So
 within the paraphrase RC comprehension but required the annotator to write down something by
@@ -352,10 +352,10 @@ have two tests set, so one is which we call the span test, which is roughly 50% 
 RC, probably around 70% for the self RC problem. That is specifically in subset of the test set
 where the answers are directly spans.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="17:10">
+<turn speaker="Waleed Ammar" timestamp="17:10">
 
 And it seems like a more natural problem displayed, the side effects, that's going to be way harder
 given that current goals, at least won't give you this ability to stitch together different pieces.
@@ -363,10 +363,10 @@ I think this is a great opportunity for us as NLP community to grow like the dif
 comprehension tests. I wonder if there are existing datasets that already have this kind of answers.
 Are you aware of any other datasets?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Amrita Saha" timestamp="17:36">
+<turn speaker="Amrita Saha" timestamp="17:36">
 
 Yeah, actually or most of these like MS Marco also claims that; so, MS Marco has had the similar
 process of taking the queries from the web and the actual answers which users would have written.
@@ -375,20 +375,20 @@ are these web documents which, which according to them contain the answer and if
 answer, they actually wrote down the actual answer. That data set also has the similar
 characteristics.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="18:04">
+<turn speaker="Matt Gardner" timestamp="18:04">
 
 Yeah, I guess I find myself running away from any dataset that doesn't have a clear evaluation like
 MS Marco narrative QA, these data sets that rely on BLUE and ROUGE for evaluation. Like I don't
 trust these metrics. And so like if we don't even know how to evaluate this, then how can we claim
 to make progress? And I just don't know.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Amrita Saha" timestamp="18:24">
+<turn speaker="Amrita Saha" timestamp="18:24">
 
 Yeah, exactly. So we have the exact same initial thought. We initially did not want to, so we looked
 at what happens when something gets BLUE-8 and BLUE-10. So a lot of these are very comparable, like
@@ -402,26 +402,26 @@ that probably we are not targeting the correct evaluation metrics for all of the
 like that. There's a whole different challenge coming up with the right metric for these fuzzy
 problems.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="19:30">
+<turn speaker="Matt Gardner" timestamp="19:30">
 
 Yeah. So anyone listening, if you are reviewing a paper that does question answering, do not demand
 BLUE as a metric. Like no, that, that is not right. Don't do that. Please
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="19:41">
+<turn speaker="Waleed Ammar" timestamp="19:41">
 
 Wait. So well, how would you allow the answer to be different, yeah, of course we can do like just
 substrate matching for the why do you think this is better than BLUE?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Amrita Saha" timestamp="19:49">
+<turn speaker="Amrita Saha" timestamp="19:49">
 
 So just for the substrate matching or for the softer matching. We just had a F1 Score so what if I
 get BLUE of 20 or 0.2, I mean if I look at the actual instances where BLUE or 30 percent has been
@@ -430,10 +430,10 @@ calibration is in our head is not really continuants towards what BLUE does beca
 other aspects of it like brevity and other aspects which BLUE has internally coated up that we
 probably and fun is a little bit more familiar and yeah, that's just my perspective.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="20:28">
+<turn speaker="Matt Gardner" timestamp="20:28">
 
 Honestly, I'm not too happy with F1 for this kind of stuff either. Span based evaluation is really,
 really nice because it's clear span based question answering has its own problems. Right. But at
@@ -442,18 +442,18 @@ answering really. If you don't have some discrete set of options you can choose 
 how to evaluate language generation in the context of question answering and until we solve that
 problem, I don't know how to make progress on any of these datasets.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="20:55">
+<turn speaker="Waleed Ammar" timestamp="20:55">
 
 I mean this is a very old problem machine translation and if we did the same and decided to work on
 machine translation until we solve the evaluation problem, that will be a terrible idea.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="21:06">
+<turn speaker="Matt Gardner" timestamp="21:06">
 
 I think these are very different because machine translation, it's a lot less open-ended. The
 machine translation like a word level translation in machine translation, while of course it's not
@@ -471,69 +471,69 @@ structure or a paraphrase of the predicate argument structure in the, in the sen
 capture the same meaning not do I have lexical overlap in a few small points on this? Like really
 hard to interpret scale that is BLUE.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="22:20">
+<turn speaker="Waleed Ammar" timestamp="22:20">
 
 Yeah, that makes sense. I think that when you're trying to make in all these metrics trying to
 combine two things, getting the information and then putting it in the form that is expected and
 these two pieces are not always separable in machine translation oftentimes. Yeah. I agree word for
 word translation would solve the first role.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="22:38">
+<turn speaker="Matt Gardner" timestamp="22:38">
 
 Yeah, that's, that's a good way to articulate it. That it's information versus form and machine
 translation the problem is much more one of form and in QA the problem is much more one of
 information and blue doesn't, doesn't measure information really.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="22:50">
+<turn speaker="Waleed Ammar" timestamp="22:50">
 
 I mean I feel like we're maybe underestimating the difficulty of finding the correct words in
 translation at least its very different that the difficulty involved in finding the correct
 information in Question Answering.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="23:00">
+<turn speaker="Matt Gardner" timestamp="23:00">
 
 Right.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Amrita Saha" timestamp="23:02">
+<turn speaker="Amrita Saha" timestamp="23:02">
 
 Well just checking dialogue for evaluating dialogue, response. They had these adversarial ways of
 evaluation. Like whether the response is coming from the adversarial model or the responses coming
 from the model, which can be fooled or not. So does adversary launching of evaluation, do you think
 it's probably more meaningful in these question answerings being set up as well?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="23:24">
+<turn speaker="Matt Gardner" timestamp="23:24">
 
 I'm not familiar enough with the, that work I need to read up on it. Waleed?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="23:28">
+<turn speaker="Waleed Ammar" timestamp="23:28">
 
 Yeah, me neither.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="23:29">
+<turn speaker="Matt Gardner" timestamp="23:29">
 
 Okay, great. So this has been really interesting so far. Just to summarize what we've talked about,
 the problems with existing QA data sets is that by construction there's a lot of lexical overlap
@@ -550,10 +550,10 @@ the beginning about how you constructed this, like your annotation tasks, which 
 think at this point what we should talk about is the experiments that you ran. So how well do
 systems run on this data set?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Amrita Saha" timestamp="24:34">
+<turn speaker="Amrita Saha" timestamp="24:34">
 
 Yeah. So first let's look at the center of the two tasks, the self RC itself and for our
 consideration let's only focus on this. So what happens when the answers are directly spans from the
@@ -565,10 +565,10 @@ So that might be one of the reasons why we have lesser accuracy on this in compa
 just compared it to the... Say there were two models because we had answers which are corresponding
 to spans and answer, which are open ended.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Amrita Saha" timestamp="25:27">
+<turn speaker="Amrita Saha" timestamp="25:27">
 
 We had model just to detect the span and we had another model to generate the answer from the span.
 And the generative models are performing pretty bad. Actually the performance is much worse than the
@@ -580,10 +580,10 @@ to around 17% accuracy on the paraphrase RC task. Of course the test sets are ve
 output is a huge performance difference. So a couple of this low hanging fruits we tried to address
 in order to bridge the gap between the paraphrase RC problem and the self RC kind of problem.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Amrita Saha" timestamp="26:20">
+<turn speaker="Amrita Saha" timestamp="26:20">
 
 So we took that long passage, usually the length of a passage in the paraphrase RC cases almost
 double that of those self RC case it has around 900 words on an average. So we tried to do co-
@@ -595,10 +595,10 @@ what happens if we move the ball answer. And we could directly extract an Oracle
 size as them. Usually self RC task, so if I know my self RC plot is around 200 words around 500
 words, then I would just extract the plot surrounding my gold answer.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Amrita Saha" timestamp="27:18">
+<turn speaker="Amrita Saha" timestamp="27:18">
 
 So for, let's call it the oracle preprocessing. Let's see if this oracle preprocessing solves all my
 problems in my paraphrase RC problem. That actually leads to only 2% increase beyond that rule based
@@ -610,10 +610,10 @@ at is what happens if we do some self testing and some cross testing, right? Lik
 say a [inaudible] at our disposal, we have work of these two data sets. Then what combination of
 training or testing actually is the hardest or what combination will give us the best results.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Amrita Saha" timestamp="28:08">
+<turn speaker="Amrita Saha" timestamp="28:08">
 
 So as expected of course. So if I just train on self RC, paraphrase RC or test RC and sorry train on
 self RC or paraphrase RC or the combination of self and paraphrase RC and I just simply test on self
@@ -625,10 +625,10 @@ combinations of like either self RC or paraphrase RC on the entire data set of i
 question answers question answers. So the lowest performance happens when you just train on
 Parphrase RC which is also expected that you're training on the hardest problems.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Amrita Saha" timestamp="29:03">
+<turn speaker="Amrita Saha" timestamp="29:03">
 
 But when you test on any of these combinations, I self RC and paraphrase RC you're doing the right
 thing. And all of the pieces, this gives the lowest performance. The next level of performance are
@@ -640,19 +640,19 @@ not completely, if you use this the model or something even if you include that 
 or not the model is doing something special to attack these specific problems, it does help to some
 extent. So this was a the main conclusions that we drew from the experiment.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="29:51">
+<turn speaker="Matt Gardner" timestamp="29:51">
 
 Yeah, it was really interesting to me to see that when you train on just the harder version, the
 paraphrase RC that you do quite poorly, but adding it to the self RC improves the performance of the
 self RC. Do you have any intuition for why that might be?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Amrita Saha" timestamp="30:03">
+<turn speaker="Amrita Saha" timestamp="30:03">
 
 Yeah, it's just that, I mean if that had not happened we would have been really more worried about
 this data set that maybe it's bringing some negative signals. It's not even helping in the, if I
@@ -662,10 +662,10 @@ doing some kind of negative learning from the harder problems. Just the fact tha
 a probably a indication that it's not jeopardizing the models. But yeah, I think being more
 investigation in these.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="30:38">
+<turn speaker="Matt Gardner" timestamp="30:38">
 
 Yeah. I wonder what would happen if you train first on self RC and then on paraphrase RC one
 hypothesis is that the self RC, the easier one is, is helping you figure out like a just basic level
@@ -675,17 +675,17 @@ yourself from the actual harder problem, but you need to be in a good starting p
 like a curriculum kind of thing might help. I don't know. I just, this is just guessing here, but
 it's, it's interesting.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Amrita Saha" timestamp="31:13">
+<turn speaker="Amrita Saha" timestamp="31:13">
 
 Yeah, that's, that absolutely makes sense, I could try it sometime.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="31:17">
+<turn speaker="Matt Gardner" timestamp="31:17">
 
 Yeah. And, yeah, just to get, just to give a quick example from the paper, this is the first example
 that shows up. The movie is called 12 Monkeys. There's a question called Peters is a board the plane
@@ -700,19 +700,19 @@ would think training on self RC would distract you from answering this harder ki
 it's just getting us like a baseline kind of like lexical matching signal in the model. I don't
 know.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="32:17">
+<turn speaker="Waleed Ammar" timestamp="32:17">
 
 Could it be that that improvement we're seeing just my increasing number of training samples. I'd be
 interested in seeing if you can solve for the same number of examples in the training sets still
 that our performance, by combining self RC or paraphrase RC.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Amrita Saha" timestamp="32:32">
+<turn speaker="Amrita Saha" timestamp="32:32">
 
 Some more ablation tests would be definitely interesting to see. So one more thing I just wanted to
 add the other resource which we might be overlooking in this particular task of question answering
@@ -722,28 +722,28 @@ we have two snippets of each of these paraphrase documents and code where given 
 that kind of resource might be helpful for other problems where you try to learn paraphrases or
 something insists can answer these problems.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="33:13">
+<turn speaker="Matt Gardner" timestamp="33:13">
 
 Yeah, that's an interesting point. Well thanks. Amrita for coming out. This was a really interesting
 discussion. Is there anything you wanted to talk about that we missed, or do you have any final
 thoughts before we conclude?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Amrita Saha" timestamp="33:22">
+<turn speaker="Amrita Saha" timestamp="33:22">
 
 A, No. So yeah. We are also starting to work on these problems, so I'll definitely encourage people
 to work on these and augment the data set and, yeah.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="33:35">
+<turn speaker="Matt Gardner" timestamp="33:35">
 
 Great. Thanks.
 
-</Turn>
+</turn>

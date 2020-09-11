@@ -8,15 +8,15 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting work in natural
 language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is Matt Gardner and Waleed Ammar. We are research scientists at the Allen Institute for
 Artificial Intelligence recently one of the podcast listeners suggested that we talked about common
@@ -25,24 +25,24 @@ tell us about common sense reasoning Yejin is an assistant professor at the scho
 Science and Engineering at the University of Washington and a senior research manager at AI2.
 Welcome to the program Yejin.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yejin Choi" timestamp="00:29">
+<turn speaker="Yejin Choi" timestamp="00:29">
 
 Hi, thanks for inviting me. I'm happy to be here.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:33">
+<turn speaker="Waleed Ammar" timestamp="00:33">
 
 So first, could you tell us what is Common Sense and why is it relevant to us as NLP researchers?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yejin Choi" timestamp="00:39">
+<turn speaker="Yejin Choi" timestamp="00:39">
 
 So the operational definition that I like to go with is that common sense is the basic level with
 practical knowledge and reasoning that concerns everyday situations and events that are commonly
@@ -59,18 +59,18 @@ important for humans to interact with each other in a reasonable way then intera
 world in a safe way. So as AI becomes more relevant to your lives, it's important that we model
 this.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="01:53">
+<turn speaker="Waleed Ammar" timestamp="01:53">
 
 And do you perceive this area and inquiry into the scientific nature of common sense reasoning or is
 it more of adding an ability so that we can do the NLP tasks we care about better?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yejin Choi" timestamp="02:04">
+<turn speaker="Yejin Choi" timestamp="02:04">
 
 That's a great question. And in fact I think research about common sense, knowledge and reasoning
 should be motivated in both ways. On one hand it's intellectual interest and then the other
@@ -83,10 +83,10 @@ common sense, understanding about the world. For a long time it seems that the A
 tried to avoid this question of how do we acquire knowledge and represents knowledge and store
 knowledge so that you can rely on that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yejin Choi" timestamp="03:02">
+<turn speaker="Yejin Choi" timestamp="03:02">
 
 When reasoning about previous nuance situations, which humans are very robust at, but today's AI is
 not. In terms of the practical significance, there are a lot of NLP slash AI applications that we
@@ -99,10 +99,10 @@ machines, machines find translation is relatively easy compared to making chitch
 dialogues with humans. So in order to really solve that sort of challenge, we do need to address
 knowledge and representation about the world.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yejin Choi" timestamp="04:04">
+<turn speaker="Yejin Choi" timestamp="04:04">
 
 And then even for some of the tasks where we do feel like things are working pretty well, even
 including machine translation, there are always some strange examples that people can easily find
@@ -113,10 +113,10 @@ cases, but if you want to build a system that really robust against all these lo
 then it's likely that we do need to still think about how to address this unsolved question about
 common sense.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="04:47">
+<turn speaker="Waleed Ammar" timestamp="04:47">
 
 Yeah, that's a good point because I was thinking earlier about whither the existing tasks that
 people already care about in the NLP community are sufficient for motivating work on common sense
@@ -124,10 +124,10 @@ and I think what you're seeing is they're not because even though they will bene
 only a few handful of examples in a test set which will benefit. It's not going to be easy to
 demonstrate the benefit empirically.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yejin Choi" timestamp="05:11">
+<turn speaker="Yejin Choi" timestamp="05:11">
 
 Yes, exactly. So I think it's in part to, due to the dataset design itself being a little bit narrow
 for lets just say QA for example, most QA problems make rather full question or literal information
@@ -140,10 +140,10 @@ challenges, so the long tail problems are always there. It's a serious practical
 because there are always new problems that the training data does not cover and so for that, again,
 common sense knowledge is a big concern.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="06:15">
+<turn speaker="Matt Gardner" timestamp="06:15">
 
 I feel like this problem probably comes up in basically all of NLP at all levels. Even part of
 speech tagging or dependency parsing. There's this very common example about "eating spaghetti with
@@ -153,51 +153,51 @@ these like traditional NLP tasks are easy enough with only very shallow common s
 of the time. But we could, if we wanted to talk about like a hard dependency parsing common sense
 data set. Does this make sense?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yejin Choi" timestamp="06:51">
+<turn speaker="Yejin Choi" timestamp="06:51">
 
 Yeah, that would be great. In fact, I suppose I was recently thinking more about very different
 types of NLP/language and vision challenges, that might require common sense knowledge more
 directly, but I really liked that idea of maybe going back to these core NLP datasets and then
 really dial up the portion of the challenges that do require common sense.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="07:18">
+<turn speaker="Waleed Ammar" timestamp="07:18">
 
 Just like subsets in the existing system, we could try to find those examples.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="07:23">
+<turn speaker="Matt Gardner" timestamp="07:23">
 
 Yeah, I guess my thought was just that as you say this, this problem really is pervasive, like
 understanding language, really understanding language requires really understanding the human
 experience and all of this stuff that we call common sense. And so we should be able to see these
 phenomenon across any tasks that we can think of as long as we like look for it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yejin Choi" timestamp="07:42">
+<turn speaker="Yejin Choi" timestamp="07:42">
 
 Yeah, totally.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="07:43">
+<turn speaker="Waleed Ammar" timestamp="07:43">
 
 So could you tell us about some of the challenge data sets that you've been working on?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yejin Choi" timestamp="07:48">
+<turn speaker="Yejin Choi" timestamp="07:48">
 
 Yeah, so, a lot has happened in the past, maybe nine to 12 months, it seems, so my group has
 generated about seven different data sets. I don't know what happened with my group, we all got very
@@ -208,10 +208,10 @@ physical interactions. And then we had a SWAG and HellaSWAG earlier, that is sor
 generalization of SNLI were natural language inference data set, but focusing more on the kind of
 premise of hypothesis pairs so that would require common sense inferences.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yejin Choi" timestamp="08:45">
+<turn speaker="Yejin Choi" timestamp="08:45">
 
 And then we also have yet another generalization of the NLI focusing on objective reasoning instead.
 And then, we also had recently WinoGrande dataset, which is much larger version of the Winograd
@@ -223,10 +223,10 @@ maybe given a text snippet which is about someone struggling to get help wearing
 morning but having to get help from someone else and the text reads like "the person is new to the
 situation and really finding that experience not very pleasant."
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yejin Choi" timestamp="09:43">
+<turn speaker="Yejin Choi" timestamp="09:43">
 
 When you read that sort of context. Most people can understand the person may have acquired the new
 physical circumstances that requires getting help, there may be a physical disability so people can
@@ -235,18 +235,18 @@ acquired. And so current QA systems rely on finding text snippet that happened i
 whereas these sort of QA problems require actually reasoning about something that's not in the text
 context.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="10:18">
+<turn speaker="Waleed Ammar" timestamp="10:18">
 
 So the answers, the choices that you get in the question are not necessarily snippets in the text
 then, in that program?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yejin Choi" timestamp="10:21">
+<turn speaker="Yejin Choi" timestamp="10:21">
 
 Yes and no. So still formulated that as multiple choice questions so that it's easy to evaluate. We
 also report model performance in a general setting. Meaning what if the model has to just answer by
@@ -254,17 +254,17 @@ generating the answer instead of choosing one of the four or five choices. So, i
 course the evaluation is much harder, but it is still more realistic framing of the problem that I
 wish the community works on. So we report both ways.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="10:54">
+<turn speaker="Waleed Ammar" timestamp="10:54">
 
 That's great. So are there other datasets?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yejin Choi" timestamp="10:55">
+<turn speaker="Yejin Choi" timestamp="10:55">
 
 So right, so those are, what we did but there are a lot of other really exciting datasets that came
 out at the same time. So of course common sense QA data set by Alon Talmor and other coauthors that
@@ -278,19 +278,19 @@ datasets like ordinal Common-sense Inference Dataset by John Hopkins, which was 
 just only two years ago. But it seems that the past one year or two we've started to see a lot more
 data sets. I think I noticed some at EMNLP this year too, we find it more.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="12:08">
+<turn speaker="Matt Gardner" timestamp="12:08">
 
 So when you're thinking about building these datasets, the space of possibilities seems vast. How do
 you decide what to do? Do you have some kind of categorization of what kinds of things you might
 want to build a data set around? How do you think about this?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yejin Choi" timestamp="12:22">
+<turn speaker="Yejin Choi" timestamp="12:22">
 
 So that's really great question. And I don't think personally that too, we have really nailed it
 down data ets yet despite the fact that as a community we suddenly have a lot more new data sets.
@@ -303,10 +303,10 @@ of NLI. So that's one way to do that. But there may be other ways to do that. An
 on existing core NLP problems, we might realize that we really needed to make a different design
 choices.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yejin Choi" timestamp="13:24">
+<turn speaker="Yejin Choi" timestamp="13:24">
 
 So I feel like I'm only beginning with understanding of other datasets this year after new
 experience of making a bunch of them. And I hope that as a community we can make better data sets
@@ -320,10 +320,10 @@ we didn't know that there was too as a result, we will also have to research mor
 biases, how we automatically remove them and then how to acquire a better problem question answer
 pairs.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="14:26">
+<turn speaker="Waleed Ammar" timestamp="14:26">
 
 Well that brings me to the next question I have in mind, just to play the devil's advocate here with
 so much energy and efforts focus on building common-sense data sets. I wonder if we actually need to
@@ -331,10 +331,10 @@ explicitly model common-sense. Maybe if we just structure our model in the right
 large data sets and pre-train on conceptualized representations. Maybe we don't need to explicitly
 model common-sense anymore and our models will still learn those associations.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yejin Choi" timestamp="14:54">
+<turn speaker="Yejin Choi" timestamp="14:54">
 
 Yeah, so that's really a good philosophical question for which probably nobody really has a definite
 answer yet, but my position this year is that we do need some combination of both in the following
@@ -346,10 +346,10 @@ and then reasoning builds on top of that. But after decades of research as a com
 be the case that these sort of super explicit approaches are fairly brutal and it's a little bit
 hard to generalize out of it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yejin Choi" timestamp="15:51">
+<turn speaker="Yejin Choi" timestamp="15:51">
 
 And then you have this burden of having to write down every single piece of knowledge. If you think
 about how humans operate though, we never really write that much. We do write down a lot, but we
@@ -362,10 +362,10 @@ might, you know, wish that, Oh, these neural network can just learn from unstruc
 images and then acquire knowledge all just on it's own through unsupervised learning words, self
 supervised learning at best.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yejin Choi" timestamp="16:47">
+<turn speaker="Yejin Choi" timestamp="16:47">
 
 It might seem like a supervised learning is sort of not as elegant, or not as principally to some
 degree. But one way to think about hybrid between explicit and implicit primarily for practical
@@ -377,10 +377,10 @@ come up with a new pair then it may not work. I think it's good to have some amo
 knowledge that's written, in order to educate or provide as a training data for neural networks so
 it's almost like how humans also learn about the world.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yejin Choi" timestamp="17:42">
+<turn speaker="Yejin Choi" timestamp="17:42">
 
 It's not the case that we only passively observe the world and then somehow, or just like read a lot
 of texts, then acquire knowledge. We also learn language by taking classes and we also learn about
@@ -392,10 +392,10 @@ have found such initial results that we published an ACL this year that we named
 is a neural network based on transformers that were declarative knowledge included in autonomy,
 which is yet another work that we had earlier this year at AAAI.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yejin Choi" timestamp="18:36">
+<turn speaker="Yejin Choi" timestamp="18:36">
 
 And that's a knowledge graph on common-sense. And it turns out by doing so this neural
 representation of common-sense graph generalize much better than what you would have imagined based,
@@ -406,10 +406,10 @@ translate that explicit knowledge into influence at neural space and then in thi
 generalize it better. And then even do the transfer learning from language models to knowledge
 models?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="19:16">
+<turn speaker="Waleed Ammar" timestamp="19:16">
 
 Yeah. Although in this particular case the task it's self is design can capture the degree to which
 you have common-sense. So I wouldn't say it's a very fair experiments to judge that with the need
@@ -417,10 +417,10 @@ for explicit modeling. I'd be very curious to know if there are results that sho
 design without common-sense in mind benefited or did not benefit from adding some symbolic
 representation of common sense in the model.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yejin Choi" timestamp="19:45">
+<turn speaker="Yejin Choi" timestamp="19:45">
 
 Right. So that would be definitely one of the important next steps. In fact, there have been some
 research about this nature always in the past as well. So I think more depends on for example, had
@@ -428,27 +428,27 @@ these concepts in their base knowledge integration in order to improve the perfo
 QA. And if I remember right, it may have been last year in an NLP paper of course you know this sort
 of like SOTA always gets updated and then maybe the story is a little bit different with Roberta,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="20:14">
+<turn speaker="Waleed Ammar" timestamp="20:14">
 
 Yeah.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yejin Choi" timestamp="20:14">
+<turn speaker="Yejin Choi" timestamp="20:14">
 
 We still do not know how to best integrate knowledge representation down to some neural network for
 a particular target task. Whatever we did in the past are reasonable first steps, but I don't think
 those are definitely the best options and that integration sorta depends on how we even model
 knowledge in the first place.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yejin Choi" timestamp="20:37">
+<turn speaker="Yejin Choi" timestamp="20:37">
 
 And a lot of the previous work has this flavor of retrieving knowledge from knowledge graph and then
 go from there. But it might be that we should rather focus on neural representation of knowledge and
@@ -459,19 +459,19 @@ say whether how exactly we have to do it and then whether it's completely possib
 do have some unpublished results that seem to suggested that sort of knowledge integration doesn't
 help them for some demonstrated tasks.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="21:23">
+<turn speaker="Waleed Ammar" timestamp="21:23">
 
 You mentioned atomic passing, but I think it deserves more of a discussion because I feel like it's
 a very valuable resource when it comes to using common-sense reasoning. So can you elaborate a
 little bit on what atomic is?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yejin Choi" timestamp="21:36">
+<turn speaker="Yejin Choi" timestamp="21:36">
 
 Right? So Atomic is knowledge graph described in natural language that includes 900 thousands of
 if/then rules all in natural language. Those rules focus on by and large social situations that
@@ -485,10 +485,10 @@ taxonomic acknowledges instead of if/then reasoning models that focus more on ca
 due to the necessity of wanting to have this if/then knowledge revealed to that resource you've
 other existing resources covered those you would have not needed to do that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yejin Choi" timestamp="22:53">
+<turn speaker="Yejin Choi" timestamp="22:53">
 
 There are two interesting aspects of this. One is that everything is included in language, natural
 language. Instead of trying to come up with list of programs or some sort of like a prologue or some
@@ -500,18 +500,18 @@ reasoning down to knowledge. So in some sense some of these like if/then reasoni
 memorized knowledge that's reactive and you don't necessarily think so hard to draw any of these
 inference but it's almost like we know them so well enough so we just reason about them,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yejin Choi" timestamp="23:51">
+<turn speaker="Yejin Choi" timestamp="23:51">
 
 It's sort of like type one type two type reasoning and we are looking at shifting some of this
 reasoning into the knowledge space and then trying to see what we can do with it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="New Speaker" timestamp="24:05">
+<turn speaker="New Speaker" timestamp="24:05">
 
 Yeah. What I find most exciting about atomic is that it captures events that are not typically
 discussed in text so I remember on your talks before you talk about how the reporting bias would
@@ -520,10 +520,10 @@ made sure that you're not recapturing what people already talk about texts becau
 don't talk about the common-sense reasoning, it's just not news worthy. So I feel like that's,
 that's very valuable.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yejin Choi" timestamp="24:36">
+<turn speaker="Yejin Choi" timestamp="24:36">
 
 Yeah. So it's exactly that. Due to reporting bias, it's really hard to learn, acquire this sort of
 knowledge entirely automatically from unstructured texts, no matter how much text the model may be
@@ -538,18 +538,18 @@ oftentimes can make correct predictions about such computational cases beyond ou
 that's really demonstrating the strength of today's neural language models that are just so powerful
 in generalizing over, you know, many different previous events in sequence of words and phrases.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="25:57">
+<turn speaker="Waleed Ammar" timestamp="25:57">
 
 Yeah. I'm wondering, uh, if you needed to do any model customization to enable this kind of transfer
 because the language is different. You have X's and Y's and you're in Atomic. So how do you?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yejin Choi" timestamp="26:10">
+<turn speaker="Yejin Choi" timestamp="26:10">
 
 So we didn't do very much for that particular paper, but I suspect that one can do probably much
 better with more experiments. But the simple thing we did was we started from GPT-2, pre-trained
@@ -559,18 +559,18 @@ results in final Comet model, to be able to generalize Atomic for just natural l
 of events. So we have this online demo that's linked from either my home page or also theres a link
 from AI-2 that you can play with and see what happens.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="27:01">
+<turn speaker="Waleed Ammar" timestamp="27:01">
 
 Great, so what are some of the interesting research questions in common-sense reasoning today you
 think people should be working on?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yejin Choi" timestamp="27:08">
+<turn speaker="Yejin Choi" timestamp="27:08">
 
 Like we discussed earlier having better data sets, better challenge datasets I think is likely to be
 the ongoing input time to research a question and then I wish to see knowledge modeling being a
@@ -581,10 +581,10 @@ this input/output pairs a lot of input/output pairs. For particular target task 
 supervised tasks. Although language model or pre-trained models in general are powerful to enable,
 supervised learning down the road.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yejin Choi" timestamp="28:00">
+<turn speaker="Yejin Choi" timestamp="28:00">
 
 The thing is language model on their own don't do really well in a zero shot setting. It's almost
 useless for most of these QA problems. Reasoning challenges unless you have a lot of in domain
@@ -598,19 +598,19 @@ declarative knowledge that it's lacking, and then also how do we then integrate 
 neural networks in a more efficient way. So multiple really hard challenges that we need to
 investigate.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="29:04">
+<turn speaker="Matt Gardner" timestamp="29:04">
 
 Yeah. On along the lines of one of those things that you said for Atomic for instance, you said as a
 very small slice of common-sense, are there any theories of common-sense that we could build off of?
 Do you know of any?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yejin Choi" timestamp="29:17">
+<turn speaker="Yejin Choi" timestamp="29:17">
 
 So like i'm a little hesitant here because I, so I know that there's this some AI sub community that
 has focused on common-sense knowledge and reasoning for a long time and they're still working on
@@ -621,20 +621,20 @@ some theories around there. It's just that always translating that to some actio
 actually building systems and models seems to be a major challenge. So basically I don't really have
 a good answer for that. That's a really good question to perhaps think more about as a community,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="30:11">
+<turn speaker="Matt Gardner" timestamp="30:11">
 
 More than just theories of how we reason with common-sense. Just even what is common sense. There
 are a lot of linguistic theories about what is language, what are the phenomena in language. We use
 these to build particular tasks. Like, I wonder if there's some kind of theory of what is common-
 sense that we can then build datasets around and so on.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yejin Choi" timestamp="30:30">
+<turn speaker="Yejin Choi" timestamp="30:30">
 
 I think there's some more maybe to be learned from developmental psychology and literature where
 they do study how babies, when and how babies acquire different types of common-sense, understanding
@@ -649,10 +649,10 @@ away. So you know, babies cannot really understand the parents until they reach 
 seems that we might be able to look at this literature and at least to learn what kind of different
 knowledge and reasoning we do need to cover eventually.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="31:42">
+<turn speaker="Waleed Ammar" timestamp="31:42">
 
 When you mentioned trying to do more of a knowledge modeling instead of just language modeling. The
 question that comes to my mind immediately is which knowledge presentation do you want us model,
@@ -661,10 +661,10 @@ other is natural or not. The nice thing natural language is that it occurs frequ
 can trust its use for representation it's hard to argue the same for any particular knowledge
 acquisition.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yejin Choi" timestamp="32:09">
+<turn speaker="Yejin Choi" timestamp="32:09">
 
 Sure. Yeah. So in that sense we probably should be super open minded about how that knowledge should
 look and I have zero intent to say. Atomic is the way to go at all like for that kind of knowledge
@@ -675,28 +675,28 @@ language model in the one might argue well that's different because it's a self 
 predicting words before and after, but still the goal is not really acquire knowledge abstract away
 concepts in that somehow reason about that, store that in some mental space at all yet.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yejin Choi" timestamp="33:02">
+<turn speaker="Yejin Choi" timestamp="33:02">
 
 It seems that certainly that's how humans acquire their understanding all about the world and maybe
 we need the different learning entirely different learning paradigm where the goal of learning for
 machine is not particularly about a particular target task but really more about just making sense
 of the world and building these concepts and being able to abstract away objects and concepts own.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="33:26">
+<turn speaker="Waleed Ammar" timestamp="33:26">
 
 Wonderful. Do you think this is the future of this area or if you look still like things that
 wouldn't happen or you will be working on further?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yejin Choi" timestamp="33:36">
+<turn speaker="Yejin Choi" timestamp="33:36">
 
 I definitely see that as a community there are increasing research interest in common-sense, which
 is very exciting to me and in part that I was really surprised to see DARPA program which in common-
@@ -710,49 +710,49 @@ but with sometimes certain things can happen. Who knows? These days who knows, t
 advancing so fast with neural networks, so maybe we can still hope that we did some reasonable
 future. We can see alot of progress in the field with the support of DARPA.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yejin Choi" timestamp="34:51">
+<turn speaker="Yejin Choi" timestamp="34:51">
 
 And then even at, EMNLP this year, I see suddenly more papers with common-sense in the titles. I
 think I noticed nine papers among the accepted papers in EMNLP this year, and that's only the title.
 Who knows? There may be other papers that touch on common-sense.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="35:09">
+<turn speaker="Waleed Ammar" timestamp="35:09">
 
 Yeah, I bet you are reviewing some of these.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="35:09">
+<turn speaker="Waleed Ammar" timestamp="35:09">
 
 Great, so that's exciting. And also lots of funding for research for grad students, so that's great.
 Were there anything that you were hoping or you would like to talk about, which we didn't cover in?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yejin Choi" timestamp="35:25">
+<turn speaker="Yejin Choi" timestamp="35:25">
 
 That might be all.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="35:29">
+<turn speaker="Waleed Ammar" timestamp="35:29">
 
 Thank you for the discussion.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yejin Choi" timestamp="35:29">
+<turn speaker="Yejin Choi" timestamp="35:29">
 
 It was fun, thank you.
 
-</Turn>
+</turn>

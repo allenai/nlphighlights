@@ -8,23 +8,23 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting recent work in
 natural language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is, Matt Gardner and Waleed Ammar. We are research scientists at the Allen Institute for
 Artificial Intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:12">
+<turn speaker="Matt Gardner" timestamp="00:12">
 
 Okay. So today's paper is A Comparative Study of Word Embeddings for Reading Comprehension by Bhuwan
 Dhingra, Hanxiao Liu, Ruslan Salakhutdinov, and William Cohen, these are folks at CMU. The two
@@ -34,39 +34,39 @@ itself. And so if you're not really careful about how you compare models, if you
 the initialization consistence constant, you can arrive at incorrect conclusions about which model
 is superior.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:52">
+<turn speaker="Waleed Ammar" timestamp="00:52">
 
 So I feel like this idea that we we should care a lot about how we initialize neural networks and
 the fact that we should control for every change we're going to make in the neural network is
 generally considered to be good practice for a long time. Why do you think this paper is
 contributing to what we already know?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="01:14">
+<turn speaker="Matt Gardner" timestamp="01:14">
 
 I think the interesting point here is the size of the effects in word embeddings. So they have this
 figure here that shows that accuracy can change by 4% absolute just by changing the word embeddings
 that you use, the way that you initialize your word embeddings and that difference is larger than
 the difference in the gain that you get by switching to a better model structure.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="01:41">
+<turn speaker="Waleed Ammar" timestamp="01:41">
 
 I see. So what, aspects of the word embeddings do they account for the imagery? Because I can think
 of many things that you can study about word embeddings including their size, the way you train them
 in the model itself or the training data.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="01:56">
+<turn speaker="Matt Gardner" timestamp="01:56">
 
 Yeah, they in particular looked at a couple of things. One was which method do you use to, what
 algorithm do you use to create the word embeddings using GloVe or word2Vec skip gram vectors. So the
@@ -74,17 +74,17 @@ kind of vector that you get and then how large the vectors are and what corpus y
 They didn't do an exhaustive comparison of all of the options there, but they varied those different
 things.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="02:20">
+<turn speaker="Waleed Ammar" timestamp="02:20">
 
 So which of these did they find to be important or maybe all of them are important?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="02:24">
+<turn speaker="Matt Gardner" timestamp="02:24">
 
 All of them are different. Definitely important. They did make a recommendation that you should just
 use off the shelf GloVe vectors that are a hundred dimensional at least for these tasks. That seems
@@ -93,19 +93,19 @@ should use across all of NLP. But it's interesting that they do have a good set 
 show that across all of their variations on this task of reading comprehension these vectors do do
 significantly better for whatever reason.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="02:58">
+<turn speaker="Waleed Ammar" timestamp="02:58">
 
 Right. I guess before someone releases a set of embeddings, they put on a lot of effort and tuning
 them and making sure they do all the tricks in the book in order to make sure these are good
 embeddings before sharing them. So maybe there's a reason for this.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="03:15">
+<turn speaker="Matt Gardner" timestamp="03:15">
 
 Yeah, that's a good point there. There was one other interesting aspect of this paper. It wasn't
 just about how you initialize word embeddings. They also looked at how you treat out of vocabulary
@@ -116,10 +116,10 @@ data test to make good parameters for these words and I will use them in what we
 vocabulary and the rest of the words, I'll map to some token that I'll call OOV out of vocabulary
 and I will just lump all of them together as if they were the same token.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="03:59">
+<turn speaker="Matt Gardner" timestamp="03:59">
 
 And then at test time, when I see a word I haven't seen before, at least I've estimated some
 parameters associated with rare words so I can do something reasonable there. What this paper does
@@ -132,18 +132,18 @@ test to make good vectors. And so if you use this OOV token representation at te
 throwing away information that was in that vector, the pre-trained vector that you could have made
 use of.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="04:49">
+<turn speaker="Waleed Ammar" timestamp="04:49">
 
 Even though the other word embeddings for the words in the training data have drifted away from the
 original estimation. This still seems to be a useful signatories thing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="04:59">
+<turn speaker="Matt Gardner" timestamp="04:59">
 
 Yeah, there's some, I guess that's a bit of a different issue. They didn't look at that
 particularly, I don't think, the question to me is how much do the word embeddings actually drift?
@@ -159,19 +159,19 @@ passage contain information about the question that you're asking. And if there 
 that are OOV in your passage and you're trying to match an OOV token in the question you don't have
 a good way to distinguish between OOV tokens in the passage. Different OOV tokens.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="06:17">
+<turn speaker="Waleed Ammar" timestamp="06:17">
 
 Yeah, that makes sense. I guess if someone tries to define features that try to capture the
 similarity like the edit distance between the words that are out of vocabulary, maybe that will out
 date the need for modeling different words.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="06:36">
+<turn speaker="Matt Gardner" timestamp="06:36">
 
 Yeah, that's a good point. And how other models handle this is do like a character level
 convolutional neural net encoder. So you get an addition to some pre-trained word, word embedding to
@@ -182,17 +182,17 @@ so, in the setting that you're not using a character level encoder to handle thi
 do, they say with good evidence and good reason is assigned random vectors, random unique vectors to
 each token at test time that would have otherwise gotten the same OOV representation.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="07:22">
+<turn speaker="Waleed Ammar" timestamp="07:22">
 
 So that's removing the bias but it's not informing the prediction.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="07:27">
+<turn speaker="Matt Gardner" timestamp="07:27">
 
 Well, it definitely can because imagine you have some LSTM encoder that's encoding the question and
 comparing it to the encoding of the passage. You could imagine the LSTM hidden states taking the
@@ -201,34 +201,34 @@ you've encoded in the question and the same random vector, like you've never see
 before, but it's a random vector and it's the same in the question and the passage, then the LSTM
 has some means of connecting the dots.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="07:58">
+<turn speaker="Waleed Ammar" timestamp="07:58">
 
 I see so it words are already identified.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="07:58">
+<turn speaker="Matt Gardner" timestamp="07:58">
 
 Yeah. So it feels to me like this is more of an issue when you have matching kinds of problems and
 I'm not sure you would get the kinds of gains that they show on other tasks that don't have this
 matching problem like for named entity recognition or part of speech tagging.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="08:14">
+<turn speaker="Waleed Ammar" timestamp="08:14">
 
 So yeah, it would have been interesting if they had also analyze the character embedding and whether
 a character embedding basically solves the problem.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="08:23">
+<turn speaker="Matt Gardner" timestamp="08:23">
 
 Yeah, that's a good point. Yep. So those were the high level takeaways to me. I think this is a
 really good example of the reason that you need a really controlled experiments in NLP especially in
@@ -237,14 +237,14 @@ deep modal knows and changing the initialization condition can matter more than 
 And so you can make erroneous conclusions if you're not really careful in how you set up your, and
 this is a really important lesson that anyone doing research in NLP right now really needs to know.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="09:00">
+<turn speaker="Waleed Ammar" timestamp="09:00">
 
 Yeah. That sounds like a great, lesson to keep in mind as we move forward. All right. Thank you Matt
 for presenting this paper. Next time we'll be talking about a paper titled: Bidirectional Attention
 Flow for Machine Comprehension written by Minjoon Seo and other colleagues at the University of
 Washington and Allen Institute for Artificial Intelligence. Thank you.
 
-</Turn>
+</turn>

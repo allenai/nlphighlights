@@ -8,40 +8,40 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting work in natural
 language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is Matt Gardner and Waleed Ammar we are research scientists at the Allen Institute for
 artificial intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:11">
+<turn speaker="Matt Gardner" timestamp="00:11">
 
 All right. Today our guest is Niranjan Balasubramanian who is an assistant professor starting on the
 tenure track position this fall at Stony Brook University, congrats. Niranjan has done a bunch of
 work on extracting information from text and trying to reason about it. Niranjan welcome to the
 program.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Niranjan B." timestamp="00:27">
+<turn speaker="Niranjan B." timestamp="00:27">
 
 Thanks Matt for having me and thanks Waleed for having me, it is exciting.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:32">
+<turn speaker="Matt Gardner" timestamp="00:32">
 
 Yeah. Today we wanted to talk about a recent paper that you published at AAAI 2018 called Event
 Representations with Tensor-based Compositions. And this work is I guess a continuation of a long
@@ -49,10 +49,10 @@ line of work that's been kind of on the outskirts of NLP but has been looked at 
 script learning and event sequence induction kinds of stuff. So, you Niranjan can you give us a a
 description of like what's going on here, what the setting is?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Niranjan B." timestamp="01:04">
+<turn speaker="Niranjan B." timestamp="01:04">
 
 Yeah, I think I like the characterization that you made that, you know, sort of on the outskirts of
 NLP but I would sort of say it's a straddles NLP and generally I can sense a space of trying to
@@ -63,10 +63,10 @@ sort of the central challenge that and then figuring out how to provide examples
 extract. So from that viewpoint you can think about this problem space as a way of providing
 automatically some canonical descriptions of different types of events.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Niranjan B." timestamp="02:00">
+<turn speaker="Niranjan B." timestamp="02:00">
 
 So, one example, they often talk about that comes from Nate Chambers' original work, original work
 2008. Is this thing about, you know, there is an analysis happening or an analysis scenario
@@ -78,10 +78,10 @@ that's sort of, you know, one NLP angle to this problem. We brought an angle, I 
 the AI space sort of starts from the a canonical example, really starting from, you know, Schankian
 scripts, where the idea is how do we build understanding of commonly occurring situations?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Niranjan B." timestamp="02:55">
+<turn speaker="Niranjan B." timestamp="02:55">
 
 What kinds of data structures do you need to pack this information and how do you acquire this
 information automatically? So Schankian scripts were sort of proposed as a way to, you know, build
@@ -90,10 +90,10 @@ these situations are described in books or whether the agent is actually out in 
 is how do you say it in reason about situations? So that's sort of the AI angle that we can tell a
 little bit more specific into the zip type services and product question deduction.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="03:30">
+<turn speaker="Matt Gardner" timestamp="03:30">
 
 Yeah, thanks. I think another thing people might be more familiar with is FrameNet. So FrameNet here
 is a resource that specifies a whole bunch of different kinds of like atomic events that could
@@ -101,10 +101,10 @@ happen, like a buying event or a selling event. And those might actually be rela
 And then what, what typical participants are. And I think a good way to think of this notion of
 scripts is a canonical sequence of frames. Does that fair?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Niranjan B." timestamp="04:02">
+<turn speaker="Niranjan B." timestamp="04:02">
 
 Yeah. Yeah. I think that's great. That's a, that's a fair characterization. In fact I really liked
 this paper that Ben Van Durme and Francis Ferraro, I think they had a couple of years back where
@@ -119,19 +119,19 @@ FrameNet frames as being sort of describing atomic events on the structure of th
 roles they play and then the scripts can be thought of as sequences of these frames that hold
 together in some disclosed structure describing the scenario.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="05:14">
+<turn speaker="Matt Gardner" timestamp="05:14">
 
 And let's say we had some resource hypothetically that contained, I don't know, some like large
 fraction of any possible narrative frame or event sequence. How would this actually be useful to
 some kind of autonomous system or, or NLP system?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Niranjan B." timestamp="05:33">
+<turn speaker="Niranjan B." timestamp="05:33">
 
 Well, an example that they often give is trying to read between the lines when you're reading news
 events. So one example can be, let's suppose you're reading a news story that says you know, Ahmed
@@ -145,10 +145,10 @@ the missing lines there. So you can, you can expect information extraction syste
 augmented with these scripts to be able to provide you answers about what is not explicitly said in
 the text itself. So that's one application.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Niranjan B." timestamp="06:44">
+<turn speaker="Niranjan B." timestamp="06:44">
 
 Another possible application is being able to say, can you summarize a news article? So you get a
 news article about a particular event. How do you know which pieces of things to talk about an
@@ -156,10 +156,10 @@ extract. So if you again, are able to map this event to some kind of a script th
 then it sort of gives you an expectation for what things to talk about by appealing elements in the
 script. So that's another NLP application we got.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="07:15">
+<turn speaker="Waleed Ammar" timestamp="07:15">
 
 Yeah. The first point you mentioned sounds very relevant to a lot of work on a common sense,
 understanding which AI-2 is focusing a lot on but also other places. It seems to be an important
@@ -168,10 +168,10 @@ thing that I am wondering about is how fluid these scripts are. Do you think of 
 objects or do you think of them as like a versatile, hard to like basically infinite number of
 possibilities of combining events?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Niranjan B." timestamp="07:54">
+<turn speaker="Niranjan B." timestamp="07:54">
 
 Yeah, I think that's an excellent question. My thinking on this has shifted or evolved along with
 the deep learning based continuous thinking a little bit. So earlier we used to, I used to think
@@ -179,10 +179,10 @@ about being able to you know produce scripts or schemas that you know, broadly a
 any news corpus that you have. So that should work as long as you, you're producing scripts that
 characterize type world in some reasonable
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Niranjan B." timestamp="08:25">
+<turn speaker="Niranjan B." timestamp="08:25">
 
 In level of coverage. I was happy with it, but then I think now sort of rather than thinking about
 script knowledge is something static. Now I think about them as sort of functional knowledge pieces.
@@ -198,10 +198,10 @@ discrete structures, but as something that's continuous where you can that is mu
 you have more ways to control what is going to happen later by sort of changing the beginning
 conditions. So to speak,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Niranjan B." timestamp="09:46">
+<turn speaker="Niranjan B." timestamp="09:46">
 
 I hope that sort of makes sense. If you feel like, I can give you an example that just to concrete
 things together. So one thing that we that we can do now is to say let's suppose you have a protest
@@ -216,10 +216,10 @@ is throwing rocks. What is going to happen next? Right? So we're able to. at lea
 semblance of a model that can start to account for these minor variations In the, in the expected
 unfolding of the event.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="10:54">
+<turn speaker="Matt Gardner" timestamp="10:54">
 
 So what I wonder at this point then FrameNet and similar resources, FrameNet is great in that it
 gives it a nice detailed accounting of a particular kind of event, but it's pretty limited in that
@@ -230,10 +230,10 @@ frames, you're going to have a hard time capturing the kinds of fluid non-discre
 just talking about. So how then do we model this? Like what's the approach to learning the set of
 possible frames? What's going on here?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Niranjan B." timestamp="11:40">
+<turn speaker="Niranjan B." timestamp="11:40">
 
 Yeah. So I think at least sort of going back to this particular paper where we show, these types of
 compositions, I think we have this problem somewhat in the sense that what you're saying is to the
@@ -244,10 +244,10 @@ necessarily limited by the kinds of events we saw in training. So I think the ge
 key generalization that is, as long as you are able to give us a new word, we can extract a pencil
 based representation of events involving that word, even if we haven't seen it in the training data.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Niranjan B." timestamp="12:34">
+<turn speaker="Niranjan B." timestamp="12:34">
 
 So that sort of gets at this a little bit, but there are many, the general sense of the problem that
 have many events perhaps that you don't even see described in text. So that is sort of still beyond
@@ -260,10 +260,10 @@ can extract from text. So I think that's a bigger gap. But yeah, so I think ther
 within the text scope, I think we could, if we frame our problems carefully, I think we can We can
 aim to generalize beyond the sort of set of events that you've seen in training data.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="13:31">
+<turn speaker="Matt Gardner" timestamp="13:31">
 
 Yeah. So I guess if I can rephrase a little bit, your general approach is let's take a big pile of
 text, find event sequences in it and try to group them together somehow such that we can get a model
@@ -274,10 +274,10 @@ to do some kind of like fostering some like let's group things together and get 
 reproduce the sequences that I saw in text and hope that that gives me some notion that something
 like a narrative frame, even though it'd be hard for a human to inspect.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Niranjan B." timestamp="14:20">
+<turn speaker="Niranjan B." timestamp="14:20">
 
 Yeah. So I think the, the clustering of this grouping is implicit in the model, but you can ask the
 model to generate. So one way we evaluated it in the paper, is actually to say even this starting
@@ -292,17 +292,17 @@ basically give various starting points and then it will give you a different sch
 really no explicit clustering of scenarios or explicit processing of the answer, but it's sort of
 implicit in the model, but you can expect the model to get get at this.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="15:34">
+<turn speaker="Waleed Ammar" timestamp="15:34">
 
 Could you elaborate a little bit on how the schema looks like?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Niranjan B." timestamp="15:38">
+<turn speaker="Niranjan B." timestamp="15:38">
 
 Yeah. so schema is really, in our case, a subject relation and an object circle. It consists of
 these two posts. Okay. So we can do a couple of base schema. So you can start with a seed tuple
@@ -317,10 +317,10 @@ this process, what we get is the schema that looks something like this X arreste
 would say something like, Y faces charges. and then Y, denies claims, et cetera. Actually you sort
 of get these generalized, list of tuples that we cut off at some point and claim that as a schema.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="17:07">
+<turn speaker="Matt Gardner" timestamp="17:07">
 
 So if I can summarize the discussion so far, I think we, we've done a good job motivating why you
 might want to care about frames or narrative frames, what line of work this falls in. And then
@@ -329,27 +329,27 @@ of texts, I'm going to extract events, what we'll call events, which we're reall
 as subject verb, object, triples. Quick side note, what if there's no objects, do you also count
 intransitive verbs subject verb, null?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Niranjan B." timestamp="17:38">
+<turn speaker="Niranjan B." timestamp="17:38">
 
 So yeah, so we go with them at this point.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="17:41">
+<turn speaker="Matt Gardner" timestamp="17:41">
 
 So we have a bunch of subject verb, object, triples, and then I'm going to take these events and try
 in sequence in a large corpus and try to learn a representation of these events such that I can
 easily extract out narrative chains from them. Is that, is that a fair characterization? Yeah. Okay.
 So can you tell us about how you learned the representation of the events?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Niranjan B." timestamp="18:03">
+<turn speaker="Niranjan B." timestamp="18:03">
 
 Yeah. So, all right. So the idea being we want to the producer and embedding representation of an
 event, which is as you said, is the triple now, right? It's 2018 our starting points are word
@@ -364,10 +364,10 @@ another event and its subject it's predicated and it's object and so on. So you 
 a sequence of events, which naturally can be encoded using some kind of RNN, a usually using some
 kind of a LSTM. So there be sort of these two approaches to do this before.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Niranjan B." timestamp="19:22">
+<turn speaker="Niranjan B." timestamp="19:22">
 
 The sort of primary motivation for the specific idea we had, which is using sensors to produce this
 composition is that we noticed that these, at the core screen, even though these models are
@@ -382,10 +382,10 @@ then that should actually result in a big change in the final event embedding. M
 into why we chose the specific idea as well, but that's sort of the starting point for me why we
 should have looked at the tense-based composition.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="20:35">
+<turn speaker="Matt Gardner" timestamp="20:35">
 
 Yeah. And that's great. You had a, you had a great example in your paper where she threw a football
 evokes a very different kind of event than she threw a bomb, which only differs in the object. And
@@ -393,10 +393,10 @@ so subject predicate are the same if you're taking some kind of additive or aver
 you might think that she threw a football is similar in some sense to she threw a bomb, but they're
 very, very different kinds of things.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Niranjan B." timestamp="21:02">
+<turn speaker="Niranjan B." timestamp="21:02">
 
 Yeah. Yeah. So there are examples like this that I actually even looked at when we were producing
 the, this sort of discreet concrete models early on. So one of the other examples we were thinking
@@ -409,19 +409,19 @@ damaged. And you know, the control mechanisms can be different and so on. So thi
 issue of disambiguation the same predicates can be used in different contexts. This gets at the word
 sense type issue by for course, script level problems.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="22:02">
+<turn speaker="Matt Gardner" timestamp="22:02">
 
 And so then your main contribution here is a new way of parameterizing this model such that you're
 handling these interactions in a, in a smarter way. Can you tell us about exactly how you do that
 without getting into too much low level math?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Niranjan B." timestamp="22:16">
+<turn speaker="Niranjan B." timestamp="22:16">
 
 Sure. so the, I think the way to the starting going to see, let's go back to that example. She threw
 a football and she threw a bomb. What you want is some kind of a conjunctive symantic, meaning every
@@ -429,10 +429,10 @@ element should contribute to the final representation that we should have this a
 one way to do this, this like really go in with a multiplicative interaction between all the
 elements in your in your triple.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Niranjan B." timestamp="22:46">
+<turn speaker="Niranjan B." timestamp="22:46">
 
 The sort of composition is a mediated way of producing this, you know, some parameterized way of
 producing this representation as you mentioned. So one way to think about a pencil based composition
@@ -446,10 +446,10 @@ you have this multiplicative interaction that we want it. Now, the challenge tho
 get these predicate tensors right? So the tensors the way at least we've set this up is they're
 basically,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Niranjan B." timestamp="23:48">
+<turn speaker="Niranjan B." timestamp="23:48">
 
 Going to be a proportional to the size of your input dimensions. So you're going to have, a huge set
 of parameters that you need to learn, but every predicate, which means you need to have seen many,
@@ -461,10 +461,10 @@ information about the predicates ant the embeddings and we can be turned that in
 predicate tensor. So that's really where the sort of central idea comes, comes up. So Noah Weber my
 students you came up with.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Niranjan B." timestamp="24:34">
+<turn speaker="Niranjan B." timestamp="24:34">
 
 So we were discussing the say, okay, how do we infuse this? And sort of he came up with the first
 way we can think of in terms of accomplishing the scope. Like we will just infuse information in the
@@ -479,19 +479,19 @@ now turned into a tensor. And then once you have these tensors, now we can produ
 the whole whole process is now you know, we don't have to learn, predicate specific answers. So we
 be reduced to problem to just learning two parameters for two tensors. I hope that made sense.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="25:48">
+<turn speaker="Matt Gardner" timestamp="25:48">
 
 Yeah, I think that was about as clear as you can get in audio. If listeners want more detail, you
 can go look at the paper. So can you tell us about how you train all of the parameters of this
 model? What's your learning objective?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Niranjan B." timestamp="26:02">
+<turn speaker="Niranjan B." timestamp="26:02">
 
 Yeah, so our goal, the tensors that we learn are supposed to produce good event representations. And
 for this purpose, right, as soon as you want to train then you need to define what they could event
@@ -504,17 +504,17 @@ meaning, other important information that sort of complete this event can predic
 more like a language modeling type of an objective. So we use those two types of objectives to train
 these tense of base models.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="27:05">
+<turn speaker="Matt Gardner" timestamp="27:05">
 
 And how well does it work?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Niranjan B." timestamp="27:07">
+<turn speaker="Niranjan B." timestamp="27:07">
 
 Well, it seems to work better than those couple of baseline models. We've evaluated the
 representations using some existing event related process as well as for testing whether they are
@@ -522,10 +522,10 @@ able to produce some reasonable schemas. So we evaluated on this task called tra
 similarity, which is basically you can think of this as having a couple of events or simple
 sentences and you're trying to measure if the sentences are semantically similar in some sense.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Niranjan B." timestamp="27:45">
+<turn speaker="Niranjan B." timestamp="27:45">
 
 So if you're producing a reasonable event representation, then you should be able to distinguish and
 do well in task. But this task necessarily isn't that hard a or it doesn't really evaluate one of
@@ -534,10 +534,10 @@ the express purpose of testing, whether the model can distinguish these predicat
 in different contexts. So we give a, so let me give an example. Maybe it's easy. So you can come up
 with event you can come up with event pairs.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Niranjan B." timestamp="28:26">
+<turn speaker="Niranjan B." timestamp="28:26">
 
 One example is. Well let's, let's take the she threw the bomb again okay, you have "she threw bomb."
 And "she, threw football," you can see that these two even triples, have two elements in common.
@@ -552,32 +552,32 @@ existing ways of doing this. And on this model, on this particular task the tens
 much better and sort of, I think shows that the tensors are able to capture these deference in
 predicate users.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="29:45">
+<turn speaker="Matt Gardner" timestamp="29:45">
 
 But this, this kind of evaluation just looks at single events in isolation. Right. And what you, I
 think what you really care about are these narrative chains.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Niranjan B." timestamp="29:54">
+<turn speaker="Niranjan B." timestamp="29:54">
 
 Yeah.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="29:54">
+<turn speaker="Matt Gardner" timestamp="29:54">
 
 So how do you evaluate that kind of work?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Niranjan B." timestamp="29:57">
+<turn speaker="Niranjan B." timestamp="29:57">
 
 So one thing we did is a also evaluate in terms of the narrative close tasks. so there many variants
 of this? So by the way Nate Chambers who's also a part of this project in sort of with whom we've
@@ -587,19 +587,19 @@ basically have a set of events that have been extracted from text and you hide o
 you ask it model if it's able to predict this event. Right. So that gets at some automatic way of
 evaluating this ability to produce event sequences.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="30:41">
+<turn speaker="Matt Gardner" timestamp="30:41">
 
 Sorry, one sec. Is this essentially the same as like you can imagine a notion of event perplexity so
 just like we have word level perplexity for language models, you're essentially saying, what's my
 perplexity on predicting subsequent events? Is that what's going on?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Niranjan B." timestamp="30:56">
+<turn speaker="Niranjan B." timestamp="30:56">
 
 Yeah. So, yeah, so I think are equal and interested in measuring the measures you said differently,
 not necessarily perplexity, but the idea is still the same. Yeah. So on this task again the the
@@ -610,10 +610,10 @@ informative. So we do some filtering to remove those. We also did some manual in
 that we evaluate on and remove noises and extraction editors stuff like this. So we have a cleaned
 up portion of that task where we evaluate an, it's sort of a multiple choice evaluation there.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Niranjan B." timestamp="31:53">
+<turn speaker="Niranjan B." timestamp="31:53">
 
 We also evaluated the model for the ability to produce event schemas. So we have a very simple
 method for producing event, schemas, even, in event representations. So if you'd give us a starting
@@ -626,18 +626,18 @@ script representation procedure stays the same, but the event representations we
 and we compare the models with manual evaluation there and we see some gains there. I think there's
 definitely more to be done in that space. I can talk about that more.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="32:52">
+<turn speaker="Waleed Ammar" timestamp="32:52">
 
 And how do you do the inference for the close task? So you have a few events before and after and
 you'd like to predict what's in the middle. So how do you do the actual inference here?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Niranjan B." timestamp="33:03">
+<turn speaker="Niranjan B." timestamp="33:03">
 
 So in this case, we sort of let me make sure I'm saying the right thing here. So there two ways to
 do this, so one is to without objective the objective function. Basically says that can be learned
@@ -647,51 +647,51 @@ you can take the representation you get and then you can look for the neighbors 
 neighborhood has the highest cosign similarity with this representation you have. So in this case,
 we use the ranking that is induced by the similar event representations.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="33:56">
+<turn speaker="Waleed Ammar" timestamp="33:56">
 
 And the missing piece for me is the combination. How do you compose the multiple events that are
 surrounding the one that you're predicting?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Niranjan B." timestamp="34:05">
+<turn speaker="Niranjan B." timestamp="34:05">
 
 I think if I remember right, we just do the simple averaging that we don't have the model that we
 don't have a sequence model that composes these event representations into a final representation?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="34:18">
+<turn speaker="Matt Gardner" timestamp="34:18">
 
 Yeah, that's, that's what I would've guessed to from reading your paper because you, the way you
 generate the change is by finding nearest neighbors. So it seems reasonable to like do an average
 and find the nearest neighbor.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Niranjan B." timestamp="34:28">
+<turn speaker="Niranjan B." timestamp="34:28">
 
 Yeah.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="34:30">
+<turn speaker="Waleed Ammar" timestamp="34:30">
 
 So how do you see the line of work on a script generation and also like identifying scripts as like
 a, a thread of events. And how's this related to this course analysis? There's a rich literature on
 trying to understand the discourse in the document.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Niranjan B." timestamp="34:48">
+<turn speaker="Niranjan B." timestamp="34:48">
 
 Yeah. So I think definitely the starting point, I think for both types of problems is really the
 texts that you have. So in some sense, while we are learning scripts from texts, the discourse
@@ -707,10 +707,10 @@ you were to sort of do some reverse engineering from that structure to figure ou
 in which the events happen and what are the most important things to know about within this event
 context, it's, there's not a one to one alignment necessarily.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Niranjan B." timestamp="36:15">
+<turn speaker="Niranjan B." timestamp="36:15">
 
 So I think while they are connected in the sense that they're using both the same starting points,
 type this for scripts. I think we need to do a much more to figured out what to extract and what
@@ -723,10 +723,10 @@ script modeling. So one thing we don't do now is, you know, simple things that I
 simple, but things like co-reference event co-reference you know, discourse relations like one is an
 explanation on the background, these kinds of information.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Niranjan B." timestamp="37:16">
+<turn speaker="Niranjan B." timestamp="37:16">
 
 So we've been interested in models that can incorporate, all these kinds of information. But at this
 point we're sort of taking baby steps. So you're saying, okay, given a specific event, how can we
@@ -734,19 +734,19 @@ model this? It will be great to think about models that incorporate discourse re
 additional supervision signal, or as structures that we can use as part of the input going into
 these models.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="37:39">
+<turn speaker="Matt Gardner" timestamp="37:39">
 
 Great. That sounds like a really interesting line of future work. I guess I see this whole line of
 scripts generation narrative frame induction as super interesting, but not quite ready to be used
 practically yet. Would you agree with that?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Niranjan B." timestamp="37:59">
+<turn speaker="Niranjan B." timestamp="37:59">
 
 So I think it's time that we can start tinkering with these things. So I sort of maybe I'm one of
 these newly minded optimists in the deep learning way, but I feel like because you can embed and
@@ -754,18 +754,18 @@ push things in the same space, we can start sort of extracting ability or the pi
 for specific applications. I think we should, my intention is that we should try and I think you
 will be suppressed.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="38:29">
+<turn speaker="Matt Gardner" timestamp="38:29">
 
 Great. Cool. Thanks for the really interesting conversation. It was nice talking to you.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Niranjan B." timestamp="38:32">
+<turn speaker="Niranjan B." timestamp="38:32">
 
 Thank you so much for having me. This is exciting. I have some things to think about as I go back.
 
-</Turn>
+</turn>

@@ -8,40 +8,40 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting work in natural
 language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is Matt Gardner and Waleed Ammar. We are research scientists at the Allen Institute for
 Artificial Intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:12">
+<turn speaker="Matt Gardner" timestamp="00:12">
 
 All right. Today our guest is Jordan Boyd-Graber who is an associate professor at the university of
 Maryland. He's done a lot of interesting work on question answering in particular a format that is
 pretty unique in Quizbowl. And we'll talk about this a little bit later. Jordan welcome to the
 program.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jordan Boyd-G" timestamp="00:26">
+<turn speaker="Jordan Boyd-G" timestamp="00:26">
 
 Thanks for having me.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:27">
+<turn speaker="Matt Gardner" timestamp="00:27">
 
 And today we thought we'd do something just a little bit different from our typical format. Instead
 of talking about a particular paper we're going to give a bit of an overview on question answering
@@ -49,17 +49,17 @@ as a task and what the different axes are that make different kinds of question 
 different; where, complexity is, where different data sets focus. And Jordan has a particular take
 on this that I think will give us some good insight on this general task.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jordan Boyd-G" timestamp="00:51">
+<turn speaker="Jordan Boyd-G" timestamp="00:51">
 
 I'll try not to push the task of Quizbowl too hard.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:54">
+<turn speaker="Matt Gardner" timestamp="00:54">
 
 Yeah. And, he also has some, some stuff that I will talk about in particular a little bit later on
 adversarial question generation which, which will be pretty interesting but we'll give it an
@@ -68,17 +68,17 @@ could categorize question, answering datasets and maybe what I can do is list th
 briefly and then we'll talk in depth about each of them and get your, thoughts on what's going on
 here.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jordan Boyd-G" timestamp="01:21">
+<turn speaker="Jordan Boyd-G" timestamp="01:21">
 
 Sounds Good.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="01:21">
+<turn speaker="Matt Gardner" timestamp="01:21">
 
 So the things I came up with were how complex is the language in the question? What's the nature of
 the question semantics or genre is this factoid or common sense or math this kind of thing. What's
@@ -93,20 +93,20 @@ have the system write an essay. We don't really do that at this point, but you c
 there eventually. So these are the different axes that I thought of. For question answering
 datasets. Does that sound reasonable? Are there any that I missed?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jordan Boyd-G" timestamp="02:24">
+<turn speaker="Jordan Boyd-G" timestamp="02:24">
 
 So I think that one thing that's been prominent recently, and I don't know if this falls under a
 category, is whether it'd be computer absolutely has to answer. And so for example knowing whether
 the system can answer the question is sort of like a meta level of question answering. That's been a
 little popular recently. And so maybe that's just another flavor of answering.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="02:48">
+<turn speaker="Matt Gardner" timestamp="02:48">
 
 Yeah, that, that's a good point. Yup. So maybe what we can do now is go through each of these and
 talk about them in a little bit more depth. So let's start with this first one. How complex is the
@@ -120,10 +120,10 @@ slot in the Wikipedia info box to fill. You can think of this kind of question a
 could rephrase this as when was Barack Obama born for instance. But you don't have to understand the
 question at all. It's given to you as just like an index into a preselected list.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jordan Boyd-G" timestamp="03:52">
+<turn speaker="Jordan Boyd-G" timestamp="03:52">
 
 But I think that those sorts of things are still useful because it's still phrases, language and
 many questions are actually posed in this way. And I think even in systems like Alexa and Siri,
@@ -131,10 +131,10 @@ these sorts of questions come up fairly often and you can't get a lot of mileage
 So it's a useful place to begin and you can move onto more complicated queries where you're doing
 things like SQL lookups even though it's slot filling. There's a more complicated logic behind it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="04:20">
+<turn speaker="Matt Gardner" timestamp="04:20">
 
 Yeah, that's a really good point. There've been some interesting papers by Omer Levy had one, I
 think there've been a couple of others where you do a essentially zero shot relation extraction by
@@ -142,19 +142,19 @@ treating the relation extraction as a question answering task. So you basically 
 down a template for some new slot and then if it's natural language, you could train a system on
 SQuAD for instance and transfer it to this new relation and hopefully get good performance.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jordan Boyd-G" timestamp="04:43">
+<turn speaker="Jordan Boyd-G" timestamp="04:43">
 
 Right. And, and then moving on from slot filling you, you can have arbitrary, single sentences that
 can ask just about anything. And there you have the complexity of English, which, which can get
 pretty complex.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="04:56">
+<turn speaker="Matt Gardner" timestamp="04:56">
 
 Yeah. If you go like as far as possible on this scale, at least in current data sets, maybe this is
 something like Wiki table questions or complex semantic parsing datasets where you have multiple
@@ -163,10 +163,10 @@ that's not the right thing, but you have like nested clauses asking about things
 most, or maybe you have several conditions on this. You can get really complex kinds of language.
 Are there any other hard complex language data question, answering data sets you can think of?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jordan Boyd-G" timestamp="05:28">
+<turn speaker="Jordan Boyd-G" timestamp="05:28">
 
 All right, so let me begin the first of many advertisements for Quizbowl. So one of the nice things
 about Quizbowl is that you don't just have single questions, you have multiple sentences that form
@@ -180,17 +180,17 @@ instructed to ring some bells to some in his love." So this is the first two sen
 question that goes on to end for 10 points named this Wolfgang Amadeus Mozart titled for an
 enchanted woodwind instrument.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="06:26">
+<turn speaker="Matt Gardner" timestamp="06:26">
 
 The magic flute.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jordan Boyd-G" timestamp="06:27">
+<turn speaker="Jordan Boyd-G" timestamp="06:27">
 
 Exactly. And so there are a couple of interesting things going on here. So you have the librettist
 of this opera not mentioning the librettist by name, portrayed a character who asked for a glass of
@@ -204,10 +204,10 @@ instrument" requires some wordplay in order to figure that out. So these are the
 interesting things that happen in these Quizbowl questions. And thousands of these questions are
 written every year for humans who are able to figure it out and compete with each other.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="07:24">
+<turn speaker="Matt Gardner" timestamp="07:24">
 
 Yeah, that's interesting. I guess I might need to take back my earlier statement about Wiki table
 questions being the hardest question format because this is, this is pretty challenging. Though I
@@ -215,40 +215,40 @@ still would say it's hard on a bit of a different level, right? So Quizbowl has 
 but there's less like nested clause where you have like complicated semantics of a single sentence
 itself.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jordan Boyd-G" timestamp="07:47">
+<turn speaker="Jordan Boyd-G" timestamp="07:47">
 
 Exactly.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="07:47">
+<turn speaker="Matt Gardner" timestamp="07:47">
 
 Yeah. Another, interesting on very hard dataset is Jeopardy, which is very similar to two Quizbowl
 and you, you yourself has had some history with this. I've heard, do you want to tell us about that?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jordan Boyd-G" timestamp="07:59">
+<turn speaker="Jordan Boyd-G" timestamp="07:59">
 
 Yeah. So I have appeared as a contestant on Jeopardy if this airs after September 26th or I will
 appear as a contestant on jeopardy if this podcast that post before then.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="08:11">
+<turn speaker="Matt Gardner" timestamp="08:11">
 
 And how did you, how did that happen?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jordan Boyd-G" timestamp="08:14">
+<turn speaker="Jordan Boyd-G" timestamp="08:14">
 
 Yeah, so I have always been interested in trivia and I used to play on my high school team and at
 Caltech and at Princeton, I'm the coach of the Maryland team. And the reason I got into question
@@ -257,19 +257,19 @@ suddenly realized, Oh, well you can do this for research. And it was a way of me
 that I was doing for work with the things I do for fun. And I am very glad that IBM Watson made that
 possible.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="08:50">
+<turn speaker="Matt Gardner" timestamp="08:50">
 
 That was like 2010, 2011. 2010. That was right when I was finishing my undergrad and got me, I was
 also very motivated by seeing Watson. I think I inspired a particular slice of a generation of NLP
 scientists it was a nice piece of work.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jordan Boyd-G" timestamp="09:06">
+<turn speaker="Jordan Boyd-G" timestamp="09:06">
 
 Yeah. And so one thing that I would like to mention about Jeopardy is that first of all it was a
 master stroke on the part of IBM. One thing that makes Jeopardy interesting from a competition
@@ -283,10 +283,10 @@ fighting with two humans who knew most of the answers and Watson got an electric
 it could answer the question because normally in jeopardy, Alex Trebek reads the question, lights
 flash on when you can ring in.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jordan Boyd-G" timestamp="10:11">
+<turn speaker="Jordan Boyd-G" timestamp="10:11">
 
 And if you bring in before those lights come on, you're essentially eliminated from the question
 you're locked out for tens of milliseconds. And in the game of jeopardy, that's death. So Watson was
@@ -296,19 +296,19 @@ and buzzing mechanics that really tilted the game a little bit in Watson's favor
 been on jeopardy, that is really, really hard. And, and you can play at home and you can get most of
 the answers right. But if you can't get the buzzing down, you are completely out of luck.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="10:47">
+<turn speaker="Matt Gardner" timestamp="10:47">
 
 Yeah, that's really interesting. That's something I wasn't aware of until I heard you talk about
 this previously. Yeah. It's hard to get a level, a level playing field. And as you've pointed out,
 Quizbowl fixes this a little bit, right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jordan Boyd-G" timestamp="10:59">
+<turn speaker="Jordan Boyd-G" timestamp="10:59">
 
 Yeah. So unlike Jeopardy where you have to wait until the end of the question in Quizbowl, you can
 interrupt the question as soon as you know the answer and the quizbowl structure is such that it
@@ -320,10 +320,10 @@ answering it way before the people at home could answer it and you don't have th
 that you have in Jeopardy. And if the same person always wins it's less fun. Jeopardy has upsets and
 randomness and that makes for a better television show.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="11:49">
+<turn speaker="Matt Gardner" timestamp="11:49">
 
 Interesting. So I think that gives a pretty good characterization. This first access the that I
 brought up of how complex is the language and the question, the second one I talked about was what's
@@ -340,19 +340,19 @@ stuff. Quizbowl typically is also factoid. It's got really complex questions, bu
 still predicting an entity that's kind of factoid kinds of knowledge in science question answering.
 It's a very different kind of kind of question, right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jordan Boyd-G" timestamp="13:09">
+<turn speaker="Jordan Boyd-G" timestamp="13:09">
 
 Yeah. And then you have other things like you have the children's books, sorry. No, the children's
 book test, not plural on book where you have a relatively simple in terms of the language book and
 you then need to answer reading comprehension questions about that. And that's from a Facebook,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="13:27">
+<turn speaker="Matt Gardner" timestamp="13:27">
 
 Right. And reading comprehension question there, I guess we should note that a lot of these axes
 kind of interact a little bit. So children's book is what we call it, close tests where you hold one
@@ -365,20 +365,20 @@ of of question answering a instead of a factoid kinds of stuff. So that, that's 
 which these question answering data sets can vary. What, what's the theme or genre? And that's what,
 what kinds of things might assistant need to know in order to answer the question?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jordan Boyd-G" timestamp="14:29">
+<turn speaker="Jordan Boyd-G" timestamp="14:29">
 
 Yeah. And this is really bleeding into context now because you could also talk about things like
 visual QA where again, you're answering questions about an image or a, some of the discourse
 question answering things that have come out very recently, like QuAC where you have a conversation
 and you need to answer questions in an extended series of questions.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="14:51">
+<turn speaker="Matt Gardner" timestamp="14:51">
 
 Yeah. That, that is a good transition to this next access. So you mentioned a few different
 contexts. I think it's interesting to think about like what's the set of all of the context that
@@ -389,20 +389,20 @@ need to be the case, but from my knowledge of this work, you collect beforehand 
 Quizbowl answers and you're just selecting from those. So that's essentially the context that you're
 using to answer these questions.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jordan Boyd-G" timestamp="15:35">
+<turn speaker="Jordan Boyd-G" timestamp="15:35">
 
 Yeah. And, and so to be pedantic, you could ask a question about anything, but it's a pretty good
 bet that if you have all of the possible answers that have been asked before as your answers, that,
 then that's a pretty good baseline and you can answer in a given year about 90% of the questions
 that way.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="15:53">
+<turn speaker="Matt Gardner" timestamp="15:53">
 
 Okay. Alright. So more kinds of contexts for science questions. I know some data sets that have a
 specific scientific reasoning theory. So there's a domain theory where to answer the question, you
@@ -414,10 +414,10 @@ paragraph, is this similar to the children's book task where you're giving us a 
 the only thing you need is, is the 10 or so sentences prior to the sentence where a word was held
 out.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="16:39">
+<turn speaker="Matt Gardner" timestamp="16:39">
 
 You could conceivably have a dataset where your input is the whole web. Trivia QA is kind of like
 this where you're given a trivia question and you do a web search, well, they did the web search for
@@ -430,27 +430,27 @@ could be a table from Wikipedia or like the Wiki table questions, data set. Seem
 access where there's the most variation, right? I don't think, like I've, I've mentioned a whole
 bunch and I feel like there's still a whole lot more.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jordan Boyd-G" timestamp="17:24">
+<turn speaker="Jordan Boyd-G" timestamp="17:24">
 
 Yeah. I think that there are papers on recipes and you have to a reason about could you substitute X
 for Y and things like that. And, and so I'm blanking on what paper actually did that, but I remember
 seeing that somewhere.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="17:38">
+<turn speaker="Matt Gardner" timestamp="17:38">
 
 Yeah, Yejin Choi's group I believe has done a lot of work there. Do you have any notion for what
 contexts make for the most interesting research?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jordan Boyd-G" timestamp="17:46">
+<turn speaker="Jordan Boyd-G" timestamp="17:46">
 
 Oh, that's really interesting. And I think the interaction between modalities is really promising.
 And I think that we haven't done enough to fully exploit that. And while we have some datasets like
@@ -461,10 +461,10 @@ really test how well people can transfer information across these contexts. So t
 avoiding answering your question by saying yes all contacts are interesting and they're even more
 interesting if you mix them together.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="18:35">
+<turn speaker="Matt Gardner" timestamp="18:35">
 
 Yeah, that's a good point. I think the choice of context for a question answering dataset really
 drives the nature of the research. So for instance, on SQuAD, the context is a single paragraph.
@@ -478,10 +478,10 @@ this kind of localization is nice. You could argue that maybe we should just hav
 dataset to detect to do that in the first place. Like why do this as question answering. And then
 that's an interesting thing to think about.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jordan Boyd-G" timestamp="19:37">
+<turn speaker="Jordan Boyd-G" timestamp="19:37">
 
 Yeah. And similarly for things like trivia QA, you basically turned a question answering task into
 an information retrieval task. And you could say the same thing about some forms of Quizbowl
@@ -490,19 +490,19 @@ find that paragraph, you can answer the question without really understanding th
 times a context drives the models that you'll eventually use. And obviously the same thing goes for
 things like images.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="20:04">
+<turn speaker="Matt Gardner" timestamp="20:04">
 
 Yeah. And so my question then is when should we look at data; if we're interested in studying a
 particular phenomenon like paraphrase for instance, or image understanding when, when should it be a
 question answering task versus some other more specific tasks?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jordan Boyd-G" timestamp="20:18">
+<turn speaker="Jordan Boyd-G" timestamp="20:18">
 
 I think one of the reasons that people are interested in phrasing them as question answering tasks
 is that it allows for competition and comparison more easily. Part of this is that we enjoy
@@ -517,10 +517,10 @@ vast history and lessons learned of human question answering about how to design
 fairly compare people, how to create frameworks that allow you to have maximum discrimination among
 people or systems.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jordan Boyd-G" timestamp="21:33">
+<turn speaker="Jordan Boyd-G" timestamp="21:33">
 
 And that makes it useful to the phrasing in the question answering format. But as you say, if you
 really care about paraphrase, sometimes it may be better to have a simple paraphrase dataset. But
@@ -529,10 +529,10 @@ who care about question answering and you can get them to create good data for y
 about question answering on their own. And often these people are more reliable, more inventive,
 more creative, more knowledgeable than say, arbitrary crowdworkers on the web.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="22:05">
+<turn speaker="Matt Gardner" timestamp="22:05">
 
 Yeah, that's a really good point. Another, another motivation for it that I've thought about a lot.
 I did my PhD working on the Nell project, Never-ending Language Learning. And this was trying to
@@ -544,10 +544,10 @@ language in, language out kind of task because then systems can compete on equal
 aren't locked into a particular representation that may or may not actually be any good. And I don't
 actually get to evaluate the usefulness of that representation.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="22:52">
+<turn speaker="Matt Gardner" timestamp="22:52">
 
 So for instance, let's take something like AMR, some kind of predicate argument, structure,
 representation of the meaning of a sentence. How useful is it? Like we can write parsers to parse
@@ -563,10 +563,10 @@ argument structure of some passage of text. And then if AMR or your favorite Sem
 formalism is the right thing, then you should be able to show that using it as an intermediate step
 in my system actually helps performance does this, does this make sense?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jordan Boyd-G" timestamp="24:04">
+<turn speaker="Jordan Boyd-G" timestamp="24:04">
 
 Yeah. And I totally agree and I'm glad that you brought up working with humans. We're working
 together. I think that's another reason that people like question answering and sort of this gameish
@@ -578,10 +578,10 @@ evaluate the utility of those representations by showing them to the humans and 
 the computer is thinking and you could measure how well the human computer team performs as a result
 with and without these representations.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="24:53">
+<turn speaker="Matt Gardner" timestamp="24:53">
 
 Yeah. okay. So I think that's enough to talking about that third axes about what kind of context we
 have. The next one I brought up was how much reasoning is there? This is, this seems a little more
@@ -599,10 +599,10 @@ there's some reasoning involved there. But also I'm thinking of things like how 
 there in the question. How hard is it to get from the question itself? To the answer, does this,
 does this even make sense as an axis?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jordan Boyd-G" timestamp="26:20">
+<turn speaker="Jordan Boyd-G" timestamp="26:20">
 
 I think so. And one very simplistic way that we've been trying recently to get at this kind of
 question is many datasets like trivia, QA or our Quizbowl data set are written by humans for a
@@ -619,10 +619,10 @@ easier after they've gone through this process. And so the questions are less fo
 less repetitive and it still does a good job of discriminating who is the smarter human, but the
 humans are able to answer them just as well.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="27:50">
+<turn speaker="Matt Gardner" timestamp="27:50">
 
 Yeah, that's interesting. I have seen an uptick a little bit in building adversarially created
 datasets. There was a one on a common sense inference recently that said EMNLP this year where you
@@ -632,10 +632,10 @@ I agree with you that this is a nice way to make our datasets harder. I guess th
 that they're too tied to particular systems and so maybe it's hard for one system, but it still has
 its own biases.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jordan Boyd-G" timestamp="28:30">
+<turn speaker="Jordan Boyd-G" timestamp="28:30">
 
 Ah Ha. So we, we actually looked at this and so we had the human question writers interact with a
 very simple IR question, answering system not complicated at all about a hundred lines of Python
@@ -645,10 +645,10 @@ there are aspects that could stump an IR system that a neural system can't handl
 quite there yet. And so even the things, that stump an IR system at the moment, are something the
 neural systems as well or these two very specific systems.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="29:22">
+<turn speaker="Matt Gardner" timestamp="29:22">
 
 Yeah. And I guess another, a challenge, another potential problem with an adversarially constructed
 data set is that it's totally unnatural. Like why, the output might be something that a person never
@@ -656,10 +656,10 @@ really cares about because you're making it artificially hard to the, to the, to
 people don't really, it's not natural distribution. Why should, why should we even study this
 problem?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jordan Boyd-G" timestamp="29:44">
+<turn speaker="Jordan Boyd-G" timestamp="29:44">
 
 I think that's a good point. One of the ways that we tried to control against that is that we told
 the writers that these questions were still meant for humans. And so they still had the norms that
@@ -670,18 +670,18 @@ that felt a little funny, but they didn't view them as completely unnatural. And
 this process many times we will get to the point where they are unnatural, but we're not quite there
 yet. And at the moment I think we're exposing some of the things that are difficult for computers.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="30:33">
+<turn speaker="Matt Gardner" timestamp="30:33">
 
 Yeah. Interesting. That's great. Definitely something to consider if you're thinking of doing this
 stuff on some other tasks. Right,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jordan Boyd-G" timestamp="30:39">
+<turn speaker="Jordan Boyd-G" timestamp="30:39">
 
 Exactly. And this is where it might be a problem if you are, say, using crowdworkers who don't have
 a strict code of ethics and norms that they follow in creating these examples. And one of the things
@@ -693,10 +693,10 @@ trivia writers who want to stump question answering system, they can generate th
 if they're a trivia team, they can come to College Park, Maryland and face off against computers on
 these adversarially written questions.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="31:29">
+<turn speaker="Matt Gardner" timestamp="31:29">
 
 Yeah. Great. We're getting a little low on time. I think we should wrap up with a discussion of this
 last axes, which is what, what's the nature of the answer that the system has to produce. So we've
@@ -709,52 +709,52 @@ many of these. I know there are some on Aristo. So the science questions I'm not
 So MS Marco is one where you have to generate a piece of text, but this is hard because it's not
 really clear how to evaluate it. So I think we don't see this very often.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jordan Boyd-G" timestamp="32:34">
+<turn speaker="Jordan Boyd-G" timestamp="32:34">
 
 So in 2017 there was a Trek task called complex answer retrieval where you have a very short prompt
 and then for example, what are the issues with the iPhone seven? And you have to generate a long
 essay about that. And it's basically generating long, long answers for very short, not quite
 questions, but more like issues or debates.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="32:59">
+<turn speaker="Matt Gardner" timestamp="32:59">
 
 And how, how was that evaluated by human judges?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jordan Boyd-G" timestamp="33:03">
+<turn speaker="Jordan Boyd-G" timestamp="33:03">
 
 So there, are some automatic metrics, but yeah, the gold standard is a human evaluation.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="33:09">
+<turn speaker="Matt Gardner" timestamp="33:09">
 
 Yeah. I'm really skeptical of things like BLUE for evaluating these, kinds of things. And so it
 feels like that problem has to be solved a lot more satisfactorily before I'm really ready to do
 research on this kind of more complex question answering.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jordan Boyd-G" timestamp="33:24">
+<turn speaker="Jordan Boyd-G" timestamp="33:24">
 
 Exactly. And so they tried to make it a little more reasonable by having topics that must be
 mentioned should be mentioned or can be mentioned or things that are completely out of scope, but
 that's not a complete way of evaluating it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="33:37">
+<turn speaker="Matt Gardner" timestamp="33:37">
 
 Yeah, and another format for answering questions that's pretty popular these days because of SQuAD,
 which we've talked about a couple of times. I thought, I don't think we actually said the name. This
@@ -765,20 +765,20 @@ evaluate. So there's like N squared and possibilities you have to pick from, whi
 tiny set. It's not four in a multiple choice question. But it's not infinite and it's clear how to
 evaluate this. So I like that one a lot.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jordan Boyd-G" timestamp="34:18">
+<turn speaker="Jordan Boyd-G" timestamp="34:18">
 
 Yeah. Another format that I like is where you're supposed to generate a very specific entity and
 then this is the format that say Quizbowl uses. You have a very large but mostly bounded set of
 entities that you could answer. And this gets rid of some of the problems that you might see in span
 answers where if you answer USA for United States of America, is that right or wrong?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="34:42">
+<turn speaker="Matt Gardner" timestamp="34:42">
 
 Yeah. So you're right, there are some challenges with span based evaluations. The one challenge with
 this select pick from an entity list is what if my answer wasn't in that list or the answer I'm
@@ -786,19 +786,19 @@ looking for? Right. So you're your by construction limiting the scope of your qu
 though you could argue that span based question answering does that too because you're, you're
 restricting yourself to whatever you can see in a particular paragraph.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jordan Boyd-G" timestamp="35:05">
+<turn speaker="Jordan Boyd-G" timestamp="35:05">
 
 Yeah. And for things like trivia, QA and Quizbowl, these are datasets that are human generated
 without thinking about what the answer set is. And 80 to 90% of the answers do lie in say all of the
 Wikipedia page titles.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="35:19">
+<turn speaker="Waleed Ammar" timestamp="35:19">
 
 So as an outsider, I didn't really work on a question answering systems before and I wonder with so
 many data sets, specifically a dataset coming out for question answering every week and I don't know
@@ -806,10 +806,10 @@ really where to start or like obviously different models work better for differe
 A question answering tasks do you have any advice for someone who's still like trying to learn about
 this area or practiced art.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jordan Boyd-G" timestamp="35:45">
+<turn speaker="Jordan Boyd-G" timestamp="35:45">
 
 I think pragmatically, if you're a true beginner, I would probably suggest starting on something
 like SQuAD, it's a relatively constrained problem as Matt said. And there are a lot of good
@@ -821,10 +821,10 @@ for answering the questions in that dataset, but being able to have general purp
 answering. And in some ways this is a little like the AI versus AGI debate and maybe we need to
 focus more on general question answering.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="36:39">
+<turn speaker="Matt Gardner" timestamp="36:39">
 
 Yeah. And I am having a hard time thinking of how to answer that, how to answer Waleed's questions
 because I just talked about these five different axes. That question answering tasks can fall under
@@ -837,10 +837,10 @@ need for like a discreet logical formalism, but the datasets, that are designed 
 do you table questions or Cornell natural language, visual reasoning these, these kinds of datasets
 permit more like formal logic, discrete kinds of reasoning.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="37:36">
+<turn speaker="Matt Gardner" timestamp="37:36">
 
 If that's what you want to study, that's where you should focus. If what you care about is more like
 connecting multiple facts together than something like Quizbowl or even Jeopardy. I don't think
@@ -853,10 +853,10 @@ phenomenon to study. It's a way to study a phenomenon. And so what you should th
 I want to study, what do I care about and then figure out if question answering is the right way to
 study that phenomenon. And if so, what data set should I use.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jordan Boyd-G" timestamp="38:29">
+<turn speaker="Jordan Boyd-G" timestamp="38:29">
 
 Thats a great way of thinking of it. And one pragmatic consideration. I would also add that you
 mentioned for like long answer question answering is that is there a good evaluation? And if you're
@@ -864,10 +864,10 @@ going to work on question answering, one of the benefits of working on question 
 it's often easy to evaluate or straightforward to evaluate. It's not easy and you should make sure
 that your question answering framework allows for a consistent reproducible evaluation.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="38:58">
+<turn speaker="Waleed Ammar" timestamp="38:58">
 
 Yeah, that makes a lot of sense. I mean for a sort of sound, I'm interested in semantic parsing and
 I could like build by semetic parser I don't know, maybe train my semantic parser and then on this
@@ -877,10 +877,10 @@ wonder if the current state of the art systems for some of these question answer
 require this form of linguistic analysis or most of them just have one model that's fitting for the
 answers directly trying to answer that, the format that basically that we're trying to address.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="39:43">
+<turn speaker="Matt Gardner" timestamp="39:43">
 
 Yeah, we should be a little bit careful there because you said frameNet frame semantic parsing.
 That's a little bit different from what I was talking about with semantic parsing. A frameNet is as
@@ -888,36 +888,36 @@ like a lot more like semantic role labeling or finding predicate arguments, stru
 not what I meant when I said semantic parsing. Terminology's a little bit confusing here.
 Unfortunately. What I meant was parsing to a logical formalism that like, like first order logic.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="40:09">
+<turn speaker="Waleed Ammar" timestamp="40:09">
 
 I think it is the same thing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jordan Boyd-G" timestamp="40:09">
+<turn speaker="Jordan Boyd-G" timestamp="40:09">
 
 Well it's actually not because on Wiki table questions you have to like add to sets, you have to be
 able to sort things and you can't do that with predicate argument structures, right? It's a, it's a
 different kind of operation.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="40:22">
+<turn speaker="Waleed Ammar" timestamp="40:22">
 
 I meant there's already like an existing data set that you can use to, to do both types of problems.
 And then so you can use the intrinsic data set for assessing how your, how would your doing, you
 were doing analysis and then use the question answer to see how would it those in, in a more
 practical scenario.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jordan Boyd-G" timestamp="40:43">
+<turn speaker="Jordan Boyd-G" timestamp="40:43">
 
 Although that being said, one very frustrating thing that I think comes up a lot is that people have
 this great idea. I'm going to use AMR for question answering. And they try to apply to question
@@ -927,19 +927,19 @@ shortcuts that computers can take. And until we can eliminate those shortcuts, w
 able to see the gains from using AMR or a logical forms until those shortcuts are cut out of the
 picture.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="41:21">
+<turn speaker="Waleed Ammar" timestamp="41:21">
 
 So the underlying, so what you're saying is these question answering platforms are not necessarily a
 good way of assessing how well we're doing to analyze language. Which kind of defeats one of the
 main reasons were trying to answer them.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jordan Boyd-G" timestamp="41:35">
+<turn speaker="Jordan Boyd-G" timestamp="41:35">
 
 I think that we're trying to do science and sciences in many ways, iterative and we're doing the
 simple stuff first and hopefully we can improve the datasets so that the data sets will capture the
@@ -947,19 +947,19 @@ kind of phenomenon that we want computers to understand. And maybe a side effect
 have another N squared data sets to deal with that. We'll try to suss out these different
 combinations of problems and data.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="42:03">
+<turn speaker="Matt Gardner" timestamp="42:03">
 
 Great. I think we've done a good job talking about all of these different axes. I, like question
 answering a lot. I'm pretty motivated by this. This is where I spend my time doing my research. It
 seems like you agree. Jordan, any last thoughts? Anything you wanted to talk about that we missed?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jordan Boyd-G" timestamp="42:18">
+<turn speaker="Jordan Boyd-G" timestamp="42:18">
 
 So I guess I'll end with a plug again for our December 15th human computer question answering
 competition, you can find more details at quanta.org question answering is not a trivial activity
@@ -971,19 +971,19 @@ can learn a lot by the hilarious, wrong answers that these computer systems prod
 are going to know about it based on funny YouTube videos or seeing it live in person than reading
 any of those papers.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="43:07">
+<turn speaker="Matt Gardner" timestamp="43:07">
 
 We'll definitely have some links in our podcast description. Great. Thanks for coming on. It was
 really nice talking to you.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jordan Boyd-G" timestamp="43:13">
+<turn speaker="Jordan Boyd-G" timestamp="43:13">
 
 Likewise. Thanks for having me.
 
-</Turn>
+</turn>

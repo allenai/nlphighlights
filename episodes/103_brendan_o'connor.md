@@ -8,40 +8,40 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="">
+<turn speaker="Matt Gardner" timestamp="">
 
 Welcome to the NLP highlights podcast where we talk about interesting work in natural language
 processing. The hosts are Matt Gardner Waleed Ammar and Pradeep Dasigi.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="">
+<turn speaker="Waleed Ammar" timestamp="">
 
 Today we'll be talking about analyzing social media text with Brendan O'Connor. Brendan is an
 assistant professor at university of Massachusetts Amherst. He develops text analysis methods that
 can help answer social science questions including political sciences and socio-linguistics. Welcome
 to the program Brendan.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Brendan O'Connor" timestamp="">
+<turn speaker="Brendan O'Connor" timestamp="">
 
 All right, Hello. Thanks so much. Good to talk to you.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="">
+<turn speaker="Waleed Ammar" timestamp="">
 
 So could you start with telling us an example of a social science question you've studied by
 analyzing social media text?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Brendan O'Connor" timestamp="">
+<turn speaker="Brendan O'Connor" timestamp="">
 
 Sure. So, lots of people are interested in analyzing social media in various ways. And one thing you
 might hear about a lot is, say, market research. I want to know whether people like a particular
@@ -53,10 +53,10 @@ using some simple forms of sentiment analysis in that particular work for exampl
 all sorts of kind of social questions you might be able to address by analyzing this type of social
 media. And in my own work I also look at other types of media also.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Brendan O'Connor" timestamp="">
+<turn speaker="Brendan O'Connor" timestamp="">
 
 But social media has kind of a lot of interesting particulars to it. So that's kind of social
 measurement questions. If we're trying to measure some underlying attributes that the authors have,
@@ -69,10 +69,10 @@ casual, everyday speech. So people use slang, people use creative terms, people 
 sorts of ways that are informal varieties of language and social media constitutes a huge written
 corpus of kind of casual dialects.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Brendan O'Connor" timestamp="">
+<turn speaker="Brendan O'Connor" timestamp="">
 
 There's no editors, there's no filters, essentially fewer filters. Even you can even get data before
 like auto correct. That was common. And so you know, no one teaches you how to tweet or like how to
@@ -88,18 +88,18 @@ in some ways if you know you care about social media's effects on you know, poli
 like that, being able to analyze language data, it can be quite helpful for doing analysis on what,
 you know people want to intervene. Right. All those things could potentially be useful.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="">
+<turn speaker="Waleed Ammar" timestamp="">
 
 Yeah. Any interesting findings or surprising findings that you, that you found through these
 studies?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Brendan O'Connor" timestamp="">
+<turn speaker="Brendan O'Connor" timestamp="">
 
 Yeah, sure. So I'll talk about a project on dialect variation that we've been doing here at UMass
 Amherst. I was just working on some piece of it this morning, so it's been on my mind. And so, we
@@ -111,10 +111,10 @@ we focus a lot on African-Americans in the United States and linguists know of a
 a lot of research on a major variety of English called African American English and African American
 English has certain views of it in culture but also has lots of very marked linguistic properties.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Brendan O'Connor" timestamp="">
+<turn speaker="Brendan O'Connor" timestamp="">
 
 So for example, null copula, you can drop the to be verb under certain conditions. There's different
 types of preferrable markers, different tense systems. There's all sorts of interesting things going
@@ -128,10 +128,10 @@ necessarily a ton of written corpus data for, there is some, but it's much, much
 than American English. And so in this study we asked the question, can we use a social media corpus
 of public available posts, in particular we use Twitter and geo located tweets.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Brendan O'Connor" timestamp="">
+<turn speaker="Brendan O'Connor" timestamp="">
 
 And we wanted to see if we could extract a corpus of African American English from it. And so it
 turns out there's just a ton of African American English on Twitter, lots and lots and lots. It's
@@ -147,10 +147,10 @@ examples of dialect at kind of linguistic level from Twitter and in particular w
 that were sent by people who are writing posts where they tended to be in highly African American
 neighborhoods in the United States.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Brendan O'Connor" timestamp="">
+<turn speaker="Brendan O'Connor" timestamp="">
 
 And so this is using geolocated tweets that have the particular version of the data we're using
 actually had latitude, longitude coordinates and cross-reference those against demographics from the
@@ -164,10 +164,10 @@ data and so the unigram distribution associated with African American geographic
 United States contained lots and lots of terms that display all these patterns known African
 American English.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Brendan O'Connor" timestamp="">
+<turn speaker="Brendan O'Connor" timestamp="">
 
 And so for example, dropping the final R from a word, you can find examples of that where it's
 spelled that way even in a particular word. So, you get, you know, a slightly higher probability of
@@ -179,10 +179,10 @@ you saying, I'm going to eat breakfast, say I'm finna eat breakfast, you're goin
 But very soon or you really want to do it. And again, that's something that's, not just African
 American English, but some varieties of English in the U S South.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Brendan O'Connor" timestamp="">
+<turn speaker="Brendan O'Connor" timestamp="">
 
 And it's things that you don't see in the New York times, but there's just, you know, thousands,
 thousands of examples of this on Twitter. And so the model really picks up on these, I mean they
@@ -197,19 +197,19 @@ language identification, we're finding it has a higher kind of false negative ra
 that these messages are English and just like a lot of the words are spelled quite differently than
 in mainstream American English for example.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="">
+<turn speaker="Waleed Ammar" timestamp="">
 
 Yeah, that, that makes a lot of sense. I would like to elaborate on this later, but I wanted to
 first ask you, in this paper, did you also study the new terms transfer geographically across
 different cities in the United States?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Brendan O'Connor" timestamp="">
+<turn speaker="Brendan O'Connor" timestamp="">
 
 Yeah, that was a paper that Jacob Eisenstein published in 2014. There, what we're looking at is
 we're really interested in the transfer of terms. If we, when new terms are arising, where do they
@@ -228,19 +228,19 @@ But you know, you can do very different things with social media, of course. And
 analysis also looks a lot at the time dimensions. The time dimension is quite interesting too. And
 there's been lots of interesting work in different aspects of that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="">
+<turn speaker="Waleed Ammar" timestamp="">
 
 So going back to the problem with the fact that NLP tools don't work as well on African American
 language and other dialects, I think that first question is how bad is this problem? And the second
 question would be what can we do about it?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Brendan O'Connor" timestamp="">
+<turn speaker="Brendan O'Connor" timestamp="">
 
 How bad, you know really depends on the task. It depends what you're doing. The accuracies can be
 quite a bit worse on, we looked a lot of language identification and dependency parsing are the main
@@ -256,17 +256,17 @@ a number of years ago and it's in our data that search in the early days, it's h
 with African American neighborhoods I think is more mainstream at this point. But it means like FF,
 right? Can we swear on this podcast?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="">
+<turn speaker="Waleed Ammar" timestamp="">
 
 I think it's fine.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Brendan O'Connor" timestamp="">
+<turn speaker="Brendan O'Connor" timestamp="">
 
 Yeah. If you say like, I'm tired as fuck, right? So I'm tired. AF and so AF is one word. It's one
 token and it's kind of like an adverb, but it comes after, right? So it's like a little bit unusual,
@@ -277,10 +277,10 @@ parse. Right. And so, you know, just like unknown words, like it's not going to 
 any NLP system. And so that's definitely a thing. Just unknown words. Get those right. And there are
 some issues with kind of the deeper structures also.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Brendan O'Connor" timestamp="">
+<turn speaker="Brendan O'Connor" timestamp="">
 
 So a null copula like if you say he good, you can say that in African American English and some
 other varieties of English. It means he is good. In African American English actually you can't
@@ -293,10 +293,10 @@ So there's a whole bunch of things that can be done to fix the problem. In some 
 thing to do is collect a bunch of labeled data for the dialect or language variety you want to
 target and then we train things.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Brendan O'Connor" timestamp="">
+<turn speaker="Brendan O'Connor" timestamp="">
 
 And so we've done some small scale efforts, do some re annotation. There's been a bunch more. Now
 there's a bunch of things you could do there. Another thing to do is to figure out how to use data
@@ -310,10 +310,10 @@ improve the dependency parser. Work I did at Carnegie Mellon actually when I was
 examined part of speech tagging for Twitter where it actually is word clusters back then, but
 learning representations from Twitter itself instead of using word clusters from standard corpora.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Brendan O'Connor" timestamp="">
+<turn speaker="Brendan O'Connor" timestamp="">
 
 And that helps a lot. And in fact that work actually, the part of speech tagger is a lot more
 performant on African American English, compared to at least some, more kind of standard English
@@ -325,19 +325,19 @@ languages where the really big problem was like it's just so expensive to get an
 especially for an under-resourced language variety that you want to be able to find some ways of
 doing that that don't involve, you know, collect a million labeled examples now.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="">
+<turn speaker="Pradeep Dasigi" timestamp="">
 
 Can you give us an estimate of the data sizes? You mentioned that African American English is under
 resourced, right. How many tweets do you think we can strip if we wanted to say, collect
 independency parsing, is it?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Brendan O'Connor" timestamp="">
+<turn speaker="Brendan O'Connor" timestamp="">
 
 If you want just unlabeled tweets that are probably display a constructs or from authors who
 typically who often use AAE. So that's closest to what I've done to. And it's just a much higher
@@ -350,10 +350,10 @@ over the world. All sorts of linguistic variety. You see a very similar sort of 
 like Hindi is under-resourced, like Hindi's one of the most spoken languages in the world. But the
 amount of resources is drastically smaller than you would expect for the number of speakers.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Brendan O'Connor" timestamp="">
+<turn speaker="Brendan O'Connor" timestamp="">
 
 So I have a lot of examples like that. And so for, for Twitter, I'm just getting many, many
 thousands. I'm going to hesitate to give you an exact order of magnitude because it's still, I
@@ -368,19 +368,19 @@ also. And so there's, it's really kind of a collection of a handful of things. I
 case, since I'm not aware of really large scale annotation projects, I mean it could be done, right.
 There's definitely plenty of potential. So.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="">
+<turn speaker="Waleed Ammar" timestamp="">
 
 So, how much of a problem is it to actually recognize which tweets contain African American language
 or other varieties of English? Because you can use just certain terms that you know and look them up
 or you can like look up certain users, you know speak a lot of African American English.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Brendan O'Connor" timestamp="">
+<turn speaker="Brendan O'Connor" timestamp="">
 
 We do different versions of this in different places and there've been in the research literature,
 different versions have been used. So for example, there's a nice site by Anna Jergensen, Dirk Hovy
@@ -392,10 +392,10 @@ Americans live, for example, you'd be able to analyze, you'd be able to get mess
 so you can identify messages or authors in these ways. And so what we ended up doing in our work is
 we use this geographic level information as the only initial real statistical indicator.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Brendan O'Connor" timestamp="">
+<turn speaker="Brendan O'Connor" timestamp="">
 
 So there's some ways in which that's a little less biased than some of these other ones. So I'd say
 like, okay, well you know, you can look at the linguistics literature and get these nice feature
@@ -409,18 +409,18 @@ things like that. But again, this is the case where there's been a fair amount o
 American English seeing you take a reasonable amount of kind of preexisting linguistics literature
 to look at it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="">
+<turn speaker="Waleed Ammar" timestamp="">
 
 So when you use the geographical information, the metadata, how do you isolate subpopulation that do
 not speak African American?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Brendan O'Connor" timestamp="">
+<turn speaker="Brendan O'Connor" timestamp="">
 
 We don't try to infer like social identity at the individual level. Some work does, but this is
 problematic for lots of reasons. It's difficult to do. You can't really get ground truth for some of
@@ -433,10 +433,10 @@ means you know, ground language models. But you could be an admixture of them in
 proportions, right? So, maybe you're using 60% of variety one and 40% variety two. And you can
 switch between them at the message level.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Brendan O'Connor" timestamp="">
+<turn speaker="Brendan O'Connor" timestamp="">
 
 Even at the token level. So it's an, it's implicitly a code switching model. For some people it
 might be 90% of one but only 10% of two. Pretty much topic models. That's exactly what the data
@@ -447,19 +447,19 @@ language model for someone that had a very low proportion. So what you do is you
 doing some validation, we compare those different sets of messages to well-known constructions that
 prior linguistics like Chris already identified are part of AAE or associated with AAE.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="">
+<turn speaker="Waleed Ammar" timestamp="">
 
 While we're talking about data collection and using user's data, ethical conservation comes up all
 the time about when researchers use people's data. So do you have any thoughts around what are the
 considerations that we should be doing as NLP researchers using Twitter data? Best practices?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Brendan O'Connor" timestamp="">
+<turn speaker="Brendan O'Connor" timestamp="">
 
 It really depends on what the use is and what the application is. For sure. And the expectations and
 the standards around this are moving and they're moving quite fast in some cases because there are
@@ -472,10 +472,10 @@ big thing. And they always have some license that maybe it's okay to study those
 entirely unproblematic. Like users may not know that their information could be destined for a
 study.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Brendan O'Connor" timestamp="">
+<turn speaker="Brendan O'Connor" timestamp="">
 
 You can say things like, okay, well internally the major internet companies are doing their own
 forms of analysis on these things. So what we're doing is pretty similar, but again, users off of
@@ -487,10 +487,10 @@ a certain person's message and especially don't do it showing the East Green nam
 the name of the author. And that seems to be kind of a reasonable standard. And again, more recent
 that's kind of come about I think. But there's, there's different standards.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Brendan O'Connor" timestamp="">
+<turn speaker="Brendan O'Connor" timestamp="">
 
 I mean some folks who work on social media and kind of the computer mediated communication
 literature somewhere. If you think about people more like communications departments doing more
@@ -503,10 +503,10 @@ larger scale. But for something like presentations like it seems like a reasonab
 I was first working on this, there were not a lot of concerns about the privacy of messages that
 were originally posted publicly.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Brendan O'Connor" timestamp="">
+<turn speaker="Brendan O'Connor" timestamp="">
 
 And like I really wasn't aware that, you know, this could be a a better way of doing things. So,
 this is the case that's definitely changed. There's also ethical considerations to just what
@@ -520,36 +520,36 @@ Right, right? There's a lot of questions there and they are seeing people work t
 different ways right now. And so there's a lot of questions there. I feel like I don't have great
 answers for all of that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="">
+<turn speaker="Waleed Ammar" timestamp="">
 
 Have you ever personally received any of angry emails or communication from people who like thought
 that your work was unethical in certain ways?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Brendan O'Connor" timestamp="">
+<turn speaker="Brendan O'Connor" timestamp="">
 
 Not about this. No. Nothing like this. But I mean, I don't know that that doesn't really tell you
 much. Right? Cause you just like no one's reading our papers. You never know. Right.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="">
+<turn speaker="Waleed Ammar" timestamp="">
 
 Well, the other thing I was wondering about, so I remember seeing on your homepage, just at least
 something about recent research about quantifying police brutality and this is the kind of thing
 that I imagine a lot of people would be angry about and you'd be receiving angry emails or
 communications.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Brendan O'Connor" timestamp="">
+<turn speaker="Brendan O'Connor" timestamp="">
 
 I think there's a lot of randomness in how these things go out. Like I know of some studies in
 social media, areas of hitting political topics that if they get into the press in the right place,
@@ -560,18 +560,18 @@ doesn't hit any of these privacy sorts of concerns. But that was a project to us
 extraction. So find instances of police killing civilians. So very concrete, I guess not so simple
 but concrete event extraction, a sort of knowledge based population task.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="">
+<turn speaker="Waleed Ammar" timestamp="">
 
 Even that. So, aside from the ethical side of collecting data from Twitter or social media, I
 imagine some people still have a lot of feelings about like the findings in a paper like this.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Brendan O'Connor" timestamp="">
+<turn speaker="Brendan O'Connor" timestamp="">
 
 Right? Right. Definitely. so the area of African American English I guess we kind of, I didn't
 mention too much of the history of it, but there's a, you know, a long politically charged series of
@@ -586,10 +586,10 @@ education, for example. And so there's this certain strains of language conserva
 well we should not promote these dialects of English that I as a language conservative think are
 normatively bad or should not be promulgated more.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Brendan O'Connor" timestamp="">
+<turn speaker="Brendan O'Connor" timestamp="">
 
 There's a certain extent, this always occurs to a certain extent, like the point of a mainstream
 language variety is force everyone to use it so we can all communicate with each other and all
@@ -601,10 +601,10 @@ students should be learning the mainstream variety you need it to like do well i
 question is what is the level of say, promotion or even respect for a minority language dialect. And
 this gets into questions of how do we want to engage with language in the world.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Brendan O'Connor" timestamp="">
+<turn speaker="Brendan O'Connor" timestamp="">
 
 And so research on African American English, not not my research, but other people's research
 definitely has gotten caught up in political stuff sometimes. And so that could be a form of ethical
@@ -616,10 +616,10 @@ things correlate to social factors by like are you a speaker of a language from 
 that was colonizing the world a few centuries ago? What are the countries that was being colonized?
 That really correlates the accuracy of the trends. Like machine translation you have,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Brendan O'Connor" timestamp="">
+<turn speaker="Brendan O'Connor" timestamp="">
 
 You can translate between French and English great. Like there's, there's a reason there's
 historical reason for that case, right? You could also think of machine translation as a purely
@@ -634,20 +634,20 @@ social policy, they can help inform how we want to create artificial intelligenc
 technologies. I think about what sorts of biases we're going to get in our data, for example, or for
 what the eventual uses are. How is that going to affect them?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="">
+<turn speaker="Waleed Ammar" timestamp="">
 
 Totally. So digging a little more about the biases, any data that we use in order to do any sort of
 analysis, will have some biases and I wonder what kind of biases do you think we should be thinking
 about when we're using social media data to answer or to attempt an answer for social science
 questions.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Brendan O'Connor" timestamp="">
+<turn speaker="Brendan O'Connor" timestamp="">
 
 Oh yeah. Yeah. So if you want to do like figure out people's opinion about X, the big bias that
 everyone points to immediately that is always very major is just who the heck are the authors that
@@ -661,10 +661,10 @@ doing and what does it mean? And that is a huge form of bias. It's a bias in the
 relate to, you know, the overall population distribution for a particular country or something like
 that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Brendan O'Connor" timestamp="">
+<turn speaker="Brendan O'Connor" timestamp="">
 
 The huge thing, right? So that's like one source of bias. You always have to think about where you
 analyze social media. And so the second one, which I guess my work we were talking about earlier has
@@ -676,10 +676,10 @@ this kind of like, I want to figure out, you know, the statistical prevalence of
 versus negative sentiment around something. And so this would affect that. But even more basic
 thing, it's like, okay, well I want to analyze what Americans think.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Brendan O'Connor" timestamp="">
+<turn speaker="Brendan O'Connor" timestamp="">
 
 It's like, well, I just throw out all Spanish speakers if I did that, right. That's almost like too
 obvious. Even some of these things there's like major World language cononical form of Spanish. It's
@@ -693,10 +693,10 @@ different language variability and what language resources are you using? So if 
 know, lexicon based sentiment classifiers are pretty popular among researchers, usually more outside
 NLP who are doing sentiment analysis and want something quick that works.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Brendan O'Connor" timestamp="">
+<turn speaker="Brendan O'Connor" timestamp="">
 
 Works reasonably well. An interesting question is, does a particular lexicon work that well on
 social media or does it work well on a particular sub slice of social media you care about? This
@@ -708,10 +708,10 @@ messages from young adults who are coordinating what they're going to do later i
 Or is it people who are making like strident political arguments about something or there's just a
 thousand different sub communities or sub slices of the world on social media.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Brendan O'Connor" timestamp="">
+<turn speaker="Brendan O'Connor" timestamp="">
 
 There's like very official communications, there's very casual communication, there's creativity
 that follows particular trends. There's people who just kind of say mundane things, but they're
@@ -724,32 +724,32 @@ statistics in some ways. And so I think these are all potential sources of you c
 kind of social effects that you really need to think about and that's going to affect how you
 interpret your natural language processing and things like that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="">
+<turn speaker="Pradeep Dasigi" timestamp="">
 
 Also collecting data from Twitter probably come with an inherent sampling bias too, right? I mean,
 not everyone has access to Twitter and maybe not everything is in Twitter.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Brendan O'Connor" timestamp="">
+<turn speaker="Brendan O'Connor" timestamp="">
 
 Yeah. Yeah, absolutely.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="">
+<turn speaker="Pradeep Dasigi" timestamp="">
 
 So how do you ensure how you connect on to that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Brendan O'Connor" timestamp="">
+<turn speaker="Brendan O'Connor" timestamp="">
 
 I think being aware of what sorts of just makeup of the population that you can expect. The very
 basic one is different online services have different distributions of demographics and are even
@@ -761,10 +761,10 @@ Twitter a lot in the early days, but now it's more even, right? They just ask pe
 you black, are you white or what? And whether you use Twitter with Instagram, with YouTube, et
 cetera, et cetera. So getting those statistics actually helps a lot.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Brendan O'Connor" timestamp="">
+<turn speaker="Brendan O'Connor" timestamp="">
 
 And this is, I think explains a lot about kind of, you know, creative, nonstandard linguistic
 behavior we see on Twitter. Those statistics also show that like Facebook is a lot more
@@ -777,10 +777,10 @@ analyzing. Like maybe you just want to analyze immigrant communities in Queens, 
 something. And it's like, well that's just its own world. Like every, every little sub slice is
 going to be its world.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Brendan O'Connor" timestamp="">
+<turn speaker="Brendan O'Connor" timestamp="">
 
 May you only want to analyze what people are saying about gun shooting episodes in the United
 States. So there's a nice paper from the Stanford group about this a year ago or so, and there's,
@@ -796,10 +796,10 @@ Like you want to intermix all these things, but if you want to kind of hammer do
 social analysis you might have to make, you know, rough and ready decisions about some of these,
 some of these factors.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="">
+<turn speaker="Waleed Ammar" timestamp="">
 
 Yeah. So with all these biases in mind, there's an argument that it's pointless to try to do
 computational social science on social media text because of all these biases that we know of. Are
@@ -807,10 +807,10 @@ there in your mind certain questions that are easier to answer, what are the cha
 problem or question that has to do with social science that is easier to answer through social media
 text?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Brendan O'Connor" timestamp="">
+<turn speaker="Brendan O'Connor" timestamp="">
 
 Anything where you can reliably establish kind of a subpopulation of authors or types of messages
 from a particular social media system and knowing something about that little world could be of
@@ -820,19 +820,19 @@ groups and there's interesting research on how to do that. Maybe you could freew
 demographics or something and there's questions about how to do this. They'd argue that online
 surveys have similar issues, but that's always going to be hard.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="">
+<turn speaker="Waleed Ammar" timestamp="">
 
 So you're saying the more we can target a certain, a narrower criteria and if we can like capture
 lots of users on social media who exhibit this criteria, then our analysis will be probably easier
 to do using this data compared to trying to find these people in the wild.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Brendan O'Connor" timestamp="">
+<turn speaker="Brendan O'Connor" timestamp="">
 
 What I've noticed is I get the impression that a lot of the studies have moved more in the direction
 of analyze a phenomena that are kind of specific to online systems. You know, in the real world, we
@@ -845,10 +845,10 @@ that's that, that's a thing you can do, right? Use it as a data source for all s
 really think it's just one piece of the puzzle. There's a lot of different data sources, social
 science is just so broad, right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Brendan O'Connor" timestamp="">
+<turn speaker="Brendan O'Connor" timestamp="">
 
 Like are we talking about health policy? Are we talking about international relations? Are we
 talking about economics? There's just so many things going on? For anything, it's like sometimes
@@ -873,18 +873,18 @@ can be useful in lots of settings cause we're getting a lot of kind of casual, u
 filtered conversations from everyday people. And that's kind of an exciting thing about it. So
 there's a lot to do.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="">
+<turn speaker="Waleed Ammar" timestamp="">
 
 Yeah. Thank you for explaining this. So that's all I had. Did you have any other thoughts that you
 wanted to share on the, on this episode?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Brendan O'Connor" timestamp="">
+<turn speaker="Brendan O'Connor" timestamp="">
 
 I think, yeah, I mean more people should work in social media and it just raises so many questions.
 There's so many, like if you look at work, like how do you do word segmentation for hashtags? Like
@@ -897,10 +897,10 @@ to kind of a social context around authoring of messages, which it's just very o
 media context, but to some extent it's important for all of language, all of language is a social
 context, all our use of language is for communication or debatably a large part of it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Brendan O'Connor" timestamp="">
+<turn speaker="Brendan O'Connor" timestamp="">
 
 And these things are really important. And social media, they kind of come to the forefront. And so
 I think there's a lot of problems that are kind of exciting and hard on social media. How does
@@ -911,19 +911,19 @@ algorithm because networks aren't really important for social structure to these
 social side questions. How do power dynamics affect how people talk about each other? Can we get
 evidence of this from social media? So just all, all sorts of things. I think it's a great area.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="">
+<turn speaker="Waleed Ammar" timestamp="">
 
 Yeah. A few years ago I think there was a surge in work in NLP like focusing on social media, but I
 think it didn't sustain for very long. I'm not sure why. Maybe people thought it's not as much
 appreciated by other researchers in the area. Like,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Brendan O'Connor" timestamp="">
+<turn speaker="Brendan O'Connor" timestamp="">
 
 Yeah, so like we think it's cool, I don't know, I'm supposed to be looking at it. I mean there's
 always social media tracks at the main NLP conferences now. There are really social media centric
@@ -935,10 +935,10 @@ you see at the main NLP conferences and so yeah. So this year ACL has this socia
 computational social science is the area. And so that has, I think that's a good combination to put
 these things in.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Brendan O'Connor" timestamp="">
+<turn speaker="Brendan O'Connor" timestamp="">
 
 So there should be more of that. Some years we have it as a full area, some years not, but it's
 pretty consistent now. There's a lot of workshops looking at different aspects of it cause you can
@@ -952,19 +952,19 @@ different things, and these settings are, they're just always harder for natural
 technologies. It's always harder for them to analyze these, this sort of higher variability
 language. So it's a lot of great challenges, I think.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="">
+<turn speaker="Waleed Ammar" timestamp="">
 
 Yeah. There are a lot of under-studied problems there, so thank you for sharing your thoughts on
 this topic. It's been a pleasure talking to you.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Brendan O'Connor" timestamp="">
+<turn speaker="Brendan O'Connor" timestamp="">
 
 Yeah, thanks so much. Take care.
 
-</Turn>
+</turn>

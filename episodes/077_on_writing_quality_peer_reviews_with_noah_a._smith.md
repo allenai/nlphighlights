@@ -8,23 +8,23 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting work in natural
 language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is Matt gardener and Waleed Ammar , we are research scientists at the Allen Institute for
 Artificial Intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:11">
+<turn speaker="Matt Gardner" timestamp="00:11">
 
 All right. Today our guest is Noah Smith who is a professor of computer science at the University of
 Washington and a senior research manager at the Allen Institute for Artificial Intelligence AI-2.
@@ -32,17 +32,17 @@ He's my boss. I have had the pleasure of working with Noah for quite a while. Bo
 classes and T-aide for classes when Noah was at CMU. Waleed also has a long history with Noah. Noah,
 it's good to have you on the program.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="00:32">
+<turn speaker="Noah Smith" timestamp="00:32">
 
 Delighted to be back. Thanks for having me.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:34">
+<turn speaker="Matt Gardner" timestamp="00:34">
 
 Yeah, I guess we also had one of our very first episodes. Yeah, it's good to have you back. Today,
 we wanted to talk about something that you actually suggested and we thought was a really good idea
@@ -51,24 +51,24 @@ probably already have passed and it will be reviewing time and you thought it wo
 to talk about advice for people who are doing reviews so that maybe collectively we can improve the
 quality of all of our reviews.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="01:00">
+<turn speaker="Noah Smith" timestamp="01:00">
 
 Yeah, that's right.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="01:01">
+<turn speaker="Matt Gardner" timestamp="01:01">
 
 Noah, do you want to tell us what advice you have?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="01:03">
+<turn speaker="Noah Smith" timestamp="01:03">
 
 Yeah, sure. So I've been, you know, writing papers for a long time now and I have been increasingly,
 it feels like I've been increasingly having this experience that I get back reviews with my
@@ -80,10 +80,10 @@ everybody's sort of frustrated with the quality of reviewing. I remember sitting
 business meetings and realizing that we don't actually do a whole lot collectively as a community to
 train people on how to review papers.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="01:48">
+<turn speaker="Noah Smith" timestamp="01:48">
 
 Hopefully many of us who advise PhD students are doing this in our labs, giving people advice as
 they come up through the ranks and get invited to be usually workshop reviewers. Then conference
@@ -95,10 +95,10 @@ encourage my colleagues around the world who have been reviewing for some time a
 gained some expertise, maybe even been recognized with the best reviewer award. Share your wisdom
 and help help younger members of the community learn how to do this better.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="02:30">
+<turn speaker="Noah Smith" timestamp="02:30">
 
 What I usually do when I sit down with my students for their early training in how to review. I
 usually invite them to help me with a review I've been assigned and so you know the process I follow
@@ -111,10 +111,10 @@ usually recommend for the review that's going to go back to the authors I like a
 and as one time a program chair to see a review that starts out with a completely dispassionate,
 ideally very brief summary of what the paper offers.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="03:14">
+<turn speaker="Noah Smith" timestamp="03:14">
 
 No judgment, no goods, no bads, no pros no cons. Just what is in this paper stated as simply as
 possible for as wide an audience as possible. If you can, if you can do it without jargon, even
@@ -126,10 +126,10 @@ of your review is the area chair. They're super busy. They've got a million of t
 You want to make it as easy as possible for them first to understand what's in the paper. So the
 first thing is, can you succinctly state what the contributions of the paper were without judgment?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="03:57">
+<turn speaker="Noah Smith" timestamp="03:57">
 
 Again, not, you're not judging. Is it enough? You're not judging, is it? Is it amazing? Is it is it
 life changing? Is it incremental? That's not for you to say right yet. Just first say what it is and
@@ -140,10 +140,10 @@ you're writing your paper so that reviewers can easily find it what new in this 
 really can't articulate that, then you probably have more work to do and it's not time to write yet.
 But anyway, when you're reviewing, start out with a clear summary.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="04:36">
+<turn speaker="Noah Smith" timestamp="04:36">
 
 Ideally just a few sentences, keep it brief, don't get into the details. Focus on someone who has
 just a few minutes to read your review and wants to know what's in the paper. After you've done
@@ -155,10 +155,10 @@ advocate. So first fight for the paper and say the strongest things you can. And
 this is a bit of a stretch because you're angry about something in the paper, you're irritated, you
 feel like it's weak, you're annoyed cause they didn't cite you.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="05:16">
+<turn speaker="Noah Smith" timestamp="05:16">
 
 There's all kinds of, there's all kinds of emotions that can get in the way here. But you know, you
 are a scientist and so you need to be clear headed. And so you need to do your, do your best at
@@ -170,10 +170,10 @@ can say that are positive about a paper that has deep flaws. Why do this? Why pu
 reasons you can? Well, you know, it's ultimately somebody else is going to be making a decision
 about whether to accept or reject the paper.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="05:52">
+<turn speaker="Noah Smith" timestamp="05:52">
 
 And if the strongest reasons to accept the paper are when compared to other papers not that strong,
 then you know, you've, you've managed to convey the information you need to convey, but you've
@@ -185,10 +185,10 @@ now in this career stage when I'm writing a review to imagine that the person wh
 is very early in their career and hasn't learned how to do things quite right yet and they're still
 struggling to figure it all out.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="06:31">
+<turn speaker="Noah Smith" timestamp="06:31">
 
 And the last thing I want to do is to discourage that person from continuing to try. This part of
 the review where you focus on the positives I think can be really helpful in minimizing the amount
@@ -200,10 +200,10 @@ they feel, if they feel positively about about the positive aspects of their wor
 trying to give an honest appraisal. We're not going to make things up. We're not going to say things
 that aren't true about the paper,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="07:09">
+<turn speaker="Noah Smith" timestamp="07:09">
 
 We are going to say the best possible things that we can. I think that's just a nice way to soften
 the blow for what's to come next, which is usually the weaknesses of the paper. And so you know the,
@@ -215,10 +215,10 @@ sweeping or they didn't cite these five papers. Well actually that's a, that's, 
 terrible, that's not a terrible comment because that's fairly precise. The point I'm trying to get
 at is, is that you want to try to make your feedback on the weaknesses of the paper actionable.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="07:48">
+<turn speaker="Noah Smith" timestamp="07:48">
 
 So again, the the authors can see the way forward and can see how to make their work better for the
 next round. So again, details are good. Exactly what's, what is the failure of the argument?
@@ -230,10 +230,10 @@ that in the future when you see their papers, it's an easier job for you. Now no
 said up until now is really about substance. It's about, you know, what are the fundamental ideas in
 the paper? What are the major strengths and what are the major weaknesses?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="08:32">
+<turn speaker="Noah Smith" timestamp="08:32">
 
 If the review is going on for pages and pages, at this point you might be nitpicking more than you
 need to. It's good to remember that people have kind of limited capacity for handling lots of
@@ -245,10 +245,10 @@ writing papers, I find a bunch of things that are annoying that are more stylist
 and I just save those for the end. There's usually like a checklist after the strengths and
 weaknesses of little things that are easy for the authors to fix that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="09:12">
+<turn speaker="Noah Smith" timestamp="09:12">
 
 If these were the only things wrong with the paper, you'd say accept it but please fix your typos
 and that would be the recommendation. Sometimes there's also a box for, you know, private comments
@@ -262,10 +262,10 @@ it and take it seriously, appreciate your comments and ultimately continue the c
 we're all having when we write papers. So that long spiel I just gave is usually more or less what I
 tell my grad students when they're getting started.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="09:58">
+<turn speaker="Matt Gardner" timestamp="09:58">
 
 So I guess you given us a good description of what the content of a review should look like. And if
 I could summarize you, I think you gave basically four main sections. One is a short one that says
@@ -273,10 +273,10 @@ what's in the paper. Then strengths than weaknesses, then typographical copy edi
 What about the process of actually doing the review? When I'm reading the paper, what should I be
 thinking about? What should I be doing? How long should it take?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="10:20">
+<turn speaker="Noah Smith" timestamp="10:20">
 
 How long it takes is deeply personal, right? Different people read at different rates and the time
 that you put in may vary quite a lot depending on how familiar you already are with the research
@@ -287,10 +287,10 @@ that's more distant, obviously takes me considerably more time. I may have to pa
 up, go look, go reference an earlier paper. I may have to stop and think for a bit. So the amount of
 time it takes, that's kind of a know thyself kind of question.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="10:55">
+<turn speaker="Noah Smith" timestamp="10:55">
 
 I think different people do this differently. The way I do it and I think a lot of others do is to
 start with a very quick read, a kind of scan, just so I know, you know, read the abstract, skim
@@ -301,10 +301,10 @@ knowledge, we just kind of localize it. That usually includes the final tables a
 case, and I usually scan the bibliography too, which is again kind of a way of knowing what this
 work is related to and what part of my brain I want to reactivate for thinking about what's here.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="11:32">
+<turn speaker="Noah Smith" timestamp="11:32">
 
 And usually by the time I've done that, I know kind of what kind of paper it is. Is it a theoretical
 paper? Is it a an engineering paper where they've made an advance on how to solve a problem? Is it a
@@ -317,17 +317,17 @@ myself reviewing papers on a plane and I'd rather finish the review for one pape
 reading the next, or I'm going to start confusing things. So I will go top to bottom on one paper
 and write the review before I go to the next one.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="12:17">
+<turn speaker="Matt Gardner" timestamp="12:17">
 
 To what extent is it the reviewer's job to find errors?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="12:20">
+<turn speaker="Noah Smith" timestamp="12:20">
 
 There are different kinds of errors, so I think reviewers can be forgiven for missing notational
 errors and typos and stuff like that. I think if a reviewer sees a flaw in an argument, that's
@@ -344,18 +344,18 @@ and maybe say things in a, in a more cautious way. And that's, you know, that's 
 sloppy or we were trying to overclaim. It's just that more eyes on a paper can help make sure that
 what it purports as truth is actually true.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="13:26">
+<turn speaker="Matt Gardner" timestamp="13:26">
 
 Do you try or do you recommend students try to assure that proofs are correct or that the numbers
 that are reported for prior experiments matched what was reported in prior experiments?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="13:37">
+<turn speaker="Noah Smith" timestamp="13:37">
 
 That's a great question. So if you're familiar with the experimental setup and you want to check
 these things, I don't think anybody would fault you. I have not heard many reports of people
@@ -364,18 +364,18 @@ would be appreciated. I don't personally do that. Perhaps I come from a simpler 
 more naive trust in other researchers for the amount of time I have just spend on a review that
 doesn't feel like the best use of that time, although maybe I should reconsider it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="14:07">
+<turn speaker="Matt Gardner" timestamp="14:07">
 
 I guess it's also for mistakes if they copied the wrong number or there were two different versions
 of an experiment in the original paper and they used the wrong one to compare against.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="14:17">
+<turn speaker="Noah Smith" timestamp="14:17">
 
 Yeah, there are, there are some things like this that I try to be on the lookout for. Like if the
 paper's not explicit about all the conditions. Say there was some kind of gold standard pre-
@@ -388,10 +388,10 @@ datasets. So I think raising these questions, if you know about these experiment
 know, sometimes you find yourself reviewing a paper. The dataset is new, the task is new to you and
 you're just not really familiar with what the whole pipeline is.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="15:01">
+<turn speaker="Noah Smith" timestamp="15:01">
 
 It would be laudable if you've made the investment to go find out and double check everything
 they've done. But the vast majority of reviewers won't do it. We tend to trust each other. You asked
@@ -406,10 +406,10 @@ some of the notation is unfamiliar or some of the underlying math is unfamiliar 
 you know, they're skipping steps and and you get angry and then you project that anger onto the
 authors that may or may not be fair.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="15:53">
+<turn speaker="Noah Smith" timestamp="15:53">
 
 So I think in this situation, the thing to do is maybe say in the review that you tried to follow
 the proof, you found it somewhat difficult. Did this in a self deprecating way maybe, but point out
@@ -421,10 +421,10 @@ encouraging authors who, you know, sometimes it's a case of authors coming from 
 research community with different assumptions about the readership. You're not going to make
 yourself look bad by encouraging authors to make their proof more clear.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="16:31">
+<turn speaker="Noah Smith" timestamp="16:31">
 
 Obviously in this situation you are, you're basically giving up on being able to find errors. If you
 can't follow the proof, you're not gonna detect errors in it. But if you can do it, it is a great
@@ -432,20 +432,20 @@ service. And, and you know, ideally a theoretical paper would have some reviewer
 area chairs can assume will follow and check the proofs. That is certainly something I would try to
 do as an area chair when assigning reviewers to a paper.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="16:52">
+<turn speaker="Matt Gardner" timestamp="16:52">
 
 All right, so we've talked about like the general format of review and the process that you might go
 through when you're doing a review. NAACL and EMNLP recently have experimented with changing review
 forms. Do you have any thoughts about this? Is it a good way to encourage better content for
 reviews?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="17:06">
+<turn speaker="Noah Smith" timestamp="17:06">
 
 I think the the advice I would give for people who are in a position to change review forms is to be
 very cautious and incremental. People may remember that at NAACL this past year, they changed the
@@ -459,10 +459,10 @@ generally the same rule should apply when you're dealing with review forums that
 change one thing at time. Don't go making massive changes, they're just going to confuse people and
 you're not going to really get a clear signal about what works.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="17:55">
+<turn speaker="Noah Smith" timestamp="17:55">
 
 Personally, I thought the one to six scale was not great. I do think, you know, breaking out the
 review form into a few sections or sort of offering a pre-filled in template that encourages people
@@ -475,10 +475,10 @@ really think the, the important thing is to create a sense of investment in the 
 you know, articulate our shared values around why, why do we do this whole peer review thing in the
 first place? That's something I think people don't completely always understand.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="18:41">
+<turn speaker="Matt Gardner" timestamp="18:41">
 
 Yeah. Great point. I have a couple of higher level questions. How does archive and pre-prints change
 reviewing for instance, the BERT paper that made huge waves just like a month or two ago. It hasn't
@@ -486,10 +486,10 @@ been reviewed yet. Presumably someone's gonna review it at NAACL. There are lots
 like this that we could list that a lot of people are familiar with but haven't been through review.
 What recommendation do you have about reviewing this kind of paper?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="19:03">
+<turn speaker="Noah Smith" timestamp="19:03">
 
 So I guess in some ways this is new to have so many of our papers already publicly available with
 author information known and affiliation information known before the deadline. It's not really new
@@ -502,10 +502,10 @@ know, that's not gonna go away. Archive maybe makes it a little bit more widespr
 easier to see if a large number of our authors have posted their papers on archive before submitting
 to the conference.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="19:48">
+<turn speaker="Noah Smith" timestamp="19:48">
 
 Then you know, you could, you could ask, well, what's happened to peer review to blind peer review
 to double blind peer review. So if you know now, now we're moving into a mode where it's much more
@@ -518,10 +518,10 @@ who publish them, which can, which can cut both ways. We don't want to penalize 
 we want to encourage them because the community will ultimately do better as a whole if we have
 increasing diversity of researchers who come in from other places.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="20:33">
+<turn speaker="Noah Smith" timestamp="20:33">
 
 We also don't want to give a bonus points to people just because they've had strong results in the
 past. And so this is quite a conundrum and I think the community's really been struggling with it.
@@ -533,10 +533,10 @@ The first question to ask yourself is, do you have a conflict of interest with t
 anything about your relationship with the authors or to the work that's going to make it hard for
 you to be objective about it and give it a fair reading in either direction?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="21:14">
+<turn speaker="Noah Smith" timestamp="21:14">
 
 Again, maybe you're going to be super excited about the work and you're worried that you're going to
 be extra excited because you're good friends with the authors or you know you you're doing something
@@ -550,10 +550,10 @@ you that you don't often an another pair of eyes on the situation will bring a l
 I would suggest doing that right away so that you know that the area chair has has time to find
 somebody else if they need to.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="21:58">
+<turn speaker="Noah Smith" timestamp="21:58">
 
 Once you've done that, suppose it passes and you're like, well, you know, I've read this paper and I
 have some interest in the results, but I, but I don't really have a, a strong reason to be biased
@@ -563,10 +563,10 @@ what's going on and then kind of skim through and do a quick job because you alr
 and life has already moved on since, you know, last summer whenever the paper was posted online. But
 in fact the submitted version might have new results and things, the story may have changed.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="22:30">
+<turn speaker="Noah Smith" timestamp="22:30">
 
 They may have, they, you know, one of the reasons that people post papers on the archive in advance
 of a deadline is to get feedback so that they can improve the paper before it goes in for peer
@@ -578,26 +578,26 @@ them the benefit of the doubt and assume that they, that they were acting in goo
 their paper on the archive in order to get feedback and improve the work. Read the version that they
 actually submitted. Don't worry about the earlier version.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="23:07">
+<turn speaker="Noah Smith" timestamp="23:07">
 
 We all have early drafts. Those are not what are reviewed, what's reviewed is what's submitted and
 give the paper as fair reading as it deserves. Like every other paper.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="23:14">
+<turn speaker="Matt Gardner" timestamp="23:14">
 
 So you mentioned conflict of interest and bias. I want to push on this a little bit. Is it biased if
 it's work in my area and I already have an opinion about the work of the paper.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="23:25">
+<turn speaker="Noah Smith" timestamp="23:25">
 
 No, you can't avoid that, right? You're entitled to your opinion. And you know, we want papers
 should be reviewed by researchers who are deeply familiar with the related work and the past work
@@ -605,10 +605,10 @@ and have even made contributions there. We want expert reviewers. That's exactly
 conflict of interest would be something like me reviewing your paper because we work together or me
 reviewing Waleed's paper because we work and recently he was my PhD student.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="23:47">
+<turn speaker="Noah Smith" timestamp="23:47">
 
 A conflict of interest would be reviewing a paper by someone who's in a financial relationship, like
 you know, a sponsor of your research. That kind of relationship feels like it would muddy the water.
@@ -621,10 +621,10 @@ certainly some gray areas. You know, I finished my PhD many years ago. Do I stil
 interest with my PhD advisor? I would say probably not at this point, but there might be reasons to
 dispute that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="24:33">
+<turn speaker="Noah Smith" timestamp="24:33">
 
 There's definitely going to be some differences of opinion and you know, to be honest, I don't think
 conferences often lay these things out as carefully as they should. The main thing that we're able
@@ -637,10 +637,10 @@ catch them. This is actually one of the things that area chairs are supposed to 
 for conflicts of interest, but they, you know, nobody knows all of the possible conflicts of
 interest.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="25:14">
+<turn speaker="Noah Smith" timestamp="25:14">
 
 We just don't have a centralized knowledge base that captures all of this in any clear way. So my
 suspicion is that we do assign papers to reviewers with some frequency that do have a COI and they
@@ -655,20 +655,20 @@ question and, and bring it into relief. And we really, I think we really should 
 more time to declare what we think as a community. We think are conflicts of interest and what are
 not and and what should somebody do if they're assigned a paper that falls under that umbrella.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="26:08">
+<turn speaker="Waleed Ammar" timestamp="26:08">
 
 Yeah, that makes sense. I think one of the other kinds of bias that people question often is whether
 the person reviewing is trying to demote this paper because we have another submission in the same
 conference or another conference that will kind of have a similar idea. Like you said, it's hard to
 catch all of these cases.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="26:24">
+<turn speaker="Noah Smith" timestamp="26:24">
 
 So this is sort of like a conflict of interest because if this paper under under scrutiny is going
 to be published, then it might detract attention or make it harder for you to publish your own work.
@@ -680,10 +680,10 @@ make it a lot harder for me to publish my project. My immediate answer to that w
 true that they, you know, that they've raised the bar for you a little bit. In fact, I've had this
 happen, right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="27:00">
+<turn speaker="Noah Smith" timestamp="27:00">
 
 You know, they've raised the bar for you a little bit. They're going to make it a little, it's gonna
 make it a little bit harder on the numbers or you know, they started to creep up towards your idea.
@@ -695,10 +695,10 @@ time. Some of the tricks that they've used, we can now incorporate into our meth
 it's going to take a little bit more time, but in the end we're going to have an even stronger
 result than we would have had otherwise.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="27:32">
+<turn speaker="Noah Smith" timestamp="27:32">
 
 So you know, kind of like the old quote about standing on the shoulders of giants. I think when
 you're in this situation you have to train yourself to make lemons out of lemon-aid, sorry, make
@@ -714,19 +714,19 @@ like them to do for you if the situation were reversed and continue to continue 
 you can building on the new results. You're lucky to now have some advanced notice of, because
 wasn't it great that you got to be assigned a reviewer of this paper?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="28:33">
+<turn speaker="Waleed Ammar" timestamp="28:33">
 
 So another thought that I had is doing all this care for reviewing takes time and there's a lot of
 paper requests, paper reviewing requests that we get, especially if you've been around if you've
 been publishing in this domain for for awhile, I wonder what would be a fair amount of reviewing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="28:50">
+<turn speaker="Noah Smith" timestamp="28:50">
 
 You could put it into a purely transactional terms and say, well, I wrote N papers this year, but
 really it's fractional because I had co-authors, so you know, on a two author paper I wrote half or
@@ -738,10 +738,10 @@ into the pool what I take out. And then maybe you should say, well, but you know
 experienced researcher and it takes less time for me to do these things. Then someone who's new and
 I have broader expertise or experience that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="29:27">
+<turn speaker="Noah Smith" timestamp="29:27">
 
 And so maybe I should, maybe I should do a little more. You know, you could do this calculation and
 people sometimes do, I can never remember, I've heard five different senior researchers offer six
@@ -753,10 +753,10 @@ that count? Because we need people to do that job. And we really, we also need p
 know, action editors for journals and do journal reviews, which are sometimes a considerably more
 work because the papers often have a lot more meat in them.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="30:04">
+<turn speaker="Noah Smith" timestamp="30:04">
 
 So I would hesitate to put a number on it. I also kind of think different people have different
 strengths and should contribute in different ways. Some people are really amazing reviewers. If
@@ -768,10 +768,10 @@ could sustain a a couple more of these interviews. I'm not the only person with 
 this. I had one other point about this, which is that reviewing isn't entirely service, particularly
 as you get farther along in your career and you have less time to sit down and peruse papers.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="30:44">
+<turn speaker="Noah Smith" timestamp="30:44">
 
 Reviewing is how you keep up. It's part of how you keep up and it's part of how you learn what's
 going on. And so while you know some fraction of the papers you get, you're not going to learn a
@@ -784,10 +784,10 @@ selfish reasons to do it too. And so I justify the amount of time I put into thi
 saying, well, this is, you know, this is my opportunity to update myself this month on what's going
 on in the field. I guess it's a, it's an alternative to reading the archive feed every morning.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="31:28">
+<turn speaker="Matt Gardner" timestamp="31:28">
 
 Yeah. Yeah. Good points. My last question for you is more about at a high level, what's the point of
 a review, what are we trying to get out of this? And in particular one aspect, so I'm remembering it
@@ -796,10 +796,10 @@ posted on archive about how it was done totally wrong. If you strongly disagree 
 the paper that you're reviewing, maybe it's using bAbI to make claims about natural language or
 maybe your Yoav and you're reviewing this NLG paper. What should you do?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="32:01">
+<turn speaker="Noah Smith" timestamp="32:01">
 
 So the first thing to say is I think, I think the speech act that Yoav was producing when he, when
 he wrote that rant, was not really intended to be a review of that paper. I think he was using that
@@ -811,10 +811,10 @@ come to a decision about what to do with the paper. That does not mean you're tr
 reason to get the paper rejected because you know that 80% of papers or never going to be rejected,
 it really means that you want to help them make the right decision to the best of your ability.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="32:43">
+<turn speaker="Noah Smith" timestamp="32:43">
 
 And you know you recognize there are going to be other reviewers, but you want to pull your weight.
 So your job is to read the paper carefully, figure out what's in it, discuss the strengths and
@@ -827,10 +827,10 @@ it was better in the old days when there were fewer people. Things can get quite
 then, maybe even nastier than they are now because things were maybe more personal and everybody
 knew each other a little better.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="33:25">
+<turn speaker="Noah Smith" timestamp="33:25">
 
 We tend to emphasize the adversarial nature of this process and you know, what are my odds? What's
 the chances paper's going to get in? We really fixate on the scores. If you have an average above
@@ -842,10 +842,10 @@ and for results that people need to know about to be published and for findings 
 accelerate our pace to be published and for important new information that's going to affect the way
 people do things to get out there.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="34:05">
+<turn speaker="Noah Smith" timestamp="34:05">
 
 And so I think if we, if we focus more on that and we focus more on, you know, the information that
 people need to make these decisions and if we all act a little bit more dispassionately, then the
@@ -857,10 +857,10 @@ something about this paper? I guess the answer to fundamental disagreement in my
 censorship. So I might fundamentally disagree with some of the things in a paper or the way
 something was done or the assumptions that were made.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="34:45">
+<turn speaker="Noah Smith" timestamp="34:45">
 
 But again, your role as a reviewer is not to make a value judgment on everything about the paper.
 It's to focus on the argument that's being made and whether the findings are going to have value for
@@ -872,10 +872,10 @@ out and maybe it does sink the paper and maybe there because there aren't enough
 positive side to justify it being accepted. Again, it's your job to play both sides and seek those
 arguments in favor of the paper.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="35:26">
+<turn speaker="Noah Smith" timestamp="35:26">
 
 But I think again that you can't assume that your fundamental disagreement with the paper implies it
 should be rejected. And even even if you deeply disagree that doesn't, the papers shouldn't be
@@ -884,10 +884,10 @@ with an idea, the best thing is to have it is to have it voiced so that you can 
 point to it and fight back suppressing the idea is certainly not going to lead to the result that
 you want.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="35:53">
+<turn speaker="Matt Gardner" timestamp="35:53">
 
 I want to push on that a little bit because it's these reviews that determine best paper awards that
 determine what gets highlighted at conferences. You said we shouldn't make value judgments in these
@@ -895,24 +895,24 @@ reviews, but we are implicitly anyway because our review determines what's going
 And you also said it should be published so that I can respond to it. What's the right place to
 respond to it?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="36:14">
+<turn speaker="Noah Smith" timestamp="36:14">
 
 Well, the next paper.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="36:15">
+<turn speaker="Matt Gardner" timestamp="36:15">
 
 Okay.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="36:15">
+<turn speaker="Noah Smith" timestamp="36:15">
 
 If you think about the scientific discourse across a question or a problem over a long period of
 time, it often has the feeling of a conversation. There's kind of a back and forth and it's ideally
@@ -925,10 +925,10 @@ that are assumed by the paper, but you shouldn't then necessarily fight to have 
 yeah, I would say your response is going to be, well, you know, it could be, it could be the next
 paper, it could just be a blog post critiquing that paper in particular or a trend in general.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="37:02">
+<turn speaker="Noah Smith" timestamp="37:02">
 
 I understand the frustration of seeing work that you fundamentally disagree with winning awards and
 being widely recognized. It is very frustrating. I was fortunate to have gotten advice early, very,
@@ -944,19 +944,19 @@ they often look quite silly in retrospect, the conversation never ends after the
 the conference. There's going to be another conference, they're going to be more papers. There's
 always more to say. So don't take these things too seriously and focus instead on what's true.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="38:05">
+<turn speaker="Matt Gardner" timestamp="38:05">
 
 Great. Thanks. This has been a really interesting conversation. Thanks a lot for suggesting this
 topic. It was really nice talking with you.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Noah Smith" timestamp="38:10">
+<turn speaker="Noah Smith" timestamp="38:10">
 
 Thanks for having me. Looking forward to the next time.
 
-</Turn>
+</turn>

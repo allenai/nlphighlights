@@ -8,23 +8,23 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting work in natural
 language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is Matt Gardner and Waleed Ammar, we are research scientists at the Allen Institute for
 artificial intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:12">
+<turn speaker="Waleed Ammar" timestamp="00:12">
 
 Okay. Today our guests are Wuwei Lan and Wei Xu, Wuwei Lan is a PhD student at Ohio state
 university. His recent work focuses on collecting sentence paraphrases at large scale and deep
@@ -41,10 +41,10 @@ the others. So in this paper you provide a systematic analysis of how several of
 perform across multiple tasks and domains. Could you tell us more about the different tasks and the
 data sets that you use for evaluation in this framework?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Wuwei Lan" timestamp="01:34">
+<turn speaker="Wuwei Lan" timestamp="01:34">
 
 Yeah, sure. We use the fall tasks are the first day, the paraphrase identification. This task is
 given sentence. The pair, we want to identify whether the two sentences, they are paraphrased though
@@ -57,10 +57,10 @@ the start task is natural language inference. And is this task is very popular b
 and MNLI dataset, this kind of a really good tool, the paraphrase, identification and a semantic
 textual similarity.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Wuwei Lan" timestamp="02:32">
+<turn speaker="Wuwei Lan" timestamp="02:32">
 
 With Natural Language Inference. We want to predict the It focuses on three semantic relations: the
 premise entails the hypothesis (entailment), they contradict each other (contradiction), or they are
@@ -71,61 +71,61 @@ semantical relationship is kind of different in natural language inference. Simi
 question/answering. There's also a pair QA pair given a question. Can we see this is the answer, The
 sentence is the is the answer for this question. True or false?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="03:25">
+<turn speaker="Waleed Ammar" timestamp="03:25">
 
 So in question answering, there are many variations of the question answering problems. Which one
 are we talking about? What is the form of the answer?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Wuwei Lan" timestamp="03:33">
+<turn speaker="Wuwei Lan" timestamp="03:33">
 
 The question and Answering system that we use is WikiQA and TreeQA and also use a clean version. A
 clean version means that we still act the QA Pairs. That is the answer pairs is a sentence. The best
 answer, the correct answer is selected by the semantic relationship with the question.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="03:53">
+<turn speaker="Waleed Ammar" timestamp="03:53">
 
 So the input to the model is going to be the question and only one of the sentences that are
 candidates. Is that right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Wuwei Lan" timestamp="04:00">
+<turn speaker="Wuwei Lan" timestamp="04:00">
 
 The inputs for model is though one question, pair one questions sentence and one answer sentence is
 a pair.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="04:07">
+<turn speaker="Matt Gardner" timestamp="04:07">
 
 Yeah, I've heard of this task called answer sentence selection a lot of the time. So it's not like
 extractive question answering like from SQuAD or something. We're given a passage and a question you
 need to pull out the answer. We're just scoring answers, which might just be full sentences.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="04:24">
+<turn speaker="Waleed Ammar" timestamp="04:24">
 
 So going back to the first two tasks that you described, is it fair to say that any paraphrase, any
 positive example in the paraphrase identification task would count also as a five in the semantic
 textual similarity task.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Wuwei Lan" timestamp="04:41">
+<turn speaker="Wuwei Lan" timestamp="04:41">
 
 The semantic textual similarity task, we can think of as the score of five can be classified into
 paraphrase, and the score zero, one, two can be classified into non paraphrase, but this is just a
@@ -133,10 +133,10 @@ very rough equivalence that we can actually, during the semantic textual similar
 annotation, the Walker read our real value between zero and a five for this pair. So this is kind of
 complicated to compare with the paraphrase and education.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="05:17">
+<turn speaker="Waleed Ammar" timestamp="05:17">
 
 Yeah. So clearly there are similar, like there are, there are related tasks. They're not the same
 exactly. The four that you mentioned, some of them are more related than others. So do you feel
@@ -147,10 +147,10 @@ tries to test this hypothesis. But I wanted to ask about what's the intuition be
 you feel that was the main hypothesis that we should get the same, the best results with one type of
 model for all of them?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Wei Xu" timestamp="06:04">
+<turn speaker="Wei Xu" timestamp="06:04">
 
 Yeah, that's an interesting question that's actually a very, a very good question. I think there's
 differences in the dataset that it's very hard to analyze very quantitatively. So that's also one of
@@ -162,10 +162,10 @@ varies because the natural language inferences was given to a sentence to the cr
 and add them to write a entailment or a negation or a neutral sentences. So the cross housing
 workers will do it in some certain way.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Wei Xu" timestamp="07:08">
+<turn speaker="Wei Xu" timestamp="07:08">
 
 While the paraphrase identification task, we primarily tested on Twitter data that we collected in
 our prior work, which is much more natural because the Twitter users will write quite independently
@@ -181,10 +181,10 @@ that considers the pairs of sentences and the field probably needs to not only w
 different, better models but as well as creating a more high quality and well refined data set for
 future works.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="08:43">
+<turn speaker="Matt Gardner" timestamp="08:43">
 
 Yeah. And I guess my intuition on the modeling question, should a single model do well across all of
 these tasks? Before I read the paper, there's been a lot of work on getting single vectors for whole
@@ -198,10 +198,10 @@ an alignment kind of model wouldn't be as good I don't know. So at least my intu
 single model probably wouldn't work unless you really think that a single sentence vector is going
 to work and I'm not very convinced by that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Wei Xu" timestamp="09:44">
+<turn speaker="Wei Xu" timestamp="09:44">
 
 I feel the same as you do. Exactly. I feel the sentence inviting my stories definitely have the
 promises to be faster to train and more to apply to a different task. On the other side if you have
@@ -212,10 +212,10 @@ alignment Or sentence alignment phrase alignment are quite crucial. It's definit
 that it will work much better than having an embedding individually produced for each sentence and
 compare the similarity off the two sentence level vectors.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="10:40">
+<turn speaker="Waleed Ammar" timestamp="10:40">
 
 Yes. Okay. I actually this time it would be a good point to explain the two broad categories of
 models that we're talking about for the audience because we assume that people didn't listener
@@ -231,19 +231,19 @@ made in each of the components as you're recording the sentence, as you're a com
 interaction between pairs of words for a variety of models, I think it's like something like 15
 models.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="11:54">
+<turn speaker="Waleed Ammar" timestamp="11:54">
 
 Which revealed how close these models some of these models are. Could you elaborate a little bit on
 the framework that he used to analyze this models and touch on them? The main sign choices you feel
 were important?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Wuwei Lan" timestamp="12:06">
+<turn speaker="Wuwei Lan" timestamp="12:06">
 
 Yeah, yeah, sure. The other two do a very good comparison. We carefully selected the four or five
 models and the four sentence embedding based model. That means that we encode a vector for
@@ -254,10 +254,10 @@ ability, which is better? One the LSTM is good enough or similar LSTM with the s
 is better? This is the first example you can compare. That's something that you manual based models.
 Now let's talk about the pair interaction based models
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Wuwei Lan" timestamp="13:02">
+<turn speaker="Wuwei Lan" timestamp="13:02">
 
 For this second type we select a three models the first is, the DecAtt , it's called decomposable
 attentionand model. This kind of model doesn't use LSTM, and doesn't consider context information
@@ -268,10 +268,10 @@ get good performance on SNLI. And later ESIM was proposed. It's almost the same 
 uses context information and the word the sentence encoder is represented by biLSTM and not just
 feed forward network. The attention part is almost the same as the DecATT.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Wuwei Lan" timestamp="14:11">
+<turn speaker="Wuwei Lan" timestamp="14:11">
 
 We call DecATT and ESIM as soft attention because the computer operating between any one of the pair
 from the two sentences and okay. You are to compare the soft attention we experimented. We'll start
@@ -286,19 +286,19 @@ doesn't use a LSTM other users use the LSTM model contact in the encoder represe
 compare the soft and the hard attention. Which kind of attention is better. So yeah, I think three
 comparisons should be very interesting.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="15:51">
+<turn speaker="Waleed Ammar" timestamp="15:51">
 
 And how about the other variations that you have in table one looked like there are a larger variety
 of design choices. And I wonder, I know you cannot possibly like test every thing, but I'm just
 curious to know if you feel like any of these is worth highlighting or like just talking about.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Wuwei Lan" timestamp="16:12">
+<turn speaker="Wuwei Lan" timestamp="16:12">
 
 Actually short staked sentence encoder LSTM is most popular, other people also use treeLSTM
 similarly, but I LSTM is most is considered the best of performance. I think ideally mode is LSTM as
@@ -309,49 +309,49 @@ important to that, and I want to mention that there is a one model, use the self
 Jiang 2017. So is this a different attention defined from the DecATT or PWIM model, but we didn't do
 experiment of all this kind of mode, this kind of attention.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="17:20">
+<turn speaker="Waleed Ammar" timestamp="17:20">
 
 So self attention, it shouldn't, I guess be used for interaction right to find the interaction
 between pairs of words across sentences. What do you use it for? Is it for the aggregation part?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Wuwei Lan" timestamp="17:31">
+<turn speaker="Wuwei Lan" timestamp="17:31">
 
 Oh, self-interaction is also used sentence encoder, they can be used to orient interaction.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="17:38">
+<turn speaker="Waleed Ammar" timestamp="17:38">
 
 And how about the like the different choices in the aggregation, tell us and output layers. Do you
 feel like, it seems like they're kind of originally all hard
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Wuwei Lan" timestamp="17:48">
+<turn speaker="Wuwei Lan" timestamp="17:48">
 
 These don't differ to much, if you use MLP or CNN it doesn't effect much. Mostly people will use
 that material perception very simple and good enough to show the performance.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="18:01">
+<turn speaker="Waleed Ammar" timestamp="18:01">
 
 Okay. So do you want to jump into the experiments then and tell us about how the, the results looked
 like or are there anything else that you'd like to talk about in the modeling part?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Wuwei Lan" timestamp="18:16">
+<turn speaker="Wuwei Lan" timestamp="18:16">
 
 Yeah, another interesting is that, during my re-implementation, based on pytorch, there are some
 tricks, you'll have to adapts them. Otherwise you can not get to the performance reports in the
@@ -365,10 +365,10 @@ time to get performance in the original paper but failed. Finally I am and use u
 gradient clipping that means for each gradient update we check the L2 norm of all the gradient
 valuers. Now if it's greater than a threshold, we consider scale the gradient by a specific factor.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="19:52">
+<turn speaker="Waleed Ammar" timestamp="19:52">
 
 So these are, details that they're not mentioned in the original paper but these are things that you
 had to do in order to match the results or get close to the results, I guess. I guess like as a
@@ -381,10 +381,10 @@ address this concern because obviously one of the reasons you may not be able to
 because people didn't do a very good job. Like reporting. Like we run a hundred experiments they
 report only the best results and we've seen a lot of cases like this.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Wuwei Lan" timestamp="20:52">
+<turn speaker="Wuwei Lan" timestamp="20:52">
 
 Yeah, yeah, I agree with you. Actually the only one model implementation, if there is any small part
 there, you cannot get to the performance. But in some cases the model can be, we are already clear
@@ -392,54 +392,54 @@ about every detail of this model and as the code is already checked multiple tim
 guarantee there's no bug there. We can know that gets the performance stuff. So this would be
 interesting. Yeah, there are some, there must be some trick we didn't pay attention to. So,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="21:25">
+<turn speaker="Waleed Ammar" timestamp="21:25">
 
 I mean there are always going to be like some hyper parameters that you, you didn't tune right. You
 cannot possibly tune everything.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Wuwei Lan" timestamp="21:33">
+<turn speaker="Wuwei Lan" timestamp="21:33">
 
 Just to follow the original setting follow the setting in the paper, the proposal, this kind of
 hyper parameters
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="21:43">
+<turn speaker="Waleed Ammar" timestamp="21:43">
 
 And you feel that, that it's fully specified until he likes it oftentimes when I try to re implement
 or replicate the results of another paper. They don't mention all the hyper parameters. There's some
 choices that actually may matter. Like the size of the batch maybe, you know, I don't know like in
 small things, like specific...
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Wuwei Lan" timestamp="22:01">
+<turn speaker="Wuwei Lan" timestamp="22:01">
 
 I know that. Yeah. So yeah, I also need to check the original code. For example LSM originated in
 Seattle and the PWIM was originally implemented in Tarsha I have to check the original code to get
 some details.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="22:21">
+<turn speaker="Waleed Ammar" timestamp="22:21">
 
 Yeah. I mean I find this very useful exploration. I'm just like, I would like to think we do not
 need to be a little bit be concerned at all when we're doing this type of analysis about whether our
 results will match the previous results. And when do we stop trying?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="22:37">
+<turn speaker="Matt Gardner" timestamp="22:37">
 
 Yeah, I think this is really depressing actually. You said it was, there might be some bug if you
 don't reproduce the results, but actually a different hyper parameter I don't think is a bug. It's
@@ -450,10 +450,10 @@ control everything. And you can run really controlled experiments to see the eff
 changes that you make, but then reviewers get grumpy at you because you're not reporting against the
 original results. And it's just a big mess.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Wei Xu" timestamp="23:27">
+<turn speaker="Wei Xu" timestamp="23:27">
 
 Yeah, it's quite challenging. I think for about the modal we really care about I believe will, I
 actually try to run it line by line to a side by side comparison as I very indirectly, I lost the
@@ -465,10 +465,10 @@ And also I think it's worth mentioning the only, we were running out of time to 
 performance. Of course the best practice would be everyone run like five random seeds starting and I
 average it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Wei Xu" timestamp="24:19">
+<turn speaker="Wei Xu" timestamp="24:19">
 
 But given how long time you need to train such kind of model, I think a rarely way actually in
 practice our source would do that. We couldn't do that either. So that ended up sort of, we thought
@@ -481,10 +481,10 @@ actually how this model performance at need to make it have a more controlled en
 at this current stage of the research in this area, people have been working on neural model for two
 or three years on these kind of tasks and data set.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Wei Xu" timestamp="25:19">
+<turn speaker="Wei Xu" timestamp="25:19">
 
 The performance differences of the top models are getting very close. So it's very hard to say what
 the next direction to go, what actually worked or what doesn't. So we literally implemented it all
@@ -498,51 +498,51 @@ three days to form a cluster. So actually we were able to carry out this researc
 State actually will have a Ohio super computer center. So they have GPU clusters have like dozens or
 hundreds GPUs they can use.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Wuwei Lan" timestamp="26:32">
+<turn speaker="Wuwei Lan" timestamp="26:32">
 
 116.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Wei Xu" timestamp="26:34">
+<turn speaker="Wei Xu" timestamp="26:34">
 
 Yeah. That's made it possible to do this research. So I can see why the original authors wouldn't be
 able to run everything and show every result.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="26:44">
+<turn speaker="Waleed Ammar" timestamp="26:44">
 
 Yeah. Do you have any concerns about, I mean, I'm a little concerned that the results, the
 conclusions we make from the experiments are based on one run instead of, like you mentioned having
 multiple runs and computing the average and computing the standard division. Do you have a sense of
 how big the variance look like for some of these models?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Wei Xu" timestamp="27:06">
+<turn speaker="Wei Xu" timestamp="27:06">
 
 Yeah. actually the variance is not that big, for the table we just run the one run time actually if
 you run multiple times though the ranking order is always the same.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="27:20">
+<turn speaker="Waleed Ammar" timestamp="27:20">
 
 Well that's, that's great to hear. Thank you. Are there any, any other highlights that you'd like to
 comment on in the, in the experimental results based on your analysis?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Wei Xu" timestamp="27:29">
+<turn speaker="Wei Xu" timestamp="27:29">
 
 I find something that impressed me is that if you're use a TreeLSTM it worked very well on those
 dataset, that derived from Twitter data, which is such a surprise because parsing doesn't seem to be
@@ -554,10 +554,10 @@ water to rewrite. So it kind of like the Twitter user independently write about 
 happening. So they may have some half sentence like I think or like I wondered. So it kind of not
 really have much caring a lot of meaning.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Wei Xu" timestamp="28:23">
+<turn speaker="Wei Xu" timestamp="28:23">
 
 But this gave actually a biLSTM a lot of hard time. So if you use 2LSTM and parsing. So then you
 will have kind of put the a, there's like use these pieces into a less important position then
@@ -568,20 +568,20 @@ to a try to clean up this data set to make it with some post editing processes i
 Twitter or paraphrase data set we created before to be even cleaner and more close to natural
 language inferences data that was created by the crowd sourcing workers directly.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="29:19">
+<turn speaker="Waleed Ammar" timestamp="29:19">
 
 Yeah, that's very interesting. I see in the table four that some of the models that do not model the
 interaction. Still get the best results for like the SSE models getting the best results on the
 Quora data set. Would you any, any thoughts on why this might be the case Is Quora t he textual
 similarity task?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Wuwei Lan" timestamp="29:41">
+<turn speaker="Wuwei Lan" timestamp="29:41">
 
 Yeah. Quora is a little interesting. Actually this data set is not, it's just collected from the
 user annotator identify them. Okay. People ask so many questions in Quora. Okay. If this year
@@ -591,17 +591,17 @@ labels compared to other standard datasets. The second thing is that for Quora, 
 of between the pair in the Quora dataset is not very big deal. We also mentioned explain this in
 4.3.2 The last question. Why does SEE excell on Quora?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="30:38">
+<turn speaker="Waleed Ammar" timestamp="30:38">
 
 Okay.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Wei Xu" timestamp="30:38">
+<turn speaker="Wei Xu" timestamp="30:38">
 
 I do think like the Quora data set because they kind of more semiautomatic can be created and also
 comprehend. Those like duplicate questions on Quora website. So a lot of pairs which I labeled as
@@ -612,18 +612,18 @@ last decade. That's dataset have a similar issue. It's just a lot of paraphrase 
 a lot of words shared in common. So they are actually quite strictly speaking are paraphrases, but
 they are just less interesting from a model point of view.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="31:32">
+<turn speaker="Waleed Ammar" timestamp="31:32">
 
 Well but that doesn't necessarily explain why adding the interaction doesn't help or a, or maybe I'm
 missing the point.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="31:40">
+<turn speaker="Matt Gardner" timestamp="31:40">
 
 My guess here is that you get, these are tagged by users. Like Think Stack Overflow it's the same
 basic deal where you have two questions that could be phrased very, very differently. Might not even
@@ -633,10 +633,10 @@ topic in a single vector from that and say if these topics are similar than it i
 structures from sentences that are expressed in very different ways and because these are questions
 on a user question site that that's my guess for why you see this behavior.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Wei Xu" timestamp="32:28">
+<turn speaker="Wei Xu" timestamp="32:28">
 
 Yeah and also wasn't worth pointing out is that Quora is one of the largest data set but comparably
 those like a data set that SSE perform worse are paraphrase dataset or the semantic textual
@@ -648,10 +648,10 @@ like really long. And then it's like the embedding of course if you based on lik
 they will have very similar embedding come out. And I did identify those paraphrase a lot better. So
 that does seem to perform better on those simpler or larger dataset.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Wuwei Lan" timestamp="33:26">
+<turn speaker="Wuwei Lan" timestamp="33:26">
 
 Yeah. One thing I want to mention is that the interaction based model can capture this very
 complicated, interact patterns, the intact relationships between two sentences. However, Quora we
@@ -661,19 +661,19 @@ that's means the pairsin Quora. If we take the next three examples, that means a
 very clearly separate in semantical space. That's why the interaction doesn't help in this kind of
 situation.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="34:13">
+<turn speaker="Waleed Ammar" timestamp="34:13">
 
 All right. Any last thoughts on this paper paper before we conclude? I really think this type of
 analysis is very important and it's sad that we don't see more of this type of work. So thank you
 for doing it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Wei Xu" timestamp="34:30">
+<turn speaker="Wei Xu" timestamp="34:30">
 
 Oh yeah. I think I actually have to thank Leon and Emily who are the program chairs of COLING I
 think this year they particularly specify several type of papers out like this kind of reproducing
@@ -684,43 +684,43 @@ of paper have different values. So it wouldn't have a misunderstood by some revi
 to harshly on those kind of a little bit more different or like a not the most common way to write a
 technical paper. So I think that that really kind of credit to Leon and Emily for this choice.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="35:27">
+<turn speaker="Waleed Ammar" timestamp="35:27">
 
 Yeah, that's a good point. We should, maybe we should try to generally like make this a consistent
 track in other conferences as well.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Wei Xu" timestamp="35:36">
+<turn speaker="Wei Xu" timestamp="35:36">
 
 I think by, having this kind of papers in the conference and more and more people recognize the
 value of this kind of paper. You're not like just incremental improving on some very complicated
 models and be the state of art. That's only one as one way to write a paper, but there's other ways
 to make a valuable contribution to the field.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="35:56">
+<turn speaker="Waleed Ammar" timestamp="35:56">
 
 Excellent. Thank you very much for joining us today.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Wei Xu" timestamp="35:59">
+<turn speaker="Wei Xu" timestamp="35:59">
 
 Thank you for having us.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Wuwei Lan" timestamp="36:01">
+<turn speaker="Wuwei Lan" timestamp="36:01">
 
 Thank you.
 
-</Turn>
+</turn>

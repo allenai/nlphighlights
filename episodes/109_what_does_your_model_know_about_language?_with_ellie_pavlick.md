@@ -8,30 +8,30 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Welcome to the NLP highlights podcast where we talk about interesting work in natural language
 processing. The hosts are Matt Gardner, Waleed Ammar, and Pradeep Dasigi.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:08">
+<turn speaker="Matt Gardner" timestamp="00:08">
 
 All right. Today our guest is Ellie Pavlick, who is an assistant professor at Brown University and a
 research scientist at Google. Ellie, welcome to the program.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="00:15">
+<turn speaker="Ellie Pavlick" timestamp="00:15">
 
 Thank you. Good to be here.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:17">
+<turn speaker="Matt Gardner" timestamp="00:17">
 
 So we have these huge pre-trained language models these days that intuitively seem to capture some
 notion of language of English or whatever language they're pre-trained on. But what a lot of people
@@ -40,10 +40,10 @@ these models know about language. And Ellie, you've done a lot of work in this d
 a few different ways to try to answer this question. Do you want to tell us about what some of those
 ways are?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="00:48">
+<turn speaker="Ellie Pavlick" timestamp="00:48">
 
 Yeah, so I think kind of at a high level, it's a very exciting topic to me and it kind of represents
 somewhat of a pivot, I think in NLP, right? Like, I remember when I was in grad school or quite
@@ -56,10 +56,10 @@ just say like, I don't care. I specifically remember hearing people saying thing
 representation is whatever representation allows me to do machine translation well or allows me to
 do summarization well or something like that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="01:36">
+<turn speaker="Ellie Pavlick" timestamp="01:36">
 
 And I think now that we've shifted towards these deep models and specifically trying to do these
 general purpose language representations, it's like opened up this can of worms, which is kind of a
@@ -70,10 +70,10 @@ kinds of methods that that people have started inventing, I think they're there'
 to kind of pick through these and think about like what makes sense, what doesn't make sense, what
 is it we're trying to do?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="02:15">
+<turn speaker="Matt Gardner" timestamp="02:15">
 
 Yeah. Yeah. So, so I guess you mentioned there like for machine translation, what representation
 should I use? And previously people tried syntax based, machine translation and phrase based and
@@ -84,10 +84,10 @@ representation the model is choosing to use. And so instead of trying to answer 
 representation should I use, like what, what representation works best, it's what representation did
 the machine figure out? And we're trying to like understand what's going on here. Right,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="02:58">
+<turn speaker="Ellie Pavlick" timestamp="02:58">
 
 Right. I mean it's definitely like that's where a lot of, I think the kind of specific methods that
 we're, we'll probably talk about today are kind of when a model was trained to do a task, what
@@ -99,18 +99,18 @@ cause it's just not that necessary for sentiment. Whereas other types of tasks, 
 different and there's some assumption, I think with all of us, that there is some, the right
 representation of language that allows you to do all the tasks.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="03:42">
+<turn speaker="Ellie Pavlick" timestamp="03:42">
 
 And we're hoping we kind of get there, but in the meantime we're saying like on each of these
 specific tasks, what is the thing that fell out of each of those?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="03:49">
+<turn speaker="Matt Gardner" timestamp="03:49">
 
 Yeah, yeah, that's a great way of thinking about it. You could imagine I want to do some particular
 end task and the recommendation today is to do huge language model pre-training on billions of
@@ -118,10 +118,10 @@ tokens of text and then learn some representation of language from that and use 
 model on whatever task you care about. But there's the question of does the language model pre-
 training, give me the information that I need in order to do my end task.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="04:16">
+<turn speaker="Ellie Pavlick" timestamp="04:16">
 
 I think we're seeing that empirically. So there's this kind of assumption that some representations
 are "better" than others. Like some representations of language are better once they get at more or
@@ -138,35 +138,35 @@ same application. It is task specific. And so then the question is what is the r
 lead to better representations? In order to do that, we have to say what counts as a better
 representation or how do we know that a representation is good?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="05:20">
+<turn speaker="Matt Gardner" timestamp="05:20">
 
 Right? Yes. And also language modeling isn't going or at least currently doesn't get us everything
 we might want for all possible end tasks.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="05:30">
+<turn speaker="Ellie Pavlick" timestamp="05:30">
 
 Absolutely right.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="05:30">
+<turn speaker="Matt Gardner" timestamp="05:30">
 
 And so again, we were back to this question of what was actually learned. How do I know what's in
 there and how can I make informed decisions about what I should do if I want to maximize performance
 on my end task. So now we come to, if I want to answer that question, what are the main techniques
 that people use to try to answer it?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="05:49">
+<turn speaker="Ellie Pavlick" timestamp="05:49">
 
 Well, there's two main categories that I've spent more time thinking about. Like in kind of broad
 brush strokes. I would say I've been kind of thinking them as a "structural" and "behavioral" types
@@ -179,10 +179,10 @@ structure. So like you would see stuff like if I have people read sentences abou
 and passive voice, do I see the same parts of light up in response to something like agent or
 patient roles independent of syntax, things like that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="06:41">
+<turn speaker="Ellie Pavlick" timestamp="06:41">
 
 So you're looking for some kind of structural information that suggests that this piece of our high
 level model of language is being represented somewhere. And then the other one would be like
@@ -200,10 +200,10 @@ of work on both of those. I mean, personally I've been trying to use both method
 get away with just one or just the other. But I think we've been seeing a lot of work on, in both
 sides.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="07:48">
+<turn speaker="Matt Gardner" timestamp="07:48">
 
 Yeah. Yeah. And I think the reason you can't get away from using just one, you can't get away with
 just using one or the other is because both of them have limitations and things that they're good
@@ -211,41 +211,41 @@ at. And there's, there's a lot to talk about here, but maybe we should start wit
 So the structural analysis, which I guess people these days mostly call probing either there are
 some other related kinds of work.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="08:11">
+<turn speaker="Ellie Pavlick" timestamp="08:11">
 
 I mean I think I would also throw in loosely things like visualizations and stuff like that in with
 structural analysis. But yeah, I think probing largely.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="08:20">
+<turn speaker="Matt Gardner" timestamp="08:20">
 
 Yup. So here the basic idea is I'm going to freeze the weights of my model and see what I can pull
 out of those weights somehow, right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="08:29">
+<turn speaker="Ellie Pavlick" timestamp="08:29">
 
 Right.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="08:31">
+<turn speaker="Matt Gardner" timestamp="08:31">
 
 So do you have a high level summary of like what you do with this and like what are its limitations?
 What's, what's it good at? What can I actually learn from these probes?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="08:39">
+<turn speaker="Ellie Pavlick" timestamp="08:39">
 
 Yeah, there's a lot to say about the probing techniques and limitation. So I think the strength or
 the thing you can say is somewhere in this representation there was sufficient information to make
@@ -262,46 +262,46 @@ pretty strong baseline or it's doing better than what it could've done from rand
 kinds of things are guessing most frequent part of speech. That's definitely something that is
 exciting. I guess this just started being used like a year or two years ago, right? It's fairly new.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="09:46">
+<turn speaker="Matt Gardner" timestamp="09:46">
 
 Yeah. I think the original ELMo paper had a tiny bit of this.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="09:51">
+<turn speaker="Ellie Pavlick" timestamp="09:51">
 
 Right.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="09:51">
+<turn speaker="Matt Gardner" timestamp="09:51">
 
 This was my contribution to the ELMo paper was running some essentially some probing experiments on
 ELMo.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="09:57">
+<turn speaker="Ellie Pavlick" timestamp="09:57">
 
 And that was like two years ago, right? Things happen so fast,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="10:01">
+<turn speaker="Matt Gardner" timestamp="10:01">
 
 Late 2017 so two and a half,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="10:04">
+<turn speaker="Ellie Pavlick" timestamp="10:04">
 
 Two and a half years. Okay. So yeah, when this, when people first started doing this and I think
 also the, What Can You Cram into a Vector paper was one of those like early ones doing this and this
@@ -318,17 +318,17 @@ hard to say why having part of speech be linearly extractable from the embedding
 having it be extractable with a small nonlinear network or something else. And then I think also
 that notion. So there's that recent paper the control probes.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="11:13">
+<turn speaker="Matt Gardner" timestamp="11:13">
 
 Yeah. John Hewitt at EMNLP last year. Yep.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="11:15">
+<turn speaker="Ellie Pavlick" timestamp="11:15">
 
 So I think that gets at what a lot of people have been worried about is just like, could these
 classifiers be doing a pretty good job even with pretty crappy representations? And I think the
@@ -341,10 +341,10 @@ way and how important it is in the representation. So like you could kind of inc
 a lot about part of speech and that doesn't mean you're actually sensitive to it in the ways you
 should be sensitive to it in any kind of downstream tasks.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="12:04">
+<turn speaker="Matt Gardner" timestamp="12:04">
 
 Yeah, yeah. I think you could summarize almost everything you said and just the simple, you have to
 take the absolute probing numbers that you get with a major, major grain of salt because you really
@@ -360,10 +360,10 @@ different layers in a model and trying to understand where things are or taking 
 representations and comparing them so we can get good relative information, just not good absolute
 information. The absolute information is kind of meaningless.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="13:13">
+<turn speaker="Ellie Pavlick" timestamp="13:13">
 
 Yeah, and I totally agree with that. Although I also think that's not unique to probes. Like, one
 thing I've liked about this line of work in general is it's an excuse for us in NLP to take a step
@@ -377,27 +377,27 @@ these baselines for a lot of language stuff are extremely high, right? Because w
 varies in distributions of things and like you can, a dumb model can easily get 95% accuracy as
 we've known for a long time.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="14:06">
+<turn speaker="Matt Gardner" timestamp="14:06">
 
 Yeah. I've been, I've been trying to think of, I, I've talked with a few people about this. I'm
 trying to figure out can we actually get a probe that will give us numbers that we can trust and
 it's hard to think about how to do that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="14:19">
+<turn speaker="Ellie Pavlick" timestamp="14:19">
 
 What do you mean by trust? I mean I don't not trust the numbers. It's the interpretation of the
 number.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="14:25">
+<turn speaker="Matt Gardner" timestamp="14:25">
 
 Yeah, yeah. It get absolute numbers that if, if I get very high absolute numbers, I, I can actually
 claim that the model has something about that linguistic phenomenon, we can actually pose this
@@ -414,10 +414,10 @@ I can find it using just part of the input space and it generalizes to the rest,
 that there is something in that representation that knows about part of speech as we define it. Does
 this, does this, do you buy this?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="15:41">
+<turn speaker="Ellie Pavlick" timestamp="15:41">
 
 I think yes. And I think this is where I get into the why we need the behavioral side too or why I
 think that this area is quite a bit more complex than we often think of it. And and so one of these
@@ -428,27 +428,27 @@ we're trying to map it onto that. I don't know that we can take that for granted
 extent that you say like yes, if there was, if there was some fixed set, if there was a meaning
 representation that I knew existed and I can learn some model.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="16:22">
+<turn speaker="Ellie Pavlick" timestamp="16:22">
 
 Like if you can take a given the fact that there is some target representation you're trying to say,
 did my neural net learn that then yes. But I don't actually know that I believe that that exists.
 And so maybe that makes that almost a moot point or it seems like we would want something that
 would,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="16:38">
+<turn speaker="Matt Gardner" timestamp="16:38">
 
 Yeah.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="16:40">
+<turn speaker="Ellie Pavlick" timestamp="16:40">
 
 Yeah. So like for me, I often like to use the structural things as like, is there something that is
 highly indicative of having captured this phenomenon? But I don't know that I want a hard, yes, it
@@ -468,10 +468,10 @@ specifically say this is the actual part of sequence for all of these and it exa
 don't know that we can do that so I think I would be hesitant to pursue some line of work that
 assumed that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="17:58">
+<turn speaker="Matt Gardner" timestamp="17:58">
 
 Right, right. Yeah. This is really interesting. You highlighted to me like how many different
 questions there are that we could be asking with all of this stuff there are questions about
@@ -483,10 +483,10 @@ Like given that I train this model on language, what falls out and is it, is it 
 stuff that linguists know about? Even if the things that we've defined in linguistics aren't
 perfect. Like what's there,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="18:37">
+<turn speaker="Ellie Pavlick" timestamp="18:37">
 
 Right. I think that, yeah, I think it's actually really, or maybe I'm just biased by what I've been
 thinking about recently, but you can definitely flip it on its head and try to use it the other way
@@ -501,10 +501,10 @@ there like a perfect mapping between these two spaces is a relevant piece for th
 be saying like what is the symbolic model that most closely describes what the neural net is doing?
 But I don't know if they'll ever be the same model.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="19:33">
+<turn speaker="Matt Gardner" timestamp="19:33">
 
 I definitely agree with that. Yes. Yes. Okay. This has been a really interesting discussion about
 probes. You have what I think is one of the best works on these kinds of probing models. And I
@@ -512,10 +512,10 @@ wondered if you could tell us about some of the details of this. This is a paper
 called BERT Rediscovers the Classical NLP Pipeline. Do you want to tell us what, what's going on in
 this paper?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="19:54">
+<turn speaker="Ellie Pavlick" timestamp="19:54">
 
 Yeah, so I think this actually, I mean, it segues nicely out of the, what we're just talking about
 where we want to say like these models are, maybe it's almost a negative. So it's like these models
@@ -528,10 +528,10 @@ example, co-references solution. And if you were to build, or like you download 
 Stanford NLP pipeline, you'll like explicitly see these kinds of steps and if you want to do
 something like constituency parsing, it will have to run a part of speech tagger first.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="20:45">
+<turn speaker="Ellie Pavlick" timestamp="20:45">
 
 And so we were what we've been using these probeiing classifiers to look at these different specific
 tasks like part of speech and dependency parsing. And so then the question is within these neural
@@ -544,10 +544,10 @@ them at every level of these very, very deep networks. And what we ended up seei
 stuff that happens earlier in the pipeline, so things like part of speech tagging would be encoded
 in earlier layers of the network and then stuff that happened much later in the pipeline.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="21:32">
+<turn speaker="Ellie Pavlick" timestamp="21:32">
 
 So things like co-reference resolution, which depend on part of speech and parsing, we assume to be
 good at co-reference resolution, you need some notion of a parse structure for example. So that
@@ -560,10 +560,10 @@ of theories of how language is represented. But it's quite exciting to see that 
 naturally. Right? So we didn't tell it you should encode part of speech first and then you should
 encode parse structure.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="22:21">
+<turn speaker="Ellie Pavlick" timestamp="22:21">
 
 But you see these kind of increasingly complex abstractions getting encoded one after the other. But
 the kind of nice thing you see that you don't see with traditional discreet pipelines is that over
@@ -578,10 +578,10 @@ the pipeline need to inform the lower levels and we'd have to kind of explicitly
 complicated joint models and now that happens someone naturally in these end-to-end systems. So. So
 I think that was pretty exciting.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="23:16">
+<turn speaker="Matt Gardner" timestamp="23:16">
 
 Yeah. We were talking about absolute numbers versus relative numbers. One reason this paper is
 informative and like really useful is that it really is only looking at relative performance and you
@@ -593,10 +593,10 @@ points that you made. I think it's, it's really nice. I do think it's worth high
 briefly the way that you decided this, that what you called it, like an expected layer. Do you
 remember how this is done? Do you want to describe what you're doing here?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="24:03">
+<turn speaker="Ellie Pavlick" timestamp="24:03">
 
 Yeah, so, and this is basically just saying at what layer do we like that's kind of what's the the
 center of mass for this distribution overall of the weights and the layers. So at what layer we
@@ -608,10 +608,10 @@ way of kind of getting a single summary statistic of at what layer does this inf
 correspond to? And that gives us a much clearer sense of the ordering of them. We also, you can see
 in this where you talk about the absolute numbers, we have a lot of metrics.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="24:48">
+<turn speaker="Ellie Pavlick" timestamp="24:48">
 
 We've got very metric happy because of the issues that you were talking about, right? Like no one
 metric will really tell the whole story and so we wanted to be very honest with what's going on. So
@@ -628,25 +628,25 @@ that quite clearly here in those fingers, because you see that at those first la
 perfect accuracy on most things. But then it's how far do you have to get in the neck before you can
 start getting these long tail examples. And sometimes that takes quite a while.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="25:57">
+<turn speaker="Matt Gardner" timestamp="25:57">
 
 Yeah. Great. Really nice paper.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="25:59">
+<turn speaker="Waleed Ammar" timestamp="25:59">
 
 I have a clarification. How important is it for the weights of the BERT model or the pre-trained
 model to be fixed as opposed to fine tuned while doing the probing?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="26:10">
+<turn speaker="Ellie Pavlick" timestamp="26:10">
 
 That's a great question. So we've started looking at the fine tuned models. We just did the pre-
 trained models at the beginning just because it gave us a starting place. And it was like directly
@@ -656,10 +656,10 @@ looking at, also with Ian. Who is on that paper. We've been looking at some fine
 largely quite similar and most of the fine tuning seems to affect the higher layers, which I think
 is consistent with stuff that's been shown in other work.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="26:47">
+<turn speaker="Ellie Pavlick" timestamp="26:47">
 
 But it's still just like, then you open up this again another can of worms, right? Which is like,
 what tasks are you fine tuning on? What is the domain of the data? You're fine tuning on. What kinds
@@ -674,19 +674,19 @@ kind of top layer. It's not really doing big rewrites of what is syntax and thin
 But I think that that's a whole separate set of experiments we need to run to really know what's the
 difference between the pre-trained and fine tuned models
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="27:36">
+<turn speaker="Waleed Ammar" timestamp="27:36">
 
 As we were talking earlier, like really probing helps when you look at relative numbers with the
 comparison between the fine tuned measurements for probing tasks and a pre-trained fixed weights
 would indicate anything for you if you look at them.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="27:52">
+<turn speaker="Ellie Pavlick" timestamp="27:52">
 
 The difference between the pre-trained and the fine-tuned, I think if there were a big difference.
 Relative difference. Yes. I think that, or like relative to pre-training to fine tune showed a big
@@ -698,10 +698,10 @@ but it's clearly not using it. So there was some more kind of with Tal Linzen an
 student where we showed that like if you have these kinds of template examples where you make little
 syntactic manipulations, it confuses these models, these fine tuned models.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="28:35">
+<turn speaker="Ellie Pavlick" timestamp="28:35">
 
 So it's like they're not exploiting the fact that they have syntactic information, even though our
 probing studies suggest they do have syntactic information. Right? So the first question is like,
@@ -712,26 +712,26 @@ question is like would the fine tuning, just eliminate all of this rich syntacti
 learned during pre-training, but it does not seem that that's the case. So there's something else
 going on that's the model has these features but it doesn't necessarily use them.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="29:13">
+<turn speaker="Waleed Ammar" timestamp="29:13">
 
 Got it, thank you.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="29:14">
+<turn speaker="Matt Gardner" timestamp="29:14">
 
 Maybe one way to describe that is that the fine tuned model learned some way of performing its end
 task without really needing all of the stuff that it learned from the language model in pre-
 training.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="29:28">
+<turn speaker="Ellie Pavlick" timestamp="29:28">
 
 Right, right, right. Which is I think is quite unsurprising. It's like disappointing and surprising,
 right? It's like, like I see what you did there and I'm just, I just have to say I'm disappointed
@@ -745,10 +745,10 @@ come up with kind of cheap tricks to learn discriminative tasks that you can't g
 you're actually trying to model the full distribution of all the observed data. So, so that
 disconnect might explain something.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="30:22">
+<turn speaker="Matt Gardner" timestamp="30:22">
 
 Yeah. I think one of the challenging things that we as a field will have to figure out is given
 these models that clearly do have some pretty, I wanted to say deep, but I don't know that that's
@@ -757,10 +757,10 @@ pre-training? How do we get them to actually do something with it in a way that 
 meaningful and it sure seems like they aren't even though they have the like something they know
 something about language, but it's just a bunch of cheap tricks in the models that we actually use.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="30:57">
+<turn speaker="Waleed Ammar" timestamp="30:57">
 
 I'm wondering if it makes sense to to have some guidelines for like how to prepare a dataset when
 you're doing the probings to avoid some of these cheap tricks. You know, the model could leverage
@@ -768,24 +768,24 @@ like I ideally maybe all the words in the test set to be unseen in training. Tha
 easy, you know, to find sentences with no overlap. But I imagine like we can have like a softer
 constraint while constructing the dataset.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="31:24">
+<turn speaker="Ellie Pavlick" timestamp="31:24">
 
 You mean in the training and testing of the probing classifier?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="31:29">
+<turn speaker="Waleed Ammar" timestamp="31:29">
 
 Right.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="31:29">
+<turn speaker="Ellie Pavlick" timestamp="31:29">
 
 Yeah, I think like the more held out the better definitely. But I think to me, if this feels like
 baselines is your best bet, right. Is trying to make sure you're really clear and then focusing on
@@ -801,18 +801,18 @@ different probing classifiers on maybe some different initializations and splits
 intervals and those kinds of things that just make it clear. How interesting is the relative
 performance gain? Maybe.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="32:37">
+<turn speaker="Waleed Ammar" timestamp="32:37">
 
 Great. And the baselines are always one of the layers in the network or are there like other
 baselines that you're proposing or thinking people should typically use when doing probing?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="32:48">
+<turn speaker="Ellie Pavlick" timestamp="32:48">
 
 Yes. Let me think. So we're talking about let's say something like the part of speech one, the
 baseline we've been using most that I quite like is just the first layer of the network. Right? so
@@ -822,10 +822,10 @@ paper was our ICLR paper where we were doing this probing there. There we also d
 large window size on each side. So you're saying like, what if you didn't just memorize the word
 that you basically memorize this five word window. What if you looked at the whole sentence?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="33:23">
+<turn speaker="Ellie Pavlick" timestamp="33:23">
 
 So we did a lot of things that were like, what kinds of things might you be exploiting other than
 actually what's encoded about this word at this location in the sentence. And none of them are
@@ -842,10 +842,10 @@ right? Like by inverting all of your compositions or something like that. Like e
 appeared as a contradiction in the training set is now an entailment in the testing set. Something
 like that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="34:31">
+<turn speaker="Matt Gardner" timestamp="34:31">
 
 Yeah. So going back to the isomorphism stuff that I mentioned earlier, I think the way to solve
 Waleed's problem like to build a dataset, at least it's easy to think about this in a toy two
@@ -859,17 +859,17 @@ Nelson Liu. I got Nelson tried to do this because I was like, Hey, we should do 
 seems like the right way to do it. He spent some time trying to figure out how to do it. Couldn't
 really figure out a good way to actually split the data.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="35:30">
+<turn speaker="Ellie Pavlick" timestamp="35:30">
 
 What did he try? Cause I can't picture how I do this with language because it's so structured.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="35:36">
+<turn speaker="Matt Gardner" timestamp="35:36">
 
 Yeah. It's like you closed class function words like "the" and "a" and like you would have to have
 it such that all of the, all of the occurrences of "the" are in the train set and all of the
@@ -878,10 +878,10 @@ to think about, determiner noun combination. Like what if it's just that structu
 to split it across that it's so it, yeah, it gets really messy. It's easy to think about in a toyed
 space, but like impossible for these super high dimensional spaces like language. Right.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="36:02">
+<turn speaker="Ellie Pavlick" timestamp="36:02">
 
 And I think actually this gets to another question that's become increasingly kind of in this space,
 which is like what is a fair generalization to make? I'm not sure that there is any model of human
@@ -889,10 +889,10 @@ language that says you should know what "a" means. Having only ever heard what "
 there's that's just not really a sensible thing. We would expect any model of language to be able to
 explain that's not a generalization that kids can do.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="36:26">
+<turn speaker="Matt Gardner" timestamp="36:26">
 
 So, so that's not actually what we're saying with this. We're saying that in my representation
 learning, I got to see all occurrences of "the" and "a" and whatever. It's just that when I tried to
@@ -900,10 +900,10 @@ map that to some meaning representation, I only got to see "the", to learn the m
 that mapping translates and also works with "a" then I've learned something generalizable about
 those, those part of speech categories.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="36:49">
+<turn speaker="Ellie Pavlick" timestamp="36:49">
 
 Right, right, right. And then this gets to what I was saying before, but as far as I know, there's
 not actually meaning representation, like a standard known meaning representation that can collapse
@@ -912,10 +912,10 @@ maintain that you wouldn't actually want these to map onto the same part of your
 representation cause then you'll lose the distinction between "the" and "a". And if your model is a
 good model, it knows the distinction between "the" and "a" so there's some way to say,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="37:16">
+<turn speaker="Matt Gardner" timestamp="37:16">
 
 Right, this is why the mapping would pull out the part of speech. And so like I can learn several
 different mappings to learn different things like maybe definiteness or whatever. And so the mapping
@@ -927,10 +927,10 @@ about. I guess we've already gone almost the length of a full episode just talki
 But I think it would be nice to talk for at least a little bit about the behavioral testing. What is
 this and how does it work?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="37:57">
+<turn speaker="Ellie Pavlick" timestamp="37:57">
 
 Yeah. So I guess the idea here would be let's not make any particular claims about what the
 underlying structure of what the model should have learned structurally. And instead, let's just say
@@ -947,10 +947,10 @@ make correct predictions on these inferences. And so then you can basically just
 these tests and then measure accuracy and then you assume accuracy as a proxy for having represented
 that structure, that feature, or hat aspect of language and enough to make good predictions in that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="39:17">
+<turn speaker="Matt Gardner" timestamp="39:17">
 
 I guess the main challenge here of a behavioral test versus a probe is that the language model can't
 do the behavioral test without additional training, right? It's output spaces it's typically a
@@ -958,10 +958,10 @@ generative model, either over masked words in a sentence or next words or someth
 the behavioral test that you want, the model isn't trained to do this. So how do I actually do a
 behavioral test on something that was trained in a generative way?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="39:45">
+<turn speaker="Ellie Pavlick" timestamp="39:45">
 
 I think that's often true in general, although that's not the distinction I would make between
 structural and behavioral types of things because like you could so like the Tal Linzen/Yoav
@@ -973,10 +973,10 @@ Like you can imagine something like that. But more often than that, we designed 
 entailment set and a lot of the work that I've been involved in has been like entailment style
 sentence pairs.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="40:28">
+<turn speaker="Ellie Pavlick" timestamp="40:28">
 
 And then yeah, we have to fine tune a verb based model to do this test specifically. And that
 introduces quite a lot of compounds because then you have to train it on some tests and then I guess
@@ -985,19 +985,19 @@ what kind of splits are, what kind of artifacts are introduced in the training s
 assumptions about the form of the fine tune classifier and model. And now you, you've introduced a
 lot of stuff beyond what was directly an artifact of the preaching model, right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="40:59">
+<turn speaker="Matt Gardner" timestamp="40:59">
 
 Yeah. Yeah. I think that's it. That's a good characterization. I guess if you want to do the non
 fine tuned behavioral test, you have to figure out how to test the phenomena that you care about in
 a way that doesn't require fine tuning, which is challenging.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="41:15">
+<turn speaker="Ellie Pavlick" timestamp="41:15">
 
 Yeah, I think this is Adam Poliak's paper and Van Durme that lab has used the phrase recasting quite
 a bit in this way. And I think when people talk, and I think there's been other work where it's like
@@ -1008,10 +1008,10 @@ the work on like using language models for common sense reasoning and knowledge 
 stuff would kind of fall into that. And it's like, Oh, instead of asking questions, let's just have
 it complete, fill in the blank and see how well it does there.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="41:54">
+<turn speaker="Matt Gardner" timestamp="41:54">
 
 I have mixed feelings about this. I like at one level the format in some sense probably doesn't
 matter in most cases. Like if you do it with a language model versus if you do it with a sentence
@@ -1021,10 +1021,10 @@ examples is basically the same. And so the reason you might want to do it is if 
 was trained in one way and I want to ask things about what it can do without introducing confounds,
 then I might want to like recast things in order to probe that kind of model,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="42:34">
+<turn speaker="Ellie Pavlick" timestamp="42:34">
 
 Right? With anything where you have to find tune. And I think this gets at the issue of what's a
 fair generalization task that we were just talking about. So like if I've trained a language model
@@ -1036,10 +1036,10 @@ you have a model that was trained on, even if you have a model that was trained 
 knows the quote shape of the task, you still end up with these issues where it's like, did it
 actually get exposed to enough data of this phenomenon that we should have expected it to learn it?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="43:13">
+<turn speaker="Ellie Pavlick" timestamp="43:13">
 
 And I think this is what's come up quite a bit with questions around kind of compositionality and
 syntactic structure and things like that where it's like, is it fair to assume that the model could
@@ -1053,34 +1053,34 @@ and we're kind of like disappointed that the model didn't learn it and we're not
 architecture issue or a data issue. And that kind of opens up that, that whole avenue of
 investigation.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="44:04">
+<turn speaker="Matt Gardner" timestamp="44:04">
 
 Right. I guess you, you can't even go down that avenue of investigation until you're able to ask and
 answer the questions. Right. So figuring out what the right way to ask it is then lets us ask
 further questions about if it doesn't know this, why not.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="44:19">
+<turn speaker="Ellie Pavlick" timestamp="44:19">
 
 Right, right.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="44:20">
+<turn speaker="Matt Gardner" timestamp="44:20">
 
 So I think we're running a bit low on time. Do you have like a two minute version of what your
 favorite behavioral tasks are?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="44:27">
+<turn speaker="Ellie Pavlick" timestamp="44:27">
 
 No, because so, and I will say why yes, didn't get to get into it. I think one of the, a separate
 bit of work that or kind of parallel work to this has been figuring out what the human, upper bound
@@ -1091,10 +1091,10 @@ behavior and we probably shouldn't be taking all of those things for granted. Li
 time to revisit what are properties that language should have. So I think I do actually have a
 favorite task, which is I still like the entailment NLI tasks.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="45:07">
+<turn speaker="Ellie Pavlick" timestamp="45:07">
 
 It's like entailment in quotes. It's not really linguistics entailment it's like NLP entailment but
 I like this kind of natural language inference task where it's like, read some sentence, draw some
@@ -1106,10 +1106,10 @@ think that it's actually, it sounds very simple and it is remarkably hard to get
 format that's where you can get high human agreement and that we really know what inferences they
 should make.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="45:50">
+<turn speaker="Ellie Pavlick" timestamp="45:50">
 
 And so I think that that there's something much deeper going on there that rather than simplifying
 the task or switching to a different task where we have a sense that we have better human agreement,
@@ -1118,52 +1118,52 @@ to do? Why is it that humans that it's so hard to get humans to do it with high 
 high agreement and yeah. And I think that's probably true of quite a large number of the behavioral
 tasks that the human gold standard is actually not that clear cut.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="46:16">
+<turn speaker="Matt Gardner" timestamp="46:16">
 
 Yeah. And you have a nice paper on this topic about disagreement and NLI and trying to better model
 the disagreement. You want to give listeners a pointer to the title of that paper if they want to
 look at it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="46:28">
+<turn speaker="Ellie Pavlick" timestamp="46:28">
 
 Yeah, I think it's called Inherent Disagreements in Human Textual Inferences. It was at one point
 Human Judgments of Entailment but I think I changed it to Human Textual Inferences because
 entailment is a loaded word.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="46:40">
+<turn speaker="Matt Gardner" timestamp="46:40">
 
 Great. Thanks. This has been a really fun discussion. Is there, do you have any final thoughts or
 anything that you really wanted to cover that we didn't get to?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="46:47">
+<turn speaker="Ellie Pavlick" timestamp="46:47">
 
 I don't think so. I think this is a huge topic. I hope we we at least hit the main points there's,
 there's so much talk about, so, yeah.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="46:55">
+<turn speaker="Matt Gardner" timestamp="46:55">
 
 Yeah. Thanks. This was really fun.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ellie Pavlick" timestamp="46:57">
+<turn speaker="Ellie Pavlick" timestamp="46:57">
 
 Cool. Thanks so much.
 
-</Turn>
+</turn>

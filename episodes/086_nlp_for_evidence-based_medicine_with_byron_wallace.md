@@ -8,23 +8,23 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting work in natural
 language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is Matt Gardner and Waleed Ammar, we are research scientists at the Allen Institute for
 Artificial Intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:12">
+<turn speaker="Waleed Ammar" timestamp="00:12">
 
 So today we'll be talking about NLP for evidence based medicine with our guests Byron Wallace. Byron
 is an assistant professor at Northeastern University and holds an adjunct appointment at Brown
@@ -32,24 +32,24 @@ University in affiliation with the Center for Evidence Synthesis in Health Byron
 learning, data mining and natural language processing with an emphasis on applications in health
 informatics. Welcome to the program Byron.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Byron Wallace" timestamp="00:33">
+<turn speaker="Byron Wallace" timestamp="00:33">
 
 Yeah, thanks very much for having me.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:34">
+<turn speaker="Waleed Ammar" timestamp="00:34">
 
 To get started. Could you tell us what is evidence based medicine? Why should we care about it?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Byron Wallace" timestamp="00:39">
+<turn speaker="Byron Wallace" timestamp="00:39">
 
 Sure. Yeah. So it's kind of a funny term, right? Like the jokey definition that I sometimes like to
 give is that evidence based medicine is kind of what you would have hoped all medicine is, but it
@@ -63,32 +63,32 @@ that one might have. For example, you know, what treatments should I use for thi
 condition? And so you want to somehow synthesize all of the evidence that's out there and then you
 want to use that to inform treatment decisions. And that's really just the basic idea behind EBM.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="01:41">
+<turn speaker="Matt Gardner" timestamp="01:41">
 
 Can I ask a clarifying question here?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Byron Wallace" timestamp="01:43">
+<turn speaker="Byron Wallace" timestamp="01:43">
 
 Yes.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="01:43">
+<turn speaker="Matt Gardner" timestamp="01:43">
 
 I imagine there has been medical literature for a whole lot longer since the 1980s and so surely
 people have done scientific studies on medicine before this. So what's different?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Byron Wallace" timestamp="01:56">
+<turn speaker="Byron Wallace" timestamp="01:56">
 
 Absolutely. I think it's really a point of emphasis. It's more of a sort of named paradigm, I guess.
 You're exactly right that of course trials of course predate evidence based medicine. I think one of
@@ -101,17 +101,17 @@ systematic way is really one of the hallmarks of EBM. But, of course, again, you
 that EBM is the first time that data was used to support treatment decisions. It's just that it
 doesn't happen as often as one might like.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="02:45">
+<turn speaker="Waleed Ammar" timestamp="02:45">
 
 So how can the NLP research help with evidence based medicine?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Byron Wallace" timestamp="02:49">
+<turn speaker="Byron Wallace" timestamp="02:49">
 
 Yeah, I mean it's a great question. I think it's, it's such a ripe space for NLP folks. So if you
 think about what happens, we sort of have this insane system, right? The way this works is we have
@@ -125,10 +125,10 @@ identifying articles that meet their so-called inclusion criteria. So basically 
 that answer their clinical question in the sense that they are trials that enrolled the patient
 population of interest.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Byron Wallace" timestamp="03:49">
+<turn speaker="Byron Wallace" timestamp="03:49">
 
 For example, you know, diabetics or people with some particular condition and they included some
 interventions of interest, like particular drugs or particular treatments. And they measured some
@@ -142,10 +142,10 @@ evidence synthesis. And I watched these doctors and other highly trained personn
 types, they were literally printing out thousands of abstracts and sort of assessing one by one
 whether or not this met their inclusion criteria.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Byron Wallace" timestamp="04:46">
+<turn speaker="Byron Wallace" timestamp="04:46">
 
 Right? So right away you can see vast opportunity for classification sort of methods to speed that
 process up. And so that's one obvious area. There are problems from the methodological side or
@@ -158,10 +158,10 @@ identified, one has to extract the structured information that they need for the
 the synthesis is going to both be statistical ideally. So you'll basically find, for example, the
 odds ratios that were reported in each individual study.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Byron Wallace" timestamp="05:40">
+<turn speaker="Byron Wallace" timestamp="05:40">
 
 And you'll also find other information about the trial, like how many participants were enrolled.
 Also some things that are a little bit more subtle, like is this a quality study? And the way that
@@ -176,18 +176,18 @@ interesting component of this work is that you really want to design models that
 humans performing this task to make their lives, I guess less miserable. And we don't really have in
 mind completely automating evidence synthesis, at least not just yet.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="06:45">
+<turn speaker="Waleed Ammar" timestamp="06:45">
 
 So I'm curious how the inclusion criteria typically specified. It seems like it will not be easy to
 express this in a way that our models can, can accurately represent.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Byron Wallace" timestamp="06:56">
+<turn speaker="Byron Wallace" timestamp="06:56">
 
 Yeah, that's a really good question. At least traditionally an EBM, the way that clinical questions
 are thought about are as what are called PICO frames. So this refers to the population, the
@@ -200,20 +200,20 @@ effective than Tylenol at reducing the duration of headache in patients that suf
 migraines? Right. In that sense, it's actually a pretty well specified question. And then the task
 is to try to infer, I guess, whether or not the evidence agrees with this or not.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="07:56">
+<turn speaker="Waleed Ammar" timestamp="07:56">
 
 Yeah, that makes sense. So I guess as you add more complexity, so I don't, different ages or
 different ethnicities, to the population. I guess what I'm not sure about is what kind of
 complexities should we expect in the inclusion criteria and what is a good framework to represent
 this information? Or is there an existing one that people typically use?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Byron Wallace" timestamp="08:17">
+<turn speaker="Byron Wallace" timestamp="08:17">
 
 I think a lot of times the key element of the PICO frame that implicitly specifies the question is
 often really just going to be a condition and it's typically not going to be super fine grained. The
@@ -225,10 +225,10 @@ text or unstructured texts is the obvious option. Not Ideal in many ways there a
 vocabularies in this space. So there are things like the Mesh ontology that, you know, one can try
 to map these things too as well.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="09:03">
+<turn speaker="Matt Gardner" timestamp="09:03">
 
 So when I hear you describe this, what it makes me think of is going over, say as a paper comes in
 to Pubmed or just taking the existing corpus, I would take each paper individually and extract from
@@ -237,10 +237,10 @@ synthesis, they will write down a PICO frame and then I just had like a matching
 retrieval problem and all of these papers. Is that the kind of approach or is there something
 different going on here?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Byron Wallace" timestamp="09:30">
+<turn speaker="Byron Wallace" timestamp="09:30">
 
 Yeah, so that's a great comment. I mean it would be nice if PICO search in that and it's like a
 structured search over the PICO frames were available. A in general folks have looked at this, but
@@ -252,10 +252,10 @@ at present, not really doable. There are various search engines that will give y
 many of them are actually just doing unstructured search underneath that. One of the reasons that
 this is the case is because there just hasn't been training data for it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Byron Wallace" timestamp="10:17">
+<turn speaker="Byron Wallace" timestamp="10:17">
 
 And this is I think one of the things that make this an interesting domain. You know, supervision is
 hard to come by. So we've done some work on trying to fix that problem. So we've released this
@@ -267,10 +267,10 @@ is with the mind toward retrieval. Another kind of approach that we've explored 
 inducing what we refer to as disentangled representations of abstracts or articles and the idea
 there is to build a model using weak supervision.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Byron Wallace" timestamp="11:06">
+<turn speaker="Byron Wallace" timestamp="11:06">
 
 We end up borrowing from kind of previously conducted systematic reviews for which we have access to
 a sort of abstract of summaries of the respect of population intervention compared or an outcome
@@ -284,35 +284,35 @@ could search for things that are a match on this population using let's say co-s
 between the population vectors, but maybe you don't care about the interventions of the outcomes, so
 you're exactly right that this is the direction, but it's surprisingly not really available yet.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="12:03">
+<turn speaker="Matt Gardner" timestamp="12:03">
 
 Yeah, that's really interesting. So you mentioned weak supervision there very briefly that it wasn't
 very well explained, let me try to summarize what I think you meant and you can see if we're right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Byron Wallace" timestamp="12:12">
+<turn speaker="Byron Wallace" timestamp="12:12">
 
 Sure.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="New Speaker" timestamp="12:13">
+<turn speaker="New Speaker" timestamp="12:13">
 
 Basically you have a bunch of syntheses that have already been performed that have a described frame
 and you have with that a set of papers that were actually included in this synthesis and so you can
 essentially label all of the PICO frames in all of those papers with this synthesize one and use
 that as training data.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Byron Wallace" timestamp="12:31">
+<turn speaker="Byron Wallace" timestamp="12:31">
 
 That's exactly right. And the way that we actually do this is we derive what we referred to in the
 paper describing this work as triplets and the triplets expressed that this paper describes a trial
@@ -320,18 +320,18 @@ that is more similar with respect to the population than this other paper basica
 there are the sets of three which specify like relatively similar but we use it in exactly the way
 you described.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="12:53">
+<turn speaker="Matt Gardner" timestamp="12:53">
 
 Yeah. That also helps to answer the other question I was going to ask which was do you have a case
 where you might get multiple different frames from a single paper does this question make sense.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Byron Wallace" timestamp="13:03">
+<turn speaker="Byron Wallace" timestamp="13:03">
 
 It does make sense. And that's actually one of the interesting aspects of this as well because for
 example, many trials, in fact I, think the majority of trials will make comparisons between multiple
@@ -342,19 +342,19 @@ different outcome. And many times the outcome that you cared about might not be 
 researchers that were doing the trial were really the most interested in. And so this is also like a
 really interesting aspect of this space, I think.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="13:43">
+<turn speaker="Waleed Ammar" timestamp="13:43">
 
 So you mentioned an aspect of quality and bias when humans are assessing or when the experts are
 trying to assess each of these articles. Could you give an example of maybe an extreme example of
 articles that should be excluded?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Byron Wallace" timestamp="13:56">
+<turn speaker="Byron Wallace" timestamp="13:56">
 
 Yeah, so I wouldn't go so far to say that they should or should not be excluded. The way that this
 has done is researchers will try to appraise the risks of statistical bias that are present in a
@@ -367,10 +367,10 @@ introduce kind of weird biases. But you know, surprisingly sometimes this happen
 the simplest case and other cases, allocation concealment, basically the people that are doing the
 randomization should be blinded to which group is going to get sort of which treatment.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Byron Wallace" timestamp="14:50">
+<turn speaker="Byron Wallace" timestamp="14:50">
 
 Right? And similarly, when you do outcomes assessment, the folks doing that should not know which
 group each person is in that they're assessing. So these are these different domains where if you
@@ -383,10 +383,10 @@ Here's exactly how we assess the outcomes and here's how the person was blinded.
 analogous to how in our papers you really want somebody to tell you exactly how they set their hyper
 parameters and if they don't like you're a little bit suspicious, right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Byron Wallace" timestamp="15:41">
+<turn speaker="Byron Wallace" timestamp="15:41">
 
 It's a similar story, right? So we've built models that can automate this process. So, and in fact
 this is one of the things that we've had, I think the most success at practically speaking because
@@ -399,10 +399,10 @@ bias assessment. And we randomized folks doing evidence synthesis to either be s
 predictions and get a prepopulated risk of bias table or not basically. And the question is does
 that, does it speed up the review process and do they like using it?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Byron Wallace" timestamp="16:36">
+<turn speaker="Byron Wallace" timestamp="16:36">
 
 Right. And the answer seems to be yes. So that work is actually currently under review. But the
 upshot was the predictions seemed to help them and they seem to enjoy using the tool. And I actually
@@ -412,33 +412,33 @@ what not. As the years have gone by, we've introduced various versions of the mo
 everything and adding some other cool stuff. But I think in order to know if it's really helpful,
 you really have to see if the humans use it. I guess,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="17:10">
+<turn speaker="Waleed Ammar" timestamp="17:10">
 
 Yeah, that's really exciting to hear that you're doing the sort of random file. So we didn't say
 anything about like the quality. So how do you actually assess the quality?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Byron Wallace" timestamp="17:19">
+<turn speaker="Byron Wallace" timestamp="17:19">
 
 I see. So, when you say quality, what do you have in mind? Like the quality of what?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="17:24">
+<turn speaker="Waleed Ammar" timestamp="17:24">
 
 Well, I guess the first thing that comes to mind is recall. So when the top set who are shown the
 predictions, what percentage of the articles that the other group cover by this one?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Byron Wallace" timestamp="17:34">
+<turn speaker="Byron Wallace" timestamp="17:34">
 
 I see. Yeah. So, you mean in terms of the, quality of the model, the metrics, basically there are
 two aspects to this, right? So in risk of bias assessment, you are ultimately making a
@@ -451,10 +451,10 @@ full text articles and when we pre-populate the table we say, look, the model sa
 at low risk of bias with respect to allocation concealment. And here's why. And we point to a phrase
 in the paper, because of this, we have sort of two sets of metrics.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Byron Wallace" timestamp="18:26">
+<turn speaker="Byron Wallace" timestamp="18:26">
 
 One that quantifies our performance with respect to retrieving the snippets and one that sort of
 quantifies how well we do at the overall classification task. Right? And so what we find is that
@@ -466,10 +466,10 @@ evaluated using the Cochrane database as a proxy because we have multiple labels
 know, it's a slightly subjective task. I should mention. So the humans themselves are not perfect.
 We're still in the overall assessment than the humans.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Byron Wallace" timestamp="19:13">
+<turn speaker="Byron Wallace" timestamp="19:13">
 
 So I guess what I'm saying is like the retrospective metrics are quite good. I apologize. Off the
 top of my head, I don't, um, I don't have any numbers on hand, but we've reported these in various
@@ -483,38 +483,38 @@ get a kick out of it, but they end up concluding that robot reviewer actually pe
 humans on two of the domain, Which I like. I'm not sure that I follow this. Like I enjoy that as a
 notion. I don't know. Um, I don't know that I would fully endorse that position, but,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="20:16">
+<turn speaker="Waleed Ammar" timestamp="20:16">
 
 Well that's great to hear that. See at least we're getting close. It's useful enough that you were
 able to find collaborators who are willing to use it right. That's,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Byron Wallace" timestamp="20:25">
+<turn speaker="Byron Wallace" timestamp="20:25">
 
 That's one thing that's like really amazing about this space is the kinds of people that do evidence
 synthesis for a living. They really want this technology. Like they really hate doing the grunt work
 that goes into a lot of what they have to do. And so the enthusiasm for this is just really exciting
 and it's one of the reasons that I really like the space.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="20:46">
+<turn speaker="Waleed Ammar" timestamp="20:46">
 
 Great. So another question that I had in mind is how do you aggregate this information? So let's say
 you extracted the numeric values that correspond to each of the outcomes that you care about from a
 set of articles. Do you aggregate them by giving different articles, different weights, depending on
 the number of subjects? How do you do this?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Byron Wallace" timestamp="21:02">
+<turn speaker="Byron Wallace" timestamp="21:02">
 
 So this is actually a whole sub specialty that in statistics and biostats I guess called meta
 analysis. So basically there's a whole kind of research community that's really focused on these
@@ -526,19 +526,19 @@ the point where we can reliably extract the actual data elements that are necess
 analysis. So fully automated, that analysis is quite a ways away. I'm afraid. Um, but you know,
 we'll get there.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="21:48">
+<turn speaker="Waleed Ammar" timestamp="21:48">
 
 So the previous step that I kind of like assumed that we could get it as extracting the values, the
 numeric values for the outcomes, whether it's the primary or secondary outcomes of the study, how
 well are we doing there? Are there existing data sets.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Byron Wallace" timestamp="22:02">
+<turn speaker="Byron Wallace" timestamp="22:02">
 
 There's practically no data on that. In terms of actually extracting the numbers for particular
 comparisons, very hard. And as far as I know, there's no annotated data sets for this and there's
@@ -551,10 +551,10 @@ they're publicly available and these described randomized control trials. And wh
 data set is; we've hired doctors via upwork to basically generate ICO frames, so interventions,
 competitors and outcomes that are described in a particular trial.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Byron Wallace" timestamp="23:04">
+<turn speaker="Byron Wallace" timestamp="23:04">
 
 And then we have them also, well we have a whole kind of annotation pipeline, but basically we ended
 up collecting labels for those which says for this ICO frame, this article provides evidence that
@@ -565,19 +565,19 @@ be different. But there we simplified the task, we treat it as a three-way class
 significantly decrease, neutral or significantly increase. And we kind of punt on trying to extract
 the actual numerical information, as a, I guess, a compromise to try to make progress.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="23:48">
+<turn speaker="Waleed Ammar" timestamp="23:48">
 
 That's interesting. So are there other tasks that are related to evidence based medicine? Away from
 the meta review or meta analysis type of work that also NLP could help with? Some of the things that
 come to mind are, electronic health records that show up in hospitals.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Byron Wallace" timestamp="24:05">
+<turn speaker="Byron Wallace" timestamp="24:05">
 
 Yeah. So it's a really good question and it's something that I think about a lot because I mean this
 is a space that I've worked in for a while, aside from evidence based medicine stuff like I also
@@ -591,20 +591,20 @@ extracted from, for example, the EMR. How exactly you do that. Of course, you kn
 yet, but we know that it's something that we should do. And so certainly there's been a lot of work
 on trying to extract information from EMR. I think we'll see more of it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="24:57">
+<turn speaker="Waleed Ammar" timestamp="24:57">
 
 Yeah. I'm also reminded of some, by Arman Cohan where he analyzed Reddit comments that people have
 in social media trying to assess, to try to extract like for example, comments that may indicate,
 people are diagnosed with a certain disease, which it seems like it's a very open ended base.
 There's a lot of potential for contributions. There's not enough work on this area.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Byron Wallace" timestamp="25:22">
+<turn speaker="Byron Wallace" timestamp="25:22">
 
 You know, the space in general, I think what precludes a lot of NLPers from working in it is, you
 know, there's not a lot of data sets that you can just kind of pick up and, and work with. And on
@@ -616,18 +616,18 @@ that will change and that's one of the reasons that in recent work we've really 
 quite a bit on corpus creation because I've seen that as a need. There are a lot of opportunities in
 this sort of broad space of I guess NLP plus health. I hope that more people get involved.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="26:08">
+<turn speaker="Waleed Ammar" timestamp="26:08">
 
 I guess I'm a little bit surprised to hear that there's a corpus of electronic medical records even
 anonymize that's available. Like it seems like that would be too fraught with privacy issues.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Byron Wallace" timestamp="26:18">
+<turn speaker="Byron Wallace" timestamp="26:18">
 
 Yeah, I don't know. So I mean I think they've, they really took care and they're there. You do have
 to jump through like a few hoops still. You have to get your hands on MIMIC, you have to kind of
@@ -638,35 +638,35 @@ can use it. And you know, it's been a really impactful thing to have a common da
 these different models. And there's loads of sort of weird and unstructured text that are in these
 notes that is, you know, could be harnessed. But it's a challenging space.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="26:56">
+<turn speaker="Waleed Ammar" timestamp="26:56">
 
 I also heard from a friend who works on this area is, it's not that hard to get your hands on data,
 but publishing this data. So because like the researchers in the medical institutes are very keen on
 making advances in this area, but they're not, of course, they're not allowed to, to publish the
 data.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Byron Wallace" timestamp="27:15">
+<turn speaker="Byron Wallace" timestamp="27:15">
 
 I see, yeah.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="27:15">
+<turn speaker="Waleed Ammar" timestamp="27:15">
 
 You do get permission of using this data for research purposes, but they're not allowed to be
 published.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Byron Wallace" timestamp="27:20">
+<turn speaker="Byron Wallace" timestamp="27:20">
 
 Oh, you're absolutely right. So I think those of us that like, you know, for example, I work a lot
 with sort of partners healthcare here and in various hospitals in Boston and so we can run
@@ -680,38 +680,38 @@ then we're subsequently, we're also doing it with the MIMIC data set and seeing 
 of all, if they hold, but then also that's reproducible. And so there's sort of like a medium there
 that we can, that we can reach, which is nice.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="28:17">
+<turn speaker="Waleed Ammar" timestamp="28:17">
 
 I remember Alex Smola had a blog a few years ago talking about the difficulty of releasing some kind
 of data should not prevent us from doing research on this, on this data. And of course there's like,
 ideally we'd like everything to be open and reproducible, but if that's not the case, we shouldn't
 stop working on it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Byron Wallace" timestamp="28:36">
+<turn speaker="Byron Wallace" timestamp="28:36">
 
 Yeah, I mean I think it's complicated, right? But yeah, I mean I obviously there are real privacy
 concerns, but on the other hand, you do want open science. So I think striking that balance is, you
 know, something that we'll continue to negotiate and hopefully muddle our way through.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="28:50">
+<turn speaker="Waleed Ammar" timestamp="28:50">
 
 Right. So I'd like to give a shout out to with the EMNLP workshop, it's happening with ACL this year
 the due date for submissions is April 26 it's been really a helpful catalyst in the NLP community to
 bring more people into this area.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Byron Wallace" timestamp="29:04">
+<turn speaker="Byron Wallace" timestamp="29:04">
 
 Absolutely. It's a really a great group and the organizers are wonderful. So that's, that's
 definitely true. There's also at EMNLP or historically I think it's been an EMNLP. There's the
@@ -722,17 +722,17 @@ more NLP submissions coming in. And so this, we hold every year, this year it's 
 University of Michigan at Ann Arbor. So that would be another place that might be a good fit for
 some of this work.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="29:39">
+<turn speaker="Waleed Ammar" timestamp="29:39">
 
 Was it a workshop independent of other conferences?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Byron Wallace" timestamp="29:42">
+<turn speaker="Byron Wallace" timestamp="29:42">
 
 It's its own conference. So the, the main aim of machine learning for healthcare was to make sure
 that we had physician representation. So a bunch of us that felt like we kept ending up in roomfuls
@@ -745,32 +745,32 @@ We actually, we held it here at Northeastern two years ago and then last year we
 and it's been growing and it's good people, but yeah, we're still kind of getting, getting it off
 the ground.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="30:28">
+<turn speaker="Waleed Ammar" timestamp="30:28">
 
 Well, that's fantastic. Thank you for doing the community work there. I know it's not easy to plan
 for a conference.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Byron Wallace" timestamp="30:34">
+<turn speaker="Byron Wallace" timestamp="30:34">
 
 Sure, sure.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="30:36">
+<turn speaker="Waleed Ammar" timestamp="30:36">
 
 Did you have any other thoughts that you'd like to talk about on this topic before we conclude?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Byron Wallace" timestamp="30:40">
+<turn speaker="Byron Wallace" timestamp="30:40">
 
 Well, I guess the only other thing I would say is, aside from sort of its practical importance, I
 think this general space from just from a strictly sort of NLP perspective is really interesting
@@ -787,32 +787,32 @@ obvious reasons, I think it's an exciting area, not only for its practical appli
 for the core technical challenges that, that it motivates. So I'd encourage more NLPers to come work
 on these problems.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="31:49">
+<turn speaker="Waleed Ammar" timestamp="31:49">
 
 Totally. It's a reality check. How far did we actually go in NLP.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Byron Wallace" timestamp="31:54">
+<turn speaker="Byron Wallace" timestamp="31:54">
 
 I think so. I think that's fair. Yeah.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="31:56">
+<turn speaker="Waleed Ammar" timestamp="31:56">
 
 All right. Thank you very much for joining us today. That was fun.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Byron Wallace" timestamp="31:59">
+<turn speaker="Byron Wallace" timestamp="31:59">
 
 Yeah. Thanks so much for having me. I had a lot of fun chatting.
 
-</Turn>
+</turn>

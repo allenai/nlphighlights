@@ -8,39 +8,39 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting work in natural
 language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is Matt Gardner, and Waleed Ammar, we are research scientist at the Allen Institute for
 Artificial Intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:11">
+<turn speaker="Matt Gardner" timestamp="00:11">
 
 Okay. Today our guest is Nathan Schneider, who is an assistant professor at Georgetown university.
 He did a PhD at Carnegie Mellon university with Noah Smith and then a postdoc at Edinburgh and is
 starting his third year as a professor at Georgetown. Nathan, welcome to the program.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nathan S." timestamp="00:26">
+<turn speaker="Nathan S." timestamp="00:26">
 
 Thanks for having me.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:27">
+<turn speaker="Matt Gardner" timestamp="00:27">
 
 Today. We'll be talking about a paper that was published at ACL 2018 titled "Comprehensive
 Supersense Disambiguation of English Prepositions and Possessives." Now this is a project you've
@@ -48,10 +48,10 @@ been working on for quite a long time. I remember talking to you about it and ev
 initial annotation back at CMU five or so years ago. Can you tell us what's going on with this
 project?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nathan S." timestamp="00:50">
+<turn speaker="Nathan S." timestamp="00:50">
 
 Yeah, so this is the latest iteration of this long project. We've been working on it for basically
 four years. It started off as a chapter in my dissertation and then there kept being more to do. So
@@ -64,35 +64,35 @@ and these prepositions are highly polisames and highly frequent. So there has be
 disambiguating them and we decided to sort of take a fresh look at this disintegration process. And
 in fact, defining the task of what should our semantic representation be for these phenomenon.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="02:18">
+<turn speaker="Matt Gardner" timestamp="02:18">
 
 So what you're trying to do is say in those examples, like "a man was in the room," you want to know
 what exactly does "in" mean there? That's, that sounds hard.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nathan S." timestamp="02:29">
+<turn speaker="Nathan S." timestamp="02:29">
 
 Yes. It. So for "the man in the room," we can come up with a fairly straightforward category of
 location or we call it locus, but essentially location. That's, the sort of most canonical use of a
 preposition. But then if you say "a man in a hat," are you saying the hat is where the man is
 located
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="02:55">
+<turn speaker="Matt Gardner" timestamp="02:55">
 
 Or "a man in a frenzy?"
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nathan S." timestamp="02:56">
+<turn speaker="Nathan S." timestamp="02:56">
 
 In a frenzy? Right. So there are, so the way linguists often talk about this is that there are
 prepositions and some languages have post positions where they follow the noun phrase. In the way
@@ -108,10 +108,10 @@ seems that we often need these little function words to help narrow down the the
 relation we're talking about. So, you know, the, we use words like in and at and for, and to, and
 from.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="04:44">
+<turn speaker="Matt Gardner" timestamp="04:44">
 
 And so the end goal essentially then is trying to decide what the relationship is between the main
 content words of the sentence. Right. And there are a lot of different approaches to try to get at
@@ -120,10 +120,10 @@ what the verb has some, some number of arguments. And I want to know what partic
 holds between the arguments of the verb and the verb itself. And this, this seems very related to
 what you're talking about here. Can you tell us about the difference between these?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nathan S." timestamp="05:17">
+<turn speaker="Nathan S." timestamp="05:17">
 
 Absolutely. So yeah, so I would say the, the simplest difference is that semantic role labeling
 approaches usually assume that there is some sort of lexicon of predicates or frame evoking of
@@ -139,10 +139,10 @@ many collaborators over the years has been to try to come up with an open sort o
 does not require a lexicon to first define for particular items, what the set of roles should be. So
 the idea is this is where we get a comprehensive in the title.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nathan S." timestamp="07:07">
+<turn speaker="Nathan S." timestamp="07:07">
 
 So the idea is we're defining semantic classes rather than lexical sentence descriptions. And so we
 have an inventory. Currently we have 50 classes which sounds like a lot, but it, we actually had a
@@ -159,10 +159,10 @@ class approach to complex nominals, but then integrating it with the semantic ro
 noting that there's some overlap. So you can say "the man in the room" or "the man ate in the room"
 the in there is essentially has the same meaning. So we want to have the same form.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="09:04">
+<turn speaker="Matt Gardner" timestamp="09:04">
 
 So just to clarify some things. So you, you mentioned or you distinguished your approach to this
 kind of tagging with SRL prop bank style annotations by saying that you're using a semantic, class-
@@ -171,27 +171,27 @@ semantic role labeling the difference then becomes a lot smaller. Right? And so 
 closer to something that includes nominal predicates, like non-bank. So because you're, you're
 dealing with prepositions that attach not just to verbs but also to nouns.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nathan S." timestamp="09:38">
+<turn speaker="Nathan S." timestamp="09:38">
 
 Yeah. So I, so I see this as a similar, you can, you can view this as a class-based approach to
 semantic role labeling. If you take semantic roles to include a broad set of relations, including
 some things that might be represented, in non-bank including things that are adjuncts or non-core
 arguments as well as core arguments and so forth.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="10:03">
+<turn speaker="Matt Gardner" timestamp="10:03">
 
 So why would we want to do this? What, what benefit do we gain from doing this annotation task?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nathan S." timestamp="10:08">
+<turn speaker="Nathan S." timestamp="10:08">
 
 The overarching questions is whether we can define a set of roles and relations that can
 characterize the wide range of meanings that are out there and can be defined well enough to train
@@ -203,10 +203,10 @@ goal and time start time, end time, frequency, etc. And then we can broadly iden
 spatial relations and non temporal relations. Like if you have a comparison between two things, "I'm
 taller than him."
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nathan S." timestamp="11:16">
+<turn speaker="Nathan S." timestamp="11:16">
 
 We have a label for that. And relations between individuals and organizations are quite frequent in
 the domain we looked at. So if you work with somebody on a project or if you are, you know, kinship
@@ -216,10 +216,10 @@ talking, we're talking about relations that are important enough and general eno
 really be expressed by function words in a language rather than requiring a verb or a noun to add a
 lot of conversation.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="12:12">
+<turn speaker="Matt Gardner" timestamp="12:12">
 
 And so your motivation here in doing this, do you care more about describing language or like from a
 linguistics perspective, do you want to understand how these function words are used? Or are you
@@ -228,10 +228,10 @@ do better as at building some NLP system or I want to understand how computers c
 computers can capture this phenomenon. Like, what, what's your take, why, why are you interested in
 doing this?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nathan S." timestamp="12:44">
+<turn speaker="Nathan S." timestamp="12:44">
 
 Yeah, so one of the big so, so I am both identify as both a linguist and a computer scientist. And
 so I care about both sides of the coin here. The motivation from an NLP perspective involves better
@@ -240,17 +240,17 @@ I'd be interested in working on things like paraphrasing and things like second 
 acquisition. So if you've ever studied a second language you have probably had some difficulty
 learning the prepositions. I don't know what, languages use studied.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="13:33">
+<turn speaker="Matt Gardner" timestamp="13:33">
 
 Yeah. Yes. I've, I've definitely had that experience with a couple of different languages. Yes.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nathan S." timestamp="13:37">
+<turn speaker="Nathan S." timestamp="13:37">
 
 And this is because every language has a pretty idiosyncratic way of carving up meanings into its
 grammatical items such as prepositions. So we know that second language learners have trouble coming
@@ -263,10 +263,10 @@ by no means the only meaning representation that is important. But I think it's,
 understand how we can characterize compositionality in language because this is what helps us to
 constantly produce and interpret utterances that we'd never heard before.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nathan S." timestamp="15:06">
+<turn speaker="Nathan S." timestamp="15:06">
 
 And we will not always be able to have an end task with a lot of training data that we can, we can
 train an end to end system and ignore all the structure that might be that might be going on. So I
@@ -275,19 +275,19 @@ trying to have some explicit aspects of meaning. Now, of course, I'm not saying 
 a word embeddings or for any of the rest. Maybe these sorts of analyses can help us to better
 understand what our systems are doing right now.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="15:46">
+<turn speaker="Waleed Ammar" timestamp="15:46">
 
 So the first point I'm curious to know if you had any chance to look at the distribution of these
 super senses in other languages and have you noticed any missing super senses, not in English, but
 there exist in other languages?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nathan S." timestamp="15:59">
+<turn speaker="Nathan S." timestamp="15:59">
 
 Yeah, so this is, this is the most exciting direction that we're going now. We have for maybe a
 year, but more intensively now. We started looking at a few other languages and trying to apply
@@ -307,18 +307,18 @@ right now that will allow us to evaluate these these claims in a more quantitati
 know, are the same if we independently annotate both sides of the parallel Corpus and it seems like
 literal translation are the annotators getting the same semantic label.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="18:23">
+<turn speaker="Matt Gardner" timestamp="18:23">
 
 I'm curious to know if you have an example of that pragmatic that was indicated by one of the post
 processors in the other languages.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nathan S." timestamp="18:30">
+<turn speaker="Nathan S." timestamp="18:30">
 
 As an example, I have here in Korean with the caveat that I don't speak Korean and this is from my
 collaborators Jena Hwang and Na-Rae Han. There is a Korean post position nun, which seems to work as
@@ -330,19 +330,19 @@ marker that has a similar function. And so we don't, right now our scheme is pur
 relations. But one direction we've, we think we may need to push to account for prepositions and
 post positions in other languages is to have some pragmatic labels as well.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="19:51">
+<turn speaker="Matt Gardner" timestamp="19:51">
 
 Can you explain the distinction that you mean there a little bit, I think someone who's not trained
 in linguistics might not really understand the difference between a semantic relation and putting
 more emphasis on something. What, like why, why isn't this a semantic relation?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nathan S." timestamp="20:06">
+<turn speaker="Nathan S." timestamp="20:06">
 
 So pragmatics has to do with the structure of the conversation and the speech act. So the the, what
 you're trying to, the, the act of communication as opposed to the state of affairs. You are, that
@@ -351,18 +351,18 @@ is so placing emphasis on something is a way of showing that , You are drawing t
 attention to something in order to, so that they may make some kind of inferences about about the
 facts that you're trying to communicate.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="21:03">
+<turn speaker="Matt Gardner" timestamp="21:03">
 
 As opposed to the semantic relations that are actually what the facts are that you're trying to
 communicate.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nathan S." timestamp="21:08">
+<turn speaker="Nathan S." timestamp="21:08">
 
 Yeah, I should, I should say that I'm, I'm really not an expert in pragmatics so I'm, I'm hesitant
 to to even try to define it. But the pragmatics is generally about the process of communication and
@@ -370,29 +370,29 @@ ways that language and grammar can make reference to the the process of communic
 that may be shared between the speaker and the hearer but are not in terms of common ground and so
 forth. These can be highlighted with a linguistic material.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="21:43">
+<turn speaker="Matt Gardner" timestamp="21:43">
 
 Yeah. And we do this in English. Like if I want to say that John read a book, but I want to focus on
 the fact that it was John. I can say it was John that read the book. But, but we're not using
 prepositions to do this. And that's why this hasn't shown up in your, your super sense.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nathan S." timestamp="21:56">
+<turn speaker="Nathan S." timestamp="21:56">
 
 Right. So in English we might use a cleft construction to saying it was John who so changing from
 the canonical order of John did X, it was John who did X. This is another way that that English uses
 to maybe communicate a similar meaning to what would be expressed with a post positional marker in
 another.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="22:23">
+<turn speaker="Matt Gardner" timestamp="22:23">
 
 Okay. So I think we've got a decent idea of what you're trying to do and why. We want to categorize
 what the meaning is when we see a preposition in particular. How does the preposition express what,
@@ -401,10 +401,10 @@ us a little bit more about the I, we've talked about this a little bit, but I th
 little bit more detail on the particular hierarchy that you came up with. Like these, you had three
 broad categories. Can you tell us about this?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nathan S." timestamp="22:56">
+<turn speaker="Nathan S." timestamp="22:56">
 
 Sure. So we have three categories. Circumstance is for the semantics that most people think of when
 they think of prepositions, at least in English. These are for spatial and temporal relations as
@@ -416,10 +416,10 @@ part of the hierarchy is about generally elaborating on these sort of extra prop
 And then we also have a participant portion of the hierarchy, which is similar to the core, a
 thematic roles or semantic roles and a semantic role labeling.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nathan S." timestamp="24:27">
+<turn speaker="Nathan S." timestamp="24:27">
 
 So things like agent and theme and recipients and stimulus and so forth. If you're familiar with
 that literature. And then the third portion is what we call configuration. And these are mainly for
@@ -432,10 +432,10 @@ biking." So to, there also marks the second item in a comparison. We have labels
 rates and relations between individuals like employment and, and kinship and so, so forth. And we
 call these social rail and orgrail to be fairly proud.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="25:56">
+<turn speaker="Matt Gardner" timestamp="25:56">
 
 So this sounds like you, you listed a bunch of different categories. Turns out there are 50
 altogether. This seems like a lot, like how do you decide to how many there are. You also talk like
@@ -447,10 +447,10 @@ to describe semantic roles in Symantec. Seems open-ended. Like we can see new si
 time. How can you hope to, to capture all of these possible relations in a single set of 50
 categories?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nathan S." timestamp="26:46">
+<turn speaker="Nathan S." timestamp="26:46">
 
 Our approach was to try to define the categories to be general enough that you can imagine almost
 any situation being an instance of one of these situations that we capture. So agent in theme to
@@ -462,20 +462,20 @@ comprehensive is that we're very course rate and we're not distinguishing, you k
 from from removal events or from you know, or you know, walking versus running and all these kinds
 of things.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="28:09">
+<turn speaker="Matt Gardner" timestamp="28:09">
 
 Yeah. Something like frame net that tries to list specific types of events with specific roles to
 fill in that event is going to be a whole lot harder to scale to broad coverage and claim some
 notion of comprehensiveness. Right. Where because you are doing something that's much more broad,
 maybe you'll be able to capture new stuff better.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nathan S." timestamp="28:30">
+<turn speaker="Nathan S." timestamp="28:30">
 
 And part of the reason is because we think that because these are grammatical, these are function
 words they are more likely to express things to be to have very sort of general and therefore useful
@@ -493,20 +493,20 @@ general principles for these these general purpose categories, which we call sup
 also a tradition of super sense tagging of nouns and verbs based on WordNet the WordNet super
 senses. And we are trying to extend this to propositions in synthesis.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="30:33">
+<turn speaker="Waleed Ammar" timestamp="30:33">
 
 Okay. can I push on this a little bit, I would like to understand better, for example one decision
 that you must have made is in other configuration, there are multiple categories which are not very
 frequent, like rates unit instead of, and you could have decided to merge them with a parent
 category, which is configuration. So how do you make this decision?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nathan S." timestamp="30:57">
+<turn speaker="Nathan S." timestamp="30:57">
 
 For configuration we decided we didn't want to apply the label configuration directly. So we wanted
 to have some sort of more specific label for everything under it. The,two you named are indeed the
@@ -520,19 +520,19 @@ assigning a semantic category to them. So essentially, yeah, if we found a use o
 we think we thought really didn't fit in any of the other categories, we tried to either create a
 new category or figure out how to generalize one of the other ones to make it fit.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="32:23">
+<turn speaker="Matt Gardner" timestamp="32:23">
 
 And then this makes me again worried about you mentioned two categories that were for particular
 words that were special cases, how many more of these would you see if you were to annotate a much
 larger Corpus? And is this like discrete notion of categories really the way to go?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nathan S." timestamp="32:43">
+<turn speaker="Nathan S." timestamp="32:43">
 
 So there is a question of , you can answer this on a theoretical dimension or I on a practical
 dimension in both cases I would say we, coming up with a comprehensive annotation scheme requires
@@ -545,10 +545,10 @@ and so I just looked up rate unit and so it's not just per, it's also by, so you
 sold by the slice. And so most of these functions at least are a little bit more general than a
 single word.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="34:13">
+<turn speaker="Matt Gardner" timestamp="34:13">
 
 Interesting. Thanks. Related to that, there's been a recent push by I guess mostly Luke Zettlemoyer
 and his group that are thinking about using non specialist annotators to annotate semantic phenomena
@@ -559,10 +559,10 @@ describe that relationship with a question using just some string of language. W
 think of this approach to annotation instead of; Like what are the tradeoffs between using this more
 open kind of description versus the more formal ategories that you've constructed?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nathan S." timestamp="35:16">
+<turn speaker="Nathan S." timestamp="35:16">
 
 I think these crowd sourcing directions of semantic annotations are really cool. And I would like to
 actually explore to what extent can we could we convert at least part of our annotation task team to
@@ -579,10 +579,10 @@ if we can have some explicit labels that linguists can understand or maybe the d
 can understand if they want to see why a system is making some inference from based on Symantec
 analysis.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="37:09">
+<turn speaker="Matt Gardner" timestamp="37:09">
 
 Yeah, I can see that. This seems very much like a, let's try to understand what's going on with
 language more so than let's try to, maybe that's not the right way to think of it, but taking a step
@@ -592,10 +592,10 @@ depend on a formal understanding of the categories you've described. But on the 
 really understanding, meaning if we want to try to build systems that understand stuff, maybe maybe
 this categorization would help us to build better systems.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nathan S." timestamp="37:50">
+<turn speaker="Nathan S." timestamp="37:50">
 
 Yeah. I mean, this is the age old question of, you know should we try to think of computers as
 learning in an implicit way? Maybe like, we implicitly learn a native language without any, without
@@ -607,10 +607,10 @@ natural language. And I think at the very least, we if we're going to be good en
 try to understand why our systems are doing what they're doing. So we need some techniques from
 linguistics to poke around in the systems.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="39:01">
+<turn speaker="Matt Gardner" timestamp="39:01">
 
 Yeah. And I guess this, so this is some results that you, I don't think I've heard about before.
 These are new from some experiments that I've been running with an intern over the summer. But we've
@@ -625,10 +625,10 @@ Another way to look at it is, Hey, maybe I actually captured something meaningfu
 annotation because it's something that you can actually get a machine to do consistently. What are
 your reactions to this result?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nathan S." timestamp="40:10">
+<turn speaker="Nathan S." timestamp="40:10">
 
 Well, that's, that's really exciting. We thought this was a hard task because the train set is
 relatively small. But we had not; in the ACL paper, we had not gone beyond sort of standard
@@ -641,18 +641,18 @@ there's some correlation between what language models are doing and how humans w
 function words. Then somehow we can start peeking into the language models to understand they're
 capturing this meeting. So yeah, there's lots of exciting stuff to be done.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="41:39">
+<turn speaker="Waleed Ammar" timestamp="41:39">
 
 Interesting. So going back to the paper, you make a distinction between the senior role and the
 function of a preposition. Could you tell us a little more about those?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nathan S." timestamp="41:49">
+<turn speaker="Nathan S." timestamp="41:49">
 
 Yeah, so this is part of the, this is going to get a little sound, a little wonky in linguistically.
 What I have said already has not already sounded wonky. The, but in going about this task, we
@@ -663,10 +663,10 @@ structure in a an event. So an example is with the verb "put," you can put somet
 under the couch or in the cushions of the couch. And the preposition you're choosing, there is just
 a plain old locket of preposition.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nathan S." timestamp="43:10">
+<turn speaker="Nathan S." timestamp="43:10">
 
 So you can say the pillows are on the couch or you can put the pillows on the couch. However, in our
 annotation scheme, we distinguished between locations and goals. So if you put something somewhere
@@ -681,18 +681,18 @@ event. That the prepositional phrase is an argument of. So what we now allow our
 is that put on the couch that on the couch as a whole represents the goal. But the the on part is
 really signaling locket of relationship between the pillow and the couch.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="44:49">
+<turn speaker="Waleed Ammar" timestamp="44:49">
 
 And do you allow any of the super senses to fit in the role and in the function or are there a
 subset, like a strict subset that is only valid for one or the other?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nathan S." timestamp="45:03">
+<turn speaker="Nathan S." timestamp="45:03">
 
 Good question. So the theory that we're developing essentially of these super senses is that these
 are, the function is motivated by the lexical contribution of the preposition. But there are some
@@ -704,10 +704,10 @@ or cognition. And so you can say "I was frightened by the bear." Or "I was frigh
 Or "The bear frightened me." And there doesn't seem to be anything about by that is really
 particularly associated with experience or I'm sorry, it stimulus.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nathan S." timestamp="46:32">
+<turn speaker="Nathan S." timestamp="46:32">
 
 Or, and there doesn't seem to be anything in particular associated with, of those associated with
 the stimulus. Rather, what we think is going on is that there are different mappings of stimulus and
@@ -722,10 +722,10 @@ same role in terms of the scene of being, of having an emotional reaction. The b
 of the reaction in both cases, but the prepositions that are used seem to be drawn from different
 corners of the of the semantic space, if you will.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="48:15">
+<turn speaker="Matt Gardner" timestamp="48:15">
 
 So we've already gone quite long on this and we haven't even talked about the particular Corpus or
 the experiments that you run in your paper. I, I think we should just direct those listeners to the
@@ -735,10 +735,10 @@ version four of your, the Corpus that you're releasing. It seems like most of ou
 through this kind of re annotation, fixing kinds kind of process. Do you have any thoughts on what
 we should be doing differently in data annotation or like how projects evolve over time?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nathan S." timestamp="48:57">
+<turn speaker="Nathan S." timestamp="48:57">
 
 Sure. So well, so the the Corpus is in version four but it's actually only the second release of the
 Corpus that has preposition and possessive super senses. So the, that Corpus the streusel Corpus has
@@ -754,10 +754,10 @@ been, as far as I know, very minor changes after version two. So I think it's no
 people who really care about getting a linguistic representation right. To annotate data and then go
 back and try to revise the scheme does that answer your question?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="50:40">
+<turn speaker="Matt Gardner" timestamp="50:40">
 
 Yeah, yeah, it does. Thanks. And I think we should probably conclude there. Thanks Nathan. This has
 been like a super interesting conversation for me. I've been thinking a lot about where we go next.
@@ -769,10 +769,10 @@ structures are like the next thing to try to figure out and this work that, that
 is, isn't nice contribution to thinking about what are the kinds of predicative relationships, how
 do we find them and annotate them. It's a nice piece of piece of work.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nathan S." timestamp="51:27">
+<turn speaker="Nathan S." timestamp="51:27">
 
 Yeah, and I would, I would add to that, that I think I call myself pantheistic with regard to
 meaning representations. I think there are many different meaning representations that have been
@@ -788,18 +788,18 @@ figuring out what are sort of the cost benefit analysis of these different schem
 how much does it cost to annotate, what kind of background the annotators need and then how, to what
 extent do they correspond.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="52:56">
+<turn speaker="Matt Gardner" timestamp="52:56">
 
 Yeah. Great. Thanks for coming on. It was nice talking to you.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nathan S." timestamp="52:59">
+<turn speaker="Nathan S." timestamp="52:59">
 
 Okay. Thanks so much for having me.
 
-</Turn>
+</turn>

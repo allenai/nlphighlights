@@ -8,47 +8,47 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting recent work in
 natural language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is Matt Gardner and Waleed Ammar. We are research scientists at the Allen Institute for
 Artificial Intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:12">
+<turn speaker="Waleed Ammar" timestamp="00:12">
 
 So today our guest is Gabor Melis from the DeepMind office in London. Welcome to the podcast.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Gabor Melis" timestamp="00:20">
+<turn speaker="Gabor Melis" timestamp="00:20">
 
 Thank you very much.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:22">
+<turn speaker="Waleed Ammar" timestamp="00:22">
 
 And we're going to talk about his paper title On the State of the Art of Evaluation in Neural
 Language Models. It's co-authored by Chris Dyer and Phil Blunsom. So the paper was trying to give us
 a more a more clear picture of what the state of the art is in this important problem of language
 modeling and we wanted to know what's the motivation for this paper?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Gabor Melis" timestamp="00:48">
+<turn speaker="Gabor Melis" timestamp="00:48">
 
 Well, you can tell probably by the choice of topic here that we were burned a couple of times by
 trying to reproduce the results from various papers and trying to build on their findings and use
@@ -61,17 +61,17 @@ Every researcher in the field or in other fields will face this issue. So I thou
 a step back and use all that experience in a positive way to actually say something about what's
 wrong and how possibly how we could improve how we go about research.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="02:12">
+<turn speaker="Waleed Ammar" timestamp="02:12">
 
 Makes sense. So what models did you decide to compare?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Gabor Melis" timestamp="02:17">
+<turn speaker="Gabor Melis" timestamp="02:17">
 
 So they decided to compare out LSTMs because they are very core of NLP. I guess that's our reason in
 hindsight. And we also chose a recurrent neural network to compare with because it has extremely
@@ -83,19 +83,19 @@ this version of the paper also, these NAS cells, the neural architecture search 
 because it's designed by an algorithm reinforcement learning running in a model space, which should
 make it pretty different from hand designed cell.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="03:37">
+<turn speaker="Waleed Ammar" timestamp="03:37">
 
 Could you just give us like a very brief like introduction about like the Recurrent Highway Networks
 and the third model so that the audience can follow what are the main differences between the three
 models that you're comparing?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Gabor Melis" timestamp="03:54">
+<turn speaker="Gabor Melis" timestamp="03:54">
 
 Right. So LSTM are the most well known of the lot. And LSTMs basically can be interpreted in various
 ways. Even at ICLR I think there is now a paper that tries to cast them in a different light. So I'm
@@ -108,10 +108,10 @@ same layer in your multi-layer recurrent highway networks only from the top of l
 timestamp to the lowest layer at the next time step. It's pretty hard to follow this when described
 in a speech, but it's a kind of trivial on the diagram.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Gabor Melis" timestamp="05:21">
+<turn speaker="Gabor Melis" timestamp="05:21">
 
 So viewing RHNs in this light makes it a bit harder to see why they would be so much better than
 LSTMs because all they have is a different kind of bias possibly due to the different connectivity
@@ -122,10 +122,10 @@ could actually improve on their results. But they also wanted to give a fair cha
 which is sadly lacking in most works. And we wanted to see how LSTM would do if we took
 regularization and architectural decisions seriously.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Gabor Melis" timestamp="06:33">
+<turn speaker="Gabor Melis" timestamp="06:33">
 
 For example, recurrent highway network there was this beautiful figure in the paper. As you increase
 the number of time steps, which is basically number of layers it gets better and better. But upon
@@ -137,10 +137,10 @@ matrices. So to compare apples to oranges it's great if you compare models with 
 parameters in the embeddings in the recurrent cells, but this is a trade off that you can possibly
 tune.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Gabor Melis" timestamp="07:50">
+<turn speaker="Gabor Melis" timestamp="07:50">
 
 So this was one of the insights as to what kind of architectures hyperparameters we want to choose
 and tune, and we looked for other hyperparameters and regularization choices that we were unsure
@@ -151,10 +151,10 @@ do is you take the update vector. I think that's the U in the original formulati
 can you apply dropout to that vector and it seems to performing pretty much the same as variational
 dropout. Sometimes one is better than the other, sometimes it's the other way around.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Gabor Melis" timestamp="09:06">
+<turn speaker="Gabor Melis" timestamp="09:06">
 
 So to cut to the chase it, we found that LSTMs are extremely good across a number of language
 modeling datasets, even to a point of beating RHNs when you actually take the time to tune those NAS
@@ -164,19 +164,19 @@ especially the papers about sharing input and output embeddings that you covered
 episode. But the relative merits of RHNs and LSTMs. I think those came out in the reverse in our
 experience.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="10:24">
+<turn speaker="Matt Gardner" timestamp="10:24">
 
 I was gonna say I guess you've given us the highlight, the end results of your experiments. You want
 to tell us a little more detail about what exactly you did. So you had this fancy hyperparameter
 tuning set up.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Gabor Melis" timestamp="10:36">
+<turn speaker="Gabor Melis" timestamp="10:36">
 
 Oh yeah. So we used Google Vizier, which is similar to Spearmint and all the other blackbox
 hyperparameter tuners out there. And we defined as many hyperparameters as that tuner is confident
@@ -184,33 +184,33 @@ with. Right, these tuners tend to break down if they have more than a dozen. And
 something like nine hyperparameters to tune and we tried to narrow the tuning ranges as much as they
 could without handicapping the model.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="11:14">
+<turn speaker="Matt Gardner" timestamp="11:14">
 
 And the parameters were like embedding size and depth of the network or was that was depth fixed.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Gabor Melis" timestamp="11:19">
+<turn speaker="Gabor Melis" timestamp="11:19">
 
 Depth we ran separate tuning around for a different depths.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="11:27">
+<turn speaker="Matt Gardner" timestamp="11:27">
 
 All right, but you have a projection down from like the hidden size of the LSTM down to like a final
 embedding size again. So like these parameters are the things that were tuned by the hyperparameter
 optimization.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Gabor Melis" timestamp="11:42">
+<turn speaker="Gabor Melis" timestamp="11:42">
 
 Yeah. So the embedding size, the ratio of the embedding size and the hidden size was one tuneable.
 And for each tuning run, which involved one to 2000 deep model evaluations each we had parameter
@@ -222,24 +222,24 @@ these are only the things that you want to compare on equal grounds. And then yo
 those experiments in this matrix, you add the tuner to the parameters that are less interesting for
 comparison such as the learning rate, the dropout rates, the decay embedding ratio.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="13:08">
+<turn speaker="Waleed Ammar" timestamp="13:08">
 
 So, in total, how many different hyperparameters sets did you experiment with and the results.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Gabor Melis" timestamp="13:20">
+<turn speaker="Gabor Melis" timestamp="13:20">
 
 So one and a half thousand for each experiment and there were, I don't know, maybe 30 experiments.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="13:28">
+<turn speaker="Matt Gardner" timestamp="13:28">
 
 Wow. So look looking at your results. You report previous results with LTMS on language modeling
 they get perplexities I guess he best previous LSTM was around 70 perplexity depending on the number
@@ -247,10 +247,10 @@ of parameters. And you report perplexities around 60. So that's like a 10 to 14 
 Is that all due just to this hyperparameter optimization. Like why do you think previous LSTM
 results? Like what's the explanation for this gap?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Gabor Melis" timestamp="14:00">
+<turn speaker="Gabor Melis" timestamp="14:00">
 
 Well, practical tips, I think if you have too few parameters then the trade up between the cell size
 and the embedding size is very important. The not tuning dropout rates and regularization parameters
@@ -261,34 +261,34 @@ the hyperparameter space. So all of these add up, and if you miss any of those, 
 are more that I missed in all honesty, it's very hard to claim that improving a model by one and a
 half perplexity points is suddenly better in some sense.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="15:10">
+<turn speaker="Matt Gardner" timestamp="15:10">
 
 Interesting.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Gabor Melis" timestamp="15:11">
+<turn speaker="Gabor Melis" timestamp="15:11">
 
 And that's the crux of the problem here. What we want is better models at the end of the day.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="15:19">
+<turn speaker="Matt Gardner" timestamp="15:19">
 
 So I also think it's really interesting that the recurrent highway network, previous published
 result was 65 text perplexity, and the comparable number for your experiments was 62, so you only
 got a three. There was only a three point gap there. Why is that gap smaller than the gap for the
 LSTMs? Any intuition on that?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Gabor Melis" timestamp="15:40">
+<turn speaker="Gabor Melis" timestamp="15:40">
 
 Sure. well I think it's inevitable really that you give more love to your own brainchild, right. And
 you better tune it. I might have tuned LSTMs better myself, right? Because after awhile I thought,
@@ -300,10 +300,10 @@ suddenly went away and all we were left with was a bit faster training, which wa
 to tell. Yeah, but if we didn't spend all this time on getting the baselines up to speed, we could
 have told a nice story about how advanced gating improves LSTMs,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="17:02">
+<turn speaker="Matt Gardner" timestamp="17:02">
 
 So another possible hypothesis for the difference between these two gaps that the gap for the RHN is
 a lot smaller than the gap for the LSTM is that the RHN is less sensitive to hyperparameters like
@@ -312,29 +312,29 @@ RHN gets faster to some asymptotic result, but it asymptotes lower. Right. Does 
 if you, do you have any, is this true? I imagine you've tested this hypothesis, but I didn't see any
 results in the paper on it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Gabor Melis" timestamp="17:36">
+<turn speaker="Gabor Melis" timestamp="17:36">
 
 No, no. I think someone else solved this before, and I checked the sensitivity there and it was
 actually the other way around. If anything RHN were a bit more sensitive to the choice of
 hyperparameters.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="17:53">
+<turn speaker="Matt Gardner" timestamp="17:53">
 
 Interesting. So I think of you at Google have a really large computation budget and I feel for the
 people in academia that don't have such large computation budgets. And so I wonder, like, is that,
 are we just doomed to have this 10 point gap in performance if we don't have access to thousands of
 GPU hours of compute to do this hyperparameter optimization?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Gabor Melis" timestamp="18:17">
+<turn speaker="Gabor Melis" timestamp="18:17">
 
 That's good and not true. No. there were a number of papers coming out recently, one of them I think
 parallel to the work of this paper that had basically the same results with pure LSTM without
@@ -343,28 +343,28 @@ So I guess it's not the question of wither you can get really good results. It's
 confidence you have in your final numbers. And yeah, I would really like to cut down on the variants
 of the results so that it becomes less of a fashion industry and more of a science.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="19:12">
+<turn speaker="Matt Gardner" timestamp="19:12">
 
 I totally agree. In fact, like two episodes ago, we had a bit of a rant about this exact point. So
 yes, I totally agree with you.I like this paper a lot.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="19:21">
+<turn speaker="Waleed Ammar" timestamp="19:21">
 
 So speaking of the training time a lot of train time, I'm curious to know if it's really like a
 practical to apply a similar approach to larger datasets like the one billion word corpus often used
 for language model, even within language models. So what can we do in these cases where it's really
 hard to do 1.5 thousand experiments for every setup?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Gabor Melis" timestamp="19:52">
+<turn speaker="Gabor Melis" timestamp="19:52">
 
 Yeah, that's a problem even with this amount of resources larger datasets take way too long, but
 fortunately you need way less regularlization there. So the next dataset that I think is a sweet
@@ -379,29 +379,29 @@ much more efficient hyperparameter searches, reducing the number of hyperparamet
 worthwhile thing to do. I would, I would personally not go there myself, but I think it's a very
 important topic for all fields. It's a cross cutting thing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="22:00">
+<turn speaker="Waleed Ammar" timestamp="22:00">
 
 So I'm curious how much would we lose if we tune our hyperparameters on one in a smaller dataset but
 then apply it on a bigger dataset or like something that you maybe you may be able to answer is what
 happens if you tune like you had, I think three datasets that you use what happens if you use the
 smaller one to tune your hyperparameters and then apply it on the bigger one? How much do you lose?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Gabor Melis" timestamp="22:26">
+<turn speaker="Gabor Melis" timestamp="22:26">
 
 I don't know. I I thought about this, how to make the tuning more efficient by tuning on small
 datasets but in the end, I didn't want to make this compromise as much as I can avoid it because
 it's inevitable, it brings some uncertainty,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="22:51">
+<turn speaker="Matt Gardner" timestamp="22:51">
 
 I guess you do have some results where you tuned on the Penn Treebank and evaluated on Wikitext 2.
 Right. And there we see a drop of at least 10 points perplexity. And so yeah, it looks like these
@@ -412,10 +412,10 @@ do tuning, it's not even data. You can't even transfer these hyperparameters acr
 There's no reason to think you should be able to transfer them across tasks, which is a much larger
 gap, right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Gabor Melis" timestamp="23:37">
+<turn speaker="Gabor Melis" timestamp="23:37">
 
 Yeah. And also across implementation. Right. Implementations I guess. So a different system can add
 up.But this brings me to the point, to one of my pet peeves basically. So whenever we say that we
@@ -426,10 +426,10 @@ different, less overlap in the training set as you normally have and how much ef
 put there or how different you make the tests set is, it's a continuum. At one extreme you train on
 one data set, you get another.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Gabor Melis" timestamp="24:46">
+<turn speaker="Gabor Melis" timestamp="24:46">
 
 But the way that we measure generalization with training and test sets splits often makes us forget
 that there are very important implicit assumptions and factors in how we split those sets. And this
@@ -441,27 +441,27 @@ in mind that all these data sets are toy PTB is the toy-eist of all right. You, 
 our results as saying that let's not use PTB anymore. Let's use sets for which regularization is not
 an issue anymore, but then you have the other problem because training now takes ages.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="26:18">
+<turn speaker="Waleed Ammar" timestamp="26:18">
 
 Yeah, that makes allot sense. And I'm sure you don't mean to undermine the effort that went into
 constructing the PTB corpus it did drive a lot of research, but in context of language modeling, it
 has this very serious limitations.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Gabor Melis" timestamp="26:34">
+<turn speaker="Gabor Melis" timestamp="26:34">
 
 Yeah. I think it survives a bit too long. And it's very convenient because everyone has PTB setups.
 But we should probably move to more interesting datasets.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="26:52">
+<turn speaker="Waleed Ammar" timestamp="26:52">
 
 So I have one last question. What do you think is the right way to evaluate language models? Some
 people think perplexity is a great way to do that, other people think doing extrinsic evaluations,
@@ -469,10 +469,10 @@ machine translation or other tasks would be the right way to do it. But of cours
 So I guess one concrete question for you is how much of a difference have you seen if you try
 different variations of the model, which have very different perplexities on a downstream task.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Gabor Melis" timestamp="27:26">
+<turn speaker="Gabor Melis" timestamp="27:26">
 
 Okay. So we haven't really done a downstream task at all in this in this setup. But yeah. So the
 ability of your language model will matter a lot in semantic parsing or anything that basically
@@ -483,10 +483,10 @@ that it's not what we actually care about. Machine translation is nicer in that 
 can make the argument that BLEU is closer to what we care about, but that only lasts as long as you
 don't try to optimize directly for it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Gabor Melis" timestamp="28:42">
+<turn speaker="Gabor Melis" timestamp="28:42">
 
 Because if you start, you might see that you can improve the BLEU but not human's perception of
 goodness. So all these metrics are, wrong. Some are more wrong than the other but the perplexity
@@ -496,33 +496,33 @@ I think we don't have data sets or should I say dynamic environments in which la
 in which you could actually deduce losses from environmental factors. That would be nice but we
 don't have that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="29:37">
+<turn speaker="Waleed Ammar" timestamp="29:37">
 
 All right. Thank you very much for the discussion. I hope more people will be as careful as you did
 in this paper evaluating the different variations of their models. Thank you.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Gabor Melis" timestamp="29:50">
+<turn speaker="Gabor Melis" timestamp="29:50">
 
 I wish them all as much gray hair as I get.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="29:55">
+<turn speaker="Matt Gardner" timestamp="29:55">
 
 Thanks.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Gabor Melis" timestamp="29:56">
+<turn speaker="Gabor Melis" timestamp="29:56">
 
 Thank you very much.
 
-</Turn>
+</turn>

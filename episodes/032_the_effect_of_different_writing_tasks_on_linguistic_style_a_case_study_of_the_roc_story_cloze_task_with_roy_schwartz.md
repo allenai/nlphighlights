@@ -8,23 +8,23 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting recent work in
 natural language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is Matt Gardner Waleed Ammar. We are research scientists at the Allen Institute for Artificial
 Intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:12">
+<turn speaker="Matt Gardner" timestamp="00:12">
 
 All right, so today we have as our guest on our podcast, Roy Schwartz, who is a postdoc at the
 University of Washington and AI-2. He's working with Noah Smith and others at UW and he's on the
@@ -32,24 +32,24 @@ Aristo team at AI-2. And he's going to be talking to us today about some work th
 UW collaborators called the The Effect of Different Writing Tasks on Linguistic Style: A Case Study
 of the ROC Story Cloze Task . So thanks for joining us today, Roy.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Roy Schwartz" timestamp="00:39">
+<turn speaker="Roy Schwartz" timestamp="00:39">
 
 Thank you so much. I'm really excited to be here.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:42">
+<turn speaker="Matt Gardner" timestamp="00:42">
 
 So why do you want to give us an elevator pitch of this paper?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Roy Schwartz" timestamp="00:45">
+<turn speaker="Roy Schwartz" timestamp="00:45">
 
 Yeah, sure. This is the paper that did they did when working with UW with a few collaborators and
 Maarten Sap, Ioannis Konstas, Li Zilles, Yejin Choi, and Noah Smith. And I have to say the one line
@@ -64,10 +64,10 @@ you write something that doesn't make sense are supposedly I mean, you would exp
 content in both of them, obviously, but you wouldn't necessarily expect them to have different
 style.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Roy Schwartz" timestamp="01:50">
+<turn speaker="Roy Schwartz" timestamp="01:50">
 
 But what we found in this paper is that actually when you give people a such writing tasks that
 their right sentences tend to be longer. They tend to contain more adjectives more conjunctions.
@@ -78,10 +78,10 @@ affects the way people are writing. I think this is a starting project to run mo
 answer these question in terms of how we think and how we express ourselves, but also from a NLP
 perspective there at least to an interesting points to talk about.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Roy Schwartz" timestamp="02:37">
+<turn speaker="Roy Schwartz" timestamp="02:37">
 
 The first is basically how do we design datasets and how do we make sure that the datasets to design
 do not introduce biases that makes our system not learn what we hope them to learn. And another
@@ -94,18 +94,18 @@ and there has been work by a Jessica Ficler and Yoav Goldberg recently has tried
 style sentence and there's a few people working on a similar task. So I think this could have great
 value to this work.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="03:42">
+<turn speaker="Waleed Ammar" timestamp="03:42">
 
 Interesting. So you measured the effect of these stylistic differences in the ROCstory cloze tasks.
 Can you tell us a little more about this particular task?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Roy Schwartz" timestamp="03:51">
+<turn speaker="Roy Schwartz" timestamp="03:51">
 
 Yeah, definitely. The ROCstory cloze task was in reviews last year. The main author is Nasrin
 Mostafazadeh from the University of Rochester and she had a few collaborators and ideas of these
@@ -124,10 +124,10 @@ on the task. And then if you compare it to other datasets, that were released ro
 like a SQuAD or LAMBADA or CNN daily mail. The results improved quite drastically in a similar
 amount of time.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Roy Schwartz" timestamp="05:23">
+<turn speaker="Roy Schwartz" timestamp="05:23">
 
 So this is really indicated it's quite a hard task. And however when we looked deeply into the way
 this dataset was constructed we noticed a few interesting trends. The way the authors build the
@@ -139,10 +139,10 @@ that makes sense. Given the preface and something it does make sense, imposes so
 and we expected this would have some effects on the writing of how this is of the style that
 resulted in these two sentences.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Roy Schwartz" timestamp="06:22">
+<turn speaker="Roy Schwartz" timestamp="06:22">
 
 So we ran and we actually didn't use very sophisticated tools. We use it a logistic regression
 classifier with stylistic features, which are basically a sentence length and the character N grams
@@ -157,20 +157,20 @@ this problem with dataset, I think that the author did an amazing job in trying 
 datasets. But unfortunately one small thing that was which wasn't necessarily which was hard to
 think in advance would have such a large impact, but it turned out to be quite significant.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="07:40">
+<turn speaker="Matt Gardner" timestamp="07:40">
 
 So what made you start looking at this dataset in the first place? Did you really come at this and
 say, Oh look, I think there's some linguistic style insight that I could get from examining this
 dataset. Or were you trying to like improve the state-of-the-art on this data set first and then
 arrived at these style concerns what was your process?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Roy Schwartz" timestamp="07:59">
+<turn speaker="Roy Schwartz" timestamp="07:59">
 
 That's a great question. I mean I've worked in a group in UW with several students and they've been
 working on this datasets ever since it was released. I joined relatively late and they made some
@@ -182,10 +182,10 @@ dataset, it didn't feel like one of these days sit where you can just do a seque
 with a few hacks and get to basically solve the problem, like other datasets that are around
 recently.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Roy Schwartz" timestamp="08:46">
+<turn speaker="Roy Schwartz" timestamp="08:46">
 
 And so we had like a more interesting and more challenging tasks. But when I looked at the
 instruction, something felt weird and I said, I mean, there's gotta be some bias that is incurred by
@@ -202,10 +202,10 @@ sense, it's kind of a more realistic case where you have, I mean people don't us
 thinking of every sentence. They say they just. I mean everyday conversation. You just speed up text
 or words. And so I think this is an interesting observation.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="10:12">
+<turn speaker="Matt Gardner" timestamp="10:12">
 
 Yeah. I guess it seems like with more people from the deep learning and machine learning crowds
 coming to look at NLP problems, there's a lot of talk about how people just have hammers and bang on
@@ -214,18 +214,18 @@ that you're working with. Someone with an ML hammer would not have come to these
 And it's only because you thought about this from like a psycho linguistic style or kind of
 perspective that you came up with this particular model that turned out to work really well.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="10:49">
+<turn speaker="Waleed Ammar" timestamp="10:49">
 
 Are there like interpretable differences that you can tell us like conclusions of the stylistic
 differences?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Roy Schwartz" timestamp="10:56">
+<turn speaker="Roy Schwartz" timestamp="10:56">
 
 Yeah, definitely. I mean, when we look at, we started this paper by doing kind of a surface analysis
 when we just counted the number of frequent part of speech tag with frequent words in both cases, in
@@ -235,18 +235,18 @@ found that a, I'm not sure if positive and negative is the right term. I think w
 incoherent or right or wrong. I mean, it's a bit confusing even for me. What's the right term to
 use?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="11:36">
+<turn speaker="Waleed Ammar" timestamp="11:36">
 
 Well, I'm also surprised as you said that negative ones. The Turkers use the word hate a lot. So if
 they're asking to write an incoherent completion doesn't seem like hate is a very obvious choice.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Roy Schwartz" timestamp="11:53">
+<turn speaker="Roy Schwartz" timestamp="11:53">
 
 Yeah, I mean, you can look at the first example I think we have hate here. No, it's not here. I mean
 basically when the, it's hard to do this task and it's definitely hard to control for the task would
@@ -262,19 +262,19 @@ something positive, you write, you describe it more, you add more details while 
 to be more concise when you're generating the negative text. Another example was a writing with the
 exclamation mark kind of enthusiastic, which was more more in the coherent version.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="13:15">
+<turn speaker="Matt Gardner" timestamp="13:15">
 
 And you also mentioned or cited some work in the paper about how your findings correlate at least a
 little bit with deceptive text, like things that, things that people have found when studying
 deceptive text and deceptive speech.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Roy Schwartz" timestamp="13:30">
+<turn speaker="Roy Schwartz" timestamp="13:30">
 
 Yup. This is a, I mean this is [does] not the work for measuring style cases obviously, I mean the
 features we used in our findings correlate with the feature from previous works. And specifically I
@@ -284,17 +284,17 @@ speech distribution, using more pronouns in the coherent text. And also in right
 deceptive case versus using more proper nouns in the incoherent or wrong or deceptive text. I'm
 hoping it's making sense.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="14:16">
+<turn speaker="Matt Gardner" timestamp="14:16">
 
 It's really interesting. You mentioned earlier a language model. Can you tell me about this?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Roy Schwartz" timestamp="14:23">
+<turn speaker="Roy Schwartz" timestamp="14:23">
 
 Yeah, so I mean our first and then I think most interesting finding was that the really using just
 style features, while ignoring completely the the story prefix got us 72%. And while we were working
@@ -305,10 +305,10 @@ approach with the other approaches that I talked about earlier to people in UW h
 and before I came and there the idea is very different, but I think it's also interesting, on its
 own.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Roy Schwartz" timestamp="15:09">
+<turn speaker="Roy Schwartz" timestamp="15:09">
 
 The system for solving this task was based on a language model, which was trained on I forgot to
 mention it in the, there the ROCStory Corpus also had an additional corpus, which was much larger of
@@ -320,10 +320,10 @@ and seeing which one has a lower perplexity or a lower conditional probability c
 probability in the story prefix And when we did that, we got relatively low results, maybe 50
 exclusive without our staff features.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Roy Schwartz" timestamp="16:09">
+<turn speaker="Roy Schwartz" timestamp="16:09">
 
 We got maybe 54% or so, if I'm not mistaken. But then when we looked more deeply into it and we
 noticed that some of the reasons that's some of the sentence endings tended to have higher
@@ -335,17 +335,17 @@ a probability of ending this jumped from about 54 to 67%. These had a really sig
 our results. And when we combine these as a feature in our linguistic progression, we got three more
 percent improvement, which got us to state-of-the-art and to first place in that shared task.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="17:15">
+<turn speaker="Waleed Ammar" timestamp="17:15">
 
 So these are the current best results for this shared task?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="New Speaker" timestamp="17:20">
+<turn speaker="New Speaker" timestamp="17:20">
 
 I think in parallel to our work, there've been a few groups that seem to reach a similar conclusion.
 One group in TCI. Yeah. Kai-Wei Chang was the first author and they reached roughly the same result
@@ -354,18 +354,18 @@ or less. And I think recently a group in Dan Roth's group University of Illinois
 Champaign, now in UPenn I think they even published results a bit better, maybe 77%, maybe 2%
 better. But they also were both works, kind of relied on the same findings that we did.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="18:10">
+<turn speaker="Waleed Ammar" timestamp="18:10">
 
 Interesting. So if you were to fix this dataset or if you were to design a new dataset and you want
 to control for this stylistic difference, how would you do it?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Roy Schwartz" timestamp="18:22">
+<turn speaker="Roy Schwartz" timestamp="18:22">
 
 That's a great question. I mean, I think it's always a problem. And once you want to solve one
 problem, you're probably risking introducing new problems. But we did find one example that was
@@ -386,10 +386,10 @@ working here at AI-2 in a research team where we try to solve the science questi
 main data sets is a multi-choice science datasets where you have a question and four different
 answers.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Roy Schwartz" timestamp="20:30">
+<turn speaker="Roy Schwartz" timestamp="20:30">
 
 And I was wondering whether you'd find different styles between the different answers and there
 maybe not surprisingly, I found that I didn't get any, anything even remotely above a random
@@ -400,10 +400,10 @@ a spending substantial amount of time to make sure that these questions cannot b
 rules. It doesn't, it's not surprising that you don't see these effects. So I mean, there are ways
 to overcome this. That's obviously it's not trivial. I mean every day comes with it's own problem.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="21:19">
+<turn speaker="Matt Gardner" timestamp="21:19">
 
 Yeah. The reason that I liked this paper a lot is it fits into a line of work around really
 analyzing datasets and figuring out what it is that datasets tests and what they're good for. So
@@ -421,10 +421,10 @@ really useful. I guess I like to batch or I have batched on the BAbi dataset. It
 things, right? It's just not doing everything that it claims to. Right. And we need to be careful
 about what exactly the datasets that we're using are testing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Roy Schwartz" timestamp="22:57">
+<turn speaker="Roy Schwartz" timestamp="22:57">
 
 Exactly. I mean, you want to make sure that your model is doing some sort of, I mean, you wanna kind
 of understand what your model is doing and not think that it's doing one thing when it's actually
@@ -436,10 +436,10 @@ results. But I mean, yeah, the same line of papers. It's hard to build datasets.
 personally I did this work and I think it's important to, first of all know the limitations of these
 works.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Roy Schwartz" timestamp="23:43">
+<turn speaker="Roy Schwartz" timestamp="23:43">
 
 I mean, I think I am still planning at some point to continue working on this ROCStory corpus. I
 think it's a great dataset, just the baseline is about roughly 72 or 75 and not 50%. I mean, this is
@@ -449,25 +449,25 @@ to know that then when you're designing your next datasets to know the things to
 And yeah, these datasets are obviously improve the state of our technologies quite, quite a bit in
 the last few years.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="24:19">
+<turn speaker="Matt Gardner" timestamp="24:19">
 
 Great. Thanks for coming to talk to us, Roy.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Roy Schwartz" timestamp="24:21">
+<turn speaker="Roy Schwartz" timestamp="24:21">
 
 Yeah. Thank you.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="24:22">
+<turn speaker="Waleed Ammar" timestamp="24:22">
 
 Thank you!
 
-</Turn>
+</turn>

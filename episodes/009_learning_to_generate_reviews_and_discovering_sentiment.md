@@ -8,23 +8,23 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting recent work in
 natural language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is Matt Gardner and Waleed Ammar. We are research scientists at the Allen Institute for
 Artificial Intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:13">
+<turn speaker="Matt Gardner" timestamp="00:13">
 
 All right. Today's paper is Learning to Generate Reviews and Discovering Sentiment by Alec Radford,
 Rafal Jozefowicz, Ilya Sutskever at open AI. This paper fits into a line of work on representation
@@ -37,10 +37,10 @@ don't. And so if you want to build a language model that can predict the next wo
 reasonable to think that the language model would have to encode something about the sentiment of
 the review in order to predict what's going to come next.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="01:10">
+<turn speaker="Matt Gardner" timestamp="01:10">
 
 If it should be predicting positive words or negative words or neutral words that are coming. And so
 they train a character level language model for about a month and get a set of about 4,000 features
@@ -54,18 +54,18 @@ can get comparable performance to previous state-of-the-art methods with just a 
 training examples, like dozens of training examples instead of thousands or tens of thousands, which
 is pretty impressive.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="02:22">
+<turn speaker="Waleed Ammar" timestamp="02:22">
 
 So that's a very general idea and it seems we can apply in many other tasks. Are there any specifics
 about the language model or the way in which you use the features extract are important?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="02:37">
+<turn speaker="Matt Gardner" timestamp="02:37">
 
 They, do note that this is pretty domain dependent and that they tried to apply this same method,
 like the same language model to other datasets like movie reviews, I think, and this SICK semantic
@@ -75,17 +75,17 @@ And so if you get words that are out of domain that you never really saw before 
 reviews, the model just doesn't know what to do with the sentiment. And if you would learn the
 language model on, in domain data for those tasks, maybe you'd have done a whole lot better.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="03:20">
+<turn speaker="Waleed Ammar" timestamp="03:20">
 
 So how do they make a prediction for predicting the sentiment analysis?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="03:26">
+<turn speaker="Matt Gardner" timestamp="03:26">
 
 Honestly this wasn't totally clear to me from the paper, I'm guessing. So they say they learn a
 classifier on top of the hidden state of their language model. And the question is, do they take,
@@ -99,19 +99,19 @@ sentiment at the end of the document. And so that probably means they're taking 
 states of whatever sequence they're trying to classify and then learning a simple classifier on top
 of that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="04:26">
+<turn speaker="Waleed Ammar" timestamp="04:26">
 
 Yeah, the paper also have very nice figures that show that show the sentiment at different words in
 the sentence. So this means they probably also, at least for qualitative evaluation, they also do
 this at every position in the sentence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="04:42">
+<turn speaker="Matt Gardner" timestamp="04:42">
 
 Yeah, because they found a single unit in this hidden state that track sentiment very well you can
 do some really interesting visualizations where for each character you color code it by the
@@ -122,10 +122,10 @@ included in this film" and here at this point, it's very red, very negative sent
 expressed as you can tell "from a crappy script to a crappy story, to crappy acting amazing..." So
 the visualizations are pretty cool. You might want to take a look at that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="05:36">
+<turn speaker="Waleed Ammar" timestamp="05:36">
 
 So there are two main ideas I get from here. One we can use the language model in order to get very
 good features for a downstream tasks. And the other is that he can use character level information.
@@ -134,25 +134,25 @@ oftentimes it's also augmented with word level information. So we have both a ch
 embedding and a word embedding. I wonder if they would get competitive performance on the other
 datasets if they also include the word embedding features.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="06:16">
+<turn speaker="Matt Gardner" timestamp="06:16">
 
 So that you could more easily handle out of domain kinds of things. Is that what you're thinking?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="06:20">
+<turn speaker="Waleed Ammar" timestamp="06:20">
 
 Right. And like if you have a training set for from the same domain then you should be able to learn
 good representation for these words.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="06:28">
+<turn speaker="Matt Gardner" timestamp="06:28">
 
 Yeah, I think that that even gets at a deeper third aspect of what's interesting about this work in
 that how do you incorporate features learned by some external feature extractor, like a language
@@ -164,10 +164,10 @@ said at the beginning, fits into a line of work on unsupervised or that's kind o
 semi-supervised kinds of representations to extract features from natural language text. There's
 this Skip Thought vectors paper from a couple of years ago.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="07:30">
+<turn speaker="Matt Gardner" timestamp="07:30">
 
 That was probably one of the first to do this aside from a simple word embeddings where you take,
 you try to embed larger structures and get feature extraction feature representations from larger
@@ -177,10 +177,10 @@ haven't read it yet, but it's definitely in this line of work. But a lot of peop
 about how do we do representation learning on top of texts sequences and your ACL paper also fits
 into this line of work. Do you want to give us a two second pitch on what this paper does?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="08:09">
+<turn speaker="Waleed Ammar" timestamp="08:09">
 
 Sure. So the main idea in the ACL paper that Matt Peters, I, and Chandra and Russell wrote was to
 really focusing on the first part this paper is talking about which is doing language model
@@ -196,28 +196,28 @@ can use it for downstream tasks in such a prediction problems. So we do this for
 recognition and in Chunking and it shows that we can outperform a very strong baseline and achieve a
 new state-of-the-art in both data sets by adding this signal.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="09:38">
+<turn speaker="Matt Gardner" timestamp="09:38">
 
 And the key difference between your work and this work, it seems to me is that you have richer
 models on top of the language model input so that you can do kind of like a feature adaptation kind
 of thing. The language model gives you some features and then you have an interesting complex model
 that can learn how to use those features given your supervised signal.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="09:59">
+<turn speaker="Waleed Ammar" timestamp="09:59">
 
 Right. I think it is important to start with a strong model and not completely rely on the language
 model to give us all the features that we need.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="10:10">
+<turn speaker="Matt Gardner" timestamp="10:10">
 
 Yeah, I think that's where you run into these out of domain issues more strongly because your
 language model is trained on a particular data set, on a particular objective. And so it's not
@@ -225,19 +225,19 @@ reasonable to assume that it will learn everything that it needs to for whatever
 it probably also learns good representations of language that will be useful if you can use them in
 some other model.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="10:33">
+<turn speaker="Waleed Ammar" timestamp="10:33">
 
 Yeah, exactly. And especially if you're treating data doesn't act as the same domain as the test
 data or what one you use the model for. I imagine the language model would be very, very useful
 there.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="10:43">
+<turn speaker="Matt Gardner" timestamp="10:43">
 
 Yeah. One other point about this paper their language model is not deep. It's a single layer of
 multiplicative LSTM. I wondered how much better you could do if you have some kind of deep model
@@ -249,28 +249,28 @@ modeling stuff is about as close as we can get it seems, except the models that 
 really shallow and I don't know, I wonder why, but I guess this in this paper they say that their
 language model took a month to train. So I guess it's not too surprising that they didn't go deeper.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="11:36">
+<turn speaker="Waleed Ammar" timestamp="11:36">
 
 Yeah, exactly. I was going to say if you have the completion and the ability to go deeper, I think
 that training language pool is key in that sense.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="11:47">
+<turn speaker="Matt Gardner" timestamp="11:47">
 
 Interesting. Okay. I think that's it for this paper.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="11:51">
+<turn speaker="Waleed Ammar" timestamp="11:51">
 
 Right. Thanks for discussing this paper, Matt. Next time we are going to discuss a paper titled: A
 Syntactic Neural Model for General-Purpose Code Generation written by Pengcheng Yin and Graham
 Neubig.
 
-</Turn>
+</turn>

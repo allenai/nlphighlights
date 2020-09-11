@@ -8,47 +8,47 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Welcome to the NLP highlights podcast where we talk about interesting work in natural language
 processing. The hosts are Matt Gardner Waleed Ammar and Pradeep Dasigi.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:08">
+<turn speaker="Matt Gardner" timestamp="00:08">
 
 All right. Today our guests are Verena Rieser from a Heriot-Watt University and Ondřej Dušek from
 Charles University in Prague. Verena and Ondřej, it's good to have you. Thanks for joining us.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Verena Rieser" timestamp="00:19">
+<turn speaker="Verena Rieser" timestamp="00:19">
 
 Well thanks for inviting us.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:21">
+<turn speaker="Matt Gardner" timestamp="00:21">
 
 Yeah. Hi. Thanks for inviting us.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:23">
+<turn speaker="Matt Gardner" timestamp="00:23">
 
 Today. We wanted to talk about I guess what, what I think of as data to text generation, so like
 natural language generation when you have some kind of structured stuff that you want to generate
 from and I think Verena and Ondřej, you have more insight into this than I do. And so I'm going to
 let you describe more clearly what exactly we're talking about here.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Verena Rieser" timestamp="00:42">
+<turn speaker="Verena Rieser" timestamp="00:42">
 
 Yeah, I think natural language generation is sort of a popular term nowadays and to define it, it's
 a bit of a moving target because it changed its meaning over the past couple of years. I think
@@ -57,10 +57,10 @@ condition or constraint. Language model. So ranging from image captioning to sum
 translation or even style transfer. And what we meant when we set up our E2E Natural Language
 challenge was the task of generating from meaning representations.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="01:20">
+<turn speaker="Matt Gardner" timestamp="01:20">
 
 Right? So it's constrained in a particular way, not just given I guess given a structured input.
 Right. So you gave examples of generating from an image, which is like, I have some contextual
@@ -72,10 +72,10 @@ representation, AMR, which is a particular kind of thing. I think you're thinkin
 little bit simpler. Do you want to tell us what kind of meaning representation you're talking about
 here?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Verena Rieser" timestamp="02:01">
+<turn speaker="Verena Rieser" timestamp="02:01">
 
 Yeah, sure. So it's a textual meaning representation. So here it's very loosely structured. So we
 are talking about dialogue acts which are usually defined as some sort of intent with arguments or
@@ -89,10 +89,10 @@ that. Whereas now when people say data to text generation, they include all sort
 meaning representation such as; table data, knowledge graphs, AMRs or these type of under specify
 dialogue acts, which we were using.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="03:19">
+<turn speaker="Matt Gardner" timestamp="03:19">
 
 So I feel like it's probably familiar to a bunch of people why you might want to use some particular
 kinds of contexts in generation, like if I have an image, I might want to describe what's in the
@@ -101,10 +101,10 @@ foreign language sentence, there's some pretty clear use cases for why am I want
 that. So what in what circumstances might someone wants to actually use a contextual generation
 system where my context is this kind of semi-structured meaning representation.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Verena Rieser" timestamp="03:53">
+<turn speaker="Verena Rieser" timestamp="03:53">
 
 So in our case, the motivation was really within the context of spoken dialogue systems, which
 traditionally come in the modular architectures. So where you've got the natural language
@@ -114,10 +114,10 @@ is on that abstract level of a dialogue act. So then the NLG component is part o
 traditionally takes the style act representation and translates it into natural language. So that
 was our motivation for using that specific type of meaning representation.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="04:39">
+<turn speaker="Matt Gardner" timestamp="04:39">
 
 Yeah, and I guess specifically if you think of Imagine, Next Generation, Siri or Alexa, or Google
 Assistant that does a better job actually responding to you having a conversation that's not really
@@ -125,43 +125,43 @@ very conversational at this point, but I guess your challenge that we will talk 
 here in a little bit. You could say it's like trying to drive us toward a future where we have more
 conversational assistance essentially. Am I understanding this right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ondřej Dušek" timestamp="05:03">
+<turn speaker="Ondřej Dušek" timestamp="05:03">
 
 Yeah, yeah. But even the current version basically you know, has an NLG component there that starts
 with some kind of meaning representation and then transforms it to text, which is then read aloud by
 a text to speech component. So it's basically the same case here.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="05:22">
+<turn speaker="Matt Gardner" timestamp="05:22">
 
 Yeah. Okay. Yeah, totally fair. I guess I was, I have a Google assistant, a bunch of Google home
 devices in my house and they, my use of them is not very conversational at this point, but
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ondřej Dušek" timestamp="05:34">
+<turn speaker="Ondřej Dušek" timestamp="05:34">
 
 Yeah. Yeah. But it still involves some kind of natural language generation even though I suppose in
 case of Google assistant nowadays, it's probably just some, you know, handwritten templates filled
 with some values and you know, we're trying to use more machine learning here.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="05:54">
+<turn speaker="Matt Gardner" timestamp="05:54">
 
 Yep, Okay, great.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Verena Rieser" timestamp="05:55">
+<turn speaker="Verena Rieser" timestamp="05:55">
 
 Yeah. I think also for dialogue systems, you currently have these two different architectures,
 right? So one is based on this notion of dialogue act and it's all modularized. So you basically
@@ -181,46 +181,46 @@ know, tell me more about that or I'm sorry. Or on the other hand, they can also 
 inappropriate answers which, you know, fit the context, but you don't really want to have in a
 commercial system.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="07:49">
+<turn speaker="Matt Gardner" timestamp="07:49">
 
 Right? And in chitchat kinds of applications, you could think maybe, maybe this kind of end-to-end
 thing might work. But if you imagine any kind of system that interacts with a database or any kind
 of external software system at all like say, tell me about the restaurants that are nearby, or like
 find me something and then the dialogue manager issues a query and then gets some result back.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Verena Rieser" timestamp="08:15">
+<turn speaker="Verena Rieser" timestamp="08:15">
 
 So it's a way of knowledge grounding basically, these dialogue acts help the system to, you know,
 ground in a knowledge base which has some sort of meaning representation to queries.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="08:26">
+<turn speaker="Matt Gardner" timestamp="08:26">
 
 Yeah. Yeah. And if you assume that the dialogue system is interacting with anything else, then
 you're going to be in a situation where there is some kind of structured or where you have some
 structured context to generate language from. Right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ondřej Dušek" timestamp="08:39">
+<turn speaker="Ondřej Dušek" timestamp="08:39">
 
 Yeah. It's really hard to do it otherwise. Basically. I mean there are systems trying to, you know,
 have a neural net that has like an attention mechanism over all possible entries in a database. It's
 mostly just like toy examples so far it doesn't, doesn't work that well.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="09:01">
+<turn speaker="Matt Gardner" timestamp="09:01">
 
 Yeah. I do a bunch of work in this kind of space where you're interacting with a database or
 something. We typically don't close the loop and generate something after that. But yeah, like an
@@ -234,27 +234,27 @@ summaries or other kinds of like what happened in the stock market today. I don'
 could imagine some system that tries to generate a report for human consumption based on some kind
 of structured data, right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ondřej Dušek" timestamp="09:50">
+<turn speaker="Ondřej Dušek" timestamp="09:50">
 
 Yeah. It's basically whenever you have some kind of machine process data and you want to present it
 to people in a natural way. One way of doing that is using natural language generation.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="10:03">
+<turn speaker="Matt Gardner" timestamp="10:03">
 
 Okay, great. So I think we've got a decent handle on like what problem we're talking about and why
 people might care about it. So what makes this hard? Why, why is it more challenging to generate
 from structured contexts than other kinds of contexts?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ondřej Dušek" timestamp="10:19">
+<turn speaker="Ondřej Dušek" timestamp="10:19">
 
 Well, like the first part about this being hard is actually getting the structured data at least for
 example, for a task like we've done with the E2E and NLG challenge where we had a lot of restaurant
@@ -266,10 +266,10 @@ yourself and you wouldn't be getting enough variety. And then if you use a metho
 crowdsourcing, then then you need to really check what crowdsourcing workers are entering. And we
 basically always end up with a certain amount of of noise.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ondřej Dušek" timestamp="11:19">
+<turn speaker="Ondřej Dušek" timestamp="11:19">
 
 If you want to scrape data from the web, it might not be exactly what you want, you know, it might
 be slightly out of domain and also any external source can be potentially dangerous. I mean there,
@@ -284,10 +284,10 @@ some more complex mechanisms to work with that and also if you have more structu
 you. It can get you better results, but you still, you need a more complex model and it becomes more
 expensive to collect the data or to build up the training data set.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="12:46">
+<turn speaker="Matt Gardner" timestamp="12:46">
 
 Great. Yeah. Just just to paraphrase, to be sure I understood, it sounds like you're saying there
 are two problems here. I guess the first one I hadn't even thought about, which is really
@@ -304,10 +304,10 @@ What about like faithfulness? So, there are even problems of like; I'm supposed 
 something specific. How do I make sure that the model is generating what it's supposed to? So this
 is I guess partly a modeling problem and also partly an evaluation problem.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Verena Rieser" timestamp="13:57">
+<turn speaker="Verena Rieser" timestamp="13:57">
 
 Exactly. So that was actually one of the main results and findings of the E2E generation challenge
 was that the models we've been looking at pretty much all had a problem with these so called
@@ -324,10 +324,10 @@ pattern matching to evaluate the semantic correctness. But this is something whi
 doesn't cover that well. So traditional evaluation metrics are like word overlap based like BLEU and
 follow on similar metrics, which won't tell you whether actually your model is faithful or not.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="15:36">
+<turn speaker="Matt Gardner" timestamp="15:36">
 
 Yeah, I guess now that I think about this a little bit more, this isn't a different problem from
 what you face in other generation problems. Like if my context is an image or a foreign language
@@ -339,18 +339,18 @@ It's not really clear to me without having thought about this a lot more. How yo
 an image and so maybe you actually have it a little bit easier. I don't know what, what do you, what
 do you think about this?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Verena Rieser" timestamp="16:17">
+<turn speaker="Verena Rieser" timestamp="16:17">
 
 I agree that you know, string matching obviously makes it easy and we're dealing both the MR is
 usually, you know, specified in terms of strings and the output is specified in terms of strings.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ondřej Dušek" timestamp="16:29">
+<turn speaker="Ondřej Dušek" timestamp="16:29">
 
 I suppose this also comes with the fact that what we're dealing with usually is generating stuff for
 some kind of limited domain. I mean here we had the restaurant recommendations or you can have like,
@@ -362,10 +362,10 @@ And I mean even even in our case, it's not perfect. You, you're not able to capt
 patterns of expressing that a restaurant is cheap, for example, even if you try, but it's much
 easier than, than for like a general domain.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="17:24">
+<turn speaker="Matt Gardner" timestamp="17:24">
 
 And I guess with a structured representation, it's a pretty clear limited scope for what you're
 supposed to be generating. Whereas like image captioning for instance, there's so many bits that
@@ -376,10 +376,10 @@ don't, I guess like say I'm trying to summarize what the stock market did today 
 summarize a basketball game. Maybe I'd have a similar problem. But for your dialogue generation,
 it's probably pretty well scoped I think.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Verena Rieser" timestamp="18:02">
+<turn speaker="Verena Rieser" timestamp="18:02">
 
 Yeah. I think there's also a difference here whether we talk about content only surface realization.
 So in our case we assume that we don't do content selection rates. So we said you always should
@@ -388,10 +388,10 @@ to do that you have to first select what you want to talk about. And then this a
 matching obviously becomes much harder because you know, it's actually defined by the tasks that you
 maybe should not be talking about everything specified in the MR.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="18:33">
+<turn speaker="Matt Gardner" timestamp="18:33">
 
 Right. Great. This is really good. So just to summarize, the problems that we've talked about are
 getting data modeling stuff and some similar problems to other generation tasks about like how do
@@ -400,10 +400,10 @@ we can move on to what people have actually done. We've been kind of skirting ar
 natural language generation challenge that you both set up. Do you want to tell us about what
 exactly that is and what you did?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Verena Rieser" timestamp="19:05">
+<turn speaker="Verena Rieser" timestamp="19:05">
 
 Yeah, sure. So, this was a task my self, Ondřej, and our colleague Jekaterina Novikova set up in
 2017 so a couple of years ago now. And the main motivation for this challenge was really that at the
@@ -415,17 +415,17 @@ know can this actually scale to something which sounds a bit more natural and wh
 right? So not just short utterances, but more complicated, lexically more rich, utterances, which
 have more complicated discourse structure and so on.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ondřej Dušek" timestamp="20:09">
+<turn speaker="Ondřej Dušek" timestamp="20:09">
 
 They're more diverse as well.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Verena Rieser" timestamp="20:11">
+<turn speaker="Verena Rieser" timestamp="20:11">
 
 Yes, exactly. So moving away from these very small limited data sets. And in order to do that, we
 collected a new data set using crowdsourcing. And in order to get that type of diverse data, we
@@ -435,43 +435,43 @@ in the restaurant domain. So this is a domain which, you know, people working on
 systems use a lot. Cause it's small and well defined. And in our case we were lucky because we are
 able to produce pictures telling the user, this is the task. So
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="20:55">
+<turn speaker="Matt Gardner" timestamp="20:55">
 
 Can you give some examples of what, like when you say restaurant domain, I can imagine a few
 different things like booking or ordering or a few different things. So what exactly do you have
 some examples of what you were doing?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Verena Rieser" timestamp="21:05">
+<turn speaker="Verena Rieser" timestamp="21:05">
 
 So in our case it was mainly informing the user of the type of restaurant. For example restaurant
 name, restaurant type, cuisine, price range. And then the system would generate something like China
 Red is a cheap Chinese restaurant in the center of town, close to the river, something like that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="21:27">
+<turn speaker="Matt Gardner" timestamp="21:27">
 
 Okay. And how does, how do the pictures fit in here? Like you show a picture of a restaurant or
 something?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Verena Rieser" timestamp="21:34">
+<turn speaker="Verena Rieser" timestamp="21:34">
 
 Yeah, so we would show a picture of where it's located. Some sort of picture of the type of cuisine.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ondřej Dušek" timestamp="21:41">
+<turn speaker="Ondřej Dušek" timestamp="21:41">
 
 Kind of a schematic. You know, if you want to say that restaurant is cheap, you show like a, I think
 there was a pound sign and you had like three possible and one of them was yellow and the other were
@@ -480,10 +480,10 @@ know, a Japanese cuisine, you show a picture of a sushi or some kind of stuff. I
 that children are not welcome in this restaurant, you show a picture of, of children and then cross
 it out.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="22:19">
+<turn speaker="Matt Gardner" timestamp="22:19">
 
 Interesting. This is really good. Like I do a bunch of work in reading comprehension these days and
 when people create reading comprehension datasets, a lot of the time we, you get questions that have
@@ -494,10 +494,10 @@ going to get people that are very, very influenced by the particular words that 
 meaning representation. And this is, this is a really interesting, good way of trying to get around
 that. So, so yes, I get it now. This is, this is really good.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Verena Rieser" timestamp="22:58">
+<turn speaker="Verena Rieser" timestamp="22:58">
 
 Yeah, exactly. So we wanted to avoid that. People are basically just being primed by the meaning
 representation and basically just reading out what the meaning representation says. So yeah. So we
@@ -507,83 +507,83 @@ a cheap restaurant or moderately priced or you know, families are welcome or you
 children. So different ways of basically referring to this underlying meaning representations. And
 then we released this dataset, I think that was about early 2017
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="23:43">
+<turn speaker="Matt Gardner" timestamp="23:43">
 
 How big, how was it, did you say 50,000 earlier in the conversation? Is that right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Verena Rieser" timestamp="23:48">
+<turn speaker="Verena Rieser" timestamp="23:48">
 
 Yeah, 50 K.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="23:49">
+<turn speaker="Matt Gardner" timestamp="23:49">
 
 Okay.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Verena Rieser" timestamp="23:50">
+<turn speaker="Verena Rieser" timestamp="23:50">
 
 And for each meaning representation, we had I think it was between one and five linguistic
 realization.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ondřej Dušek" timestamp="24:01">
+<turn speaker="Ondřej Dušek" timestamp="24:01">
 
 I think it was even more, but I mean it was like five or 6,000 different meaning representations.
 And that was coupled with like 50,000 natural language utterances. So,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="24:14">
+<turn speaker="Matt Gardner" timestamp="24:14">
 
 So on average you could say like 10 ish reference,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ondřej Dušek" timestamp="24:18">
+<turn speaker="Ondřej Dušek" timestamp="24:18">
 
 I think it was eight on average as far as I remember.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="24:21">
+<turn speaker="Matt Gardner" timestamp="24:21">
 
 Okay. But then you could evaluate, say like, I have one meaning representation and I have like eight
 references that I could compute BLEU against or whatever. So this is what we're talking about.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ondřej Dušek" timestamp="24:30">
+<turn speaker="Ondřej Dušek" timestamp="24:30">
 
 Yeah, yeah, exactly. Exactly.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="24:32">
+<turn speaker="Matt Gardner" timestamp="24:32">
 
 So you released this in early 2017.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Verena Rieser" timestamp="24:35">
+<turn speaker="Verena Rieser" timestamp="24:35">
 
 Yes. So we released this as a shared task and we got quite a lot of interest. So we had I think 16
 people, different organizations participating and over 60 systems submissions. So then we asked
@@ -596,17 +596,17 @@ systems, so people which actually harvested these templates in a data driven way
 some grammar based systems and then also some other machine learning based systems using things like
 imitation learning or RNNs or I think there was one using just a combination of linear classifiers.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="25:52">
+<turn speaker="Matt Gardner" timestamp="25:52">
 
 All right. It sounds really interesting. That's really cool.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Verena Rieser" timestamp="25:55">
+<turn speaker="Verena Rieser" timestamp="25:55">
 
 So I think what was a real main advantage here that the manual systems are actually highly
 competitive. So people really put in a lot of effort. Whereas usually when you've got your manual
@@ -615,18 +615,18 @@ system can beat that manual baseline whereas here we had people clearly building
 template-based system and indeed in the end we were able to show that these template-based systems
 for this very small domain actually do really well compared to the end-to-end neural approaches.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="26:32">
+<turn speaker="Matt Gardner" timestamp="26:32">
 
 So you had a shared task and someone won, I assume. Like, what was the method that actually won, was
 it one of these template based ones? Is that what you're saying?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ondřej Dušek" timestamp="26:42">
+<turn speaker="Ondřej Dušek" timestamp="26:42">
 
 Actually not the winner was like an ensemble of three different seq2seq models trained in quite a
 complex way and it used like this beam re-ranking so you know, they generated multiple outputs and
@@ -640,10 +640,10 @@ template mining from data actually carried over some noise from the data. So the
 accurate as well. But they did relatively well, compared to like much more complex machine learning
 based models.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="28:06">
+<turn speaker="Matt Gardner" timestamp="28:06">
 
 Yeah. This is interesting. It brings up a bunch of issues even just with evaluation. Right. Cause
 you said in there that the template system was repetitive, which I guess implies that the seq2seq
@@ -651,10 +651,10 @@ ensemble was not so repetitive. I'm having a hard time even thinking of a metric
 this cause you have to look at it across different test examples. It's not just a single one. Right.
 This is a huge can of worms. So like how do you, how do you evaluate this?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Verena Rieser" timestamp="28:31">
+<turn speaker="Verena Rieser" timestamp="28:31">
 
 So we, looked at a bunch of different metrics. So automatic metrics and also evaluation with humans.
 So in terms of automatic metrics, we obviously use the standard ones like BLEU and then a bunch of
@@ -662,106 +662,106 @@ other sort of word overlap based or similarity based metrics. And then also metr
 and metrics which aim to capture diversity. Like how many N grams for example, you have, how much
 lexical diversity do you have?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ondřej Dušek" timestamp="29:00">
+<turn speaker="Ondřej Dušek" timestamp="29:00">
 
 Or entropy, which also kind of gives you the measure of diversity,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="29:05">
+<turn speaker="Matt Gardner" timestamp="29:05">
 
 Entropy of the output distribution. Or of like the tokens that were produced?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ondřej Dušek" timestamp="29:11">
+<turn speaker="Ondřej Dušek" timestamp="29:11">
 
 Yes, yes. And entropy of the tokens.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="29:14">
+<turn speaker="Matt Gardner" timestamp="29:14">
 
 So, so given all of the tokens that were produced across the entire dataset, you make a distribution
 over the vocabulary given what was output and then you compute the entropy of that distribution.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ondřej Dušek" timestamp="29:24">
+<turn speaker="Ondřej Dušek" timestamp="29:24">
 
 Yes.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="29:25">
+<turn speaker="Matt Gardner" timestamp="29:25">
 
 Okay. Interesting. And you mentioned readability in there. Was that a manual judgment or do you have
 some automatic way to do that?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ondřej Dušek" timestamp="29:32">
+<turn speaker="Ondřej Dušek" timestamp="29:32">
 
 I think that this one was automatic. I think there is like a,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Verena Rieser" timestamp="29:35">
+<turn speaker="Verena Rieser" timestamp="29:35">
 
 Yeah, I'm just trying to remember how we computed that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="29:39">
+<turn speaker="Matt Gardner" timestamp="29:39">
 
 Yeah, there's some like level computations that you could do.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Verena Rieser" timestamp="29:43">
+<turn speaker="Verena Rieser" timestamp="29:43">
 
 Yeah. There were like on these levels of
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ondřej Dušek" timestamp="29:46">
+<turn speaker="Ondřej Dušek" timestamp="29:46">
 
 There was this level of syntactic complexity, right? Is the D-level or are that's how it was called,
 right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Verena Rieser" timestamp="29:53">
+<turn speaker="Verena Rieser" timestamp="29:53">
 
 Yes. That's what we did. So, yeah, we also measured syntactic complexity in terms of these D levels.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ondřej Dušek" timestamp="29:59">
+<turn speaker="Ondřej Dušek" timestamp="29:59">
 
 And that's basically, I think it's based on like first using syntactic parsing and then then there
 are some rules on top of that to determine like how complex that sentences. And did you have any
 human evaluations?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Verena Rieser" timestamp="30:13">
+<turn speaker="Verena Rieser" timestamp="30:13">
 
 Yes, indeed. So we had, first we had the automatic evaluations and then we had human evaluation.
 Again, like crowdsourced human evaluations, which you know are, can be noisy. And we try to
@@ -779,18 +779,18 @@ used a continuous scale. So that's a method called magnitude estimation. So you 
 reference for example is a hundred, what would you give this utterance. So for example, you could
 think that's twice as good
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ondřej Dušek" timestamp="31:48">
+<turn speaker="Ondřej Dušek" timestamp="31:48">
 
 And you saw like five of them at the same time. So you could even like distinguish among them and
 then, you know, give like relative scores against each other.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="31:59">
+<turn speaker="Matt Gardner" timestamp="31:59">
 
 I've seen some machine translation output that is just so awful that it would be hard to even give a
 relative ranking. I'm assuming these methods are at least close like that maybe this is a simpler
@@ -798,28 +798,28 @@ problem. And so you have, I'm assuming a lot here, I could be wrong, but maybe t
 close and so it's easier to actually have people not just throw up their hands and give up when they
 see totally awful translations in the first place. Right. Does this make sense?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Verena Rieser" timestamp="32:33">
+<turn speaker="Verena Rieser" timestamp="32:33">
 
 Yeah, I think that's a good point that actually most of our outputs were pretty close. So this
 relative ranking tried to capture the fact that like how relative to each other, there might even be
 some which are actually equally good. So I think that the range of output quality wasn't as diverse
 as you would maybe see in machine translation.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="32:58">
+<turn speaker="Matt Gardner" timestamp="32:58">
 
 Okay. Did it, did the people who were doing this also see the meaning representation or just the
 reference?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Verena Rieser" timestamp="33:04">
+<turn speaker="Verena Rieser" timestamp="33:04">
 
 Yeah, so it depends so when we evaluated informativeness or semantic correctness, we did show them
 the meaning representation. But when we asked them to evaluate fluency, we didn't show them the
@@ -829,68 +829,68 @@ found that if you ask it separately, they are less correlated because ideally yo
 are not highly correlated. So we can make sure we are actually assessing different dimensions here.
 Right,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="33:40">
+<turn speaker="Matt Gardner" timestamp="33:40">
 
 Right.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ondřej Dušek" timestamp="33:41">
+<turn speaker="Ondřej Dušek" timestamp="33:41">
 
 Yeah. And this was also interesting that, you know, one of the systems that actually won on fluency
 was one of the worst on over all quality where we also show the, you know, the meaning
 representation because that system produced very nice and fluent sentences, but they were not very
 accurate.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="34:02">
+<turn speaker="Matt Gardner" timestamp="34:02">
 
 Right. Yeah. I could imagine a system that that outputs only ever one sentence and it's perfectly
 fluent and so it wins the fluency, but it has no relation at all to the meaning representation. So
 it is no good. Right.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ondřej Dušek" timestamp="34:17">
+<turn speaker="Ondřej Dušek" timestamp="34:17">
 
 I mean it was not that bad, but yeah, it's kind of an extreme case.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="34:22">
+<turn speaker="Matt Gardner" timestamp="34:22">
 
 Right. So did you or has there been since any work on automatically evaluating the informativeness
 or like coverage? I am not sure which, which is the right term, but like how well you're actually
 completely capturing all of the information in the meaning representation. It's like you can have a
 person do this. Right. But that's hard.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ondřej Dušek" timestamp="34:46">
+<turn speaker="Ondřej Dušek" timestamp="34:46">
 
 Yeah, it takes time.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="34:48">
+<turn speaker="Matt Gardner" timestamp="34:48">
 
 And I know people have started thinking about this in some cases for like to do it automatically,
 but I don't really know the state of this very well.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Verena Rieser" timestamp="34:58">
+<turn speaker="Verena Rieser" timestamp="34:58">
 
 So I think for our task, as we discussed previously, this is relatively straightforward because it
 can be done by a string matching, right? But for other tasks such as summarization, it's much harder
@@ -898,10 +898,10 @@ to do because you've got this step of content selection, which makes it much har
 you know, whether you're semantically correct with respect to the document you're trying to
 summarize.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ondřej Dušek" timestamp="35:24">
+<turn speaker="Ondřej Dušek" timestamp="35:24">
 
 Yeah. And also your, your domain is broader so you're not able to get all possible strings. So this
 is one option. The other option is you basically train a language understanding model on the system
@@ -910,25 +910,25 @@ kind of like train your NLG model better if you know what's, you know what outpu
 from it. And you use that for example, to augment your training set by like correctly generated
 outputs.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="36:05">
+<turn speaker="Matt Gardner" timestamp="36:05">
 
 So what you mean by that is you're going to train a system to predict the meeting representation
 from the utterance.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ondřej Dušek" timestamp="36:13">
+<turn speaker="Ondřej Dušek" timestamp="36:13">
 
 Yes, yes.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="36:15">
+<turn speaker="Matt Gardner" timestamp="36:15">
 
 Yeah. Let's come back to that. I think that's really interesting. There was one thing that you said
 earlier that I want to ask about. You said that you can use string match kinds of things to
@@ -936,10 +936,10 @@ automatically evaluate this except your data collection used pictures to try to 
 string match. So it seems like this actually, if the data is good, the better the data is, the worst
 these metrics actually work. Is that, is that fair?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ondřej Dušek" timestamp="36:42">
+<turn speaker="Ondřej Dušek" timestamp="36:42">
 
 Yeah, it actually made it harder to come up with the correct patterns. And I mean, when I was, you
 know, trying to do exactly that, to come up with the, with the patterns, I had to go manually
@@ -947,17 +947,17 @@ through a relatively large portion of the data to see what all the different pat
 pretty sure I didn't get all of them. So you know, you always will have some kind of noise in this
 evaluation.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="37:12">
+<turn speaker="Matt Gardner" timestamp="37:12">
 
 Right. Okay.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Verena Rieser" timestamp="37:13">
+<turn speaker="Verena Rieser" timestamp="37:13">
 
 Yeah, no, that's a really good point. So for example, we had people saying really creative things
 because we show them these pictures. For example, they were the underlying meaning representation
@@ -965,10 +965,10 @@ where the cuisine was French. They would say, Oh, this is a restaurant serving w
 Right. Because that was on the picture. So that is something, you know, which, yeah, you need to
 recover from your dataset if you want to do exact string matching.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="37:44">
+<turn speaker="Matt Gardner" timestamp="37:44">
 
 Right. Okay. So coming back to this idea of learning a system to recover information from the
 utterance. I've heard this idea a few times. I'm not sure how much it's actually used, but just the
@@ -981,17 +981,17 @@ and I could take my translation system and translate the paragraphs and the ques
 language into English. And then I could say, given this translation, am I able answer the question
 as well as I could answer it with my system that was just trained on English.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ondřej Dušek" timestamp="38:42">
+<turn speaker="Ondřej Dušek" timestamp="38:42">
 
 Right.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="38:42">
+<turn speaker="Matt Gardner" timestamp="38:42">
 
 You might want to be a little bit careful, like maybe only do the paragraph or maybe only do the
 question. Like there are different things you could do, but this is the basic idea. Like, I want to
@@ -1003,10 +1003,10 @@ information that you need to do this end task. And I think this is basically the
 you were saying. It's just on trying to recover meaning representations instead of trying to answer
 questions. Is this fair? Is this the same thing?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ondřej Dušek" timestamp="39:28">
+<turn speaker="Ondřej Dušek" timestamp="39:28">
 
 Yeah, I suppose in a way, I mean here the, the meaning representation is very well-defined. It's
 basically like what you start with in the NLG process. So you can kind of go back and look if what
@@ -1015,10 +1015,10 @@ SQuAD where I suppose the answer is usually like just a phrase or a single word 
 that when you have like a whole paragraph of text to support it. So here you have the meaning
 representation for like just like a sentence or two. So it's like far more fine grained.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="40:11">
+<turn speaker="Matt Gardner" timestamp="40:11">
 
 Yeah. And easier to be clear, I'm not, I'm not aware of anyone actually doing the translation
 evaluation that I mentioned, I've seen people talk about it and I think people have done it in
@@ -1027,24 +1027,24 @@ version. This still assumes that I have a parser that goes from the utterance to
 representation and now the evaluation of my generation is dependent on the quality of my parser in
 some way.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ondřej Dušek" timestamp="40:40">
+<turn speaker="Ondřej Dušek" timestamp="40:40">
 
 Yeah, exactly.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="40:42">
+<turn speaker="Matt Gardner" timestamp="40:42">
 
 Which seems a little bit unfortunate.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ondřej Dušek" timestamp="40:44">
+<turn speaker="Ondřej Dušek" timestamp="40:44">
 
 I mean your parser can, involve this string matching is what we we talked about but there were a few
 people who actually used this parser like a machine learning trained parser for days, but it wasn't
@@ -1054,25 +1054,25 @@ it. Like for one paper I remember at INLG last year they actually had the NLG sy
 more training examples then use the sparser to check which one of them were accurate and only use
 those accurate ones for training further.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="41:39">
+<turn speaker="Matt Gardner" timestamp="41:39">
 
 Yeah. I've seen similar things in like question generation for SQuAD where you have this like loop
 that in some sense kind of like, a GaN maybe, but you're generating stuff.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ondřej Dušek" timestamp="41:50">
+<turn speaker="Ondřej Dušek" timestamp="41:50">
 
 Yeah. Yeah. It's, it is kind of like, like GaN in a way. Yeah. Yeah.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="41:56">
+<turn speaker="Matt Gardner" timestamp="41:56">
 
 Kind of. If you wave your hands a bunch of, it's not really. Anyway, so this is, this is really
 interesting. I hadn't really dug into this challenge that you set up. It's really interesting to
@@ -1080,10 +1080,10 @@ hear about all of these details. So this was 2017 what has happened since, has t
 do people still use this data? Has there been more or other kinds of challenges what's happened
 since?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Verena Rieser" timestamp="42:21">
+<turn speaker="Verena Rieser" timestamp="42:21">
 
 So this data is still used and people have even further develop this dataset. So at last year's ACL
 for example, they introduced more structured meaning our presentation. So we already mentioned that
@@ -1096,10 +1096,10 @@ discourse representations and they show that by annotating this, they got better
 they were more accurate and also more fluent, but that obviously also had this extra step of
 annotation which they required.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="43:23">
+<turn speaker="Matt Gardner" timestamp="43:23">
 
 Just to understand what it is exactly. You're saying, so they took the original data, same 5,000 or
 something meaning representations and 50,000 or something utterances and you're not re- collecting
@@ -1109,41 +1109,41 @@ I have to, I also have to annotate them at test time. Otherwise, how do I know w
 from, right. So you're giving the system more information at test time and then seeing if you can
 generate better. It's more information about the input which is nice.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ondřej Dušek" timestamp="44:02">
+<turn speaker="Ondřej Dušek" timestamp="44:02">
 
 Yes, yes. Yeah. Actually this is what you're doing. Yeah. Okay. It's like, yeah, more constraining
 the generation to hopefully get more accurate outputs, which is what they were showing in the paper.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="44:15">
+<turn speaker="Matt Gardner" timestamp="44:15">
 
 Yeah, that makes sense. Pretty clear that if you give it this additional insight of other stuff that
 goes on in language, you should be able to generate better from it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Verena Rieser" timestamp="44:22">
+<turn speaker="Verena Rieser" timestamp="44:22">
 
 Yeah. Exactly.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="44:24">
+<turn speaker="Matt Gardner" timestamp="44:24">
 
 Interesting. Cool. I guess that is like a different version of the data. So it is like I asked what
 other data is there? Well now there's this augmented version that also has discourse phenomenon.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Verena Rieser" timestamp="44:35">
+<turn speaker="Verena Rieser" timestamp="44:35">
 
 Yeah. And I think so what obviously happened since then, I think the two main events are, you know,
 transformers and pre-trained language models and people have used them in various ways. So, also
@@ -1155,10 +1155,10 @@ by Google last week or two weeks ago where tthey also had like a dialogue act re
 they they used a GDP2. And then on top of that they pre-trained on all available data sets which are
 annotated with dialogue act.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Verena Rieser" timestamp="45:31">
+<turn speaker="Verena Rieser" timestamp="45:31">
 
 So MultiWOZ, Frames can't remember a bunch of them. I think in total it was like 400K and then
 they're actually fine tuned to a specific task. And again, you know, that was to show that you need
@@ -1166,36 +1166,36 @@ less data, what they didn't really address is how to make these models more accu
 that's what I think one of the main problems we found in the E2E challenge that but on the one hand,
 yeah you need data. But on the other hand, once you got your models, how do you constrain them?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="46:04">
+<turn speaker="Matt Gardner" timestamp="46:04">
 
 Yeah. Great.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ondřej Dušek" timestamp="46:05">
+<turn speaker="Ondřej Dušek" timestamp="46:05">
 
 Yeah, just wanted to mention that. Basically the stuff that I talked about combining language
 understanding at NLG. This is kind of also like a post E2E challenge result basically from last
 year. Okay. And there are, there were like three different groups who were using very similar
 approaches to this. So this is something that people have been looking at lately.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="46:27">
+<turn speaker="Matt Gardner" timestamp="46:27">
 
 Yeah. Great. So we're running a little bit short on time. This has been really fun. There's a bunch
 that I had thought of that I wanted to talk about and we haven't even had time to cover it. I guess
 my last question is what do you think are the most interesting open challenges left in this area?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Verena Rieser" timestamp="46:43">
+<turn speaker="Verena Rieser" timestamp="46:43">
 
 I think there are a couple of themes across generation challenges. So what came out of the E2E
 challenges. There's also a paper on, you know, challenges in neural summarization and then there is
@@ -1208,10 +1208,10 @@ setup. And then finally I think there's also a challenge of that type of bias yo
 doing the sort of reference based generation reference-based evaluation. So again, you know, it's
 highly depends on the quality of the data set you're using.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ondřej Dušek" timestamp="47:48">
+<turn speaker="Ondřej Dušek" timestamp="47:48">
 
 Great. And I would say yeah there is also a challenge in like reducing the amount of training data
 you need, which is yeah, what's the pre-trained language model approaches have been trying to do
@@ -1221,59 +1221,59 @@ in a certain way, you want to kind of come closer to them and then talk in a sim
 also hasn't been addressed much. Mostly also because there isn't really a good data sets to try and
 work with this.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="48:30">
+<turn speaker="Matt Gardner" timestamp="48:30">
 
 Yeah, that seems like a really interesting challenge. I remember reading some PhD thesis on this
 topic, like how do, how do power relationships affect, like, I forget what the linguistic term is,
 where you tend to use the same word like you, you converge on vocabulary over time.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ondřej Dušek" timestamp="48:47">
+<turn speaker="Ondřej Dušek" timestamp="48:47">
 
 I think that entrainment is like an synonym to that. Maybe that one, that one, I don't know,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="48:54">
+<turn speaker="Matt Gardner" timestamp="48:54">
 
 But yeah. Yeah, there's anyway, there's a really interesting long line of work in this whole area
 too. And like how does that apply to dialogue systems? Yeah. There a lot of really interesting
 things still to do.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="49:03">
+<turn speaker="Matt Gardner" timestamp="49:03">
 
 Well, great. This has been really fun. Was, do you have any final thoughts before we conclude or
 anything that you really wanted to talk about that we haven't gotten to yet?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Verena Rieser" timestamp="49:12">
+<turn speaker="Verena Rieser" timestamp="49:12">
 
 I think there's a lot of stuff which actually we sort of thought we could cover within this hour,
 but we didn't. Well, thank you for inviting us and it was really good to talk to you.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ondřej Dušek" timestamp="49:24">
+<turn speaker="Ondřej Dušek" timestamp="49:24">
 
 Great. Thank you for coming on. This was really fun.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Ondřej Dušek" timestamp="49:27">
+<turn speaker="Ondřej Dušek" timestamp="49:27">
 
 Yeah, thanks for having us. It was really great.
 
-</Turn>
+</turn>

@@ -8,23 +8,23 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting work in natural
 language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is Matt Gardner and Waleed Ammar, we are research scientists at the Allen Institute for
 artificial intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:12">
+<turn speaker="Waleed Ammar" timestamp="00:12">
 
 So today we'll be discussing a Nature paper published in 2019 with the title "Large Teams Develop
 and Small Teams Disrupt, Science and Technology." By Lingfei Wu, Dashun Wang and James Evans. We
@@ -35,25 +35,25 @@ is currently a postdoc at the department of sociology at the university of Chica
 the job market for an assistant professor position in computational science, social science. So
 welcome to the program.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Lingfei Wu" timestamp="00:54">
+<turn speaker="Lingfei Wu" timestamp="00:54">
 
 Thank you Waleed and Matt.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:55">
+<turn speaker="Waleed Ammar" timestamp="00:55">
 
 So what's the backstory for this work? What got you interested in studying the team size and how it
 relates to disruption?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Lingfei Wu" timestamp="01:01">
+<turn speaker="Lingfei Wu" timestamp="01:01">
 
 Yeah. First of all, thank you Waleed and Matt for inviting me to this, I have really enjoyed this
 more, laid back relaxing vibe, to talk about the stories behind research and we've published a blog
@@ -66,10 +66,10 @@ of things that constrain the production of knowledge. You know, like, and then l
 were talking about teams cause you can understand tease organizations, institutions, they are kind
 of a social language.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Lingfei Wu" timestamp="02:09">
+<turn speaker="Lingfei Wu" timestamp="02:09">
 
 That constraint I would thinking for example like in Japanese there are many, many unique characters
 to talk about different kinds of fish. So we observe these kind of thing that the, if each different
@@ -80,20 +80,20 @@ that the my collaborator James and Dashun they throw out the idea about how they
 that are kind of more like a move faster in the knowledge space and we kind of just combined all
 these thing and the start the project.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="02:56">
+<turn speaker="Waleed Ammar" timestamp="02:56">
 
 That's very interesting. How have you explored different hypothesis before you stumbled upon this
 one, which ended up being such a meaningful hypothesis to test? Cause sometimesI wonder if something
 like this comes to light because people had a moment of inspiration or it's just a sequence of
 failure and then results in a successful finding.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Lingfei Wu" timestamp="03:16">
+<turn speaker="Lingfei Wu" timestamp="03:16">
 
 No, this is totally, yeah. I feel you in the, like anyone who did this kind of long term project or
 even just publish a small paper will, I assume everyone, like we experienced the same fractuates
@@ -107,19 +107,19 @@ measurements of social organization like, team size. We were also lucky in the e
 already observed the signal and then 80% of work is more like two tests, 80% of work is more like to
 test the robustness of these patterns.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="04:29">
+<turn speaker="Waleed Ammar" timestamp="04:29">
 
 Yeah. It's not easy to find the right signal and find it consistently across different streams of
 data so, could you, for the audience, help us understand what kind of a metric you use to define
 disruption?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Lingfei Wu" timestamp="04:41">
+<turn speaker="Lingfei Wu" timestamp="04:41">
 
 Yeah, so the who cornerstone, of the paper is this website and the technically. It basically just
 measures to what extent new idea it clips or overshadows the past ideas. So you just imagine an
@@ -133,17 +133,17 @@ this, we think of different versions of this workshop, but in our paper we use t
 proposed by Russel and Owen Smith, which is a very well defined and easy to operate. It's an issue
 in citation networks.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="05:56">
+<turn speaker="Waleed Ammar" timestamp="05:56">
 
 Yeah. Could you explain that metric? I think it's an interesting one to think about.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Lingfei Wu" timestamp="06:03">
+<turn speaker="Lingfei Wu" timestamp="06:03">
 
 Yeah, so basically it allowed us to go into detail. You'll be like if you have a paper and that you
 have for example, three reference in this paper and then we all collect all the future papers which
@@ -158,10 +158,10 @@ all of future papers only cite you but not your reference. So you have very, ver
 totally eclipse or overshadows the narratives. The future tells you, Oh, I'll go to you but not your
 reference and where is negative one, it's the reverse.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="07:16">
+<turn speaker="Waleed Ammar" timestamp="07:16">
 
 Yes. So when I read the metric as describe to me, the paper one question I had in my mind is what if
 there is one paper that I cite in my paper, which tends to be cited in pretty much all papers that
@@ -170,10 +170,10 @@ using it. If I understand the metric correctly, then this means the majority of 
 that you're using to compute the metric will be only citing that other paper, not the focal paper,
 which results in only a small margin for you to go onto the destruction Que.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Lingfei Wu" timestamp="07:48">
+<turn speaker="Lingfei Wu" timestamp="07:48">
 
 Yeah, you are actually talking about a very typical scenario. It's like citing classics, those
 popular papers. Back to our metaphor about eclipse, we can just imagine the eclipse of sun or moon
@@ -188,36 +188,36 @@ in figure three it's the impact control by the impact of the focal paper. In our
 figures, we also control the impact of the reference and try to see whether our story still holds
 across different groups. Either they try to eclipse the sun or just a little star.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="09:08">
+<turn speaker="Matt Gardner" timestamp="09:08">
 
 Yeah. I guess one interesting way to think about this is about some metric that you're trying to
 design is like what are the, what are the extremes and are there failure cases on the extremes. One
 way to maximize this metric is to not cite anyone in my papers. Right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Lingfei Wu" timestamp="09:21">
+<turn speaker="Lingfei Wu" timestamp="09:21">
 
 True. If you don't have a reference, but the thing is, in our analysis, we actually drop this kind
 of.. if you don't have an analysis because of like by default the disrupt would be one. But these
 are kind of unfair. So we dropped them,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="09:35">
+<turn speaker="Matt Gardner" timestamp="09:35">
 
 Right. And if I don't go quite that extreme but, but still like the fewer papers that I cite, the
 better I'm going to do on this metric kind of a priori, right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Lingfei Wu" timestamp="09:43">
+<turn speaker="Lingfei Wu" timestamp="09:43">
 
 Yeah. So this is a really nice point, actually bringing us back to the thinking about these papers.
 So at first we stopped from measuring disruption and associate that with the team size and first but
@@ -229,10 +229,10 @@ that if you have a deeper roots, you go very, very deep to the past. That will b
 because the follower would typically prefer to just follow you rather than follow all of these,
 deep, older references.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Lingfei Wu" timestamp="10:38">
+<turn speaker="Lingfei Wu" timestamp="10:38">
 
 And another consequence is if you try to build your work on the less popular, like you try to
 discover these hidden the forgotten notes and ideas in history and it will also make you more
@@ -242,52 +242,52 @@ in the picture when we have the tree we, we kind of see things as like rememberi
 discover the invisible and forgotten ideas and package together nicely and pass it to future and
 futures citation build more on this whereas the big things are doing the reverse.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="11:27">
+<turn speaker="Matt Gardner" timestamp="11:27">
 
 Yeah I really liked the tree visualizations that I saw in your paper. I'd encourage any listeners
 that have heard about this work and haven't seen those figures to go look at them cause they're,
 they're pretty, I liked it a lot.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Lingfei Wu" timestamp="11:37">
+<turn speaker="Lingfei Wu" timestamp="11:37">
 
 Thank you. Appreciate it. And I probably spend too much time on this, like a it be at some points
 because of the project. I wasn't very fun. I have to have some fun doing this boring process of
 processing, huge amount of data. So I try to be a little bit arty, but uh, they're cool also be very
 destructive and adaptive. It's not a very efficient way of working.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="11:59">
+<turn speaker="Waleed Ammar" timestamp="11:59">
 
 Right. Uh, so we didn't actually talk about that central finding of that paper that much. So the
 main finding here is that smaller teams tend to be, uh, to do more disruptive work.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Lingfei Wu" timestamp="12:08">
+<turn speaker="Lingfei Wu" timestamp="12:08">
 
 Yeah.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="12:09">
+<turn speaker="Waleed Ammar" timestamp="12:09">
 
 Could you tell us a little more about how did you reach this conclusion? What kind of data you used,
 what observations you've seen in the data?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Lingfei Wu" timestamp="12:15">
+<turn speaker="Lingfei Wu" timestamp="12:15">
 
 So the main idea we found is across these three data sets of research paper over 150 years, 44
 million papers and also US patterns for forty years, over half a million and also 18 million
@@ -301,10 +301,10 @@ say like from big company or from small company we can show industry what kind o
 does it matter and then for the software we can show whether it's a small project or it's a large
 project measured by the code size.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Lingfei Wu" timestamp="13:24">
+<turn speaker="Lingfei Wu" timestamp="13:24">
 
 And also we controlled the language like what kind of language you're using. And through all these
 kinds of robustness tests we still see the same pattern no matter how much you slice the data set
@@ -318,10 +318,10 @@ why small and large teams are so fundamentally different and the what is the pro
 discovery re discovery and the production and that I will feel, very happy for any of these kinds of
 conversations.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="14:31">
+<turn speaker="Waleed Ammar" timestamp="14:31">
 
 Yeah. So what, I was wondering, how would you translate the findings that you had in the paper into
 practical advice for researchers? I've always been very liberal about who to collaborate with. If
@@ -329,10 +329,10 @@ another researchers interested in the work I'm doing and they have something to 
 great. But it seems like you're finding suggest I should be more careful. Uh, try to avoid expanding
 the team size by doing more things on my own.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Lingfei Wu" timestamp="14:55">
+<turn speaker="Lingfei Wu" timestamp="14:55">
 
 Uh, yeah. So there are definitely some lessons we can take out and some are more obvious than
 others. For the most applicable consequence we analyze how does this association relate to or effect
@@ -346,10 +346,10 @@ world. So we analyze data across almost a half a million papers that fund funded
 government agencies, inquiry, Natural science foundation, us and also similar foundation in China,
 in Geman, European, in Japan.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Lingfei Wu" timestamp="16:08">
+<turn speaker="Lingfei Wu" timestamp="16:08">
 
 And we consistently found that the funded of the research actually less is more like more like large
 teams and developing research I founded. And also more interestingly in the general population,
@@ -366,35 +366,35 @@ We have small teams that are taking all these risks who got nothing to lose, not
 we also have a lot of teams that you'd take a lot of risks, but that also means you need to pay the
 bill. So I think it's a trade off between these kinds of modes.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="17:31">
+<turn speaker="Waleed Ammar" timestamp="17:31">
 
 Yeah, that makes sense. I think it still doesn't completely explain how as a researcher was most
 interested in doing disruptive work.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Lingfei Wu" timestamp="17:41">
+<turn speaker="Lingfei Wu" timestamp="17:41">
 
 Yeah. So I think that definitely means that if you want to be disruptive, you need to have a small
 team that I think that significance is kind of clear, of course there's a chance but, with small
 teams you have a higher chance to disrupt.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="17:58">
+<turn speaker="Matt Gardner" timestamp="17:58">
 
 Yeah. I guess another thing to keep in mind here is what kind of team size are we talking about?
 What is large versus small in this context
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Lingfei Wu" timestamp="18:06">
+<turn speaker="Lingfei Wu" timestamp="18:06">
 
 True. That's a very nice perspective. So that also relates to one result in our paper, which is the
 Figure 2 observe the robustness of this team size and disruption across fields. And we do observe
@@ -409,10 +409,10 @@ kinds of understanding and we build logic. We do all of this. So I would say tha
 knowledge is harder to disrupt and to disrupt these kinds of knowledge. You need a even smaller
 team.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="19:18">
+<turn speaker="Matt Gardner" timestamp="19:18">
 
 That's interesting. Like one, this is me just speculating here. I have not dug into this data at
 all. Um, but I've been thinking recently about how we do science in computer science versus in say
@@ -423,17 +423,17 @@ proposes a theory that maybe eventually people think is good and good enough to 
 experimentally and then someone, some big team does the verification. And so like thinking about
 these other kinds of scientific fields, this makes a lot of sense to me.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Lingfei Wu" timestamp="20:09">
+<turn speaker="Lingfei Wu" timestamp="20:09">
 
 Exactly.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="20:10">
+<turn speaker="Matt Gardner" timestamp="20:10">
 
 In computer science, I think we did this very differently because it's just, any grad student can
 write code to run whatever experiment they want. This is changing a little bit as as compute is
@@ -441,10 +441,10 @@ getting more expensive with these deep neural networks, but it's just very diffe
 much smaller teams in general in computer science than you see in a lot of these like CERN papers or
 whatever. Right.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Lingfei Wu" timestamp="20:33">
+<turn speaker="Lingfei Wu" timestamp="20:33">
 
 Yeah, I totally agree with this and that will bring us to a very interesting conversation on like
 what, what do we mean by fields and what is artificial knowledge and what is the natural knowledge
@@ -460,20 +460,20 @@ you, there's like a bottom line of costs, right? Like you needed to have a GPU, 
 running for you and that way you can talk about how creative you are. Then most of the people can
 not just work with papers and pencil like theoretical.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="21:48">
+<turn speaker="Waleed Ammar" timestamp="21:48">
 
 Right. And I, I would like to know that in all of your fingers and figure 3B you have a different
 line showing the disruption percentiles for a different team sizes, broken by the fields. And as far
 as I can tell from the graph, computer science and engineering, the disruption is actually not going
 down as the team size expands. You could tell me if I'm reading this wrong.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Lingfei Wu" timestamp="22:11">
+<turn speaker="Lingfei Wu" timestamp="22:11">
 
 Yeah. As we mentioned in the paper the main reason I argue is because we were using web of science
 data in terms of journal articles and we know engineering and computer science are not really value
@@ -484,19 +484,19 @@ extent data there's a extended that in which we separate them by journals. And t
 journal separation we put out engineer and computer science journals and within the single journal
 we still see a small things more disruptive.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="22:59">
+<turn speaker="Waleed Ammar" timestamp="22:59">
 
 Could you tell us a little more about inference in reference patterns? So you talked about reference
 popularity as opposed to age. I was wondering if you have any insights on why is it the case that
 sometimes the larger team sizes result in more citations?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Lingfei Wu" timestamp="23:15">
+<turn speaker="Lingfei Wu" timestamp="23:15">
 
 It's still built up; the individual still comes from the universe and the star eclipse metaphor. So
 the first thing we observe is that small teams are more disruptive, but then in that metaphor we
@@ -512,10 +512,10 @@ one is knowledge space and the way you have a, I would like to quote from James 
 favorite scholars saying that linkage and the power and autonomy that it doesn't comes along the
 same way.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Lingfei Wu" timestamp="24:30">
+<turn speaker="Lingfei Wu" timestamp="24:30">
 
 If you have power you have the relied on linkage and linkage these show your autonomy. So basically
 if you have a large social space, you are powerful, you are quite embedded in the power structure in
@@ -526,17 +526,17 @@ much make it a little bit personal, lonely then you have a huge autonomy, you ca
 idea space. So if you're a small in space, you're probably be large in idea space, that's a kind of
 another association. We try to joke behind the paper.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="25:16">
+<turn speaker="Waleed Ammar" timestamp="25:16">
 
 But this doesn't still explain that more citations that larger team size gets.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Lingfei Wu" timestamp="25:22">
+<turn speaker="Lingfei Wu" timestamp="25:22">
 
 Yeah, I think it's a relevant cause like if you have a large state you have to chase what's going
 on. Like you have to harvest the mature market of attention that you have to do what other people
@@ -548,18 +548,18 @@ for the results. So they have to keep up with the mainstream, and cite the popul
 recent papers that helps them secure their position in the mainstream. But they're also distant them
 from the origins of innovation.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="26:09">
+<turn speaker="Waleed Ammar" timestamp="26:09">
 
 Yeah, that makes sense to some extent. It's like maybe subconsciously gaming the metric of where you
 want to get more citations by doing the things that are popular.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Lingfei Wu" timestamp="26:17">
+<turn speaker="Lingfei Wu" timestamp="26:17">
 
 Yeah, and that's how we summarize our story by saying that get in the dimension of remembering and
 forgetting, like to me like small teams are ike remembering earlier and less visible ideas impact
@@ -569,19 +569,19 @@ little ideas. And I would like to argue that those who remember history will be 
 mean if they ever be remembered, you know, of course that's risky. But those who forget history,
 will be forgotten soon.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="26:56">
+<turn speaker="Waleed Ammar" timestamp="26:56">
 
 Yeah. Okay. So there is other factors that you mentioned in the paper and you mentioned briefly
 before that you also controlled for, I was wondering if you would like to talk about any ones, any
 factors that also correlated strongly with the structure?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Lingfei Wu" timestamp="27:11">
+<turn speaker="Lingfei Wu" timestamp="27:11">
 
 Yeah, we controlled many factors some in fact are very interesting. One factor as we mentioned for
 the field, so there are like more natural knowledge field and artificial knowledge field if we may
@@ -598,10 +598,10 @@ group and disrupting group and if a keyword shows up with a way higher chance in
 another, then we pick them up and it's a, it's a fun way to play around with the data and see
 whether [inaudible] is honest and whether it's possible for them to be honest.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Lingfei Wu" timestamp="28:38">
+<turn speaker="Lingfei Wu" timestamp="28:38">
 
 So we observed that when people claim in, their title was about stabilizing or like confirm or like
 these kinds of words, they are more like developing and when they claim that this is bringing new
@@ -615,10 +615,10 @@ these two texts and things are, they're pretty consistent. So scientists are tal
 things, new ideas, new words and then the entire community can pick them up. So it's kind of a self
 report language versus peer evaluation.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="29:46">
+<turn speaker="Waleed Ammar" timestamp="29:46">
 
 Another factor that I thought was very interesting is looking at different time periods. I'm looking
 at Figure 3C the extended data figure and I'm seeing that as time goes by, papers tend to be less
@@ -626,10 +626,10 @@ disruptive over time, which kind of like coincides with my intuition that like, 
 have more papers now. Like the bar to publication seems to be lower than it used to be 20 years ago.
 I'm not entirely sure this is true. Uh, but this has been my intuition.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Lingfei Wu" timestamp="30:18">
+<turn speaker="Lingfei Wu" timestamp="30:18">
 
 That's a good intuition. And one thing we didn't have opportunity to unfold in the paper. It's, it's
 the temporal evolution of the disruption measure just like citation is evolved over time disruption
@@ -642,10 +642,10 @@ wave has been sleeping for 100 years and all of a sudden it bursts and for all t
 eventually accumulate a lot of citations, sooner or later we observed that small teams more likely
 became key papers by being disruptive as small teams became key papers by being developmental.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Lingfei Wu" timestamp="31:21">
+<turn speaker="Lingfei Wu" timestamp="31:21">
 
 Again we see the like the social language and the organization comes in here they have advantages
 versus disadvantages for small teams a good strategy is to maximize its capacity to seek for risky
@@ -657,18 +657,18 @@ evolve over time because on average the citation will stabilize, right? People w
 you, but the disruption will divulge. If you are disruptive and you probably will accumulate, be
 more disruptive because it's always easier to follow you then for your reference.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="32:15">
+<turn speaker="Waleed Ammar" timestamp="32:15">
 
 I think what you're telling me is that it's not necessarily the case that more recent work is less
 disruptive in general in on average it may be a side effect of how we measure disruption.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Lingfei Wu" timestamp="32:26">
+<turn speaker="Lingfei Wu" timestamp="32:26">
 
 You are totally right. Because like the more recent work, so the disruption is like thinking about
 the tree again, it takes time to grow. So there's some work, it doesn't really have much time like
@@ -676,18 +676,18 @@ longer time window enough to grow. If you have longer years, it's like a classic
 Right. We don't, we don't talk about classic like what's the recent year classic. But if we talk
 about fifties, sixties it just, I take his time too as a witness can see these classics.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="32:52">
+<turn speaker="Waleed Ammar" timestamp="32:52">
 
 Sure. But you can still control for this by only considering the next, the following 10 years when
 you're doing the analysis.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Lingfei Wu" timestamp="32:59">
+<turn speaker="Lingfei Wu" timestamp="32:59">
 
 Yeah. But we controlled both so one thing we controlled is the time period. So we separate papers
 into different cohorts in different decades and see whether the pattern holds the others. We control
@@ -696,18 +696,18 @@ size. Whether we calculate disruption within five year within 10 year, within 20
 within 50 years, we are happy to see that that result is pretty robust. These are all in the extent
 data figures.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="33:29">
+<turn speaker="Waleed Ammar" timestamp="33:29">
 
 All right. Are there any other thoughts that you'd like to share about this work? I'd like to end
 with another question, but first I wanted to give you a chance to,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Lingfei Wu" timestamp="33:37">
+<turn speaker="Lingfei Wu" timestamp="33:37">
 
 I kinda, I kinda have a view of what's coming for the last question. So I hope this is like, um,
 because we, we have been traveling, I haven't been traveling around and uh, my trainees in social
@@ -719,10 +719,10 @@ is that I, one of the papers I love the most is from computer science community.
 Country for Old Members. And that's from the a group lead by Dan Jurafsky and the first author is
 Christian.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Lingfei Wu" timestamp="34:26">
+<turn speaker="Lingfei Wu" timestamp="34:26">
 
 He was in Stanford when he wrote his paper, that paper basically tried to analyze a peer review
 community and demonstrate how people get stuck in the past. Like whenever like get into the
@@ -738,20 +738,20 @@ more comments, ideas on this. I feel this is very urgent and important and essen
 When we talk about machines, what are we talking about? We're actually talking about humans in what,
 what is humanity?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="35:33">
+<turn speaker="Waleed Ammar" timestamp="35:33">
 
 Yeah. Thank you for sharing this. To end on a humorous note, I know that hosted a podcast calledLu
 Gu in which you encourage researchers to share awkward moments, the experience of their life. So
 it's only fair that we ask you to share some of the awkward moments that you experienced while
 working on this project.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Lingfei Wu" timestamp="35:50">
+<turn speaker="Lingfei Wu" timestamp="35:50">
 
 Uh, there are lots and one of the most awkward moment, probably the, when the paper was reject by
 Science we submitted this to Science first. And uh, yeah, like totally three years and the second
@@ -765,10 +765,10 @@ local calculation, you know, going on in your lab and your brain, you know, mine
 century of calculation, it becomes repository of human intelligence because machine intelligence, it
 goes into the center and move forward to the next generation with us.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Lingfei Wu" timestamp="36:59">
+<turn speaker="Lingfei Wu" timestamp="36:59">
 
 But we are all like vulnerable human beings. And I remember when the, we were reject, I reject, I
 was rejected by Science. That was a very um, very, very like kind of challenging moments tough
@@ -779,10 +779,10 @@ is really what I thought I was thinking, what if I just get on this, get out of 
 hit by a car what would happened. Of course people will be very sad and you guess what will happen?
 The university, we'll hire a new postdoc maybe from China, maybe one from somewhere.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Lingfei Wu" timestamp="37:47">
+<turn speaker="Lingfei Wu" timestamp="37:47">
 
 So that's, that's, that's the how the science works. You know, like the machine, the power, the
 social structure works. We move forward without with or without you. And that made me feel like
@@ -791,19 +791,19 @@ So I think most of my awkward and challenging moments, comes from keep rethinkin
 the things research I'm doing and how that helped me help other people discover their identity
 rather than just make or build a stronger machine.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="38:24">
+<turn speaker="Waleed Ammar" timestamp="38:24">
 
 Yeah. That's a a great way to end this conversation. Thank you. So much, that was a fun conversation
 to have.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Lingfei Wu" timestamp="38:30">
+<turn speaker="Lingfei Wu" timestamp="38:30">
 
 Thank you. Yeah. Thanks again for Waleed and Matt for inviting me. Thank you.
 
-</Turn>
+</turn>

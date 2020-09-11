@@ -8,38 +8,38 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting work in natural
 language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is Matt Gardner and Waleed Ammar, we are research scientists at the Allen Institute for
 artificial intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="00:11">
+<turn speaker="Pradeep Dasigi" timestamp="00:11">
 
 So today's guest is Lena Voita, who's a PhD student at the university of Amsterdam and a research
 scientist at Yandex Research Welcome to the podcast, Lena.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elena Voita" timestamp="00:20">
+<turn speaker="Elena Voita" timestamp="00:20">
 
 Hi. Thank you for inviting me. I'm very grateful to be here.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="00:22">
+<turn speaker="Pradeep Dasigi" timestamp="00:22">
 
 So the topic we're discussing today is analyzing the information flow in transformers, mostly in the
 context of training machine translation models, today we are going to be talking about two papers,
@@ -50,10 +50,10 @@ Language Modeling Objectives published at EMNLP this year. The first one was abo
 relative importance of attention heads in self retention. So Lena, can you tell us a bit about what
 was studied here?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elena Voita" timestamp="01:01">
+<turn speaker="Elena Voita" timestamp="01:01">
 
 Yeah. So I would try to understand the functions of attention heads and multi-head attention
 because, you know, it's introducing bias what was introduced in transformer and we do know that it's
@@ -62,18 +62,18 @@ translation and other metrics. But it's not clear what exactly is going on with 
 heads. Do they have some functions, are they all equally important and so on and so forth. So this
 is basically, what we are trying to understand,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="01:29">
+<turn speaker="Pradeep Dasigi" timestamp="01:29">
 
 So when you say head importance, what exactly do you mean by it? How do you measure the importance
 of a given head?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elena Voita" timestamp="01:35">
+<turn speaker="Elena Voita" timestamp="01:35">
 
 That's a good question. We can look at it from a different perspective and the paper does. But the
 most, for a simple way to do it is to say that important heads are those which contribute more to
@@ -86,10 +86,10 @@ pictures, for example, a picture of a cat is classified as says for example the 
 to be on the pictures like four in seven. And this attribution matters finds this heat map which
 show which pixels contributed to this prediction.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elena Voita" timestamp="02:29">
+<turn speaker="Elena Voita" timestamp="02:29">
 
 And usually this heat maps quite interpretable. So what we do is we adapt one of the attribution
 methods from computer vision, to measure contribution of neurons in transformer, but due to
@@ -104,17 +104,17 @@ contribution of heads or whether it contributions of neurons in multi-head atten
 prediction by model for each generation step for development set and take an average and then we say
 that importance of head or contribution of head is some contribution of its neurons.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="03:38">
+<turn speaker="Pradeep Dasigi" timestamp="03:38">
 
 I see. So did you see any interesting trends and the importance of heads and how they behave?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elena Voita" timestamp="03:43">
+<turn speaker="Elena Voita" timestamp="03:43">
 
 Yes. First what was interesting was that we saw that in each layer there are only a couple of heads
 which are much more important than all the others. It means that heads in multi-head attention are
@@ -123,18 +123,18 @@ interesting because previous works looking at multi-head attention transformer. 
 average overhead rates or a maximum. Therefore it is thought that heads are equally important but it
 turns out in they are not.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="04:13">
+<turn speaker="Pradeep Dasigi" timestamp="04:13">
 
 Right. I see. There was also some notion of head confidence. I saw in the paper can you talk about
 that a bit.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elena Voita" timestamp="04:19">
+<turn speaker="Elena Voita" timestamp="04:19">
 
 Yeah, relevance is nice in a way but it's a little hard to feel of what's it is. So we also looked
 at confidence of heads, which is the more intuitive characteristic. So we evaluate confidence by
@@ -143,33 +143,33 @@ are the ones that we tend to put all their attention masters in a single token a
 that this heads are important because if they are confident probably they know what they're doing,
 right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="04:50">
+<turn speaker="Pradeep Dasigi" timestamp="04:50">
 
 Right.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="04:50">
+<turn speaker="Pradeep Dasigi" timestamp="04:50">
 
 And you look at confidence and relevence and we see that at least the characteristics agree to some
 extent. So in most of the layers, the most relevant heads are the most confident.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="05:00">
+<turn speaker="Pradeep Dasigi" timestamp="05:00">
 
 Was there anything interesting there to note about the cases where they didn't agree with each
 other?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elena Voita" timestamp="05:06">
+<turn speaker="Elena Voita" timestamp="05:06">
 
 Yes. It's a really good question. On all layers except the first, the most relevant heads are the
 most confident ones. But on the first layer we don't actually see highly confident heads, both for
@@ -181,40 +181,40 @@ on WMT dataset for English, Russian, English, German and English French. And for
 also had additional experiments with this synthetic dataset. And for all models, the most important
 head on first layer, which, what was this attention rare tokens.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="05:57">
+<turn speaker="Pradeep Dasigi" timestamp="05:57">
 
 Okay.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="05:57">
+<turn speaker="Waleed Ammar" timestamp="05:57">
 
 Do you mean the one that gets the most attribution. And when you say you rate words is just within
 the sentence or
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elena Voita" timestamp="06:04">
+<turn speaker="Elena Voita" timestamp="06:04">
 
 So I have a sentence. Have for example, at least three tokens and almost all of the tokens in a
 sentence point to this least frequent token.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="06:13">
+<turn speaker="Waleed Ammar" timestamp="06:13">
 
 Any insights. Why this would be the case?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="06:15">
+<turn speaker="Pradeep Dasigi" timestamp="06:15">
 
 Yes. Actually I would come back to later when we discuss the second paper, because here at the
 moment of the ACL paper it wasn't clear and we go through a little excited about it we tried to
@@ -222,19 +222,19 @@ understand why. Maybe it has some sort of story or something else. But in our, E
 actually found out that it's some kind of modular application a little different kind of model
 representation but Yes.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="06:46">
+<turn speaker="Waleed Ammar" timestamp="06:46">
 
 Okay. So you talked about the notions of importance and confidence and how sometimes they agree with
 each other. Given, that you've defined these notions, what did you do about it? What was the next
 obvious step in the paper?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elena Voita" timestamp="06:59">
+<turn speaker="Elena Voita" timestamp="06:59">
 
 So we saw that only a few heads are more important than all the others. And initial question is, of
 course, what are these head's doing? Then we will look at the attention method by paying attention
@@ -242,18 +242,18 @@ to these important heads and tried to categorize all of this heads and we find t
 important heads that lean to positional heads, syntactic heads and attention to rare tokens. that is
 most important head on the first place.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="07:25">
+<turn speaker="Pradeep Dasigi" timestamp="07:25">
 
 Given that you observed that some of these perform specific functions, you then went ahead and
 looked at pruning the heads witch seemed not so important. Can you tell us a bit about that?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elena Voita" timestamp="07:36">
+<turn speaker="Elena Voita" timestamp="07:36">
 
 Yeah. So when we saw that this important heads are specialized we were worried that maybe model does
 not meet all the rest. Right? So we're have important heads, they perform some functions and it's
@@ -261,18 +261,18 @@ not clear whether are they important but it's hard to define their roles or are 
 and the method for pruning heads heads. So basically what you want is to let the model decide which
 heads it doesn't need,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="08:04">
+<turn speaker="Waleed Ammar" timestamp="08:04">
 
 So just to clarify, you mentioned the positional heads and syntactic heads and not necessarily clear
 to the audience what this means. Could you clarify this a little?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elena Voita" timestamp="08:13">
+<turn speaker="Elena Voita" timestamp="08:13">
 
 Yeah, of course. And so additional heads are the ones which point to the neighboring tokens for
 example, there's a head which always point to the previous token, heads which always point to the
@@ -281,34 +281,34 @@ basically they put all their attention, for example, here is the next token and 
 the heads which are learned to track major syntactic correlations in a sentence such as a subject
 verb over projects that are in that, in both directions.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="08:47">
+<turn speaker="Waleed Ammar" timestamp="08:47">
 
 So in the latter case it would be focusing most of the attention on two items. Is that right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elena Voita" timestamp="08:53">
+<turn speaker="Elena Voita" timestamp="08:53">
 
 So for each dependence relation, we look to weather a head points maximum attention to a token to
 which it is say in one of the dependency relationships. For each region brings the relation or found
 heads which might be triggering this relation
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="09:08">
+<turn speaker="Waleed Ammar" timestamp="09:08">
 
 And these observations they seem positional heads and syntactic heads and real words. These were
 pervasive across the tasks you used for training.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elena Voita" timestamp="09:18">
+<turn speaker="Elena Voita" timestamp="09:18">
 
 Yea, for all translation tasks we consider you have pictures in a paper when you're going to
 actually see that here in our model. So the most important and highly continent heads are
@@ -316,24 +316,24 @@ positional. Each model has several syntactic heads for dependency such as type s
 verb/objects. And for each of the model, the most important head on the first layer is attention to
 rare tokens.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="09:41">
+<turn speaker="Waleed Ammar" timestamp="09:41">
 
 Thank you.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="09:42">
+<turn speaker="Pradeep Dasigi" timestamp="09:42">
 
 Okay. Coming back to pruning, can you describe to us about how you did this pruning?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elena Voita" timestamp="09:49">
+<turn speaker="Elena Voita" timestamp="09:49">
 
 Yeah. So what we want is to switch the less important heads and to let the model decide which heads
 it would it be? And so in the original model outputs of which head and modified attention are
@@ -349,33 +349,33 @@ head in a ways that this probability of heads being open is a differentiable res
 parameters. So it's real easy to minimize it using gradient descent and put directly this charm and
 all of those functions.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="11:07">
+<turn speaker="Waleed Ammar" timestamp="11:07">
 
 So intuitively, why do we want to minimize the probability that it's open?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elena Voita" timestamp="11:10">
+<turn speaker="Elena Voita" timestamp="11:10">
 
 So if you don't do this the model doesn't have to prune some heads, right? It wants to do nothing.
 If it does say it explicitly model, we want to remove some heads for from you, it doesn't have to do
 it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="11:26">
+<turn speaker="Waleed Ammar" timestamp="11:26">
 
 How do you help the model learn which ones are more important? How do you actually formalize?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elena Voita" timestamp="11:31">
+<turn speaker="Elena Voita" timestamp="11:31">
 
 So then using an objective is cross entropy loss, which is our main objective of the standard model
 and this categorization term. And we can use different weights for organizations like we can push
@@ -383,24 +383,24 @@ more or less to switch this important heads. So on the one hand model still don'
 translation task. And on the other hand it tries to switch off some hands. So in this way, it turns
 off heads, which are important for translation.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="12:00">
+<turn speaker="Waleed Ammar" timestamp="12:00">
 
 Oh, I see. That's really cool.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="12:01">
+<turn speaker="Pradeep Dasigi" timestamp="12:01">
 
 Yeah, that's really interesting. And what were the empirical results that you noticed?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elena Voita" timestamp="12:06">
+<turn speaker="Elena Voita" timestamp="12:06">
 
 Yeah, their are two sides of the story. One is about the BLEU score which I hate to say, but I'm not
 to big fan of the BLEU score. So it turns out that that we can remove the vast majority of heads
@@ -412,10 +412,10 @@ BLEU which is realistically not much for performance. And when all heads with in
 example, we can see that we can prove like half of the head where not lost at all quality or for
 example, 75% of all heads was like .5 you know,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elena Voita" timestamp="13:07">
+<turn speaker="Elena Voita" timestamp="13:07">
 
 But what did like a lot more about our methods than the BLEU score, my colleagues from the Yandex
 translate would disagree about BLEU score, but what I like more is that now we can look at the
@@ -426,17 +426,17 @@ propagation. So I have like two completely different ways of looking at it. So f
 can evaluate attribution and the second part is completely different, like pruning turns out the
 results are the same. So what we see is that just specialized head are the last to be pruned.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="13:54">
+<turn speaker="Pradeep Dasigi" timestamp="13:54">
 
 What function did you notice heads that actually survived the pruning process were performing?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elena Voita" timestamp="13:59">
+<turn speaker="Elena Voita" timestamp="13:59">
 
 So we can prune like two thirds of all heads was all of specialized functions being alive. So
 basically all functions are alive for until you have like seven heads. And then if you push forward
@@ -444,17 +444,17 @@ a head start taking several functions, for example, several syntactic functions.
 heads are alive, for example two heads a head start taking three functions, positional, rare token
 and syntactic.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="14:26">
+<turn speaker="Pradeep Dasigi" timestamp="14:26">
 
 That's really interesting. Are there any other interesting patterns you notice from the results?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elena Voita" timestamp="14:31">
+<turn speaker="Elena Voita" timestamp="14:31">
 
 Yeah, so we also looked at the importance of different types of attention in the model. Self
 attention encoder, for attention in the decorder and decoder encoder attention. Right. And so when
@@ -467,18 +467,18 @@ It depends on the domain. For example, WMT dataset was long sentence, which are 
 They are almost as important as a decode encode attention what opens up title with short sentences.
 They are almost the same importance as encoder self attention heads, which are not really important.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="15:36">
+<turn speaker="Pradeep Dasigi" timestamp="15:36">
 
 I see. Okay. So going forward, based on these results, what do you think we can change about the way
 we build this models? Is there anything else you think we should do differently?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elena Voita" timestamp="15:47">
+<turn speaker="Elena Voita" timestamp="15:47">
 
 I see several possible directions with research. First, I haven't mentioned it before, but I've also
 looked at whether we can train from scratch model was the same categorization of heads as the pruned
@@ -494,19 +494,19 @@ example, we see that important has already performed some functions. We can init
 important heads kind of like in pruning they also do that. So we have an important initialized and
 be trained from scratch and maybe we can find more functions.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="17:08">
+<turn speaker="Pradeep Dasigi" timestamp="17:08">
 
 Yeah, that, that's really interesting. And then moving onto the second paper, which is about how the
 token representations in transformers have evolved based on three training objectives. Can you
 briefly describe to us what object of this study was and how you went about investigating it?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elena Voita" timestamp="17:25">
+<turn speaker="Elena Voita" timestamp="17:25">
 
 Yes. So transfer domain is really popular now, right. And there are different kind of huge models
 with different objectives and it's not clear. For example, we know that BERT on some tasks performs
@@ -520,10 +520,10 @@ performance, for example, a representations from a T model increases after the h
 for language model it's a goes up to some layer and then comes down and it's not clear why this
 happened so clearly different patterns different kind of behavior but it's not clear why.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elena Voita" timestamp="18:38">
+<turn speaker="Elena Voita" timestamp="18:38">
 
 So in our work we tried to give like a general explanation of the process behind such behavior. So
 we wanted to do fix everything which is possible. For example, we fix architecture we fix string
@@ -535,10 +535,10 @@ second is a standard language model or style retraining. And the third one Maske
 which is most of the training objective of BERT. What we tried to do, so we want to give some
 general explanation of what's going on.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elena Voita" timestamp="19:36">
+<turn speaker="Elena Voita" timestamp="19:36">
 
 And our point of view in this work is information bottleneck. A method from 1990s which tried to
 find a representation of input which contains as much as possible information about output. And it
@@ -553,17 +553,17 @@ different for each of our tasks, we expect to see different departments. And so 
 do is survey. It is trade processes of information gained in representations like to train this
 information but on that perspective.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="20:53">
+<turn speaker="Pradeep Dasigi" timestamp="20:53">
 
 So how did you manage information gain here?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elena Voita" timestamp="20:56">
+<turn speaker="Elena Voita" timestamp="20:56">
 
 So let me first explained, what does information gained because instead of the information look in
 extension, usually they considered in different layers and information can only get lost as you go
@@ -577,18 +577,18 @@ on higher layers. And for MLM the behavior is a bit surprising. So first, simila
 information about input get lost but then on the upper layers it gets recovered and it happens like
 in two stages, which we call it further context encoding and action stages.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="22:04">
+<turn speaker="Pradeep Dasigi" timestamp="22:04">
 
 You mentioned the diffence between MLM and masked language model , do you have any intuitions for
 why there was a difference between the two of them.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elena Voita" timestamp="22:14">
+<turn speaker="Elena Voita" timestamp="22:14">
 
 Yeah, of course. So for language model output is next token and so this output defines such
 information, the model never makes. So it basically predicts the next token and talking about the
@@ -600,10 +600,10 @@ we better discuss after we talk about. The second experiment which was mutual in
 looked at not only on information was input, but information was input and output and these
 experiments for masked language model would take representations.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elena Voita" timestamp="23:08">
+<turn speaker="Elena Voita" timestamp="23:08">
 
 So like in training time, which weren't masked or replaced to get cases where input and output are
 different. And what we see is actually is there are two processes going on, losing information about
@@ -613,34 +613,34 @@ accumulate information about future and masked language model looses information
 tokens, try and accumulate is contextual information and then it has to figure out a structure name
 identity.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="23:43">
+<turn speaker="Pradeep Dasigi" timestamp="23:43">
 
 Okay, that makes sense.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="23:44">
+<turn speaker="Waleed Ammar" timestamp="23:44">
 
 So one thing that I that's not clear to me now is when you complete the mission of information to
 the input and output, it is computed only with respect to that corresponding position in the
 sentence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elena Voita" timestamp="23:54">
+<turn speaker="Elena Voita" timestamp="23:54">
 
 Yes. So we consider representations of individual tokens. So we take like a stack of representations
 for each particular program.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="24:01">
+<turn speaker="Waleed Ammar" timestamp="24:01">
 
 So the, I think the one problem with this is that by design we want our transformers are designed so
 that you can take the information from surrounding tokens while you're computing the next
@@ -648,10 +648,10 @@ representation or the next layer. Right. So just, just because the lower, the lo
 have a good representation or like efficient information about the corresponding input doesn't mean
 this input was lost. Maybe you start in surrounding.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elena Voita" timestamp="24:27">
+<turn speaker="Elena Voita" timestamp="24:27">
 
 Yes, yes, yes, exactly. Exactly. Thats a really good comment. So in our, in our case situation is
 way more complex than it said in the information bottleneck citation because in our case it's your
@@ -664,18 +664,18 @@ language model. Right? So it loses information about current token identity but 
 recreate it in upper layers because it can relate to information from, from other tokens in the
 sentence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="25:22">
+<turn speaker="Waleed Ammar" timestamp="25:22">
 
 How about your second study you looked at measuring have influence flows across layers and you use
 CCA to measure that. Can you say something about that?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elena Voita" timestamp="25:31">
+<turn speaker="Elena Voita" timestamp="25:31">
 
 Tokens in a sentence interact with each other at each layer, right? And these interactions they can
 be influencing others like even some kind of information and they can receive information and the
@@ -688,17 +688,17 @@ different views can be layers in different networks and in this way we want dist
 different tasks or we can say that different views are consecutive layers in the same network and in
 this way we evaluate how much change is going on digitally.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="26:33">
+<turn speaker="Waleed Ammar" timestamp="26:33">
 
 I see. Okay. And what did you observe in your analysis?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elena Voita" timestamp="26:37">
+<turn speaker="Elena Voita" timestamp="26:37">
 
 We had a lot of experiments. So in the first one we compared different tasks, and we found that
 machine translation is closer to masked language model then each of them to language models,
@@ -710,10 +710,10 @@ model have access to all the tokens in the sentence and the second language mode
 tokens, or the next token right, it tries to make representations of the next token in the sentence,
 but machine translation and masked language model. What was on the current token. Yeah.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elena Voita" timestamp="27:31">
+<turn speaker="Elena Voita" timestamp="27:31">
 
 Then we look at how much processing is going on in each layer, do different networks and we find
 that for machine translation if you go from layer to layer is going on. So yeah, so machine
@@ -727,10 +727,10 @@ there they're going to construction stage. A lot of processes going on like a lo
 the higher layers and like experiment tried to distinguish between different types of tokens for
 looked at tokens depending on their frequency and evaluate change and influence of such tokens.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elena Voita" timestamp="28:45">
+<turn speaker="Elena Voita" timestamp="28:45">
 
 And so, but I can change how much it consumes information, how much it changes itself and token
 inference learning. How much would the representations of other tokens change if this particular
@@ -742,20 +742,20 @@ and you don't change much just like spread this information. And so and frequent
 of some kind of hubs for passing information through, so they help other tokens communicate with
 each other.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="29:39">
+<turn speaker="Pradeep Dasigi" timestamp="29:39">
 
 I guess it's interesting that the end task here in your case is machine translation, which is why
 it's very important to get all the content in the source to the target. It's be interesting to see
 how these trends vary across different tasks in machine translation. But, but yeah, I think, I think
 what you described is quite interesting.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elena Voita" timestamp="29:56">
+<turn speaker="Elena Voita" timestamp="29:56">
 
 Yeah. And also for most language models we see the two stages from looking at changes this. So if
 for MT in language model, the amount of change, like order to the frequency, but for most language
@@ -773,19 +773,19 @@ make general process like a huge influence of rare tokens. And from the first pa
 the exact form, how it appears in the model because if it has a possibility to lecture or to have a
 specific head for this,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="31:27">
+<turn speaker="Pradeep Dasigi" timestamp="31:27">
 
 That's quite interesting. In your paper, you also looked at analyzing the representations by looking
 at neighbors and how the representations of a given tokens inform their neighbors representation
 says, well, can you describe what was what your observations were from that experiment?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elena Voita" timestamp="31:43">
+<turn speaker="Elena Voita" timestamp="31:43">
 
 Yeah. So, in the last part we tried to look at which properties of representations most are defining
 for representations in space. For example, are the ordered by token identity or are they ordered by
@@ -797,10 +797,10 @@ neighbor. And the purpose of this was, again, to illustrate this general story. 
 general story that your output defines information flow in the model. For example, language model
 forgets past and far into the future.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elena Voita" timestamp="32:44">
+<turn speaker="Elena Voita" timestamp="32:44">
 
 Again, what we see in this experiment. So again we are using different machinery but they observe
 the same kind of process. Tor example, we're looking at token identity, we see that language model
@@ -811,10 +811,10 @@ left part which respond to past information and right part which responded to in
 future. So and again what we see is that it can relay its context information about past and then
 forgets it, and at the same time it tries to form this information about future.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elena Voita" timestamp="33:33">
+<turn speaker="Elena Voita" timestamp="33:33">
 
 For masked language models, again happens in two stages. The context term quarter's dangerous. You
 learn all this contextual information is being accumulated, but on the token construction stage it's
@@ -829,28 +829,28 @@ paper which is now submitted to ICLR 2020, it's tries to use a BERT to build a m
 similarity between sentences for preparation of generation tasks instead of BLEU score and that kind
 of things and by looking at different layers.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elena Voita" timestamp="34:44">
+<turn speaker="Elena Voita" timestamp="34:44">
 
 They also found a letter from and some of this metric and goes up as you go from layer to layer and
 then it goes down again. So it's the same pattern on a dome using different tasks and different
 machinery, different kinds of probing tasks and identification. But the general pattern is always
 the same.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="35:03">
+<turn speaker="Pradeep Dasigi" timestamp="35:03">
 
 That is quite interesting. So do you think there are any interesting implications of these results
 that will affect the future work in this direction?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elena Voita" timestamp="35:09">
+<turn speaker="Elena Voita" timestamp="35:09">
 
 Yes. So most of all, if you understand how your objective defines the information flow in the model,
 and maybe you could command objector for [inaudible], right? So obvious application next again, if
@@ -860,10 +860,10 @@ example, that you may need different layers or different kinds of applications, 
 informative layers can do not just the top ones, but some where in the middle and you understands
 its empty task.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Elena Voita" timestamp="35:46">
+<turn speaker="Elena Voita" timestamp="35:46">
 
 It's define it. So the performance is kind of [inaudible] but for language model is not monitored
 right, again it is up and down. And also it would be really fun to connect this to stories. For
@@ -875,36 +875,36 @@ information probe will take place in different models. Examples for stuff. It ca
 different attention heads for LSTMS or we saw that behavior is different, for example, can be an
 Urus trait in some, some tokens in so and some other kind of stuff.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="36:35">
+<turn speaker="Pradeep Dasigi" timestamp="36:35">
 
 Thanks a lot for talking about these two papers with us, Lena. Is there anything else that you want
 to talk about these papers that we missed?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="36:42">
+<turn speaker="Pradeep Dasigi" timestamp="36:42">
 
 I would just like to mention most of this work was done with my research parents and went token
 center and the first paper about heads was in collaboration with David Talbot, who is the research
 head of Yandex translations. He was really excited about syntactic structure and one of my interns
 and my self.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="37:01">
+<turn speaker="Pradeep Dasigi" timestamp="37:01">
 
 Thanks a lot for joining us for this episode.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="37:03">
+<turn speaker="Pradeep Dasigi" timestamp="37:03">
 
 Thank you for invitation it's been really great.
 
-</Turn>
+</turn>

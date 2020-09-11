@@ -8,23 +8,23 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting recent work in
 natural language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is Matt Gardner and Waleed Ammar, we are research scientists at the Allen Institute for
 Artificial Intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:12">
+<turn speaker="Waleed Ammar" timestamp="00:12">
 
 Today's paper is titled Tying Word Vectors and Word Classifiers: A Loss Framework for Language
 Modeling. It was published at ICLR 2017 by Hakan Inan, Khashayar Khosravi at Stanford and Richard
@@ -34,10 +34,10 @@ It's often formulated as a sequence tagging problem where the input is a sequenc
 output at each position is a probability distribution over the possible next words in the
 vocabulary.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:54">
+<turn speaker="Matt Gardner" timestamp="00:54">
 
 You said it's often formulated that way. How else can you formulate this problem? So classic
 formulations of language modeling is just a probability, a conditional probability distribution.
@@ -47,20 +47,20 @@ this problem where the input at every position is a word and the corresponding a
 your predicting the following word. So it's like more, it's a specific formulation of this more
 general condition distribution.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="01:37">
+<turn speaker="Matt Gardner" timestamp="01:37">
 
 Right. So it's not that this is some new formulation it's just a new way to view the standard
 language modeling task, right? You instead of thinking about this in terms of probability
 distribution of your next word, given some context, you can think about this as a sequence tagging
 problem and it's actually the same task, right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="01:57">
+<turn speaker="Waleed Ammar" timestamp="01:57">
 
 It is. Yeah. And it's like, I wouldn't say it's a new thing. So the paper is not proposing this
 formulation but is building on it. So if we're using a neural network to do this task, the output
@@ -72,10 +72,10 @@ embedding to distinguish them from the embeddings that we use to represent the i
 the standard formulation of this problem this output word embeddings are completely independent of
 each other and also independent of the embeddings used as input to the neural network.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="02:55">
+<turn speaker="Waleed Ammar" timestamp="02:55">
 
 And the paper is basically proposing an improvement of over the standard formulation. So the first
 thing the authors proposes to is to leverage the word similarity based on the word embeddings to
@@ -86,10 +86,10 @@ the observed word, then the loss is going to be zero and any probability mass th
 to another word increases the loss. It doesn't matter whether this other, word that you assign some
 probability for is related or very close to the word that was observed.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="03:47">
+<turn speaker="Waleed Ammar" timestamp="03:47">
 
 So intuitively this is not all the mistakes that the model makes should be penalized similarly for
 example, let's say the observed word sequence is "I saw a car." but the model predicts "I saw a
@@ -98,10 +98,10 @@ the paper basically proposes an additional term to the loss function, which comp
 turn between the distribution predicted by the model and the target distribution in which the words
 similar to the observed word will have non zero probability.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="04:26">
+<turn speaker="Matt Gardner" timestamp="04:26">
 
 This is really interesting. I saw a talk recently by Xinlei Chen, who is a PhD student at Carnegie
 Mellon university who worked on the NEIL project. Never ending image learner, and that he had some
@@ -115,10 +115,10 @@ but because in language modeling it is essentially a categorical distribution of
 You could think of the word as a class and so it's really not that much of a stretch to go to apply
 the same ideas in this setting. That's interesting.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="05:25">
+<turn speaker="Waleed Ammar" timestamp="05:25">
 
 Yeah. I think at the same idea can be applied anywhere where we're trying to predict from a large
 number of classes and this seems like a fine application. So this is basically the first part of the
@@ -129,32 +129,32 @@ suggest interesting hypothesis, which is that you should be tying the input and 
 embeddings to reduce the parameter space without reducing the expressiveness of the model. And
 therefore you're going to improve the efficiency of training the language models.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="06:12">
+<turn speaker="Matt Gardner" timestamp="06:12">
 
 When was this paper published?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="06:13">
+<turn speaker="Waleed Ammar" timestamp="06:13">
 
 It's an ICLR 2017 paper.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="06:16">
+<turn speaker="Matt Gardner" timestamp="06:16">
 
 I feel like that particular idea tying input and output embeddings is a very old idea. Is this paper
 really claiming that its new?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="06:23">
+<turn speaker="Waleed Ammar" timestamp="06:23">
 
 So the paper does quote several previous work that has similar ideas. So I'm going to quote the
 paper here. "We have recently come across a concurrent preprint for Press and Wolf, 2016 where the
@@ -168,35 +168,35 @@ implicitly built into these models, rather than proposed as a supplement to a ba
 Consequently, possibility of improvement was not particularly pursued by sharing input and output
 representations. End of quote.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="07:32">
+<turn speaker="Matt Gardner" timestamp="07:32">
 
 Interesting. Okay. I know I've talked to lots of people about this idea just in conversations. I
 guess I can't think of particular papers to point to with that have explored this because this isn't
 my area.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="07:47">
+<turn speaker="Waleed Ammar" timestamp="07:47">
 
 Right. I mean yeah, I feel like it's it's a very natural thing to do. It's nice to have some
 stereotypical justification for it and clean experimentation to show it's effect. I think that's the
 value of this paper is bringing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="08:00">
+<turn speaker="Matt Gardner" timestamp="08:00">
 
 Okay.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="08:03">
+<turn speaker="Waleed Ammar" timestamp="08:03">
 
 So let's look at the experimental results because that's basically, these are basically the two
 ideas in the paper. So there is a figure two on table one report, the perplexity of four different
@@ -212,26 +212,26 @@ loss function. And the paper claims a new state-of-the-art results on the PTB on
 dataset by modifying the previous state-of-the-art model of Zilly et al. 2016, to share the input
 and output embeddings in their model.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="09:27">
+<turn speaker="Waleed Ammar" timestamp="09:27">
 
 So this modification resulted in a 25% reduction in the number of parameters and 2.5 points
 improvement in perplexity.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="09:35">
+<turn speaker="Matt Gardner" timestamp="09:35">
 
 So was there anything that you particularly liked about this paper? Like would you use this in
 practice?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="09:42">
+<turn speaker="Waleed Ammar" timestamp="09:42">
 
 Yeah. I mean it seems like a fairly reasonable thing to do. Especially if you don't have a ton of
 data to learn from. Because being more efficient in learning is more relevant when you have a
@@ -241,10 +241,10 @@ relatively small corpora so the biggest corpus they used, I think it has 2 milli
 about a thousand times less than the most recent papers on language modeling basically the 1 billion
 word corpus.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="10:34">
+<turn speaker="Waleed Ammar" timestamp="10:34">
 
 The other thing that I would improve about this paper is maybe I'd like to see more of an extrinsic
 evaluation. So perplexity does not always correspond to an improvement in the actual tasks that we
@@ -254,11 +254,11 @@ could measure a BLEU score on summarization. You could measure a ROUGE and peopl
 before. But in general, let's say it's a well written paper, it proposes a practical solution with a
 reasonable justification. So yeah, I would use it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="11:17">
+<turn speaker="Matt Gardner" timestamp="11:17">
 
 Great. Thanks for presenting the paper.
 
-</Turn>
+</turn>

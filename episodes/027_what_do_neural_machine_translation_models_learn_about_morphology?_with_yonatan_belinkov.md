@@ -8,47 +8,47 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting recent work in
 natural language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is Matt Gardner and Waleed Ammar. We are research scientists at the Allen Institute for
 Artificial Intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:12">
+<turn speaker="Waleed Ammar" timestamp="00:12">
 
 So our guest today is Yonatan Belinkov. He is a PhD student at MIT working with Dr. James Glass. His
 current research interests are in developing and understanding vector representations for language,
 especially based on neural network models. It's a pleasure having you with us today Yonatan.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yonatan Belinkov" timestamp="00:32">
+<turn speaker="Yonatan Belinkov" timestamp="00:32">
 
 Hi, thanks for having me.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:36">
+<turn speaker="Waleed Ammar" timestamp="00:36">
 
 So that paper we're going to talk about today is called: What do Neural Machine Translation Models
 Learn about Morphology? Could you give us like a brief overview on the paper?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yonatan Belinkov" timestamp="00:49">
+<turn speaker="Yonatan Belinkov" timestamp="00:49">
 
 Sure. So our main goal in this work is to understand what's going on inside a neural network models.
 And the motivation is that often these models are thought of as a black box. So maybe you train them
@@ -60,10 +60,10 @@ neural network models for machine translation and what they are actually able to
 language, the source language and the target language while they are being trained from a dataset of
 parallel sentences.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yonatan Belinkov" timestamp="01:46">
+<turn speaker="Yonatan Belinkov" timestamp="01:46">
 
 And the methodology that we took is pretty straightforward. So the idea is to first take a standard
 machine translation system and train it on large amounts of sentences then extract some hidden
@@ -75,10 +75,10 @@ task. For example, part of speech tagging and we train a classifier to predict p
 tagging for every word based on those features that we extracted from the machine translation
 system. So at this time we do not update the weights of the neural machine translation system.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yonatan Belinkov" timestamp="02:52">
+<turn speaker="Yonatan Belinkov" timestamp="02:52">
 
 So after training them, it's frozen and we do not touch them anymore. So we only train our simple
 classifier on a supervised dataset and evaluate the quality of the classifier on the supervised
@@ -87,10 +87,10 @@ classifier can tell us something about the input features. So if we have good in
 train a good classifier and that in turns tells us something about original machine translation
 system. And what it has learned for the given task that we are evaluating the classifier on.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="03:31">
+<turn speaker="Waleed Ammar" timestamp="03:31">
 
 Sounds like a very simple procedure. And I'm quite surprised that people haven't tried doing this
 before. The closest thing I I know off which is kind of related but not quite is the work that Yulia
@@ -104,10 +104,10 @@ these words. And tries to find the, if you get a better alignment between these 
 linguistic features then she would assume that these embeddings are good at representing these
 linguistic phenomenon.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yonatan Belinkov" timestamp="04:58">
+<turn speaker="Yonatan Belinkov" timestamp="04:58">
 
 Right. So I think a number of people had worked on evaluating word embeddings for specific tasks
 using, so the work you mentioned is one way to do that, a slightly different way to do that similar
@@ -121,10 +121,10 @@ Kevin Knight from USC had worked on machine translation and they looked at what'
 syntax in neural machine translation using a very similar methodology. So this is work from a
 previous EMNLP and I found some interesting things about English syntax.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="06:20">
+<turn speaker="Matt Gardner" timestamp="06:20">
 
 I guess there are a couple of papers that are very recent around the same time that you've been
 doing this work that do very similar things. So Matt Peters and Waleed Ammar have an ACL paper. The
@@ -134,10 +134,10 @@ up is exactly the same where you train some other model in these other cases a l
 fixed the representation and you apply it in some downstream task, in their case named entity
 recognition. And then there's also the unsupervised sentiment neuron by folks at OpenAI
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="07:05">
+<turn speaker="Waleed Ammar" timestamp="07:05">
 
 Yes, I would say the main distinction in my opinion between this line of work and that is the goal.
 The goal here is to examine or to really like understand the model for machine translation, the main
@@ -145,10 +145,10 @@ tasks better, and this other sort of task part of speech tagging is only used fo
 in my paper in ACL the goal was to improve the other task, which was sequence labeling and using the
 language model in order to achieve that. So I think that's,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yonatan Belinkov" timestamp="07:43">
+<turn speaker="Yonatan Belinkov" timestamp="07:43">
 
 Yeah, I think, I think that's an important distinction. So we actually do not really care if we are
 able to get a state-of-the-art morphological tagging performance. So that's not so important. I
@@ -157,10 +157,10 @@ machine translation system are very strong and they do get pretty nice results. 
 to improve the state-of-the-art on morphology or part of speech tagging, but use this evaluation is
 the way to get some insight into what's going on inside the machine translation system.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="08:16">
+<turn speaker="Matt Gardner" timestamp="08:16">
 
 Yeah. The reason I bring this up, I think your work is really interesting and it's in this line of
 work on representation learning, right? Where everyone, it seems like, well not everyone, but a lot
@@ -170,10 +170,10 @@ wide variety of tasks and your work fits really nicely in that line. Even though
 it's more explicitly studying the representations then performance on the downstream task, which is
 interesting
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yonatan Belinkov" timestamp="08:48">
+<turn speaker="Yonatan Belinkov" timestamp="08:48">
 
 Right and I think the two are kind of related. So like a longer term goal of, of our work is that if
 we understand these representation better, we can improve representation learning for some like real
@@ -182,17 +182,17 @@ can improve the machine translation system and we do have some followup work tha
 still not out where we show we can improve the decoder based on some of the insights that this work
 has has given us.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="09:21">
+<turn speaker="Waleed Ammar" timestamp="09:21">
 
 Cool. So can you tell us a little more detail about the model for a neural machine translation?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yonatan Belinkov" timestamp="09:27">
+<turn speaker="Yonatan Belinkov" timestamp="09:27">
 
 Sure. So we use a pretty standard machine translation system, which is composed of an
 encoder/decoder framework with an attention mechanism. So the idea is you represent words as
@@ -208,34 +208,34 @@ years now and it's doing pretty good results on machine translation. The particu
 that we use was a two layers of an LSTM, pretty shallow, but we also use kind of not super big
 datasets. So we found that that was enough.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="10:54">
+<turn speaker="Waleed Ammar" timestamp="10:54">
 
 And the target words are generated with a softmax or a, is [inaudible]?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yonatan Belinkov" timestamp="11:00">
+<turn speaker="Yonatan Belinkov" timestamp="11:00">
 
 Yes, yes. Target words get the softmax, vocabulary I think, I think we took like a default in one of
 the, in the tool that we were using which is seq2seq attend by Harvard. So it was 60,000 words on
 each side.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="11:16">
+<turn speaker="Waleed Ammar" timestamp="11:16">
 
 Right, so can you tell us more about the tasks that you use to investigate the model's ability to
 learn morphology?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yonatan Belinkov" timestamp="11:23">
+<turn speaker="Yonatan Belinkov" timestamp="11:23">
 
 Yes. So we focused on morphology and we specifically chose languages where morphology is more of an
 issue. So our languages that we experiment with were Arabic, Hebrew, Czech, German and French. And
@@ -247,10 +247,10 @@ trying to generate the correct morphological form, that could be kind of challen
 that we evaluated were first part of speech tagging, which is basically just concerned with for
 every word saying if it's part of speech is a verb or noun or an adjective.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yonatan Belinkov" timestamp="12:26">
+<turn speaker="Yonatan Belinkov" timestamp="12:26">
 
 And so on, a very simple task, but also kind of a core task to start with. And we also look at
 morphological tagging, which in addition to identifying the part of speech is also concerned with
@@ -259,31 +259,31 @@ gender, number and so on. So in some of the languages that we experiment with, t
 complex text sets. So we have like, between hundreds of possible tags to thousands of possible tags.
 So it's a pretty, it could be a pretty challenging tasks.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="13:06">
+<turn speaker="Waleed Ammar" timestamp="13:06">
 
 Which language had the largest number of morphological classes?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yonatan Belinkov" timestamp="13:12">
+<turn speaker="Yonatan Belinkov" timestamp="13:12">
 
 I think you can guess.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="13:15">
+<turn speaker="Waleed Ammar" timestamp="13:15">
 
 I mean several of these are actually quite morphologically complex, so I'm not sure.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yonatan Belinkov" timestamp="13:22">
+<turn speaker="Yonatan Belinkov" timestamp="13:22">
 
 Yeah, well, I guess it also depends on the, on the datasets, but Arabic in our case had about 2000
 tags, possible tags that we have seen in the training set, so that was the most, that was the
@@ -294,17 +294,17 @@ neural net with just one hidden layer. So we specifically wanted to take somethi
 simple as possible. So we are able to focus on the quality of the representation and not on some
 issues like context or other things.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="14:11">
+<turn speaker="Waleed Ammar" timestamp="14:11">
 
 Yeah, that makes sense. So what are the main findings based on this inspection?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yonatan Belinkov" timestamp="14:17">
+<turn speaker="Yonatan Belinkov" timestamp="14:17">
 
 All right. So we looked at several factors in the neural machine translation architectures or
 basically design choices that one has to consider when coming up with those systems. So one was what
@@ -319,17 +319,17 @@ using a character CNN leads to much better representations for morphology, it al
 translation quality if you measure BLEU which makes sense. I mean you improve the presentation
 qualities so you're able to generate better translations.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="15:38">
+<turn speaker="Waleed Ammar" timestamp="15:38">
 
 So it's common to use both word level and character level embeddings, did you try doing that?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yonatan Belinkov" timestamp="15:45">
+<turn speaker="Yonatan Belinkov" timestamp="15:45">
 
 No, we have not combined. I think that's, that makes sense. So one thing we've seen is that these
 two behave differently with different frequencies of words. So the character based embeddings are
@@ -339,34 +339,34 @@ if you go to very high frequent words they don't really help. So the, the word b
 kind of enough. So I think, yeah, a combined character word model could maybe use the benefits of
 both of these.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="16:27">
+<turn speaker="Matt Gardner" timestamp="16:27">
 
 Looking at the graphs in your paper in figure 2 where you show plots of word frequency versus
 accuracy, comparing word level models versus character level models. It doesn't look like there's
 any place that the word model dominates. Like I'm not sure that you get anything at all.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yonatan Belinkov" timestamp="16:46">
+<turn speaker="Yonatan Belinkov" timestamp="16:46">
 
 Yeah. I don't think it does better than the character based model, but it's as good, you know?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="16:52">
+<turn speaker="Matt Gardner" timestamp="16:52">
 
 Yeah. It just makes me wonder what benefit you would get from combining them because there isn't an
 obvious spot in there where the word, the word model does better than the character model.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yonatan Belinkov" timestamp="17:02">
+<turn speaker="Yonatan Belinkov" timestamp="17:02">
 
 Yes, that's a good point I think. So. I can't, I don't have those results here, but I can tell you
 of some anecdotal results where I've seen that a character based model actually fails compared to a
@@ -376,10 +376,10 @@ find like presumably similar words, but they may not have the same meaning. And 
 worked on Arabic before it's kind of an acute example. So it's anecdotal, but it may be so that
 could explain why sometimes it makes sense to combine these two.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="17:46">
+<turn speaker="Matt Gardner" timestamp="17:46">
 
 Okay. I know the motivation in other tasks like question/answering for combining the two is to
 better handle like named entities things that are words that are totally out of vocabulary. And I
@@ -387,30 +387,30 @@ don't follow machine translation as much, so I'm just not even like, do people a
 machine translation, it's really common in question/answering to use this concatenation, but I don't
 know if it's common.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yonatan Belinkov" timestamp="18:09">
+<turn speaker="Yonatan Belinkov" timestamp="18:09">
 
 Well, I've seen it explore, I think there's work by Kyunghyun Cho at NYUthat does a combination if
 I'm not mistaken. What is maybe more common nowadays is to use a sub word unit like BPE byte pair
 encoding. So it's an unsupervised way to split words into some sub words, which don't really have a
 meaning. So in practice that's what's done like in many systems including Google translate.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="18:41">
+<turn speaker="Matt Gardner" timestamp="18:41">
 
 Interesting. Another thing that I thought was just a little bit surprising in your architecture
 decision was that you only had a uni-directional LSTM instead of a bi-directional LSTM is, it's
 another point where I wondered if that's just a common thing in machine translation that I'm not
 familiar with, but it's really common everywhere else.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yonatan Belinkov" timestamp="18:58">
+<turn speaker="Yonatan Belinkov" timestamp="18:58">
 
 No, I would say the common thing to do is have a bi-directional LSTM also in machine translation at
 least for the first layer, maybe not, not all of them. We have tried it in other experiments and
@@ -418,34 +418,34 @@ we've seen overall maybe better results using a bi-directional encoder, but qual
 relative performances are kind of similar so we don't get different insights. You just get slightly
 better numbers.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="19:26">
+<turn speaker="Matt Gardner" timestamp="19:26">
 
 Right. So, yeah. This, this lets you run some interesting comparison experiments cheaper without
 really changing the result, which is nice.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yonatan Belinkov" timestamp="19:35">
+<turn speaker="Yonatan Belinkov" timestamp="19:35">
 
 Yep.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="19:36">
+<turn speaker="Waleed Ammar" timestamp="19:36">
 
 So we have a figure that shows the increase in accuracy for various classes when you use character
 as opposed to a word based representations. Do you have any comments like the biggest increases or
 the lowest increases?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yonatan Belinkov" timestamp="19:57">
+<turn speaker="Yonatan Belinkov" timestamp="19:57">
 
 Yeah, so we were also interested in seeing if there are certain tags or certain word classes where
 character base models are especially important. And we found that they are specially helpful with
@@ -456,10 +456,10 @@ have certain suffix. So you take the, you take the singular form and you add a s
 plural form. And it's nice to see that the character based model is able to capture these patterns
 in the data and really improve upon the word based models. So that's one factor that we've seen.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yonatan Belinkov" timestamp="20:52">
+<turn speaker="Yonatan Belinkov" timestamp="20:52">
 
 The other kind of nice aspect that we've seen is that determiners are captured better by the
 character based model. So these are tags where you have something like a DT+. So DT+N is a
@@ -468,10 +468,10 @@ marked by two letter prefix. So a word based model doesn't really know how to di
 noun with a determiner or noun without a determiner, but a character based model has this ability.
 So it's nice to see that, some of these tags are better captured by the character based model.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="21:37">
+<turn speaker="Matt Gardner" timestamp="21:37">
 
 I guess this makes me think of how we used to do tagging and other kinds of things back before the
 days of neural nets, before these were popular. And you would just write some feature extractors
@@ -485,25 +485,25 @@ extraction and then find correlations, remove the correlation from the CNN repre
 of these features and see what's left. I don't know, just another way to try to tease apart what's
 going on here versus what we used to do back in the day.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yonatan Belinkov" timestamp="22:36">
+<turn speaker="Yonatan Belinkov" timestamp="22:36">
 
 Yeah, that sounds like a cool investigation.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="22:40">
+<turn speaker="Waleed Ammar" timestamp="22:40">
 
 So there is also an investigation for the encoder depths. Are there any comments you want to make
 about the results here?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yonatan Belinkov" timestamp="22:48">
+<turn speaker="Yonatan Belinkov" timestamp="22:48">
 
 Yes. So that's the second aspect that we've looked into. So how deep do your representation is in
 the Neural machine translation system. And the motivation here is to see what's going on in
@@ -516,10 +516,10 @@ your performance on morphology. So it turns out that the first layer is actually
 the second on the tasks of part of speech tagging and morphological tagging. So to me this was,
 yeah,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="23:51">
+<turn speaker="Waleed Ammar" timestamp="23:51">
 
 I find the fact that a layer one is getting better results then layer zero to be interesting
 actually, because most of the time the word, even though like some words change their morphology or
@@ -528,92 +528,92 @@ are common in a particular class will often appear in this class. So I would hav
 zero, the word level representation without including any context to give good enough results, but
 the results are showing otherwise,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yonatan Belinkov" timestamp="24:29">
+<turn speaker="Yonatan Belinkov" timestamp="24:29">
 
 Yes. I think the context turns out to be pretty important. And you know, even like plain old HMMs do
 use context, right? To predict part of speech tags.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="24:42">
+<turn speaker="Matt Gardner" timestamp="24:42">
 
 And words that are written the same but have different meanings like read and read or whatever. You
 have to have context in order to distinguish the morphological tack. Right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="24:55">
+<turn speaker="Waleed Ammar" timestamp="24:55">
 
 Definitely.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="24:57">
+<turn speaker="Matt Gardner" timestamp="24:57">
 
 And this particular experiment is one where I wonder if you would see different results if you used
 bi-directional LSTMs instead of uni-directional LSTMs.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yonatan Belinkov" timestamp="25:06">
+<turn speaker="Yonatan Belinkov" timestamp="25:06">
 
 So the answer is the answer is no. So I don't show it in the paper, but we've done this experiment
 and the results are, the trends are the same. So layer one is better than layer zero, but it also,
 it's also better than layer two.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="25:22">
+<turn speaker="Matt Gardner" timestamp="25:22">
 
 Interesting.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yonatan Belinkov" timestamp="25:23">
+<turn speaker="Yonatan Belinkov" timestamp="25:23">
 
 I think that's an interesting point because sometimes we think that deeper is better, right? And,
 here's a case where certain information is better captured in the lower layer, in layer one, and
 then it is captured in layer two.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="25:38">
+<turn speaker="Matt Gardner" timestamp="25:38">
 
 Yeah. If you think of an analogy to what people do with a computer vision and ImageNet, you wouldn't
 really want to take the representations from the top layers of your VGG model and use that to
 predict edges. Whereas the lower hidden layers are much better at predicting edges because that's
 what they're finding. Right. So this actually makes a lot of sense.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yonatan Belinkov" timestamp="26:03">
+<turn speaker="Yonatan Belinkov" timestamp="26:03">
 
 Yeah, I think that's a very good point. And this raises the question of what is actually being
 captured in the top layers in the machine translation system, like compared to the you know,
 division analogy, is there some more global property that is maybe captured there.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="26:23">
+<turn speaker="Matt Gardner" timestamp="26:23">
 
 Do you have any good idea of how to test what that would be?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yonatan Belinkov" timestamp="26:27">
+<turn speaker="Yonatan Belinkov" timestamp="26:27">
 
 So, yeah. Well one way to do that and that's something that we've been working on in followup work
 is to use a similar methodology but define a different kind of tasks. So instead of looking at
@@ -622,40 +622,40 @@ results that show that for semantic tagging tasks more information is captured i
 of the network then in the lower layers which kind of aligns with what we might expect. So I think
 that's nice.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="27:02">
+<turn speaker="Matt Gardner" timestamp="27:02">
 
 Cool.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="27:03">
+<turn speaker="Waleed Ammar" timestamp="27:03">
 
 Nice. So this work is in collaboration with QCRI, I'm curious to know how this collaboration came
 together and how it's working.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yonatan Belinkov" timestamp="27:11">
+<turn speaker="Yonatan Belinkov" timestamp="27:11">
 
 Yeah, so this work is with a number of people, Nadir Durrani, Fahim Dalvi, and Hassan Hassan all
 from QCRI and of course with my advisor Jim glass.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="27:26">
+<turn speaker="Matt Gardner" timestamp="27:26">
 
 Sorry, QCRI. What's that?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yonatan Belinkov" timestamp="27:28">
+<turn speaker="Yonatan Belinkov" timestamp="27:28">
 
 Yes, that's the Qatar Qatar Computing Research Institute. So it's it's a computer science research
 Institute in Qatar which has a fairly large number of people working in all sorts of fields of
@@ -665,10 +665,10 @@ with QCRI that's been going on for several years now in in various fields of com
 our work is part of the language technologies group there that is working on a couple of different
 things.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yonatan Belinkov" timestamp="28:16">
+<turn speaker="Yonatan Belinkov" timestamp="28:16">
 
 So there are people that are working on community question/answering and we've been contributing to
 this work in a number of iterations of SemEval competitions and in other publications. And there's
@@ -677,19 +677,19 @@ that are as you know, are very difficult to recognize. And are often very differ
 And finally there's another group of people that are working on machine translation. So this
 particular paper has been done in collaboration with them.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="29:00">
+<turn speaker="Waleed Ammar" timestamp="29:00">
 
 Excellent. Thank you very much for making the time to record with us. It was a great pleasure having
 you with us.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Yonatan Belinkov" timestamp="29:07">
+<turn speaker="Yonatan Belinkov" timestamp="29:07">
 
 Thanks for inviting me.
 
-</Turn>
+</turn>

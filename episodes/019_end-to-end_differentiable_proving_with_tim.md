@@ -8,23 +8,23 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting recent work in
 natural language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is Matt Gardner and Waleed Ammar. We are research scientists at the Allen Institute for
 Artificial Intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:11">
+<turn speaker="Matt Gardner" timestamp="00:11">
 
 All right. For today's episode, we have Tim Rocktäschel with us to talk about his paper titled: End-
 to-end Differentiable Proving. Tim recently finished a PhD with Sebastian Riedel at University
@@ -34,10 +34,10 @@ about. This differentiable proving paper is in this line of like, I have a knowl
 infer new facts about it and he's got some cool ideas about how to do this in a nice way. So, Tim,
 you want to tell us about how it works?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tim Rocktäschel" timestamp="00:49">
+<turn speaker="Tim Rocktäschel" timestamp="00:49">
 
 Sure. first of all, thanks a lot for the invitation. I'm very happy to be here. So I guess as you
 said, we want to infer facts given a knowledge base of known facts. That has been, I guess tackled
@@ -49,10 +49,10 @@ one of these approaches. And what we've been, I guess, exploring is for a long t
 combination of logic and these neural representations. So these vector representations of entities
 and predicates.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tim Rocktäschel" timestamp="01:47">
+<turn speaker="Tim Rocktäschel" timestamp="01:47">
 
 And previously we've been, what we've been doing is with we were interested in, I guess these
 approaches that the score or learn to score facts on a quite local basis. So basically these are
@@ -64,10 +64,10 @@ models. There are instances such as matrix factorization, tensor factorization a
 proposals in the previous years. And what's nice about these models is that they are very scalable
 so they can be trained on very large knowledge bases and test time inferences is extremely fast.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tim Rocktäschel" timestamp="02:45">
+<turn speaker="Tim Rocktäschel" timestamp="02:45">
 
 You just take a statement where you want to predict the truthness and you just take, I guess the
 three symbols are predicate and the two constants map them to vector representations and then you
@@ -80,18 +80,18 @@ rules. So we didn't just want to regularize these representations because surely
 limitations. We actually wanted to be able to, I guess do more explicit first order logic reasoning,
 but with a symbol representation. So that's basically the setup of this paper.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="03:45">
+<turn speaker="Matt Gardner" timestamp="03:45">
 
 It looks to me like the gist of this paper is you take Prolog and you essentially do the whole
 algorithm just in a differentiable way. Is that a fair characterization of what you're doing?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tim Rocktäschel" timestamp="04:00">
+<turn speaker="Tim Rocktäschel" timestamp="04:00">
 
 I think that's partly right. I think it makes sense to say that we take Prolog, but we actually use
 Prolog, the backward chaining algorithm in Prolog to construct a neural network that represents all
@@ -100,18 +100,18 @@ that includes all possible proofs, but now we can basically back propagate throu
 network that means we can learn, use similar representations based on factual knowledge that we have
 in a knowledge.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="04:31">
+<turn speaker="Matt Gardner" timestamp="04:31">
 
 So in what instances do you think this actually helps you? Like what can't you do with the typical
 Prolog backward chaining algorithm that you can do with this?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tim Rocktäschel" timestamp="04:40">
+<turn speaker="Tim Rocktäschel" timestamp="04:40">
 
 Yeah, sorry. Yeah. What you can't do with typical Prolog backward chaining or any symbolic theorem
 prover if you want to say, is that you can't really learn that for instance, a grandfather of symbol
@@ -125,18 +125,18 @@ representations from large knowledge bases and make use of the generalization ab
 by learning such subsymbolic vector representation, but at the same time also be able to do explicit
 logical inference if it makes sense. Right.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="05:45">
+<turn speaker="Waleed Ammar" timestamp="05:45">
 
 So what's the best you can construct the neural network subset? It remains feasible to do with this
 exploration?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tim Rocktäschel" timestamp="05:53">
+<turn speaker="Tim Rocktäschel" timestamp="05:53">
 
 Yeah, so that's, that's really great question because that directly can set the limitation, so we
 can do a depth of two with rules that have up to three atoms in the body. So basically it's like the
@@ -147,10 +147,10 @@ to some predefined depth. We get this explosion in the breath of this tree that 
 proofs. We have to have to constrain that quite a bit and we also have to apply various tricks to
 make this remotely scalable for medium sized knowledge bases.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="06:42">
+<turn speaker="Matt Gardner" timestamp="06:42">
 
 Interesting. So thinking about like when is this like applicable? So when would you actually need to
 know grandfather of versus grandpa? For like a small knowledge base, you would think that the
@@ -161,10 +161,10 @@ saying is that we can't scale to that size yet. So I guess you said it's more in
 proof tree and not as is it also, does it also have scalability problems and like the number of
 ground atoms? Those are different, right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tim Rocktäschel" timestamp="07:30">
+<turn speaker="Tim Rocktäschel" timestamp="07:30">
 
 Yeah, different but also related. So if you have, let's say you have, you have a rule that says a
 grandfather is a father of a parent, right? So you have grandfather of X, Y as the rule head and the
@@ -176,10 +176,10 @@ chaining, symbolic backward chaining can't do because at this point there's a mi
 two symbols. Anyway, so now we take basically grandpa of query and we can translate that into two
 crews, father of and parent of.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tim Rocktäschel" timestamp="08:21">
+<turn speaker="Tim Rocktäschel" timestamp="08:21">
 
 But now we actually get the substitution of Z with every possible, with every possible second
 argument and ground atoms in the knowledge base, right? So if you have a knowledge base of let's say
@@ -191,19 +191,19 @@ in the knowledge base, right? Because we can't really stop proofs by just saying
 parent of for instance are not the same symbol, we still have to continue proofs because we have
 this differentiable I guess similarity metric in the vector space.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="09:16">
+<turn speaker="Matt Gardner" timestamp="09:16">
 
 Yeah. So I'm not sure how much detail we should go into the method in audio form. Do you want to
 give like a really high level summary of how this model actually works? Like what kind of graph do
 you construct?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tim Rocktäschel" timestamp="09:33">
+<turn speaker="Tim Rocktäschel" timestamp="09:33">
 
 I can try. It's as you said, I think it's quite hard to do that in audio form, but we can give it a
 try. So I think the, on a high level, that's maybe the first time I went backward chaining is doing
@@ -211,10 +211,10 @@ on a high level, on a high level, there's two functions called OR and AND and wh
 given a goal, it's trying to apply rules in the model's base, right, It's trying to see, first of
 all, can given the goal, can we find that goal in the knowledge base, then we're done, right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tim Rocktäschel" timestamp="10:09">
+<turn speaker="Tim Rocktäschel" timestamp="10:09">
 
 Then we have a proof. We can say we just know that that fact is true. But if that's not the case,
 then given rules, we are basically translating that goal into subgoals. Right? If we have a rule
@@ -225,10 +225,10 @@ basically just iteratively trying to prove all the subgoals in the buddy of the 
 these two functions now call each other recursively. So the way AND is proving the subgoal is by
 calling OR.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tim Rocktäschel" timestamp="11:02">
+<turn speaker="Tim Rocktäschel" timestamp="11:02">
 
 So we have this recursive structure, what's very important is that this matching between the goal
 and the rule head, is done by a function. It's called unification. So basically we are really
@@ -240,10 +240,10 @@ point finding the two constant symbols in our goal with the two variables in the
 when we use exactly these bound variables in subsequent steps in the proving when looking at the
 body of the rule.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tim Rocktäschel" timestamp="12:00">
+<turn speaker="Tim Rocktäschel" timestamp="12:00">
 
 So this is how roughly I guess symbolic word chaining works. Now what we are doing is to take that
 algorithm and building up a computation graph that lets us prove method spilled proofs for a given
@@ -255,10 +255,10 @@ not just comparing their grandfatherOf and, grandpaOf is the same symbol, but we
 mapping both symbols into a vector space and then doing the comparison using a Radial Basis Function
 kernel.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tim Rocktäschel" timestamp="12:52">
+<turn speaker="Tim Rocktäschel" timestamp="12:52">
 
 Right. So what's now funny is that I guess the way this neural network is constructed really looks
 like the backward chaining algorithm, but what we actually passing around a partial constructed
@@ -269,18 +269,18 @@ prove in a rule. And on the other hand, they pass around a proof state, which co
 substitutions head, but also this partially constructed neural network. So I think that's the extent
 to which I guess I can explain that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="13:40">
+<turn speaker="Matt Gardner" timestamp="13:40">
 
 And that was good. That was nice. Are there any constraints on what you can unify in this symbolic
 unification variant?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tim Rocktäschel" timestamp="13:50">
+<turn speaker="Tim Rocktäschel" timestamp="13:50">
 
 So one of the things that we don't support that is supported by Prolog are function terms. So if
 your pencils have a function that says fatherOf Bart, and it shouldn't return Homer, right? So we
@@ -288,20 +288,20 @@ don't, we don't have that, we don't support that. We really just support I guess
 that you get, I guess, function-free-first-order logic. So anything there is fine. Unary atoms
 unrepaired atoms and whatnot.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="14:18">
+<turn speaker="Matt Gardner" timestamp="14:18">
 
 There was one thing that confused me is I read the paper and looking at figure one in your paper,
 you show an example of a constructed proof tree and it shows that fatherOf I,Z can't unify with the
 grandfatherOf rule, where this grandfather of rule says that if the parents of someone's father is
 the grandfather. And so I was confused as to why that failed. It looked like it should have unified.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tim Rocktäschel" timestamp="14:47">
+<turn speaker="Tim Rocktäschel" timestamp="14:47">
 
 Yeah. So we we didn't mention that I think in the paper what you usually do in backward chaining is
 that you also have some cycle detection. So if you already have applied the rule and you already
@@ -309,25 +309,25 @@ have a binding of X to something like you shouldn't apply that again. But I thin
 of doing some more sophisticated things. So I think sometimes it's fine to do such cycles, but in
 our case, we just didn't we just didn't support that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="15:12">
+<turn speaker="Matt Gardner" timestamp="15:12">
 
 Okay. Yeah, that makes sense.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="15:13">
+<turn speaker="Waleed Ammar" timestamp="15:13">
 
 So you mentioned there are many tricks that you needed to do in order to make this scalable. Are
 there anything that's worth discussing or mentioning about these steps?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tim Rocktäschel" timestamp="15:24">
+<turn speaker="Tim Rocktäschel" timestamp="15:24">
 
 Yeah. So I think one thing is that I guess one should know about this kind of approach of taking an
 existing, let's say data structure or an existing algorithm and turning that into a differentiable
@@ -338,10 +338,10 @@ through your computation graph. And that makes things very tricky, right? So we 
 of how can we not just prove one goal at a time, but if we actually want to apply that to reasonably
 sized knowledge bases, we want to prove let's say 10 or a hundred goals in parallel on the GPU.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tim Rocktäschel" timestamp="16:12">
+<turn speaker="Tim Rocktäschel" timestamp="16:12">
 
 This was one of the tricks that we have to apply. And another one that I found very interesting is
 that what we are doing here is basically we're learning to prove goals from other facts that we have
@@ -352,10 +352,10 @@ slow to train because in the beginning you basically initialize all the symbol r
 randomly. And that means in the beginning you just get very noisy proofs, right? So you get just
 random things I guess as high predictions and that's really annoying.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tim Rocktäschel" timestamp="17:06">
+<turn speaker="Tim Rocktäschel" timestamp="17:06">
 
 Partly also because at the end you only care about one of these proofs to succeed. So basically the
 way we aggregate all of these proofs is by taking the max. That means we get very noisy gradients
@@ -371,52 +371,52 @@ really is just a regularizer. And what that means is again, that ComplEx is very
 learn similarities of symbols that then the prover can actually use to make quite a useful multi-hop
 inferences.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="18:22">
+<turn speaker="Waleed Ammar" timestamp="18:22">
 
 So all of the same word representations are shared across the two in neural net.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tim Rocktäschel" timestamp="18:25">
+<turn speaker="Tim Rocktäschel" timestamp="18:25">
 
 Yes, exactly. Yeah. Which is also a bit odd because ComplEx is actually representing symbols as
 complex vectors. And our differentiable prover is just representing them as real K dimensional like
 this. But the RBF kernel you can just still I guess measure the distance between the K dimensional I
 guess real vector and the K/2 dimensional complex vector.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="18:49">
+<turn speaker="Matt Gardner" timestamp="18:49">
 
 This sounds like a pretty complicated computation graph. What framework did you use to write the
 code?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tim Rocktäschel" timestamp="18:54">
+<turn speaker="Tim Rocktäschel" timestamp="18:54">
 
 We implemented this in Tensorflow and in hindsight that might have been the wrong decision because
 now there are so many nice, I guess dynamic computation graph libraries including PyTorch, but also
 DyNet I think. But even back then there was a Torch which I somehow disliked. So we just went with
 Tenorflow.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="19:17">
+<turn speaker="Matt Gardner" timestamp="19:17">
 
 I'm just kind of surprised this is even possible is even possible in Tensorflow. That's interesting.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tim Rocktäschel" timestamp="19:22">
+<turn speaker="Tim Rocktäschel" timestamp="19:22">
 
 Well, it's possible because given a goal and a given knowledge base, the computation graph stays
 steady, right? So basically you only have to build this computation graph once and then you can
@@ -425,10 +425,10 @@ basically the inputs to your, to your proof tree are going to be the placeholder
 three symbols in a binary ground item. And that's not going to change. So it's basically, still a
 steady computational graphs. That's why you can do it with this.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="19:52">
+<turn speaker="Matt Gardner" timestamp="19:52">
 
 Interesting. So one one thing that I haven't liked very much about recent neural link prediction
 models is that they try to encode these dimensional high rank tensors in low rank vectors. So like,
@@ -440,10 +440,10 @@ grandfather of Bart, it's a fact in your knowledge base and you're using sub sym
 representations to do similarities in an interesting way, but you still have runtime access to these
 sparse facts. So you're not losing the information. Does it seem right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tim Rocktäschel" timestamp="20:45">
+<turn speaker="Tim Rocktäschel" timestamp="20:45">
 
 Yes. That's absolutely right. Yep. And particularly what we disliked about neural link prediction
 models is the fact that they're only, you know, scoring these quadrenniums locally, which means they
@@ -452,26 +452,26 @@ Y and Y is located in Z then X also be located in Z. And that's exactly, I think
 experiments. That's exactly where our model seems to be quite good at compared to neural link
 prediction models.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="21:16">
+<turn speaker="Matt Gardner" timestamp="21:16">
 
 Yeah.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="21:17">
+<turn speaker="Waleed Ammar" timestamp="21:17">
 
 So what is the main difficulty in consolidating the approach that you're using in this paper with
 learning from text? Like for example, universal schema approach is learning from both knowledge base
 types as well as texts.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tim Rocktäschel" timestamp="21:31">
+<turn speaker="Tim Rocktäschel" timestamp="21:31">
 
 I think that's a great question. So partly this architecture is also inspired because ultimately you
 would like to have text as an input to these kind of models. So for instance, you could think of a
@@ -488,20 +488,20 @@ encoders that are then hooked up with the differential prover and the whole mode
 jointly by back propagation. So that's definitely a very interesting, I guess, future work I would
 like to do.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="22:51">
+<turn speaker="Matt Gardner" timestamp="22:51">
 
 Yeah, that's an interesting idea. What I thought the answer to Waleed's questions was is that it's a
 scalability problem, right? Like if we take the same universal scheme idea from Sebastian a few
 years ago, you just have one big tensor, right? And then you're just exploding this bace of ground
 atoms that you have. And so you're just going to have scalability problems basically.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tim Rocktäschel" timestamp="23:10">
+<turn speaker="Tim Rocktäschel" timestamp="23:10">
 
 Yep. So the reason why we can't do this right now is because we have executive these scalability
 issues particularly, our problem is that we have to basically make sure that this unification of a
@@ -509,33 +509,33 @@ net term with all factors in the knowledge base can be done efficiently on a GPU
 has to fit on a GPU. Our entire neural representation of the knowledge base has to fit on a GPU.
 Otherwise this will be way too slow.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="23:36">
+<turn speaker="Matt Gardner" timestamp="23:36">
 
 Yeah. You could imagine like pruning that somehow then it gets a whole lot harder with TensorFlow.
 Right. Cause he probably have a dynamic graph and you might want to do like have the pruning that
 you do change during the course of training.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tim Rocktäschel" timestamp="23:51">
+<turn speaker="Tim Rocktäschel" timestamp="23:51">
 
 Exactly.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="23:51">
+<turn speaker="Matt Gardner" timestamp="23:51">
 
 Yeah. They're interesting directions for future work.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tim Rocktäschel" timestamp="23:55">
+<turn speaker="Tim Rocktäschel" timestamp="23:55">
 
 Yeah. Maybe one thing I can also talk about which I guess again was a motivation of this
 architecture is actually to be able to incorporate prior knowledge. Right? So if we have a logical
@@ -547,10 +547,10 @@ so. And what we can do here quite easily is to actually say we know or we assume
 transitivity now in knowledge base, but we don't know between which predicates we can just write
 down I guess what we call a rule template.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tim Rocktäschel" timestamp="24:40">
+<turn speaker="Tim Rocktäschel" timestamp="24:40">
 
 So we can say there's some sensitivity between some predicate representation, you know, one and you
 know, two other predicate representations two and three. We just write that down as a rule with I
@@ -561,39 +561,39 @@ which allows us to induce a rules by grading descent and gives us some way of th
 actually inspecting what the model has learned. So that was one of the things that I guess we found
 quite nice about this approach.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="25:21">
+<turn speaker="Matt Gardner" timestamp="25:21">
 
 Yeah. I first saw that idea from William Wang and William Cohen's proper work and yeah, I liked when
 I saw it in your paper because it's a nice extension because it lets you learn these rules over
 vectors, right. The predicates are just represented as vectors and so I guess it's a nice, a sub
 symbolic extension of this line of work.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tim Rocktäschel" timestamp="25:41">
+<turn speaker="Tim Rocktäschel" timestamp="25:41">
 
 Yeah, exactly. So this is this is definitely the work that we draw inspiration from. So what William
 Wang had was these, what he called really rule templates where you say, I assume they are, let's say
 10 transitiveness in my knowledge base, and then instantiate all these parametric walls and you can
 use them in our case using gradient descent, in their case using something different.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="26:03">
+<turn speaker="Matt Gardner" timestamp="26:03">
 
 Yeah. Cool. I think that's all the questions that we had. That was a really interesting discussion.
 Thanks for talking with us Tim.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Tim Rocktäschel" timestamp="26:11">
+<turn speaker="Tim Rocktäschel" timestamp="26:11">
 
 Yup. Thanks to you.
 
-</Turn>
+</turn>

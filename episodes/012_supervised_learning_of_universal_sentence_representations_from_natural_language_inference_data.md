@@ -8,23 +8,23 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting recent work in
 natural language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is Matt Gardner and Waleed Ammar. We are research scientists at the Allen Institute for
 Artificial Intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:11">
+<turn speaker="Matt Gardner" timestamp="00:11">
 
 Today's paper is: Supervised Learning of Universal Sentence Representations from Natural Language
 Inference Data. This is by Alexis Conneau, Douwe Kiela, Holger Schwenk, and Loic Barrault, and
@@ -36,26 +36,26 @@ question is how do we get those feature representations? Historically in NLP, we
 a bunch of feature representations and use those as inputs to our models. These days we're thinking
 a lot more about how can we get a neural network to do this feature representation learning for us.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="01:05">
+<turn speaker="Matt Gardner" timestamp="01:05">
 
 And this paper is exploring this line of work, particularly on how do we represent sentences,
 sequences of words as a single vector that we can use in some downstream tasks.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="01:18">
+<turn speaker="Waleed Ammar" timestamp="01:18">
 
 So there are several previous works that focus on learning representations for sentences such as the
 SkipThought Vectors work. How does this paper different from previous work on this?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="01:30">
+<turn speaker="Matt Gardner" timestamp="01:30">
 
 So the SkipThought Vectors said, let's train a sentence encoder, something that takes us from
 sequences of words to a vector and let's train it to predict the previous sentence and the next
@@ -71,10 +71,10 @@ we don't need any labeling on the text that we find. We just need to find a whol
 we essentially get labels on our data to do this learning for free just by looking at the ordering
 of sentences in the corpus.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="02:45">
+<turn speaker="Matt Gardner" timestamp="02:45">
 
 And what this paper says is instead of using these unsupervised or weakly supervised learning
 models, instead, let's learn sentence representations from some supervised signal that hopefully
@@ -89,18 +89,18 @@ you use them in some other tasks. So the thought by these authors is we should b
 something similar where from, for language we predict some supervised signal, pull up the
 representations and use them somewhere else.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="03:57">
+<turn speaker="Waleed Ammar" timestamp="03:57">
 
 So the obvious downside to this approach is that you have smaller amounts of data to learn from if
 you're only going to use label data. So how large is SNLI?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="04:08">
+<turn speaker="Matt Gardner" timestamp="04:08">
 
 SNLI is pretty big. It's got like 500,000 sentence pairs or so on that order of magnitude anyway,
 which is pretty, pretty big. But in contrast, we have billions or even trillions of unsupervised
@@ -113,10 +113,10 @@ captions. And the way they did this was they said, they showed the sentence to p
 Turk. Maybe the sentence was two people talking and they said, imagine that this is describing an
 image, think of another caption that must also describe the same image.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="05:14">
+<turn speaker="Matt Gardner" timestamp="05:14">
 
 So maybe two people moving their mouths. I don't know, moving is not a great example because this
 isn't video. But anyway, you get the idea. Something else that describes two people talking and then
@@ -127,10 +127,10 @@ image. If this image is true of the caption and there you might get something li
 talking to himself because the original caption said there were two people, this one is now
 contradicted. And so you get a labeled pair that way.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="06:02">
+<turn speaker="Matt Gardner" timestamp="06:02">
 
 And then they also had a way to elicit neutral or unrelated sentence pairs in a similar kind of way.
 So one interesting thing to keep in mind some people think this dataset is too easy because, think
@@ -142,10 +142,10 @@ happened for, I don't know how much of SNLI, but for a lot of it you get only li
 small phrase differences between the two sentences. And so even though this is a sentence entailment
 dataset, a lot of the instances look much more like single word entailment instances.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="06:57">
+<turn speaker="Matt Gardner" timestamp="06:57">
 
 And this is why models like the decomposable attention model that only look at word pair scores do
 very, very well. So anyway, just a side note there on if you're creating a dataset with mechanical
@@ -153,19 +153,19 @@ Turk, you should think really carefully about what the incentives are for the pe
 your task and what they're going, what characteristics this will induce in the dataset that you're
 creating.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="07:19">
+<turn speaker="Waleed Ammar" timestamp="07:19">
 
 For what it's worth the current results on the on this dataset according to the website on the
 Stanford is 88.8% accuracy for the SNLI dataset that a 2017 paper by Zhiguo Wang and other people at
 IBM.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="07:40">
+<turn speaker="Matt Gardner" timestamp="07:40">
 
 Yeah. So maybe, it's nice in that it's a nice large dataset as every dataset it has some issues, but
 it was a nice contribution. Okay. So that this is the dataset that this paper is looking at in order
@@ -174,10 +174,10 @@ pair, we're going to encode it into a single vector. And then essentially learn 
 across the fire on top of these two vectors, maybe just a simple dot product in order to predict
 entailments, contradicts or neutral. Okay.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="08:19">
+<turn speaker="Matt Gardner" timestamp="08:19">
 
 Once you limit yourself to this general framework of models, there's still a large class of things
 you can pick from. You could use some convolutional encoder, you could use an LSTM, you could use a
@@ -188,18 +188,18 @@ transfer tasks that they're trying to do, which I'll explain in a minute and the
 that has the best performance across all of these. Turns out it's a biLSTM a bi-directional LSTM
 with a max pooling operation across the vectors of all of the words in a sentence. And then...
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="09:05">
+<turn speaker="Waleed Ammar" timestamp="09:05">
 
 Sorry, how do you combine the sentence level representation for the pair of sentences after doing
 sentence embedding?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="09:16">
+<turn speaker="Matt Gardner" timestamp="09:16">
 
 Yeah, what they do is kind of complicated. So they take the two vectors, you get one vector for
 sentence, the premise sentence and one vector for the hypothesis sentence. They take the vectors,
@@ -210,18 +210,18 @@ classifier consisting of multiple fully connected layers culminating in a softma
 Feedforward neural net. This particular section that I'm reading doesn't say how many layers they
 do, but just some Feedforward net that takes as input, these four concatenated sentence vectors.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="10:02">
+<turn speaker="Waleed Ammar" timestamp="10:02">
 
 All right, and this featurization actually has been used in several previous papers on this dataset,
 so that makes sense.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="10:09">
+<turn speaker="Matt Gardner" timestamp="10:09">
 
 Yeah, I guess if you think of like the interactions that you can easily get out of these two
 vectors, it's nice to be able to have their element wise product so you can get like a similarity
@@ -231,10 +231,10 @@ capture and just a Feedforward net. So, it's become kind of standard because it'
 you want to have some deep net that looks not just at like simple kinds of interactions but also
 similarity kinds of interactions between these two vectors.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="10:47">
+<turn speaker="Matt Gardner" timestamp="10:47">
 
 Okay. So after they've decided which method, which sentence encoder they should use, they then look
 at a bunch of transfer learning tasks. And so the authors have set up a tool that allows easy
@@ -248,10 +248,10 @@ representations the tool isn't public yet the paper is still under review. But t
 going to release this and it seems like it'd be really useful if you're studying these kinds of
 sentence representations. I think that's a nice thing to do.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="11:54">
+<turn speaker="Matt Gardner" timestamp="11:54">
 
 The tasks that they look at are different kinds of classification tasks on sentence pairs. Sorry on
 individual sentences. So sentiment analysis, product reviews, subjectivity, objectivity, opinion
@@ -263,10 +263,10 @@ you can evaluate and they take these sentence pairs, sorry, these sentence repre
 get from the supervised training on SNLI, the Stanford Natural Language Inference dataset, and they
 evaluate the sentence representations on each of these different datasets.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="12:45">
+<turn speaker="Matt Gardner" timestamp="12:45">
 
 So the transfer task specific specifically is let's learn a sentence encoding just on SNLI, take
 that model on this new dataset, encode the sentence and then learn some simple classifier on top of
@@ -276,10 +276,10 @@ just a simple bag-of-words embedding from pre-trained word vectors and so on. Th
 model does substantially better than, I guess a little bit better, maybe not substantially, looking
 more carefully at this data. So they do a little bit better than SkipThought.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="13:32">
+<turn speaker="Matt Gardner" timestamp="13:32">
 
 On all of the tasks. So it's pretty consistently a little bit better it seems like. One caveat here
 is that they also compared to a purely supervised approach to on these datasets and almost all of
@@ -292,10 +292,10 @@ unsupervised transfer that have been published so far, they don't really have a 
 to me that I should actually use this in practice because they don't beat a supervised baseline and
 I have the training data, so why not use it?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="14:26">
+<turn speaker="Waleed Ammar" timestamp="14:26">
 
 Right. So even though you're using unsupervised representations in the proposed method, you still
 need the labeled data in order to learn how to use these features to make a prediction for this
@@ -303,41 +303,41 @@ particular task. And if you're using the labeled data anyway, then it's a strang
 tried to combine the representations learned from SkipThought or other ways of doing completely
 unsupervised learning for these features and in addition to the supervised learning.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="15:02">
+<turn speaker="Matt Gardner" timestamp="15:02">
 
 Yeah. It's an interesting open question, how you can take representations learned in some
 unsupervised fashion and modify them in or incorporate them into some downstream model.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="15:14">
+<turn speaker="Waleed Ammar" timestamp="15:14">
 
 No, I mean, it just augment like concatenate the vectors that represent every sentence from the
 unsupervised from SkipThought and from the proposed method and use both of them as features.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="15:26">
+<turn speaker="Matt Gardner" timestamp="15:26">
 
 Oh, that's even simpler. Okay. yeah, you can try that. You'd have to add some more regularization I
 guess to your model because you're adding, like you're doubling the size of your feature space.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="15:37">
+<turn speaker="Waleed Ammar" timestamp="15:37">
 
 Sure.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="15:37">
+<turn speaker="Matt Gardner" timestamp="15:37">
 
 But yeah, you could try it, they didn't. So yeah. One other interesting thing that I'll note about
 this before concluding is that their notion of feature representation is that I get a single vector
@@ -349,10 +349,10 @@ that they got around this bottleneck was by instead of having a single vector re
 sentence, they just used the hidden, the final hidden state of their encoder and then computed an
 attention over the whole sentence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="16:29">
+<turn speaker="Matt Gardner" timestamp="16:29">
 
 So you could essentially scale the model capacity with the length of the sentence instead of trying
 to fit arbitrary length sentences into single vectors. And so it seems to me like that's a pretty
@@ -361,10 +361,10 @@ are too limiting. So I wonder at this whole general approach do we really want t
 vectors for sentences at all? Like why should we do this? And is this a good way of getting feature
 representations for downstream tasks?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="17:03">
+<turn speaker="Waleed Ammar" timestamp="17:03">
 
 Well, you can still do this with what they are doing right, because for example, the model that they
 picked was a bi-directional RNN where or biLSTM where you can actually do an attention, a soft
@@ -372,90 +372,90 @@ attention over the words that the word representations that you learned from SNL
 premise is that you wouldn't need to do this because the like what you, the model that you would
 need in addition to the learned representation is going to be a simple thing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="17:33">
+<turn speaker="Matt Gardner" timestamp="17:33">
 
 Yeah. I guess that's asking your pre-trained feature representations to do a whole lot because they
 don't know very much about what you're going to use them for. And so you'd have to, I guess have a
 whole lot of data and a really big final vector if you, if you're hoping that it encode everything
 that you could possibly want in a downstream task.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="17:52">
+<turn speaker="Waleed Ammar" timestamp="17:52">
 
 Right. I think another question is do we want to use the feature representations or the sentence
 including models as is or we can also improve, tune their parameters towards the task that we're
 trying to address. Because that seems to be an obvious when, I'm not sure if they actually did this
 here.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="18:14">
+<turn speaker="Matt Gardner" timestamp="18:14">
 
 Yeah. And I totally agree. I think this is a really interesting and hot area of research right now.
 Like how do we get good pre-trained feature representations that we can incorporate into downstream
 models? Like, and what's the best way to do this? I don't think we don't have, we don't have good
 answers for this yet.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="18:30">
+<turn speaker="Waleed Ammar" timestamp="18:30">
 
 So in word vectors there seems to be consensus that it's better to tune the features the word level
 embeddings towards the task that you care about if you have a reasonable amount of labeled data.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="18:43">
+<turn speaker="Matt Gardner" timestamp="18:43">
 
 Actually, I'm not sure that's true on SQuAD for instance the best performing models, fix word
 vectors to GloVe, and then they learn character embeddings and a character level CNN to concatenate
 with the word vector. So I dunno it for some tasks, like parsing. Yeah, maybe that's true, but I
 don't think that's true across the board for NLP.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="19:04">
+<turn speaker="Waleed Ammar" timestamp="19:04">
 
 But does it hurt to tune the parameters?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="19:06">
+<turn speaker="Matt Gardner" timestamp="19:06">
 
 It increases the parameter space of your model by a factor of like eight. And so you could imagine
 that these lead to overfitting pretty easily.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="19:16">
+<turn speaker="Waleed Ammar" timestamp="19:16">
 
 Right. And in terms of the like the speed level optimization.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="19:20">
+<turn speaker="Matt Gardner" timestamp="19:20">
 
 Yup. Okay. I think that's all that we have for this paper.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="19:24">
+<turn speaker="Waleed Ammar" timestamp="19:24">
 
 Thank you for presenting this paper. Matt. Next time we're going to talk about a paper titled:
 Question Answering from Unstructured Text by Retrieval and Comprehension by Yusuke Watanabe, Bhuwan
 Dhingra, and Ruslan Salakhutdinov.
 
-</Turn>
+</turn>

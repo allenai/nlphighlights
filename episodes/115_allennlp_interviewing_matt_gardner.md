@@ -8,7 +8,7 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Karissa Shanika" timestamp="00:00">
+<turn speaker="Karissa Shanika" timestamp="00:00">
 
 Welcome to the NLP highlights podcast, where we invite researchers to talk about their work in
 various areas in natural language processing, the usual hosts are Matt Gardner and Pradeep Dasigi,
@@ -19,10 +19,10 @@ provided by AI 2 this week. We're releasing version one of AllenNLP an important
 platform. So Matt, tell me about the origins of AllenNLP. Why did AI 2 decide to build it and how
 did it get started?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:38">
+<turn speaker="Matt Gardner" timestamp="00:38">
 
 This feels a little bit weird being the interviewed one instead of the interviewer, but I guess this
 goes back like three and a half or four years ago to an earlier version of, I guess I was learning
@@ -34,10 +34,10 @@ TensorFlow, it was, had a bunch of different backends trying to make it easy, to
 level API to deep learning for a lot of different things. And I was using this to try to do NLP and
 I found that it was difficult, particularly when you wanted to do complex things.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="01:30">
+<turn speaker="Matt Gardner" timestamp="01:30">
 
 I was doing reading comprehension on SQuAD at the Stanford Question Answering Dataset. And there you
 have a passage that you get as input and a question and an answer where the answer is required to be
@@ -50,10 +50,10 @@ stuff, getting this to actually work right in Keras it was very difficult to do 
 started building a simple library to do some easy stuff in data processing and like masking and
 padding kinds of utilities for Keras.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="02:26">
+<turn speaker="Matt Gardner" timestamp="02:26">
 
 And Pradeep actually was an intern with me at the time. And I was thinking like, how do I make a
 library that makes it easy for interns to come and make progress quickly? So anyway, this is the
@@ -66,10 +66,10 @@ useful. And I had this library that I had been working on and I talked to Luke a
 build what he wanted to build on top of what I had, except then we looked at what I had and decided
 it really needed to be rewritten.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="03:23">
+<turn speaker="Matt Gardner" timestamp="03:23">
 
 And so we took the good ideas from it and rewrote it from scratch on top of PyTorch. And that turned
 into AllenNLP. I guess there's one other important consideration that I didn't mention Elmo was
@@ -83,27 +83,27 @@ representations were like totally different, but everything on top could be the 
 could do like controlled experiments and like actually have an easy way to make a table in a paper
 that will show your claim in a controlled way that Elmo works.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="04:25">
+<turn speaker="Matt Gardner" timestamp="04:25">
 
 And so this, this was another huge thing we were thinking about in like how this library developed.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Karissa Shanika" timestamp="04:32">
+<turn speaker="Karissa Shanika" timestamp="04:32">
 
 That's great. It sounds like Elmo was a huge motivating factor. And I wanted to ask you about kind
 of early challenges you encountered with building this library. You touched a little on doing that,
 but anything else that kind of stuck out to you as a unique challenge for building something for the
 wider community?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="04:48">
+<turn speaker="Matt Gardner" timestamp="04:48">
 
 Yeah. So I can dig a little bit more into Elmo actually. So when you think about how do I make the
 code generalizable from something like GloVe to something like Elmo. It's challenging because this
@@ -113,10 +113,10 @@ representation, then I'm going to need a particular representation in my input a
 particular pieces in my model that are coupled with that input representation in order for things to
 work out correctly.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="05:26">
+<turn speaker="Matt Gardner" timestamp="05:26">
 
 And then if I then switch this with Elmo again, I have a very different input, character
 representation and different model pieces in the model side. And so the way we designed this in the
@@ -128,10 +128,10 @@ really want the data processing to be separate from the model. So you can swap i
 the model, if you want to do different modeling stuff, but use the data processing code that we've
 built because you like it for some reason, if things are so coupled, it makes reuse really hard.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="06:18">
+<turn speaker="Matt Gardner" timestamp="06:18">
 
 And so this was one thing that we changed from the precursor to AllenNLP to our rewrite when we
 actually wrote AllenNLP in PyTorch, we tried to be sure that pieces were decoupled so that like
@@ -143,19 +143,19 @@ same time, but that makes it really hard to only pick and choose. Like, if you l
 processing, if we have one object that does both pieces, it gets really confusing. So this is
 something we've struggled with a lot.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Karissa Shanika" timestamp="07:04">
+<turn speaker="Karissa Shanika" timestamp="07:04">
 
 That's good. I mean, it sounds like there's a lot going on inside the library. So, I mean, you have
 several demos, you've got a bunch of pre-trained models and there are ways to retrain models or even
 build your own models. So like, how are people using AllenNLP?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="07:17">
+<turn speaker="Matt Gardner" timestamp="07:17">
 
 I guess it's designed to do a bunch of different things. It's got, I guess here's another thing that
 was an important factor in the design of AllenNLP. We really wanted it to be really easy to put up a
@@ -167,10 +167,10 @@ what a model does in a demo, you get a whole lot more insight about what you sho
 research. And so we intentionally designed APIs to make it easy for you to take your model and serve
 it in a demo.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="08:06">
+<turn speaker="Matt Gardner" timestamp="08:06">
 
 And this also makes it easy for us to put up a demo. And we have demos that we host of models that
 at least at some point we're close to state-of-the-art they were stale for a bit. We've refreshed
@@ -182,10 +182,10 @@ some predictions with our demo models and use those predictions to do something 
 this was not a use case that we really anticipated that wasn't what we were designing for, but
 people use it and that's good because apparently it's useful.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="08:56">
+<turn speaker="Matt Gardner" timestamp="08:56">
 
 Another way is to take our reference implementations of these models and retrain it on new data. I
 see that quite a bit. It's less common, but I do see this a little bit where people actually use the
@@ -196,18 +196,18 @@ just this morning, actually I got a citation notification of someone who built a
 language model using AllenNLP, which I thought was pretty interesting, especially cause that's not a
 use case that we had in mind when we designed the library.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Karissa Shanika" timestamp="09:35">
+<turn speaker="Karissa Shanika" timestamp="09:35">
 
 That's really cool. Is that something that you think you'll see more and more of in the coming
 months?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="09:38">
+<turn speaker="Matt Gardner" timestamp="09:38">
 
 Yes, I've been involved in several projects recently that did some vision plus language
 experimentation. So specifically a natural language visual reasoning. We did some stuff with neural
@@ -215,43 +215,43 @@ module networks, this is a dataset called NLVR2 from Cornell Yoav Artzi, Alane S
 we did some neural module networks on top of this, which is this is the research area that I'm
 pretty excited about. I won't, I could go off talking for a while about that, but I'll spare you.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Karissa Shanika" timestamp="10:08">
+<turn speaker="Karissa Shanika" timestamp="10:08">
 
 We'll have to do a follow up podcast.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="10:08">
+<turn speaker="Matt Gardner" timestamp="10:08">
 
 But, yes, generally we are thinking a lot about, because people like the reference implementations
 that we have and use them a lot, we're thinking what things could we add that's missing and vision
 and language is a big one, summarization and other more general sequence generation kinds of things
 are things that we are actively thinking about adding right now.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Karissa Shanika" timestamp="10:33">
+<turn speaker="Karissa Shanika" timestamp="10:33">
 
 That's fantastic.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="10:34">
+<turn speaker="Pradeep Dasigi" timestamp="10:34">
 
 I'd like to just add something quickly because it's an open source project we get lots of
 contributions from people using AllenNLP and that's been a pretty strong point, right? I mean, Matt,
 would you want to elaborate on that?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="10:47">
+<turn speaker="Matt Gardner" timestamp="10:47">
 
 Yeah, definitely. Some of the major features that we've had recently have been either inspired or
 directly contributed by outside folks. And yes, we really like this. For instance Automatic Mixed
@@ -261,10 +261,10 @@ It's something people have wanted for a long time. We haven't had the bandwidth 
 Someone else outside got to it and we were really happy about it. And yes, we love having people
 contribute.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="11:23">
+<turn speaker="Matt Gardner" timestamp="11:23">
 
 We've wondered, like especially cause our models, the reference implementations of the models that
 we have are something people use a lot. We've been wondering what's the right way to try to get
@@ -277,10 +277,10 @@ where other people's code lives, we highlight what they did. I think a recent on
 has an AI 2 connection, but the, there was a project that I worked on with Nitish Gupta at the
 University of Pennsylvania.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="12:16">
+<turn speaker="Matt Gardner" timestamp="12:16">
 
 And this was again neural module networks for a dataset called DROP reading comprehension dataset
 that requires some numerical reasoning, Nitish wrote code in his own repository. We helped him get
@@ -292,29 +292,29 @@ submit their code back cause that if Nitish had like pushed his code into AllenN
 hurts Nitish in some sense, from a PR perspective. Cause we want his name to be recognized. He did
 the work. We don't want to take credit for what he did.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="13:09">
+<turn speaker="Matt Gardner" timestamp="13:09">
 
 And so this is how we think about like third-party contributions. Like definitely we love
 contributions to the model of components helping the library get better, but for models themselves,
 it's probably better for everyone if we just highlight other people's repositories that use the
 library and interesting ways.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Karissa Shanika" timestamp="13:27">
+<turn speaker="Karissa Shanika" timestamp="13:27">
 
 Great. Okay. So this week we're actually releasing AllenNLP version one. This is the first major
 versioning of this library and it's a major milestone for us. So tell us a little bit about what
 users can expect with this release.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="13:42">
+<turn speaker="Matt Gardner" timestamp="13:42">
 
 Yeah, I think some of the feedback that we've gotten for a long time is that there's a steep
 learning curve to AllenNLP. You kind of have to buy into a bunch of things in order to even get
@@ -329,10 +329,10 @@ additional experimentation framework that let you do configuration file driven e
 we've kind of torn those apart so that if you want to use just our data processing code and
 different model code and a different trainer, you can do that. It's fine.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="14:54">
+<turn speaker="Matt Gardner" timestamp="14:54">
 
 If you want to use our data processing and our model, but a different trainer like PyTorch
 Lightning, you can do that. It works and it's relatively easy to use. And if you want to write your
@@ -345,10 +345,10 @@ kind of passed us by. We had been distracted on other things. Luke left AI 2, I 
 California and started co-advising PhD students and focusing a lot more of my time on mentoring
 research projects.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="15:51">
+<turn speaker="Matt Gardner" timestamp="15:51">
 
 And so the library kind of flat lined a little bit in some sense for awhile, we're trying to change
 that. And so we've refreshed all of our reference implementations. I think all of maybe most, all of
@@ -364,10 +364,10 @@ chapters for a quick start that shows you how to use the library, either using o
 files, if you want to use our experiment framework, or if you want to use it, just writing your own
 Python code shows you how to do both of those in a quick start kind of introductory thing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="17:09">
+<turn speaker="Matt Gardner" timestamp="17:09">
 
 And then there's a whole section of this guide that talks about in more detail, what's going on with
 all of the APIs and obstructions that we provide, why they're there, why they're designed the way
@@ -376,10 +376,10 @@ little bit, but you want to understand it better and get more out of it. Maybe b
 box that you might have thought existed from the quick start and use pieces that we have a little
 bit better. This, section of the guide aims to explain how all of that works better.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="17:40">
+<turn speaker="Matt Gardner" timestamp="17:40">
 
 And then there's a third section that is still in progress. We're not very far here yet, but the
 intent is to have a series of chapters showing how to do various with NLP, with Alleln NLP. Targeted
@@ -389,10 +389,10 @@ somewhere that has like, how do you actually write code for this? You maybe don'
 this in your lecture. But our intent is to have as part of this guide, these chapters that talk
 about, say, you want to write a code for co-reference resolution here's how you would do it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="18:21">
+<turn speaker="Matt Gardner" timestamp="18:21">
 
 And then I guess the last thing that we've been thinking about some of which is already in AllenNLP,
 and some is already in version 1.0 and some of which might come in version 1.1, we're taking a look
@@ -403,19 +403,19 @@ actually is to have the training time for a large portion of our models. So like
 we're pretty close in some configurations we're like 47% in some like multi GPU kinds of
 applications, some other settings aren't quite so fast yet, but we're working on it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="19:11">
+<turn speaker="Matt Gardner" timestamp="19:11">
 
 Awesome. Something else I wanted to ask you kind of about just using library generally is when would
 you recommend using AllenNLP over alternatives like SpaCy or Stanza or any of the other NLP
 libraries that are available today?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="19:24">
+<turn speaker="Matt Gardner" timestamp="19:24">
 
 Yeah. So I guess there are a lot of options these days, which is a good place for the field to be
 in. Why would you pick AllenNLP? One thing that I've heard, some people like is, I guess I've heard
@@ -429,10 +429,10 @@ that case. But if you have, I don't know, semantic parsing where you need to tak
 grammar and, or like available production rules in a grammar, or maybe you're doing some kind of
 retrieval, there are a lot of cases where you have complex data processing requirements.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="20:32">
+<turn speaker="Matt Gardner" timestamp="20:32">
 
 And I think AllenNLP has a pretty nicely designed data API to solve a lot of problems for you in
 complex data processing things, particularly around like batching things together, padding things
@@ -447,10 +447,10 @@ batch, in a transformer, if I have fewer things that like, if I batch together, 
 things, I will take less computation than if I put the short things with the long things, even in a
 transformer.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="21:40">
+<turn speaker="Matt Gardner" timestamp="21:40">
 
 And this kind of smart batching just happens for you automatically in AllenNLP. You don't really
 have to think about it at all. It just, you just get it. And there are other places, other things
@@ -469,10 +469,10 @@ at least you can write your model code using high level abstractions that let yo
 level about what your model is doing and experiment easily with what's going on inside those
 particular operations.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="23:09">
+<turn speaker="Matt Gardner" timestamp="23:09">
 
 Another example of this is span representations. So this is probably a less appreciated modeling
 technique, but I think it's pretty useful. Our co-reference resolution model and our semantic role
@@ -486,10 +486,10 @@ have APIs that just give you span representations and AllenNLP has code that doe
 when things get complex, I guess is my point either on the data side or on the modeling side,
 AllenNLP tries to provide abstractions and APIs that help you to do these things easily.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="24:20">
+<turn speaker="Pradeep Dasigi" timestamp="24:20">
 
 I guess one thing to add here is I really like this example that you gave Matt I guess this also
 allows us to use these abstractions across models, right? I mean, if you thought of span
@@ -498,10 +498,10 @@ model later, and you believe that this same span representation can be used, you
 of that code in your reading comprehension model as well, right. I think that's a greater advantage
 here.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="24:46">
+<turn speaker="Matt Gardner" timestamp="24:46">
 
 Yeah. Yeah. And it's related to something that was an initial motivation for AllenNLP though I
 haven't seen it done quite as much. Say you're someone who's developing a new way of representing
@@ -519,18 +519,18 @@ really hard without something like this. I haven't seen this done that much, but
 instance, the Elmo experiments were run before AllenNLP was actually done. But that paper would have
 been much easier given the APIs and the reference implementations that we have now.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="26:13">
+<turn speaker="Pradeep Dasigi" timestamp="26:13">
 
 I guess, pushing this a little further, I wonder if it makes it easier to think about new research
 ideas given these abstractions.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="26:20">
+<turn speaker="Matt Gardner" timestamp="26:20">
 
 Possibly, I guess, definitely like if you're thinking at a high level on what are the basic
 operations that a model does. And I think like what are different ways that I could do these basic
@@ -545,10 +545,10 @@ implementation is really just plain PyTorch. You could do whatever you want and 
 forget about the model abstractions that we have if you want. And so everything's still works if you
 need to break out of the abstractions.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="27:25">
+<turn speaker="Matt Gardner" timestamp="27:25">
 
 I guess one final thing that I will note with, like why you might choose AllenNLP is something that
 we talked about earlier, like serving demos. We try to make this really easy similarly because we
@@ -560,20 +560,20 @@ can write common abstractions for getting a model interpretations that just work
 models that you might want to do. And so if you want to do these kinds of things, then again,
 AllenNLP might be a good choice.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Pradeep Dasigi" timestamp="28:13">
+<turn speaker="Pradeep Dasigi" timestamp="28:13">
 
 Another thing I would add is that as a user of AllenNLP one thing that I really like is the testing
 framework. I really like writing tests for my research code, which is something that I started only
 after I started using AllenNLP instead of other frameworks. AllenNLP does provide some basic tests
 that you could you could run as soon as you write it on model. Right. And I find that pretty useful.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="28:40">
+<turn speaker="Matt Gardner" timestamp="28:40">
 
 Yeah. Our philosophy there is that your data processing code should have concrete tests to make sure
 that, the outputs that you get are actually what you expect given the inputs, which is really
@@ -589,20 +589,20 @@ yeah, you're right. That's another feature if you, this kind of test driven deve
 would encourage for those that don't have a software engineering background, this is definitely
 something that helps you a lot as you're writing code.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Karissa Shanika" timestamp="29:52">
+<turn speaker="Karissa Shanika" timestamp="29:52">
 
 Great. So this library has come such a long way over the last couple of years. And with, you know,
 the release of this new version, there there's so much utility for so many aspects of NLP from
 learning it and exploring it to actually experimenting with it. And I'm wondering, you know, what's
 next? Like what's coming up for AllenNLP.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="30:11">
+<turn speaker="Matt Gardner" timestamp="30:11">
 
 Yeah. I think we've hit on most of the things throughout this conversation about what's coming next.
 So a big one that we're focusing on right now, which is only partially going to be in the 1.0
@@ -614,10 +614,10 @@ your data loading. And so one thing we did to fix this was switch, we had writte
 data processing code. We switched to using native PyTorch data loaders, where they already have some
 multiprocessing built in.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="31:00">
+<turn speaker="Matt Gardner" timestamp="31:00">
 
 And this as a side effect also makes it very easy to fit into the rest of the PyTtorch ecosystem.
 Like PyTorch lightning assumes you have a data loader, a PyTorch data loader. And now because we've
@@ -630,10 +630,10 @@ and other maybe even T5. I don't know, we'll see what we get to, but like a refe
 of a summarization model for instance, is something that you should expect to see pretty soon in
 AllenNLP.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="31:50">
+<turn speaker="Matt Gardner" timestamp="31:50">
 
 And in general, thinking more about what kinds of reference implementations for other models might
 people want and use, and can we build them? And also how can we do better at highlighting what other
@@ -649,21 +649,21 @@ could imagine demos that show a model and like its output on a whole dataset, su
 interesting things there that we can do, that's farther away. Definitely. But it's something that I
 would like to see.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Karissa Shanika" timestamp="33:03">
+<turn speaker="Karissa Shanika" timestamp="33:03">
 
 Great. All right. Well, thank you so much, Matt, for giving us some great insight into what's new
 and what's coming up for the AllenNLP platform. Listeners can check it out at Allennlp.org. You can
 follow along with AI 2's research and our new releases at Allen_AI on Twitter, or visit us on the
 web@allenAI.org.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="33:23">
+<turn speaker="Matt Gardner" timestamp="33:23">
 
 Thanks
 
-</Turn>
+</turn>

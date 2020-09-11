@@ -8,23 +8,23 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting recent work in
 natural language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is Matt Gardner and Waleed Ammar. We are research scientists at the Allen Institute for
 Artificial Intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:12">
+<turn speaker="Matt Gardner" timestamp="00:12">
 
 Okay. Today's paper is called: pix2code: Generating Code from a Graphical User Interface Screenshot.
 This is by Tony Beltramelli at UIzard Technologies in Denmark. The idea behind this paper is really
@@ -35,10 +35,10 @@ description, we get an image describing the software and then we encode the imag
 software. I think this is really cool. So the method that this paper presents is like very, very
 simple and I think we could do a whole lot better than this.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="01:06">
+<turn speaker="Matt Gardner" timestamp="01:06">
 
 But first, it's the problem formulation here that I think is really interesting and something that
 we haven't really thought of in the NLP community but I think is really applicable and really nice.
@@ -49,10 +49,10 @@ items and in this stack I have a row, I can have several rows of actual user int
 So maybe there's a label and a switch followed by a label and a button followed by a label on a
 slider. Just you can imagine building user interface components using this domain specific language.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="02:05">
+<turn speaker="Matt Gardner" timestamp="02:05">
 
 It's not at the level of code, but it's pretty similar to code and given a reasonable compiler, you
 could compile it directly to code in a specific framework. This is how things like PhoneGap and
@@ -64,10 +64,10 @@ and sliders and groupings into horizontal or vertical kinds of stacks. And then 
 compiler that would take this and generate code in three specific platforms for iOS, for Android and
 for the web.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="03:03">
+<turn speaker="Matt Gardner" timestamp="03:03">
 
 And then given the domain specific language, you can automatically generate a whole bunch of
 different configurations from valid UI descriptions in this interface language. And then given the
@@ -78,10 +78,10 @@ examples for all three frameworks for iOS, for Android and for HTML and 250 test
 model on the 1500, tested it on the 250 pretty small dataset, but he was able to get really good
 performance on this.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="04:03">
+<turn speaker="Waleed Ammar" timestamp="04:03">
 
 So this is potentially a revolutionary step in graphic design and software design. When you are
 building user interfaces, it really consumes a lot of time to write code for it. And if you can just
@@ -90,10 +90,10 @@ code, that would be great. One thing I'm worried about is how hard would it be f
 actually construct these images in the same way that they're using the training data? Because if you
 don't, you don't tend to be the same thing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="04:42">
+<turn speaker="Matt Gardner" timestamp="04:42">
 
 Yeah, I'm not sure I would go so far as to say revolutionary. Like Apple's X code already lets you
 build the user interface in a largely graphical kind of way. So like you can just drag and drop UI
@@ -105,10 +105,10 @@ text input. I just think that's a really interesting idea. And to have the desig
 something that's in the same style as this training set also, as you said, might be a little bit
 problematic.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="05:29">
+<turn speaker="Matt Gardner" timestamp="05:29">
 
 You'd have to like take a known Gooey from an app for example, like a screenshot of an app and like
 cut and paste things and modify it. So, yeah, there are definitely still some open questions here on
@@ -119,10 +119,10 @@ familiar with any kind of like sequences2sequence, text generation or like image
 stuff. This is like vanilla models for these kinds of tasks. They have a convolutional neural
 network that's based on VGG to encode the Gooey into a vector of features.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="06:22">
+<turn speaker="Matt Gardner" timestamp="06:22">
 
 And then they use an LSTM, a two layer LSTM to encode the DSL, like I'm generating it just a
 sequence of tokens in this DSL, including all of the syntax, the opening and closing brackets and
@@ -133,10 +133,10 @@ You're just given the image and the code. And so the first thing that you do is 
 token, then given the correct token, you predict the next one. And he in this paper uses a window of
 48 tokens. And it's just a classification decision given the history of the previous 48 tokens.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="07:19">
+<turn speaker="Matt Gardner" timestamp="07:19">
 
 I can just have a whole bunch of training examples that say, given the state, what am I gonna
 predict next? Which token comes next? One interesting point that he made is that he's not trying to
@@ -148,18 +148,18 @@ simple kind of problem which you can see by looking at his accuracy. He gets lik
 curve in some of these best settings and like 98, 99, he does it, it works really, really well.
 Which probably means that it's a very easy data, right? As you were suggesting.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="08:19">
+<turn speaker="Waleed Ammar" timestamp="08:19">
 
 Yeah. I wonder how do we synchronize the input though, because in sequence2sequence model, there's a
 natural way to synchronize consuming the input. It's not clear to me how does this model work.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="08:34">
+<turn speaker="Matt Gardner" timestamp="08:34">
 
 Yeah. He doesn't consume the image at all. So it's just at every step you get the same vector, the
 same image features out. And so it's entirely up to the LSTM to keep track of what it's done, what
@@ -172,19 +172,19 @@ to work on this problem that it seems really cool. You'd have to think a lot abo
 better data, more varied data so that it's not such an easy task. But I think it's a really cool
 idea.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="09:23">
+<turn speaker="Waleed Ammar" timestamp="09:23">
 
 Yeah. And also we're finding a real problem worry, this kind of decoding would actually help because
 like you suggested, if the developer can draw the components visually, then there's no need for
 doing this.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="09:41">
+<turn speaker="Matt Gardner" timestamp="09:41">
 
 Yeah. So the paper we looked at a few episodes ago in the decoder decode into an abstract syntax
 tree instead of to just a plain sequence of tokens. And we know that this works a whole lot better
@@ -194,17 +194,17 @@ yeah, there's a lot that can be done both on like how you're handling the image,
 image, how you're actually doing decoding. If you want to do some interesting work it should be
 pretty easy to beat this baseline.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="10:19">
+<turn speaker="Waleed Ammar" timestamp="10:19">
 
 Right. But there's not much room left actually to improve.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="10:22">
+<turn speaker="Matt Gardner" timestamp="10:22">
 
 Right, right. Okay. So I think it'd be also interesting to talk about some related stuff like as I
 said, this was pretty new I haven't seen anything quite like this. And there are a few things that
@@ -220,10 +220,10 @@ and AI2 where they, instead of doing image classification for classifying which 
 image or object detection, like saying which images where in an image, which object is where in an
 image, they extract frames from an image.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="11:46">
+<turn speaker="Matt Gardner" timestamp="11:46">
 
 So you might have an attacking frame where I just opened the imSitu.org website and the first image
 that appeared to me was of an elephant attacking a hippo looks like. And so what gets labeled here
@@ -238,12 +238,12 @@ said, really, really interesting problem to me, a really simple model should be 
 extend this idea to more interesting datasets. And I'm really excited to see what comes next out of
 this. I think it's, it'll be a nice line of work.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="12:56">
+<turn speaker="Waleed Ammar" timestamp="12:56">
 
 Thank you for presenting this paper Matt. Next time, we'll talk about a paper titled: Generalizing
 to Unseen Entities and Entity Pairs with Row-less Universal Schema.
 
-</Turn>
+</turn>

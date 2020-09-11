@@ -8,23 +8,23 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting work in natural
 language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is Matt Gardner and Waleed Ammar. We are research scientists at the Allen Institute for
 Artificial Intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed" timestamp="00:13">
+<turn speaker="Waleed" timestamp="00:13">
 
 Today our guest is Matt Peters. Matt is a research scientist at the Allen Institute for Artificial
 Intelligence, AI2, where he explores the applications of deep neural networks to a varity of NLP
@@ -32,27 +32,27 @@ models. Prior to joining AI2, he was a director of data science at Seattle Circl
 investigating cloud climate feedback. He has a PhD in applied math from the University of
 Washington. Welcome to the podcast, Matt.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matthew Peters" timestamp="00:37">
+<turn speaker="Matthew Peters" timestamp="00:37">
 
 Thank you. It's a pleasure to be here.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:39">
+<turn speaker="Waleed Ammar" timestamp="00:39">
 
 So today we're talking about your paper accepted that NAACL and previously accepted at ICLR. And the
 title of the paper is Deep contextualized word representations. Some people might treat the title
 and think, okay, it's another paper describing a slightly different way of embedding word types.
 Could explain why the model you're proposing here is fundamentally different.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matthew Peters" timestamp="01:01">
+<turn speaker="Matthew Peters" timestamp="01:01">
 
 Yeah. So the main motivation for this work was overcome some of the traditional, some of the, the
 drawbacks of traditional word representations, in particular, the one that we directly address is
@@ -66,19 +66,19 @@ paper does as you might guess from the title is that instead of representing eac
 vector, we represent each word with a vector that is dependent on the entire context in which it's
 used a contextualized word representation.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="02:06">
+<turn speaker="Waleed Ammar" timestamp="02:06">
 
 So the immediate reaction in someone, they may respond as, well, whenever I use an LSTM or any kind
 of RNN on top of my word type representations, I'm getting this benefit already from the context, in
 that sentence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matthew Peters" timestamp="02:19">
+<turn speaker="Matthew Peters" timestamp="02:19">
 
 Yes, that's absolutely the case. And in fact we see this, that all, most all state-or-the-art NLP
 models nowadays use some type of contextual representation on top of the pre-trained word type.
@@ -90,19 +90,19 @@ and in by doing so we can benefit both from large amounts of unlabeled data in a
 more task specific conceptual representations that you would expect when you put this into your
 supervise system.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="03:13">
+<turn speaker="Waleed Ammar" timestamp="03:13">
 
 Cool. So this paper is the sequel of an earlier paper at ACL that you published addressing a similar
 problem. Can you start by describing the model in that paper and then explain how this paper
 generalizes it?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matthew Peters" timestamp="03:24">
+<turn speaker="Matthew Peters" timestamp="03:24">
 
 Sure. So our paper that we had at ACL, actually Waleed here was one of the coauthors on this paper,
 was, we looked at two sequential tasks. We looked at primarily named entity recognition, but then
@@ -114,10 +114,10 @@ of-the-art language models are these days they are tend to be deep LSTMs, so the
 different layers of LSTMs and then the ACL paper we just used the top layer and then we use this as
 a type of contextualed representation that we then added to our supervised NLP model.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matthew Peters" timestamp="04:29">
+<turn speaker="Matthew Peters" timestamp="04:29">
 
 The deep contextualized paper that we had generalizes this in a couple of ways. The most important
 one is that we, found that by using all layers of the pre-trained bidirectional model that we got
@@ -130,10 +130,10 @@ level sort of LSTM tasks, things like word sense, they sense this ambiguation be
 on the downstream task that you actually care about, your task model may meet different types of
 information.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matthew Peters" timestamp="05:30">
+<turn speaker="Matthew Peters" timestamp="05:30">
 
 It may, if you're say doing, I don't know, maybe a named entity recognition or something like this
 that might be super dependent on the syntax, then it might rely more on a lower layer, but if we're
@@ -145,10 +145,10 @@ improves performance very significantly. Oh, we also had some differences in ter
 the language model, but there are certain, I think that's secondary to the sort of the main idea
 that we can use all of the different layers.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="06:19">
+<turn speaker="Matt Gardner" timestamp="06:19">
 
 So just to make this clear, for people who haven't read this paper, I guess as Waleed said earlier,
 it's pretty typical in NLP these days to have, say if your input to your model is a sentence or a
@@ -161,10 +161,10 @@ through some biLSTMs and then that goes into the input of whatever model you had
 replacing what was like a glove vector with the output, these biLSTMs. So, so what's different from
 in what you were doing from just adding a few more layers of LSTMs.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matthew Peters" timestamp="07:14">
+<turn speaker="Matthew Peters" timestamp="07:14">
 
 I think one of the key differences is that these layers are, pre-trained on lots of unlabeled data.
 So the typical size of an NLP tasks, you might have maybe a few hundred thousand maybe for a large
@@ -178,34 +178,34 @@ train a very large, very high capacity model. The LSTMs that we use in our case 
 of about 4,000 and as a result, we can learn these very rich, very general corpus representations
 that you can't get from just using your supervised data.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="08:24">
+<turn speaker="Waleed Ammar" timestamp="08:24">
 
 So to contrast, what are the sizes of your hidden units in the model which actually does this
 downstream task?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matthew Peters" timestamp="08:33">
+<turn speaker="Matthew Peters" timestamp="08:33">
 
 Yeah. Typical size for a hidden given downstream task might be a few hundred, two or 300 or
 something like that. Depends on the task.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="08:42">
+<turn speaker="Waleed Ammar" timestamp="08:42">
 
 So can we go in the details of the bi-directional language model? And how do you train it? Get some
 more details on this.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matthew Peters" timestamp="08:49">
+<turn speaker="Matthew Peters" timestamp="08:49">
 
 Sure. So I guess first let me explain what we mean by bidirectional language models since this an
 idea that maybe unfamiliar to many of the listeners? So a traditional language model is what I'd
@@ -216,10 +216,10 @@ the subsequent context of a word and try and predict with the previous word is, 
 objective function and it's analogous to the backward direction of an LSTM and a bi-directional
 LSTM.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matthew Peters" timestamp="09:35">
+<turn speaker="Matthew Peters" timestamp="09:35">
 
 And then in our paper we have both a four direction, backwards direction language model, and they're
 trained jointly. The weights are not shared for the forward and backward direction for the LSTMs but
@@ -233,10 +233,10 @@ bidirectional LSTMs and then the train with the final softmax layer at the top t
 give us the probability of the next burner of the previous word. The entire thing is trained jointly
 on a very large unlabeled data across. Actually, a GP is used for, to mark the time.,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="10:54">
+<turn speaker="Waleed Ammar" timestamp="10:54">
 
 So there's a couple of things that I find surprising about this architecture, that you don't use any
 a word level embeddings or parameters at the input even though we don't, we can't always as humans
@@ -245,10 +245,10 @@ Oftentimes we find words that are very similar orthographically similar but they
 meanings for maybe the word pair and fair or, I don't know there are many examples like this. Do you
 have any insights on why it doesn't work it's not worth it adding oxford word embeddings?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matthew Peters" timestamp="11:39">
+<turn speaker="Matthew Peters" timestamp="11:39">
 
 Yeah, I think I made the explicit choice to not use word embeddings for a couple of reasons. First,
 I wanted the model to be as general as possible. In particular, I wanted to be able to deal
@@ -263,24 +263,24 @@ mainly captured in the LSTM layers because we have these, then it's not going to
 you don't have to push all this information down into the context independent word representation.
 It will put it in other parts of the model.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="12:48">
+<turn speaker="Matt Gardner" timestamp="12:48">
 
 How big is your biggest n-gram filter?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matthew Peters" timestamp="12:51">
+<turn speaker="Matthew Peters" timestamp="12:51">
 
 We have up to seven characters I think.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="12:55">
+<turn speaker="Matt Gardner" timestamp="12:55">
 
 So if you think of like what's the largest number of characters in a morpheme in English, it's
 really not that big. So you can probably get most morphemes with these n-grams that you're talking
@@ -289,17 +289,17 @@ filter except that they could each have their own filter for instance. And you'd
 just fine if you, I don't know enough linguistics to know how big lengths or other languages get in
 terms of morpheme size, but seven characters seems quite large for any morpheme in any language.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="13:27">
+<turn speaker="Waleed Ammar" timestamp="13:27">
 
 Do you see that the performance like I guess you chose seven because it gives you better results.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matthew Peters" timestamp="13:33">
+<turn speaker="Matthew Peters" timestamp="13:33">
 
 Actually to be honest, I didn't spend that very much. Training these models. It takes a long time,
 probably want to GPU hours. And so I didn't have access to an entire data center of GPU. So I, I
@@ -309,10 +309,10 @@ architectures that are state-of-the-art, then the language model that I trained 
 perplexities is a little bit higher. I think in the end for the quality of the representations you
 get and it doesn't matter very much, it's pretty much a second order effect.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="14:13">
+<turn speaker="Waleed Ammar" timestamp="14:13">
 
 So the other point that I wanted to ask about is sharing the parameters of the output layer of the
 language model, I think by sharing the parameters of the softmax layers I think this means the
@@ -320,27 +320,27 @@ parameters is to multiply the final, the final hidden states from the forward an
 directions and they seem to carry different kinds of information. So why would we want to combine
 them and treat them as if they're coming from the same vector space?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matthew Peters" timestamp="14:46">
+<turn speaker="Matthew Peters" timestamp="14:46">
 
 I'm uncertain. Why would you say you think that they should carry different context information in
 the forward and backward direction.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="14:52">
+<turn speaker="Waleed Ammar" timestamp="14:52">
 
 That's just the fact that forward language models summarizes or provides more information about the
 context that happens before word K and the backward gives you that information from everything that
 happens after word K? I guess including word K Well, no. excluding word K.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matthew Peters" timestamp="15:09">
+<turn speaker="Matthew Peters" timestamp="15:09">
 
 Yeah, I guess I haven't thought about this too much, so I can't really get an articulate answer to
 this. My intuition is that the softmax word representations should be words that you could expect to
@@ -349,28 +349,28 @@ representation for a laptop or something because it's something that is your tra
 you might say, well, I'm not really sure if the next word should be computer or laptop. but they are
 probably interchangeable in many cases.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matthew Peters" timestamp="15:49">
+<turn speaker="Matthew Peters" timestamp="15:49">
 
 It seems to me as though this probably also be the case, whether I'm looking at this sub context or
 the core context, I guess I don't think that I necessarily agree with your statement that they
 should capture different information.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="16:00">
+<turn speaker="Matt Gardner" timestamp="16:00">
 
 And if you look at typical ways of training word vectors, you look at contexts on both sides, right
 you look at a window of like five words on either side of the word that you're looking at and you
 try to predict the words that are in the context on either side of you,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="16:14">
+<turn speaker="Waleed Ammar" timestamp="16:14">
 
 Right. And you also like ignore the order. But that has more to do with kind of like reducing the
 complexity of the model, right, because I do remember a paper by Wang Ling where he tried actually
@@ -378,10 +378,10 @@ making different, having different parameters for like the words that have come 
 before shows improvements of course. Yeah. The number of parameters increases. How do you like
 practically how do you combine the forward and backward at the final layers?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matthew Peters" timestamp="16:42">
+<turn speaker="Matthew Peters" timestamp="16:42">
 
 Yeah. They're not combined in any way they're independent. So the for direction, the final hidden
 state is also, I should say that, well, the hidden state for our language model is 4,000 dimensions.
@@ -390,25 +390,25 @@ output dimension of the final for direction is 512 dimensions. And that's the sa
 softmax embedding. So they're computed, well, the weights are sharing, but a loss function is
 essentially the sum of the loss for the forward and the backward direction.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="17:20">
+<turn speaker="Waleed Ammar" timestamp="17:20">
 
 So basically you're forcing both directions to have a hidden states that belong to the same vector
 space despite training them this way, right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matthew Peters" timestamp="17:28">
+<turn speaker="Matthew Peters" timestamp="17:28">
 
 Yeah.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="17:29">
+<turn speaker="Waleed Ammar" timestamp="17:29">
 
 Right. So can we move forward to how you compute the vectors that represent this token, in this
 downstream task, so you call this ELMo vectors in the paper and it's defined as a linear combination
@@ -419,10 +419,10 @@ understanding is that in your paper, the weights are gonna be the same regardles
 As long as you're going language direction, you think it's worthwhile to try also learning different
 ways depending on the context.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matthew Peters" timestamp="18:19">
+<turn speaker="Matthew Peters" timestamp="18:19">
 
 Yeah, that is a good question. That is actually something that we tried and we couldn't get it to
 work. Maybe I'll provide a little bit more of an answer for that. So in the paper that we have, the
@@ -439,10 +439,10 @@ I would say in general, whatever we did to this weighting function to make it mo
 a scaler just decreased performance or didn't improve it, so we, in the end, went with the simplest
 one.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="19:45">
+<turn speaker="Matt Gardner" timestamp="19:45">
 
 So you're adding a thousand dimensions to all of my tasks, specific LSTMs, right, so I'm taking
 these word vectors, your ELMo vectors, give me a thousand dimensional vector times three I get three
@@ -451,10 +451,10 @@ of my LSTMs and my task specific model. And it was already the case as you said,
 these bigger without decreasing performance because it's just over parameterizing things. So why is
 it that the task specific model can handle this extra capacity?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matthew Peters" timestamp="20:18">
+<turn speaker="Matthew Peters" timestamp="20:18">
 
 Yeah, this is something that we could have looked more carefully at. In some cases it may be
 possible to actually use data dimension in the task specific model. In our case, we wanted to make
@@ -465,10 +465,10 @@ dropout to the ELMo vectors in the task model. So we found that this helps anoth
 have a good answer for that. We wanted, one of the upshots of this is that it does increase the
 number of parameters task LSTM needed.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="21:01">
+<turn speaker="Matt Gardner" timestamp="21:01">
 
 So I guess I can think of a whole lot of other papers around this same time. Like a lot of people
 were thinking of very similar things. We have the CoVe Vectors from the Salesforce folks. We have
@@ -477,10 +477,10 @@ have Sentence Representation learning. From a lot of people looking at SNLI and 
 things. Why do you think this was successful and more successful than these other approaches? Like
 what's, what's different about what you're doing?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matthew Peters" timestamp="21:32">
+<turn speaker="Matthew Peters" timestamp="21:32">
 
 I think that there's probably a couple of answers. I think that it depends on the other prior works
 that we're comparing to. I think in the case of a sentence representations the model was
@@ -498,27 +498,27 @@ if we, in the paper, we have some analysis towards the end of the paper where we
 to analyze what the types of intrinsic properties that you get from the language model versus CoVe
 for instance.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed" timestamp="23:02">
+<turn speaker="Waleed" timestamp="23:02">
 
 And if you look at just part of speech tagging accuracies are word sentence integration, which are
 the two that we considered is the overall absolute performance you get from the bi-directional
 language model approaches a significantly better then that of a machine translation approach.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="23:18">
+<turn speaker="Waleed Ammar" timestamp="23:18">
 
 So you experimented with quite number of tasks in this paper, would you like to give more details
 about core results that you had?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matthew Peters" timestamp="23:26">
+<turn speaker="Matthew Peters" timestamp="23:26">
 
 Sure. So I would say that the key empirical results that we have in the paper is that we evaluated
 this approach on six different very different NLP tasks. And we tried to choose a wide variety of
@@ -535,10 +535,10 @@ result for all of these different tasks and this I think is a very strong and cr
 because it says that the representations you get from these ELMo vectors are very generally useful
 across very broad scope of NLP tasks.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="24:52">
+<turn speaker="Matt Gardner" timestamp="24:52">
 
 I really like these result. It's kind of hard to not really like this result. Your relative error
 reduction is like in the 20s for some of these tasks it's kind of amazing when I think about this I
@@ -552,20 +552,20 @@ English and then use that, use the feature representations that we learned from 
 general, let's learn English task to do better at a downstream applications and this is a really
 nice demonstration that this idea works so great job.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="25:53">
+<turn speaker="Waleed Ammar" timestamp="25:53">
 
 So there are many ways in which you can use the ELMo vectors that's you learn like by linearly
 combining the different layers of the bi-directional language model and the downstream model, do you
 have any recommendations for people who would like to use this on how to pick, where to plug them
 in?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matthew Peters" timestamp="26:11">
+<turn speaker="Matthew Peters" timestamp="26:11">
 
 Yeah. So we give some some general rules of thumb in the paper and then also, I should also mention
 that we have the pre-trained models available. We had code available on both PI torch integrated
@@ -584,20 +584,20 @@ performance too and some times it doesn't always improve performance, depends on
 the architecture. We have some ablation results in that in the paper that showed this for a couple
 of the tasks.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="27:49">
+<turn speaker="Waleed Ammar" timestamp="27:49">
 
 Alright. So I guess my last question, do you expect any improvements on top of what you've shown, if
 you are able to in a multitask learning set up, train both the language model and like the model
 where you integrated this, that simultaneously instead of pretraining the language and then using
 it, while fixing its predators for the downstream task?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matthew Peters" timestamp="28:16">
+<turn speaker="Matthew Peters" timestamp="28:16">
 
 It's possible. I don't want to say conclusively whether that's the case or not because I think that
 that's still very much an open question. I tried, although not very hard, but I did try a little bit
@@ -606,20 +606,20 @@ get it to work, but again, I didn't try very hard. And it's possible that there'
 get this to work if you try and do some type of joint training or multitask training or fine tuning
 or something like this.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="28:52">
+<turn speaker="Matt Gardner" timestamp="28:52">
 
 So what do you think is the most exciting next direction for this line of work? You don't need to
 give away your secret next research project, but the scene. It feels like it opens up a whole lot of
 avenues for new research. Like how do you push this idea forward? Like what do you, what do you
 think comes after this?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matthew Peters" timestamp="29:12">
+<turn speaker="Matthew Peters" timestamp="29:12">
 
 I think that there is a couple of directions. I think one of the things I think that is really
 interesting to me about this is that one of the other results we showed in the paper is that the
@@ -631,18 +631,18 @@ sets or ones where you're otherwise limited by lack of annotated data that this 
 further gains that we couldn't get ordinarily, maybe it might make neural models competitive or even
 state-of-the-art in some cases.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="30:02">
+<turn speaker="Matt Gardner" timestamp="30:02">
 
 All right, great. This was really interesting conversation. Thanks for coming on the podcast.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matthew Peters" timestamp="30:06">
+<turn speaker="Matthew Peters" timestamp="30:06">
 
 Thank you.
 
-</Turn>
+</turn>

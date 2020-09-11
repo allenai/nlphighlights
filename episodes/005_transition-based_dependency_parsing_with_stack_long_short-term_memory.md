@@ -8,23 +8,23 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting recent work in
 natural language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is Matt Gardner and Waleed Ammar. We are research scientists at the Allen Institute for
 Artificial Intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:13">
+<turn speaker="Matt Gardner" timestamp="00:13">
 
 All right. Today's paper is Transition-Based Dependency Parsing with Stack Long Short-Term by Chris
 Dyer, Miguel Ballesteros, Wang Ling, Austin Matthews, and Noah A. Smith. These are folks at CMU.
@@ -35,10 +35,10 @@ each word in a sentence what's its head. And you can do this and shift reduce or
 dependency parsing by starting with the sentence in a buffer and then doing a sequence of either
 shifts or reduces.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:58">
+<turn speaker="Matt Gardner" timestamp="00:58">
 
 And so you have a buffer and a stack. A shift moves a word from the buffer onto the stack and a
 reduce will pop two words off of the stack and create a link between them a head child's
@@ -51,10 +51,10 @@ parsing, what you would do is take the parser state, which includes everything t
 everything that's on the buffer and all of the things that you've done so far and hand engineer some
 features based off of this.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="01:55">
+<turn speaker="Matt Gardner" timestamp="01:55">
 
 Like, maybe look at some suffixes of the first word on the buffer or the part of speech tag of the
 first and second words of the buffer or the thing on the stack or the last action that you took and
@@ -63,17 +63,17 @@ model, which you would then use given any particular states to decide, should I 
 reduce? This is how things worked for a long time. There's a lot of research that I'm sweeping under
 the rug there, but that's the general idea.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="02:24">
+<turn speaker="Waleed Ammar" timestamp="02:24">
 
 So how did the neural network models improve on this link of work?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="02:30">
+<turn speaker="Matt Gardner" timestamp="02:30">
 
 So the earliest neural nets took these feature representations, these one-hot features and embedded
 them. So you still essentially had hand engineered features. Just instead of them having one-hot
@@ -82,18 +82,18 @@ part of speech tag is NN that's similar to the part of speech tag NNS. And so yo
 statistical strength between the features that you get. So it's not, the feature information isn't
 quite as sparse as it was previously.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="03:01">
+<turn speaker="Waleed Ammar" timestamp="03:01">
 
 And yeah, and substantial improvements came out of this embedding so Danqi Chen's paper is
 considered a milestone in dependency parsing in that sense.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="03:13">
+<turn speaker="Matt Gardner" timestamp="03:13">
 
 Yeah. And then after that, the natural question is how far can you take this idea? What can, what
 else can you embed like can we get rid of these hand engineered feature representations entirely?
@@ -107,10 +107,10 @@ shift or should we reduce? So Waleed. You are in this group while this work was 
 Chris's students as we found out last time. So do you have any insight on like the development of
 this work?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="04:13">
+<turn speaker="Waleed Ammar" timestamp="04:13">
 
 Yeah, this actually was a very exciting time in the group and Miguel Ballesteros was joining us as a
 post doc. He knows a lot about dependency parsing and this style of parsing and Chris Dyer was
@@ -124,10 +124,10 @@ you're parsing. So this give rise to the development of the CNN library which is
 But at the same time, yeah, so Chris and Miguel came up with the idea of the staked LSTM parser
 basically as a pure model that doesn't use features to do side parsing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="05:48">
+<turn speaker="Matt Gardner" timestamp="05:48">
 
 Yeah, that's interesting. So if we talk about the specifics of this model a little bit, there are
 three different components of the parser state. There's the stack where as I said before, you shift
@@ -142,10 +142,10 @@ particularly hard to do in frameworks other than something like DyNet that allow
 computation graphs. So it seems like a natural fit that this was developed in the same place that
 these dynamic computation graphs were.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="06:54">
+<turn speaker="Matt Gardner" timestamp="06:54">
 
 So the stack LSTM is essentially like a recurrent neural net except you can push and pop stuff off
 of it. And so there's a pointer to the current top of the stack. And if you push something on the
@@ -156,27 +156,27 @@ just concatenate the representations of the stack, the action sequence and the b
 the model. Hopefully that makes sense. It's a little bit hard to talk through this without a figure,
 but we will try to get better.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="07:37">
+<turn speaker="Waleed Ammar" timestamp="07:37">
 
 Yeah. If there's a screen in front of you might want to look at figure two in the paper as Matt is
 describing it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="07:45">
+<turn speaker="Matt Gardner" timestamp="07:45">
 
 So this is an interesting innovative model. Do you know much, I don't follow parsing all that much.
 I think you follow it a little bit more than than I do. Do you know much of what's happened since?
 This is two years old.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="07:57">
+<turn speaker="Waleed Ammar" timestamp="07:57">
 
 So I stopped working on dependencing parsing since I came to AI2, but one important development has
 been Google's paper which was titled: Globally Normalized Transition-Based Neural Networks. It's
@@ -185,10 +185,10 @@ is that they came up with a method for globally normalizing the model. So the pa
 been describing really makes a local decision and we know from a long history of work in natural
 language processing that it's much better to to do global normalization.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="08:43">
+<turn speaker="Matt Gardner" timestamp="08:43">
 
 So one interesting issue with this, there's a whole lot of research in this direction that we're not
 going to talk about right now, but I can give you a little teaser. This parser does a sequence of
@@ -202,27 +202,27 @@ where it has bad decisions on its state. And so figuring out how to train the mo
 situation is tricky. And globally normalizing is one way to try to handle this, this general class
 of problems.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="09:42">
+<turn speaker="Waleed Ammar" timestamp="09:42">
 
 Right. Another approach people have considered is using reinforcement learning methods. That's
 exactly the kind of problems that reinforcement learning methods are meant to solve.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="09:53">
+<turn speaker="Matt Gardner" timestamp="09:53">
 
 Okay. I think that's good enough for this paper.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="09:58">
+<turn speaker="Waleed Ammar" timestamp="09:58">
 
 Thank you. Matt for talking about this paper. Next time we'll talk about Design Challenges for
 Entity Linking a paper by Xiao Ling, Sameer Singh, and Daniel Weld at the University of Washington.
 
-</Turn>
+</turn>

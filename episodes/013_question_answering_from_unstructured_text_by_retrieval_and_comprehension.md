@@ -8,23 +8,23 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting recent work in
 natural language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is Matt Gardner and Waleed Ammar. We are research scientists at the Allen Institute for
 Artificial Intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:12">
+<turn speaker="Matt Gardner" timestamp="00:12">
 
 Today's paper is qQuestion Answering from Unstructured Text by Retrieval and Comprehension by
 Retrieval and Comprehension. These are folks at CMU and this paper takes a look at the question
@@ -36,10 +36,10 @@ have to do is find in that collection of documents some document that has the an
 have to run some reading comprehension model that you might've learned on SQuAD or some similar kind
 of model to actually pull out the answer to the question.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="01:04">
+<turn speaker="Matt Gardner" timestamp="01:04">
 
 And I say it's different than current iterations. Actually, this general notion of question
 answering has a long history in the TREC tasks, but current models are focusing these days, it seems
@@ -51,10 +51,10 @@ generated. They kind of are but really kind of aren't. So what the authors of th
 did was for each, this is you take Wikipedia articles and you take facts from Freebase or Wikipedia
 and I guess there's a correspondence between you so it doesn't really matter which one you say.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="01:59">
+<turn speaker="Matt Gardner" timestamp="01:59">
 
 They take these facts and then for each kind of fact they wrote down some number of templates,
 question templates and then given a template and a fact you could automatically create a question so
@@ -67,10 +67,10 @@ entity is in the relation a location contains with Colorado. So like you might b
 United States for instance, because Colorado is in the United States or you might be looking for
 Barack Obama's birthday.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="02:53">
+<turn speaker="Matt Gardner" timestamp="02:53">
 
 You're given some facts that is essentially just a machine readable representation of a fact with
 something missing and you have to fill it in. And reading comprehension or question answering on the
@@ -81,18 +81,18 @@ Whereas slot filling, you only have to deal with that ambiguity on the passage c
 So anyway, they call this a comprehension task. I think it's actually a slot filling task, but it's
 still interesting to consider.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="03:36">
+<turn speaker="Waleed Ammar" timestamp="03:36">
 
 So they can relatively alleviate this problem by using different templates while training the model
 then they're using at this time.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="03:47">
+<turn speaker="Matt Gardner" timestamp="03:47">
 
 Yeah. So I guess the Wikimovies dataset tries to be a little smart. Like they know that these are
 templates and so you're going to have this like it's essentially just, it's not natural language.
@@ -107,32 +107,32 @@ Wikimovies like the authors of this because they're like, stop calling this lang
 the authors I this, I think this is a useful data set. It's just slot filling. It's not question
 answer. That's all I would say.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="04:55">
+<turn speaker="Waleed Ammar" timestamp="04:55">
 
 It's just to clarify the slots, the names of the slots are going to be shared across the train and
 test set. Only the templates are different.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="05:02">
+<turn speaker="Matt Gardner" timestamp="05:02">
 
 Yes.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="05:03">
+<turn speaker="Waleed Ammar" timestamp="05:03">
 
 Okay.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="05:04">
+<turn speaker="Matt Gardner" timestamp="05:04">
 
 Yes. So I'll mention one other thing about this dataset before moving onto the models that the
 paper's presenting. So the paper split these templates into train and tests. So you only saw some
@@ -146,18 +146,18 @@ time because you're not going to have entity embeddings for test time entities, 
 this hard. But it also means that you could make this less of a reading task than a memorize facts
 at training time task. So anyway other trade-offs in the dataset that you choose to use.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="06:07">
+<turn speaker="Waleed Ammar" timestamp="06:07">
 
 And that would have made the problem much more realistic because oftentimes when we're dealing with
 a real problem, we actually don't see many of the entities at test time.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="06:20">
+<turn speaker="Matt Gardner" timestamp="06:20">
 
 Yeah. So I guess we can see, the modeling decisions made in this paper do get at this a little bit
 as we'll see in a minute. So the model that they're using to do question answering is essentially
@@ -170,10 +170,10 @@ similarities into a probability distribution over the passage. And then you sum 
 that corresponds to each entity or each possible answer option, which in both of these datasets is
 an entity.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="07:22">
+<turn speaker="Matt Gardner" timestamp="07:22">
 
 So of course you sum up all the attention that corresponds to each entity and then that is your
 probability distribution over your answer choices, which are the entities. And they use basically a
@@ -184,17 +184,17 @@ linking as an additional input, which if you're trying to map, like if you want 
 entities and your answer options are all entities knowing which words in the document that you're
 reading correspond to which entities is pretty important for making this decision.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="08:11">
+<turn speaker="Waleed Ammar" timestamp="08:11">
 
 But how is this encoded in the network?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="08:16">
+<turn speaker="Matt Gardner" timestamp="08:16">
 
 They, run an entity linker and then they learn an embedding for every entity. And they can catenate
 the entity vector with the word vector as the input to the passage LSTM. All right. I guess in this
@@ -203,10 +203,10 @@ whole lot of overlap between this capitalization feature and the entity linking.
 clear to me why they have both of them, but apparently they found it useful, otherwise they wouldn't
 have done it. So it's, I guess it's an interesting thing to try.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="08:51">
+<turn speaker="Matt Gardner" timestamp="08:51">
 
 One other interesting point in their modeling decisions is that some of these questions have
 multiple answers. So maybe the question is, who is the president of the United States? And you can
@@ -218,17 +218,17 @@ hot probability distribution over I guess a one-hot vector, which is a probabili
 then you, try to, you maximize cross entropy loss between these two distributions. All right, sorry,
 you minimize a cross entropy loss.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="09:42">
+<turn speaker="Waleed Ammar" timestamp="09:42">
 
 Except as there are multiple correct answers. There will be multiple ones in this.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="09:46">
+<turn speaker="Matt Gardner" timestamp="09:46">
 
 Yes, exactly. And then it's no longer a probability distribution but you're making, your model still
 outputs a probability distribution and so then your loss by definition can no longer be zero. You
@@ -245,20 +245,20 @@ ranking loss? But I guess that's just a different decision you can make. Still i
 you still have to find some threshold if you want to actually decide which things are true and which
 things are false, so you're just pushing your problem to somewhere else.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="11:05">
+<turn speaker="Waleed Ammar" timestamp="11:05">
 
 So at training time, there's an easy way to get around this problem by just instead of using ones as
 the gold answer, use halfs. But then this this doesn't solve the problem at decoding time. How do
 you select which subset of answers at prediction time and it's still not clear to me how, how do you
 do this?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="11:28">
+<turn speaker="Matt Gardner" timestamp="11:28">
 
 They just use ranking metrics at test time. So they don't even try to handle this. They just output
 a rank list, which again makes me think that a ranking training objective would have been a totally
@@ -272,27 +272,27 @@ And to train this model they used, they took the question and passages that they
 correct answer and trained the model to, I guess they sampled 10 negative documents from some
 corpus.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="12:29">
+<turn speaker="Matt Gardner" timestamp="12:29">
 
 They had 18,000, I think Wikipedia articles and they sampled 10 of those. And trained the model to
 pick the correct one out of these sets of 11. Using this cross entropy loss.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="12:43">
+<turn speaker="Waleed Ammar" timestamp="12:43">
 
 The model you presented, only discusses how we can get an answer from a given paragraph, but it
 doesn't tell us how to select some of the documents. Presumably there are millions of documents or
 in this case, thousands of documents you want to select to find the answer in how do we do this.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="13:01">
+<turn speaker="Matt Gardner" timestamp="13:01">
 
 So they train the model in the way that I talked about. So you have this essentially an attention
 sum reader where you have a question vector and then you get a word vector, passage vectors, a
@@ -303,17 +303,17 @@ documents. And then given the question, they run the model on all of the 18,000 
 corpus and they select the top K and use that as their passage. And they do this in a pipeline pre-
 processing, kind of way.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="13:51">
+<turn speaker="Waleed Ammar" timestamp="13:51">
 
 Yeah, this sounds very expensive.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="13:54">
+<turn speaker="Matt Gardner" timestamp="13:54">
 
 Yeah. You can imagine if their corporates had been millions instead of 18,000 running it on all of
 them probably would have been hard. But even in that case, it's not too bad to take the question,
@@ -321,10 +321,10 @@ run it through a search engine get the top 1000 or 2000 results and run this mor
 all of those 2000 like that's totally feasible. Yeah, I think that would be the reasonable thing to
 do.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="14:19">
+<turn speaker="Matt Gardner" timestamp="14:19">
 
 And another natural thing that people have tried, you might be thinking that they should have done
 this is used reinforcement learning. So use reinforce to get a signal for the retrieval step. Have a
@@ -338,10 +338,10 @@ you have for the reinforcement learning to learn is more on the order of a hundr
 sentences instead of 18,000. So yeah, maybe they do have a point here that maybe this is too large
 to be feasible with reinforcement learning. I don't know. I haven't tried it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="15:25">
+<turn speaker="Matt Gardner" timestamp="15:25">
 
 I guess one last point about this modeling stuff is they make an interesting analogy to models that
 do like sequence-to-sequence models that can either generate words from some vocabulary or copy a
@@ -352,10 +352,10 @@ question answering this way too. If what you're outputting is an entity and they
 model where either they can use the attention sum over the document in order to answer the question
 or they can output just an entity from their list of known entities, their entity vocabulary.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="16:23">
+<turn speaker="Matt Gardner" timestamp="16:23">
 
 And so at the end that they have a component of their model that outputs a gate which says, how much
 should I, how much do I think this document actually contains the entity? And I should trust my
@@ -367,26 +367,26 @@ a good idea. Whereas if it's a tail entity, do you haven't seen very much a trai
 have good embeddings for it. Being able to say get that entity from an attention of a document is a
 good idea.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="17:07">
+<turn speaker="Matt Gardner" timestamp="17:07">
 
 So I thought this was a really interesting analogy, a connection between these kinds of models that
 I haven't thought of before.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="17:12">
+<turn speaker="Waleed Ammar" timestamp="17:12">
 
 Yeah, I'd be very curious to see if any of the cases where the model choose to create, to select an
 entity from the vocabulary are actually correct.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="17:24">
+<turn speaker="Matt Gardner" timestamp="17:24">
 
 Yeah. So the, they give some examples of that and they're mostly on like questions about what
 language something is in. So one example, they say, I think there's this, I think it's a movie. So
@@ -396,17 +396,17 @@ movies in Hindi, English. And by having seen that enough times in the training s
 predict from your vocabulary distribution, your entity vocabulary distribution, that Hindi, English
 are the answers.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="18:03">
+<turn speaker="Waleed Ammar" timestamp="18:03">
 
 That is very interesting.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="18:04">
+<turn speaker="Matt Gardner" timestamp="18:04">
 
 Yeah, that was a nice piece of work here. So my main takeaways from this I think Wikimovies is a
 moderately interesting slot filling dataset. It's still not clear to me the extent to which we
@@ -418,36 +418,36 @@ answering the questions after having done retrieval, they get like 80, 86 hits a
 like accurate accuracy of at one is your top prediction correct. So they're doing quite well on this
 data set it's not as clear how much room there is to improve.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="19:03">
+<turn speaker="Waleed Ammar" timestamp="19:03">
 
 It is a bit challenging problem given that you have a very large set of documents you skim from you
 know, I'm surprised to see these numbers.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="19:12">
+<turn speaker="Matt Gardner" timestamp="19:12">
 
 Yeah. I guess that 86 number I said was on this Wikientity subset that they created, which is
 removing any question whose answer doesn't actually show up in the document. So like the Hindi,
 English Bollywood example, wouldn't it be in that subset? So if you look at the full dataset,
 actually the number is quite a bit lower, in the 60s.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="19:33">
+<turn speaker="Waleed Ammar" timestamp="19:33">
 
 Even in the sub set they're, searching for the answer in the entire dataset. They're not only
 constrained to a few documents that are selected.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="19:41">
+<turn speaker="Matt Gardner" timestamp="19:41">
 
 Yeah, I guess this is another point I wanted to talk about it, but I forgot. So they compared
 against some really simple retrieval baselines. So instead of learning a model to figure out which
@@ -457,18 +457,18 @@ retrieval in this setting is pretty easy. You only had 18,000 Wikipedia articles
 pick, like there just isn't that much ambiguity over which article is going to have the correct
 answer in most cases. I think that's what we see here.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="20:22">
+<turn speaker="Waleed Ammar" timestamp="20:22">
 
 It also tells us that this is good news basically because it's using a search engine or a way to do
 keyword matching would be a much cheaper option.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="20:32">
+<turn speaker="Matt Gardner" timestamp="20:32">
 
 Yeah. Except so I'm working on a pretty similar problem, which is given a science question and a
 large collection of science documents find a document or a passage or paragraph or something that
@@ -477,35 +477,35 @@ baselines work in some cases. But you get much more complicated questions and it
 find the correct, find a document that actually has a reasonable answer to the question you're
 trying to ask. Does that make sense?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="21:08">
+<turn speaker="Waleed Ammar" timestamp="21:08">
 
 It's not very clear why is this the case? Is it because you have to do a multi-step reasoning in
 order to find the answer?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="21:17">
+<turn speaker="Matt Gardner" timestamp="21:17">
 
 I guess it's because some of the questions are like what causes a marble to fall to the bottom of a
 glass of water. And so if you're doing a retrieval, you're going to find stuff about marbles and
 water and stuff and what you want is some description of gravity and the retrieval problem is just a
 lot harder in these kinds of settings.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="21:36">
+<turn speaker="Waleed Ammar" timestamp="21:36">
 
 Yeah.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="21:40">
+<turn speaker="Matt Gardner" timestamp="21:40">
 
 So my takeaways from this paper I guess, the modeling decisions that they made weren't incredibly
 novel. I didn't think like they just use out of the box like the attention sum reader with some
@@ -518,12 +518,12 @@ try to get this to actually work on my task. Just some like minor experiment lev
 kinds of things are just really useful to get from these kinds of papers. And I think that's all I
 had to say.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="22:36">
+<turn speaker="Waleed Ammar" timestamp="22:36">
 
 Thank you for presenting this paper mat. Next time we'll talk about the paper titled: Discourse-
 Based Objectives for Fast Unsupervised Sentence Representation Learning.
 
-</Turn>
+</turn>

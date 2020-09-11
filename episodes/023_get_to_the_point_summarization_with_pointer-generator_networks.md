@@ -8,23 +8,23 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting recent work in
 natural language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is Matt Gardner and Waleed Ammar. We are research scientists at the Allen Institute for
 Artificial Intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:12">
+<turn speaker="Matt Gardner" timestamp="00:12">
 
 Okay. Today's paper is titled: Get To The Point: Summarization with Pointer-Generator Networks. It's
 paper written by Abigail See, Peter Liu and Christopher Manning at Stanford University in Google
@@ -36,10 +36,10 @@ make in summarization tasks is between extractive summarization and abstractive 
 extractive summarization means I'm extracting something from the input text and returning that as my
 summary.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="01:02">
+<turn speaker="Matt Gardner" timestamp="01:02">
 
 I don't have to generate anything new. I just have to pull out pieces of my input and return that
 combined in some way, maybe, as the output of my, the thing that I'm using to summarize the inputs
@@ -49,19 +49,19 @@ the same thing. And as you might expect, this is how humans summarize things mos
 typically don't just pull out phrases from the original input text when we're summarizing say a
 textbook or a scientific paper or talking about a paper on a podcast for instance.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="01:45">
+<turn speaker="Waleed Ammar" timestamp="01:45">
 
 Right. But this is hard. So most summarization methods actually do extractive summarization cause
 generating language is very hard. And there was a blog post by Yoav [Goldberg] bashing people about
 proposing a naive method for doing generation.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="02:04">
+<turn speaker="Matt Gardner" timestamp="02:04">
 
 Yeah. if you look at the, I guess this is a little teaser for later on in this episode, but the
 baseline results for extractive summarization is you just take the first three sentences of the
@@ -72,10 +72,10 @@ language generation is hard. But instead of getting discouraged by how hard this
 see how much we can push on the abstractive part and see if we can at least get close to the
 extractive baseline. Okay. So that's where we're coming with, this paper.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="02:51">
+<turn speaker="Matt Gardner" timestamp="02:51">
 
 I will note here that I just really liked this paper. It's written really well. It was really nice
 to read. It's formatted nicely, it even formats references correctly. It's figures are really nice
@@ -87,10 +87,10 @@ individual, like instead of extracting whole sections of text, you can generate 
 from the input document by copying something from the input document. This was introduced a year or
 a few years ago in a paper called Pointer Networks.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="03:52">
+<turn speaker="Matt Gardner" timestamp="03:52">
 
 And this paper builds on that and says, this is one option for generating something. And here in
 this kind of a model, you run some encoder on the input document and then at every time step when
@@ -102,10 +102,10 @@ biLSTM whatever I want to do. And then at each time step I have some vocabulary 
 words from. And so given in my decoder from whatever hidden state, my decoder has, I compute a
 probability distribution over my vocabulary and I generate a word from there.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="04:51">
+<turn speaker="Matt Gardner" timestamp="04:51">
 
 And this is a generation or abstractive kind of model. What this paper does is a combination of the
 two, and they call it a pointer-generator network. This is we should be clear, it's not a new idea.
@@ -121,10 +121,10 @@ over the words and in your vocabulary. And you had just do a linear combination 
 probability distributions using this mixing parameter that you've predicted. And that gives you a
 final distribution over words that you're going to output.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="06:11">
+<turn speaker="Matt Gardner" timestamp="06:11">
 
 And that's their pointer-generator model, this works pretty well. And they have just one little
 extra tweak, which is a nice little idea. And it's a coverage mechanism. This doesn't change the
@@ -135,28 +135,28 @@ the same place multiple times over multiple time steps. And they do this by keep
 of all the attention that they've given to different tokens in the input. And then penalizing giving
 new attention to things that have already gotten attention in previous time steps.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="07:09">
+<turn speaker="Matt Gardner" timestamp="07:09">
 
 And it's a way of encouraging the model to not repeat itself, which previous models have suffered
 from.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="07:17">
+<turn speaker="Waleed Ammar" timestamp="07:17">
 
 So this coverage mechanism works like a regularizer, which looks at the previous decision you'll
 need for attention. And then you attention you're assigning and if you're picking the same word that
 you picked several times before, it's gonna penalize you for doing this. So how does the additional
 term exactly compute this penalty?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="07:43">
+<turn speaker="Matt Gardner" timestamp="07:43">
 
 Yeah. It's actually kind of interesting how they get this to work. So they add a term to the loss
 function that is a sum over all of the tokens in your input. And it's, you take the minimum of the
@@ -165,10 +165,10 @@ time steps. So what this means is the first step, this coverage loss is going to
 I've never, because I'm doing a tokenwise min over all of my input tokens and the previous coverage,
 the previous attention that I've given to it, the coverage value for each token is going to be zero.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="08:31">
+<turn speaker="Matt Gardner" timestamp="08:31">
 
 And so the min of zero and any attention that I give this turn, this token time step is going to be
 zero. So the first time I output something I covers loss zero. It gets interesting at the next step
@@ -183,29 +183,29 @@ taking the min of the low coverage vector and the high probability, the high cur
 attention and I'm going to get a low value. So I minimize this loss by choosing to attend to tokens
 that I have not attended to in previous time steps. Does this make sense?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="09:53">
+<turn speaker="Waleed Ammar" timestamp="09:53">
 
 It does make sense. And it seems like computing this on paper will be daunting because every time in
 every time step you're selecting one of the two terms. And then if you select the aggregate, you
 have to back propagate through all the previous steps which contributed to this aggregate value.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="10:11">
+<turn speaker="Matt Gardner" timestamp="10:11">
 
 This is like, this would be like impossible to have implemented before the days of automatic
 differentiation. Like this is why our modern deep learning tool kits are so nice because they let us
 do these really interesting things that there's no way we could have done this before. It's just too
 messy to actually do this yourself.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="10:30">
+<turn speaker="Matt Gardner" timestamp="10:30">
 
 Okay. So that's how the model works. The way I read this was like a pretty standard pointer-
 generator kind of network. This, these are things that I've seen before that I've implemented. And
@@ -219,10 +219,10 @@ the task in this reading comprehension dataset was to recover the entity that wa
 take this dataset and instead take the summary completely without any entity missing and try to
 generate the summary from the document.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="11:34">
+<turn speaker="Matt Gardner" timestamp="11:34">
 
 A minor point here is that Google originally anonymized the dataset, so all entities were replaced
 with entity identifiers. There are some issues there because it was done automatically. And Danqi
@@ -233,10 +233,10 @@ they do this, given the input, they try to generate the summary, train the model
 summary. I guess they had, let's see, almost 300,000 training pairs, about 13,000 validation and
 about 11.5 thousand test pairs.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="12:28">
+<turn speaker="Matt Gardner" timestamp="12:28">
 
 They evaluated after training on their data, they evaluated on the test set by using ROUGE and
 METEOR metrics. These are common evaluation metrics in machine translation work where you have some
@@ -246,10 +246,10 @@ length N-grams between the generated thing and the reference thing. And METEOR i
 this in a parameterized way, tries to be a little fancier and better handle synonym kinds of things
 instead of just strict over lap. And a ROUGE is one that's more looking just at strict overlap.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="13:16">
+<turn speaker="Matt Gardner" timestamp="13:16">
 
 The upshot is they do better by several ROUGE points than any previous abstractive model and they do
 comparatively to previous extractive models except for the baseline, which is just take the first
@@ -262,17 +262,17 @@ interesting work with it. Whereas here we have a nice model that can do interest
 we can push it and actually we're really close to the baseline so maybe we'll actually beat it
 pretty soon.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="14:07">
+<turn speaker="Waleed Ammar" timestamp="14:07">
 
 That's a very exciting results did the show any sample output from the model?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="14:12">
+<turn speaker="Matt Gardner" timestamp="14:12">
 
 Ya, they did. the first figure on their paper has a document and outputs from previous like from the
 baseline, let's just generate model from a pointer-generator network without a coverage penalty and
@@ -285,10 +285,10 @@ model has a pretty decent summary. It looks like it actually is pretty abstract 
 the end result is basically three sentences that are just copied from different parts of the
 document.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="15:11">
+<turn speaker="Matt Gardner" timestamp="15:11">
 
 So that's what the model learns how to do. Which is kind of interesting. So like you could imagine
 some penalties in future work trying to make this explicitly more abstractive and less overlap with
@@ -301,10 +301,10 @@ summaries generated by humans. This almost never happens for the pointer-generat
 model. This happens about 30/35% of the time where a sentence in my output is identical to one in my
 input.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="16:17">
+<turn speaker="Matt Gardner" timestamp="16:17">
 
 And you get similar kinds of disparities in number of actual abstractive summarizations when you
 look at shorter length sequences too. So unique four grams in reference summaries is like 20% are
@@ -314,12 +314,12 @@ document. But for the pointer-generator network that happens almost 90% of the t
 whole lot of copying whereas humans don't. And so this is a really interesting, like this to me is
 like the hard part left in this task and it'll be interesting to see future work on this.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="17:04">
+<turn speaker="Waleed Ammar" timestamp="17:04">
 
 Thank you for talking about this paper, Matt. Next time we'll talk about a paper titled: Improving
 Hypernymy Detection with an Integrated Path-based and Distributional Method.
 
-</Turn>
+</turn>

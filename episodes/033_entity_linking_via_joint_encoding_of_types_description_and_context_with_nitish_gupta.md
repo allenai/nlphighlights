@@ -8,47 +8,47 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting recent work in
 natural language processing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is Matt Gardner and Waleed Ammar. We are research scientists at the Allen Institute for
 Artificial Intelligence.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:12">
+<turn speaker="Waleed Ammar" timestamp="00:12">
 
 Today we, our guest is Nitish Gupta. He was going to talk to us about his EMNLP 2017 paper titled:
 Entity Linking via Joint Encoding of Types, Descriptions, and Context. Nitish is a third year PhD
 student at University of Pennsylvania where he is working with Dan Roth and Sameer Singh. It's a
 pleasure having you with us today Nitish.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nitish Gupta" timestamp="00:36">
+<turn speaker="Nitish Gupta" timestamp="00:36">
 
 Thanks a lot for the invite. I'm happy to be here.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="00:39">
+<turn speaker="Waleed Ammar" timestamp="00:39">
 
 Can you tell us an elevator pitch about this paper?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nitish Gupta" timestamp="00:44">
+<turn speaker="Nitish Gupta" timestamp="00:44">
 
 Okay, sure. So entity linking is a longstanding problem where you would want to ground mentions of
 entities in text to a knowledge base. So apart from all the challenges, so an elevator pitch for
@@ -59,10 +59,10 @@ today." So here you have two entity mentioned which is India and England. But ju
 sentence a human [doesn't] know that the information India doesn't refer to the country, but rather
 a sports team or something else, but not exactly the country. So this makes the problem challenging.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nitish Gupta" timestamp="01:41">
+<turn speaker="Nitish Gupta" timestamp="01:41">
 
 But on the other hand, you know, some from the sentences that England refers to a location in this
 sentence. So what we, so this shows that what you want to do, an entity linking or what the
@@ -72,10 +72,10 @@ is for example, to refer this mentioned India to the correct entity. And you als
 description of entities from an encyclopedia source. Say Wikipedia to understand that, say India
 cricket team is a sports team. And that could be written down as India in text.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="02:31">
+<turn speaker="Matt Gardner" timestamp="02:31">
 
 So can we back up just a minute? So when you're saying when you say entity linking, what you mean is
 we have some piece of texts and we have some collection of entities in some knowledge base and we
@@ -83,27 +83,27 @@ want to find which words in this text refers to entities in the knowledge base. 
 been talking about this India example. My question is where do we get this knowledge base like it,
 are you just talking about Wikipedia? Do we have other kinds of datasets?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nitish Gupta" timestamp="02:59">
+<turn speaker="Nitish Gupta" timestamp="02:59">
 
 Oh, Sure. So there are so many knowledge bases around, so Wikipedia, Freebase, Wiki data, there are
 other medical knowledge bases, but usually, at least in literature, a lot of work on aggregating
 data has been focused, is trying to link to Wikipedia. And hence there are a lot of papers that also
 call this problem Wikification .
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="03:19">
+<turn speaker="Matt Gardner" timestamp="03:19">
 
 So are the methods that you're using specific to Wikipedia? Could you use this with other things?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nitish Gupta" timestamp="03:25">
+<turn speaker="Nitish Gupta" timestamp="03:25">
 
 Yes. So we could use this with other knowledge bases and I, yeah, that is one good part about I
 think this model is that it is kind of not knowledge based agnostic, so you just need different
@@ -112,19 +112,19 @@ description of the textual description from Wikipedia but we use the fine grain 
 from Freebase. So you can get information about these entities from any source available. And the
 idea is to jointly encode them in a tense representation for each entity.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="04:01">
+<turn speaker="Matt Gardner" timestamp="04:01">
 
 Okay. So I guess you can use any kind of knowledge base that has the kinds of information that
 you're trying to encode. So can you remind us what are those different kinds of information that
 you're encoding?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nitish Gupta" timestamp="04:12">
+<turn speaker="Nitish Gupta" timestamp="04:12">
 
 Sure. So in our paper, what we do is as I said, we take the entity description, so say the first
 paragraph of each entity on Wikipedia, the third come from anywhere. We encode this using a
@@ -138,10 +138,10 @@ we encode these types. There are multiple types for each entity. We encode this 
 representation. And then our objective is that for each entity we need to learn our representation
 for an entity which is closer to all the, all of these three sources.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="05:22">
+<turn speaker="Matt Gardner" timestamp="05:22">
 
 So, when you said you have links to Wikipedia at first thought that makes me think this is specific
 to Wikipedia, right? Cause what other kind of knowledge base is going to have these Wikipedia links
@@ -151,10 +151,10 @@ around some piece of texts that I know refers to an entity in the knowledge base
 done a little bit of work with some new knowledge base to have labeled a few instances of each
 entity in the text so that I can use it as data. Is that right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nitish Gupta" timestamp="06:01">
+<turn speaker="Nitish Gupta" timestamp="06:01">
 
 Oh partly, so for example, if you have Wikipedia that is enough for you for getting local context.
 So for example, if you have a new knowledge base, so you have Freebase and want to encode the
@@ -166,19 +166,19 @@ only have Freebase types, but this joint encoding you can still do. Which goes t
 model is actually robust to this incomplete information. You don't need all sources of information
 for all entities.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="06:56">
+<turn speaker="Waleed Ammar" timestamp="06:56">
 
 I wonder how much you lose by giving away the context information. So let's say you have only types
 for a new entity or maybe you only have a description I wonder how much each of these different
 components of the entity encoding contribute.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nitish Gupta" timestamp="07:16">
+<turn speaker="Nitish Gupta" timestamp="07:16">
 
 Oh good question. And we have we have done study for this in the paper, so we call this the cold-
 start setting. So yeah, so let me just give a primer for this, now that you have learned entity
@@ -193,45 +193,45 @@ which the prior and we don't use any kind of priors. And there are at least arou
 entities for mention string. So it is indeed a difficult setting to evaluate on and we don't lose
 much. I hope that answers your question.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="08:30">
+<turn speaker="Waleed Ammar" timestamp="08:30">
 
 Well, how does this compare to the setup where you actually have multiple mentions, so the 79.5 what
 number two should we compare it to?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nitish Gupta" timestamp="08:41">
+<turn speaker="Nitish Gupta" timestamp="08:41">
 
 You should compare it to the 88 in the paper. Not the most fair comparison, but still, yes, that is
 kind of the ceiling that you can compare it to the 89 for Wiki.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="08:54">
+<turn speaker="Waleed Ammar" timestamp="08:54">
 
 Okay. So in table three, you show that the entity description only will give you about 65 percent
 accuracy adding only the fine-grain types give you a 73.7%. So it seems like adding each of the
 description, fine-grained end types and also dimensions contributes significantly to to the accuracy
 to improving the accuracy.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nitish Gupta" timestamp="09:19">
+<turn speaker="Nitish Gupta" timestamp="09:19">
 
 Yes. So, so again, in that table the last row says 79.5, which is many joined encoders with their
 end types. Yeah, so out of each of the information sources. Yes, definitely gives you more
 improvements.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="09:32">
+<turn speaker="Waleed Ammar" timestamp="09:32">
 
 So one thing that's not very clear to me is how do you combine multiple mentions? So I think in the
 key to this is a equation number one, where you describe the, the probability, so the joint log
@@ -242,51 +242,51 @@ benefit or harm particular entities which show up in a lot of mentions? So what 
 this formulation of the loss function regarding entities with various degrees of with various
 frequencies?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nitish Gupta" timestamp="10:41">
+<turn speaker="Nitish Gupta" timestamp="10:41">
 
 Okay, good question. We didn't do explicit experiment for that were we would evaluate based on the
 frequency of the entity. But I would want to say I hope, I don't think it should affect a lot, that
 is it should not negatively affect it. Obviously more data is always helpful, but it should not
 negatively affect it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="11:02">
+<turn speaker="Waleed Ammar" timestamp="11:02">
 
 I see. Okay. So basically you adapt the information, the different components. So if we have
 multiple pieces of information, we just add it up, which in the log space it amounts to multiplying
 the probabilities for these entities.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nitish Gupta" timestamp="11:20">
+<turn speaker="Nitish Gupta" timestamp="11:20">
 
 Yes,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="11:22">
+<turn speaker="Waleed Ammar" timestamp="11:22">
 
 It's kind of what we do when we're learning embeddings also for the most part for example, in skip
 gram models we're doing also the same thing and different works will have different frequencies.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nitish Gupta" timestamp="11:33">
+<turn speaker="Nitish Gupta" timestamp="11:33">
 
 Right.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="11:34">
+<turn speaker="Matt Gardner" timestamp="11:34">
 
 So if I could summarize a little bit to see if I'm understanding this right. So you're trying to
 find which entities in text map to which knowledge base entities. The way you do this, is you build
@@ -297,28 +297,28 @@ embeddings to match the encoding of the local context and the encoding of the en
 other things. And then at test time you get some candidate entities and you look at the local
 context of the mention and you find the best match to the entity embedding. Is this right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nitish Gupta" timestamp="12:24">
+<turn speaker="Nitish Gupta" timestamp="12:24">
 
 Yes. So you use the already trained local context encoder, you would encode this test context and
 then you would find the nearest neighbor in some sense of the candidates.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="12:37">
+<turn speaker="Matt Gardner" timestamp="12:37">
 
 So it's been many years since I read since I followed the entity linking Wikification kinds of
 papers. It seems like those papers use very similar kinds of information to what you're doing here.
 So is that true? Like are you using different information or are you just encoding it differently?
 Like what's novel about what you presented in this paper?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nitish Gupta" timestamp="12:59">
+<turn speaker="Nitish Gupta" timestamp="12:59">
 
 Sure. So the first one I don't think there's any work which used all these informations jointly.
 There have been work which used description and context, or types and context but not also sources
@@ -326,26 +326,26 @@ jointly. And and so the other good part about this as which was different from o
 it is very modular. So it is very easy to add new sources of information which also makes it very
 robust to incomplete information. So I think that is what I would call the novelty of this work as,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="13:36">
+<turn speaker="Matt Gardner" timestamp="13:36">
 
 Okay.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="13:36">
+<turn speaker="Waleed Ammar" timestamp="13:36">
 
 When I first read this paper, I got excited because it evaluated on multiple different evaluation
 sets without adapting the model to each of them. So I feel like that's a major contribution of this
 paper. Do you have any comments on this?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nitish Gupta" timestamp="13:56">
+<turn speaker="Nitish Gupta" timestamp="13:56">
 
 Sure. yes, exactly. So I completely agree with that. So the hope on using these complex neural
 networks is that they generalize well to different kinds of data. But most of the work in EL doesn't
@@ -357,18 +357,18 @@ like entity linking because your label space changes so dynamically with differe
 can be kind of overfitting to the peculiarities of different datasets. And that might not generalize
 to different data.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="14:53">
+<turn speaker="Waleed Ammar" timestamp="14:53">
 
 So that's a good segue to tell us a little bit more about the dataset that you actually used for in
 the evaluation of this paper.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nitish Gupta" timestamp="15:01">
+<turn speaker="Nitish Gupta" timestamp="15:01">
 
 Sure. So the first evaluation the most important one is that we show that adding different sources
 of information and combining them jointly actually yields into a better entity linker. So when we
@@ -381,10 +381,10 @@ to do competitive fine-grain type prediction for mentions. So that there is this
 which we don't exactly evaluate on or we don't optimize on that exactly. But we still can do very
 good finder end type prediction. So the smarter can also be used for that.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="16:17">
+<turn speaker="Waleed Ammar" timestamp="16:17">
 
 So among the four datasets that are used in, both are described in section 5. There is the Wikipedia
 dataset is not, I don't know if it's a fair comparison because you are trained, you, you're training
@@ -392,42 +392,42 @@ on Wikipedia you're training the entity embeddings on Wikipedia. And there, ther
 overlap between the innocences used in this evaluation and those used in training or did you make
 sure that there is
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nitish Gupta" timestamp="16:44">
+<turn speaker="Nitish Gupta" timestamp="16:44">
 
 No, yeah, we made, we made sure we took out all the tests set of Wikipedia from our training data.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="16:50">
+<turn speaker="Waleed Ammar" timestamp="16:50">
 
 Perfect. I see. And the ACE datasets are based on news, is that right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nitish Gupta" timestamp="16:56">
+<turn speaker="Nitish Gupta" timestamp="16:56">
 
 Yes, yes. So the ACE before was annotated for entity linking, I think by Ratinov and Roth. And the
 ACE'05 was annotated by Bentivogli in 2010 for entity linking. Yeah. Those are the new data sets.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="17:17">
+<turn speaker="Waleed Ammar" timestamp="17:17">
 
 I see. So I'm not a, so it's not surprising that you get state-of-the-art results on the Wikipedia
 dataset, but not on the news and the ACE'05 because the news will definitely, the style used in the
 news will be different than what you're learning, the embedding that you learning from. Is that
 right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nitish Gupta" timestamp="17:37">
+<turn speaker="Nitish Gupta" timestamp="17:37">
 
 Sure. that is true. But I would, yeah, so again, I would want to make the point that the comparison
 to state-of-the-art is not exactly fair because we don't even use the training data from these
@@ -436,10 +436,10 @@ the-art, but we are very close without even using that. An experiment to show ho
 actually in table two. So where those AIDA system was trained on CoNLL'03 and then tested on ACE'04
 and its performance dropped quite significantly.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="18:18">
+<turn speaker="Waleed Ammar" timestamp="18:18">
 
 I see. Yeah. I mean, the promise of the paper is that we can learn this the, the entity linking
 model parameters using the set up that described and then we should be able to use it for multiple
@@ -448,25 +448,25 @@ have, you haven't used the same amount of information that are available to the 
 competing systems. And really the question is how far are we, if we, if we use this approach, how
 far are we going to be from the state-of-the-art results on these particular domains?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nitish Gupta" timestamp="18:54">
+<turn speaker="Nitish Gupta" timestamp="18:54">
 
 Just by using Wikipedia data?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="18:56">
+<turn speaker="Waleed Ammar" timestamp="18:56">
 
 Right. Well, I guess the other question is how do you extend this work so that you can basically Get
 the best of both worlds?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nitish Gupta" timestamp="19:05">
+<turn speaker="Nitish Gupta" timestamp="19:05">
 
 Sure, one thing that has intrigued me and I think I will work on it is kind of making this a semi-
 supervised model. I think that's a very cool work to extend this to is where you can train it in an
@@ -475,17 +475,17 @@ label data. I think that will close the gap quite significantly. Without having 
 data. Then obviously if you certainly care about a certain domain, I think getting a few labeled
 examples is probably not the wrong thing to do if you actually care about a certain domain.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="19:54">
+<turn speaker="Waleed Ammar" timestamp="19:54">
 
 Right. That makes a lot of sense.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="19:56">
+<turn speaker="Matt Gardner" timestamp="19:56">
 
 So switching gears just a little bit, I want to push on this cold-start evaluation a little bit. So
 you have a section where you evaluate and we talked about this briefly earlier in this conversation
@@ -496,19 +496,19 @@ with this because you won't have seen this entity so you won't have had an embed
 solve this problem by not representing entities as vectors directly, but as compositions of features
 of those entities in order to get a vector for it. Does that make sense? Is that fair?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nitish Gupta" timestamp="20:46">
+<turn speaker="Nitish Gupta" timestamp="20:46">
 
 Exactly, exactly. And there are other approaches that do that as well. So primarily in the relation
 extraction field where they would express entities as a combination or a composition of the words in
 it or their types, or some other features. We use features as results. Yeah,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="21:04">
+<turn speaker="Matt Gardner" timestamp="21:04">
 
 Right. I just wonder if this is something of a manufactured problem for neural methods because like,
 we've always been able to do this when you get a new entity, you featurize it and it's the features
@@ -517,59 +517,59 @@ has never been a problem. It's only a problem because some naive neural methods 
 vector for each entity that's not parameterized in any way other than a weight for each entity.
 Right.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nitish Gupta" timestamp="21:36">
+<turn speaker="Nitish Gupta" timestamp="21:36">
 
 Yes.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="21:37">
+<turn speaker="Matt Gardner" timestamp="21:37">
 
 So anyway, it's not a problem with you with your paper. It's just pointing out that we're coming
 back to what we did, but like, I guess we're learning through your paper and other and other papers
 that this is actually the right way, I think to encode things in neural nets instead of trying to
 learn entities for learning vectors for things that really should be featureized.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nitish Gupta" timestamp="22:00">
+<turn speaker="Nitish Gupta" timestamp="22:00">
 
 Probably, yes.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="22:00">
+<turn speaker="Matt Gardner" timestamp="22:00">
 
 I don't know. like word embeddings are a counter example, right? So some things you really do want
 to pre-train, I guess. I guess it's an interesting question, how much, how much you want to just
 associate features with individual things in your model versus having them parameterized in some
 other way. I don't know if that makes a lot of sense.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nitish Gupta" timestamp="22:21">
+<turn speaker="Nitish Gupta" timestamp="22:21">
 
 Yeah. So if I understand that you're trying to ask what should be the atoms in your model for which
 you need these six kinds of representations and what are the atoms you would want to parameterize
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="22:33">
+<turn speaker="Matt Gardner" timestamp="22:33">
 
 Yeah, that's that. That's a really good way of stating. Yes.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nitish Gupta" timestamp="22:37">
+<turn speaker="Nitish Gupta" timestamp="22:37">
 
 So, okay. Yeah, so even if you look at just look at the entity linking literature, it started out
 where models would, where there would be these distance based similarity based models where you
@@ -579,10 +579,10 @@ dense representation for an entity. I don't have concrete like experiments to sh
 there is, it is this problem of kind of this memory or knowledge about this entity that you would
 want to keep saving in a dense representation. Which I think is happening in this model.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="23:26">
+<turn speaker="Matt Gardner" timestamp="23:26">
 
 Okay. Yeah, that's fair. Like if you have, if you have a lot of information about entities it make
 sense to store it in some I don't know what the right word is, like non atomic way is probably a
@@ -590,48 +590,48 @@ good way of saying it. Just like for language modeling or other kinds of things,
 sense to have an atomic representation for the word the, but a parameterized representation for a
 name or other kinds of things.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nitish Gupta" timestamp="23:51">
+<turn speaker="Nitish Gupta" timestamp="23:51">
 
 Right.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="23:54">
+<turn speaker="Matt Gardner" timestamp="23:54">
 
 Okay. Yeah, that's, that's a good response.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nitish Gupta" timestamp="23:56">
+<turn speaker="Nitish Gupta" timestamp="23:56">
 
 Yeah, and in word embeddings I think you probably get saved because the vocabulary of the language
 doesn't change so often, but the vocabulary of the entities is ever growing?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="24:06">
+<turn speaker="Waleed Ammar" timestamp="24:06">
 
 All right. I think that's that's all that we wanted to talk about in this paper. Thank you very much
 for joining us today Nitish.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Nitish Gupta" timestamp="24:14">
+<turn speaker="Nitish Gupta" timestamp="24:14">
 
 It was a pleasure talking to you.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="24:16">
+<turn speaker="Matt Gardner" timestamp="24:16">
 
 Thank you.
 
-</Turn>
+</turn>

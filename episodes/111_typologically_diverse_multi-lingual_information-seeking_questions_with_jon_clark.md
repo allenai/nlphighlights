@@ -8,49 +8,49 @@ description: TODO
 type: episode
 ---
 
-<Turn speaker="Matt Gardner" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Welcome to the NLP highlights podcast where we talk about interesting work in natural language
 processing. The hosts are Matt Gardner, Waleed Ammar and Pradeep Dasigi.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:10">
+<turn speaker="Matt Gardner" timestamp="00:10">
 
 All right. Today our guest is Jon Clark, who is a research scientist at Google in Seattle. Jon,
 welcome to the program.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jon Clark" timestamp="00:16">
+<turn speaker="Jon Clark" timestamp="00:16">
 
 Thanks for having me. I'm excited to be here.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:18">
+<turn speaker="Matt Gardner" timestamp="00:18">
 
 Last episode we talked with Tom Kwiatkowski and Mike Collins about natural questions and today we
 wanted to talk about something that's very related that more recently came out called TyDi QA and
 Jon, do you wanna give us a brief introduction to what this is?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jon Clark" timestamp="00:33">
+<turn speaker="Jon Clark" timestamp="00:33">
 
 Yeah, so TyDi QA is a multilingual question answering dataset with two distinguishing
 characteristics. First, it's questions are information seeking, meaning that the questions are
 written by people who want to know the answer but don't know the answer yet. And second, the
 languages are typologically diverse from each other.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="00:53">
+<turn speaker="Matt Gardner" timestamp="00:53">
 
 Yeah, so natural questions, I guess when you think of most reading comprehension or question
 answering datasets today, almost all of them are in English. So the SQuAD, the ones that I've been
@@ -59,10 +59,10 @@ recently people have started thinking, Hey, we should be thinking about other la
 you've got your own take on this. So I guess the first question is why do we care about other
 languages? I mean, come on.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jon Clark" timestamp="01:26">
+<turn speaker="Jon Clark" timestamp="01:26">
 
 Yeah. So first off, the idea of typological diversity comes from the notion of typology and
 linguistics. Languages express meaning in different ways, and typology categorizes these differences
@@ -75,10 +75,10 @@ also the duel. So that's one typological difference between English and Arabic. 
 different typological features ranging from preferred word order to how morpho syntax and codes
 grammar to whether or not a language encodes gender.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jon Clark" timestamp="02:29">
+<turn speaker="Jon Clark" timestamp="02:29">
 
 So that's what typology is. Why should we care? I think this has a lot to do with a question you've
 been asking a lot recently. Matt, when will we know when our algorithms can really read and answer
@@ -89,10 +89,10 @@ the rich morphology of Russian, the free word order of Japanese, the compounding
 want to be able to study how modeling interacts with all of these and I believe that as a field,
 these are things we have to keep our eye on as we evolve our model architectures.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="03:19">
+<turn speaker="Matt Gardner" timestamp="03:19">
 
 Yeah, I agree. That was, that was a really great articulation from a science perspective there are
 really compelling reasons to think about other languages because our assumptions about tokenization,
@@ -103,10 +103,10 @@ more obvious motivation that I was kind of joking about earlier is that people s
 than English, surprise. And especially like you work at Google and Google tries to serve lots and
 lots of people all over the world, including the majority of which don't speak English. Right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jon Clark" timestamp="04:03">
+<turn speaker="Jon Clark" timestamp="04:03">
 
 Absolutely. And for me that is another big part of this. It's about helping real people. These days
 you can ask a question to a voice assistant, you know, you can type your question into a search box
@@ -116,18 +116,18 @@ languages where this just doesn't work too well yet, and the idea behind TyDi QA
 we can develop models that generalize across many of these important typological features, then
 maybe we have a chance of making progress across many of these languages at once.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="04:40">
+<turn speaker="Matt Gardner" timestamp="04:40">
 
 Okay, so say we want to build a multilingual typologically diverse dataset, how do you go about
 doing it?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jon Clark" timestamp="04:47">
+<turn speaker="Jon Clark" timestamp="04:47">
 
 So the way we collected TyDi QA is to start from the very beginning at question elicitation. We did
 everything directly in each target language, so to inspire questions, we showed people an
@@ -145,19 +145,19 @@ question, if there is such passage, they mark it and then they're also welcome t
 minimal answer if possible. This is kind of the part that you might imagine gets boldfaced when
 we're showing this passage answer to some user.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="06:09">
+<turn speaker="Matt Gardner" timestamp="06:09">
 
 So you said in there that getting people to ask questions that they actually want to know the answer
 to changes their behavior. Do you have any evidence for that? Like did you, did you try collecting
 things in different ways or is this just intuition?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jon Clark" timestamp="06:22">
+<turn speaker="Jon Clark" timestamp="06:22">
 
 So we did several pilot studies when we were getting this thing off the ground and initially what we
 found is that people kind of fall into all sorts of degenerate modes of asking questions. First of
@@ -166,54 +166,54 @@ perhaps something that we're used to doing with our own lines of questioning. An
 likely to just ask the same templated questions over and over unless you tell them no, no. Ask me
 something that you're curious about.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="06:53">
+<turn speaker="Matt Gardner" timestamp="06:53">
 
 Yeah. So you said a conversational partner. Do you mean like you ask questions that depend on each
 other? Is that what you mean?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jon Clark" timestamp="06:59">
+<turn speaker="Jon Clark" timestamp="06:59">
 
 Exactly. So something like, "what's your favorite book" or "how are you doing today?" We explicitly
 did not want to focus on those sorts of questions.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="07:08">
+<turn speaker="Matt Gardner" timestamp="07:08">
 
 Okay. Yeah, that was, that's different than I expected. I was thinking you meant like sequential
 questions, but you mean like dichotic questions, things that have pronouns that refer to you or me
 or this kind of thing. Okay.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="07:19">
+<turn speaker="Waleed Ammar" timestamp="07:19">
 
 This [is] actually related to some observation I had when talking to older people about like
 question answering systems they use like and things like Google home. The actually very often think
 that there's a person who is answering the questions like they actually think there's a human on the
 other end somehow. So I think that's, this might relate somehow.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jon Clark" timestamp="07:42">
+<turn speaker="Jon Clark" timestamp="07:42">
 
 Yeah, perhaps and honestly I would be perfectly happy if people were to begin thinking about
 question answering systems in this way. It would mean that we've advanced far enough that we can
 handle all sorts of different distributions of questions.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="07:55">
+<turn speaker="Matt Gardner" timestamp="07:55">
 
 Yeah. And the other thing you mentioned about templated questions, yes, we definitely see that a
 lot. I've collected lots of different datasets and getting people to not just give you the same
@@ -222,10 +222,10 @@ probably yes. You're not going to ask the same question over and over again with
 differences. But there, I guess there are other ways to do it too, but that one does sound like it
 would probably work. Yes.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jon Clark" timestamp="08:22">
+<turn speaker="Jon Clark" timestamp="08:22">
 
 I think that helped a lot and the prompts also helped. If I just ask you right now, ask me 10
 questions. You will almost certainly draw a blank, but if I give you some stimulus like you would
@@ -233,17 +233,17 @@ see walking down the street, Oh, I wonder how tall that sort of tree will grow. 
 name of that dog breed is. These natural things that you encounter in life. We're hoping to kind of
 model as these prompts.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="08:46">
+<turn speaker="Matt Gardner" timestamp="08:46">
 
 Great. Do you know what kind of questions this elicited,
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jon Clark" timestamp="08:50">
+<turn speaker="Jon Clark" timestamp="08:50">
 
 This elicited all types of questions. So first off we're definitely going information seeking
 questions which are kind of inherently different than the reading comprehension setting. So for us
@@ -256,10 +256,10 @@ questions, let's say, or that some answer types are harder. It's the some answer
 to match to questions than others. So certain categories of questions may tend to naturally require
 these sorts of complex mappings between the question and the answer.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jon Clark" timestamp="09:45">
+<turn speaker="Jon Clark" timestamp="09:45">
 
 But it's this more subtle relationship between the question and the answer that really makes
 information seeking questions. Interesting. So when I look at examples of SQuAD and TyDi QA, I tend
@@ -268,17 +268,17 @@ much more than that. But in TyDi QA the matching goes beyond simple paraphrases.
 one of the key advantages of information seeking questions that the task remains challenging in a
 good way, even for seemingly straightforward questions.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="10:19">
+<turn speaker="Matt Gardner" timestamp="10:19">
 
 Great. Do you have some examples of the kind of mismatch that you're thinking of here?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jon Clark" timestamp="10:25">
+<turn speaker="Jon Clark" timestamp="10:25">
 
 So one of the examples I like to cite is kind of figure one from the SQuAD paper. I believe this one
 is about precipitation. They're listing off the types of rain and sleet and hail and other such
@@ -294,26 +294,26 @@ more paraphrases there. And then the actual answer, the millennium Falcon isn't 
 sentence as most of these matches, it's a sentence away. So there is a lot more indirect matching
 that needs to be done to properly answer these questions.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="11:56">
+<turn speaker="Matt Gardner" timestamp="11:56">
 
 Can you read that paragraph or at least the relevant sentences?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jon Clark" timestamp="11:59">
+<turn speaker="Jon Clark" timestamp="11:59">
 
 So the answer paragraph is "The Millennium Falcon is a fictional Starship in the Star Wars
 franchise. The modified YT 1300 Karelian light Frater is primarily commanded by Kirlian smuggler,
 Han solo; Harrison Ford" and it goes on.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="12:17">
+<turn speaker="Matt Gardner" timestamp="12:17">
 
 Interesting. Yeah, that's really cool. When I, when I think of these data sets I'd like to think of
 like what kind of phenomena do you need to answer the question? Do you need to understand in order
@@ -326,19 +326,19 @@ what ship did Han solo fly something like this or what was he the pilot of? You 
 these two argument structures are corresponding and so then you can pull out the modified thing and
 then you have to like use co-reference to go back to the name to get the Millennium Falcon.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jon Clark" timestamp="13:08">
+<turn speaker="Jon Clark" timestamp="13:08">
 
 Absolutely, and by the way, this is just in the English case, like this is our baseline and then
 once you add multi-lingual on top of this with morphology and diacritics and other issues, frankly
 that's where I think things become interesting.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="13:24">
+<turn speaker="Matt Gardner" timestamp="13:24">
 
 Yeah, yeah, definitely. How are predicates argument structures realized and how is co-reference
 handled in various languages? These are very, very interesting questions. I agree. I guess a
@@ -347,10 +347,10 @@ to find Han Solo and find something that looks like the name of a ship and maybe
 embeddings already know this and so what would you say to this kind of response that are these
 questions really as hard as they look or are there cheap tricks to get the answers right?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jon Clark" timestamp="13:51">
+<turn speaker="Jon Clark" timestamp="13:51">
 
 I think inevitably there are some cheap tricks that will help you solve many of these things, but in
 general, I think that when you're looking over big passages like this, when you have to look over
@@ -360,10 +360,10 @@ articles because this is what real people want. I think if you have a real infor
 want to give you a single passage and ask you to bold face the answer for me. I could have read that
 myself quite easily. I want you to do the hard job of reading over all these articles on my behalf.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="14:33">
+<turn speaker="Matt Gardner" timestamp="14:33">
 
 Yeah, I think that's totally fair. That's how I think about things too. I focus more on the reading
 comprehension side where it's like I want to like given a paragraph, see if the machine actually
@@ -376,10 +376,10 @@ comprehension setting, at least as I, as I think about it, is more about, let me
 understanding of some system. Whereas what you're targeting here is let me solve a human information
 need, which is definitely useful and interesting.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="15:18">
+<turn speaker="Matt Gardner" timestamp="15:18">
 
 I do think it's interesting though to think about when you have these human information needs, what
 kind of things do you need to do in order to actually fill the human information need? And maybe
@@ -395,10 +395,10 @@ it's still essentially a predicate argument structure matching and extraction pr
 from what I've seen in the paper and from what you're saying here that TyDi QA is basically looking
 at this same kind of problem. Do you think that's fair?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jon Clark" timestamp="16:24">
+<turn speaker="Jon Clark" timestamp="16:24">
 
 I think it's fair to say that's one category of problems you'll see in there. I think that because
 we've collected this in an information seeking way, you kind of randomly get all sorts of different
@@ -415,10 +415,10 @@ whole story behind it. And so there's also this notion of true ambiguity over di
 answers. And so you have to build a model that knows what is the preferred answer, what would the
 canonical most accepted thing be here.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="17:46">
+<turn speaker="Matt Gardner" timestamp="17:46">
 
 Yeah, that's a really great point. One thing that I find hard about information like that with all
 the caveats that I like this approach to pushing research and this is a really useful problem to be
@@ -431,10 +431,10 @@ answer these questions. I don't really have a firm idea of how to make progress 
 this is why I keep asking these like can you categorize things like have you done this? Like let me
 understand what's inside this thing.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jon Clark" timestamp="18:38">
+<turn speaker="Jon Clark" timestamp="18:38">
 
 So I agree that we really do need a good understanding of what it takes to solve these datasets and
 in some sense TyDi QA is aiming to do two things at the same time. We want to both be able to do the
@@ -449,10 +449,10 @@ think we're going to need to A. slice the data, but B. we're going to need actua
 do that and I'm hoping that these various subsections of the community, people who have been
 formally trained in linguistics can kind of partner with us to help us solve those problems.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="19:51">
+<turn speaker="Matt Gardner" timestamp="19:51">
 
 Yeah, great. I agree and I think in the end we're converging on basically the same thing because
 when you say I'm going to slice the data, maybe you find that there isn't much, that there aren't
@@ -460,10 +460,10 @@ many examples of a particular slice and I might target some data collection to t
 them and now you're taking basically exactly the same approach that I've been taking. It's just
 starting from different places and ending up in the same place. I think we basically agree here.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jon Clark" timestamp="20:13">
+<turn speaker="Jon Clark" timestamp="20:13">
 
 Indeed. I think there may always be some difference between the questions people want to answer and
 the questions that we find interesting though. So I do like the idea of first having some evidence
@@ -476,42 +476,42 @@ topic is suddenly of interest to the whole world and in those cases we would wan
 already be prepared for things we haven't seen yet. And I think that's where preemptively looking at
 these slices would really come in handy.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="21:09">
+<turn speaker="Matt Gardner" timestamp="21:09">
 
 I guess fundamentally though, there's still gonna be a difference between information seeking and
 validation kinds of questions. Like there will be things that you would want to validate that you
 would never ask in an information seeking way. And so depending on, it just really depends on what's
 your ultimate goal here.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jon Clark" timestamp="21:24">
+<turn speaker="Jon Clark" timestamp="21:24">
 
 Absolutely.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="21:25">
+<turn speaker="Matt Gardner" timestamp="21:25">
 
 And both are good goals.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="21:27">
+<turn speaker="Waleed Ammar" timestamp="21:27">
 
 So while we talk about how the data's collected. Could you comment on the differences in the
 collection strategy between TyDi QA and natural questions?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jon Clark" timestamp="21:36">
+<turn speaker="Jon Clark" timestamp="21:36">
 
 So they're very similar for answer labeling, we actually used exactly the same tool. The difference
 is really in where the questions come from for natural questions. These were real user queries that
@@ -522,46 +522,46 @@ But when you actually compare the distribution of our questions, personally I wa
 that these are basically questions that I think people would ask. I think that's really the main
 difference.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="22:18">
+<turn speaker="Waleed Ammar" timestamp="22:18">
 
 So I guess the baseline I would expect is like to start from where national questions was
 constructed. So what, why the division, what did he decide to do something different about the, the
 question collection?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jon Clark" timestamp="22:30">
+<turn speaker="Jon Clark" timestamp="22:30">
 
 Well, I wanted something that would be kind of an even baseline across languages. And one issue that
 we know would be true is that again, users aren't necessarily going to keep trying things if they
 don't see great results already. And so for some of these languages like Swahili, I doubt there
 would be that many interesting and complex questions already there.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Waleed Ammar" timestamp="22:55">
+<turn speaker="Waleed Ammar" timestamp="22:55">
 
 Yeah, I would say this is also true for Arabic. I know for example, my grandparents, my parents are
 visiting these days and they find it really like surprising and like unimaginable to be asking
 questions at Google.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jon Clark" timestamp="23:09">
+<turn speaker="Jon Clark" timestamp="23:09">
 
 Yeah. So I really see this data set is hopefully kind of paving the way to create something new that
 will then be able to help people later.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="23:18">
+<turn speaker="Matt Gardner" timestamp="23:18">
 
 So you took, from a data collection perspective, you thought it was really important to start to do
 the process end-to-end in each individual language by itself. Like not starting from English and
@@ -569,10 +569,10 @@ then translating. There have been another, there have been a number of recent ef
 the other way where they started with SQuAD or other datasets and translated them. Why take the
 approach that you took with TyDi QA?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jon Clark" timestamp="23:42">
+<turn speaker="Jon Clark" timestamp="23:42">
 
 Yeah, so in many respects, using translation probably feels like the most natural way of getting a
 multilingual dataset. We have interesting English datasets. We have human translators available. Why
@@ -588,18 +588,18 @@ and even human translators are aware of this aspect of translated texts. They've
 translation ease. It's so identifiable that people have even built high accuracy classifiers to
 distinguish original language text versus translated text.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="24:55">
+<turn speaker="Matt Gardner" timestamp="24:55">
 
 And your history, I remember we were PhD students together at CMU. You did a lot of work on machine
 translation. So I assume your experience with all of this colored your motivations here.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jon Clark" timestamp="25:06">
+<turn speaker="Jon Clark" timestamp="25:06">
 
 Absolutely. The other thing we've seen is that depending on translation direction, you kind of get
 the concepts that are centered around the source culture. So if we start from English, many topics
@@ -610,19 +610,19 @@ much in English. We even see this in our own data by the way. So like we had a B
 never heard of it before and that's probably because it grows way more commonly in India than the US
 so we're actually getting these topics that are more of interest for the target language.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="25:56">
+<turn speaker="Matt Gardner" timestamp="25:56">
 
 You mentioned a few examples of different phenomena. You gave an example of Arabic and dual and
 plural. Do you have more examples of the kinds of difficulties that you would have in other
 languages?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jon Clark" timestamp="26:06">
+<turn speaker="Jon Clark" timestamp="26:06">
 
 Yeah, absolutely. So one of the examples that I always like to talk about is this Finish question
 where somebody is asking "Who invented the seven day week?" and the answer in English is "The
@@ -638,28 +638,28 @@ diacritics in Arabic are reserved for very formal texts. But here we see that th
 used for clarification in the questions. So all sorts of interesting things come up and we believe
 that many of these things would actually be an issue for our current state of the art models.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="27:24">
+<turn speaker="Matt Gardner" timestamp="27:24">
 
 And so diacritics just for the listeners are things like accent marks, you might, that might be the
 most familiar use for English listening folks like an accent mark in Spanish or French, we don't
 really have them so much in English. Sometimes you see two dots over a vowel in like highfalutin
 journalist text. We don't really use this very much in English.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jon Clark" timestamp="27:43">
+<turn speaker="Jon Clark" timestamp="27:43">
 
 Absolutely. So these would kind of look like diacritics in Spanish or other languages in Arabic
 they're usually indicating short vowels which are spoken but not written down in the text.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="27:55">
+<turn speaker="Matt Gardner" timestamp="27:55">
 
 And so you mentioned this Finish example of compounding and so in the paper your example has like
 day and week are in the same word in like the question and it's like seven and day are in the same
@@ -668,10 +668,10 @@ certainly if you have a word level tokenization and you do like some kind of att
 going to have a hard time because there's just so much morphologically that's going on inside all of
 these tokens. But if I do a word piece tokenization, does this solve the problem?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jon Clark" timestamp="28:27">
+<turn speaker="Jon Clark" timestamp="28:27">
 
 That's a really great question. So we actually did run multi-lingual BERTs word piece around these
 things and frankly the result is not pretty. You do not get neatly segmented bits where you have the
@@ -683,10 +683,10 @@ on your neural model to hopefully map these things into a similar space. Maybe y
 or maybe if this is a rare concept or rare entity, your word pieces are not well estimated and
 things go poorly for you.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="29:17">
+<turn speaker="Matt Gardner" timestamp="29:17">
 
 Yeah, it's really interesting to think about this like the whole field has converged on BERT or
 Roberta or various transformers for like the last two years. This has been like almost everything
@@ -701,10 +701,10 @@ when you go to other languages that have much more rich morphology, like we real
 this. It's kind of not such a good thing that we have this like monoculture on just using BERT or
 like these transformers that have particular underlying assumptions that just don't hold up.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jon Clark" timestamp="30:23">
+<turn speaker="Jon Clark" timestamp="30:23">
 
 By the way, I think there is another path here and it remains to be seen how things will actually
 go, but you could manually engineer decompounders, morphological analyzers, things like this, and I
@@ -718,10 +718,10 @@ how Khmer is used in a social media context. So these manually engineered system
 some short term gains, but personally I would love to see more general methods that will get us
 farther down the tail quicker.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="31:26">
+<turn speaker="Matt Gardner" timestamp="31:26">
 
 Yeah, I know that there's been a lot of work over the years at Johns Hopkins on unsupervised
 morphological analysis. Like Jason Eisner and others have done a lot on this. I even had a
@@ -730,27 +730,27 @@ that work has been kind of on the sidelines. But when you think about the this T
 you actually need. If we really want to focus on these other languages, like as you say, we really
 need this kind of work.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jon Clark" timestamp="31:53">
+<turn speaker="Jon Clark" timestamp="31:53">
 
 I think we do. And I would encourage everybody not to think of these as individual languages that we
 want to get good at, but to think of these languages as representatives of entire families of
 languages. So don't just solve this for the one language. Let's, really try to solve this thing in
 the general case.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="32:11">
+<turn speaker="Matt Gardner" timestamp="32:11">
 
 Yeah. Great. So I guess on that note, how well do models actually solve this today?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jon Clark" timestamp="32:16">
+<turn speaker="Jon Clark" timestamp="32:16">
 
 So in terms of absolute performance, the short answer is not very well. If you were to show the
 output to real humans, I doubt they would be very impressed. The good news for us researchers is we
@@ -763,28 +763,28 @@ make your answer and then you evaluate that answer against five human annotators
 So that super annotator set up performs about 18 F1 better than a single human annotator guessing
 against those five gold references.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jon Clark" timestamp="33:19">
+<turn speaker="Jon Clark" timestamp="33:19">
 
 So this is all to say that since TyDi QA only uses a single annotator to estimate our human
 performance, I'd actually expect there's around another 10 or 20 F1 points of headroom even above
 our current human estimate. But I think we can cross that bridge when our models come to it. For now
 we have plenty to keep us busy.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="33:38">
+<turn speaker="Matt Gardner" timestamp="33:38">
 
 And what about across languages? Do models do better on English than other languages? I assume
 that's true.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jon Clark" timestamp="33:44">
+<turn speaker="Jon Clark" timestamp="33:44">
 
 So to be honest, I think we can't answer that question yet. So among the languages, the questions
 are different. The articles are very different. English has much longer articles than other
@@ -793,18 +793,18 @@ reason across shorter articles. Maybe we have more pre-training data in English 
 is perhaps fair. Perhaps it's just easy to guess null there's no answer because often there's not in
 some of these languages, so unfortunately I think 50 F1 means something different in each language.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="34:25">
+<turn speaker="Matt Gardner" timestamp="34:25">
 
 And you said, so you put up a leaderboard for the test set and you said you did some interesting
 things there that you wanted to tell us about. Can you say what those were?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jon Clark" timestamp="34:34">
+<turn speaker="Jon Clark" timestamp="34:34">
 
 Yeah, so I think it's safe to say that there's been a lot of discussion about the role of leader
 boards in our community, especially around whether they're incentivizing people to blindly chase
@@ -814,10 +814,10 @@ on the test set. We're hoping that leaderboards can give us a bit more than that
 hoping they can also tell us more about the how and the why behind these systems, which is important
 if these leaderboard entries are going to help us with progressing science.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jon Clark" timestamp="35:10">
+<turn speaker="Jon Clark" timestamp="35:10">
 
 So with this in mind, we're asking folks to answer five questions along with their system
 submission. So maybe I can just kind of read those. "Is there a research paper describing your
@@ -829,10 +829,10 @@ hopefully the answer is no there because this means this thing is inherently kin
 reproduce. And maybe the biggest thing to point out about this is that a lot of folks are likely to
 be interested in using public translation APIs.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jon Clark" timestamp="35:59">
+<turn speaker="Jon Clark" timestamp="35:59">
 
 So if you do that probably gets you quite far on the task. And that's interesting as an existence
 proof. But by the same token, the output of the API may change next month. And also, I don't know
@@ -843,17 +843,17 @@ other language that isn't included in this set. So we ask these questions not as
 that we can still get the existence proofs, but to kind of also encourage good behavior and you
 know, note what it takes to do a correct apples to apples comparison with these numbers.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="36:51">
+<turn speaker="Matt Gardner" timestamp="36:51">
 
 I noticed you didn't have anything in there about computational resources.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jon Clark" timestamp="36:55">
+<turn speaker="Jon Clark" timestamp="36:55">
 
 We don't have anything in there about computational resources. I would hope people put these in
 their research papers. I think very often in the short term you can win big by using big
@@ -862,18 +862,18 @@ you kind of figure out that we've banked the gains, but now we would like to red
 become increasingly interested in very efficient methods and I hope that'll just naturally come
 about as part of our iteration in the community.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="37:29">
+<turn speaker="Matt Gardner" timestamp="37:29">
 
 Great. That I think is all the questions that I had. Is there anything you wanted to talk about that
 we didn't cover or any final thoughts before we conclude?
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jon Clark" timestamp="37:37">
+<turn speaker="Jon Clark" timestamp="37:37">
 
 I guess I would just say a big thanks to the whole team that made this happen. We were lucky to have
 authors of several previous datasets including the natural questions and QuAC. We had linguists who
@@ -881,10 +881,10 @@ are native speakers of Finnish and Russian. That was a huge help. We had folks t
 about multi-lingual modeling and I also want to say a big thanks to everyone who takes up this
 dataset and your own research. We're really excited to see where you take this.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="37:59">
+<turn speaker="Matt Gardner" timestamp="37:59">
 
 Yeah, and I will add my final thought, which is I think this is great. I think thinking about all of
 the different linguistic phenomena that happened in language and like how different languages
@@ -893,18 +893,18 @@ generalizable across languages. All of these things are excellent things to thin
 like you did a really great job in putting together a dataset that should be really useful for the
 community for a long time. So thanks.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Jon Clark" timestamp="38:24">
+<turn speaker="Jon Clark" timestamp="38:24">
 
 Yeah, thanks for having me on. I really enjoyed it.
 
-</Turn>
+</turn>
 
 
-<Turn speaker="Matt Gardner" timestamp="38:26">
+<turn speaker="Matt Gardner" timestamp="38:26">
 
 Thanks. Thanks for coming on. It was nice talking to you. This is really interesting.
 
-</Turn>
+</turn>
