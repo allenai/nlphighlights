@@ -8,7 +8,6 @@ RUN npm install -g gatsby-cli
 RUN npm install
 
 COPY src/ src/
-COPY gatsby-browser.js .
 COPY gatsby-config.js .
 COPY gatsby-node.js .
 COPY meta.json .
