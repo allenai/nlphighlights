@@ -39,6 +39,7 @@
         "gatsby-source-filesystem": "^2.0.20",
         "gatsby-transformer-remark": "^2.2.5",
         "gatsby-transformer-sharp": "^2.1.17",
+        "prismjs": "^1.21.0",
         "react": "^16.8.2",
         "react-animate-height": "^2.0.20",
         "react-dom": "^16.8.2",
