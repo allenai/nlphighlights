@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Alane Suhr"]
 number: "038"
 tags: []
-description: TODO
+description: "ACL 2017 best resource paper, by Alane Suhr, Mike Lewis, James Yeh, and Yoav Artzi Alane joins us on the podcast to tell us about the dataset, which contains images paired with natural language descriptions of the images, where the task is to decide whether the description is true or false. Alane tells us about the motivation for creating the new dataset, how it was constructed, the way they elicited complex language from crowd workers, and why the dataset is an interesting target for future research. https://www.semanticscholar.org/paper/A-Corpus-of-Natural-Language-for-Visual-Reasoning-Suhr-Lewis/633453fb633c3c8695f3cd0e6b5350e971058bed"
 type: episode
 ---
 

@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Hao Fang","New Speaker"]
 number: "062"
 tags: []
-description: TODO
+description: "NAACL 2018 demo paper, by Hao Fang, Hao Cheng, Maarten Sap, Elizabeth Clark, Ari Holtzman, Yejin Choi, Noah A. Smith, and Mari Ostendorf Sounding Board was the system that won the 2017 Amazon Alexa Prize, a competition to build a social chatbot that interacts with users as an Alexa skill. Hao comes on the podcast to tell us about the project. We talk for a little bit about how Sounding Board works, but spend most of the conversation talking about what these chatbots can do - the competition setup, some example interactions, the limits of current systems, and how chatbots might be more useful in the future. Even the best current systems seem pretty limited, but the potential future uses are compelling enough to warrant continued research. https://www.semanticscholar.org/paper/Sounding-Board%3A-A-User-Centric-and-Content-Driven-Fang-Cheng/b540fd427a02b19c6ea55dd7d9758ebf15ec3965"
 type: episode
 ---
 

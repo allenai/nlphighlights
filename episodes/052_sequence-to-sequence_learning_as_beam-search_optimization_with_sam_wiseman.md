@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Sam Wiseman"]
 number: "052"
 tags: []
-description: TODO
+description: "EMNLP 2016 paper by Sam Wiseman and Sasha Rush. In this episode we talk with Sam about a paper from a couple of years ago on bringing back some ideas from structured prediction into neural seq2seq models. We talk about the classic problems in structured prediction of exposure bias, label bias, and locally normalized models, how people used to solve these problems, and how we can apply those solutions to modern neural seq2seq architectures using a technique that Sam and Sasha call Beam Search Optimization. (Note: while we said in the episode that BSO with beam size of 2 is equivalent to a token-level hinge loss, that's not quite accurate; it's close, but there are some subtle differences.) https://www.semanticscholar.org/paper/Sequence-to-Sequence-Learning-as-Beam-Search-Optim-Wiseman-Rush/28703eef8fe505e8bd592ced3ce52a597097b031"
 type: episode
 ---
 

@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["New Speaker","Byron Wallace"]
 number: "086"
 tags: []
-description: TODO
+description: "In this episode, Byron Wallace tells us about interdisciplinary work between evidence based medicine and natural language processing. We discuss extracting PICO frames from articles describing clinical trials and data available for direct and weak supervision. We also discuss automating the assessment of risks of bias in, e.g., random sequence generation, allocation containment and outcome assessment, which have been used to help domain experts who need to review hundreds of articles. Byron Wallace's homepage: http://www.byronwallace.com/ EBM-NLP dataset: https://ebm-nlp.herokuapp.com/ MIMIC dataset: https://mimic.physionet.org/ Cochrane database of systematic reviews: https://www.cochranelibrary.com/cdsr/about-cdsr The bioNLP workshop at ACL'19 (submission due date was extended to May 10): https://aclweb.org/aclwiki/BioNLP_Workshop The workshop on health text mining and information analysis at EMNLP'19: https://louhi2019.fbk.eu/ Machine learning for healthcare conference: https://www.mlforhc.org/"
 type: episode
 ---
 

@@ -1,18 +1,29 @@
 ---
 title: "AllenNLP, interviewing Matt Gardner"
 hosts: ["Matt Gardner","Pradeep Dasigi"]
-guests: ["Karissa Shanika"]
+guests: ["Carissa Schoenick"]
 number: "115"
 tags: []
-description: TODO
+description: "In this special episode, Carissa Schoenick, a program manager and communications director at AI2 interviewed Matt Gardner about AllenNLP. We chatted about the origins of AllenNLP, the early challenges in building it, and the design decisions behind the library. Given the release of AllenNLP 1.0 this week, we asked Matt what users can expect from the new release, what improvements the AllenNLP team is working on for the future versions."
 type: episode
 ---
 
-<turn speaker="Karissa Shanika" timestamp="00:00">
+<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/841990126&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe><div
+style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow:
+hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida
+Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a
+href="https://soundcloud.com/nlp-highlights" title="NLP Highlights" target="_blank" style="color:
+#cccccc; text-decoration: none;">NLP Highlights</a> · <a
+href="https://soundcloud.com/nlp-highlights/115-allennlp-interviewing-matt-gardner" title="115 -
+AllenNLP, interviewing Matt Gardner" target="_blank" style="color: #cccccc; text-decoration:
+none;">115 - AllenNLP, interviewing Matt Gardner</a></div>
+
+<turn speaker="Carissa Schoenick" timestamp="00:00">
 
 Welcome to the NLP highlights podcast, where we invite researchers to talk about their work in
 various areas in natural language processing, the usual hosts are Matt Gardner and Pradeep Dasigi,
-but for today's episode, I'll be joining Pradeep as a guest host. My name is Karissa Shanika, and
+but for today's episode, I'll be joining Pradeep as a guest host. My name is Carissa Schoenick, and
 I'm a program manager and communications director at AI 2. Today we're turning the tables and
 interviewing your usual host Matt Gardner about AllenNLP and open source NLP research library
 provided by AI 2 this week. We're releasing version one of AllenNLP an important milestone for this
@@ -93,7 +104,7 @@ And so this, this was another huge thing we were thinking about in like how this
 </turn>
 
 
-<turn speaker="Karissa Shanika" timestamp="04:32">
+<turn speaker="Carissa Schoenick" timestamp="04:32">
 
 That's great. It sounds like Elmo was a huge motivating factor. And I wanted to ask you about kind
 of early challenges you encountered with building this library. You touched a little on doing that,
@@ -146,7 +157,7 @@ something we've struggled with a lot.
 </turn>
 
 
-<turn speaker="Karissa Shanika" timestamp="07:04">
+<turn speaker="Carissa Schoenick" timestamp="07:04">
 
 That's good. I mean, it sounds like there's a lot going on inside the library. So, I mean, you have
 several demos, you've got a bunch of pre-trained models and there are ways to retrain models or even
@@ -199,7 +210,7 @@ use case that we had in mind when we designed the library.
 </turn>
 
 
-<turn speaker="Karissa Shanika" timestamp="09:35">
+<turn speaker="Carissa Schoenick" timestamp="09:35">
 
 That's really cool. Is that something that you think you'll see more and more of in the coming
 months?
@@ -218,7 +229,7 @@ pretty excited about. I won't, I could go off talking for a while about that, bu
 </turn>
 
 
-<turn speaker="Karissa Shanika" timestamp="10:08">
+<turn speaker="Carissa Schoenick" timestamp="10:08">
 
 We'll have to do a follow up podcast.
 
@@ -235,7 +246,7 @@ are things that we are actively thinking about adding right now.
 </turn>
 
 
-<turn speaker="Karissa Shanika" timestamp="10:33">
+<turn speaker="Carissa Schoenick" timestamp="10:33">
 
 That's fantastic.
 
@@ -305,7 +316,7 @@ library and interesting ways.
 </turn>
 
 
-<turn speaker="Karissa Shanika" timestamp="13:27">
+<turn speaker="Carissa Schoenick" timestamp="13:27">
 
 Great. Okay. So this week we're actually releasing AllenNLP version one. This is the first major
 versioning of this library and it's a major milestone for us. So tell us a little bit about what
@@ -592,7 +603,7 @@ something that helps you a lot as you're writing code.
 </turn>
 
 
-<turn speaker="Karissa Shanika" timestamp="29:52">
+<turn speaker="Carissa Schoenick" timestamp="29:52">
 
 Great. So this library has come such a long way over the last couple of years. And with, you know,
 the release of this new version, there there's so much utility for so many aspects of NLP from
@@ -652,7 +663,7 @@ would like to see.
 </turn>
 
 
-<turn speaker="Karissa Shanika" timestamp="33:03">
+<turn speaker="Carissa Schoenick" timestamp="33:03">
 
 Great. All right. Well, thank you so much, Matt, for giving us some great insight into what's new
 and what's coming up for the AllenNLP platform. Listeners can check it out at Allennlp.org. You can

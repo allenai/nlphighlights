@@ -4,7 +4,7 @@ hosts: ["Waleed Ammar","Matt Gardner"]
 guests: ["Jon Clark"]
 number: "111"
 tags: []
-description: TODO
+description: "We invited Jon Clark from Google to talk about TyDi QA, a new question answering dataset, for this episode. The dataset contains information seeking questions in 11 languages that are typologically diverse, i.e., they differ from each other in terms of key structural and functional features. The questions in TyDiQA are information-seeking, like those in Natural Questions, which we discussed in the previous episode. In addition, TyDiQA also has questions collected in multiple languages using independent crowdsourcing pipelines, as opposed to some other multilingual QA datasets like XQuAD and MLQA where English data is translated into other languages. The dataset and the leaderboard can be accessed at https://ai.google.com/research/tydiqa."
 type: episode
 ---
 

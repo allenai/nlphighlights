@@ -4,7 +4,7 @@ hosts: ["Waleed","Pradeep Dasigi"]
 guests: ["Jonathan Franke"]
 number: "101"
 tags: []
-description: TODO
+description: "In this episode, Jonathan Frankle describes the lottery ticket hypothesis, a popular explanation of how over-parameterization helps in training neural networks. We discuss pruning methods used to uncover subnetworks (winning tickets) which were initialized in a particularly effective way. We also discuss patterns observed in pruned networks, stability of networks pruned at different time steps and transferring uncovered subnetworks across tasks, among other topics. A recent paper on the topic by Frankle and Carbin, ICLR 2019: https://arxiv.org/abs/1803.03635 Jonathan Frankle’s homepage: http://www.jfrankle.com/"
 type: episode
 ---
 

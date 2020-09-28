@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: []
 number: "002"
 tags: []
-description: TODO
+description: "https://www.semanticscholar.org/paper/Bidirectional-Attention-Flow-for-Machine-Seo-Kembhavi/007ab5528b3bd310a80d553cccad4b78dc496b02"
 type: episode
 ---
 

@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Noah Smith"]
 number: "022"
 tags: []
-description: TODO
+description: "An interview with Noah Smith. Noah tells us about his work with his students Hao Peng and Sam Thomson. We talk about what semantic dependency parsing is, the model that they used to approach the problem, how multi-task learning fits into this with a graph-based parser, and end with a little discussion about representation learning. https://www.semanticscholar.org/paper/Deep-Multitask-Learning-for-Semantic-Dependency-Pa-Peng-Thomson/406fd41b360bb02c0aaabff54055193fb5d9d7f1"
 type: episode
 ---
 

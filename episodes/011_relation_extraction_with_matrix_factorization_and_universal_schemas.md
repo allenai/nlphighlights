@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: []
 number: "011"
 tags: []
-description: TODO
+description: "https://www.semanticscholar.org/paper/Relation-Extraction-with-Matrix-Factorization-and-Riedel-Yao/52b5eab895a2d9ae24ea72ca72782974a52f90c4"
 type: episode
 ---
 

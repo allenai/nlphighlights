@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: []
 number: "020"
 tags: []
-description: TODO
+description: "The recently-hyped paper that got \"superhuman\" performance on FAIR's CLEVR dataset. https://arxiv.org/abs/1706.01427"
 type: episode
 ---
 

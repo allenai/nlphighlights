@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Pradeep Dasigi"]
 guests: ["Sudha Rao"]
 number: "105"
 tags: []
-description: TODO
+description: "In this episode we invite Sudha Rao to talk about question generation. We talk about different settings where you might want to generate questions: for human testing scenarios (rare), for data augmentation (has been done a bunch for SQuAD-like tasks), for detecting missing information / asking clarification questions, for dialog uses, and others. After giving an overview of the general area, we talk about the specifics of some of Sudha's work, including her ACL 2018 best paper on ranking clarification questions using EVPI. We conclude with a discussion of evaluating question generation, which is a hard problem, and what the exciting open questions there are in this research area. Sudha's website: https://raosudha.weebly.com/"
 type: episode
 ---
 

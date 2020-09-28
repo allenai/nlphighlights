@@ -4,7 +4,7 @@ hosts: ["Waleed"]
 guests: ["Philip","Matt","New Speaker","Jason"]
 number: "090"
 tags: []
-description: TODO
+description: "How is it like to do research in academia vs. industry? In this episode, we invite Jason Baldridge (UT Austin => Google) and Philip Resnik (Sun Microsystems => UMD) to discuss some of the aspects one may want to consider when planning their research careers, including flexibility, security and intellectual freedom. Perhaps most importantly, we discuss how the career choices we make influence and are influenced by the relationships we forge. Check out the Careers in NLP Panel at NAACL'19 on Monday, June 3, 2019 for further discussion. Careers in NLP panel @ NAACL'19: https://naacl2019.org/blog/careers-panel-survey/ Jason Baldridge's homepage: http://www.jasonbaldridge.com/ Philip Resnik's homepage: http://users.umiacs.umd.edu/~resnik/"
 type: episode
 ---
 

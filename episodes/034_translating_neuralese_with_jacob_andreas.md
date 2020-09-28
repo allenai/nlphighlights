@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Jacob Andreas"]
 number: "034"
 tags: []
-description: TODO
+description: "ACL 2017 paper by Jacob Andreas, Anca D. Dragan, and Dan Klein. Jacob comes on to tell us about the paper. The paper focuses on multi-agent dialogue tasks, where two learning systems need to figure out a way to communicate with each other to solve some problem. These agents might be figuring out communication protocols that are very different from what humans would come up with in the same situation, and Jacob introduces some clever ways to figure out what the learned communication protocol looks like - you find human messages that induce the same beliefs in the listener as the robot messages. Jacob tells us about this work, and we conclude with a brief discussion of the more general issue of interpreting neural models. https://www.semanticscholar.org/paper/Translating-Neuralese-Andreas-Dragan/49612dc348ce953027bb4aba95adad0c703d76d1"
 type: episode
 ---
 

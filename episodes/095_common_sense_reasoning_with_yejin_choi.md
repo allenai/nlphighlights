@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Yejin Choi","New Speaker"]
 number: "095"
 tags: []
-description: TODO
+description: "In this episode, we invite Yejin Choi to talk about common sense knowledge and reasoning, a growing area in NLP. We start by discussing a working definition of “common sense” and the practical utility of studying it. We then talk about some of the datasets and resources focused on studying different aspects of common sense (e.g., ReCoRD, CommonsenseQA, ATOMIC) and contrast implicit vs. explicit modeling of common sense, and what it means for downstream applications. To conclude, Yejin shares her thoughts on some of the open problems in this area and where it is headed in the future. Yejin Choi’s homepage: https://homes.cs.washington.edu/~yejin/ ATOMIC: https://homes.cs.washington.edu/~msap/atomic/ ReCoRD: https://sheng-z.github.io/ReCoRD-explorer/ CommonsenseQA: https://www.tau-nlp.org/commonsenseqa"
 type: episode
 ---
 

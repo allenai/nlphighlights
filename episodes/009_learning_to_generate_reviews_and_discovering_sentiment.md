@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: []
 number: "009"
 tags: []
-description: TODO
+description: "https://www.semanticscholar.org/paper/Learning-to-Generate-Reviews-and-Discovering-Senti-Radford-Jozefowicz/664ec878de4b7170712baae4a7821fc2602bba25 https://blog.openai.com/unsupervised-sentiment-neuron/"
 type: episode
 ---
 

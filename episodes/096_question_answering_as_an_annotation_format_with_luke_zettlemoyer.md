@@ -4,7 +4,7 @@ hosts: ["Pradeep Dasigi","Matt Gardner","Waleed Ammar"]
 guests: ["Luke Zettlemoyer"]
 number: "096"
 tags: []
-description: TODO
+description: "In this episode, we chat with Luke Zettlemoyer about Question Answering as a format for crowdsourcing annotations of various semantic phenomena in text. We start by talking about QA-SRL and QAMR, two datasets that use QA pairs to annotate predicate-argument relations at the sentence level. Luke describes how this annotation scheme makes it possible to obtain annotations from non-experts, and discusses the tradeoffs involved in choosing this scheme. Then we talk about the challenges involved in using QA-based annotations for more complex phenomena like coreference. Finally, we briefly discuss the value of crowd-labeled datasets given the recent developments in pretraining large language models. Luke is an associate professor at the University of Washington and a Research Scientist at Facebook AI Research."
 type: episode
 ---
 

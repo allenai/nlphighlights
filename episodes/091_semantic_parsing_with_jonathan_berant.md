@@ -4,7 +4,7 @@ hosts: ["Waleed"]
 guests: ["Matt","Jonathan"]
 number: "091"
 tags: ["semantic parsing"]
-description: TODO
+description: "In this episode, we invite Jonathan Berant to talk about executable semantic parsing. We discuss what executable semantic parsing is and how it differs from related tasks such as semantic dependency parsing and abstract meaning representation (AMR) parsing. We talk about the main components of a semantic parser, how the formal language affects design choices in the parser, and end with a discussion of some exciting open problems in this space. Jonathan Berant's homepage: http://www.cs.tau.ac.il/~joberant/"
 type: episode
 ---
 

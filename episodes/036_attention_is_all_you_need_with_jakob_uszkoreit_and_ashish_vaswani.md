@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Jakob Uszkoreit","Ashish Vaswani"]
 number: "036"
 tags: []
-description: TODO
+description: "NIPS 2017 paper. We dig into the details of the Transformer, from the \"attention is all you need\" paper. Ashish and Jakob give us some motivation for replacing RNNs and CNNs with a more parallelizable self-attention mechanism, they describe how this mechanism works, and then we spend the bulk of the episode trying to get their intuitions for _why_ it works. We discuss the positional encoding mechanism, multi-headed attention, trying to use these ideas to replace encoders in other models, and what the self-attention actually learns. Turns out that the lower layers learn something like n-grams (similar to CNNs), and the higher layers learn more semantic-y things, like coreference. https://www.semanticscholar.org/paper/Attention-Is-All-You-Need-Vaswani-Shazeer/0737da0767d77606169cbf4187b83e1ab62f6077 Minor correction: Talking about complexity equations without the paper in front of you can be tricky, and Ashish and Jakob may have gotten some of the details slightly wrong when we were discussing computational complexity. The high-level point is that self-attention is cheaper than RNNs when the hidden dimension is higher than the sequence length. See the paper for more details."
 type: episode
 ---
 

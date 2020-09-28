@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Dan Roth"]
 number: "048"
 tags: []
-description: TODO
+description: "AAAI 2017 paper, by Dan Roth. In this episode we have a conversation with Dan about what he means by \"incidental supervision\", and how it's related to ideas in reinforcement learning and representation learning. For many tasks, there are signals you can get from seemingly unrelated data that will help you in making predictions. Leveraging the international news cycle to learn transliteration models for named entities is one example of this, as is the current trend in NLP of using language models or other multi-task signals to do better representation learning for your end task. Dan argues that we need to be thinking about this more explicitly in our research, instead of learning everything \"end-to-end\", as we will never have enough data to learn complex tasks directly from annotations alone. https://www.semanticscholar.org/paper/Incidental-Supervision-Moving-beyond-Supervised-Le-Roth/2997dcfc6d5ffc262d57d0a26f74d091de096573"
 type: episode
 ---
 

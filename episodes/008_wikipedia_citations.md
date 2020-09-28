@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: []
 number: "008"
 tags: []
-description: TODO
+description: "https://www.semanticscholar.org/paper/Finding-News-Citations-for-Wikipedia-Fetahu-Markert/526acf565190d843758b89d37acf281639cb90e2"
 type: episode
 ---
 

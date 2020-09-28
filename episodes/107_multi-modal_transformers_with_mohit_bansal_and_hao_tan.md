@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Pradeep Dasigi"]
 guests: ["Hao Tan","Mohit Banal"]
 number: "107"
 tags: []
-description: TODO
+description: "In this episode, we invite Hao Tan and Mohit Bansal to talk about multi-modal training of transformers, focusing in particular on their EMNLP 2019 paper that introduced LXMERT, a vision+language transformer. We spend the first third of the episode talking about why you might want to have multi-modal representations. We then move to the specifics of LXMERT, including the model structure, the losses that are used to encourage cross-modal representations, and the data that is used. Along the way, we mention latent alignments between images and captions, the granularity of captions, and machine translation even comes up a few times. We conclude with some speculation on the future of multi-modal representations. Hao's website: http://www.cs.unc.edu/~airsplay/ Mohit's website: http://www.cs.unc.edu/~mbansal/ LXMERT paper: https://www.aclweb.org/anthology/D19-1514/"
 type: episode
 ---
 

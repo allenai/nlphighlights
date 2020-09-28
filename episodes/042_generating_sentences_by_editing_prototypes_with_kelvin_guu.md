@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Kelvin Guu"]
 number: "042"
 tags: []
-description: TODO
+description: "Paper is by Kelvin Guu, Tatsunori B. Hashimoto, Yonatan Oren, and Percy Liang In this episode, Kelvin tells us how to build a language model that starts from a prototype sentence instead of starting from scratch, enabling much more grammatical and diverse language modeling results. In the process, Kelvin gives us a really good intuitive explanation for how variational autoencoders work, we talk about some of the details of the model they used, and some of the implications of the work - can you use this for better summarization, or machine translation, or dialogue responses? https://www.semanticscholar.org/paper/Generating-Sentences-by-Editing-Prototypes-Guu-Hashimoto/d94d2a9c615b5359ec7d63b1379f9896c48a713f"
 type: episode
 ---
 

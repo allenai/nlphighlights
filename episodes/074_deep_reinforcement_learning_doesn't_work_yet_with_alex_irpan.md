@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Alex Irpan"]
 number: "074"
 tags: []
-description: TODO
+description: "Blog post by Alex Irpan titled \"Deep Reinforcement Learning Doesn't Work Yet\" https://www.alexirpan.com/2018/02/14/rl-hard.html In this episode, Alex Irpan talks about limitations of current deep reinforcement learning methods and why we have a long way to go before they go mainstream. We discuss sample inefficiency, instability, the difficulty to design reward functions and overfitting to the environment. Alex concludes with a list of recommendations he found useful when training models with deep reinforcement learning."
 type: episode
 ---
 

@@ -4,7 +4,7 @@ hosts: ["Matt Gardner"]
 guests: ["Verena Rieser","Ondřej Dušek"]
 number: "108"
 tags: []
-description: TODO
+description: "In this episode we invite Verena Rieser and Ondřej Dušek on to talk to us about the complexities of generating natural language when you have some kind of structured meaning representation as input. We talk about when you might want to do this, which is often is some kind of a dialog system, but also generating game summaries, and even some language modeling work. We then talk about why this is hard, which in large part is due to the difficulty of collecting data, and how to evaluate the output of these systems. We then move on to discussing the details of a major challenge that Verena and Ondřej put on, called the end-to-end natural language generation challenge (E2E NLG). This was a dataset of task-based dialog generation focused on the restaurant domain, with some very innovative data collection techniques. They held a shared task with 16 participating teams in 2017, and the data has been further used since. We talk about the methods that people used for the task, and what we can learn today from what methods have been used on this data. Verena's website: https://sites.google.com/site/verenateresarieser/ Ondřej's website: https://tuetschek.github.io/ The E2E NLG Challenge that we talked about quite a bit: http://www.macs.hw.ac.uk/InteractionLab/E2E/"
 type: episode
 ---
 

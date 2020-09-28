@@ -4,7 +4,7 @@ hosts: ["Waleed","Matt Gardner","Waleed Ammar"]
 guests: ["Matthew Peters"]
 number: "056"
 tags: []
-description: TODO
+description: "NAACL 2018 paper, by Matt Peters, Mark Neumann, Mohit Iyyer, Matt Gardner, Chris Clark, Kenton Lee, and Luke Zettlemoyer. In this episode, AI2's own Matt Peters comes on the show to talk about his recent work on ELMo embeddings, what some have called \"the next word2vec\". Matt has shown very convincingly that using a pre-trained bidirectional language model to get contextualized word representations performs substantially better than using static word vectors. He comes on the show to give us some more intuition about how and why this works, and to talk about some of the other things he tried and what's coming next. https://www.semanticscholar.org/paper/Deep-contextualized-word-representations-Peters-Neumann/4b17597b856c087f109381ce77d60d9017cb6f9a"
 type: episode
 ---
 

@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: []
 number: "001"
 tags: []
-description: TODO
+description: "https://www.semanticscholar.org/paper/A-Comparative-Study-of-Word-Embeddings-for-Reading-Dhingra-Liu/3ec37205c9201fc891ab51da200e361fdc34bfb3"
 type: episode
 ---
 

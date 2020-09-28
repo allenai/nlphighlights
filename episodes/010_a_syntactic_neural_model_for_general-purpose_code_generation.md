@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: []
 number: "010"
 tags: []
-description: TODO
+description: "https://www.semanticscholar.org/paper/A-Syntactic-Neural-Model-for-General-Purpose-Code-Yin-Neubig/c8d0e13de2eaa09a928eff36b99d63f494c2f5ec"
 type: episode
 ---
 

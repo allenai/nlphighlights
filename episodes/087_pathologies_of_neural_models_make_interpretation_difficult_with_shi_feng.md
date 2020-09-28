@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Shi Feng"]
 number: "087"
 tags: []
-description: TODO
+description: "In this episode, Shi Feng joins us to discuss his recent work on identifying pathological behaviors of neural models for NLP tasks. Shi uses input word gradients to identify the least important word for a model's prediction, and iteratively removes that word until the model prediction changes. The reduced inputs tend to be significantly smaller than the original inputs, e.g., 2.3 words instead of 11.5 in the original in SQuAD, on average. We discuss possible interpretations of these results, and a proposed method for mitigating these pathologies. Shi Feng's homepage: http://users.umiacs.umd.edu/~shifeng/ Paper: https://www.semanticscholar.org/paper/Pathologies-of-Neural-Models-Make-Interpretation-Feng-Wallace/8e141b5cb01c88b315c9a94dc97e50738cc7370d Joint work with Eric Wallace, Alvin Grissom II, Mohit Iyyer, Pedro Rodriguez and Jordan Boyd-Graber"
 type: episode
 ---
 

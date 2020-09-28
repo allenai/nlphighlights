@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: []
 number: "016"
 tags: []
-description: TODO
+description: "https://www.semanticscholar.org/paper/Arc-swift-A-Novel-Transition-System-for-Dependency-Qi-Manning/56fc1372a41a46f777ac77859219bb4b76bfd098"
 type: episode
 ---
 

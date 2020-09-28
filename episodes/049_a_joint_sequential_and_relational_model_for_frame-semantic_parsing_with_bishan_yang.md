@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Bishan Yang"]
 number: "049"
 tags: []
-description: TODO
+description: "EMNLP 2017 paper by Bishan Yang and Tom Mitchell. Bishan tells us about her experiments on frame-semantic parsing / semantic role labeling, which is trying to recover the predicate-argument structure from natural language sentences, as well as categorize those structures into a pre-defined event schema (in the case of frame-semantic parsing). Bishan had two interesting ideas here: (1) use a technique similar to model distillation to combine two different model structures (her \"sequential\" and \"relational\" models), and (2) use constraints on arguments across frames in the same sentence to get a more coherent global labeling of the sentence. We talk about these contributions, and also touch on \"open\" versus \"closed\" semantics, in both predicate-argument structure and information extraction. https://www.semanticscholar.org/paper/A-Joint-Sequential-and-Relational-Model-for-Frame-Yang-Mitchell/a1deb609e3758519cbe3f1a542bdf1ea52b6f224"
 type: episode
 ---
 

@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Sebastian R."]
 number: "083"
 tags: []
-description: TODO
+description: "In this episode, we invite Sebastian Riedel to talk about knowledge base construction (KBC). Why is it an important research area? What are the tradeoffs between using an open vs. closed schema? What are popular methods currently used, and what challenges prevent the adoption of KBC methods? We also briefly discuss the AKBC workshop and its graduation into a conference in 2019. Sebastian Riedel's homepage: http://www.riedelcastro.org/ AKBC conference: http://www.akbc.ws/2019/"
 type: episode
 ---
 

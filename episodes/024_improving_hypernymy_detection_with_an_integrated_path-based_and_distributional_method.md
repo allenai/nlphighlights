@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: []
 number: "024"
 tags: []
-description: TODO
+description: "ACL 2016 outstanding paper, by Vered Shwartz, Yoav Goldberg and Ido Dagan. Waleed presents this paper, discussing hypernymy detection and the methods used in the paper. It's pretty similar to work in relation extraction and knowledge base completion, so we also talk a bit about connections to other methods we're familiar with. Encoding paths using an RNN like they do (and like Arvind Neelakantan did for KBC) improves recall substantially, at the cost of some precision, which makes intuitive sense. https://www.semanticscholar.org/paper/Improving-Hypernymy-Detection-with-an-Integrated-P-Shwartz-Goldberg/05d28e891fd70d123c46ceeb0cdfc0a2cb0d88db"
 type: episode
 ---
 

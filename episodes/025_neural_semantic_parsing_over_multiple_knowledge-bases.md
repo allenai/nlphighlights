@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: []
 number: "025"
 tags: []
-description: TODO
+description: "ACL 2017 short paper, by Jonathan Herzig and Jonathan Berant. This is a nice, obvious-in-hindsight paper that applies a frustratingly-easy-domain-adaptation-like approach to semantic parsing, similar to the multi-task semantic dependency parsing approach we talked to Noah Smith about recently. Because there is limited training data available for complex logical constructs (like argmax, or comparatives), but the mapping from language onto these constructions is typically constant across domains, domain adaptation can give a nice, though somewhat small, boost in performance. NB: I felt like I struggled a bit with describing this clearly. Not my best episode. Hopefully it's still useful. https://www.semanticscholar.org/paper/Neural-Semantic-Parsing-over-Multiple-Knowledge-ba-Herzig-Berant/6611cf821f589111adfc0a6fbb426fa726f4a9af"
 type: episode
 ---
 

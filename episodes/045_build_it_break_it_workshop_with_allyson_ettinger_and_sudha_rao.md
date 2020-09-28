@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Allyson Ettinger","Sudha Rao"]
 number: "045"
 tags: []
-description: TODO
+description: "How robust is your NLP system? High numbers on common datasets can be misleading, as most systems are easily fooled by small modifications that would not be hard for humans to understand. Allyson Ettinger, Sudha Rao, Hal Daumé III, and Emily Bender organized a workshop trying to characterize this issue, inviting participants to either build robust systems, or try to break them with targeted examples. Allyson and Sudha come on the podcast to talk about the workshop. We cover the motivation of the workshop, what a \"minimal pair\" is, what tasks the workshop focused on and why, and what the main takeaways of the workshop were. https://www.semanticscholar.org/paper/Towards-Linguistically-Generalizable-NLP-Systems-A-Ettinger-Rao/8472e999f723a9ccaffc6089b7be1865d8a1b863"
 type: episode
 ---
 

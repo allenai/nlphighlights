@@ -4,7 +4,7 @@ hosts: ["Waleed"]
 guests: ["Zhou","Matt","New Speaker"]
 number: "089"
 tags: []
-description: TODO
+description: "In this episode, we invite Zhou Yu to give an overview of dialogue systems. We discuss different types of dialogue systems (task-oriented vs. non-task-oriented), the main building blocks and how they relate to other research areas in NLP, how to transfer models across domains, and the different ways used to evaluate these systems. Zhou also shares her thoughts on exciting future directions such as developing dialogue methods for non-cooperative environments (e.g., to negotiate prices) and multimodal dialogue systems (e.g., using video as well as audio/text). Zhou Yu's homepage: http://zhouyu.cs.ucdavis.edu/"
 type: episode
 ---
 

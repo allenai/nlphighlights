@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Noah Smith"]
 number: "077"
 tags: []
-description: TODO
+description: "It's not uncommon for authors to be frustrated with the quality of peer reviews they receive in (NLP) conferences. In this episode, Noah A. Smith shares his advice on how to write good peer reviews. The structure Noah recommends for writing a peer review starts with a dispassionate summary of what a paper has to offer, followed by the strongest reasons the paper may be accepted, followed by the strongest reasons it may be rejected, and concludes with a list of minor, easy-to-fix problems (e.g., typos) which can be easily addressed in the camera ready. Noah stresses on the importance of thinking about how the reviews we write could demoralize (junior) researchers, and how to be precise and detailed when discussing the weaknesses of a paper to help the authors see the path forward. Other questions we discuss in this episode include: How to read a paper for reviewing purposes? How long it takes to review a paper and how many papers to review? What types of mistakes to be on the lookout for while reviewing? How to review pre-published work?"
 type: episode
 ---
 

@@ -4,7 +4,7 @@ hosts: ["Pradeep Dasigi","Waleed Ammar"]
 guests: ["Dina Demnar-Fushman","Matt Garner"]
 number: "102"
 tags: []
-description: TODO
+description: "What exciting NLP research problems are involved in processing biomedical and clinical data? In this episode, we spoke with Dina Demner-Fushman, who leads NLP and IR research at the Lister Hill National Center for Biomedical Communications, part of the National Library of Medicine. We talked about processing biomedical scientific literature, understanding clinical notes, and answering consumer health questions, and the challenges involved in each of these applications. Dina listed some specific tasks and relevant data sources for NLP researchers interested in such applications, and concluded with some pointers to getting started in this field."
 type: episode
 ---
 

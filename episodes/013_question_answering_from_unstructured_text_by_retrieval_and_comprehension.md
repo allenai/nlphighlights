@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: []
 number: "013"
 tags: []
-description: TODO
+description: "https://www.semanticscholar.org/paper/Question-Answering-from-Unstructured-Text-by-Retri-Watanabe-Dhingra/89d06c2996f379c602e64b4243f026cd164400d7"
 type: episode
 ---
 

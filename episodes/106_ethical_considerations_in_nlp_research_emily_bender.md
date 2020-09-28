@@ -4,7 +4,7 @@ hosts: ["Pradeep Dasigi","Matt Gardner","Waleed Ammar"]
 guests: ["Emily Bender"]
 number: "106"
 tags: []
-description: TODO
+description: "In this episode, we talked to Emily Bender about the ethical considerations in developing NLP models and putting them in production. Emily cited specific examples of ethical issues, and talked about the kinds of potential concerns to keep in mind, both when releasing NLP models that will be used by real people, and also while conducting NLP research. We concluded by discussing a set of open-ended questions about designing tasks, collecting data, and publishing results, that Emily has put together towards addressing these concerns. Emily M. Bender is a Professor in the Department of Linguistics and an Adjunct Professor in the Department of Computer Science and Engineering at the University of Washington. She’s active on Twitter at @emilymbender."
 type: episode
 ---
 

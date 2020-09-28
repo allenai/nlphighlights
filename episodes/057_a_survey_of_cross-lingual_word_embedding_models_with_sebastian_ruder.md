@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Sebastian Ruder"]
 number: "057"
 tags: []
-description: TODO
+description: "Upcoming JAIR paper by Sebastian Ruder, Ivan Vulić, and Anders Søgaard. Sebastian comes on to tell us about his survey. He creates a typology of cross-lingual word embedding methods, and we discuss why you might use cross-lingual embeddings (low-resource languages in particular), what information they capture (semantics? syntax? both?), how the methods work (lots of different ways), and how to evaluate the embeddings (best when you have an extrinsic task to evaluate on). https://www.semanticscholar.org/paper/A-survey-of-cross-lingual-embedding-models-Ruder/3dbd28c63a7807280c9531735c715d4598024166"
 type: episode
 ---
 

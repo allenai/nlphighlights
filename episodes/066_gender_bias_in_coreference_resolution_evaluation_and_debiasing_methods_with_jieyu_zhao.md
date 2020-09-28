@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Jieyu Zhao"]
 number: "066"
 tags: []
-description: TODO
+description: "NACL 2018 paper, by Jieyu Zhao, Tianlu Wang, Mark Yatskar, Vicente Ordonez, and Kai-Wei Chang. Jieyu comes on the podcast to talk about bias in coreference resolution models. This bias makes models rely disproportionately on gender when making decisions for whether \"she\" refers to a noun like \"secretary\" or \"physician\". Jieyu and her co-authors show that coreference systems do not actually exhibit much bias in standard evaluation settings (OntoNotes), perhaps because there is a broad document context to aid in making coreference decisions. But they then construct a really nice diagnostic dataset that isolates simple coreference decisions, and evaluates whether the model is using common sense, grammar, or gender bias to make those decisions. This dataset shows that current models are quite biased, particularly when it comes to common sense, using gender to make incorrect coreference decisions. Jieyu then tells us about some simple methods to correct the bias without much of a drop in overall accuracy. https://www.semanticscholar.org/paper/Gender-Bias-in-Coreference-Resolution%3A-Evaluation-Zhao-Wang/e4a31322ed60479a6ae05d1f2580dd0fa2d77e50 Also, there was a very similar paper also published at NAACL 2018 that used similar methodology and constructed a similar dataset: https://www.semanticscholar.org/paper/Gender-Bias-in-Coreference-Resolution-Rudinger-Naradowsky/be2c8b5ec0eee2f32da950db1b6cf8cc4a621f8f."
 type: episode
 ---
 

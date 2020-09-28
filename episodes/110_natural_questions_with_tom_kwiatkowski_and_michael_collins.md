@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Michael Collins","Tom Kwiatkowski"]
 number: "110"
 tags: []
-description: TODO
+description: "In this episode, Tom Kwiatkowski and Michael Collins talk about Natural Questions, a benchmark for question answering research. We discuss how the dataset was collected to reflect naturally-occurring questions, the criteria used for identifying short and long answers, how this dataset differs from other QA datasets, and how easy it might be to game the benchmark with superficial processing of the text. We also contrast the holistic design in Natural Questions to deliberately targeting specific linguistic phenomena of interest when building a QA dataset. Dataset: https://ai.google.com/research/NaturalQuestions Paper: https://www.mitpressjournals.org/doi/full/10.1162/tacl_a_00276"
 type: episode
 ---
 

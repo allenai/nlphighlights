@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Aaron White"]
 number: "094"
 tags: []
-description: TODO
+description: "In this episode, Aaron White tells us about the decompositional semantics initiative (Decomp), an attempt to re-think the prototypical approach to semantic representation and annotation. The basic idea is to decompose complex semantic classes such as ‘agent’ and ‘patient’ into simpler semantic properties such as ‘causation’ and ‘volition’, while embracing the uncertainty inherent in language by allowing annotators to choose answers such as ‘probably’ or ‘probably not’. In order to scale the collection of labeled data, each property is annotated by asking crowd workers intuitive questions about phrases in a given sentence. Aaron White's homepage: http://aaronstevenwhite.io/ Decomp initiative page: http://decomp.io/"
 type: episode
 ---
 

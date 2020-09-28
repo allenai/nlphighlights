@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Niranjan B."]
 number: "065"
 tags: []
-description: TODO
+description: "AAAI 2018 paper by Noah Weber, Niranjan Balasubramanian, and Nathanael Chambers Niranjan joins us on the podcast to tell us about his latest contribution in a line of work going back to Shank's scripts. This work tries to model sequences of events to get coherent narrative schemas, mined from large collections of text. For example, given an event like \"She threw a football\", you might expect future events involving catching, running, scoring, and so on. But if the event is instead \"She threw a bomb\", you would expect future events to involve things like explosions, damage, arrests, or other related things. We spend much of our conversation talking about why these scripts are interesting to study, and the general outline for how one might learn these scripts from text, and spend a little bit of time talking about the particular contribution of this paper, which is a better model that captures interactions among all of the arguments to an event. https://www.semanticscholar.org/paper/Event-Representations-With-Tensor-Based-Weber-Balasubramanian/418f405a60b8d9009099777f7ae37f4496542f90"
 type: episode
 ---
 

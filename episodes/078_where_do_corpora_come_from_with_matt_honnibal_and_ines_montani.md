@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Ines Montani","Matt Honnibal"]
 number: "078"
 tags: []
-description: TODO
+description: "Most NLP projects rely crucially on the quality of annotations used for training and evaluating models. In this episode, Matt and Ines of Explosion AI tell us how Prodigy can improve data annotation and model development workflows. Prodigy is an annotation tool implemented as a python library, and it comes with a web application and a command line interface. A developer can define input data streams and design simple annotation interfaces. Prodigy can help break down complex annotation decisions into a series of binary decisions, and it provides easy integration with spaCy models. Developers can specify how models should be modified as new annotations come in in an active learning framework. Prodigy: https://prodi.gy Prodigy recipe scripts: https://github.com/explosion/prodigy-recipes Twitter: https://twitter.com/_inesmontani https://twitter.com/honnibal"
 type: episode
 ---
 

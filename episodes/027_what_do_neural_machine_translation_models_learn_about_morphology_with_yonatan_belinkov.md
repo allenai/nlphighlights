@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Yonatan Belinkov"]
 number: "027"
 tags: []
-description: TODO
+description: "ACL 2017 paper by Yonatan Belinkov and others at MIT and QCRI. Yonatan comes on to tell us about their work. They trained a neural MT system, then learned models on top of the NMT representation layers to do morphology tasks, trying to probe how much morphological information is encoded by the MT system. We talk about the specifics of their model and experiments, insights they got from doing these experiments, and how this work relates to other work on representation learning in NLP. https://www.semanticscholar.org/paper/What-do-Neural-Machine-Translation-Models-Learn-ab-Belinkov-Durrani/37ac87ccea1cc9c78a0921693dd3321246e5ef07"
 type: episode
 ---
 

@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Taylor Berg-Kirkpatrick"]
 number: "097"
 tags: []
-description: TODO
+description: "In this episode, we talk to Taylor Berg-Kirkpatrick about optical character recognition (OCR) on historical documents. Taylor starts off by describing some practical issues related to old scanning processes of documents that make performing OCR on them a difficult problem. Then he explains how one can build latent variable models for this data using unsupervised methods, the relative importance of various modeling choices, and summarizes how well the models do. We then take a higher level view of historical OCR as a Machine Learning problem, and discuss how it is different from other ML problems in terms of the tradeoff between learning from data and imposing constraints based on prior knowledge of the underlying process. Finally, Taylor talks about the applications of this research, and how these predictions can be of interest to historians studying the original texts."
 type: episode
 ---
 

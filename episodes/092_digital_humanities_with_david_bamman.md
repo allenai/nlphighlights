@@ -4,7 +4,7 @@ hosts: ["Waleed"]
 guests: ["Matt","David"]
 number: "092"
 tags: []
-description: TODO
+description: "In this episode, we invite David Bamman to give an overview of computational humanities. We discuss examples of questions studied in computational humanities (e.g., characterizing fictionality, assessing novelty, measuring the attention given to male vs. female characters in the literature). We talk about the role NLP plays in addressing these questions and how the accuracy and biases of NLP models can influence the results. We also discuss understudied NLP tasks which can help us answer more questions in this domain such as literary scene coreference resolution and constructing a map of literature geography. David Bamman's homepage: http://people.ischool.berkeley.edu/~dbamman/ LitBank dataset: https://github.com/dbamman/litbank"
 type: episode
 ---
 

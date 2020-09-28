@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Charles Sutton"]
 number: "085"
 tags: []
-description: TODO
+description: "In this episode, Charles Sutton walks us through common sources of stress for researchers and suggests coping strategies to maintain your sanity. We talk about how pursuing a research career is similar to participating in a life-long international tournament, conflating research worth and self-worth, and how freedom can be both a blessing and a curse, among other stressors one may encounter in a research career. Charles Sutton's homepage: https://homepages.inf.ed.ac.uk/csutton/ A series of blog posts Charles wrote on this topic: http://www.theexclusive.org/tag/stress%20in%20research/"
 type: episode
 ---
 

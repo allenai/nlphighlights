@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: []
 number: "005"
 tags: []
-description: TODO
+description: "https://www.semanticscholar.org/paper/Transition-Based-Dependency-Parsing-with-Stack-Lon-Dyer-Ballesteros/396b7932beac62a72288eaea047981cc9a21379a"
 type: episode
 ---
 

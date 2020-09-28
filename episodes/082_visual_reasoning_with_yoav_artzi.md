@@ -4,7 +4,7 @@ hosts: ["Waleed"]
 guests: ["Zhou","Matt","New Speaker"]
 number: "082"
 tags: []
-description: TODO
+description: "In this episode, Yoav Artzi joins us to talk about visual reasoning. We start by defining what visual reasoning is, then discuss the pros and cons of different tasks and datasets. We discuss some of the models used for visual reasoning and how they perform, before ending with open questions in this young, exciting research area. Yoav Artzi: https://yoavartzi.com/ NLVR: https://github.com/clic-lab/nlvr/tree/master/nlvr NLVR2: https://github.com/clic-lab/nlvr/tree/master/nlvr2 CLEVR dataset: https://cs.stanford.edu/people/jcjohns/clevr/ VQA: https://visualqa.org/ GQA: https://cs.stanford.edu/people/dorarad/gqa/index.html Neural module networks: https://arxiv.org/abs/1511.02799"
 type: episode
 ---
 

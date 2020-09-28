@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Oren Etzioni"]
 number: "100"
 tags: []
-description: TODO
+description: "For our 100th episode, we invite AI2 CEO Oren Etzioni to talk to us about NLP startups. Oren has founded several successful startups, is himself an investor in startups, and helps with AI2's startup incubator. Some of our discussion topics include: What's the similarity between being a researcher and an entrepreneur? How do you transition from being a researcher to doing a startup? How do you evaluate early-stage startups? What advice would you give to a researcher who's thinking about a startup? What are some typical mistakes that you've seen startups make? Along the way, Oren predicts a that we'll see a whole generation of startup companies based on the technology underlying ELMo, BERT, etc."
 type: episode
 ---
 

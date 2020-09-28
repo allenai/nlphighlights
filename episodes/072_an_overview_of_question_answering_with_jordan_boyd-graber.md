@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Jordan Boyd-G"]
 number: "072"
 tags: []
-description: TODO
+description: "Our first episode in a new format: broader surveys of areas, instead of specific discussions on individual papers. In this episode, we talk with Jordan Boyd-Graber about question answering. Matt starts the discussion by giving five different axes on which question answering tasks vary: (1)how complex is the language in the question, (2)what is the genre of the question / nature of the question semantics, (3)what is the context or knowledge source used to answer the question, (4)how much \"reasoning\" is required to answer the question, and (5) what's the format of the answer? We talk about each of these in detail, giving examples from Jordan's and others' work. In the end, we conclude that \"question answering\" is a format to study a particular phenomenon, it is not a \"phenomenon\" in itself. Sometimes it's useful to pose a phenomenon you want to study as a question answering task, and sometimes it's not. During the conversation, Jordan mentioned the QANTA competition; you can find that here: http://qanta.org. We also talked about an adversarial question creation task for Quiz Bowl questions; the paper on that can be found here: https://www.semanticscholar.org/paper/Trick-Me-If-You-Can%3A-Adversarial-Writing-of-Trivia-Wallace-Boyd-Graber/11caf090fef96605d6d67c7505572b1a26796971."
 type: episode
 ---
 

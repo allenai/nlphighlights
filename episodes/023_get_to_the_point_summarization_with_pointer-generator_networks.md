@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: []
 number: "023"
 tags: []
-description: TODO
+description: "ACL 2017 paper by Abigail See, Peter Liu, and Chris Manning. Matt presents the paper, describing the task (summarization on CNN/Daily Mail), the model (the standard copy + generate model that people are using these days, plus a nice coverage loss term), and the results (can't beat the extractive baseline, but coming close). It's a nice paper - very well written, interesting discussion section. https://www.semanticscholar.org/paper/Get-To-The-Point-Summarization-with-Pointer-Genera-See-Liu/13db673d09f546698e0bfb6687beeb5345f81ad9 Abigail also has a very nice blog post where she describes her work in a less formal tone than the paper: http://www.abigailsee.com/2017/04/16/taming-rnns-for-better-summarization.html"
 type: episode
 ---
 

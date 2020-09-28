@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["New Speaker","AntoineBosselut"]
 number: "054"
 tags: []
-description: TODO
+description: "ICLR 2018 paper, by Antoine Bosselut, Omer Levy, Ari Holtzman, Corin Ennis, Dieter Fox, and Yejin Choi. This is not your standard NLP task. This work tries to predict which entities change state over the course of a recipe (e.g., ingredients get combined into a batter, so entities merge, and then the batter gets baked, changing location, temperature, and \"cookedness\"). We talk to Antoine about the work, getting into details about how the data was collected, how the model works, and what some possible future directions are. https://www.semanticscholar.org/paper/Simulating-Action-Dynamics-with-Neural-Process-Bosselut-Levy/dc01c9401d1caab7f5e6d2f1280f5815f6919977"
 type: episode
 ---
 

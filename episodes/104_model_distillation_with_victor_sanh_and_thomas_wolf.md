@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Pradeep Dasigi"]
 guests: ["Speaker 3","Victor Sanh","Thomas Wolf"]
 number: "104"
 tags: []
-description: TODO
+description: "In this episode we talked with Victor Sanh and Thomas Wolf from HuggingFace about model distillation, and DistilBERT as one example of distillation. The idea behind model distillation is compressing a large model by building a smaller model, with much fewer parameters, that approximates the output distribution of the original model, typically for increased efficiency. We discussed how model distillation was typically done previously, and then focused on the specifics of DistilBERT, including training objective, empirical results, ablations etc. We finally discussed what kinds of information you might lose when doing model distillation."
 type: episode
 ---
 

@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: []
 number: "018"
 tags: []
-description: TODO
+description: "https://www.semanticscholar.org/paper/Generalizing-to-Unseen-Entities-and-Entity-Pairs-w-Verga-Neelakantan/7dd8b958632b07e41979337c71d847a3f39df456"
 type: episode
 ---
 

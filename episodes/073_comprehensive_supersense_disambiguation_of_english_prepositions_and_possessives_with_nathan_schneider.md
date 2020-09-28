@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Nathan S."]
 number: "073"
 tags: []
-description: TODO
+description: "ACL 2018 paper by Nathan Schneider, Jena D. Hwang, Vivek Srikumar, Jakob Prange, Austin Blodgett, Sarah R. Moeller, Aviram Stern, Adi Bitan, Omri Abend. In this episode, Nathan discusses how the meaning of prepositions varies, proposes a hierarchy for classifying the semantics of function words (e.g., comparison, temporal, purpose), and describes empirical results using the provided dataset for disambiguating preposition semantics. Along the way, we talk about lexicon-based semantics, multilinguality and pragmatics. https://www.semanticscholar.org/paper/Comprehensive-Supersense-Disambiguation-of-English-Schneider-Hwang/8310213af102913b9e74e7dfe6864f3aa62a5a5e"
 type: episode
 ---
 

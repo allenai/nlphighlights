@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: []
 number: "000"
 tags: []
-description: TODO
+description: "In this episode we briefly say what we're up to with the podcast. No technical content, just a description of what each episode will look like, and why we're doing this."
 type: episode
 ---
 

@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Burr Settles","New Speaker"]
 number: "069"
 tags: []
-description: TODO
+description: "A shared task held in conjunction with a NAACL 2018 workshop, organized by Burr Settles and collaborators at Duolingo. Burr tells us about the shared task. The goal of the task was to predict errors that a language learner would make when doing exercises on Duolingo. We talk about the details of the data, why this particular data is interesting to study for second language acquisition, what could be better about it, and what systems people used to approach this task. We also talk a bit about what you could do with a system that can predict these kinds of errors to build better language learning systems. https://www.semanticscholar.org/paper/Second-Language-Acquisition-Modeling-Settles-Brust/10685728fab1dfe9d1cf0cd4240ed687dd601ac6"
 type: episode
 ---
 

@@ -4,7 +4,7 @@ hosts: ["Waleed"]
 guests: ["Alistair","Matt"]
 number: "093"
 tags: []
-description: TODO
+description: "In this episode, we invite Alistair Johnson to discuss the main challenge in applying NLP/ML to clinical domains: the lack of data. We discuss privacy concerns, de-identification, synthesizing records, legal liabilities and data heterogeneity. We also discuss how the MIMIC dataset evolved over the years, how it is being used, and some of the under-explored ways in which it can be used. Alistair’s homepage: http://alistairewj.github.io/ MIMIC dataset: https://mimic.physionet.org/"
 type: episode
 ---
 

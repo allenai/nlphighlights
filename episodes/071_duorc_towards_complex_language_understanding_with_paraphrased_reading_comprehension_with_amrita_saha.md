@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Amrita Saha"]
 number: "071"
 tags: []
-description: TODO
+description: "ACL 2018 paper by Amrita Saha, Rahul Aralikatte, Mitesh M. Khapra, Karthik Sankaranarayanan Amrita and colleagues at IBM Research introduced a harder dataset for \"reading comprehension\", where you have to answer questions about a given passage of text. Amrita joins us on the podcast to talk about why a new dataset is necessary, what makes this one unique and interesting, and how well initial baseline systems perform on it. Along the way, we talk about the problems with using BLEU or ROUGE as evaluation metrics for question answering systems. https://www.semanticscholar.org/paper/DuoRC%3A-Towards-Complex-Language-Understanding-with-Saha-Aralikatte/1e70a4830840d48486ecfbc6c89b774cdd0b6399"
 type: episode
 ---
 

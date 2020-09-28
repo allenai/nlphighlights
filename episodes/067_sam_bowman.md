@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Amar"]
 guests: ["Sam Bowman"]
 number: "067"
 tags: []
-description: TODO
+description: "Paper by Alex Wang, Amanpreet Singh, Julian Michael, Felix Hill, Omer Levy, and Samuel R. Bowman. Sam comes on to tell us about GLUE. We talk about the motivation behind setting up a benchmark framework for natural language understanding, how the authors defined \"NLU\" and chose the tasks for this benchmark, a very nice diagnostic dataset that was constructed for GLUE, and what insight they gained from the experiments they've run so far. We also have some musings about the utility of general-purpose sentence vectors, and about leaderboards. https://www.semanticscholar.org/paper/GLUE%3A-A-Multi-Task-Benchmark-and-Analysis-Platform-Wang-Singh/a2054eff8b4efe0f1f53d88c08446f9492ae07c1"
 type: episode
 ---
 

@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: []
 number: "007"
 tags: []
-description: TODO
+description: "https://www.semanticscholar.org/paper/Capturing-Semantic-Similarity-for-Entity-Linking-w-Francis-Landau-Durrett/1c9aca60f7ac5edcceb73d612806704a7d662643"
 type: episode
 ---
 

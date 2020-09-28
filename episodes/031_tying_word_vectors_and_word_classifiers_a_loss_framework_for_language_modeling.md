@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: []
 number: "031"
 tags: []
-description: TODO
+description: "ICLR 2017 paper by Hakan Inan, Khashayar Khosravi, Richard Socher, presented by Waleed. The paper presents some tricks for training better language models. It introduces a modified loss function for language modeling, where producing a word that is similar to the target word is not penalized as much as producing a word that is very different to the target (I've seen this in other places, e.g., image classification, but not in language modeling). They also give theoretical and empirical justification for tying input and output embeddings. https://www.semanticscholar.org/paper/Tying-Word-Vectors-and-Word-Classifiers-A-Loss-Fra-Inan-Khosravi/424aef7340ee618132cc3314669400e23ad910ba"
 type: episode
 ---
 

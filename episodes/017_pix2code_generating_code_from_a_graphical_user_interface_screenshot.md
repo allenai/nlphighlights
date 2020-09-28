@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: []
 number: "017"
 tags: []
-description: TODO
+description: "https://arxiv.org/abs/1705.07962"
 type: episode
 ---
 

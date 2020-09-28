@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: []
 number: "028"
 tags: []
-description: TODO
+description: "NIPS 2016 paper by Alexander Ratner and coauthors in Chris Ré's group at Stanford, presented by Waleed. The paper presents a method for generating labels for an unlabeled dataset by combining a number of weak labelers. This changes the annotation effort from looking at individual examples to constructing a large number of noisy labeling heuristics, a task the authors call \"data programming\". Then you learn a model that intelligently aggregates information from the weak labelers to create a weighted \"supervised\" training set. We talk about this method, how it works, how it's related to ideas like co-training, and when you might want to use it. https://www.semanticscholar.org/paper/Data-Programming-Creating-Large-Training-Sets-Quic-Ratner-Sa/37acbbbcfe9d8eb89e5b01da28dac6d44c3903ee"
 type: episode
 ---
 

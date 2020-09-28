@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Tim Rocktäschel"]
 number: "019"
 tags: []
-description: TODO
+description: "An interview with Tim Rocktäschel. https://arxiv.org/abs/1705.11040"
 type: episode
 ---
 

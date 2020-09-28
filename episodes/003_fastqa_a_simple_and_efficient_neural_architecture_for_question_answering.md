@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: []
 number: "003"
 tags: []
-description: TODO
+description: "https://www.semanticscholar.org/paper/FastQA-A-Simple-and-Efficient-Neural-Architecture-Weissenborn-Wiese/7c1576b96a1e246d77b30f7b80cec63be96fa698"
 type: episode
 ---
 

@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Wei Xu","Wuwei Lan"]
 number: "064"
 tags: []
-description: TODO
+description: "Best reproduction paper at COLING 2018, by Wuwei Lan and Wei Xu. This paper takes a bunch of models for sentence pair classification (including paraphrase identification, semantic textual similarity, natural language inference / entailment, and answer sentence selection for QA) and compares all of them on all tasks. There's a very nice table in the paper showing the cross product of models and datasets, and how by looking at the original papers this table is almost empty; Wuwei and Wei fill in all of the missing values in that table with their own experiments. This is a very nice piece of work that helps us gain a broader understanding of how these models perform in diverse settings, and it's awesome that COLING explicitly asked for and rewarded this kind of paper, as it's not your typical \"come look at my shiny new model!\" paper. Our discussion with Wuwei and Wei covers what models and datasets the paper looked at, why the datasets can be treated similarly (and some reasons for why maybe they should be treated differently), the differences between the models that were tested, and the difficulties of reproducing someone else's model. https://www.semanticscholar.org/paper/Neural-Network-Models-for-Paraphrase-Semantic-and-Lan-Xu/6c990c162816bff2133a8e0ed9719bd0f87ae9d9"
 type: episode
 ---
 

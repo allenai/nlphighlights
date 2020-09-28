@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Speaker 6","Chris Dyer"]
 number: "004"
 tags: []
-description: TODO
+description: "An interview with Chris Dyer. https://www.semanticscholar.org/paper/Recurrent-Neural-Network-Grammars-Dyer-Kuncoro/1594d954abc650bce2db445c52a76e49655efb0c"
 type: episode
 ---
 

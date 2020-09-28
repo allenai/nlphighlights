@@ -4,7 +4,7 @@ hosts: ["Matt Gardner"]
 guests: ["Isabelle Augenstein","New Speaker","Walleed Ammar"]
 number: "039"
 tags: []
-description: TODO
+description: "Isabelle Augenstein was the lead organizer of SemEval 2017 task 10, on extracting keyphrases and relations from scientific publications. In this episode we talk about her experience organizing the task, how the task was set up, and what the result of the task was. We also talk about some related work Isabelle did on multi-task learning for keyphrase boundary detection. https://www.semanticscholar.org/paper/SemEval-2017-Task-10-ScienceIE-Extracting-Keyphras-Augenstein-Das/71007219617d0f5e2419c5c1ab1a0d6d0bc40b7e https://www.semanticscholar.org/paper/Multi-Task-Learning-of-Keyphrase-Boundary-Classifi-Augenstein-S%C3%B8gaard/4a0db09d0c19dfeb78900164d46d4b06cd3fc9f3"
 type: episode
 ---
 

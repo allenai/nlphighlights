@@ -4,7 +4,7 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: []
 number: "006"
 tags: []
-description: TODO
+description: "https://www.semanticscholar.org/paper/Design-Challenges-for-Entity-Linking-Ling-Singh/aa2a7ac7bfa9a0201d4faddd4e7bb26299a5e0be"
 type: episode
 ---
 
