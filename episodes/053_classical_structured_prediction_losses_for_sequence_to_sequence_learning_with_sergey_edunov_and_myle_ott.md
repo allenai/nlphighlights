@@ -8,6 +8,8 @@ description: "NAACL 2018 paper, by Sergey Edunov, Myle Ott, Michael Auli, David 
 type: episode
 ---
 
+<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?&url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F417310266&show_artwork=true&show_comments=false"></iframe>
+
 <turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting work in natural

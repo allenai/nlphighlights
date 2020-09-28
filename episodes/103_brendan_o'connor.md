@@ -8,6 +8,8 @@ description: "We talked to Brendan O’Connor for this episode about processing 
 type: episode
 ---
 
+<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?&url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F750450508&show_artwork=true&show_comments=false"></iframe>
+
 <turn speaker="Matt Gardner" timestamp="">
 
 Welcome to the NLP highlights podcast where we talk about interesting work in natural language

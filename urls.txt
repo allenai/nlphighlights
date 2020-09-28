@@ -1,0 +1,360 @@
+Title: 119 - Social NLP, with Diyi Yang
+URL: https://soundcloud.com/nlp-highlights/119-social-nlp-with-diyi-yang
+
+Title: 118 - Coreference Resolution, with Marta Recasens
+URL: https://soundcloud.com/nlp-highlights/118-coreference-resolution-with-marta-recasens
+
+Title: 117 - Interpreting NLP Model Predictions, with Sameer Singh
+URL: https://soundcloud.com/nlp-highlights/117-interpreting-nlp-model-predictions-with-sameer-singh
+
+Title: 116 - Grounded Language Understanding, with Yonatan Bisk
+URL: https://soundcloud.com/nlp-highlights/116-grounded-language-understanding-with-yonatan-bisk
+
+Title: 115 - AllenNLP, interviewing Matt Gardner
+URL: https://soundcloud.com/nlp-highlights/115-allennlp-interviewing-matt-gardner
+
+Title: 114 - Behavioral Testing of NLP Models, with Marco Tulio Ribeiro
+URL: https://soundcloud.com/nlp-highlights/114-behavioral-testing-of-nlp-models-with-marco-tulio-ribeiro
+
+Title: 113 - Managing Industry Research Teams, with Fernando Pereira
+URL: https://soundcloud.com/nlp-highlights/113-managing-industry-research-teams-with-fernando-pereira
+
+Title: 112 - Alignment of Multilingual Contextual Representations, with Steven Cao
+URL: https://soundcloud.com/nlp-highlights/112-alignment-of-multilingual-contextual-representations-with-steven-cao
+
+Title: 111 - Typologically diverse, multi-lingual, information-seeking questions, with Jon Clark
+URL: https://soundcloud.com/nlp-highlights/111-typologically-diverse-multi-lingual-information-seeking-questions-with-jon-clark
+
+Title: 110 - Natural Questions, with Tom Kwiatkowski and Michael Collins
+URL: https://soundcloud.com/nlp-highlights/110-natural-questions-with-tom-kwiatkowski-and-michael-collins
+
+Title: 109 - What Does Your Model Know About Language, with Ellie Pavlick
+URL: https://soundcloud.com/nlp-highlights/109-what-does-your-model-know-about-language-with-ellie-pavlick
+
+Title: 108 - Data-To-Text Generation, with Verena Rieser and Ondřej Dušek
+URL: https://soundcloud.com/nlp-highlights/108-data-to-text-generation-with-verena-rieser-and-ondrej-dusek
+
+Title: 107 - Multi-Modal Transformers, with Hao Tan and Mohit Bansal
+URL: https://soundcloud.com/nlp-highlights/107-multi-modal-transformers-with-hao-tan-and-mohit-bansal
+
+Title: 106 - Ethical Considerations In NLP Research, with Emily Bender
+URL: https://soundcloud.com/nlp-highlights/106-ethical-considerations-in-nlp-research-emily-bender
+
+Title: 105 - Question Generation, with Sudha Rao
+URL: https://soundcloud.com/nlp-highlights/105-question-generation-with-sudha-rao
+
+Title: 104 - Model Distillation, with Victor Sanh and Thomas Wolf
+URL: https://soundcloud.com/nlp-highlights/104-model-distillation-with-victor-sanh-and-thomas-wolf
+
+Title: 103 - Processing Language in Social Media, with Brendan O'Connor
+URL: https://soundcloud.com/nlp-highlights/103-processing-language-in-social-media-with-brendan-oconnor
+
+Title: 102 - Biomedical NLP research at the National Institute of Health with Dina Demner-Fushman
+URL: https://soundcloud.com/nlp-highlights/102-biomedical-nlp-research-at-the-national-institute-of-health-with-dina-demner-fushman
+
+Title: 101 - The lottery ticket hypothesis, with Jonathan Frankle
+URL: https://soundcloud.com/nlp-highlights/101-the-lottery-ticket-hypothesis-with-jonathan-frankle
+
+Title: 100 - NLP Startups, with Oren Etzioni
+URL: https://soundcloud.com/nlp-highlights/100-nlp-startups-with-oren-etzioni
+
+Title: 99 - Evaluating Protein Transfer Learning, With Roshan Rao And Neil Thomas
+URL: https://soundcloud.com/nlp-highlights/99-evaluating-protein-transfer-learning-with-roshan-rao-and-neil-thomas
+
+Title: 98 - Analyzing Information Flow In Transformers, With Elena Voita
+URL: https://soundcloud.com/nlp-highlights/98-analyzing-information-flow-in-transformers-with-elena-voita
+
+Title: 97 - Automated Analysis Of Historical Printed Documents, With Taylor Berg-Kirkpatrick
+URL: https://soundcloud.com/nlp-highlights/97-automated-analysis-of-historical-printed-documents-with-taylor-berg-kirkpatrick
+
+Title: 96 - Question Answering as an Annotation Format, with Luke Zettlemoyer
+URL: https://soundcloud.com/nlp-highlights/96-question-answering-as-an-annotation-format-with-luke-zettlemoyer
+
+Title: 95 - Common sense reasoning, with Yejin Choi
+URL: https://soundcloud.com/nlp-highlights/95-common-sense-reasoning-with-yejin-choi
+
+Title: 94 - Decompositional Semantics, with Aaron White
+URL: https://soundcloud.com/nlp-highlights/94-decompositional-semantics-with-aaron-white
+
+Title: 93 - NLP/ML for clinical data, with Alistair Johnson
+URL: https://soundcloud.com/nlp-highlights/93-nlpml-for-clinical-data-with-alistair-johnson
+
+Title: 92 - Computational Humanities, with David Bamman
+URL: https://soundcloud.com/nlp-highlights/92-digital-computational-humanities-with-david-bamman
+
+Title: 91 - (Executable) Semantic Parsing, with Jonathan Berant
+URL: https://soundcloud.com/nlp-highlights/executable-semantic-parsing-with-jonathan-berant
+
+Title: 90 - Research in Academia versus Industry, with Philip Resnik and Jason Baldridge
+URL: https://soundcloud.com/nlp-highlights/90-research-in-academia-versus-industry-with-philip-resnik-and-jason-baldridge
+
+Title: 89 - Dialog Systems, with Zhou Yu
+URL: https://soundcloud.com/nlp-highlights/89-dialog-systems-with-zhou-yu
+
+Title: 88 - A Structural Probe for Finding Syntax in Word Representations, with John Hewitt
+URL: https://soundcloud.com/nlp-highlights/88-a-structural-probe-for-finding-syntax-in-word-representations-with-john-hewitt
+
+Title: 87 - Pathologies of Neural Models Make Interpretation Difficult, with Shi Feng
+URL: https://soundcloud.com/nlp-highlights/87-pathologies-of-neural-models-make-interpretation-difficult-with-shi-feng
+
+Title: 86 - NLP for Evidence-based Medicine, with Byron Wallace
+URL: https://soundcloud.com/nlp-highlights/86-nlp-for-evidence-based-medicine-with-byron-wallace
+
+Title: 85 - Stress in Research, with Charles Sutton
+URL: https://soundcloud.com/nlp-highlights/85-stress-in-research-with-charles-sutton
+
+Title: 84 - Large Teams Develop, Small Groups Disrupt, with Lingfei Wu
+URL: https://soundcloud.com/nlp-highlights/84-large-teams-develop-small-groups-disrupt-with-lingfei-wu
+
+Title: 83 - Knowledge Base Construction, with Sebastian Riedel
+URL: https://soundcloud.com/nlp-highlights/83-knowledge-base-construction-with-sebastian-riedel
+
+Title: 82 - Visual Reasoning, with Yoav Artzi
+URL: https://soundcloud.com/nlp-highlights/82-visual-reasoning-with-yoav-artzi
+
+Title: 81 - BlackboxNLP, with Afra Alishahi and Tal Linzen
+URL: https://soundcloud.com/nlp-highlights/blackboxnlp-with-afra-alishahi-and-tal-linzen
+
+Title: 80 - Leaderboards and Science, with Siva Reddy
+URL: https://soundcloud.com/nlp-highlights/80-leaderboards-and-science-with-siva-reddy
+
+Title: 79 - The glass ceiling in NLP, with Natalie Schluter
+URL: https://soundcloud.com/nlp-highlights/79-the-glass-ceiling-in-nlp-with-natalie-schluter
+
+Title: 78. Where do corpora come from?, with Matt Honnibal and Ines Montani
+URL: https://soundcloud.com/nlp-highlights/78-where-do-corpora-come-from-with-matt-honnibal-and-ines-montani
+
+Title: 77. On Writing Quality Peer Reviews, with Noah A. Smith
+URL: https://soundcloud.com/nlp-highlights/77-on-writing-quality-peer-reviews-with-noah-a-smith
+
+Title: 76 - Increasing In-Class Similarity by Retrofitting Embeddings with Demographics, with Dirk Hovy
+URL: https://soundcloud.com/nlp-highlights/76-increasing-in-class-similarity-by-retrofitting-embeddings-with-demographics-with-dirk-hovy
+
+Title: 75 - Reinforcement / Imitation Learning in NLP, with Hal Daumé III
+URL: https://soundcloud.com/nlp-highlights/75-reinforcement-imitation-learning-in-nlp-with-hal-daume-iii
+
+Title: 74 - Deep Reinforcement Learning Doesn't Work Yet, with Alex Irpan
+URL: https://soundcloud.com/nlp-highlights/74-deep-reinforcement-learning-doesnt-work-yet-with-alex-irpan
+
+Title: 73 - Supersense Disambiguation of English Prepositions and Possessives, with Nathan Schneider
+URL: https://soundcloud.com/nlp-highlights/73-supersense-disambiguation-of-english-prepositions-and-possessives-with-nathan-schneider
+
+Title: 72 - The Anatomy Question Answering Task, with Jordan Boyd-Graber
+URL: https://soundcloud.com/nlp-highlights/72-the-anatomy-question-answering-task-with-jordan-boyd-graber
+
+Title: 71 - DuoRC: Complex Language Understanding with Paraphrased Reading Comprehension, with Amrita Saha
+URL: https://soundcloud.com/nlp-highlights/71-duorc-complex-language-understanding-with-paraphrased-reading-comprehension-with-amrita-saha
+
+Title: 70 - Measuring the Evolution of a Scientific Field through Citation Frames, with David Jurgens
+URL: https://soundcloud.com/nlp-highlights/70-measuring-the-evolution-of-a-scientific-field-through-citation-frames-with-david-jurgens
+
+Title: 69 - Second language acquisition modeling, with Burr Settles
+URL: https://soundcloud.com/nlp-highlights/69-second-language-acquisition-modeling-with-burr-settles
+
+Title: 68 - Neural models of factuality, with Rachel Rudinger
+URL: https://soundcloud.com/nlp-highlights/68-neural-models-of-factuality-with-rachel-rudinger
+
+Title: 67 - GLUE: A Multi-Task Benchmark and Analysis Platform, with Sam Bowman
+URL: https://soundcloud.com/nlp-highlights/67-glue-a-multi-task-benchmark-and-analysis-platform-with-sam-bowman
+
+Title: 66 - Gender Bias in Coreference Resolution: Evaluation and Debiasing Methods, with Jieyu Zhao
+URL: https://soundcloud.com/nlp-highlights/66-gender-bias-in-coreference-resolution-evaluation-and-debiasing-methods-with-jieyu-zhao
+
+Title: 65 - Event Representations with Tensor-based Compositions, with Niranjan Balasubramanian
+URL: https://soundcloud.com/nlp-highlights/65-event-representations-with-tensor-based-compositions-with-niranjan-balasubramanian
+
+Title: 64 - Neural Network Models for Sentence Pair Tasks, with Wuwei Lan and Wei Xu
+URL: https://soundcloud.com/nlp-highlights/64-neural-network-models-for-sentence-pair-tasks-with-wuwei-lan-and-wei-xu
+
+Title: 63 - Neural Lattice Language Models, with Jacob Buckman
+URL: https://soundcloud.com/nlp-highlights/63-neural-lattice-language-models-with-jacob-buckman
+
+Title: 62 - Sounding Board: A User-Centric and Content-Driven Social Chatbot, with Hao Fang
+URL: https://soundcloud.com/nlp-highlights/62-sounding-board-a-user-centric-and-content-driven-social-chatbot-with-hao-fang
+
+Title: 61 - Neural Text Generation in Stories, with Elizabeth Clark and Yangfeng Ji
+URL: https://soundcloud.com/nlp-highlights/61-neural-text-generation-in-stories-with-elizabeth-clark-and-yangfeng-ji
+
+Title: 60 - FEVER: a large-scale dataset for Fact Extraction and VERification, with James Thorne
+URL: https://soundcloud.com/nlp-highlights/60-fever-a-large-scale-dataset-for-fact-extraction-and-verification-with-james-thorne
+
+Title: 59 - Weakly Supervised Semantic Parsing With Abstract Examples, with Omer Goldman
+URL: https://soundcloud.com/nlp-highlights/59-weakly-supervised-semantic-parsing-with-abstract-examples-with-omer-goldman
+
+Title: 58 - Learning What’s Easy: Fully Differentiable Neural Easy-First Taggers, with André Martins
+URL: https://soundcloud.com/nlp-highlights/58-learning-whats-easy-fully-differentiable-neural-easy-first-taggers-with-andre-martins
+
+Title: 57 - A Survey Of Cross-lingual Word Embedding Models, with Sebastian Ruder
+URL: https://soundcloud.com/nlp-highlights/57-a-survey-of-cross-lingual-word-embedding-models-with-sebastian-ruder
+
+Title: 56 - Deep contextualized word representations, with Matthew Peters
+URL: https://soundcloud.com/nlp-highlights/56-deep-contextualized-word-representations-with-matthew-peters
+
+Title: 55 - Matchbox: Dispatch-driven autobatching for imperative deep learning, with James Bradbury
+URL: https://soundcloud.com/nlp-highlights/55-matchbox-dispatch-driven-autobatching-for-imperative-deep-learning-with-james-bradbury
+
+Title: 54 - Simulating Action Dynamics with Neural Process Networks, with Antoine Bosselut
+URL: https://soundcloud.com/nlp-highlights/54-simulating-action-dynamics-with-neural-process-networks-with-antoine-bosselut
+
+Title: 53 - Classical Structured Prediction Losses for Sequence to Sequence Learning, with Sergey and Myle
+URL: https://soundcloud.com/nlp-highlights/53-classical-structured-prediction-losses-for-sequence-to-sequence-learning-with-sergey-and-myle
+
+Title: 52 - Sequence-to-Sequence Learning as Beam-Search Optimization, with Sam Wiseman
+URL: https://soundcloud.com/nlp-highlights/52-sequence-to-sequence-learning-as-beam-search-optimization-with-sam-wiseman
+
+Title: 51 - A Regularized Framework for Sparse and Structured Neural Attention, with Vlad Niculae
+URL: https://soundcloud.com/nlp-highlights/51-a-regularized-framework-for-sparse-and-structured-neural-attention-with-vlad-niculae
+
+Title: 50 - Cardinal Virtues: Extracting Relation Cardinalities from Text, with Paramita Mirza
+URL: https://soundcloud.com/nlp-highlights/50-cardinal-virtues-extracting-relation-cardinalities-from-text-with-paramita-mirza
+
+Title: 49 - A Joint Sequential and Relational Model for Frame-Semantic Parsing, with Bishan Yang
+URL: https://soundcloud.com/nlp-highlights/49-a-joint-sequential-and-relational-model-for-frame-semantic-parsing-with-bishan-yang
+
+Title: 48 - Incidental Supervision: Moving Beyond Supervised Learning, with Dan Roth
+URL: https://soundcloud.com/nlp-highlights/48-incidental-supervision-moving-beyond-supervised-learning-with-dan-roth
+
+Title: 47 - Dynamic integration of background knowledge in neural NLU systems, with Dirk Weißenborn
+URL: https://soundcloud.com/nlp-highlights/47-dynamic-integration-of-background-knowledge-in-neural-nlu-systems-with-dirk-weisenborn
+
+Title: 46 - Parsing with Traces, with Jonathan Kummerfeld
+URL: https://soundcloud.com/nlp-highlights/46-parsing-with-traces-with-jonathan-kummerfeld
+
+Title: 45 - Build It, Break It workshop, with Allyson Ettinger and Sudha Rao
+URL: https://soundcloud.com/nlp-highlights/45-build-it-break-it-workshop-with-allyson-ettinger-and-sudha-rao
+
+Title: 44 - Truly Low Resource NLP, with Anders Søgaard
+URL: https://soundcloud.com/nlp-highlights/44-truly-low-resource-nlp-with-anders-sogaard
+
+Title: 43 - Reinforced Video Captioning with Entailment Rewards, with Ramakanth and Mohit
+URL: https://soundcloud.com/nlp-highlights/43-reinforced-video-captioning-with-entailment-rewards-with-ramakanth-and-mohit
+
+Title: 42 - Generating Sentences by Editing Prototypes, with Kelvin Guu
+URL: https://soundcloud.com/nlp-highlights/42-generating-sentences-by-editing-prototypes-with-kelvin-guu
+
+Title: 41 - Cross-Sentence N-ary Relation Extraction with Graph LSTMs, with Nanyun (Violet) Peng
+URL: https://soundcloud.com/nlp-highlights/41-cross-sentence-n-ary-relation-extraction-with-graph-lstms-with-nanyun-violet-peng
+
+Title: 40 - On the State of the Art of Evaluation in Neural Language Models, with Gábor Melis
+URL: https://soundcloud.com/nlp-highlights/40-on-the-state-of-the-art-of-evaluation-in-neural-language-models-with-gabor-melis
+
+Title: 39 - Organizing the SemEval task on scientific information extraction, with Isabelle Augenstein
+URL: https://soundcloud.com/nlp-highlights/39-organizing-the-semeval-task-on-scientific-information-extraction-with-isabelle-augenstein
+
+Title: 38 - A Corpus of Natural Language for Visual Reasoning, with Alane Suhr
+URL: https://soundcloud.com/nlp-highlights/38-a-corpus-of-natural-language-for-visual-reasoning-with-alane-suhr
+
+Title: 37 - On Statistical Significance, Training Variance, and Why Reporting Score Distributions Matters
+URL: https://soundcloud.com/nlp-highlights/37-on-statistical-significance-training-variance-and-why-reporting-score-distributions-matters
+
+Title: 36 - Attention Is All You Need, with Ashish Vaswani and Jakob Uszkoreit
+URL: https://soundcloud.com/nlp-highlights/36-attention-is-all-you-need-with-ashish-vaswani-and-jakob-uszkoreit
+
+Title: 35 - Replicability Analysis for Natural Language Processing, with Roi Reichart
+URL: https://soundcloud.com/nlp-highlights/35-replicability-analysis-for-natural-language-processing-with-roi-reichart
+
+Title: 34 - Translating Neuralese, with Jacob Andreas
+URL: https://soundcloud.com/nlp-highlights/34-translating-neuralese-with-jacob-andreas
+
+Title: 33 - Entity Linking via Joint Encoding of Types, Descriptions, and Context, with Nitish Gupta
+URL: https://soundcloud.com/nlp-highlights/33-entity-linking-via-joint-encoding-of-types-descriptions-and-context-with-nitish-gupta
+
+Title: 32 - The Effect of Different Writing Tasks on Linguistic Style, with Roy Schwartz
+URL: https://soundcloud.com/nlp-highlights/32-the-effect-of-different-writing-tasks-on-linguistic-style-with-roy-schwartz
+
+Title: 31 - Tying Word Vectors and Word Classifiers: A Loss Framework for Language Modeling
+URL: https://soundcloud.com/nlp-highlights/31-tying-word-vectors-and-word-classifiers-a-loss-framework-for-language-modeling
+
+Title: 30 - Probabilistic Typology: Deep Generative Models of Vowel Inventories
+URL: https://soundcloud.com/nlp-highlights/30-probabilistic-typology-deep-generative-models-of-vowel-inventories
+
+Title: 29 - Neural machine translation via binary code prediction, with Graham Neubig
+URL: https://soundcloud.com/nlp-highlights/29-neural-machine-translation-via-binary-code-prediction-with-graham-neubig
+
+Title: 28 - Data Programming: Creating Large Training Sets, Quickly
+URL: https://soundcloud.com/nlp-highlights/28-data-programming-creating-large-training-sets-quickly
+
+Title: 27 - What do Neural Machine Translation Models Learn about Morphology?, with Yonatan Belinkov
+URL: https://soundcloud.com/nlp-highlights/27-what-do-neural-machine-translation-models-learn-about-morphology-with-yonatan-belinkov
+
+Title: 26 - Structured Attention Networks, with Yoon Kim
+URL: https://soundcloud.com/nlp-highlights/26-structured-attention-networks-with-yoon-kim
+
+Title: 25 - Neural Semantic Parsing over Multiple Knowledge-bases
+URL: https://soundcloud.com/nlp-highlights/25a
+
+Title: 24 - Improving Hypernymy Detection with an Integrated Path-based and Distributional Method
+URL: https://soundcloud.com/nlp-highlights/24a
+
+Title: 23 - Get To The Point: Summarization with Pointer-Generator Networks
+URL: https://soundcloud.com/nlp-highlights/23a
+
+Title: 22 - Deep Multitask Learning for Semantic Dependency Parsing, with Noah Smith
+URL: https://soundcloud.com/nlp-highlights/22a
+
+Title: 21 - Contextual Explanation Networks, with Maruan Al-Shedivat
+URL: https://soundcloud.com/nlp-highlights/21a
+
+Title: 20 - A simple neural network module for relational reasoning
+URL: https://soundcloud.com/nlp-highlights/20a
+
+Title: 19 - End-to-end Differentiable Proving, with Tim Rocktäschel
+URL: https://soundcloud.com/nlp-highlights/19a
+
+Title: 18 - Generalizing to Unseen Entities and Entity Pairs with Row-less Universal Schema
+URL: https://soundcloud.com/nlp-highlights/18a
+
+Title: 17 - pix2code: Generating Code from a Graphical User Interface Screenshot
+URL: https://soundcloud.com/nlp-highlights/17a
+
+Title: 16 - Arc-swift: A Novel Transition System for Dependency Parsing
+URL: https://soundcloud.com/nlp-highlights/16a
+
+Title: 15 - Attention and Augmented Recurrent Neural Networks
+URL: https://soundcloud.com/nlp-highlights/15a
+
+Title: 14 - Discourse-Based Objectives for Fast Unsupervised Sentence Representation Learning
+URL: https://soundcloud.com/nlp-highlights/14a
+
+Title: 13 - Question Answering from Unstructured Text by Retrieval and Comprehension
+URL: https://soundcloud.com/nlp-highlights/13a
+
+Title: 12 - Supervised Learning of Universal Sentence Representations from Natural Language Inference Data
+URL: https://soundcloud.com/nlp-highlights/ep-12
+
+Title: 11 - Relation Extraction with Matrix Factorization and Universal Schemas
+URL: https://soundcloud.com/nlp-highlights/11a
+
+Title: 10 - A Syntactic Neural Model for General-Purpose Code Generation
+URL: https://soundcloud.com/nlp-highlights/10-a-syntactic-neural-model-for-general-purpose-code-generation
+
+Title: 09 - Learning to Generate Reviews and Discovering Sentiment
+URL: https://soundcloud.com/nlp-highlights/09-learning-to-generate-reviews-and-discovering-sentiment
+
+Title: 08 - Finding News Citations for Wikipedia
+URL: https://soundcloud.com/nlp-highlights/08-finding-news-citations-for-wikipedia
+
+Title: 07 - Capturing Semantic Similarity for Entity Linking with Convolutional Neural Networks
+URL: https://soundcloud.com/nlp-highlights/07-capturing-semantic-similarity-for-entity-linking-with-convolutional-neural-networks
+
+Title: 06 - Design Challenges for Entity Linking
+URL: https://soundcloud.com/nlp-highlights/06-design-challenges-for-entity-linking
+
+Title: 05 - Transition-Based Dependency Parsing with Stack Long Short-Term Memory
+URL: https://soundcloud.com/nlp-highlights/05-transition-based-dependency-parsing-with-stack-long-short-term-memory
+
+Title: 04 - Recurrent Neural Network Grammars, with Chris Dyer
+URL: https://soundcloud.com/nlp-highlights/04-recurrent-neural-network-grammars-with-chris-dyer
+
+Title: 03 - FastQA: A Simple and Efficient Neural Architecture for Question Answering
+URL: https://soundcloud.com/nlp-highlights/03-fastqa-a-simple-and-efficient-neural-architecture-for-question-answering
+
+Title: 02 - Bidirectional Attention Flow for Machine Comprehension
+URL: https://soundcloud.com/nlp-highlights/02-bidirectional-attention-flow-for-machine-comprehension
+
+Title: 01 - A Comparative Study of Word Embeddings for Reading Comprehension
+URL: https://soundcloud.com/nlp-highlights/01-a-comparative-study-of-word-embeddings-for-reading-comprehension
+
+Title: 00 - Intro to the podcast
+URL: https://soundcloud.com/nlp-highlights/00-intro-to-the-podcast
+

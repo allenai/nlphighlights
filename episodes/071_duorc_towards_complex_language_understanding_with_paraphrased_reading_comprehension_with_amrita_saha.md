@@ -8,6 +8,8 @@ description: "ACL 2018 paper by Amrita Saha, Rahul Aralikatte, Mitesh M. Khapra,
 type: episode
 ---
 
+<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?&url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F513381438&show_artwork=true&show_comments=false"></iframe>
+
 <turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting work in natural

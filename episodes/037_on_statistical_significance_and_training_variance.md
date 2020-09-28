@@ -8,6 +8,8 @@ description: "In this episode we talk about a couple of recent papers that get a
 type: episode
 ---
 
+<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?&url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F348377621&show_artwork=true&show_comments=false"></iframe>
+
 <turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting recent work in

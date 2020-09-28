@@ -8,6 +8,8 @@ description: "What exciting NLP research problems are involved in processing bio
 type: episode
 ---
 
+<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?&url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F746537515&show_artwork=true&show_comments=false"></iframe>
+
 <turn speaker="Matt Garner" timestamp="">
 
 Welcome to the NLP highlights podcast where we talk about interesting work in natural language
