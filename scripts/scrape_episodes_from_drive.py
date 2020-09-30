@@ -110,13 +110,19 @@ def extract_transcripts(transcript_dir: str):
         if not os.path.exists(episode_filename):
             print("Transcript not found")
             continue
-        episode_doc = docx.Document(episode_filename)
-        lines = []
-        for paragraph in episode_doc.paragraphs:
-            lines.append(paragraph.text)
-        text = '\n'.join(lines)
-        with open(transcript_dir + "/" + episode_dir + "/transcript.txt", "w") as outfile:
-            outfile.write(text)
+        extract_transcript(episode_filename)
+
+
+def extract_transcript(docx_filename: str) -> str:
+    episode_doc = docx.Document(docx_filename)
+    lines = []
+    for paragraph in episode_doc.paragraphs:
+        lines.append(paragraph.text)
+    text = '\n'.join(lines)
+    txt_filename = docx_filename.replace('.docx', '.txt')
+    with open(txt_filename, "w") as outfile:
+        outfile.write(text)
+    return txt_filename
 
 
 def convert_transcripts_to_markdown(transcript_dir: str):
@@ -130,7 +136,7 @@ def convert_transcripts_to_markdown(transcript_dir: str):
         convert_episode_to_markdown(episode_dir, episode_filename)
 
 
-def convert_episode_to_markdown(episode_name, transcript_filename):
+def convert_episode_to_markdown(episode_name: str, transcript_filename: str) -> str:
     episode_number, episode_name = split_episode_name(episode_name)
     episode_filename = episode_number + "_" + sanitize(episode_name) + ".md"
 
@@ -148,7 +154,8 @@ def convert_episode_to_markdown(episode_name, transcript_filename):
         else:
             guests.append(f'"{speaker}"')
 
-    with open("episodes/" + episode_filename, "w") as episode_file:
+    md_filename = "episodes/" + episode_filename
+    with open(md_filename, "w") as episode_file:
         episode_file.write("---\n")
         episode_file.write(f'title: "{episode_name}"\n')
         episode_file.write(f'hosts: [{",".join(hosts)}]\n')
@@ -162,6 +169,7 @@ def convert_episode_to_markdown(episode_name, transcript_filename):
             episode_file.write(f'\n\n<turn speaker="{speaker}" timestamp="{timestamp}">\n\n')
             episode_file.write(textwrap.fill(text, 100))
             episode_file.write('\n\n</turn>\n')
+    return md_filename
 
 
 def parse_transcript_lines(transcript_lines: List[str]) -> List[Tuple[str, str, str]]:
