@@ -28,7 +28,7 @@ Artificial Intelligence.
 
 <turn speaker="Matt Gardner" timestamp="00:12">
 
-Today's paper is qQuestion Answering from Unstructured Text by Retrieval and Comprehension by
+Today's paper is Question Answering from Unstructured Text by Retrieval and Comprehension by
 Retrieval and Comprehension. These are folks at CMU and this paper takes a look at the question
 answering task, but slightly harder than a lot of current iterations of it. So instead of like in
 the SQuAD data sets where you're given a passage that contains the answer to the question and the

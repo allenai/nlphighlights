@@ -1,5 +1,5 @@
 ---
-title: "End-to-end Differentiable Proving, with Tim"
+title: "End-to-end Differentiable Proving, with Tim Rocktäschel"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Tim Rocktäschel"]
 number: "019"
