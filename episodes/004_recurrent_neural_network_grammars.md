@@ -1,7 +1,7 @@
 ---
 title: "Recurrent Neural Network Grammars"
 hosts: ["Matt Gardner","Waleed Ammar"]
-guests: ["Speaker 6","Chris Dyer"]
+guests: ["Chris Dyer"]
 number: "004"
 tags: []
 description: "An interview with Chris Dyer. https://www.semanticscholar.org/paper/Recurrent-Neural-Network-Grammars-Dyer-Kuncoro/1594d954abc650bce2db445c52a76e49655efb0c"
@@ -486,7 +486,7 @@ Thanks guys. It was great.
 </turn>
 
 
-<turn speaker="Speaker 6" timestamp="24:09">
+<turn speaker="Matt Gardner" timestamp="24:09">
 
 Well, thank you Chris for talking with us. That was a really fascinating conversation. A note to any
 of you listeners, if you want to similarly be on this podcast and talk with us about your paper,

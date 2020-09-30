@@ -4,7 +4,11 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Yoon Kim"]
 number: "026"
 tags: []
-description: "ICLR 2017 paper, by Yoon Kim, Carl Denton, Luong Hoang, and Sasha Rush. Yoon comes on to talk with us about his paper. The paper shows how standard attentions can be seen as an expected feature count computation, and can be generalized to other kinds of expected feature counts, as long as we have efficient, differentiable algorithms for computing those marginals, like the forward-backward and inside-outside algorithms. We talk with Yoon about how this works, the experiments they ran to test this idea, and interesting implications of their work. https://www.semanticscholar.org/paper/Structured-Attention-Networks-Kim-Denton/0aec1745d0e054e8d86d21b20d0ee5fc0d932a49 Yoon also brought up a more recent paper by Yang Liu and Mirella Lapata that computes a very similar kind of structured attention, but does so much more efficiently. That paper is here: https://www.semanticscholar.org/paper/Learning-Structured-Text-Representations-Liu-Lapata/4435c3586364e8f8a2c8c9ee671c39d7df7e196c."
+description: "ICLR 2017 paper, by Yoon Kim, Carl Denton, Luong Hoang, and Sasha Rush. Yoon comes on to talk with us about his paper. The paper shows how standard attentions can be seen as an expected feature count computation, and can be generalized to other kinds of expected feature counts, as long as we have efficient, differentiable algorithms for computing those marginals, like the forward-backward and inside-outside algorithms. We talk with Yoon about how this works, the experiments they ran to test this idea, and interesting implications of their work.
+
+https://www.semanticscholar.org/paper/Structured-Attention-Networks-Kim-Denton/0aec1745d0e054e8d86d21b20d0ee5fc0d932a49
+
+Yoon also brought up a more recent paper by Yang Liu and Mirella Lapata that computes a very similar kind of structured attention, but does so much more efficiently. That paper is here: https://www.semanticscholar.org/paper/Learning-Structured-Text-Representations-Liu-Lapata/4435c3586364e8f8a2c8c9ee671c39d7df7e196c."
 type: episode
 ---
 

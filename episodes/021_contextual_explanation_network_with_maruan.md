@@ -4,7 +4,11 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Maruan Al-Shedivat"]
 number: "021"
 tags: []
-description: "https://arxiv.org/abs/1705.10301 Maruan, Avinava Dubey and Eric Xing essentially put the post-hoc decision boundary explanations from the \"Why Should I Trust You?\" paper* as a core component of a predictive model. Maruan comes on to tell us about it. * https://www.semanticscholar.org/paper/Why-Should-I-Trust-You-Explaining-the-Predictions-Ribeiro-Singh/5636dca44384240ce9aff2b10b78458cd3c2f450"
+description: "https://arxiv.org/abs/1705.10301
+
+Maruan, Avinava Dubey and Eric Xing essentially put the post-hoc decision boundary explanations from the \"Why Should I Trust You?\" paper as a core component of a predictive model. Maruan comes on to tell us about it.
+
+https://www.semanticscholar.org/paper/Why-Should-I-Trust-You-Explaining-the-Predictions-Ribeiro-Singh/5636dca44384240ce9aff2b10b78458cd3c2f450"
 type: episode
 ---
 

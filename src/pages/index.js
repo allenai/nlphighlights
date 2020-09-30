@@ -13,6 +13,19 @@ import { Footer } from '../components/Footer';
 import { IconBox } from '../components/IconBox';
 import { ArrowRightIcon, ExpandCollapseIcon, Disclosure } from '../components/inlineSVG';
 
+function renderDescription(description) {
+  const lines = description.split("\n");
+  const result = [];
+  lines.forEach(line => {
+    result.push(line);
+    result.push(<br/>);
+    result.push(<br/>);
+  });
+  result.pop();
+  result.pop();
+  return result
+}
+
 // Home Page Export
 export default ({ data }) => {
     const groupedEpisodes = getGroupedEpisodes(data.allMarkdownRemark);
@@ -57,7 +70,7 @@ export default ({ data }) => {
                         <EpisodeLink key={episodeSlug} to={episodeSlug}>
                             <h4>{parseInt(groupedEpisodes[episodeSlug].node.frontmatter.number)}: {groupedEpisodes[episodeSlug].node.frontmatter.title}</h4>
                             <p>
-                                {groupedEpisodes[episodeSlug].node.frontmatter.description}
+                                {renderDescription(groupedEpisodes[episodeSlug].node.frontmatter.description)}
                                 <StyledArrowRightIcon />
                             </p>
                             <MobileDisclosure />
