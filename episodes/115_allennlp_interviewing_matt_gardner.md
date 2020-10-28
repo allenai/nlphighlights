@@ -15,10 +15,10 @@ type: episode
 Welcome to the NLP highlights podcast, where we invite researchers to talk about their work in
 various areas in natural language processing, the usual hosts are Matt Gardner and Pradeep Dasigi,
 but for today's episode, I'll be joining Pradeep as a guest host. My name is Carissa Schoenick, and
-I'm a program manager and communications director at AI 2. Today we're turning the tables and
+I'm a program manager and communications director at AI2. Today we're turning the tables and
 interviewing your usual host Matt Gardner about AllenNLP and open source NLP research library
-provided by AI 2 this week. We're releasing version one of AllenNLP an important milestone for this
-platform. So Matt, tell me about the origins of AllenNLP. Why did AI 2 decide to build it and how
+provided by AI2 this week. We're releasing version one of AllenNLP an important milestone for this
+platform. So Matt, tell me about the origins of AllenNLP. Why did AI2 decide to build it and how
 did it get started?
 
 </turn>
@@ -30,7 +30,7 @@ This feels a little bit weird being the interviewed one instead of the interview
 goes back like three and a half or four years ago to an earlier version of, I guess I was learning
 how to do deep learning. In my PhD thesis, I was doing knowledge base completion and focused on like
 log linear kinds of methods. And when the deep learning revolution happened in NLP, I was just
-focused on finishing my thesis and it kind of passed me by. And so when I got to AI 2, I was
+focused on finishing my thesis and it kind of passed me by. And so when I got to AI2, I was
 learning stuff and tried to use Keras, which is a library built at the time on top of Theano and
 TensorFlow, it was, had a bunch of different backends trying to make it easy, to just give a high
 level API to deep learning for a lot of different things. And I was using this to try to do NLP and
@@ -60,7 +60,7 @@ padding kinds of utilities for Keras.
 And Pradeep actually was an intern with me at the time. And I was thinking like, how do I make a
 library that makes it easy for interns to come and make progress quickly? So anyway, this is the
 beginnings of what turned into AllenNLP. So then we fast forward, like six months, eight months, and
-Luke Zettlemoyer joined AI 2. And he was starting a new team and wanted as part of this to release a
+Luke Zettlemoyer joined AI2. And he was starting a new team and wanted as part of this to release a
 toolkit that was basically, can we get, his students had recently done a co-reference resolution
 model that was state-of-the-art and a semantic role labeling model that was state-of-the-art. And
 was like, can we package these together and like rethink NLP toolkits and build something that's
@@ -258,7 +258,7 @@ would you want to elaborate on that?
 Yeah, definitely. Some of the major features that we've had recently have been either inspired or
 directly contributed by outside folks. And yes, we really like this. For instance Automatic Mixed
 Precision training AMP. This can give you dramatic speed ups by using fewer bits to represent all of
-the weights in your network. This was added by someone, not at AI 2, and makes the library faster.
+the weights in your network. This was added by someone, not at AI2, and makes the library faster.
 It's something people have wanted for a long time. We haven't had the bandwidth to get to it.
 Someone else outside got to it and we were really happy about it. And yes, we love having people
 contribute.
@@ -276,7 +276,7 @@ really don't want to be in the position of hosting and in some sense, taking cre
 people's models, that doesn't align incentives very well in the research community. And so what
 we're trying to do now is have a better way to host like point people to third party repositories
 where other people's code lives, we highlight what they did. I think a recent one, we did this with
-has an AI 2 connection, but the, there was a project that I worked on with Nitish Gupta at the
+has an AI2 connection, but the, there was a project that I worked on with Nitish Gupta at the
 University of Pennsylvania.
 
 </turn>
@@ -343,7 +343,7 @@ your experiments and not use the configuration files stuff that we had. That's e
 we have new tutorial material to show you how to do that. So the goal here was to simplify a lot of
 parts and make the learning curve, the barrier to entry much lower that's one major bit, another
 major bit is updated models. The transformer revolution of the last couple of years, in some sense,
-kind of passed us by. We had been distracted on other things. Luke left AI 2, I moved to Southern
+kind of passed us by. We had been distracted on other things. Luke left AI2, I moved to Southern
 California and started co-advising PhD students and focusing a lot more of my time on mentoring
 research projects.
 
@@ -658,7 +658,7 @@ would like to see.
 
 Great. All right. Well, thank you so much, Matt, for giving us some great insight into what's new
 and what's coming up for the AllenNLP platform. Listeners can check it out at Allennlp.org. You can
-follow along with AI 2's research and our new releases at Allen_AI on Twitter, or visit us on the
+follow along with AI2's research and our new releases at Allen_AI on Twitter, or visit us on the
 web@allenAI.org.
 
 </turn>

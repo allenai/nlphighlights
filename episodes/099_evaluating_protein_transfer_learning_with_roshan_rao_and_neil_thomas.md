@@ -1,10 +1,14 @@
 ---
 title: "Evaluating Protein Transfer Learning, with Roshan Rao and Neil Thomas"
-hosts: ["Matt Gardner","Waleed Ammar","Pradeep Dasigi"]
+hosts: ["Waleed Ammar","Pradeep Dasigi"]
 guests: ["Neil Thomas","Roshan Roa"]
 number: "099"
 tags: []
-description: "For this episode, we chatted with Neil Thomas and Roshan Rao about modeling protein sequences and evaluating transfer learning methods for a set of five protein modeling tasks. Learning representations using self-supervised pretaining objectives has shown promising results in transferring to downstream tasks in protein sequence modeling, just like it has in NLP. We started off by discussing the similarities and differences between language and protein sequence data, and how the contextual embedding techniques are applicable also to protein sequences. Neil and Roshan then described a set of five benchmark tasks to assess the quality of protein embeddings (TAPE), particularly in terms of how well they capture the structural, functional, and evolutionary aspects of proteins. The results from the experiments they ran with various model architectures indicated that there was not a single best performing model across all tasks, and that there is a lot of room for future work in protein sequence modeling. Neil Thomas and Roshan Rao are PhD students at UC Berkeley. Paper: https://www.biorxiv.org/content/10.1101/676825v1 Blog post: https://bair.berkeley.edu/blog/2019/11/04/proteins/"
+description: "For this episode, we chatted with Neil Thomas and Roshan Rao about modeling protein sequences and evaluating transfer learning methods for a set of five protein modeling tasks. Learning representations using self-supervised pretaining objectives has shown promising results in transferring to downstream tasks in protein sequence modeling, just like it has in NLP. We started off by discussing the similarities and differences between language and protein sequence data, and how the contextual embedding techniques are applicable also to protein sequences. Neil and Roshan then described a set of five benchmark tasks to assess the quality of protein embeddings (TAPE), particularly in terms of how well they capture the structural, functional, and evolutionary aspects of proteins. The results from the experiments they ran with various model architectures indicated that there was not a single best performing model across all tasks, and that there is a lot of room for future work in protein sequence modeling. Neil Thomas and Roshan Rao are PhD students at UC Berkeley.
+
+Paper: https://www.biorxiv.org/content/10.1101/676825v1
+
+Blog post: https://bair.berkeley.edu/blog/2019/11/04/proteins/"
 type: episode
 ---
 

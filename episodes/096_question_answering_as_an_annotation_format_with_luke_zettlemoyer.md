@@ -28,10 +28,10 @@ artificial intelligence.
 
 <turn speaker="Matt Gardner" timestamp="">
 
-All right. Today I have two new people to introduce because we are adding a new co-hosts to the NLP
-highlights podcast Waleed and I for a few reasons, decided it would be good to have a third person
-helping us. So we've asked Pradeep Dasigi who is also a research scientist at AI-2 to join us as a
-co-host. Pradeep welcome.
+All right. Today I have two new people to introduce because we are adding a new co-host to the NLP
+highlights podcast.  Waleed and I, for a few reasons, decided it would be good to have a third
+person helping us. So we've asked Pradeep Dasigi who is also a research scientist at AI2 to join us
+as a co-host. Pradeep, welcome.
 
 </turn>
 

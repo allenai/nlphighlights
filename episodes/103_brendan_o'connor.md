@@ -1,10 +1,14 @@
 ---
-title: "Brendan O'Connor"
-hosts: ["Pradeep Dasigi","Matt Gardner","Waleed Ammar"]
+title: "Processing Language in Social Media, with Brendan O'Connor"
+hosts: ["Pradeep Dasigi","Waleed Ammar"]
 guests: ["Brendan O'Connor"]
 number: "103"
 tags: []
-description: "We talked to Brendan O’Connor for this episode about processing language in social media. Brendan started off by telling us about his projects that studied the linguistic and geographical patterns of African American English (AAE), and how obtaining data from Twitter made these projects possible. We then talked about how many tools built for standard English perform very poorly on AAE, and why collecting dialect-specific data is important. For the rest of the conversation, we discussed the issues involved in scraping data from social media, including ethical considerations and the biases that the data comes with. Brendan O’Connor is an Assistant Professor at the University of Massachusetts, Amherst. Warning: This episode contains explicit language (one swear word)."
+description: "We talked to Brendan O’Connor for this episode about processing language in social media. Brendan started off by telling us about his projects that studied the linguistic and geographical patterns of African American English (AAE), and how obtaining data from Twitter made these projects possible. We then talked about how many tools built for standard English perform very poorly on AAE, and why collecting dialect-specific data is important. For the rest of the conversation, we discussed the issues involved in scraping data from social media, including ethical considerations and the biases that the data comes with.
+
+Brendan O’Connor is an Assistant Professor at the University of Massachusetts, Amherst.
+
+Warning: This episode contains explicit language (one swear word)."
 type: episode
 ---
 

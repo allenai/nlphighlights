@@ -1,16 +1,20 @@
 ---
 title: "Jonathan Frankle"
-hosts: ["Waleed","Pradeep Dasigi"]
+hosts: ["Waleed Ammar","Pradeep Dasigi"]
 guests: ["Jonathan Franke"]
 number: "101"
 tags: []
-description: "In this episode, Jonathan Frankle describes the lottery ticket hypothesis, a popular explanation of how over-parameterization helps in training neural networks. We discuss pruning methods used to uncover subnetworks (winning tickets) which were initialized in a particularly effective way. We also discuss patterns observed in pruned networks, stability of networks pruned at different time steps and transferring uncovered subnetworks across tasks, among other topics. A recent paper on the topic by Frankle and Carbin, ICLR 2019: https://arxiv.org/abs/1803.03635 Jonathan Frankle’s homepage: http://www.jfrankle.com/"
+description: "In this episode, Jonathan Frankle describes the lottery ticket hypothesis, a popular explanation of how over-parameterization helps in training neural networks. We discuss pruning methods used to uncover subnetworks (winning tickets) which were initialized in a particularly effective way. We also discuss patterns observed in pruned networks, stability of networks pruned at different time steps and transferring uncovered subnetworks across tasks, among other topics.
+
+A recent paper on the topic by Frankle and Carbin, ICLR 2019: https://arxiv.org/abs/1803.03635
+
+Jonathan Frankle’s homepage: http://www.jfrankle.com/"
 type: episode
 ---
 
 <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?&url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F743413987&show_artwork=true&show_comments=false"></iframe>
 
-<turn speaker="Pradeep Dasigi" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting work in natural
 language processing.
@@ -18,7 +22,7 @@ language processing.
 </turn>
 
 
-<turn speaker="Waleed" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is Matt Gardner and Waleed Amar. We are research scientists at the Allan Institute for
 artificial intelligence.
@@ -203,7 +207,7 @@ universally.
 </turn>
 
 
-<turn speaker="Waleed" timestamp="06:45">
+<turn speaker="Waleed Ammar" timestamp="06:45">
 
 Interesting. I was wondering, depending on that method that you use for pruning, you will end up
 with a different kind of sub network. Right, so like you said, if you prune individual connections,
@@ -229,7 +233,7 @@ far that's been a challenging task for me to take on.
 </turn>
 
 
-<turn speaker="Waleed" timestamp="07:46">
+<turn speaker="Waleed Ammar" timestamp="07:46">
 
 Got it. And in terms of the implication, is one of these pruning methods easier to use in practice?
 For example, all of the insights that people have been using somewhat as a whole on this hypothesis
@@ -314,7 +318,7 @@ the best thing to do, in our experience, which was a kind of weird surprise.
 </turn>
 
 
-<turn speaker="Waleed" timestamp="11:29">
+<turn speaker="Waleed Ammar" timestamp="11:29">
 
 I'm curious to know how large are the networks that you used for these experiments?
 
@@ -331,7 +335,7 @@ doing so, but I think we may chat about that later.
 </turn>
 
 
-<turn speaker="Waleed" timestamp="11:47">
+<turn speaker="Waleed Ammar" timestamp="11:47">
 
 You don't need to do the pruning coordinator.
 
@@ -348,7 +352,7 @@ learning to select the layer wise pruning percentages, which was a very surprisi
 </turn>
 
 
-<turn speaker="Waleed" timestamp="12:08">
+<turn speaker="Waleed Ammar" timestamp="12:08">
 
 Do you observe large differences in percentage of weights from different layers?
 
@@ -366,7 +370,7 @@ million parameters will get pruned by more than 99%
 </turn>
 
 
-<turn speaker="Waleed" timestamp="12:33">
+<turn speaker="Waleed Ammar" timestamp="12:33">
 
 I think this is our feeling, right, because we have no reason to think that all the layers need to
 have the same number of parameters and maybe this simple method is enough to find out how many we
@@ -556,7 +560,7 @@ networks seem more robust to STD noise in terms of where they land in parameter 
 </turn>
 
 
-<turn speaker="Waleed" timestamp="20:13">
+<turn speaker="Waleed Ammar" timestamp="20:13">
 
 When you do this, do you actually prune the parameters or do you just train the model to the end?
 
@@ -602,7 +606,7 @@ they're separated by a peak, when loss increases, we call them unstable. Just um
 </turn>
 
 
-<turn speaker="Waleed" timestamp="22:19">
+<turn speaker="Waleed Ammar" timestamp="22:19">
 
 I'm trying to wrap my head around the linear combination. So for any point in the middle between the
 two models, you pick some parameter, maybe like 0.1, right? And 0.9. So, any weight in this new
@@ -722,7 +726,7 @@ subject that are trying to make progress by suggesting heuristics for doing so.
 </turn>
 
 
-<turn speaker="Waleed" timestamp="27:21">
+<turn speaker="Waleed Ammar" timestamp="27:21">
 
 I see. Yeah, that, that does sound very exciting. Can you talk about the heuristics you just
 mentioned that would be more efficient in training?
@@ -748,7 +752,7 @@ that ceiling.
 </turn>
 
 
-<turn speaker="Waleed" timestamp="28:19">
+<turn speaker="Waleed Ammar" timestamp="28:19">
 
 Just to get a sense of the difference, how long do you need to train the network to find the lottery
 tickets before you like your results?
@@ -776,7 +780,7 @@ that there are people who have very strong opinions on both sides of this.
 </turn>
 
 
-<turn speaker="Waleed" timestamp="29:31">
+<turn speaker="Waleed Ammar" timestamp="29:31">
 
 Thank you for sharing this insight. Another thing I'm wondering about, you may have mentioned it
 already, but I'm not entirely sure. So if we were to, without actually resetting the values, do we
@@ -809,7 +813,7 @@ actually provide you with better performance for the same sparsity, which is kin
 </turn>
 
 
-<turn speaker="Waleed" timestamp="30:32">
+<turn speaker="Waleed Ammar" timestamp="30:32">
 
 I would love to hear your explanation of this because you probably thought about it a lot more than
 other people.
@@ -841,7 +845,7 @@ daily basis.
 </turn>
 
 
-<turn speaker="Waleed" timestamp="31:28">
+<turn speaker="Waleed Ammar" timestamp="31:28">
 
 More reason to continue working in the same areas. Exactly. I think this is a beautiful scientific
 area particularly because not only do we know nothing, but sometimes we think we know something and
@@ -980,7 +984,7 @@ taking it to the extreme, showing how much we can get out of it.
 </turn>
 
 
-<turn speaker="Waleed" timestamp="37:13">
+<turn speaker="Waleed Ammar" timestamp="37:13">
 
 I mean, I don't know of any efforts to define the tickets, so instead of just like defining it as a
 set of weights in a given layer, define it as a more mathematical way so that you can generalize
@@ -1002,7 +1006,7 @@ out on the very empirical side and I'm not aware of anything on the theory side 
 </turn>
 
 
-<turn speaker="Waleed" timestamp="37:59">
+<turn speaker="Waleed Ammar" timestamp="37:59">
 
 I think that's fine. Still, the question that's in my mind is how do we take winning tickets that
 work in a certain model configuration and try to use them in a different model configuration where

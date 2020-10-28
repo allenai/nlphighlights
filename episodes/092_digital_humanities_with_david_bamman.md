@@ -1,16 +1,20 @@
 ---
 title: "Digital Humanities, with David Bamman"
-hosts: ["Waleed"]
-guests: ["Matt","David"]
+hosts: ["Waleed Ammar","Matt Gardner"]
+guests: ["David Bamman"]
 number: "092"
 tags: []
-description: "In this episode, we invite David Bamman to give an overview of computational humanities. We discuss examples of questions studied in computational humanities (e.g., characterizing fictionality, assessing novelty, measuring the attention given to male vs. female characters in the literature). We talk about the role NLP plays in addressing these questions and how the accuracy and biases of NLP models can influence the results. We also discuss understudied NLP tasks which can help us answer more questions in this domain such as literary scene coreference resolution and constructing a map of literature geography. David Bamman's homepage: http://people.ischool.berkeley.edu/~dbamman/ LitBank dataset: https://github.com/dbamman/litbank"
+description: "In this episode, we invite David Bamman to give an overview of computational humanities. We discuss examples of questions studied in computational humanities (e.g., characterizing fictionality, assessing novelty, measuring the attention given to male vs. female characters in the literature). We talk about the role NLP plays in addressing these questions and how the accuracy and biases of NLP models can influence the results. We also discuss understudied NLP tasks which can help us answer more questions in this domain such as literary scene coreference resolution and constructing a map of literature geography.
+
+David Bamman's homepage: http://people.ischool.berkeley.edu/~dbamman/
+
+LitBank dataset: https://github.com/dbamman/litbank"
 type: episode
 ---
 
 <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?&url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F646773714&show_artwork=true&show_comments=false"></iframe>
 
-<turn speaker="Matt" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting work in natural
 language processing.
@@ -18,7 +22,7 @@ language processing.
 </turn>
 
 
-<turn speaker="Waleed" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is Matt Gardner and Waleed Ammar, we are research scientists at the Alan Institute for
 artificial intelligence.
@@ -26,7 +30,7 @@ artificial intelligence.
 </turn>
 
 
-<turn speaker="Matt" timestamp="00:12">
+<turn speaker="Matt Gardner" timestamp="00:12">
 
 Okay. Today our guest is David Bamman, who is an assistant professor at the information school at UC
 Berkeley. I met David when we both started at the same time at Carnegie Mellon University many years
@@ -35,28 +39,28 @@ ago, I guess not that many years ago, but it feels like it was a long time.
 </turn>
 
 
-<turn speaker="David" timestamp="00:27">
+<turn speaker="David Bamman" timestamp="00:27">
 
 It was.
 
 </turn>
 
 
-<turn speaker="Matt" timestamp="00:28">
+<turn speaker="Matt Gardner" timestamp="00:28">
 
 David, welcome to the program.
 
 </turn>
 
 
-<turn speaker="David" timestamp="00:29">
+<turn speaker="David Bamman" timestamp="00:29">
 
 Thank you guys. Thank you for having me.
 
 </turn>
 
 
-<turn speaker="Matt" timestamp="00:30">
+<turn speaker="Matt Gardner" timestamp="00:30">
 
 So I wanted to talk to David because there's this application area of NLP that David has done a lot
 of work that I think is really interesting and not a lot of people know about. And so, David, what
@@ -65,7 +69,7 @@ we're going to talk about is digital humanities. Can you tell us what this is?
 </turn>
 
 
-<turn speaker="David" timestamp="00:49">
+<turn speaker="David Bamman" timestamp="00:49">
 
 Yeah, sure. I'm happy to. So digital humanities, I think you can think of that as being more or less
 a community of practice. That's not too dissimilar from other comunities of practice that have been
@@ -85,7 +89,7 @@ particular to the analysis of objects of inquiry like literature.
 </turn>
 
 
-<turn speaker="Matt" timestamp="02:10">
+<turn speaker="Matt Gardner" timestamp="02:10">
 
 So when you say computational humanities then are you focused mostly on literature or are there
 other applications that you have in mind?
@@ -93,7 +97,7 @@ other applications that you have in mind?
 </turn>
 
 
-<turn speaker="David" timestamp="02:16">
+<turn speaker="David Bamman" timestamp="02:16">
 
 Okay. So the kind of work that I do is very much focused on literature, but I think the other kind
 of work that is in this general term would include the use of computation for arts, for film, for
@@ -104,7 +108,7 @@ the intersection of computer vision or of music information tree.
 </turn>
 
 
-<turn speaker="Matt" timestamp="02:43">
+<turn speaker="Matt Gardner" timestamp="02:43">
 
 Okay. And literature, I know you spent some time with the Perseus project. Maybe you're the better
 person to, to describe this. This is classical literature, right?
@@ -112,7 +116,7 @@ person to, to describe this. This is classical literature, right?
 </turn>
 
 
-<turn speaker="David" timestamp="02:52">
+<turn speaker="David Bamman" timestamp="02:52">
 
 Well. So the Perseus project in particular is classical literature, but, classics in a very narrow
 sense of, right, so not classics like The Canon, like where you'd see Charles Dickens be a part of
@@ -126,7 +130,7 @@ program in computer science as you know.
 </turn>
 
 
-<turn speaker="Matt" timestamp="03:34">
+<turn speaker="Matt Gardner" timestamp="03:34">
 
 And so then when you say literature again, just trying to make the scope of what we're talking about
 here clear, you could include things like the Perseus project, Ancient Greek and Latin literature,
@@ -135,7 +139,7 @@ but also more modern novels or what?
 </turn>
 
 
-<turn speaker="David" timestamp="03:50">
+<turn speaker="David Bamman" timestamp="03:50">
 
 Yes. I mean, I think anything that, anything that falls under the sphere of fiction would fall
 within literature. And even there's some areas that are beyond that or exist as border cases.
@@ -146,7 +150,7 @@ fictional works. And that's what I mean by literature.
 </turn>
 
 
-<turn speaker="Matt" timestamp="04:12">
+<turn speaker="Matt Gardner" timestamp="04:12">
 
 And so let's say I'm some scientist in the humanities, what kinds of questions might I be asking
 about literature that the computational humanities might help me answer?
@@ -154,21 +158,21 @@ about literature that the computational humanities might help me answer?
 </turn>
 
 
-<turn speaker="David" timestamp="04:23">
+<turn speaker="David Bamman" timestamp="04:23">
 
 I'm not sure if humanists would bristle at being called scientists in the humanities.
 
 </turn>
 
 
-<turn speaker="Matt" timestamp="04:28">
+<turn speaker="Matt Gardner" timestamp="04:28">
 
 Sorry.
 
 </turn>
 
 
-<turn speaker="David" timestamp="04:28">
+<turn speaker="David Bamman" timestamp="04:28">
 
 I think many of the might, but I think that the kind of people who do work at this intersection who
 are in humanities departments right now give you a sample of the kinds works that people have
@@ -183,7 +187,7 @@ fiction.
 </turn>
 
 
-<turn speaker="David" timestamp="05:16">
+<turn speaker="David Bamman" timestamp="05:16">
 
 It's either about true events or events that have been imagined, and Searle claimed that there's
 nothing within this text that gives you an indicator of it being fiction or not. It's only within
@@ -209,7 +213,7 @@ in fiction as a function of the gender of the characters and the gender of the a
 </turn>
 
 
-<turn speaker="David" timestamp="07:16">
+<turn speaker="David Bamman" timestamp="07:16">
 
 So in that work we found that in looking at about a hundred thousand novels, English language
 novels, over about 150 year period, we saw that women as authors ended up giving about equal
@@ -222,7 +226,7 @@ own or for being some piece of evidence that's being marshaled in the service of
 </turn>
 
 
-<turn speaker="Matt" timestamp="07:55">
+<turn speaker="Matt Gardner" timestamp="07:55">
 
 Yeah, I'm trying to imagine answering some of those questions 10 or 20 years ago before we had
 really good tools, just being really laborious and how NLP could really help this.
@@ -230,7 +234,7 @@ really good tools, just being really laborious and how NLP could really help thi
 </turn>
 
 
-<turn speaker="David" timestamp="08:09">
+<turn speaker="David Bamman" timestamp="08:09">
 
 Yeah. Well actually this is one of the things I think is so interesting about this entire area of
 research that we think about all of these different communities of practice, like the digital
@@ -247,7 +251,7 @@ in a way that would be a lot more laborious than we have today.
 </turn>
 
 
-<turn speaker="Matt" timestamp="09:08">
+<turn speaker="Matt Gardner" timestamp="09:08">
 
 Right. I remembering an example even earlier, wasn't there some treaty that was supposedly written
 by a pope in ancient Greek that was like, you might remember this better than I do. I only took just
@@ -259,7 +263,7 @@ than it actually was purported to have been written.
 </turn>
 
 
-<turn speaker="David" timestamp="09:37">
+<turn speaker="David Bamman" timestamp="09:37">
 
 Oh, interesting. Yeah. No, I don't know that specific case, but yes, I'm sure there are a million
 examples of things like that,
@@ -267,7 +271,7 @@ examples of things like that,
 </turn>
 
 
-<turn speaker="Matt" timestamp="09:42">
+<turn speaker="Matt Gardner" timestamp="09:42">
 
 But, again, yes, that you could view NLP as a means of speeding up this kind of analysis. Not that
 it hasn't been done before, but now it's accessible to a lot more people and with a lot less
@@ -276,7 +280,7 @@ overhead. Yeah. So you can answer more of these questions and answer them more q
 </turn>
 
 
-<turn speaker="Waleed" timestamp="09:57">
+<turn speaker="Waleed Ammar" timestamp="09:57">
 
 Could you elaborate a little bit on how this could be used as a measurement device for literature.
 So, you mentioned for example, I didn't find gender, what other problems you perceive NLP community
@@ -285,7 +289,7 @@ helping with? Whether it's already something that's already like we have good mo
 </turn>
 
 
-<turn speaker="David" timestamp="10:14">
+<turn speaker="David Bamman" timestamp="10:14">
 
 Yeah. Oh, for sure. The core areas that we see as being part of the NLP pipeline end up resulting in
 some kind of measurable quantity, right? So parsing, taking named entity recognition, syntactic
@@ -319,7 +323,7 @@ civil war.
 </turn>
 
 
-<turn speaker="David" timestamp="12:35">
+<turn speaker="David Bamman" timestamp="12:35">
 
 So in that case you, you need to have a named entity recognition system that can recognize place
 names well enough in text to then treat the place name as being this atomic unit that you want to
@@ -331,7 +335,7 @@ some argument around it in this space.
 </turn>
 
 
-<turn speaker="Waleed" timestamp="13:03">
+<turn speaker="Waleed Ammar" timestamp="13:03">
 
 I See, I imagine the accuracy of the various tools will be, will vary, depending on what year the
 story was written or, maybe different dialects. What are the tools that you can use in order to
@@ -340,7 +344,7 @@ account for these differences?
 </turn>
 
 
-<turn speaker="David" timestamp="13:18">
+<turn speaker="David Bamman" timestamp="13:18">
 
 Yeah, so this is a great question. This is one of the things that keeps me up at night and it really
 drives a lot of the things I work on right now. That you know, one of the dirty secrets that we have
@@ -371,7 +375,7 @@ fictional sentence and not in a new sentence does get you some gain.
 </turn>
 
 
-<turn speaker="David" timestamp="15:41">
+<turn speaker="David Bamman" timestamp="15:41">
 
 All the methods that we have available to us in NLP for domain adaptation, you know, are potentially
 of good use here. For us, we know that we want to be able to measure how well any of these systems
@@ -386,7 +390,7 @@ this data to at least say how poorly existing models are doing.
 </turn>
 
 
-<turn speaker="David" timestamp="16:29">
+<turn speaker="David Bamman" timestamp="16:29">
 
 We can then also build more data to train those systems natively on this domain. And what we found
 here is that when we do that, when we train a system natively on literary texts, we end up
@@ -396,14 +400,14 @@ that is not used; a domain that is not literature.
 </turn>
 
 
-<turn speaker="Waleed" timestamp="16:47">
+<turn speaker="Waleed Ammar" timestamp="16:47">
 
 Yea, I think the first data set that addresses this problem so directly.
 
 </turn>
 
 
-<turn speaker="David" timestamp="16:51">
+<turn speaker="David Bamman" timestamp="16:51">
 
 Yep. This is the object of center. We know that we want to develop a lot of this NLP to work well
 for literature. And if you want to do that, we really just need to have data that's in that domain
@@ -414,7 +418,7 @@ shape it going forward is important.
 </turn>
 
 
-<turn speaker="Matt" timestamp="17:11">
+<turn speaker="Matt Gardner" timestamp="17:11">
 
 So you've created and released a data set or two recently. Are there others that are in this general
 space that you might point people to?
@@ -422,7 +426,7 @@ space that you might point people to?
 </turn>
 
 
-<turn speaker="David" timestamp="17:20">
+<turn speaker="David Bamman" timestamp="17:20">
 
 Yeah, so I know there have been a lot of other techniques that people have developed for trying to
 make these different aspects of the pipeline better for literature, in particular. Juilan Brooke,
@@ -437,7 +441,7 @@ resource out there for this kind.
 </turn>
 
 
-<turn speaker="Matt" timestamp="18:06">
+<turn speaker="Matt Gardner" timestamp="18:06">
 
 Coming back to an issue we touched on briefly a little bit ago, you worry about the domain shift and
 accuracy if you're using NLP as a measurement tool in this particular area. And will lead us to
@@ -448,7 +452,7 @@ that our systems are biased, how can you be confident in using these as a measur
 </turn>
 
 
-<turn speaker="David" timestamp="18:36">
+<turn speaker="David Bamman" timestamp="18:36">
 
 That's a great question. I think that in all these cases it's important to have some kind of
 validation that that lets you quantify exactly what kind of biases are going to creep into this
@@ -467,14 +471,14 @@ between women, you would expect to see that kind of reports, and we do.
 </turn>
 
 
-<turn speaker="Matt" timestamp="19:50">
+<turn speaker="Matt Gardner" timestamp="19:50">
 
 That's really interesting and problematic. We need to do better.
 
 </turn>
 
 
-<turn speaker="Waleed" timestamp="19:53">
+<turn speaker="Waleed Ammar" timestamp="19:53">
 
 That reminds me of a talk that ABC by Claudia Wagner, she was talking about how the users that read
 the content is being used in a lot of ways to kind of like as a replacement of standard more
@@ -487,14 +491,14 @@ errors we were making this measurements.
 </turn>
 
 
-<turn speaker="David" timestamp="20:31">
+<turn speaker="David Bamman" timestamp="20:31">
 
 Yeah, absolutely.
 
 </turn>
 
 
-<turn speaker="Matt" timestamp="20:31">
+<turn speaker="Matt Gardner" timestamp="20:31">
 
 So I think we've talked a little bit about how NLP helps in answering questions in the humanities.
 Do you think the contribution can go the other way in some cases where this, this kind of humanity
@@ -503,7 +507,7 @@ or literature helps NLP in general?
 </turn>
 
 
-<turn speaker="David" timestamp="20:49">
+<turn speaker="David Bamman" timestamp="20:49">
 
 Oh yeah. I mean absolutely. I mean the one hand literary analysis on its own is really challenging
 domain. Alright. So making sure that the tools that we're developing within NLP work well, not just
@@ -521,7 +525,7 @@ fairness and bias I think really also are informed by fundamentally humanistic l
 </turn>
 
 
-<turn speaker="Matt" timestamp="21:53">
+<turn speaker="Matt Gardner" timestamp="21:53">
 
 So are there particular tools that you wish you had better access to or that you wish performed
 better? I guess to state this a little better, you think NLP in literature analysis is helpful as a
@@ -530,7 +534,7 @@ measurement tool. What kind of measurement tools do you wish you had that NLP do
 </turn>
 
 
-<turn speaker="David" timestamp="22:10">
+<turn speaker="David Bamman" timestamp="22:10">
 
 That's a great question. So I think that's generally a lot of the low level components of the NLP
 pipeline could be better for literature. I think that the hard cases come in the fact that novels in
@@ -547,7 +551,7 @@ news documents.
 </turn>
 
 
-<turn speaker="David" timestamp="23:10">
+<turn speaker="David Bamman" timestamp="23:10">
 
 But beyond this question about what specific kinds of tools you think would be useful in this space
 of NLP for as literature in particular. I think that one of the real advantages in this space, one
@@ -563,7 +567,7 @@ explore what a new question looks like in this space.
 </turn>
 
 
-<turn speaker="David" timestamp="24:08">
+<turn speaker="David Bamman" timestamp="24:08">
 
 I mean, just to give you a couple of examples of things that my group is taking about are literary
 scene code records, right? It's something that doesn't really exist for news texts. A literally
@@ -578,7 +582,7 @@ very different from news.
 </turn>
 
 
-<turn speaker="David" timestamp="24:51">
+<turn speaker="David Bamman" timestamp="24:51">
 
 News has descriptions of places that are anchored in reality, right? They were, every place has at
 least some latitude, longitude or some boundary box that tells you where on earth it is. With books
@@ -596,7 +600,7 @@ this real opportunity is.
 </turn>
 
 
-<turn speaker="Matt" timestamp="25:56">
+<turn speaker="Matt Gardner" timestamp="25:56">
 
 Yeah, that's really interesting. I've been talking recently with a bunch of folks about what it
 means to read and understand a passage of text and one of the things we've been toying around with
@@ -608,7 +612,7 @@ problem. If you think a little bit broader, it's in a lot of places. Yeah. It's 
 </turn>
 
 
-<turn speaker="David" timestamp="26:30">
+<turn speaker="David Bamman" timestamp="26:30">
 
 Absolutely. I think that's a good example of a thing that you see definitely existing in this
 universe of literature that could then also be expanded to other domains as well. But you brought up
@@ -625,7 +629,7 @@ what class you know is appropriate here.
 </turn>
 
 
-<turn speaker="David" timestamp="27:27">
+<turn speaker="David Bamman" timestamp="27:27">
 
 But there's an entirely different area of research that you can imagine here that asks, what does
 the reader know at the moment of each word in the novel? Right? So if you're starting from the very
@@ -644,7 +648,7 @@ questions that could be asked there as well.
 </turn>
 
 
-<turn speaker="Matt" timestamp="28:35">
+<turn speaker="Matt Gardner" timestamp="28:35">
 
 Yeah, that's really interesting. Maybe I'll spring a question on you that I've asked a whole bunch
 of other people. I've been trying to categorize reading comprehension; what it means to read and you
@@ -662,7 +666,7 @@ this categorization of what it means to read?
 </turn>
 
 
-<turn speaker="David" timestamp="29:37">
+<turn speaker="David Bamman" timestamp="29:37">
 
 Let's see. I mean, I don't know if I would add anything to the perspective of literary analysis. I
 think if anything, trying to analyze what the author's intent is I think is a very controversial
@@ -683,7 +687,7 @@ end. But it's a hard one.
 </turn>
 
 
-<turn speaker="Matt" timestamp="30:52">
+<turn speaker="Matt Gardner" timestamp="30:52">
 
 Okay. To wrap up, my last question is about what do you think are the most interesting open research
 questions? You mentioned one of them about like just trying to think about what are the interesting
@@ -693,7 +697,7 @@ for digital humanities?
 </turn>
 
 
-<turn speaker="David" timestamp="31:08">
+<turn speaker="David Bamman" timestamp="31:08">
 
 Yeah, I mean, absolutely. There are a whole slew of these open research questions and people are
 going to find them interesting to different degrees. For me in particular, I think that the ways of
@@ -709,7 +713,7 @@ has to involve places, it has to involve times that actions are occurring.
 </turn>
 
 
-<turn speaker="David" timestamp="32:00">
+<turn speaker="David Bamman" timestamp="32:00">
 
 In many cases the main theories also involves important objects. And we have a way of at least
 focusing our attention on getting all of those individual components right from the perspective of
@@ -724,7 +728,7 @@ different narratological primitives, I think is really compelling.
 </turn>
 
 
-<turn speaker="Matt" timestamp="32:55">
+<turn speaker="Matt Gardner" timestamp="32:55">
 
 It's interesting. That's not the direction I thought you were going to go when you brought up plot.
 I was expecting something about like prototypical narrative like The Hero's Journey. Like, can you
@@ -733,7 +737,7 @@ classify different novels into these categories?
 </turn>
 
 
-<turn speaker="David" timestamp="33:07">
+<turn speaker="David Bamman" timestamp="33:07">
 
 Oh, no. So I mean, I think there is work that's been done on an aspect of that. A lot of that dates
 back to Russian formalism back in the 1920s. I don't know. I don't particularly, I think there's a
@@ -745,21 +749,21 @@ able to be reduced down to these classical stories. Okay. I would disagree.
 </turn>
 
 
-<turn speaker="Matt" timestamp="33:39">
+<turn speaker="Matt Gardner" timestamp="33:39">
 
 Yeah, that's fine.
 
 </turn>
 
 
-<turn speaker="David" timestamp="33:41">
+<turn speaker="David Bamman" timestamp="33:41">
 
 Cool.
 
 </turn>
 
 
-<turn speaker="Matt" timestamp="33:41">
+<turn speaker="Matt Gardner" timestamp="33:41">
 
 This was a really interesting conversation. Is there anything that we missed that you want to talk
 about or any final thoughts before we conclude?
@@ -767,14 +771,14 @@ about or any final thoughts before we conclude?
 </turn>
 
 
-<turn speaker="David" timestamp="33:47">
+<turn speaker="David Bamman" timestamp="33:47">
 
 I don't think so. I think we covered a lot of important stuff.
 
 </turn>
 
 
-<turn speaker="Matt" timestamp="33:50">
+<turn speaker="Matt Gardner" timestamp="33:50">
 
 Great. Thanks for talking with us. I'm looking forward to seeing more work on literary analysis in
 digital humanities.
@@ -782,7 +786,7 @@ digital humanities.
 </turn>
 
 
-<turn speaker="David" timestamp="33:55">
+<turn speaker="David Bamman" timestamp="33:55">
 
 Okay. Thanks for having me.
 

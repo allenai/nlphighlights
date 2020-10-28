@@ -1,16 +1,22 @@
 ---
 title: "Research in Academia versus Industry, with Philip Resnik and Jason Baldridge"
-hosts: ["Waleed"]
-guests: ["Philip","Matt","New Speaker","Jason"]
+hosts: ["Waleed Ammar","Matt Gardner"]
+guests: ["Philip Resnik","Jason Baldridge"]
 number: "090"
 tags: []
-description: "How is it like to do research in academia vs. industry? In this episode, we invite Jason Baldridge (UT Austin => Google) and Philip Resnik (Sun Microsystems => UMD) to discuss some of the aspects one may want to consider when planning their research careers, including flexibility, security and intellectual freedom. Perhaps most importantly, we discuss how the career choices we make influence and are influenced by the relationships we forge. Check out the Careers in NLP Panel at NAACL'19 on Monday, June 3, 2019 for further discussion. Careers in NLP panel @ NAACL'19: https://naacl2019.org/blog/careers-panel-survey/ Jason Baldridge's homepage: http://www.jasonbaldridge.com/ Philip Resnik's homepage: http://users.umiacs.umd.edu/~resnik/"
+description: "How is it like to do research in academia vs. industry? In this episode, we invite Jason Baldridge (UT Austin => Google) and Philip Resnik (Sun Microsystems => UMD) to discuss some of the aspects one may want to consider when planning their research careers, including flexibility, security and intellectual freedom. Perhaps most importantly, we discuss how the career choices we make influence and are influenced by the relationships we forge. Check out the Careers in NLP Panel at NAACL'19 on Monday, June 3, 2019 for further discussion.
+
+Careers in NLP panel @ NAACL'19: https://naacl2019.org/blog/careers-panel-survey/
+
+Jason Baldridge's homepage: http://www.jasonbaldridge.com/
+
+Philip Resnik's homepage: http://users.umiacs.umd.edu/~resnik/"
 type: episode
 ---
 
 <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?&url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F629560458&show_artwork=true&show_comments=false"></iframe>
 
-<turn speaker="Matt" timestamp="00:00">
+<turn speaker="Matt Gardner" timestamp="00:00">
 
 Hello and welcome to the NLP highlights podcast where we talk about interesting work in natural
 language processing.
@@ -18,7 +24,7 @@ language processing.
 </turn>
 
 
-<turn speaker="Waleed" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is Matt Gardner and Waleed Ammar, we are research scientists at the Alan Institute for
 Artificial Intelligence. So a few weeks ago we asked for suggestions on topics you'd like us to
@@ -37,21 +43,21 @@ Austin. Philip and Jason, thank you for joining us today.
 </turn>
 
 
-<turn speaker="New Speaker" timestamp="01:13">
+<turn speaker="Jason Baldridge" timestamp="01:13">
 
 Thanks.
 
 </turn>
 
 
-<turn speaker="Philip" timestamp="01:14">
+<turn speaker="Philip Resnik" timestamp="01:14">
 
 Great to be here.
 
 </turn>
 
 
-<turn speaker="Waleed" timestamp="01:15">
+<turn speaker="Waleed Ammar" timestamp="01:15">
 
 So could you start by telling us how you decided to do the switch one way or the other and why you
 stayed since then?
@@ -59,7 +65,7 @@ stayed since then?
 </turn>
 
 
-<turn speaker="Philip" timestamp="01:22">
+<turn speaker="Philip Resnik" timestamp="01:22">
 
 For me, I had looked at academic positions coming out of the phd, you know, at the time, I found it
 harder to wind up where I needed to be. And uh, you know, there were, there were two bodies involved
@@ -74,7 +80,7 @@ name 10 years from now and then, you know, get hired as, senior faculty.
 </turn>
 
 
-<turn speaker="Philip" timestamp="02:14">
+<turn speaker="Philip Resnik" timestamp="02:14">
 
 And in my case, it was really good fortune, honestly. I had some geographic reasons to change where
 I was living and I was scrambling around trying to figure out what I was going to do. And in my
@@ -90,14 +96,14 @@ work out in life and I can't say I'm unhappy it happened.
 </turn>
 
 
-<turn speaker="Waleed" timestamp="03:10">
+<turn speaker="Waleed Ammar" timestamp="03:10">
 
 All right, great. How about you, Jason.
 
 </turn>
 
 
-<turn speaker="Jason" timestamp="03:12">
+<turn speaker="Jason Baldridge" timestamp="03:12">
 
 Cool. So I think, you know, in my case, I could actually give you a number of examples, but this is
 not a binary switch, right? Where you're kind of carrying on multiple interests as you're going
@@ -112,7 +118,7 @@ going to Scotland sounds pretty cool and working with Mark Seedman is awesome.
 </turn>
 
 
-<turn speaker="Jason" timestamp="03:51">
+<turn speaker="Jason Baldridge" timestamp="03:51">
 
 So, I did go with that. That said, I then ended up being part of a startup there that we got going.
 We actually got funding, um, to the tune of 200,000 pounds, um, that was promised, but then my co
@@ -127,7 +133,7 @@ academia.
 </turn>
 
 
-<turn speaker="Jason" timestamp="04:33">
+<turn speaker="Jason Baldridge" timestamp="04:33">
 
 That was very much front and center in my mind. And the advice he gave was actually no matter where
 I go, I want to work with smart teams of people who are working on interesting problems. And I think
@@ -142,7 +148,7 @@ old daughter.
 </turn>
 
 
-<turn speaker="Jason" timestamp="05:11">
+<turn speaker="Jason Baldridge" timestamp="05:11">
 
 And having the university schedule at that time allowed me to have her with me during the summers.
 And that was kind of actually excellent flexibility that the academic life gave me at that time. Uh,
@@ -157,7 +163,7 @@ of thinking, well, what are my next steps?
 </turn>
 
 
-<turn speaker="Jason" timestamp="05:52">
+<turn speaker="Jason Baldridge" timestamp="05:52">
 
 Um, and then I'd sort of hoped that I could support my professor had that by having a startup that
 could of be a thing that I could get going and then, you know, sort of do one day a week going
@@ -167,14 +173,14 @@ to hang out with Philip quite a bit.
 </turn>
 
 
-<turn speaker="Waleed" timestamp="06:07">
+<turn speaker="Waleed Ammar" timestamp="06:07">
 
 When did you start People Pattern?
 
 </turn>
 
 
-<turn speaker="Jason" timestamp="06:08">
+<turn speaker="Jason Baldridge" timestamp="06:08">
 
 I think that was 2013. Okay. So then ultimately, uh, I sort of wandered further and further away
 from just the core academic thing because I'd gotten much more of a taste of doing industry work
@@ -184,7 +190,7 @@ I decided I was going to jump and go all the way to, Google.
 </turn>
 
 
-<turn speaker="Philip" timestamp="06:26">
+<turn speaker="Philip Resnik" timestamp="06:26">
 
 So just to elaborate for a second on one or two things that Jason said. By the way, Jason mentioned
 flexibility, which is an important theme that comes up. Also the circumstances of my coming to
@@ -200,7 +206,7 @@ industry where at major research universities, at least it was good
 </turn>
 
 
-<turn speaker="Philip" timestamp="07:18">
+<turn speaker="Philip Resnik" timestamp="07:18">
 
 you were able to do working on the side, say like a day a week or something to do consulting or
 whatever, and you're starting to see a model now where an increasing number of people are actually
@@ -212,7 +218,7 @@ time then I think tended to exist in the past.
 </turn>
 
 
-<turn speaker="Matt" timestamp="07:47">
+<turn speaker="Matt Gardner" timestamp="07:47">
 
 I guess one interesting thing that stuck out to me from both of your stories was that how much your
 life circumstances affected how things turned out. It seems to me like that's pretty much always, I
@@ -229,7 +235,7 @@ industry research, but again, fully fully determined by a crazy series of, life 
 </turn>
 
 
-<turn speaker="Waleed" timestamp="08:49">
+<turn speaker="Waleed Ammar" timestamp="08:49">
 
 So this reinforces what Philip was just saying that, it's not, it doesn't have to be one or the
 other, but also I think this is kind of a rare opportunity. Oftentimes people who are already like
@@ -241,7 +247,7 @@ split their time.
 </turn>
 
 
-<turn speaker="Philip" timestamp="09:19">
+<turn speaker="Philip Resnik" timestamp="09:19">
 
 Yeah. I think that's largely because really any situation where you are working out the fit with an
 employer, the core question has to do with value and uh, you know, the way you deliver value is
@@ -261,7 +267,7 @@ established have more opportunities in the way that you're talking about.
 </turn>
 
 
-<turn speaker="Jason" timestamp="10:36">
+<turn speaker="Jason Baldridge" timestamp="10:36">
 
 That's absolutely true. I've actually recently moved to Austin as, uh, some of you know, and that
 was actually something that would not have been possible for me to do at Google two years ago. When
@@ -275,7 +281,7 @@ the back of what you've done before.
 </turn>
 
 
-<turn speaker="Philip" timestamp="11:12">
+<turn speaker="Philip Resnik" timestamp="11:12">
 
 Yeah. Although I will say that even for people starting out, there was a, there is a message here
 which is, there's a difference between the jobs that people have available and the job that you want
@@ -294,7 +300,7 @@ who's good. How do we take the jigsaw puzzle and the piece and make them fit tog
 </turn>
 
 
-<turn speaker="Jason" timestamp="12:19">
+<turn speaker="Jason Baldridge" timestamp="12:19">
 
 That's a great point. Um, in fact, I think a lot of junior people underestimate their ability to
 guide and dictate what they're gonna do by showing their leadership early on. Exactly.
@@ -302,7 +308,7 @@ guide and dictate what they're gonna do by showing their leadership early on. Ex
 </turn>
 
 
-<turn speaker="Waleed" timestamp="12:28">
+<turn speaker="Waleed Ammar" timestamp="12:28">
 
 Yeah, that makes a lot sense. I remember when I joined AI2 I was expected to do one job and just
 like a few months later, I ended up starting like leading a team. And then I gave a course at the
@@ -314,7 +320,7 @@ industry or academia affects one's finances?
 </turn>
 
 
-<turn speaker="Jason" timestamp="13:01">
+<turn speaker="Jason Baldridge" timestamp="13:01">
 
 Well, it's a pretty clear difference. I would say. I mean as a professor you can consult and many
 professors increase their income by doing consulting and that can bring a lot of additional income
@@ -329,7 +335,7 @@ basically.
 </turn>
 
 
-<turn speaker="Jason" timestamp="13:43">
+<turn speaker="Jason Baldridge" timestamp="13:43">
 
 Right, and that means there's a lot of your time that goes to that and leaves less time for other
 things such as being with your family. So that's the additional cost you pay there. I am, I can say
@@ -338,7 +344,7 @@ that I'm very happy now at Google with one job.
 </turn>
 
 
-<turn speaker="Matt" timestamp="13:54">
+<turn speaker="Matt Gardner" timestamp="13:54">
 
 Yeah. I was going to ask if universities are typically okay with you spending a day a week or do you
 have to do that on top of all of your normal five days or seven days or however much time you spend
@@ -347,7 +353,7 @@ as a professor?
 </turn>
 
 
-<turn speaker="Jason" timestamp="14:07">
+<turn speaker="Jason Baldridge" timestamp="14:07">
 
 Well, UT Austin gives you one day a week that you can do that. Of course is not like your Friday,
 that's your Saturday.
@@ -355,7 +361,7 @@ that's your Saturday.
 </turn>
 
 
-<turn speaker="Philip" timestamp="14:12">
+<turn speaker="Philip Resnik" timestamp="14:12">
 
 In general universities, at least the major research universities are okay with, and even
 encouraging, of people spending a day a week without asking it. And look, they know that if you're
@@ -370,7 +376,7 @@ and like play golf the other four days.
 </turn>
 
 
-<turn speaker="Philip" timestamp="14:55">
+<turn speaker="Philip Resnik" timestamp="14:55">
 
 They're going to come back and do another week's worth of work on Tuesday and then do it again on
 Wednesday. Right? So universities know that by keeping the flexibility there for people, they're
@@ -387,7 +393,7 @@ forth.
 </turn>
 
 
-<turn speaker="Philip" timestamp="15:57">
+<turn speaker="Philip Resnik" timestamp="15:57">
 
 You know, the other thing that I would add, David Sedaris, the essayist, he writes a lot of funny
 stuff. In one of his essays, he talks about, sort of, the four burners theory. It's, it's worth
@@ -409,7 +415,7 @@ tenuous proposition.
 </turn>
 
 
-<turn speaker="Jason" timestamp="17:20">
+<turn speaker="Jason Baldridge" timestamp="17:20">
 
 Yup. I want to return a little bit to the personal perspective on the financial question, which is
 it's not about the absolute numbers, it's about the financial security that you experience.
@@ -424,7 +430,7 @@ daycare thing
 </turn>
 
 
-<turn speaker="Jason" timestamp="18:03">
+<turn speaker="Jason Baldridge" timestamp="18:03">
 
 well before he was born and the actual admit into the universities day care didn't come until he was
 like two years old. And this happened at a time, this was like around the 2008 downturn in the
@@ -438,7 +444,7 @@ of thing for me to get moved up in this darn list?
 </turn>
 
 
-<turn speaker="Jason" timestamp="18:42">
+<turn speaker="Jason Baldridge" timestamp="18:42">
 
 Um, I was responsible in all this stuff and they couldn't do it. The only way they could've done it
 is if I had had a competing offer from another university. And this is often the case with uh,
@@ -453,7 +459,7 @@ being taken care of.
 </turn>
 
 
-<turn speaker="Jason" timestamp="19:18">
+<turn speaker="Jason Baldridge" timestamp="19:18">
 
 And I was asking for something that I felt was simple and it turns out daycare's not a simple thing
 at universities, but go figure. So overall like you know, there's sort of your personal sense of
@@ -470,7 +476,7 @@ security of my team.
 </turn>
 
 
-<turn speaker="Philip" timestamp="20:05">
+<turn speaker="Philip Resnik" timestamp="20:05">
 
 Staying on the finances one a little bit more, I guess one of the things that comes to mind for me
 also is why do people do what they do? You don't get a phd for the money. I mean, you don't take a
@@ -485,7 +491,7 @@ know, assume I was going to be a big enough name to come back into academia.
 </turn>
 
 
-<turn speaker="Philip" timestamp="20:52">
+<turn speaker="Philip Resnik" timestamp="20:52">
 
 You can't, plan that. Right? And so that's not why you do it. So, the sense of security that you're
 mentioning, Jason, is very much more important than the exact dollar amounts. I think that's
@@ -500,28 +506,28 @@ kind of person to have been getting a phd in this field in the first place.
 </turn>
 
 
-<turn speaker="Waleed" timestamp="21:47">
+<turn speaker="Waleed Ammar" timestamp="21:47">
 
 Fair enough. But, I will say that even getting a small house is not easy these days.
 
 </turn>
 
 
-<turn speaker="Philip" timestamp="21:52">
+<turn speaker="Philip Resnik" timestamp="21:52">
 
 Oh yeah.
 
 </turn>
 
 
-<turn speaker="Jason" timestamp="21:52">
+<turn speaker="Jason Baldridge" timestamp="21:52">
 
 It can be tricky in many of the markets.
 
 </turn>
 
 
-<turn speaker="Waleed" timestamp="21:54">
+<turn speaker="Waleed Ammar" timestamp="21:54">
 
 Oh yeah. Thank you very much. I think that's a very helpful perspective on both sides. One of the
 main answers I get whenever I ask some of my friends who are in the job market for a faculty
@@ -533,7 +539,7 @@ have more intellectual freedom, or not.
 </turn>
 
 
-<turn speaker="Philip" timestamp="22:26">
+<turn speaker="Philip Resnik" timestamp="22:26">
 
 Well, so this goes back to what I was saying earlier about value right, there is, you always need to
 deliver something to someone. When students come in, I always talk about sort of the Venn diagram
@@ -548,7 +554,7 @@ because when you're an entrepreneur, and Jason, you've experienced this as well 
 </turn>
 
 
-<turn speaker="Philip" timestamp="23:21">
+<turn speaker="Philip Resnik" timestamp="23:21">
 
 You're coming up with an idea and then you have to figure out that it has value and convince
 somebody to support you to do it, right? And you kind of take that summit piece of new stuff and
@@ -565,7 +571,7 @@ people interested in being involved in.
 </turn>
 
 
-<turn speaker="Philip" timestamp="24:14">
+<turn speaker="Philip Resnik" timestamp="24:14">
 
 And then you take it up to the top of the curve and instead of doing that whole sustainability
 thing, you turn around and go back down to the next idea and do it again. That is a kind of control
@@ -579,7 +585,7 @@ or necessarily the same kind of barriers to that that you often see in industry.
 </turn>
 
 
-<turn speaker="Jason" timestamp="24:54">
+<turn speaker="Jason Baldridge" timestamp="24:54">
 
 Yeah, that's, that's absolutely true. I will say industry can come along with opportunities to have
 significant flexibility. One big difference is that academia, you get it for life if you stick
@@ -599,7 +605,7 @@ problems and ones that I'm really interested in.
 </turn>
 
 
-<turn speaker="Waleed" timestamp="25:58">
+<turn speaker="Waleed Ammar" timestamp="25:58">
 
 So is this true for you as well as your direct reports or do you feel like it's more true for one or
 the other?
@@ -607,7 +613,7 @@ the other?
 </turn>
 
 
-<turn speaker="Jason" timestamp="26:03">
+<turn speaker="Jason Baldridge" timestamp="26:03">
 
 So we definitely do not have the model where people, say who finished a phd and join our research
 team are told what to do. That is not usually a good way to work with researchers. We do have
@@ -627,7 +633,7 @@ things like that. You don't have to do that. But if you do do that, that turns o
 </turn>
 
 
-<turn speaker="Philip" timestamp="27:12">
+<turn speaker="Philip Resnik" timestamp="27:12">
 
 So I want to introduce an element of, maybe skepticism is too strong, but at least a distinction
 between what you have at Google, and this may even apply to Google, as well, in other places. I draw
@@ -642,7 +648,7 @@ advanced development.
 </turn>
 
 
-<turn speaker="Philip" timestamp="27:56">
+<turn speaker="Philip Resnik" timestamp="27:56">
 
 Some, you know, development groups will have maybe a little bit more flexibility for research and
 15% projects or 20% projects or whatever. But in an advanced development setting, you have to
@@ -662,7 +668,7 @@ or might not actually deliver something in the sense of technological transfer.
 </turn>
 
 
-<turn speaker="Jason" timestamp="29:08">
+<turn speaker="Jason Baldridge" timestamp="29:08">
 
 What I can say is that I'm very happy with the situation that I find myself in, with respect to
 intellectual freedom. There are various incentive structures, which I think you're alluding to,
@@ -678,7 +684,7 @@ similar to what you experience
 </turn>
 
 
-<turn speaker="Jason" timestamp="29:57">
+<turn speaker="Jason Baldridge" timestamp="29:57">
 
 as an academic, say as a professor in a department, or a postdoc or something like that. There are
 plenty of opportunities at these larger companies, I would say, where you're not focusing on a
@@ -692,7 +698,7 @@ there's always these problems where you can kind of look and go like, Whoa, if w
 </turn>
 
 
-<turn speaker="Jason" timestamp="30:31">
+<turn speaker="Jason Baldridge" timestamp="30:31">
 
 can just get a bit more data, if we just tweak this model a little bit and then we run the right
 experiments, we're going to get something that will improve something that matters to the company,
@@ -702,7 +708,7 @@ lead towards larger improvements overall.
 </turn>
 
 
-<turn speaker="Philip" timestamp="30:46">
+<turn speaker="Philip Resnik" timestamp="30:46">
 
 This leads to a question you should be asking if you're thinking about industry, which is what is
 the tech transfer model, right? Even if you are doing more basic research, what is the model for how
@@ -718,14 +724,14 @@ the model for this is.
 </turn>
 
 
-<turn speaker="Jason" timestamp="31:32">
+<turn speaker="Jason Baldridge" timestamp="31:32">
 
 That's absolutely correct.
 
 </turn>
 
 
-<turn speaker="Matt" timestamp="31:33">
+<turn speaker="Matt Gardner" timestamp="31:33">
 
 Can I jump in and refine this question a little bit? So let's say I am someone graduating with a phd
 today and I'm on the faculty market and I'm also considering positions at say, Google research or
@@ -735,7 +741,7 @@ description in the first year?
 </turn>
 
 
-<turn speaker="Philip" timestamp="31:52">
+<turn speaker="Philip Resnik" timestamp="31:52">
 
 The immediately obvious thing is in your first year as a faculty member, you are incredibly focused
 on publishing. If your dissertation stuff was not already published that it's getting out and
@@ -744,14 +750,14 @@ building your, sort of, momentum on a research track, creating your research ide
 </turn>
 
 
-<turn speaker="Jason" timestamp="32:08">
+<turn speaker="Jason Baldridge" timestamp="32:08">
 
 Creating your courses and teaching them.
 
 </turn>
 
 
-<turn speaker="Philip" timestamp="32:10">
+<turn speaker="Philip Resnik" timestamp="32:10">
 
 I was going right to their next right. You're just splitting your effort so that you are involved in
 that, in the teaching side. If you are as lucky as I think incoming academics should be, then you're
@@ -764,7 +770,7 @@ way that it should be. In an academic position,
 </turn>
 
 
-<turn speaker="Philip" timestamp="32:42">
+<turn speaker="Philip Resnik" timestamp="32:42">
 
 if you are looking at an academic position, one of the things you want to understand and ask about,
 of junior faculty members, or look at the life experience there is to what extent do they have your
@@ -780,7 +786,7 @@ track the rest of the way.
 </turn>
 
 
-<turn speaker="Jason" timestamp="33:35">
+<turn speaker="Jason Baldridge" timestamp="33:35">
 
 Yeah, and that's absolutely true. Although many people do still carry on the collaborations that
 they had started during their PhDs and still have the ability to wrap those up, you know, as, as it
@@ -789,7 +795,7 @@ were, um, after joining an industry position.
 </turn>
 
 
-<turn speaker="Philip" timestamp="33:48">
+<turn speaker="Philip Resnik" timestamp="33:48">
 
 I absolutely agree with what you say. My first year at Sun actually was actually very postdoc-l.ike
 I was very fortunate that way. But I think that there's probably a wide range of variation across
@@ -798,7 +804,7 @@ the different main companies that are doing research.
 </turn>
 
 
-<turn speaker="Jason" timestamp="34:00">
+<turn speaker="Jason Baldridge" timestamp="34:00">
 
 Yeah. I would like to stress as well, there are differences in being a person doing research in a
 more product focused setting, which exists both at Google and elsewhere or in a sort of research lab
@@ -812,7 +818,7 @@ number of people join research labs and then move into product. And that's an in
 </turn>
 
 
-<turn speaker="Jason" timestamp="34:46">
+<turn speaker="Jason Baldridge" timestamp="34:46">
 
 And there are a lot of good reasons for that. And one of those is that a lot of product problems are
 really darn interesting and then you have like these really rich problems, you have very clear
@@ -827,7 +833,7 @@ joined the research lab in industry and then gone to product area within the sam
 </turn>
 
 
-<turn speaker="Waleed" timestamp="35:29">
+<turn speaker="Waleed Ammar" timestamp="35:29">
 
 Yeah, I think it goes back to the value proposition that Philip was mentioning earlier. Even
 individuals want to see that the work they're doing results in value for the society and different
@@ -837,7 +843,7 @@ there. People can use it.
 </turn>
 
 
-<turn speaker="Philip" timestamp="35:47">
+<turn speaker="Philip Resnik" timestamp="35:47">
 
 Yeah. I want to actually emphasize this stuff that you're talking about, Jason. We really should be
 doing more of it in academia, right? If the kind of person that you're talking about who is moving
@@ -853,7 +859,7 @@ overgeneralizing a little bit caring about like what's the problem I'm doing?
 </turn>
 
 
-<turn speaker="Philip" timestamp="36:40">
+<turn speaker="Philip Resnik" timestamp="36:40">
 
 There are some conferences, I don't know, some machine learning conferences, I can think of for
 example, where you know it may be a caricature but it's like, hey look at this cool new model. Well
@@ -867,7 +873,7 @@ what it is that we are trying to get the people in academia to pay attention to,
 </turn>
 
 
-<turn speaker="Waleed" timestamp="37:18">
+<turn speaker="Waleed Ammar" timestamp="37:18">
 
 Thank you. That was very helpful discussion of different aspects that people can think about. I want
 to make sure that we're, not spending all the time thinking about, talking about one, one aspect. So
@@ -876,7 +882,7 @@ what are other important aspects that we haven't talked about so far?
 </turn>
 
 
-<turn speaker="Matt" timestamp="37:33">
+<turn speaker="Matt Gardner" timestamp="37:33">
 
 A career progression. I guess there are a lot of different end goals here, but one possible end goal
 is to be a well known researcher. I Dunno how other people think of this, but I kind of think of
@@ -886,7 +892,7 @@ make it to the top or close to the top. How does academia versus industry effect
 </turn>
 
 
-<turn speaker="Jason" timestamp="37:50">
+<turn speaker="Jason Baldridge" timestamp="37:50">
 
 I don't know. I'd almost like to say like the goal should be like you want to solve certain problems
 or certain classes of problems and then that should be your north star rather than, you know, some
@@ -901,7 +907,7 @@ sort of reading the literature in all of these spaces.
 </turn>
 
 
-<turn speaker="Jason" timestamp="38:32">
+<turn speaker="Jason Baldridge" timestamp="38:32">
 
 And so what I would actually sort of say is let's turn that around a little bit and be very
 reflective about what your research program is and what problems you want to solve. And then you can
@@ -913,14 +919,14 @@ can't kind of piece it together through some mixture.
 </turn>
 
 
-<turn speaker="Matt" timestamp="38:59">
+<turn speaker="Matt Gardner" timestamp="38:59">
 
 Yeah, great answer.
 
 </turn>
 
 
-<turn speaker="Philip" timestamp="39:00">
+<turn speaker="Philip Resnik" timestamp="39:00">
 
 Yeah, absolutely. You need to actually figure out what you want first. Um, you need to have your
 goals in mind and then let the goals drive the decision making. And that is a very general
@@ -935,7 +941,7 @@ to become well known.
 </turn>
 
 
-<turn speaker="Philip" timestamp="39:41">
+<turn speaker="Philip Resnik" timestamp="39:41">
 
 For other people, they don't really care if anybody knows who they are as long as lots and lots of
 people are actually using the thing they built. Right? There is a whole spectrum of goals that
@@ -950,7 +956,7 @@ street corner or you know, teaching for, you know, a pittance.
 </turn>
 
 
-<turn speaker="Philip" timestamp="40:24">
+<turn speaker="Philip Resnik" timestamp="40:24">
 
 It's because they, they think that I'm going to be the one that makes it up to the top of the
 pyramid. You know, Mark is a wonderful example. Uh, you know, exemplar for me, he wasn't my advisor,
@@ -965,7 +971,7 @@ to make it there.
 </turn>
 
 
-<turn speaker="Jason" timestamp="41:05">
+<turn speaker="Jason Baldridge" timestamp="41:05">
 
 I would add another thing in this, which is after being a professor for over a decade and then doing
 a startup and now being at Google, one of the things that really stuck out to me is when I worked on
@@ -983,7 +989,7 @@ time being.
 </turn>
 
 
-<turn speaker="Jason" timestamp="42:01">
+<turn speaker="Jason Baldridge" timestamp="42:01">
 
 And so that's been really exciting for me, but I would sort of encourage anybody who's in an
 academic position to not get caught up in the cycle of, you know, getting papers out and things like
@@ -998,7 +1004,7 @@ the sacrosanct area to take the long perspective.
 </turn>
 
 
-<turn speaker="Philip" timestamp="42:45">
+<turn speaker="Philip Resnik" timestamp="42:45">
 
 Oh man, it should be, but the reality is so hard. I'm on sabbatical right now and what I mean, what
 is the point of a sabbatical? One of the traditional points of a sabbatical is to take a step back
@@ -1012,7 +1018,7 @@ something, you have things you need to deliver. Oops, I need students.
 </turn>
 
 
-<turn speaker="Philip" timestamp="43:27">
+<turn speaker="Philip Resnik" timestamp="43:27">
 
 And so you get the students and then the project ends and now you need to keep those students funded
 as you were talking about earlier, Jason. So you do what you need to and so now, you right, do you
@@ -1030,7 +1036,7 @@ wonderful, but it's really hard and it always comes back to um, to paying the pi
 </turn>
 
 
-<turn speaker="Jason" timestamp="44:22">
+<turn speaker="Jason Baldridge" timestamp="44:22">
 
 There was a really interesting argument I read a couple of years ago about looking at academia as
 now a mature industry. Where, in the early 19 hundreds, mid 19 hundreds and so on, it was
@@ -1049,7 +1055,7 @@ less overall stuff being thrown around or there are more people or both.
 </turn>
 
 
-<turn speaker="Philip" timestamp="45:26">
+<turn speaker="Philip Resnik" timestamp="45:26">
 
 So there's a show that you guys should do on the evolution of academia in this regard and sort of
 where research is taking place and the shift of a lot of the research activity into industry and
@@ -1065,7 +1071,7 @@ conversation.
 </turn>
 
 
-<turn speaker="Waleed" timestamp="46:14">
+<turn speaker="Waleed Ammar" timestamp="46:14">
 
 One of the things that are really important I think is stress level, which we kind of mentioned in
 passing but didn't spend a lot of time talking about.
@@ -1073,7 +1079,7 @@ passing but didn't spend a lot of time talking about.
 </turn>
 
 
-<turn speaker="Philip" timestamp="46:21">
+<turn speaker="Philip Resnik" timestamp="46:21">
 
 I would refer people to Charles Sutton's really wonderful session on this podcast about stress. I
 think that the discussion that you guys had with him was an enormously valuable one. My own thing
@@ -1090,7 +1096,7 @@ we can help them do it.
 </turn>
 
 
-<turn speaker="Jason" timestamp="47:24">
+<turn speaker="Jason Baldridge" timestamp="47:24">
 
 Yeah. And I mean there are cultural differences that I will say, in the kind of overall theme of our
 academia versus industry discussion here where certainly in academia, as Philip mentioned, you can
@@ -1104,7 +1110,7 @@ and I like to spend time with my wife and my kids and things like that.
 </turn>
 
 
-<turn speaker="Jason" timestamp="48:04">
+<turn speaker="Jason Baldridge" timestamp="48:04">
 
 And so, one thing I have found is that in my role at Google in particular, I am much more able to
 keep things into a Monday through Friday sort of setting and Philip is making a face. Sorry. But
@@ -1119,7 +1125,7 @@ reading it.
 </turn>
 
 
-<turn speaker="Jason" timestamp="48:49">
+<turn speaker="Jason Baldridge" timestamp="48:49">
 
 An,d you will be too if you read it. So read Why We Sleep. And that's actually a big factor in
 reducing your stress no matter what situation you're in. And the final thing is a lot of it comes
@@ -1136,7 +1142,7 @@ email as academics.
 </turn>
 
 
-<turn speaker="Philip" timestamp="49:40">
+<turn speaker="Philip Resnik" timestamp="49:40">
 
 We're driven by it. I mean, how many times have you had the experience where you sit down and like,
 okay, I'm just going to take care of the most important email and then get to this stuff that I'm
@@ -1153,7 +1159,7 @@ to actually just have real conversations and so forth.
 </turn>
 
 
-<turn speaker="Jason" timestamp="50:36">
+<turn speaker="Jason Baldridge" timestamp="50:36">
 
 One of the things is if you are in a relationship or you have close people close by who are affected
 by your academic addiction, pay attention to that. Right? And my wife frankly, was not a huge fan of
@@ -1167,7 +1173,7 @@ wife on that one.
 </turn>
 
 
-<turn speaker="Philip" timestamp="51:14">
+<turn speaker="Philip Resnik" timestamp="51:14">
 
 I agree, you have to pay a lot of attention. But all of this stuff we were talking about when we
 were talking about goals and how you make decisions and you're setting priorities and so forth. One
@@ -1178,7 +1184,7 @@ or another. But, you absolutely have to take that into account when you're picki
 </turn>
 
 
-<turn speaker="Jason" timestamp="51:42">
+<turn speaker="Jason Baldridge" timestamp="51:42">
 
 And to be clear I didn't burn bridges with my wife. I burned bridges between her and academia. And
 that kind of meant she really encouraged me to keep pushing and looking for things outside of it.
@@ -1187,7 +1193,7 @@ So, we're good. I listened to her, but yeah, she would not. Yeah.
 </turn>
 
 
-<turn speaker="Waleed" timestamp="51:55">
+<turn speaker="Waleed Ammar" timestamp="51:55">
 
 Anything else that you feel like we missed in this conversation? I did want to bring up that there
 is gonna be a panel about careers in NAACL. What's the day? It's gonna be a month,
@@ -1195,7 +1201,7 @@ is gonna be a panel about careers in NAACL. What's the day? It's gonna be a mont
 </turn>
 
 
-<turn speaker="Philip" timestamp="52:05">
+<turn speaker="Philip Resnik" timestamp="52:05">
 
 Right, So I am actually going to be moderating a panel on careers in NLP. That's part of the
 industry track at NAACL. NAACL is in Minneapolis of course, the week of June 3rd, the panel is, I
@@ -1210,7 +1216,7 @@ heard in this podcast. I think it's going to simply take it to the next step. So
 </turn>
 
 
-<turn speaker="Jason" timestamp="52:58">
+<turn speaker="Jason Baldridge" timestamp="52:58">
 
 Just to kind of wrap up, I think internships are a great way of testing industry waters and I would
 say furthermore to the point that I made earlier, don't just consider doing internships with the
@@ -1222,7 +1228,7 @@ particular problem area and Dataset or application.
 </turn>
 
 
-<turn speaker="Matt" timestamp="53:23">
+<turn speaker="Matt Gardner" timestamp="53:23">
 
 I'll, jump in there. I did three internships at Google on products teams and that's where I learned
 how to code well and this was like the basis for like the code quality in NLP that a lot of people
@@ -1232,7 +1238,7 @@ also helps with your ability to do good research in the future.
 </turn>
 
 
-<turn speaker="Jason" timestamp="53:44">
+<turn speaker="Jason Baldridge" timestamp="53:44">
 
 Absolutely. Absolutely. The other thing is no matter where you go, industry or academia, don't ever
 forget about your personal life, your friends, your family and things like that. I have talked to
@@ -1244,7 +1250,7 @@ papers. Chase your own personal happiness as well.
 </turn>
 
 
-<turn speaker="Philip" timestamp="54:12">
+<turn speaker="Philip Resnik" timestamp="54:12">
 
 That's absolutely right. One thing that will help do that is to just be conscious. We spend so much
 of our time doing things because, well that seems like the thing to do. Why are you going for, you
@@ -1256,7 +1262,7 @@ turning down at various points. I could not agree more, Jason.
 </turn>
 
 
-<turn speaker="Waleed" timestamp="54:45">
+<turn speaker="Waleed Ammar" timestamp="54:45">
 
 All right. Thank you so much for joining us today. That was a really fun conversation and I'm sure a
 lot people will enjoy listening to it.
@@ -1264,14 +1270,14 @@ lot people will enjoy listening to it.
 </turn>
 
 
-<turn speaker="Philip" timestamp="54:51">
+<turn speaker="Philip Resnik" timestamp="54:51">
 
 Thanks so much.
 
 </turn>
 
 
-<turn speaker="Jason" timestamp="54:52">
+<turn speaker="Jason Baldridge" timestamp="54:52">
 
 Thank you so much for having us.
 

@@ -4,7 +4,11 @@ hosts: ["Matt Gardner","Pradeep Dasigi"]
 guests: ["Steven Cao"]
 number: "112"
 tags: []
-description: "We invited Steven Cao to talk about his paper on multilingual alignment of contextual word embeddings. We started by discussing how multilingual transformers work in general, and then focus on Steven’s work on aligning word representations. The core idea is to start from a list of words automatically aligned from parallel corpora and to ensure the representations of the aligned words are similar to each other while not moving too far away from their original representations. We discussed the experiments on the XNLI dataset in the paper, analysis, and the decision to do the alignment at word level and compare it to other possibilities such as aligning word pieces or higher level encoded representations in transformers. Paper: https://openreview.net/forum?id=r1xCMyBtPS Steven Cao’s webpage: https://stevenxcao.github.io/"
+description: "We invited Steven Cao to talk about his paper on multilingual alignment of contextual word embeddings. We started by discussing how multilingual transformers work in general, and then focus on Steven’s work on aligning word representations. The core idea is to start from a list of words automatically aligned from parallel corpora and to ensure the representations of the aligned words are similar to each other while not moving too far away from their original representations. We discussed the experiments on the XNLI dataset in the paper, analysis, and the decision to do the alignment at word level and compare it to other possibilities such as aligning word pieces or higher level encoded representations in transformers.
+
+Paper: https://openreview.net/forum?id=r1xCMyBtPS
+
+Steven Cao’s webpage: https://stevenxcao.github.io/"
 type: episode
 ---
 

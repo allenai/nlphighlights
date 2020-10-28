@@ -1,7 +1,7 @@
 ---
 title: "Dina Demner-Fushman"
 hosts: ["Pradeep Dasigi","Waleed Ammar"]
-guests: ["Dina Demnar-Fushman","Matt Garner"]
+guests: ["Dina Demnar-Fushman"]
 number: "102"
 tags: []
 description: "What exciting NLP research problems are involved in processing biomedical and clinical data? In this episode, we spoke with Dina Demner-Fushman, who leads NLP and IR research at the Lister Hill National Center for Biomedical Communications, part of the National Library of Medicine. We talked about processing biomedical scientific literature, understanding clinical notes, and answering consumer health questions, and the challenges involved in each of these applications. Dina listed some specific tasks and relevant data sources for NLP researchers interested in such applications, and concluded with some pointers to getting started in this field."
@@ -10,7 +10,7 @@ type: episode
 
 <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?&url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F746537515&show_artwork=true&show_comments=false"></iframe>
 
-<turn speaker="Matt Garner" timestamp="">
+<turn speaker="Matt Gardner" timestamp="">
 
 Welcome to the NLP highlights podcast where we talk about interesting work in natural language
 processing. The hosts are Matt Gardner, Waleed Amar and Pradeep Tasigi.

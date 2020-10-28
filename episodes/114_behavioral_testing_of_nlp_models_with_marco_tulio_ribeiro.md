@@ -4,7 +4,9 @@ hosts: ["Pradeep Dasigi","Matt Gardner"]
 guests: ["Marco Ribeiro"]
 number: "114"
 tags: []
-description: "We invited Marco Tulio Ribeiro, a Senior Researcher at Microsoft, to talk about evaluating NLP models using behavioral testing, a framework borrowed from Software Engineering. Marco describes three kinds of black-box tests the check whether NLP models satisfy certain necessary conditions. While breaking the standard IID assumption, this framework presents a way to evaluate whether NLP systems are ready for real-world use. We also discuss what capabilities can be tested using this framework, how one can come up with good tests, and the need for an evolving set of behavioral tests for NLP systems. Marco’s homepage: https://homes.cs.washington.edu/~marcotcr/"
+description: "We invited Marco Tulio Ribeiro, a Senior Researcher at Microsoft, to talk about evaluating NLP models using behavioral testing, a framework borrowed from Software Engineering. Marco describes three kinds of black-box tests the check whether NLP models satisfy certain necessary conditions. While breaking the standard IID assumption, this framework presents a way to evaluate whether NLP systems are ready for real-world use. We also discuss what capabilities can be tested using this framework, how one can come up with good tests, and the need for an evolving set of behavioral tests for NLP systems.
+
+Marco’s homepage: https://homes.cs.washington.edu/~marcotcr/"
 type: episode
 ---
 

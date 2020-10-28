@@ -1,7 +1,7 @@
 ---
 title: "Model Distillation, with Victor Sanh and Thomas Wolf"
 hosts: ["Matt Gardner","Pradeep Dasigi"]
-guests: ["Speaker 3","Victor Sanh","Thomas Wolf"]
+guests: ["Victor Sanh","Thomas Wolf"]
 number: "104"
 tags: []
 description: "In this episode we talked with Victor Sanh and Thomas Wolf from HuggingFace about model distillation, and DistilBERT as one example of distillation. The idea behind model distillation is compressing a large model by building a smaller model, with much fewer parameters, that approximates the output distribution of the original model, typically for increased efficiency. We discussed how model distillation was typically done previously, and then focused on the specifics of DistilBERT, including training objective, empirical results, ablations etc. We finally discussed what kinds of information you might lose when doing model distillation."
@@ -358,7 +358,7 @@ don't know how much work there's been in that.
 </turn>
 
 
-<turn speaker="Speaker 3" timestamp="13:58">
+<turn speaker="Victor Sanh" timestamp="13:58">
 
 Seen any paper on that, but even the data we use to pre-train these large models, I think there is
 not enough research on that.
@@ -396,7 +396,7 @@ Yeah, definitely. I definitely think that's true.
 </turn>
 
 
-<turn speaker="Speaker 3" timestamp="14:29">
+<turn speaker="Victor Sanh" timestamp="14:29">
 
 That's something we want to push and I don't know if you've seen like we've released like a very
 fast tokenization library recently, which is kind of related, I think. All these input pipelines,
@@ -659,7 +659,7 @@ So smoothing the softmax you're saying this overemphasizes the rare words,
 </turn>
 
 
-<turn speaker="Speaker 3" timestamp="21:33">
+<turn speaker="Victor Sanh" timestamp="21:33">
 
 It overemphasizes the small signal more like it's not really the rare words, it's like the words we
 are very confident about in our case for MLM.

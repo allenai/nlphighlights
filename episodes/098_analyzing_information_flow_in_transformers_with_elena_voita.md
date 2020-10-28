@@ -1,10 +1,16 @@
 ---
 title: "Analyzing Information Flow in Transformers, with Elena Voita"
-hosts: ["Pradeep Dasigi","Matt Gardner","Waleed Ammar"]
+hosts: ["Pradeep Dasigi","Waleed Ammar"]
 guests: ["Elena Voita"]
 number: "098"
 tags: []
-description: "What function do the different attention heads serve in multi-headed attention models? In this episode, Lena describes how to use attribution methods to assess the importance and contribution of different heads in several tasks, and describes a gating mechanism to prune the number of effective heads used when combined with an auxiliary loss. Then, we discuss Lena’s work on studying the evolution of representations of individual tokens in transformers model. Lena’s homepage: https://lena-voita.github.io/ Blog posts: https://lena-voita.github.io/posts/acl19_heads.html https://lena-voita.github.io/posts/emnlp19_evolution.html Papers: https://arxiv.org/abs/1905.09418 https://arxiv.org/abs/1909.01380"
+description: "What function do the different attention heads serve in multi-headed attention models? In this episode, Lena describes how to use attribution methods to assess the importance and contribution of different heads in several tasks, and describes a gating mechanism to prune the number of effective heads used when combined with an auxiliary loss. Then, we discuss Lena’s work on studying the evolution of representations of individual tokens in transformers model.
+
+Lena’s homepage: https://lena-voita.github.io/
+
+Blog posts: https://lena-voita.github.io/posts/acl19_heads.html, https://lena-voita.github.io/posts/emnlp19_evolution.html
+
+Papers: https://arxiv.org/abs/1905.09418, https://arxiv.org/abs/1909.01380"
 type: episode
 ---
 

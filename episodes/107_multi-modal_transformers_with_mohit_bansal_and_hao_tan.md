@@ -1,10 +1,16 @@
 ---
 title: "Multi-modal transformers, with Mohit Bansal and Hao Tan"
 hosts: ["Matt Gardner","Pradeep Dasigi"]
-guests: ["Hao Tan","Mohit Banal"]
+guests: ["Hao Tan","Mohit Bansal"]
 number: "107"
 tags: []
-description: "In this episode, we invite Hao Tan and Mohit Bansal to talk about multi-modal training of transformers, focusing in particular on their EMNLP 2019 paper that introduced LXMERT, a vision+language transformer. We spend the first third of the episode talking about why you might want to have multi-modal representations. We then move to the specifics of LXMERT, including the model structure, the losses that are used to encourage cross-modal representations, and the data that is used. Along the way, we mention latent alignments between images and captions, the granularity of captions, and machine translation even comes up a few times. We conclude with some speculation on the future of multi-modal representations. Hao's website: http://www.cs.unc.edu/~airsplay/ Mohit's website: http://www.cs.unc.edu/~mbansal/ LXMERT paper: https://www.aclweb.org/anthology/D19-1514/"
+description: "In this episode, we invite Hao Tan and Mohit Bansal to talk about multi-modal training of transformers, focusing in particular on their EMNLP 2019 paper that introduced LXMERT, a vision+language transformer. We spend the first third of the episode talking about why you might want to have multi-modal representations. We then move to the specifics of LXMERT, including the model structure, the losses that are used to encourage cross-modal representations, and the data that is used. Along the way, we mention latent alignments between images and captions, the granularity of captions, and machine translation even comes up a few times. We conclude with some speculation on the future of multi-modal representations.
+
+Hao's website: http://www.cs.unc.edu/~airsplay/
+
+Mohit's website: http://www.cs.unc.edu/~mbansal/
+
+LXMERT paper: https://www.aclweb.org/anthology/D19-1514/"
 type: episode
 ---
 
@@ -28,7 +34,7 @@ welcome to the program Mohit and Hao
 </turn>
 
 
-<turn speaker="Mohit Banal" timestamp="00:28">
+<turn speaker="Mohit Bansal" timestamp="00:28">
 
 Thanks, thanks for having us.
 
@@ -95,7 +101,7 @@ think where you probably would expect to see help.
 </turn>
 
 
-<turn speaker="Mohit Banal" timestamp="03:27">
+<turn speaker="Mohit Bansal" timestamp="03:27">
 
 I think Hao had a good example in one of our emails, like maybe Hao remembers a couple of months ago
 he had some nice visual versus textual clusters. So basically in something like BERT or just textual
@@ -146,7 +152,7 @@ Yeah, I think so. I think it's a general goal of our project.
 </turn>
 
 
-<turn speaker="Mohit Banal" timestamp="05:44">
+<turn speaker="Mohit Bansal" timestamp="05:44">
 
 Something also clicked something in my head is that five or six years ago we had this paper and in
 CVPR 2014 when we were trying to basically what Matt's trying to says, yes, we would like to take
@@ -477,7 +483,7 @@ the tables, the television or something like this.
 </turn>
 
 
-<turn speaker="Mohit Banal" timestamp="19:10">
+<turn speaker="Mohit Bansal" timestamp="19:10">
 
 Yes. I think it's almost like a sort of a spectrum issue, right? So a caption can be actually less
 detailed than a visual question/answering question sometimes and vice versa. A question could be
@@ -500,7 +506,7 @@ Right. Would something like that make more sense.
 </turn>
 
 
-<turn speaker="Mohit Banal" timestamp="20:05">
+<turn speaker="Mohit Bansal" timestamp="20:05">
 
 These are very small data sets. So like if you look at the CVPR again, the six year old paper, we
 had like a very small dataset on 3D rooms and like aligning the sentence to cuboids and then Julia
@@ -526,7 +532,7 @@ that tries to be intelligent about this.
 </turn>
 
 
-<turn speaker="Mohit Banal" timestamp="21:14">
+<turn speaker="Mohit Bansal" timestamp="21:14">
 
 It sounds also related to curriculum learning where you could be going from like simpler to longer
 sentences. You can also define the notion of like specificity in images and captions where they
@@ -546,7 +552,7 @@ figure out what the alignment is and use this to do better training?
 </turn>
 
 
-<turn speaker="Mohit Banal" timestamp="21:56">
+<turn speaker="Mohit Bansal" timestamp="21:56">
 
 The CVPR 14 paper with my Chicago TTI collaborators who moved to Toronto since then, Raquel Urtasun,
 Sanja Fidler. That was right before sort of our deep learning took over. So this was a big factor
@@ -572,7 +578,7 @@ questions. So we just use each pair as a single training instance.
 </turn>
 
 
-<turn speaker="Mohit Banal" timestamp="22:38">
+<turn speaker="Mohit Bansal" timestamp="22:38">
 
 I think the question is do you think the, I mean obviously are you treated those that independently?
 Do you think, I mean there's work that takes multiple references, a generation tasks and also tries
@@ -596,7 +602,7 @@ Yeah. Well captions are generally expected to describe the whole image probably 
 </turn>
 
 
-<turn speaker="Mohit Banal" timestamp="23:36">
+<turn speaker="Mohit Bansal" timestamp="23:36">
 
 Paraphrase sort of references. Maybe but if you use datasets, like the dense captioning datasets
 from Stanford, which we've used for some papers, they are more about basically going through each
@@ -773,7 +779,7 @@ needs to make some before we'll actually see gains from doing this kind of thing
 </turn>
 
 
-<turn speaker="Mohit Banal" timestamp="30:47">
+<turn speaker="Mohit Bansal" timestamp="30:47">
 
 I guess even for a vision and language tasks, having a better benchmarks for out of domain
 generalization testing where if someone like could be clearly like very concretely checking for the
@@ -812,7 +818,7 @@ datasets like in the VQA area too.
 </turn>
 
 
-<turn speaker="Mohit Banal" timestamp="32:47">
+<turn speaker="Mohit Bansal" timestamp="32:47">
 
 Yeah. And then I think some other later word also has extended LXMERT to lots and lots more data and
 Lats and lots more GQs and then there's clearly, you can see even better results but like Matt said
@@ -846,7 +852,7 @@ is a chair and what is a table and a chair by language?
 </turn>
 
 
-<turn speaker="Mohit Banal" timestamp="34:17">
+<turn speaker="Mohit Bansal" timestamp="34:17">
 
 Yeah. I think the main thing we are missing in all this research community, maybe not the whole
 community, but something that we've been discussing on this podcast is all the nonverbal modality.
@@ -871,7 +877,7 @@ harder problem.
 </turn>
 
 
-<turn speaker="Mohit Banal" timestamp="35:25">
+<turn speaker="Mohit Bansal" timestamp="35:25">
 
 Videos are a good way to extract the kind of thing that, I'm talking about, but they'll still not be
 keen enough.
@@ -911,7 +917,7 @@ fit.
 </turn>
 
 
-<turn speaker="Mohit Banal" timestamp="36:42">
+<turn speaker="Mohit Bansal" timestamp="36:42">
 
 Yeah, so sort of like the non parallel data that exists in much bigger quantities and then it goes
 back to some of Matt's points about the later alignment learning versus some noisy initial
@@ -932,7 +938,7 @@ There's really interesting things to think about along those lines. That's reall
 </turn>
 
 
-<turn speaker="Mohit Banal" timestamp="37:25">
+<turn speaker="Mohit Bansal" timestamp="37:25">
 
 Yeah, and all the bridging stuff also.
 
@@ -953,7 +959,7 @@ Great. Thanks. Thanks for your time.
 </turn>
 
 
-<turn speaker="Mohit Banal" timestamp="37:34">
+<turn speaker="Mohit Bansal" timestamp="37:34">
 
 Thank you.
 
