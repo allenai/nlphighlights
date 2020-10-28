@@ -1,3 +1,6 @@
+Title: 120 - Evaluation of Text Generation, with Asli Celikyilmaz
+Description: We invited Asli Celikyilmaz for this episode to talk about evaluation of text generation systems. We discussed the challenges in evaluating generated text, and covered human and automated metrics, with a discussion of recent developments in learning metrics. We also talked about some open research questions, including the difficulties in evaluating factual correctness of generated text.  Asli Celikyilmaz is a Principal Researcher at Microsoft Research.  Link to a survey co-authored by Asli on this topic: arxiv.org/abs/2006.14799
+
 Title: 119 - Social NLP, with Diyi Yang
 Description: In this episode, Diyi Yang gives us an overview of using NLP models for social applications, including understanding social relationships, processes, roles, and power. As NLP systems are getting used more and more in the real world, they additionally have increasing social impacts that must be studied. We talk about how to get started in this field, what datasets exist and are commonly used, and potential ethical issues. We additionally cover two of Diyi's recent papers, on neutralizing subjective bias in text, and on modeling persuasiveness in text. Diyi Yang is an assistant professor in the School of Interactive Computing at Georgia Tech.
 
