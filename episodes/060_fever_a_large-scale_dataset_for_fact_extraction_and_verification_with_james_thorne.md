@@ -1,10 +1,12 @@
 ---
 title: "FEVER: a large-scale dataset for Fact Extraction and VERification, with James Thorne"
 hosts: ["Matt Gardner","Waleed Ammar"]
-guests: ["James Thorne","New Speaker"]
+guests: ["James Thorne"]
 number: "060"
 tags: []
-description: "NAACL 2018 paper by James Thorne, Andreas Vlachos, Christos Christodoulopoulos, and Arpit Mittal James tells us about his paper, where they created a dataset for fact checking. We talk about how this dataset relates to other datasets, why a new one was needed, how it was built, and how well the initial baseline does on this task. There are some interesting side notes on bias in dataset construction, and on how \"fact checking\" relates to \"fake news\" (\"fake news\" could mean that an article is actively trying to deceive or mislead you; \"fact checking\" here is just determining if a single claim is true or false given a corpus of assumed-correct reference material). The baseline system does quite poorly, and the lowest-hanging fruit seems to be in improving the retrieval component that finds relevant supporting evidence for claims. There's a workshop and shared task coming up on this dataset: http://fever.ai/. The shared task test period starts on July 24th - get your systems ready! https://www.semanticscholar.org/paper/FEVER%3A-a-Large-scale-Dataset-for-Fact-Extraction-Thorne-Vlachos/7b1f840ecfafb94d2d9e6e926696dba7fad0bb88"
+description: "NAACL 2018 paper by James Thorne, Andreas Vlachos, Christos Christodoulopoulos, and Arpit Mittal James tells us about his paper, where they created a dataset for fact checking. We talk about how this dataset relates to other datasets, why a new one was needed, how it was built, and how well the initial baseline does on this task. There are some interesting side notes on bias in dataset construction, and on how \"fact checking\" relates to \"fake news\" (\"fake news\" could mean that an article is actively trying to deceive or mislead you; \"fact checking\" here is just determining if a single claim is true or false given a corpus of assumed-correct reference material). The baseline system does quite poorly, and the lowest-hanging fruit seems to be in improving the retrieval component that finds relevant supporting evidence for claims. There's a workshop and shared task coming up on this dataset: http://fever.ai/. The shared task test period starts on July 24th - get your systems ready!
+
+https://www.semanticscholar.org/paper/FEVER%3A-a-Large-scale-Dataset-for-Fact-Extraction-Thorne-Vlachos/7b1f840ecfafb94d2d9e6e926696dba7fad0bb88"
 type: episode
 ---
 
@@ -529,7 +531,7 @@ us a score of about 50%, which is comparable to the multi NLI datasets.
 </turn>
 
 
-<turn speaker="New Speaker" timestamp="19:34">
+<turn speaker="Matt Gardner" timestamp="19:34">
 
 I'm realizing now that we haven't even described what the baseline system does. So maybe that'd be
 good to talk to talk about first and then we can come back to this question.

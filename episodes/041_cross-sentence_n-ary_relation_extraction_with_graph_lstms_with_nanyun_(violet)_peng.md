@@ -1,10 +1,12 @@
 ---
 title: "Cross-Sentence N-ary Relation Extraction with Graph LSTMs, with Nanyun (Violet) Peng"
 hosts: ["Matt Gardner","Waleed Ammar"]
-guests: ["New Speaker","Nanyun Peng"]
+guests: ["Nanyun Peng"]
 number: "041"
 tags: []
-description: "TACL 2017 paper, by Nanyun Peng, Hoifung Poon, Chris Quirk, Kristina Toutanova, and Wen-tau Yih. Most relation extraction work focuses on binary relations, like (Seattle, located in, Washington), because extracting n-ary relations is difficult. Nanyun (Violet) and her colleagues came up with a model to extract n-ary relations, focusing on drug-mutation-gene interactions, using graph LSTMs (a construct pretty similar to graph CNNs, which was developed around the same time). Nanyun comes on the podcast to tell us about her work. https://www.semanticscholar.org/paper/Cross-Sentence-N-ary-Relation-Extraction-with-Grap-Peng-Poon/03a2f871cc841e8047ab3291806dc301c5144bec"
+description: "TACL 2017 paper, by Nanyun Peng, Hoifung Poon, Chris Quirk, Kristina Toutanova, and Wen-tau Yih. Most relation extraction work focuses on binary relations, like (Seattle, located in, Washington), because extracting n-ary relations is difficult. Nanyun (Violet) and her colleagues came up with a model to extract n-ary relations, focusing on drug-mutation-gene interactions, using graph LSTMs (a construct pretty similar to graph CNNs, which was developed around the same time). Nanyun comes on the podcast to tell us about her work.
+
+https://www.semanticscholar.org/paper/Cross-Sentence-N-ary-Relation-Extraction-with-Grap-Peng-Poon/03a2f871cc841e8047ab3291806dc301c5144bec"
 type: episode
 ---
 
@@ -579,7 +581,7 @@ Yes. But we treat both of them as has relation.
 </turn>
 
 
-<turn speaker="New Speaker" timestamp="25:41">
+<turn speaker="Waleed Ammar" timestamp="25:41">
 
 Okay. So could you, do you remember the top of your head? How often was it the case that you match
 all three entities in the same sentence about the turnout not to have the relationship.

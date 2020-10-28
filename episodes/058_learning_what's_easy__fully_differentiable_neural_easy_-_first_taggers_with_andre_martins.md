@@ -1,10 +1,12 @@
 ---
-title: "Learning What's Easy_ Fully Differentiable Neural Easy - First Taggers, with Andre Martins"
+title: "Learning What's Easy: Fully Differentiable Neural Easy - First Taggers, with Andre Martins"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Andre Martins"]
 number: "058"
 tags: []
-description: "EMNLP 2017 paper by André F. T. Martins and Julia Kreutzer André comes on the podcast to talk to us the paper. We spend the bulk of the time talking about the two main contributions of the paper: how they applied the notion of \"easy first\" decoding to neural taggers, and the details of the constrained softmax that they introduced to accomplish this. We conclude that \"easy first\" might not be the right name for this - it's doing something that in the end is very similar to stacked self-attention, with standard independent decoding at the end. The particulars of the self-attention are inspired by \"easy first\", however, using a constrained softmax to enforce some novel constraints on the self-attention. https://www.semanticscholar.org/paper/Learning-What's-Easy%3A-Fully-Differentiable-Neural-Martins-Kreutzer/252571243aa4c0b533aa7fc63f88d07fd844e7bb"
+description: "EMNLP 2017 paper by André F. T. Martins and Julia Kreutzer André comes on the podcast to talk to us the paper. We spend the bulk of the time talking about the two main contributions of the paper: how they applied the notion of \"easy first\" decoding to neural taggers, and the details of the constrained softmax that they introduced to accomplish this. We conclude that \"easy first\" might not be the right name for this - it's doing something that in the end is very similar to stacked self-attention, with standard independent decoding at the end. The particulars of the self-attention are inspired by \"easy first\", however, using a constrained softmax to enforce some novel constraints on the self-attention.
+
+https://www.semanticscholar.org/paper/Learning-What's-Easy%3A-Fully-Differentiable-Neural-Martins-Kreutzer/252571243aa4c0b533aa7fc63f88d07fd844e7bb"
 type: episode
 ---
 

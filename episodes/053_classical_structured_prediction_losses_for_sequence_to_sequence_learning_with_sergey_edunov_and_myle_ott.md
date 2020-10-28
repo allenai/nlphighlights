@@ -4,7 +4,9 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Sergey Edunov","Myle Ott"]
 number: "053"
 tags: []
-description: "NAACL 2018 paper, by Sergey Edunov, Myle Ott, Michael Auli, David Grangier, and Marc'Aurelio Ranzato, from Facebook AI Research In this episode we continue our theme from last episode on structured prediction, talking with Sergey and Myle about their paper. They did a comprehensive set of experiments comparing many prior structured learning losses, applied to neural seq2seq models. We talk about the motivation for their work, what turned out to work well, and some details about some of their loss functions. They introduced a notion of a \"pseudo reference\", replacing the target output sequence with the highest scoring output on the beam during decoding, and we talk about some of the implications there. It also turns out the minimizing expected risk was the best overall training procedure that they found for these structured models. https://www.semanticscholar.org/paper/Classical-Structured-Prediction-Losses-for-Sequence-Edunov-Ott/20ae11c08c6b0cd567c486ba20f44bc677f2ed23"
+description: "NAACL 2018 paper, by Sergey Edunov, Myle Ott, Michael Auli, David Grangier, and Marc'Aurelio Ranzato, from Facebook AI Research In this episode we continue our theme from last episode on structured prediction, talking with Sergey and Myle about their paper. They did a comprehensive set of experiments comparing many prior structured learning losses, applied to neural seq2seq models. We talk about the motivation for their work, what turned out to work well, and some details about some of their loss functions. They introduced a notion of a \"pseudo reference\", replacing the target output sequence with the highest scoring output on the beam during decoding, and we talk about some of the implications there. It also turns out the minimizing expected risk was the best overall training procedure that they found for these structured models.
+
+https://www.semanticscholar.org/paper/Classical-Structured-Prediction-Losses-for-Sequence-Edunov-Ott/20ae11c08c6b0cd567c486ba20f44bc677f2ed23"
 type: episode
 ---
 

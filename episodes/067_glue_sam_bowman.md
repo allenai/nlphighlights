@@ -1,10 +1,12 @@
 ---
-title: "Sam Bowman"
-hosts: ["Matt Gardner","Waleed Amar"]
+title: "GLUE: A Multi-Task Benchmark and Analysis Platform, with Sam Bowman"
+hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Sam Bowman"]
 number: "067"
 tags: []
-description: "Paper by Alex Wang, Amanpreet Singh, Julian Michael, Felix Hill, Omer Levy, and Samuel R. Bowman. Sam comes on to tell us about GLUE. We talk about the motivation behind setting up a benchmark framework for natural language understanding, how the authors defined \"NLU\" and chose the tasks for this benchmark, a very nice diagnostic dataset that was constructed for GLUE, and what insight they gained from the experiments they've run so far. We also have some musings about the utility of general-purpose sentence vectors, and about leaderboards. https://www.semanticscholar.org/paper/GLUE%3A-A-Multi-Task-Benchmark-and-Analysis-Platform-Wang-Singh/a2054eff8b4efe0f1f53d88c08446f9492ae07c1"
+description: "Paper by Alex Wang, Amanpreet Singh, Julian Michael, Felix Hill, Omer Levy, and Samuel R. Bowman. Sam comes on to tell us about GLUE. We talk about the motivation behind setting up a benchmark framework for natural language understanding, how the authors defined \"NLU\" and chose the tasks for this benchmark, a very nice diagnostic dataset that was constructed for GLUE, and what insight they gained from the experiments they've run so far. We also have some musings about the utility of general-purpose sentence vectors, and about leaderboards.
+
+https://www.semanticscholar.org/paper/GLUE%3A-A-Multi-Task-Benchmark-and-Analysis-Platform-Wang-Singh/a2054eff8b4efe0f1f53d88c08446f9492ae07c1"
 type: episode
 ---
 
@@ -18,7 +20,7 @@ language processing.
 </turn>
 
 
-<turn speaker="Waleed Amar" timestamp="00:06">
+<turn speaker="Waleed Ammar" timestamp="00:06">
 
 This is Matt Gardner and Waleed Ammar. We are research scientists at the Allen Institute for
 artificial intelligence.
@@ -88,7 +90,7 @@ worth revisiting.
 </turn>
 
 
-<turn speaker="Waleed Amar" timestamp="02:48">
+<turn speaker="Waleed Ammar" timestamp="02:48">
 
 Yeah. And in the paper, you mentioned some of the distinctions between what you're doing in GLUE and
 what a SentEval is about. Would you like to elaborate on this a little bit here?
@@ -219,7 +221,7 @@ understanding and yeah, it was, it wasn't, it wasn't the thing we set up study.
 </turn>
 
 
-<turn speaker="Waleed Amar" timestamp="08:30">
+<turn speaker="Waleed Ammar" timestamp="08:30">
 
 I mean, as a user, as a potential user of the platform, I don't want to use a platform which has
 like a ton of tasks because it's not like I'm going to build one model and submit it. I would have
@@ -235,7 +237,7 @@ Yeah. Yeah.
 </turn>
 
 
-<turn speaker="Waleed Amar" timestamp="08:45">
+<turn speaker="Waleed Ammar" timestamp="08:45">
 
 Which is the more tasks you have the the less feasible it will be for people to be able to use it.
 
@@ -277,7 +279,7 @@ to disk that you can then send off for evaluation.
 </turn>
 
 
-<turn speaker="Waleed Amar" timestamp="10:18">
+<turn speaker="Waleed Ammar" timestamp="10:18">
 
 I am looking forward to it.
 
@@ -323,7 +325,7 @@ bit to try to give useful feedback.
 </turn>
 
 
-<turn speaker="Waleed Amar" timestamp="11:57">
+<turn speaker="Waleed Ammar" timestamp="11:57">
 
 So in the diagnostics data set, you provide the pairs of sentences along with annotation course
 green categories. And fine green categories. Could you elaborate on how you get the sentences and
@@ -395,7 +397,7 @@ of English.
 </turn>
 
 
-<turn speaker="Waleed Amar" timestamp="15:16">
+<turn speaker="Waleed Ammar" timestamp="15:16">
 
 And each example, each sentence pair will exhibit only one of the following categories or multiple,
 
@@ -412,7 +414,7 @@ negation or quantification. And so some of these do have multiple tags.
 </turn>
 
 
-<turn speaker="Waleed Amar" timestamp="15:46">
+<turn speaker="Waleed Ammar" timestamp="15:46">
 
 Yeah. I guess I'm actually not very clear on some of these categories. Like, I dunno what monaticity
 and reasoning mean.
@@ -514,7 +516,7 @@ actually solving this problem of identifying grammatical sentences.
 </turn>
 
 
-<turn speaker="Waleed Amar" timestamp="20:48">
+<turn speaker="Waleed Ammar" timestamp="20:48">
 
 I was wondering how do you think that the same architecture, like let's think about one architecture
 that would be optimal for these tasks, right? For like a one time the single sentence tasks and
@@ -557,7 +559,7 @@ that kind of baseline for most of these tasks.
 </turn>
 
 
-<turn speaker="Waleed Amar" timestamp="23:17">
+<turn speaker="Waleed Ammar" timestamp="23:17">
 
 That's fair.
 
@@ -571,7 +573,7 @@ Sorry if that didn't answer your question completely.
 </turn>
 
 
-<turn speaker="Waleed Amar" timestamp="23:18">
+<turn speaker="Waleed Ammar" timestamp="23:18">
 
 No, that's a, that's a fair answer. I guess I'm understanding a little more insight on how you think
 we will reach the generalization that we're hoping for. So yeah, one way to do this is to improve
@@ -690,7 +692,7 @@ Because we're training specifically on these tasks.
 </turn>
 
 
-<turn speaker="Waleed Amar" timestamp="29:40">
+<turn speaker="Waleed Ammar" timestamp="29:40">
 
 Well, I'm looking at the table five and I'm seeing the multitask training results. Most of the time
 there are lower than the single task training results. So that, that's not quite the same thing that

@@ -4,7 +4,13 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: []
 number: "037"
 tags: []
-description: "In this episode we talk about a couple of recent papers that get at the issue of training variance, and why we should not just take the max from a training distribution when reporting results. Sadly, our current focus on performance in leaderboards only exacerbates these issues, and (in my opinion) encourages bad science. Papers: https://www.semanticscholar.org/paper/Reporting-Score-Distributions-Makes-a-Difference-P-Reimers-Gurevych/0eae432f7edacb262f3434ecdb2af707b5b06481 https://www.semanticscholar.org/paper/Deep-Reinforcement-Learning-that-Matters-Henderson-Islam/90dad036ab47d683080c6be63b00415492b48506"
+description: "In this episode we talk about a couple of recent papers that get at the issue of training variance, and why we should not just take the max from a training distribution when reporting results. Sadly, our current focus on performance in leaderboards only exacerbates these issues, and (in my opinion) encourages bad science.
+
+Papers:
+
+https://www.semanticscholar.org/paper/Reporting-Score-Distributions-Makes-a-Difference-P-Reimers-Gurevych/0eae432f7edacb262f3434ecdb2af707b5b06481
+
+https://www.semanticscholar.org/paper/Deep-Reinforcement-Learning-that-Matters-Henderson-Islam/90dad036ab47d683080c6be63b00415492b48506"
 type: episode
 ---
 

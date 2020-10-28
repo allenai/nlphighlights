@@ -1,10 +1,12 @@
 ---
 title: "Comprehensive Supersense Disambiguation of English Prepositions and Possessives, with Nathan Schneider"
 hosts: ["Matt Gardner","Waleed Ammar"]
-guests: ["Nathan S."]
+guests: ["Nathan Schneider"]
 number: "073"
 tags: []
-description: "ACL 2018 paper by Nathan Schneider, Jena D. Hwang, Vivek Srikumar, Jakob Prange, Austin Blodgett, Sarah R. Moeller, Aviram Stern, Adi Bitan, Omri Abend. In this episode, Nathan discusses how the meaning of prepositions varies, proposes a hierarchy for classifying the semantics of function words (e.g., comparison, temporal, purpose), and describes empirical results using the provided dataset for disambiguating preposition semantics. Along the way, we talk about lexicon-based semantics, multilinguality and pragmatics. https://www.semanticscholar.org/paper/Comprehensive-Supersense-Disambiguation-of-English-Schneider-Hwang/8310213af102913b9e74e7dfe6864f3aa62a5a5e"
+description: "ACL 2018 paper by Nathan Schneider, Jena D. Hwang, Vivek Srikumar, Jakob Prange, Austin Blodgett, Sarah R. Moeller, Aviram Stern, Adi Bitan, Omri Abend. In this episode, Nathan discusses how the meaning of prepositions varies, proposes a hierarchy for classifying the semantics of function words (e.g., comparison, temporal, purpose), and describes empirical results using the provided dataset for disambiguating preposition semantics. Along the way, we talk about lexicon-based semantics, multilinguality and pragmatics.
+
+https://www.semanticscholar.org/paper/Comprehensive-Supersense-Disambiguation-of-English-Schneider-Hwang/8310213af102913b9e74e7dfe6864f3aa62a5a5e"
 type: episode
 ---
 
@@ -35,7 +37,7 @@ starting his third year as a professor at Georgetown. Nathan, welcome to the pro
 </turn>
 
 
-<turn speaker="Nathan S." timestamp="00:26">
+<turn speaker="Nathan Schneider" timestamp="00:26">
 
 Thanks for having me.
 
@@ -53,7 +55,7 @@ project?
 </turn>
 
 
-<turn speaker="Nathan S." timestamp="00:50">
+<turn speaker="Nathan Schneider" timestamp="00:50">
 
 Yeah, so this is the latest iteration of this long project. We've been working on it for basically
 four years. It started off as a chapter in my dissertation and then there kept being more to do. So
@@ -77,7 +79,7 @@ what exactly does "in" mean there? That's, that sounds hard.
 </turn>
 
 
-<turn speaker="Nathan S." timestamp="02:29">
+<turn speaker="Nathan Schneider" timestamp="02:29">
 
 Yes. It. So for "the man in the room," we can come up with a fairly straightforward category of
 location or we call it locus, but essentially location. That's, the sort of most canonical use of a
@@ -94,7 +96,7 @@ Or "a man in a frenzy?"
 </turn>
 
 
-<turn speaker="Nathan S." timestamp="02:56">
+<turn speaker="Nathan Schneider" timestamp="02:56">
 
 In a frenzy? Right. So there are, so the way linguists often talk about this is that there are
 prepositions and some languages have post positions where they follow the noun phrase. In the way
@@ -125,7 +127,7 @@ what you're talking about here. Can you tell us about the difference between the
 </turn>
 
 
-<turn speaker="Nathan S." timestamp="05:17">
+<turn speaker="Nathan Schneider" timestamp="05:17">
 
 Absolutely. So yeah, so I would say the, the simplest difference is that semantic role labeling
 approaches usually assume that there is some sort of lexicon of predicates or frame evoking of
@@ -144,7 +146,7 @@ the idea is this is where we get a comprehensive in the title.
 </turn>
 
 
-<turn speaker="Nathan S." timestamp="07:07">
+<turn speaker="Nathan Schneider" timestamp="07:07">
 
 So the idea is we're defining semantic classes rather than lexical sentence descriptions. And so we
 have an inventory. Currently we have 50 classes which sounds like a lot, but it, we actually had a
@@ -176,7 +178,7 @@ dealing with prepositions that attach not just to verbs but also to nouns.
 </turn>
 
 
-<turn speaker="Nathan S." timestamp="09:38">
+<turn speaker="Nathan Schneider" timestamp="09:38">
 
 Yeah. So I, so I see this as a similar, you can, you can view this as a class-based approach to
 semantic role labeling. If you take semantic roles to include a broad set of relations, including
@@ -193,7 +195,7 @@ So why would we want to do this? What, what benefit do we gain from doing this a
 </turn>
 
 
-<turn speaker="Nathan S." timestamp="10:08">
+<turn speaker="Nathan Schneider" timestamp="10:08">
 
 The overarching questions is whether we can define a set of roles and relations that can
 characterize the wide range of meanings that are out there and can be defined well enough to train
@@ -208,7 +210,7 @@ taller than him."
 </turn>
 
 
-<turn speaker="Nathan S." timestamp="11:16">
+<turn speaker="Nathan Schneider" timestamp="11:16">
 
 We have a label for that. And relations between individuals and organizations are quite frequent in
 the domain we looked at. So if you work with somebody on a project or if you are, you know, kinship
@@ -233,7 +235,7 @@ doing this?
 </turn>
 
 
-<turn speaker="Nathan S." timestamp="12:44">
+<turn speaker="Nathan Schneider" timestamp="12:44">
 
 Yeah, so one of the big so, so I am both identify as both a linguist and a computer scientist. And
 so I care about both sides of the coin here. The motivation from an NLP perspective involves better
@@ -252,7 +254,7 @@ Yeah. Yes. I've, I've definitely had that experience with a couple of different 
 </turn>
 
 
-<turn speaker="Nathan S." timestamp="13:37">
+<turn speaker="Nathan Schneider" timestamp="13:37">
 
 And this is because every language has a pretty idiosyncratic way of carving up meanings into its
 grammatical items such as prepositions. So we know that second language learners have trouble coming
@@ -268,7 +270,7 @@ constantly produce and interpret utterances that we'd never heard before.
 </turn>
 
 
-<turn speaker="Nathan S." timestamp="15:06">
+<turn speaker="Nathan Schneider" timestamp="15:06">
 
 And we will not always be able to have an end task with a lot of training data that we can, we can
 train an end to end system and ignore all the structure that might be that might be going on. So I
@@ -289,7 +291,7 @@ there exist in other languages?
 </turn>
 
 
-<turn speaker="Nathan S." timestamp="15:59">
+<turn speaker="Nathan Schneider" timestamp="15:59">
 
 Yeah, so this is, this is the most exciting direction that we're going now. We have for maybe a
 year, but more intensively now. We started looking at a few other languages and trying to apply
@@ -320,7 +322,7 @@ processors in the other languages.
 </turn>
 
 
-<turn speaker="Nathan S." timestamp="18:30">
+<turn speaker="Nathan Schneider" timestamp="18:30">
 
 As an example, I have here in Korean with the caveat that I don't speak Korean and this is from my
 collaborators Jena Hwang and Na-Rae Han. There is a Korean post position nun, which seems to work as
@@ -344,7 +346,7 @@ more emphasis on something. What, like why, why isn't this a semantic relation?
 </turn>
 
 
-<turn speaker="Nathan S." timestamp="20:06">
+<turn speaker="Nathan Schneider" timestamp="20:06">
 
 So pragmatics has to do with the structure of the conversation and the speech act. So the the, what
 you're trying to, the, the act of communication as opposed to the state of affairs. You are, that
@@ -364,7 +366,7 @@ communicate.
 </turn>
 
 
-<turn speaker="Nathan S." timestamp="21:08">
+<turn speaker="Nathan Schneider" timestamp="21:08">
 
 Yeah, I should, I should say that I'm, I'm really not an expert in pragmatics so I'm, I'm hesitant
 to to even try to define it. But the pragmatics is generally about the process of communication and
@@ -384,7 +386,7 @@ prepositions to do this. And that's why this hasn't shown up in your, your super
 </turn>
 
 
-<turn speaker="Nathan S." timestamp="21:56">
+<turn speaker="Nathan Schneider" timestamp="21:56">
 
 Right. So in English we might use a cleft construction to saying it was John who so changing from
 the canonical order of John did X, it was John who did X. This is another way that that English uses
@@ -406,7 +408,7 @@ broad categories. Can you tell us about this?
 </turn>
 
 
-<turn speaker="Nathan S." timestamp="22:56">
+<turn speaker="Nathan Schneider" timestamp="22:56">
 
 Sure. So we have three categories. Circumstance is for the semantics that most people think of when
 they think of prepositions, at least in English. These are for spatial and temporal relations as
@@ -421,7 +423,7 @@ thematic roles or semantic roles and a semantic role labeling.
 </turn>
 
 
-<turn speaker="Nathan S." timestamp="24:27">
+<turn speaker="Nathan Schneider" timestamp="24:27">
 
 So things like agent and theme and recipients and stimulus and so forth. If you're familiar with
 that literature. And then the third portion is what we call configuration. And these are mainly for
@@ -452,7 +454,7 @@ categories?
 </turn>
 
 
-<turn speaker="Nathan S." timestamp="26:46">
+<turn speaker="Nathan Schneider" timestamp="26:46">
 
 Our approach was to try to define the categories to be general enough that you can imagine almost
 any situation being an instance of one of these situations that we capture. So agent in theme to
@@ -477,7 +479,7 @@ maybe you'll be able to capture new stuff better.
 </turn>
 
 
-<turn speaker="Nathan S." timestamp="28:30">
+<turn speaker="Nathan Schneider" timestamp="28:30">
 
 And part of the reason is because we think that because these are grammatical, these are function
 words they are more likely to express things to be to have very sort of general and therefore useful
@@ -508,7 +510,7 @@ category, which is configuration. So how do you make this decision?
 </turn>
 
 
-<turn speaker="Nathan S." timestamp="30:57">
+<turn speaker="Nathan Schneider" timestamp="30:57">
 
 For configuration we decided we didn't want to apply the label configuration directly. So we wanted
 to have some sort of more specific label for everything under it. The,two you named are indeed the
@@ -534,7 +536,7 @@ larger Corpus? And is this like discrete notion of categories really the way to 
 </turn>
 
 
-<turn speaker="Nathan S." timestamp="32:43">
+<turn speaker="Nathan Schneider" timestamp="32:43">
 
 So there is a question of , you can answer this on a theoretical dimension or I on a practical
 dimension in both cases I would say we, coming up with a comprehensive annotation scheme requires
@@ -564,7 +566,7 @@ open kind of description versus the more formal ategories that you've constructe
 </turn>
 
 
-<turn speaker="Nathan S." timestamp="35:16">
+<turn speaker="Nathan Schneider" timestamp="35:16">
 
 I think these crowd sourcing directions of semantic annotations are really cool. And I would like to
 actually explore to what extent can we could we convert at least part of our annotation task team to
@@ -597,7 +599,7 @@ this categorization would help us to build better systems.
 </turn>
 
 
-<turn speaker="Nathan S." timestamp="37:50">
+<turn speaker="Nathan Schneider" timestamp="37:50">
 
 Yeah. I mean, this is the age old question of, you know should we try to think of computers as
 learning in an implicit way? Maybe like, we implicitly learn a native language without any, without
@@ -630,7 +632,7 @@ your reactions to this result?
 </turn>
 
 
-<turn speaker="Nathan S." timestamp="40:10">
+<turn speaker="Nathan Schneider" timestamp="40:10">
 
 Well, that's, that's really exciting. We thought this was a hard task because the train set is
 relatively small. But we had not; in the ACL paper, we had not gone beyond sort of standard
@@ -654,7 +656,7 @@ function of a preposition. Could you tell us a little more about those?
 </turn>
 
 
-<turn speaker="Nathan S." timestamp="41:49">
+<turn speaker="Nathan Schneider" timestamp="41:49">
 
 Yeah, so this is part of the, this is going to get a little sound, a little wonky in linguistically.
 What I have said already has not already sounded wonky. The, but in going about this task, we
@@ -668,7 +670,7 @@ a plain old locket of preposition.
 </turn>
 
 
-<turn speaker="Nathan S." timestamp="43:10">
+<turn speaker="Nathan Schneider" timestamp="43:10">
 
 So you can say the pillows are on the couch or you can put the pillows on the couch. However, in our
 annotation scheme, we distinguished between locations and goals. So if you put something somewhere
@@ -694,7 +696,7 @@ subset, like a strict subset that is only valid for one or the other?
 </turn>
 
 
-<turn speaker="Nathan S." timestamp="45:03">
+<turn speaker="Nathan Schneider" timestamp="45:03">
 
 Good question. So the theory that we're developing essentially of these super senses is that these
 are, the function is motivated by the lexical contribution of the preposition. But there are some
@@ -709,7 +711,7 @@ particularly associated with experience or I'm sorry, it stimulus.
 </turn>
 
 
-<turn speaker="Nathan S." timestamp="46:32">
+<turn speaker="Nathan Schneider" timestamp="46:32">
 
 Or, and there doesn't seem to be anything in particular associated with, of those associated with
 the stimulus. Rather, what we think is going on is that there are different mappings of stimulus and
@@ -740,7 +742,7 @@ we should be doing differently in data annotation or like how projects evolve ov
 </turn>
 
 
-<turn speaker="Nathan S." timestamp="48:57">
+<turn speaker="Nathan Schneider" timestamp="48:57">
 
 Sure. So well, so the the Corpus is in version four but it's actually only the second release of the
 Corpus that has preposition and possessive super senses. So the, that Corpus the streusel Corpus has
@@ -774,7 +776,7 @@ do we find them and annotate them. It's a nice piece of piece of work.
 </turn>
 
 
-<turn speaker="Nathan S." timestamp="51:27">
+<turn speaker="Nathan Schneider" timestamp="51:27">
 
 Yeah, and I would, I would add to that, that I think I call myself pantheistic with regard to
 meaning representations. I think there are many different meaning representations that have been
@@ -800,7 +802,7 @@ Yeah. Great. Thanks for coming on. It was nice talking to you.
 </turn>
 
 
-<turn speaker="Nathan S." timestamp="52:59">
+<turn speaker="Nathan Schneider" timestamp="52:59">
 
 Okay. Thanks so much for having me.
 

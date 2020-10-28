@@ -1,10 +1,12 @@
 ---
 title: "Simulating Action Dynamics with Neural Process Networks, with Antoine Bosselut"
 hosts: ["Matt Gardner","Waleed Ammar"]
-guests: ["New Speaker","AntoineBosselut"]
+guests: ["Antoine Bosselut"]
 number: "054"
 tags: []
-description: "ICLR 2018 paper, by Antoine Bosselut, Omer Levy, Ari Holtzman, Corin Ennis, Dieter Fox, and Yejin Choi. This is not your standard NLP task. This work tries to predict which entities change state over the course of a recipe (e.g., ingredients get combined into a batter, so entities merge, and then the batter gets baked, changing location, temperature, and \"cookedness\"). We talk to Antoine about the work, getting into details about how the data was collected, how the model works, and what some possible future directions are. https://www.semanticscholar.org/paper/Simulating-Action-Dynamics-with-Neural-Process-Bosselut-Levy/dc01c9401d1caab7f5e6d2f1280f5815f6919977"
+description: "ICLR 2018 paper, by Antoine Bosselut, Omer Levy, Ari Holtzman, Corin Ennis, Dieter Fox, and Yejin Choi. This is not your standard NLP task. This work tries to predict which entities change state over the course of a recipe (e.g., ingredients get combined into a batter, so entities merge, and then the batter gets baked, changing location, temperature, and \"cookedness\"). We talk to Antoine about the work, getting into details about how the data was collected, how the model works, and what some possible future directions are.
+
+https://www.semanticscholar.org/paper/Simulating-Action-Dynamics-with-Neural-Process-Bosselut-Levy/dc01c9401d1caab7f5e6d2f1280f5815f6919977"
 type: episode
 ---
 
@@ -18,7 +20,7 @@ language processing.
 </turn>
 
 
-<turn speaker="New Speaker" timestamp="00:06">
+<turn speaker="Matt Gardner" timestamp="00:06">
 
 This is Matt Gardner and Waleed Ammar, we are research scientists at the Allen Institute for
 artificial intelligence.
@@ -36,7 +38,7 @@ on the podcast.
 </turn>
 
 
-<turn speaker="AntoineBosselut" timestamp="00:29">
+<turn speaker="Antoine Bosselut" timestamp="00:29">
 
 Yeah, it's great to be here. Thank you so much for having me on.
 
@@ -51,7 +53,7 @@ you talking about here?
 </turn>
 
 
-<turn speaker="AntoineBosselut" timestamp="00:40">
+<turn speaker="Antoine Bosselut" timestamp="00:40">
 
 Yeah, so when we say action dynamics, we're generally talking about the effects that are caused
 explicitly or implicitly by actions. So if you think about an action such as baking something, you
@@ -73,7 +75,7 @@ So you mean like state change kinds of things?
 </turn>
 
 
-<turn speaker="AntoineBosselut" timestamp="01:35">
+<turn speaker="Antoine Bosselut" timestamp="01:35">
 
 Yeah, in general state changes particularly those that you wouldn't necessarily be able to extract
 with a typical information extraction system directly from text.
@@ -88,7 +90,7 @@ Okay.
 </turn>
 
 
-<turn speaker="New Speaker" timestamp="01:47">
+<turn speaker="Waleed Ammar" timestamp="01:47">
 
 And what assumptions do we need to make about the states? Do we need to enumerate all the states
 that we care about from the beginning? What kind of assumptions do we need to make here?
@@ -96,7 +98,7 @@ that we care about from the beginning? What kind of assumptions do we need to ma
 </turn>
 
 
-<turn speaker="AntoineBosselut" timestamp="01:56">
+<turn speaker="Antoine Bosselut" timestamp="01:56">
 
 That's a good question. At the start, right now we are enumerating the states that we care about
 ahead of time. When we started this work, we manually enumerated something like nine states, which
@@ -114,7 +116,7 @@ anyone doing NLP care about this?
 </turn>
 
 
-<turn speaker="AntoineBosselut" timestamp="02:32">
+<turn speaker="Antoine Bosselut" timestamp="02:32">
 
 So I think that the reason that we want to model these actions dynamics is really to be able to
 encode a representations of state that aren't explicitly written in text. You know, I hate this
@@ -130,7 +132,7 @@ be able to condition on.
 </turn>
 
 
-<turn speaker="AntoineBosselut" timestamp="03:34">
+<turn speaker="Antoine Bosselut" timestamp="03:34">
 
 If you think about a recipe that involves chicken, the most important thing that needs to be done
 just to get it cooked at some point you don't want to be serving raw chicken, but at no point in a
@@ -152,7 +154,7 @@ all?
 </turn>
 
 
-<turn speaker="AntoineBosselut" timestamp="04:18">
+<turn speaker="Antoine Bosselut" timestamp="04:18">
 
 We assume that there's both a vocabulary of actions and entities that's provided ahead of time with
 the model. So as I think I mentioned before, we have something like 400 actions roughly and 3000
@@ -173,7 +175,7 @@ training data and all of the nouns in the training data?
 </turn>
 
 
-<turn speaker="AntoineBosselut" timestamp="05:13">
+<turn speaker="Antoine Bosselut" timestamp="05:13">
 
 So verbs? Very likely. So, and we did, we did augment the initial list that we found with a couple
 ones that kept appearing, but for some reason weren't there, but that we thought had a high enough
@@ -188,14 +190,14 @@ being there own separate entity value.
 </turn>
 
 
-<turn speaker="New Speaker" timestamp="06:13">
+<turn speaker="Waleed Ammar" timestamp="06:13">
 
 So you consciously decided to exclude these from the vocabulary?
 
 </turn>
 
 
-<turn speaker="AntoineBosselut" timestamp="06:18">
+<turn speaker="Antoine Bosselut" timestamp="06:18">
 
 Yes. it's not necessarily excluding them from the vocabulary so much that, we wanted to consider
 entities to really be raw ingredients and to model compositions of raw ingredients as just that
@@ -213,7 +215,7 @@ predict?
 </turn>
 
 
-<turn speaker="AntoineBosselut" timestamp="06:50">
+<turn speaker="Antoine Bosselut" timestamp="06:50">
 
 Right. so I think that the best way generally that I found to explain this is with an example. Let's
 run through an example like cook the beef in the pan. That generally the one I use in most of my
@@ -229,7 +231,7 @@ mentioned earlier.
 </turn>
 
 
-<turn speaker="AntoineBosselut" timestamp="07:49">
+<turn speaker="Antoine Bosselut" timestamp="07:49">
 
 And when we start training on a single recipe when we look at a single recipe in a batch we're going
 to take the embedding for each of the entities in the ingredient list and set those as the memory
@@ -248,7 +250,7 @@ embedding for the beef.
 </turn>
 
 
-<turn speaker="New Speaker" timestamp="09:00">
+<turn speaker="Waleed Ammar" timestamp="09:00">
 
 At what point do you make these choices at the end of a sentence or after each topic or after each
 recipe
@@ -256,7 +258,7 @@ recipe
 </turn>
 
 
-<turn speaker="AntoineBosselut" timestamp="09:07">
+<turn speaker="Antoine Bosselut" timestamp="09:07">
 
 At the end of a sentence. So we're working on extending it so that we can have a more adaptive way
 of updating the entity states, possibly after phrases. But for now we started simple and did it
@@ -280,7 +282,7 @@ entities. And output is a set of state changes after every sentence for every en
 </turn>
 
 
-<turn speaker="AntoineBosselut" timestamp="10:26">
+<turn speaker="Antoine Bosselut" timestamp="10:26">
 
 Yes, We also consider the entity selection to be an output because we use multiple intermediate
 losses. Just sort of bias the model to select the right entities and those right actions along the
@@ -293,7 +295,7 @@ applied to a particular entity.
 </turn>
 
 
-<turn speaker="New Speaker" timestamp="11:03">
+<turn speaker="Waleed Ammar" timestamp="11:03">
 
 And what's the representation that is the accurate representation for the states. So let's say for
 the cook or for the location, is it that I can predict some of the values or is it...
@@ -301,7 +303,7 @@ the cook or for the location, is it that I can predict some of the values or is 
 </turn>
 
 
-<turn speaker="AntoineBosselut" timestamp="11:15">
+<turn speaker="Antoine Bosselut" timestamp="11:15">
 
 Yeah, so we we ran a crowdsourcing experiment to have Turkers give us a set of possible end states
 for the six different state change types. And then we manually pruned the list to the sets that we
@@ -325,7 +327,7 @@ So can we talk about your choice of how to represent entities for a little bit?
 </turn>
 
 
-<turn speaker="AntoineBosselut" timestamp="12:33">
+<turn speaker="Antoine Bosselut" timestamp="12:33">
 
 Absolutely.
 
@@ -344,7 +346,7 @@ make that decision? What are the trade offs here?
 </turn>
 
 
-<turn speaker="AntoineBosselut" timestamp="13:06">
+<turn speaker="Antoine Bosselut" timestamp="13:06">
 
 So that's a really good question. I wouldn't say it's a better decision. In fact, ideally in a
 perfect world you'd probably want to be able to introduce a new entity for the mixture that's, let's
@@ -358,7 +360,7 @@ some simple inductive biases on the network such as the coverage loss or or the 
 </turn>
 
 
-<turn speaker="AntoineBosselut" timestamp="14:00">
+<turn speaker="Antoine Bosselut" timestamp="14:00">
 
 Just an augmentation that I should have described earlier. The idea really is that, the similarity
 of the state embeddings between entities in the same composition would make it easier to select all
@@ -382,7 +384,7 @@ composition? Like if I see broth, how do I know what entities are in it for this
 </turn>
 
 
-<turn speaker="AntoineBosselut" timestamp="15:09">
+<turn speaker="Antoine Bosselut" timestamp="15:09">
 
 That's really the tough part, for an example like broth, I actually don't have any heuristic
 labeling for those. For something like dough is the same thing. For something like sauce, it's the
@@ -397,7 +399,7 @@ entities that are affected in this step.
 </turn>
 
 
-<turn speaker="AntoineBosselut" timestamp="15:58">
+<turn speaker="Antoine Bosselut" timestamp="15:58">
 
 So let's say I have the example, "Cook the beef in the pan." "Now flip it." In the second example. I
 know that the it probably refers to the beef and I can use this same logic to say that if I see
@@ -419,7 +421,7 @@ places where you assume that broth is a composition?
 </turn>
 
 
-<turn speaker="AntoineBosselut" timestamp="16:49">
+<turn speaker="Antoine Bosselut" timestamp="16:49">
 
 Can I use the same assumption to introduce a new entity?
 
@@ -436,7 +438,7 @@ lets you introduce new entities and not treat them this way.
 </turn>
 
 
-<turn speaker="AntoineBosselut" timestamp="17:10">
+<turn speaker="Antoine Bosselut" timestamp="17:10">
 
 Yeah, we probably could have. I think that it may be. So I think that it's possible that it wouldn't
 have learned the same patterns of what actually composes the broth at that step. We introduced a new
@@ -464,7 +466,7 @@ next.
 </turn>
 
 
-<turn speaker="AntoineBosselut" timestamp="18:39">
+<turn speaker="Antoine Bosselut" timestamp="18:39">
 
 Yeah, no, that's definitely a similar work. I think it stems from sort of two different goals. I
 think that in that work, it was a very well motivated increased capacity for the language model.
@@ -477,7 +479,7 @@ really good works.
 </turn>
 
 
-<turn speaker="New Speaker" timestamp="19:27">
+<turn speaker="Waleed Ammar" timestamp="19:27">
 
 So I'd like to clarify, so after doing all the, this test supervision. What does the label data look
 like? You mentioned we need supervision for the entities, the actions and the states, so what does
@@ -486,7 +488,7 @@ this look like?
 </turn>
 
 
-<turn speaker="AntoineBosselut" timestamp="19:43">
+<turn speaker="Antoine Bosselut" timestamp="19:43">
 
 Are you asking about like what does the particular label look like? What do the different loss
 functions look like?
@@ -494,14 +496,14 @@ functions look like?
 </turn>
 
 
-<turn speaker="New Speaker" timestamp="19:49">
+<turn speaker="Waleed Ammar" timestamp="19:49">
 
 Is it a top level? Is there a state vector after each sentence that you used for training.
 
 </turn>
 
 
-<turn speaker="AntoineBosselut" timestamp="19:58">
+<turn speaker="Antoine Bosselut" timestamp="19:58">
 
 What we do is that after each sentence, when we predict each action, we supervise the action
 prediction with the action label that we've extracted, you know, using these weak heuristics. And we
@@ -523,7 +525,7 @@ So those require human annotation, I suppose?
 </turn>
 
 
-<turn speaker="AntoineBosselut" timestamp="20:58">
+<turn speaker="Antoine Bosselut" timestamp="20:58">
 
 So in the development and test sets, yes, we annotated roughly 1000 total recipes. I think actually
 closer to 900 to be able to have very dense annotations of the process itself in the training set
@@ -541,7 +543,7 @@ So how did you do the weak supervision for the states?
 </turn>
 
 
-<turn speaker="AntoineBosselut" timestamp="21:35">
+<turn speaker="Antoine Bosselut" timestamp="21:35">
 
 So for the states we we did some crowdsourceing where we mapped the actions. Two particular state
 change types and end states, then we predict the supervision it just depends on what action was
@@ -558,7 +560,7 @@ annotated in the validation set is different from the lemme of the verb in the s
 </turn>
 
 
-<turn speaker="AntoineBosselut" timestamp="22:05">
+<turn speaker="Antoine Bosselut" timestamp="22:05">
 
 I don't have exact numbers about that, but there are cases where you have let's say while stirring
 the broth add this, in which case you can have different constructions of the verb that are in the
@@ -575,7 +577,7 @@ that right?
 </turn>
 
 
-<turn speaker="AntoineBosselut" timestamp="22:29">
+<turn speaker="Antoine Bosselut" timestamp="22:29">
 
 Yes.
 
@@ -590,7 +592,7 @@ between lemma and action? You're supposed to predict
 </turn>
 
 
-<turn speaker="AntoineBosselut" timestamp="22:40">
+<turn speaker="Antoine Bosselut" timestamp="22:40">
 
 Well, in the training set because we get the weak supervision by looking at these lemmas never
 practically.
@@ -605,7 +607,7 @@ Okay. And in the validation set or test set?
 </turn>
 
 
-<turn speaker="AntoineBosselut" timestamp="22:49">
+<turn speaker="Antoine Bosselut" timestamp="22:49">
 
 In the validation sets, we, I don't have these exact numbers. My guess would be that it's around 10
 to 15%. So when we, in the validation set, when we did an annotation with crowd sourcers for which
@@ -632,7 +634,7 @@ the lemma that you get in the raw ingredient and the lemma that you see in texts
 </turn>
 
 
-<turn speaker="AntoineBosselut" timestamp="24:32">
+<turn speaker="Antoine Bosselut" timestamp="24:32">
 
 Very often.
 
@@ -646,7 +648,7 @@ What are some examples?
 </turn>
 
 
-<turn speaker="AntoineBosselut" timestamp="24:36">
+<turn speaker="Antoine Bosselut" timestamp="24:36">
 
 For raw ingredients, less so. So generally if it says something like cut the beef, it's going to be
 the beef selected as the entity there's no problem there, but if it's in sort of the compositional
@@ -667,7 +669,7 @@ predicting the state changes, right?
 </turn>
 
 
-<turn speaker="AntoineBosselut" timestamp="25:24">
+<turn speaker="Antoine Bosselut" timestamp="25:24">
 
 Yeah, I mean, it does better than the baseline on both. It's still a lot weaker than I'd like,
 mainly because we're just not currently very good at predicting these compositional entities. So
@@ -682,7 +684,7 @@ tough to do if you're not doing well on compositional entities.
 </turn>
 
 
-<turn speaker="AntoineBosselut" timestamp="26:13">
+<turn speaker="Antoine Bosselut" timestamp="26:13">
 
 But we do fairly well at redicting raw ingredients with something like a 75% F1 or sorry, 75%
 recall. It's very tough to actually predict F1 for different types of entities. And then overall F1
@@ -702,7 +704,7 @@ What are those advanced memory models that you compare it against?
 </turn>
 
 
-<turn speaker="AntoineBosselut" timestamp="27:01">
+<turn speaker="Antoine Bosselut" timestamp="27:01">
 
 So we use the recurrent entity network, which was a sort of a leading baseline on the bAbI task and
 the Children's Book tests for a single pass machine reading. We adapted it for the task cause it's
@@ -722,7 +724,7 @@ entities,
 </turn>
 
 
-<turn speaker="AntoineBosselut" timestamp="27:39">
+<turn speaker="Antoine Bosselut" timestamp="27:39">
 
 The EntityNLM, we didn't really compare it to that model. It would have been difficult to evaluate
 it in the same way. And that if it failed to actually, you know, create the entity representation at
@@ -740,7 +742,7 @@ Right.
 </turn>
 
 
-<turn speaker="AntoineBosselut" timestamp="28:11">
+<turn speaker="Antoine Bosselut" timestamp="28:11">
 
 So I think by the time we submitted this, it wasn't even out yet, but possibly a good thing to add
 for a future reference.
@@ -758,7 +760,7 @@ it's just interesting to think about how much of your stuff do you actually need
 </turn>
 
 
-<turn speaker="AntoineBosselut" timestamp="28:43">
+<turn speaker="Antoine Bosselut" timestamp="28:43">
 
 So that's one of the things that we're working on in greater detail now, is actually looking at, you
 know, all right, we came up with this architecture, it does better at tracking and you know, it does
@@ -775,7 +777,7 @@ it can, rather than, you know, just composing words a particular way.
 </turn>
 
 
-<turn speaker="AntoineBosselut" timestamp="29:43">
+<turn speaker="Antoine Bosselut" timestamp="29:43">
 
 The goal behind that is that, you know, if you have these better representations internally to start
 with maybe you can do better on question answering down the line or generation then you currently
@@ -792,7 +794,7 @@ what that was?
 </turn>
 
 
-<turn speaker="AntoineBosselut" timestamp="30:01">
+<turn speaker="Antoine Bosselut" timestamp="30:01">
 
 Yeah, so the process of generation was fairly simple. I really didn't want the decoder and
 generation to have very much expressability or expressivity because we really wanted to see how did
@@ -812,7 +814,7 @@ proceeding words in the recipe to yield a representation for the word context.
 </turn>
 
 
-<turn speaker="AntoineBosselut" timestamp="31:22">
+<turn speaker="Antoine Bosselut" timestamp="31:22">
 
 And then we do an element wise multiplication of these two vectors and we use that vector to
 initialize the decoder. And then we do typical word by word decoding for the words in the sentence
@@ -828,7 +830,7 @@ Does it actually work to get reasonable recipes out?
 </turn>
 
 
-<turn speaker="AntoineBosselut" timestamp="31:38">
+<turn speaker="Antoine Bosselut" timestamp="31:38">
 
 Yeah. Actually it's definitely reasonable. We have some of the same issues as the seq2seq models
 sometimes where it'll just, you know, fall back to a very common expression. But generally it does
@@ -857,7 +859,7 @@ is that intuition? Like do you have like a quantitative evaluation of any of thi
 </turn>
 
 
-<turn speaker="AntoineBosselut" timestamp="33:17">
+<turn speaker="Antoine Bosselut" timestamp="33:17">
 
 Yes. So it's, I guess the closest thing to the quantitative evaluation for that intuition I could
 give is sort of the last two columns in the table, table five which shows the numerical results. You
@@ -882,7 +884,7 @@ Interesting. Yeah, that's pretty cool.
 </turn>
 
 
-<turn speaker="AntoineBosselut" timestamp="34:29">
+<turn speaker="Antoine Bosselut" timestamp="34:29">
 
 So I mean, yeah, I'm also fairly wary of, you know, any type of generation evaluation metric to be
 honest. And especially those that are sort of made up by the authors which in this case is me. But I
@@ -903,7 +905,7 @@ Cool. Any last thoughts before we conclude? This was an interesting discussion.
 </turn>
 
 
-<turn speaker="AntoineBosselut" timestamp="35:16">
+<turn speaker="Antoine Bosselut" timestamp="35:16">
 
 Yeah. I'm really excited about this type of work that tries to integrate common sense inferences
 into neural network architectures. And you know, one of the things that we're working on right now
@@ -923,7 +925,7 @@ Yeah. Great. I agree. It's a really interesting area. Thanks for talking to us. 
 </turn>
 
 
-<turn speaker="AntoineBosselut" timestamp="35:57">
+<turn speaker="Antoine Bosselut" timestamp="35:57">
 
 Yeah, absolutely. Thanks for having me on. And I hope to see you guys at ICLR, stop by the poster.
 

@@ -1,10 +1,12 @@
 ---
 title: "Reinforced Video Captioning with Entailment Rewards, with Ramakanth Pasunuru, Mohit Bansal"
 hosts: ["Matt Gardner","Waleed Ammar"]
-guests: ["Mohit Bansal","Ramakanth Pasunuru","Speaker 1"]
+guests: ["Mohit Bansal","Ramakanth Pasunuru"]
 number: "043"
 tags: []
-description: "EMNLP 2017 paper by Ramakanth Pasunuru and Mohit Bansal Ram and Mohit join us to talk about their work, which uses reinforcement learning to improve performance on a video captioning task. They directly optimize CIDEr, a popular image/video captioning metric, using policy gradient methods, then use a modified version of CIDEr that penalizes the model when it fails to produce a caption that is _entailed_ by the correct caption. In our discussion, we hit on what video captioning is, what typical models look like for this task, and how the entailment-based reward function is similar to other attempts to be smart about handling paraphrases when evaluating or training language generation models. Unfortunately, due to some technical issues, the audio recording is a little worse than usual for this episode. Our apologies. https://www.semanticscholar.org/paper/Reinforced-Video-Captioning-with-Entailment-Reward-Pasunuru-Bansal/0d11977afa1a6ce90dc3b1f26694492c2ab04773"
+description: "EMNLP 2017 paper by Ramakanth Pasunuru and Mohit Bansal Ram and Mohit join us to talk about their work, which uses reinforcement learning to improve performance on a video captioning task. They directly optimize CIDEr, a popular image/video captioning metric, using policy gradient methods, then use a modified version of CIDEr that penalizes the model when it fails to produce a caption that is _entailed_ by the correct caption. In our discussion, we hit on what video captioning is, what typical models look like for this task, and how the entailment-based reward function is similar to other attempts to be smart about handling paraphrases when evaluating or training language generation models. Unfortunately, due to some technical issues, the audio recording is a little worse than usual for this episode. Our apologies.
+
+https://www.semanticscholar.org/paper/Reinforced-Video-Captioning-with-Entailment-Reward-Pasunuru-Bansal/0d11977afa1a6ce90dc3b1f26694492c2ab04773"
 type: episode
 ---
 
@@ -374,7 +376,7 @@ layer, which still maintains the sub image or super pixel features.
 </turn>
 
 
-<turn speaker="Speaker 1" timestamp="14:34">
+<turn speaker="Matt Gardner" timestamp="14:34">
 
 One other question. Do you, do you train the inception model?
 

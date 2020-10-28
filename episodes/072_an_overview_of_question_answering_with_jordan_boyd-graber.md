@@ -1,7 +1,7 @@
 ---
 title: "An Overview of Question Answering, with Jordan Boyd-Graber"
 hosts: ["Matt Gardner","Waleed Ammar"]
-guests: ["Jordan Boyd-G"]
+guests: ["Jordan Boyd-Graber"]
 number: "072"
 tags: []
 description: "Our first episode in a new format: broader surveys of areas, instead of specific discussions on individual papers. In this episode, we talk with Jordan Boyd-Graber about question answering. Matt starts the discussion by giving five different axes on which question answering tasks vary: (1)how complex is the language in the question, (2)what is the genre of the question / nature of the question semantics, (3)what is the context or knowledge source used to answer the question, (4)how much \"reasoning\" is required to answer the question, and (5) what's the format of the answer? We talk about each of these in detail, giving examples from Jordan's and others' work. In the end, we conclude that \"question answering\" is a format to study a particular phenomenon, it is not a \"phenomenon\" in itself. Sometimes it's useful to pose a phenomenon you want to study as a question answering task, and sometimes it's not. During the conversation, Jordan mentioned the QANTA competition; you can find that here: http://qanta.org. We also talked about an adversarial question creation task for Quiz Bowl questions; the paper on that can be found here: https://www.semanticscholar.org/paper/Trick-Me-If-You-Can%3A-Adversarial-Writing-of-Trivia-Wallace-Boyd-Graber/11caf090fef96605d6d67c7505572b1a26796971."
@@ -36,7 +36,7 @@ program.
 </turn>
 
 
-<turn speaker="Jordan Boyd-G" timestamp="00:26">
+<turn speaker="Jordan Boyd-Graber" timestamp="00:26">
 
 Thanks for having me.
 
@@ -54,7 +54,7 @@ on this that I think will give us some good insight on this general task.
 </turn>
 
 
-<turn speaker="Jordan Boyd-G" timestamp="00:51">
+<turn speaker="Jordan Boyd-Graber" timestamp="00:51">
 
 I'll try not to push the task of Quizbowl too hard.
 
@@ -73,7 +73,7 @@ here.
 </turn>
 
 
-<turn speaker="Jordan Boyd-G" timestamp="01:21">
+<turn speaker="Jordan Boyd-Graber" timestamp="01:21">
 
 Sounds Good.
 
@@ -98,7 +98,7 @@ datasets. Does that sound reasonable? Are there any that I missed?
 </turn>
 
 
-<turn speaker="Jordan Boyd-G" timestamp="02:24">
+<turn speaker="Jordan Boyd-Graber" timestamp="02:24">
 
 So I think that one thing that's been prominent recently, and I don't know if this falls under a
 category, is whether it'd be computer absolutely has to answer. And so for example knowing whether
@@ -125,7 +125,7 @@ question at all. It's given to you as just like an index into a preselected list
 </turn>
 
 
-<turn speaker="Jordan Boyd-G" timestamp="03:52">
+<turn speaker="Jordan Boyd-Graber" timestamp="03:52">
 
 But I think that those sorts of things are still useful because it's still phrases, language and
 many questions are actually posed in this way. And I think even in systems like Alexa and Siri,
@@ -147,7 +147,7 @@ SQuAD for instance and transfer it to this new relation and hopefully get good p
 </turn>
 
 
-<turn speaker="Jordan Boyd-G" timestamp="04:43">
+<turn speaker="Jordan Boyd-Graber" timestamp="04:43">
 
 Right. And, and then moving on from slot filling you, you can have arbitrary, single sentences that
 can ask just about anything. And there you have the complexity of English, which, which can get
@@ -168,7 +168,7 @@ Are there any other hard complex language data question, answering data sets you
 </turn>
 
 
-<turn speaker="Jordan Boyd-G" timestamp="05:28">
+<turn speaker="Jordan Boyd-Graber" timestamp="05:28">
 
 All right, so let me begin the first of many advertisements for Quizbowl. So one of the nice things
 about Quizbowl is that you don't just have single questions, you have multiple sentences that form
@@ -192,7 +192,7 @@ The magic flute.
 </turn>
 
 
-<turn speaker="Jordan Boyd-G" timestamp="06:27">
+<turn speaker="Jordan Boyd-Graber" timestamp="06:27">
 
 Exactly. And so there are a couple of interesting things going on here. So you have the librettist
 of this opera not mentioning the librettist by name, portrayed a character who asked for a glass of
@@ -220,7 +220,7 @@ itself.
 </turn>
 
 
-<turn speaker="Jordan Boyd-G" timestamp="07:47">
+<turn speaker="Jordan Boyd-Graber" timestamp="07:47">
 
 Exactly.
 
@@ -235,7 +235,7 @@ and you, you yourself has had some history with this. I've heard, do you want to
 </turn>
 
 
-<turn speaker="Jordan Boyd-G" timestamp="07:59">
+<turn speaker="Jordan Boyd-Graber" timestamp="07:59">
 
 Yeah. So I have appeared as a contestant on Jeopardy if this airs after September 26th or I will
 appear as a contestant on jeopardy if this podcast that post before then.
@@ -250,7 +250,7 @@ And how did you, how did that happen?
 </turn>
 
 
-<turn speaker="Jordan Boyd-G" timestamp="08:14">
+<turn speaker="Jordan Boyd-Graber" timestamp="08:14">
 
 Yeah, so I have always been interested in trivia and I used to play on my high school team and at
 Caltech and at Princeton, I'm the coach of the Maryland team. And the reason I got into question
@@ -271,7 +271,7 @@ scientists it was a nice piece of work.
 </turn>
 
 
-<turn speaker="Jordan Boyd-G" timestamp="09:06">
+<turn speaker="Jordan Boyd-Graber" timestamp="09:06">
 
 Yeah. And so one thing that I would like to mention about Jeopardy is that first of all it was a
 master stroke on the part of IBM. One thing that makes Jeopardy interesting from a competition
@@ -288,7 +288,7 @@ flash on when you can ring in.
 </turn>
 
 
-<turn speaker="Jordan Boyd-G" timestamp="10:11">
+<turn speaker="Jordan Boyd-Graber" timestamp="10:11">
 
 And if you bring in before those lights come on, you're essentially eliminated from the question
 you're locked out for tens of milliseconds. And in the game of jeopardy, that's death. So Watson was
@@ -310,7 +310,7 @@ Quizbowl fixes this a little bit, right?
 </turn>
 
 
-<turn speaker="Jordan Boyd-G" timestamp="10:59">
+<turn speaker="Jordan Boyd-Graber" timestamp="10:59">
 
 Yeah. So unlike Jeopardy where you have to wait until the end of the question in Quizbowl, you can
 interrupt the question as soon as you know the answer and the quizbowl structure is such that it
@@ -345,7 +345,7 @@ It's a very different kind of kind of question, right?
 </turn>
 
 
-<turn speaker="Jordan Boyd-G" timestamp="13:09">
+<turn speaker="Jordan Boyd-Graber" timestamp="13:09">
 
 Yeah. And then you have other things like you have the children's books, sorry. No, the children's
 book test, not plural on book where you have a relatively simple in terms of the language book and
@@ -370,7 +370,7 @@ what kinds of things might assistant need to know in order to answer the questio
 </turn>
 
 
-<turn speaker="Jordan Boyd-G" timestamp="14:29">
+<turn speaker="Jordan Boyd-Graber" timestamp="14:29">
 
 Yeah. And this is really bleeding into context now because you could also talk about things like
 visual QA where again, you're answering questions about an image or a, some of the discourse
@@ -394,7 +394,7 @@ using to answer these questions.
 </turn>
 
 
-<turn speaker="Jordan Boyd-G" timestamp="15:35">
+<turn speaker="Jordan Boyd-Graber" timestamp="15:35">
 
 Yeah. And, and so to be pedantic, you could ask a question about anything, but it's a pretty good
 bet that if you have all of the possible answers that have been asked before as your answers, that,
@@ -435,7 +435,7 @@ bunch and I feel like there's still a whole lot more.
 </turn>
 
 
-<turn speaker="Jordan Boyd-G" timestamp="17:24">
+<turn speaker="Jordan Boyd-Graber" timestamp="17:24">
 
 Yeah. I think that there are papers on recipes and you have to a reason about could you substitute X
 for Y and things like that. And, and so I'm blanking on what paper actually did that, but I remember
@@ -452,7 +452,7 @@ contexts make for the most interesting research?
 </turn>
 
 
-<turn speaker="Jordan Boyd-G" timestamp="17:46">
+<turn speaker="Jordan Boyd-Graber" timestamp="17:46">
 
 Oh, that's really interesting. And I think the interaction between modalities is really promising.
 And I think that we haven't done enough to fully exploit that. And while we have some datasets like
@@ -483,7 +483,7 @@ that's an interesting thing to think about.
 </turn>
 
 
-<turn speaker="Jordan Boyd-G" timestamp="19:37">
+<turn speaker="Jordan Boyd-Graber" timestamp="19:37">
 
 Yeah. And similarly for things like trivia QA, you basically turned a question answering task into
 an information retrieval task. And you could say the same thing about some forms of Quizbowl
@@ -504,7 +504,7 @@ question answering task versus some other more specific tasks?
 </turn>
 
 
-<turn speaker="Jordan Boyd-G" timestamp="20:18">
+<turn speaker="Jordan Boyd-Graber" timestamp="20:18">
 
 I think one of the reasons that people are interested in phrasing them as question answering tasks
 is that it allows for competition and comparison more easily. Part of this is that we enjoy
@@ -522,7 +522,7 @@ people or systems.
 </turn>
 
 
-<turn speaker="Jordan Boyd-G" timestamp="21:33">
+<turn speaker="Jordan Boyd-Graber" timestamp="21:33">
 
 And that makes it useful to the phrasing in the question answering format. But as you say, if you
 really care about paraphrase, sometimes it may be better to have a simple paraphrase dataset. But
@@ -568,7 +568,7 @@ in my system actually helps performance does this, does this make sense?
 </turn>
 
 
-<turn speaker="Jordan Boyd-G" timestamp="24:04">
+<turn speaker="Jordan Boyd-Graber" timestamp="24:04">
 
 Yeah. And I totally agree and I'm glad that you brought up working with humans. We're working
 together. I think that's another reason that people like question answering and sort of this gameish
@@ -604,7 +604,7 @@ does this even make sense as an axis?
 </turn>
 
 
-<turn speaker="Jordan Boyd-G" timestamp="26:20">
+<turn speaker="Jordan Boyd-Graber" timestamp="26:20">
 
 I think so. And one very simplistic way that we've been trying recently to get at this kind of
 question is many datasets like trivia, QA or our Quizbowl data set are written by humans for a
@@ -637,7 +637,7 @@ its own biases.
 </turn>
 
 
-<turn speaker="Jordan Boyd-G" timestamp="28:30">
+<turn speaker="Jordan Boyd-Graber" timestamp="28:30">
 
 Ah Ha. So we, we actually looked at this and so we had the human question writers interact with a
 very simple IR question, answering system not complicated at all about a hundred lines of Python
@@ -661,7 +661,7 @@ problem?
 </turn>
 
 
-<turn speaker="Jordan Boyd-G" timestamp="29:44">
+<turn speaker="Jordan Boyd-Graber" timestamp="29:44">
 
 I think that's a good point. One of the ways that we tried to control against that is that we told
 the writers that these questions were still meant for humans. And so they still had the norms that
@@ -683,7 +683,7 @@ stuff on some other tasks. Right,
 </turn>
 
 
-<turn speaker="Jordan Boyd-G" timestamp="30:39">
+<turn speaker="Jordan Boyd-Graber" timestamp="30:39">
 
 Exactly. And this is where it might be a problem if you are, say, using crowdworkers who don't have
 a strict code of ethics and norms that they follow in creating these examples. And one of the things
@@ -714,7 +714,7 @@ really clear how to evaluate it. So I think we don't see this very often.
 </turn>
 
 
-<turn speaker="Jordan Boyd-G" timestamp="32:34">
+<turn speaker="Jordan Boyd-Graber" timestamp="32:34">
 
 So in 2017 there was a Trek task called complex answer retrieval where you have a very short prompt
 and then for example, what are the issues with the iPhone seven? And you have to generate a long
@@ -731,7 +731,7 @@ And how, how was that evaluated by human judges?
 </turn>
 
 
-<turn speaker="Jordan Boyd-G" timestamp="33:03">
+<turn speaker="Jordan Boyd-Graber" timestamp="33:03">
 
 So there, are some automatic metrics, but yeah, the gold standard is a human evaluation.
 
@@ -747,7 +747,7 @@ research on this kind of more complex question answering.
 </turn>
 
 
-<turn speaker="Jordan Boyd-G" timestamp="33:24">
+<turn speaker="Jordan Boyd-Graber" timestamp="33:24">
 
 Exactly. And so they tried to make it a little more reasonable by having topics that must be
 mentioned should be mentioned or can be mentioned or things that are completely out of scope, but
@@ -770,7 +770,7 @@ evaluate this. So I like that one a lot.
 </turn>
 
 
-<turn speaker="Jordan Boyd-G" timestamp="34:18">
+<turn speaker="Jordan Boyd-Graber" timestamp="34:18">
 
 Yeah. Another format that I like is where you're supposed to generate a very specific entity and
 then this is the format that say Quizbowl uses. You have a very large but mostly bounded set of
@@ -791,7 +791,7 @@ restricting yourself to whatever you can see in a particular paragraph.
 </turn>
 
 
-<turn speaker="Jordan Boyd-G" timestamp="35:05">
+<turn speaker="Jordan Boyd-Graber" timestamp="35:05">
 
 Yeah. And for things like trivia, QA and Quizbowl, these are datasets that are human generated
 without thinking about what the answer set is. And 80 to 90% of the answers do lie in say all of the
@@ -811,7 +811,7 @@ this area or practiced art.
 </turn>
 
 
-<turn speaker="Jordan Boyd-G" timestamp="35:45">
+<turn speaker="Jordan Boyd-Graber" timestamp="35:45">
 
 I think pragmatically, if you're a true beginner, I would probably suggest starting on something
 like SQuAD, it's a relatively constrained problem as Matt said. And there are a lot of good
@@ -858,7 +858,7 @@ study that phenomenon. And if so, what data set should I use.
 </turn>
 
 
-<turn speaker="Jordan Boyd-G" timestamp="38:29">
+<turn speaker="Jordan Boyd-Graber" timestamp="38:29">
 
 Thats a great way of thinking of it. And one pragmatic consideration. I would also add that you
 mentioned for like long answer question answering is that is there a good evaluation? And if you're
@@ -900,7 +900,7 @@ I think it is the same thing.
 </turn>
 
 
-<turn speaker="Jordan Boyd-G" timestamp="40:09">
+<turn speaker="Jordan Boyd-Graber" timestamp="40:09">
 
 Well it's actually not because on Wiki table questions you have to like add to sets, you have to be
 able to sort things and you can't do that with predicate argument structures, right? It's a, it's a
@@ -919,7 +919,7 @@ practical scenario.
 </turn>
 
 
-<turn speaker="Jordan Boyd-G" timestamp="40:43">
+<turn speaker="Jordan Boyd-Graber" timestamp="40:43">
 
 Although that being said, one very frustrating thing that I think comes up a lot is that people have
 this great idea. I'm going to use AMR for question answering. And they try to apply to question
@@ -941,7 +941,7 @@ main reasons were trying to answer them.
 </turn>
 
 
-<turn speaker="Jordan Boyd-G" timestamp="41:35">
+<turn speaker="Jordan Boyd-Graber" timestamp="41:35">
 
 I think that we're trying to do science and sciences in many ways, iterative and we're doing the
 simple stuff first and hopefully we can improve the datasets so that the data sets will capture the
@@ -961,7 +961,7 @@ seems like you agree. Jordan, any last thoughts? Anything you wanted to talk abo
 </turn>
 
 
-<turn speaker="Jordan Boyd-G" timestamp="42:18">
+<turn speaker="Jordan Boyd-Graber" timestamp="42:18">
 
 So I guess I'll end with a plug again for our December 15th human computer question answering
 competition, you can find more details at quanta.org question answering is not a trivial activity
@@ -984,7 +984,7 @@ really nice talking to you.
 </turn>
 
 
-<turn speaker="Jordan Boyd-G" timestamp="43:13">
+<turn speaker="Jordan Boyd-Graber" timestamp="43:13">
 
 Likewise. Thanks for having me.
 

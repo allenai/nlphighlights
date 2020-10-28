@@ -1,10 +1,12 @@
 ---
 title: "Event Representations with Tensor-based Compositions, with Niranjan Balasubramanian"
 hosts: ["Matt Gardner","Waleed Ammar"]
-guests: ["Niranjan B."]
+guests: ["Niranjan Balasubramanian"]
 number: "065"
 tags: []
-description: "AAAI 2018 paper by Noah Weber, Niranjan Balasubramanian, and Nathanael Chambers Niranjan joins us on the podcast to tell us about his latest contribution in a line of work going back to Shank's scripts. This work tries to model sequences of events to get coherent narrative schemas, mined from large collections of text. For example, given an event like \"She threw a football\", you might expect future events involving catching, running, scoring, and so on. But if the event is instead \"She threw a bomb\", you would expect future events to involve things like explosions, damage, arrests, or other related things. We spend much of our conversation talking about why these scripts are interesting to study, and the general outline for how one might learn these scripts from text, and spend a little bit of time talking about the particular contribution of this paper, which is a better model that captures interactions among all of the arguments to an event. https://www.semanticscholar.org/paper/Event-Representations-With-Tensor-Based-Weber-Balasubramanian/418f405a60b8d9009099777f7ae37f4496542f90"
+description: "AAAI 2018 paper by Noah Weber, Niranjan Balasubramanian, and Nathanael Chambers Niranjan joins us on the podcast to tell us about his latest contribution in a line of work going back to Shank's scripts. This work tries to model sequences of events to get coherent narrative schemas, mined from large collections of text. For example, given an event like \"She threw a football\", you might expect future events involving catching, running, scoring, and so on. But if the event is instead \"She threw a bomb\", you would expect future events to involve things like explosions, damage, arrests, or other related things. We spend much of our conversation talking about why these scripts are interesting to study, and the general outline for how one might learn these scripts from text, and spend a little bit of time talking about the particular contribution of this paper, which is a better model that captures interactions among all of the arguments to an event.
+
+https://www.semanticscholar.org/paper/Event-Representations-With-Tensor-Based-Weber-Balasubramanian/418f405a60b8d9009099777f7ae37f4496542f90"
 type: episode
 ---
 
@@ -36,7 +38,7 @@ program.
 </turn>
 
 
-<turn speaker="Niranjan B." timestamp="00:27">
+<turn speaker="Niranjan Balasubramanian" timestamp="00:27">
 
 Thanks Matt for having me and thanks Waleed for having me, it is exciting.
 
@@ -54,7 +56,7 @@ description of like what's going on here, what the setting is?
 </turn>
 
 
-<turn speaker="Niranjan B." timestamp="01:04">
+<turn speaker="Niranjan Balasubramanian" timestamp="01:04">
 
 Yeah, I think I like the characterization that you made that, you know, sort of on the outskirts of
 NLP but I would sort of say it's a straddles NLP and generally I can sense a space of trying to
@@ -68,7 +70,7 @@ automatically some canonical descriptions of different types of events.
 </turn>
 
 
-<turn speaker="Niranjan B." timestamp="02:00">
+<turn speaker="Niranjan Balasubramanian" timestamp="02:00">
 
 So, one example, they often talk about that comes from Nate Chambers' original work, original work
 2008. Is this thing about, you know, there is an analysis happening or an analysis scenario
@@ -83,7 +85,7 @@ scripts, where the idea is how do we build understanding of commonly occurring s
 </turn>
 
 
-<turn speaker="Niranjan B." timestamp="02:55">
+<turn speaker="Niranjan Balasubramanian" timestamp="02:55">
 
 What kinds of data structures do you need to pack this information and how do you acquire this
 information automatically? So Schankian scripts were sort of proposed as a way to, you know, build
@@ -106,7 +108,7 @@ scripts is a canonical sequence of frames. Does that fair?
 </turn>
 
 
-<turn speaker="Niranjan B." timestamp="04:02">
+<turn speaker="Niranjan Balasubramanian" timestamp="04:02">
 
 Yeah. Yeah. I think that's great. That's a, that's a fair characterization. In fact I really liked
 this paper that Ben Van Durme and Francis Ferraro, I think they had a couple of years back where
@@ -133,7 +135,7 @@ some kind of autonomous system or, or NLP system?
 </turn>
 
 
-<turn speaker="Niranjan B." timestamp="05:33">
+<turn speaker="Niranjan Balasubramanian" timestamp="05:33">
 
 Well, an example that they often give is trying to read between the lines when you're reading news
 events. So one example can be, let's suppose you're reading a news story that says you know, Ahmed
@@ -150,7 +152,7 @@ the text itself. So that's one application.
 </turn>
 
 
-<turn speaker="Niranjan B." timestamp="06:44">
+<turn speaker="Niranjan Balasubramanian" timestamp="06:44">
 
 Another possible application is being able to say, can you summarize a news article? So you get a
 news article about a particular event. How do you know which pieces of things to talk about an
@@ -173,7 +175,7 @@ possibilities of combining events?
 </turn>
 
 
-<turn speaker="Niranjan B." timestamp="07:54">
+<turn speaker="Niranjan Balasubramanian" timestamp="07:54">
 
 Yeah, I think that's an excellent question. My thinking on this has shifted or evolved along with
 the deep learning based continuous thinking a little bit. So earlier we used to, I used to think
@@ -184,7 +186,7 @@ characterize type world in some reasonable
 </turn>
 
 
-<turn speaker="Niranjan B." timestamp="08:25">
+<turn speaker="Niranjan Balasubramanian" timestamp="08:25">
 
 In level of coverage. I was happy with it, but then I think now sort of rather than thinking about
 script knowledge is something static. Now I think about them as sort of functional knowledge pieces.
@@ -203,7 +205,7 @@ conditions. So to speak,
 </turn>
 
 
-<turn speaker="Niranjan B." timestamp="09:46">
+<turn speaker="Niranjan Balasubramanian" timestamp="09:46">
 
 I hope that sort of makes sense. If you feel like, I can give you an example that just to concrete
 things together. So one thing that we that we can do now is to say let's suppose you have a protest
@@ -235,7 +237,7 @@ possible frames? What's going on here?
 </turn>
 
 
-<turn speaker="Niranjan B." timestamp="11:40">
+<turn speaker="Niranjan Balasubramanian" timestamp="11:40">
 
 Yeah. So I think at least sort of going back to this particular paper where we show, these types of
 compositions, I think we have this problem somewhat in the sense that what you're saying is to the
@@ -249,7 +251,7 @@ based representation of events involving that word, even if we haven't seen it i
 </turn>
 
 
-<turn speaker="Niranjan B." timestamp="12:34">
+<turn speaker="Niranjan Balasubramanian" timestamp="12:34">
 
 So that sort of gets at this a little bit, but there are many, the general sense of the problem that
 have many events perhaps that you don't even see described in text. So that is sort of still beyond
@@ -279,7 +281,7 @@ like a narrative frame, even though it'd be hard for a human to inspect.
 </turn>
 
 
-<turn speaker="Niranjan B." timestamp="14:20">
+<turn speaker="Niranjan Balasubramanian" timestamp="14:20">
 
 Yeah. So I think the, the clustering of this grouping is implicit in the model, but you can ask the
 model to generate. So one way we evaluated it in the paper, is actually to say even this starting
@@ -304,7 +306,7 @@ Could you elaborate a little bit on how the schema looks like?
 </turn>
 
 
-<turn speaker="Niranjan B." timestamp="15:38">
+<turn speaker="Niranjan Balasubramanian" timestamp="15:38">
 
 Yeah. so schema is really, in our case, a subject relation and an object circle. It consists of
 these two posts. Okay. So we can do a couple of base schema. So you can start with a seed tuple
@@ -334,7 +336,7 @@ intransitive verbs subject verb, null?
 </turn>
 
 
-<turn speaker="Niranjan B." timestamp="17:38">
+<turn speaker="Niranjan Balasubramanian" timestamp="17:38">
 
 So yeah, so we go with them at this point.
 
@@ -351,7 +353,7 @@ So can you tell us about how you learned the representation of the events?
 </turn>
 
 
-<turn speaker="Niranjan B." timestamp="18:03">
+<turn speaker="Niranjan Balasubramanian" timestamp="18:03">
 
 Yeah. So, all right. So the idea being we want to the producer and embedding representation of an
 event, which is as you said, is the triple now, right? It's 2018 our starting points are word
@@ -369,7 +371,7 @@ kind of a LSTM. So there be sort of these two approaches to do this before.
 </turn>
 
 
-<turn speaker="Niranjan B." timestamp="19:22">
+<turn speaker="Niranjan Balasubramanian" timestamp="19:22">
 
 The sort of primary motivation for the specific idea we had, which is using sensors to produce this
 composition is that we noticed that these, at the core screen, even though these models are
@@ -398,7 +400,7 @@ very, very different kinds of things.
 </turn>
 
 
-<turn speaker="Niranjan B." timestamp="21:02">
+<turn speaker="Niranjan Balasubramanian" timestamp="21:02">
 
 Yeah. Yeah. So there are examples like this that I actually even looked at when we were producing
 the, this sort of discreet concrete models early on. So one of the other examples we were thinking
@@ -423,7 +425,7 @@ without getting into too much low level math?
 </turn>
 
 
-<turn speaker="Niranjan B." timestamp="22:16">
+<turn speaker="Niranjan Balasubramanian" timestamp="22:16">
 
 Sure. so the, I think the way to the starting going to see, let's go back to that example. She threw
 a football and she threw a bomb. What you want is some kind of a conjunctive symantic, meaning every
@@ -434,7 +436,7 @@ elements in your in your triple.
 </turn>
 
 
-<turn speaker="Niranjan B." timestamp="22:46">
+<turn speaker="Niranjan Balasubramanian" timestamp="22:46">
 
 The sort of composition is a mediated way of producing this, you know, some parameterized way of
 producing this representation as you mentioned. So one way to think about a pencil based composition
@@ -451,7 +453,7 @@ basically,
 </turn>
 
 
-<turn speaker="Niranjan B." timestamp="23:48">
+<turn speaker="Niranjan Balasubramanian" timestamp="23:48">
 
 Going to be a proportional to the size of your input dimensions. So you're going to have, a huge set
 of parameters that you need to learn, but every predicate, which means you need to have seen many,
@@ -466,7 +468,7 @@ students you came up with.
 </turn>
 
 
-<turn speaker="Niranjan B." timestamp="24:34">
+<turn speaker="Niranjan Balasubramanian" timestamp="24:34">
 
 So we were discussing the say, okay, how do we infuse this? And sort of he came up with the first
 way we can think of in terms of accomplishing the scope. Like we will just infuse information in the
@@ -493,7 +495,7 @@ model? What's your learning objective?
 </turn>
 
 
-<turn speaker="Niranjan B." timestamp="26:02">
+<turn speaker="Niranjan Balasubramanian" timestamp="26:02">
 
 Yeah, so our goal, the tensors that we learn are supposed to produce good event representations. And
 for this purpose, right, as soon as you want to train then you need to define what they could event
@@ -516,7 +518,7 @@ And how well does it work?
 </turn>
 
 
-<turn speaker="Niranjan B." timestamp="27:07">
+<turn speaker="Niranjan Balasubramanian" timestamp="27:07">
 
 Well, it seems to work better than those couple of baseline models. We've evaluated the
 representations using some existing event related process as well as for testing whether they are
@@ -527,7 +529,7 @@ sentences and you're trying to measure if the sentences are semantically similar
 </turn>
 
 
-<turn speaker="Niranjan B." timestamp="27:45">
+<turn speaker="Niranjan Balasubramanian" timestamp="27:45">
 
 So if you're producing a reasonable event representation, then you should be able to distinguish and
 do well in task. But this task necessarily isn't that hard a or it doesn't really evaluate one of
@@ -539,7 +541,7 @@ with event you can come up with event pairs.
 </turn>
 
 
-<turn speaker="Niranjan B." timestamp="28:26">
+<turn speaker="Niranjan Balasubramanian" timestamp="28:26">
 
 One example is. Well let's, let's take the she threw the bomb again okay, you have "she threw bomb."
 And "she, threw football," you can see that these two even triples, have two elements in common.
@@ -565,7 +567,7 @@ think what you really care about are these narrative chains.
 </turn>
 
 
-<turn speaker="Niranjan B." timestamp="29:54">
+<turn speaker="Niranjan Balasubramanian" timestamp="29:54">
 
 Yeah.
 
@@ -579,7 +581,7 @@ So how do you evaluate that kind of work?
 </turn>
 
 
-<turn speaker="Niranjan B." timestamp="29:57">
+<turn speaker="Niranjan Balasubramanian" timestamp="29:57">
 
 So one thing we did is a also evaluate in terms of the narrative close tasks. so there many variants
 of this? So by the way Nate Chambers who's also a part of this project in sort of with whom we've
@@ -601,7 +603,7 @@ perplexity on predicting subsequent events? Is that what's going on?
 </turn>
 
 
-<turn speaker="Niranjan B." timestamp="30:56">
+<turn speaker="Niranjan Balasubramanian" timestamp="30:56">
 
 Yeah. So, yeah, so I think are equal and interested in measuring the measures you said differently,
 not necessarily perplexity, but the idea is still the same. Yeah. So on this task again the the
@@ -615,7 +617,7 @@ up portion of that task where we evaluate an, it's sort of a multiple choice eva
 </turn>
 
 
-<turn speaker="Niranjan B." timestamp="31:53">
+<turn speaker="Niranjan Balasubramanian" timestamp="31:53">
 
 We also evaluated the model for the ability to produce event schemas. So we have a very simple
 method for producing event, schemas, even, in event representations. So if you'd give us a starting
@@ -639,7 +641,7 @@ you'd like to predict what's in the middle. So how do you do the actual inferenc
 </turn>
 
 
-<turn speaker="Niranjan B." timestamp="33:03">
+<turn speaker="Niranjan Balasubramanian" timestamp="33:03">
 
 So in this case, we sort of let me make sure I'm saying the right thing here. So there two ways to
 do this, so one is to without objective the objective function. Basically says that can be learned
@@ -660,7 +662,7 @@ surrounding the one that you're predicting?
 </turn>
 
 
-<turn speaker="Niranjan B." timestamp="34:05">
+<turn speaker="Niranjan Balasubramanian" timestamp="34:05">
 
 I think if I remember right, we just do the simple averaging that we don't have the model that we
 don't have a sequence model that composes these event representations into a final representation?
@@ -677,7 +679,7 @@ and find the nearest neighbor.
 </turn>
 
 
-<turn speaker="Niranjan B." timestamp="34:28">
+<turn speaker="Niranjan Balasubramanian" timestamp="34:28">
 
 Yeah.
 
@@ -693,7 +695,7 @@ trying to understand the discourse in the document.
 </turn>
 
 
-<turn speaker="Niranjan B." timestamp="34:48">
+<turn speaker="Niranjan Balasubramanian" timestamp="34:48">
 
 Yeah. So I think definitely the starting point, I think for both types of problems is really the
 texts that you have. So in some sense, while we are learning scripts from texts, the discourse
@@ -712,7 +714,7 @@ context, it's, there's not a one to one alignment necessarily.
 </turn>
 
 
-<turn speaker="Niranjan B." timestamp="36:15">
+<turn speaker="Niranjan Balasubramanian" timestamp="36:15">
 
 So I think while they are connected in the sense that they're using both the same starting points,
 type this for scripts. I think we need to do a much more to figured out what to extract and what
@@ -728,7 +730,7 @@ explanation on the background, these kinds of information.
 </turn>
 
 
-<turn speaker="Niranjan B." timestamp="37:16">
+<turn speaker="Niranjan Balasubramanian" timestamp="37:16">
 
 So we've been interested in models that can incorporate, all these kinds of information. But at this
 point we're sort of taking baby steps. So you're saying, okay, given a specific event, how can we
@@ -748,7 +750,7 @@ practically yet. Would you agree with that?
 </turn>
 
 
-<turn speaker="Niranjan B." timestamp="37:59">
+<turn speaker="Niranjan Balasubramanian" timestamp="37:59">
 
 So I think it's time that we can start tinkering with these things. So I sort of maybe I'm one of
 these newly minded optimists in the deep learning way, but I feel like because you can embed and
@@ -766,7 +768,7 @@ Great. Cool. Thanks for the really interesting conversation. It was nice talking
 </turn>
 
 
-<turn speaker="Niranjan B." timestamp="38:32">
+<turn speaker="Niranjan Balasubramanian" timestamp="38:32">
 
 Thank you so much for having me. This is exciting. I have some things to think about as I go back.
 

@@ -1,10 +1,12 @@
 ---
 title: "The Effect of Different Writing Tasks on Linguistic Style: A Case Study of the ROC Story Cloze Task, with Roy Schwartz"
 hosts: ["Matt Gardner","Waleed Ammar"]
-guests: ["New Speaker","Roy Schwartz"]
+guests: ["Roy Schwartz"]
 number: "032"
 tags: []
-description: "CoNLL 2017 paper, by Roy Schwartz, Maarten Sap, Ioannis Konstas, Leila Zilles, Yejin Choi, and Noah A. Smith. Roy comes on to talk to us about the paper. They analyzed the ROCStories corpus, which was created with three separate tasks on Mechanical Turk. They found that there were enough stylistic differences between the text generated from each task that they could get very good performance on the ROCStories cloze task just by looking at the style, ignoring the information you're supposed to use to solve the task. Roy talks to us about this finding, and about how hard it is to generate datasets that don't have some kind of flaw (hint: they all have problems). https://www.semanticscholar.org/paper/The-Effect-of-Different-Writing-Tasks-on-Linguisti-Schwartz-Sap/1a697d7cf187e51d5ccc23eb3ee5d2950ece5522"
+description: "CoNLL 2017 paper, by Roy Schwartz, Maarten Sap, Ioannis Konstas, Leila Zilles, Yejin Choi, and Noah A. Smith. Roy comes on to talk to us about the paper. They analyzed the ROCStories corpus, which was created with three separate tasks on Mechanical Turk. They found that there were enough stylistic differences between the text generated from each task that they could get very good performance on the ROCStories cloze task just by looking at the style, ignoring the information you're supposed to use to solve the task. Roy talks to us about this finding, and about how hard it is to generate datasets that don't have some kind of flaw (hint: they all have problems).
+
+https://www.semanticscholar.org/paper/The-Effect-of-Different-Writing-Tasks-on-Linguisti-Schwartz-Sap/1a697d7cf187e51d5ccc23eb3ee5d2950ece5522"
 type: episode
 ---
 
@@ -347,7 +349,7 @@ So these are the current best results for this shared task?
 </turn>
 
 
-<turn speaker="New Speaker" timestamp="17:20">
+<turn speaker="Roy Schwartz" timestamp="17:20">
 
 I think in parallel to our work, there've been a few groups that seem to reach a similar conclusion.
 One group in TCI. Yeah. Kai-Wei Chang was the first author and they reached roughly the same result

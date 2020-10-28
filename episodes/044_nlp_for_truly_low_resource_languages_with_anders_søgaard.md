@@ -4,7 +4,15 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Anders Søgaard"]
 number: "044"
 tags: []
-description: "Anders talks with us about his line of work on doing NLP in languages where you have no linguistic resources other than a Bible translation or other religious works. He and his students have developed methods for annotation projection for both part of speech tagging and dependency parsing, aggregating information from many languages to predict annotations for languages where you have no training data. We talk about low-resource NLP generally, then dive into the specifics of the annotation projection method that Anders used, also touching on a related paper on learning cross-lingual word embeddings. https://www.semanticscholar.org/paper/If-all-you-have-is-a-bit-of-the-Bible-Learning-POS-Agic-Hovy/812965ddce635174b33621aaaa551e5f6199b6c0 https://www.semanticscholar.org/paper/Multilingual-Projection-for-Parsing-Truly-Low-Reso-Agic-Johannsen/1414e3041f4cc3366b6ab49d1dbe9216632b9c78 https://www.semanticscholar.org/paper/Cross-Lingual-Dependency-Parsing-with-Late-Decodin-Schlichtkrull-S%C3%B8gaard/eda636e3abae829cf7ad8e0519fbaec3f29d1e82 https://www.semanticscholar.org/paper/A-Strong-Baseline-for-Learning-Cross-Lingual-Word-S%C3%B8gaard-Goldberg/55ca53050fcd29e43d6dcfb7dfc6a602ec5e6878"
+description: "Anders talks with us about his line of work on doing NLP in languages where you have no linguistic resources other than a Bible translation or other religious works. He and his students have developed methods for annotation projection for both part of speech tagging and dependency parsing, aggregating information from many languages to predict annotations for languages where you have no training data. We talk about low-resource NLP generally, then dive into the specifics of the annotation projection method that Anders used, also touching on a related paper on learning cross-lingual word embeddings.
+
+https://www.semanticscholar.org/paper/If-all-you-have-is-a-bit-of-the-Bible-Learning-POS-Agic-Hovy/812965ddce635174b33621aaaa551e5f6199b6c0
+
+https://www.semanticscholar.org/paper/Multilingual-Projection-for-Parsing-Truly-Low-Reso-Agic-Johannsen/1414e3041f4cc3366b6ab49d1dbe9216632b9c78
+
+https://www.semanticscholar.org/paper/Cross-Lingual-Dependency-Parsing-with-Late-Decodin-Schlichtkrull-S%C3%B8gaard/eda636e3abae829cf7ad8e0519fbaec3f29d1e82
+
+https://www.semanticscholar.org/paper/A-Strong-Baseline-for-Learning-Cross-Lingual-Word-S%C3%B8gaard-Goldberg/55ca53050fcd29e43d6dcfb7dfc6a602ec5e6878"
 type: episode
 ---
 

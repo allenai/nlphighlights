@@ -4,7 +4,9 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Roi Reichart"]
 number: "035"
 tags: []
-description: "TACL 2017 paper by Rotem Dror, Gili Baumer, Marina Bogomolov, and Roi Reichart. Roi comes on to talk to us about how to make better statistical comparisons between two methods when there are multiple datasets in the comparison. This paper shows that there are more powerful methods available than the occasionally-used Bonferroni correction, and using the better methods can let you make stronger, statistically-valid conclusions. We talk a bit also about how the assumptions you make about your data can affect the statistical tests that you perform, and briefly mention other issues in replicability / reproducibility, like training variance. https://www.semanticscholar.org/paper/Replicability-Analysis-for-Natural-Language-Proces-Dror-Baumer/fa5129ab6fd85f8ff590f9cc8a39139e9dfa8aa2"
+description: "TACL 2017 paper by Rotem Dror, Gili Baumer, Marina Bogomolov, and Roi Reichart. Roi comes on to talk to us about how to make better statistical comparisons between two methods when there are multiple datasets in the comparison. This paper shows that there are more powerful methods available than the occasionally-used Bonferroni correction, and using the better methods can let you make stronger, statistically-valid conclusions. We talk a bit also about how the assumptions you make about your data can affect the statistical tests that you perform, and briefly mention other issues in replicability / reproducibility, like training variance.
+
+https://www.semanticscholar.org/paper/Replicability-Analysis-for-Natural-Language-Proces-Dror-Baumer/fa5129ab6fd85f8ff590f9cc8a39139e9dfa8aa2"
 type: episode
 ---
 

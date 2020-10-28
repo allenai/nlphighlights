@@ -4,7 +4,13 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Graham Neubig"]
 number: "029"
 tags: []
-description: "None"
+description: "ACL 2017 paper, by Yusuke Oda and others (including Graham Neubig) at Nara Institute of Science and Technology (Graham is now at Carnegie Mellon University).
+
+Graham comes on to talk to us about neural machine translation generally, and about this ACL paper in particular. We spend the first half of the episode talking about major milestones in neural machine translation and why it is so much more effective than previous methods (spoiler: stronger language models help a lot). We then talk about the specifics of binary code prediction, how it's related to a hierarchical or class-factored softmax, and how to make it robust to off-by-one-bit errors.
+
+Paper link: www.semanticscholar.org/paper/Neural-…84d5867e6358d
+
+An example of the Language log posts that we discussed: languagelog.ldc.upenn.edu/nll/?p=33613 (there are many more)."
 type: episode
 ---
 

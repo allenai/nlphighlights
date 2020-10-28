@@ -4,7 +4,9 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Dirk Weißenborn"]
 number: "047"
 tags: []
-description: "How should you incorporate background knowledge into a neural net? A lot of people have been thinking about this problem, and Dirk Weissenborn comes on to tell us about his work in this area. Paper is with Tomáš Kočiský and Chris Dyer. https://arxiv.org/abs/1706.02596"
+description: "How should you incorporate background knowledge into a neural net? A lot of people have been thinking about this problem, and Dirk Weissenborn comes on to tell us about his work in this area. Paper is with Tomáš Kočiský and Chris Dyer.
+
+https://arxiv.org/abs/1706.02596"
 type: episode
 ---
 

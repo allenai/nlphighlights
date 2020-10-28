@@ -1,10 +1,14 @@
 ---
 title: "Multi-Task Learning of Keyphrase Boundary Classification, with Isabelle Augenstein"
-hosts: ["Matt Gardner"]
-guests: ["Isabelle Augenstein","New Speaker","Walleed Ammar"]
+hosts: ["Matt Gardner","Waleed Ammar"]
+guests: ["Isabelle Augenstein"]
 number: "039"
 tags: []
-description: "Isabelle Augenstein was the lead organizer of SemEval 2017 task 10, on extracting keyphrases and relations from scientific publications. In this episode we talk about her experience organizing the task, how the task was set up, and what the result of the task was. We also talk about some related work Isabelle did on multi-task learning for keyphrase boundary detection. https://www.semanticscholar.org/paper/SemEval-2017-Task-10-ScienceIE-Extracting-Keyphras-Augenstein-Das/71007219617d0f5e2419c5c1ab1a0d6d0bc40b7e https://www.semanticscholar.org/paper/Multi-Task-Learning-of-Keyphrase-Boundary-Classifi-Augenstein-S%C3%B8gaard/4a0db09d0c19dfeb78900164d46d4b06cd3fc9f3"
+description: "Isabelle Augenstein was the lead organizer of SemEval 2017 task 10, on extracting keyphrases and relations from scientific publications. In this episode we talk about her experience organizing the task, how the task was set up, and what the result of the task was. We also talk about some related work Isabelle did on multi-task learning for keyphrase boundary detection.
+
+https://www.semanticscholar.org/paper/SemEval-2017-Task-10-ScienceIE-Extracting-Keyphras-Augenstein-Das/71007219617d0f5e2419c5c1ab1a0d6d0bc40b7e
+
+https://www.semanticscholar.org/paper/Multi-Task-Learning-of-Keyphrase-Boundary-Classifi-Augenstein-S%C3%B8gaard/4a0db09d0c19dfeb78900164d46d4b06cd3fc9f3"
 type: episode
 ---
 
@@ -18,7 +22,7 @@ natural language processing.
 </turn>
 
 
-<turn speaker="Walleed Ammar" timestamp="00:05">
+<turn speaker="Waleed Ammar" timestamp="00:05">
 
 This is Matt Gardner and Waleed Ammar. We are research scientists at the Allan Institute for
 Artificial Intelligence.
@@ -78,7 +82,7 @@ engines help researchers find better papers about their research areas.
 </turn>
 
 
-<turn speaker="Walleed Ammar" timestamp="01:35">
+<turn speaker="Waleed Ammar" timestamp="01:35">
 
 Right. The timing of this shared task is very appropriate for us in the semantic scholar team
 because we were just starting to work on this problem at the same time. And we provided a bunch of
@@ -169,7 +173,7 @@ science, material science, and physics. And we selected papers from those domain
 </turn>
 
 
-<turn speaker="Walleed Ammar" timestamp="04:42">
+<turn speaker="Waleed Ammar" timestamp="04:42">
 
 Did you find any relative difficulty in finding people to annotate depending on which domain?
 
@@ -186,7 +190,7 @@ annotating very quickly.
 </turn>
 
 
-<turn speaker="Walleed Ammar" timestamp="05:17">
+<turn speaker="Waleed Ammar" timestamp="05:17">
 
 Yeah, absolutely. I'm curious to know if you tried to crowdsource this cause like sometimes, I don't
 know, it's like sometimes we underestimate what we crowdsource workers can or cannot do. In this
@@ -242,7 +246,7 @@ or should not. Really, it's a whole lot easier if you're a domain expert to know
 </turn>
 
 
-<turn speaker="Walleed Ammar" timestamp="07:42">
+<turn speaker="Waleed Ammar" timestamp="07:42">
 
 Yeah. And we've also been trying to do this for like the medical domains, which I have absolutely no
 idea about. So it was very difficult to come up with guidelines to help the annotators be consistent
@@ -261,7 +265,7 @@ and based on our experience with annotating data.
 </turn>
 
 
-<turn speaker="Walleed Ammar" timestamp="08:27">
+<turn speaker="Waleed Ammar" timestamp="08:27">
 
 And how like how consistent did you find the annotators after a finalizing the guidelines?
 
@@ -301,7 +305,7 @@ small. That seems like a really hard task.
 </turn>
 
 
-<turn speaker="Walleed Ammar" timestamp="09:35">
+<turn speaker="Waleed Ammar" timestamp="09:35">
 
 However, this is the biggest dataset for this task. [inaudible]
 
@@ -321,7 +325,7 @@ little bit better than it sounds at first glance, but it's still pretty small. Y
 </turn>
 
 
-<turn speaker="Walleed Ammar" timestamp="10:32">
+<turn speaker="Waleed Ammar" timestamp="10:32">
 
 So fast forward to the actual participation, like when the participants say the you want to join the
 shared task, like how was it? What's the process like, how much time did you spend organizing and
@@ -343,7 +347,7 @@ it. But yeah, it was really hard to deal those small things.
 </turn>
 
 
-<turn speaker="Walleed Ammar" timestamp="11:55">
+<turn speaker="Waleed Ammar" timestamp="11:55">
 
 Are you planning to organize another one? Maybe not necessarily for the same task, but in general
 based on this experience. Would you encourage other people to design and organize shared tasks?
@@ -418,7 +422,7 @@ applying existing solution, or slightly re-working them.
 </turn>
 
 
-<turn speaker="New Speaker" timestamp="14:39">
+<turn speaker="Matt Gardner" timestamp="14:39">
 
 Interesting.
 
@@ -454,7 +458,7 @@ approach for all of these tasks.
 </turn>
 
 
-<turn speaker="New Speaker" timestamp="15:40">
+<turn speaker="Matt Gardner" timestamp="15:40">
 
 I see.
 
@@ -516,7 +520,7 @@ long.
 </turn>
 
 
-<turn speaker="Walleed Ammar" timestamp="16:43">
+<turn speaker="Waleed Ammar" timestamp="16:43">
 
 Yeah. I do remember like a decent percentage were more than five words, which is kind of rare.
 
@@ -547,7 +551,7 @@ Okay.
 </turn>
 
 
-<turn speaker="Walleed Ammar" timestamp="17:10">
+<turn speaker="Waleed Ammar" timestamp="17:10">
 
 So you had an ACL paper which explorers doing multi-task learning for this particular, for the key
 phase extraction task. Right. We'd like to look into that a little bit.
@@ -571,7 +575,7 @@ because of course they need to predict different things. The model, yeah. For th
 </turn>
 
 
-<turn speaker="Walleed Ammar" timestamp="18:35">
+<turn speaker="Waleed Ammar" timestamp="18:35">
 
 Yes. So what, what kind of tasks did you use? You mentioned hyperlink detection any other tasks?
 
@@ -586,7 +590,7 @@ identification and super sense tagging.
 </turn>
 
 
-<turn speaker="Walleed Ammar" timestamp="18:52">
+<turn speaker="Waleed Ammar" timestamp="18:52">
 
 So basically other tasks which try to encourage the model to find boundaries between pretty much
 noun phrases, but some of them also try to identify like key phrases really but in a different
@@ -602,7 +606,7 @@ Yes, exactly. Yeah, that was the idea.
 </turn>
 
 
-<turn speaker="Walleed Ammar" timestamp="19:07">
+<turn speaker="Waleed Ammar" timestamp="19:07">
 
 And what's like the strategy for training across the different tasks for training the model? Like
 alternating loss function between the different tasks. How would you do that?
@@ -619,7 +623,7 @@ again. So it's just a random sampling of tasks.
 </turn>
 
 
-<turn speaker="Walleed Ammar" timestamp="19:42">
+<turn speaker="Waleed Ammar" timestamp="19:42">
 
 I see. So I suppose you sample a batch of similar tasks of examples in a similar task and then draw
 another batch from from the next task, is that right?
@@ -635,7 +639,7 @@ because otherwise you over sample for one task or you have to,
 </turn>
 
 
-<turn speaker="Walleed Ammar" timestamp="20:09">
+<turn speaker="Waleed Ammar" timestamp="20:09">
 
 Sorry. Yeah, just continue.
 
@@ -650,7 +654,7 @@ actually only sample a similar amount from each task.
 </turn>
 
 
-<turn speaker="Walleed Ammar" timestamp="20:20">
+<turn speaker="Waleed Ammar" timestamp="20:20">
 
 I would expect over sampling from the actual tasks that we care about. So in this case, key phrase
 extraction to be a reasonable thing to do. I would like would it, would it be reasonable to give it
@@ -707,7 +711,7 @@ Fair enough. Is that really like a conflict though?
 </turn>
 
 
-<turn speaker="Walleed Ammar" timestamp="21:41">
+<turn speaker="Waleed Ammar" timestamp="21:41">
 
 Kind of like they're both a participant and a judge. I feel like any participant would question the
 results. If a is a little funny saying, we have the best results
@@ -722,7 +726,7 @@ If you establish the judging criteria in some fair objective way, like is it rea
 </turn>
 
 
-<turn speaker="Walleed Ammar" timestamp="22:05">
+<turn speaker="Waleed Ammar" timestamp="22:05">
 
 Well, one key thing is the tests that is supposed to, like the participants don't get the gold
 labels for them. Although some, because you know, in order to do some tasks you had, you had to be
@@ -735,7 +739,7 @@ organizers was trusting the participants to be responsible.
 </turn>
 
 
-<turn speaker="New Speaker" timestamp="22:58">
+<turn speaker="Matt Gardner" timestamp="22:58">
 
 Okay.
 
@@ -755,7 +759,7 @@ scenarios.
 </turn>
 
 
-<turn speaker="Walleed Ammar" timestamp="23:37">
+<turn speaker="Waleed Ammar" timestamp="23:37">
 
 Well, and in fairness of those, it had quite a bit of complication, especially for someone who
 haven't tried a system before for like the CodaLab system or never tried Docker containers before.
@@ -827,7 +831,7 @@ sometimes you can engineer better systems without it.
 </turn>
 
 
-<turn speaker="Walleed Ammar" timestamp="26:56">
+<turn speaker="Waleed Ammar" timestamp="26:56">
 
 I'd say it depends on the domain. If the domain is fairly limited and you expect most of the
 examples to look alike to some extent. Yeah, I agree. But there are many examples where this field
@@ -862,7 +866,7 @@ Yeah.
 </turn>
 
 
-<turn speaker="New Speaker" timestamp="27:58">
+<turn speaker="Matt Gardner" timestamp="27:58">
 
 Do you have any ideas on how to make that easier? Is that an interesting problem to you anymore,
 like how to scale up this annotation effort?
@@ -911,7 +915,7 @@ Yeah, I think that's key.
 </turn>
 
 
-<turn speaker="Walleed Ammar" timestamp="29:46">
+<turn speaker="Waleed Ammar" timestamp="29:46">
 
 We're definitely exploring some of these ideas. Like one thing that we're a little worried about in
 the first case is the quality of the data we collect. The model just for like for example, some
@@ -934,7 +938,7 @@ of garbage from random people.
 </turn>
 
 
-<turn speaker="Walleed Ammar" timestamp="30:52">
+<turn speaker="Waleed Ammar" timestamp="30:52">
 
 Yeah. We like some of the team members spent a lot of time trying to like come up with ways to do
 this quickly, but it was very hard and it was time consuming. It was not a very effective way or
@@ -967,7 +971,7 @@ Cool. Great.
 </turn>
 
 
-<turn speaker="Walleed Ammar" timestamp="31:34">
+<turn speaker="Waleed Ammar" timestamp="31:34">
 
 Excellent. Looking forward to it. Thank you, Isabelle.
 

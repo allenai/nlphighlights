@@ -1,10 +1,14 @@
 ---
 title: "Knowledge Base Construction, with Sebastian Riedel"
 hosts: ["Matt Gardner","Waleed Ammar"]
-guests: ["Sebastian R."]
+guests: ["Sebastian Riedel"]
 number: "083"
 tags: []
-description: "In this episode, we invite Sebastian Riedel to talk about knowledge base construction (KBC). Why is it an important research area? What are the tradeoffs between using an open vs. closed schema? What are popular methods currently used, and what challenges prevent the adoption of KBC methods? We also briefly discuss the AKBC workshop and its graduation into a conference in 2019. Sebastian Riedel's homepage: http://www.riedelcastro.org/ AKBC conference: http://www.akbc.ws/2019/"
+description: "In this episode, we invite Sebastian Riedel to talk about knowledge base construction (KBC). Why is it an important research area? What are the tradeoffs between using an open vs. closed schema? What are popular methods currently used, and what challenges prevent the adoption of KBC methods? We also briefly discuss the AKBC workshop and its graduation into a conference in 2019.
+
+Sebastian Riedel's homepage: http://www.riedelcastro.org/
+
+AKBC conference: http://www.akbc.ws/2019/"
 type: episode
 ---
 
@@ -36,7 +40,7 @@ great to have you on the program. Welcome.
 </turn>
 
 
-<turn speaker="Sebastian R." timestamp="00:31">
+<turn speaker="Sebastian Riedel" timestamp="00:31">
 
 Yeah, pleased to be here. Thanks for inviting me.
 
@@ -54,7 +58,7 @@ construction is and why people care about this.
 </turn>
 
 
-<turn speaker="Sebastian R." timestamp="00:57">
+<turn speaker="Sebastian Riedel" timestamp="00:57">
 
 So yeah, knowledge base construction, automatic knowledge base construction. I guess it's generally
 about taking text, but also more recently other kinds of modalities, and sort of representing the
@@ -71,7 +75,7 @@ combines two angles.
 </turn>
 
 
-<turn speaker="Sebastian R." timestamp="01:57">
+<turn speaker="Sebastian Riedel" timestamp="01:57">
 
 One is that I think it's one of the few what I call like naturally occurring semantic
 representations in the world where people have been building even before we thought about NLP or
@@ -87,7 +91,7 @@ graph, they exist a lot of biomedical knowledge graphs, right?
 </turn>
 
 
-<turn speaker="Sebastian R." timestamp="02:54">
+<turn speaker="Sebastian Riedel" timestamp="02:54">
 
 That have been built even without any sort of like NLP in mind just because they seem to be
 reasonable and useful data structures for downstream users. So I think that's kind of interesting
@@ -103,7 +107,7 @@ observe and represent it in some kind of memory in order to later on access that
 </turn>
 
 
-<turn speaker="Sebastian R." timestamp="03:52">
+<turn speaker="Sebastian Riedel" timestamp="03:52">
 
 And so I think you can look at KBC or AKBC also as one hypothesis in terms of how agents can do this
 right? In the traditional AKBC world you sort of build these relational graphs? And the idea is then
@@ -132,7 +136,7 @@ structure, parsing sentence structure. Like "I ate spaghetti with a fork."
 </turn>
 
 
-<turn speaker="Sebastian R." timestamp="05:20">
+<turn speaker="Sebastian Riedel" timestamp="05:20">
 
 Yeah.
 
@@ -152,7 +156,7 @@ make sense?
 </turn>
 
 
-<turn speaker="Sebastian R." timestamp="05:53">
+<turn speaker="Sebastian Riedel" timestamp="05:53">
 
 Yeah, I think it makes it a sense and to me it points to one of sort of maybe disappointments. I I
 have with sort of AKBC in a sense that, well I think the kind of methods that we've developed and
@@ -167,7 +171,7 @@ recall.
 </turn>
 
 
-<turn speaker="Sebastian R." timestamp="06:41">
+<turn speaker="Sebastian Riedel" timestamp="06:41">
 
 Like we don't have enough coverage of all the facts you need in a way. And the reason for that is
 that even if you give an AKBC system, the same knowledge or the same texts you'd give say Elmo or
@@ -183,7 +187,7 @@ necessarily get there.
 </turn>
 
 
-<turn speaker="Sebastian R." timestamp="07:44">
+<turn speaker="Sebastian Riedel" timestamp="07:44">
 
 I think when you, when you think about AKBC from the perspective of building these graphs of facts,
 entities and relations, then to me like the main point of that is because there are users who want
@@ -211,7 +215,7 @@ spaghetti's and forks but doesn't know about the facts that you might see in a c
 </turn>
 
 
-<turn speaker="Sebastian R." timestamp="09:07">
+<turn speaker="Sebastian Riedel" timestamp="09:07">
 
 That's a good question. I like to point out at this point that we actually have been testing Elmo
 and Bert a little for that kind of relational knowledge. And it turns out, at least in sort of
@@ -249,7 +253,7 @@ Right?
 </turn>
 
 
-<turn speaker="Sebastian R." timestamp="11:20">
+<turn speaker="Sebastian Riedel" timestamp="11:20">
 
 Yes. That's probably even similar to what we have observed in some sense. And I in the sense that
 there would be example where it gets a completely wrong, right. But there are actually quite a few
@@ -277,7 +281,7 @@ just want to remember. Does that make sense?
 </turn>
 
 
-<turn speaker="Sebastian R." timestamp="12:41">
+<turn speaker="Sebastian Riedel" timestamp="12:41">
 
 Yeah, I think that makes sense. I think that is probably true, its good thing to further test. I
 think you right that a relation extraction system. Like if the particular pattern in the text has
@@ -302,7 +306,7 @@ than I do. How do people build these knowledge bases?
 </turn>
 
 
-<turn speaker="Sebastian R." timestamp="13:43">
+<turn speaker="Sebastian Riedel" timestamp="13:43">
 
 I guess it's usually some sort of pipeline that involves a couple of steps. First step is to figure
 out what are the entities and text using named entity recognition. Then you link these entities to
@@ -317,7 +321,7 @@ that entity is the other entity.
 </turn>
 
 
-<turn speaker="Sebastian R." timestamp="14:40">
+<turn speaker="Sebastian Riedel" timestamp="14:40">
 
 I think that in a nutshell is a, at least the traditional way of extracting or building knowledge
 bases. There are different variants of that. In terms of how you define or work with the schema that
@@ -334,7 +338,7 @@ Can I jump in here? Can you give an example of what you mean by open schema vers
 </turn>
 
 
-<turn speaker="Sebastian R." timestamp="15:05">
+<turn speaker="Sebastian Riedel" timestamp="15:05">
 
 The closed schema is I have maybe an existing knowledge base and I decide I want a model four types
 of relations ahead of time. One being maybe born in, birth date, profession or employer and spouse,
@@ -345,7 +349,7 @@ that schema would just be discarded.
 </turn>
 
 
-<turn speaker="Sebastian R." timestamp="15:36">
+<turn speaker="Sebastian Riedel" timestamp="15:36">
 
 And then later on you can make inferences using that knowledge base that you construct, but only in
 terms of these four relations. So that's what I would call a closed schema information extraction.
@@ -370,7 +374,7 @@ entities you would like to represent in the knowledge base.
 </turn>
 
 
-<turn speaker="Sebastian R." timestamp="16:45">
+<turn speaker="Sebastian Riedel" timestamp="16:45">
 
 Yeah, that's a good point.
 
@@ -390,7 +394,7 @@ any thoughts on why that was the case?
 </turn>
 
 
-<turn speaker="Sebastian R." timestamp="17:21">
+<turn speaker="Sebastian Riedel" timestamp="17:21">
 
 Yeah, I don't know why that is the case that that's definitely true. I am not 100% sure why. Maybe
 maybe it's worthwhile to look a bit back into the history of it. I feel like a lot of KBC and
@@ -423,7 +427,7 @@ lot easier and well scoped to just talk about the named entities.
 </turn>
 
 
-<turn speaker="Sebastian R." timestamp="19:17">
+<turn speaker="Sebastian Riedel" timestamp="19:17">
 
 Yeah, I think you're right it, and then I think what you said in the end makes a lot of sense as in
 I think the core problem with that isn't maybe so much the recognition of these phrases. I mean
@@ -446,7 +450,7 @@ entities than they care about curating for just regular entities.
 </turn>
 
 
-<turn speaker="Sebastian R." timestamp="20:10">
+<turn speaker="Sebastian Riedel" timestamp="20:10">
 
 Yeah, that's true. And it might also be that they do care about that because also that's easier to
 annotate and produce. Then actual sort of other kinds of concepts or events they would have to link.
@@ -471,7 +475,7 @@ for the listeners and what happened? Like the history of this, of this kind of a
 </turn>
 
 
-<turn speaker="Sebastian R." timestamp="21:18">
+<turn speaker="Sebastian Riedel" timestamp="21:18">
 
 Yes, I'm happy to. So generally again distance supervision is that, when you extract these relations
 in the traditional supervised setting, somebody goes over a lot of sentences and says, yes, that's a
@@ -487,7 +491,7 @@ mentioned Barack Obama and Hawaii.
 </turn>
 
 
-<turn speaker="Sebastian R." timestamp="22:20">
+<turn speaker="Sebastian Riedel" timestamp="22:20">
 
 Then I'm just going to pretend that that sentence is expressing the relation birth place because I
 just assumed that when I mentioned Barack Obama and Hawaii, it must be because they are birth place
@@ -522,7 +526,7 @@ evidence, how do I deal with this? Are you, are you familiar with work that does
 </turn>
 
 
-<turn speaker="Sebastian R." timestamp="24:26">
+<turn speaker="Sebastian Riedel" timestamp="24:26">
 
 Um, actually, no. I think it must exist. I haven't really followed up on that, but I think it is
 something that always comes up actually every time I give presentations, that's the first thing that
@@ -552,7 +556,7 @@ that you get in your input.
 </turn>
 
 
-<turn speaker="Sebastian R." timestamp="25:55">
+<turn speaker="Sebastian Riedel" timestamp="25:55">
 
 Yeah. I mean actually so you mentioned this and I'm interested in your view on this. So you
 mentioned knowledge grafts haven't seen so much practical use, which I agree with. In the case of
@@ -637,7 +641,7 @@ here. Right. So yeah, this is, this is a hard problem with a lot of moving parts
 </turn>
 
 
-<turn speaker="Sebastian R." timestamp="30:51">
+<turn speaker="Sebastian Riedel" timestamp="30:51">
 
 Yes. This is a really challenging, I'm also not a hundred percent sure whether the way to get this
 to build is very precise graphs that capture all of these conditions precisely and explicitly in a
@@ -661,7 +665,7 @@ hard to manage.
 </turn>
 
 
-<turn speaker="Sebastian R." timestamp="31:55">
+<turn speaker="Sebastian Riedel" timestamp="31:55">
 
 Yes, And it becomes harder and harder to annotate even right. Like a, the more complex this kind of
 schema and conditioning is, the harder it is to explain that to people in the right way and the more
@@ -686,7 +690,7 @@ at a later time.
 </turn>
 
 
-<turn speaker="Sebastian R." timestamp="33:03">
+<turn speaker="Sebastian Riedel" timestamp="33:03">
 
 That sounds really good. Yeah. Maybe I just to sort of, not end but get to a more positive note
 because it sounded a bit like AKBC is just not working at all. I disagree with that, right? Like, I
@@ -700,7 +704,7 @@ right now they're all on Elmo and Bert, right? Or all the other sort of exciting
 </turn>
 
 
-<turn speaker="Sebastian R." timestamp="33:47">
+<turn speaker="Sebastian Riedel" timestamp="33:47">
 
 But when it comes to talking to companies in their needs, the first thing they talk to me about is,
 often just, Oh, it will be great to have these knowledge bases automatically extracted from it. I
@@ -749,7 +753,7 @@ there are other efforts somewhere that are also copying this.
 </turn>
 
 
-<turn speaker="Sebastian R." timestamp="36:26">
+<turn speaker="Sebastian Riedel" timestamp="36:26">
 
 Oh yeah, that sounds great. I'm looking forward to your talk at the AKBC, a conference on, on that.
 
@@ -765,7 +769,7 @@ or want to highlight before we finish?
 </turn>
 
 
-<turn speaker="Sebastian R." timestamp="36:45">
+<turn speaker="Sebastian Riedel" timestamp="36:45">
 
 I'm not from the top of my head right now. I think we covered quite a bit of ground.
 
@@ -781,7 +785,7 @@ automatic knowledge base construction workshop and now it's a conference.
 </turn>
 
 
-<turn speaker="Sebastian R." timestamp="37:02">
+<turn speaker="Sebastian Riedel" timestamp="37:02">
 
 Yeah.
 
@@ -796,7 +800,7 @@ the fields? Like what, what is this?
 </turn>
 
 
-<turn speaker="Sebastian R." timestamp="37:09">
+<turn speaker="Sebastian Riedel" timestamp="37:09">
 
 Yeah, I think that it's part of that there is generally a steady and increasing interest in this
 which we have seen over the past, but maybe even more so. I mean you mentioned sort of the KBC
@@ -821,7 +825,7 @@ It's been good to talk to you.
 </turn>
 
 
-<turn speaker="Sebastian R." timestamp="38:15">
+<turn speaker="Sebastian Riedel" timestamp="38:15">
 
 Yeah, yeah. Really enjoyable. Thanks so much for, for running this. I think that's much appreciated.
 Generally.

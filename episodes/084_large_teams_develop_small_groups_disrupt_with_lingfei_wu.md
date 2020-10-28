@@ -4,7 +4,13 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Lingfei Wu"]
 number: "084"
 tags: []
-description: "In a recent Nature paper, Lingfei Wu (Ling) suggests that smaller teams of scientists tend to do more disruptive work. In this episode, we invite Ling to discuss their results, how they define disruption and possible reasons why smaller teams may be better positioned to do disruptive work. We also touch on robustness of the disruption metric, differences between research disciplines, and sleeping beauties in science. Lingfei Wu’s homepage: https://www.knowledgelab.org/people/detail/lingfei_wu/ Paper: https://www.nature.com/articles/s41586-019-0941-9 Note: Lingfei is on the job market for faculty positions at the intersection of social science, computer science and communication."
+description: "In a recent Nature paper, Lingfei Wu (Ling) suggests that smaller teams of scientists tend to do more disruptive work. In this episode, we invite Ling to discuss their results, how they define disruption and possible reasons why smaller teams may be better positioned to do disruptive work. We also touch on robustness of the disruption metric, differences between research disciplines, and sleeping beauties in science.
+
+Lingfei Wu’s homepage: https://www.knowledgelab.org/people/detail/lingfei_wu/
+
+Paper: https://www.nature.com/articles/s41586-019-0941-9
+
+Note: Lingfei is on the job market for faculty positions at the intersection of social science, computer science and communication."
 type: episode
 ---
 

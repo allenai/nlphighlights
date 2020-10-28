@@ -4,7 +4,9 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Paramita Mirza"]
 number: "050"
 tags: []
-description: "ACL 2017 paper, by Paramita Mirza, Simon Razniewski, Fariz Darari, and Gerhard Weikum. There's not a whole lot of work on numbers in NLP, and getting good information out of numbers expressed in text can be challenging. In this episode, Paramita comes on to tell us about her efforts to use distant supervision to learn models that extract relation cardinalities from text. That is, given an entity and a relation in a knowledge base, like \"Barack Obama\" and \"has child\", the goal is to extract _how many_ related entities there are (in this case, two). There are a lot of challenges in getting this to work well, and Paramita describes some of those, and how she solved them. https://www.semanticscholar.org/paper/Cardinal-Virtues-Extracting-Relation-Cardinalities-Mirza-Razniewski/01afba9f40e0df06446b9cd3d5ea8725c4ba1342"
+description: "ACL 2017 paper, by Paramita Mirza, Simon Razniewski, Fariz Darari, and Gerhard Weikum. There's not a whole lot of work on numbers in NLP, and getting good information out of numbers expressed in text can be challenging. In this episode, Paramita comes on to tell us about her efforts to use distant supervision to learn models that extract relation cardinalities from text. That is, given an entity and a relation in a knowledge base, like \"Barack Obama\" and \"has child\", the goal is to extract _how many_ related entities there are (in this case, two). There are a lot of challenges in getting this to work well, and Paramita describes some of those, and how she solved them.
+
+https://www.semanticscholar.org/paper/Cardinal-Virtues-Extracting-Relation-Cardinalities-Mirza-Razniewski/01afba9f40e0df06446b9cd3d5ea8725c4ba1342"
 type: episode
 ---
 

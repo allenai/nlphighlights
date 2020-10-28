@@ -1,10 +1,14 @@
 ---
 title: "Reinforcement _ Imitation Learning in NLP, with Hal Daumé III"
 hosts: ["Matt Gardner","Waleed Ammar"]
-guests: ["Hal Daume III"]
+guests: ["Hal Daumé III"]
 number: "075"
 tags: []
-description: "In this episode, we invite Hal Daumé to continue the discussion on reinforcement learning, focusing on how it has been used in NLP. We discuss how to reduce NLP problems into the reinforcement learning framework, and circumstances where it may or may not be useful. We discuss imitation learning, roll-in and roll-out, and how to approximate an expert with a reference policy. DAgger: https://www.semanticscholar.org/paper/A-Reduction-of-Imitation-Learning-and-Structured-to-Ross-Gordon/17eddf33b513ae1134abadab728bdbf6abab2a05?navId=citing-papers RESLOPE: http://legacydirs.umiacs.umd.edu/~hal/docs/daume18reslope.pdf"
+description: "In this episode, we invite Hal Daumé to continue the discussion on reinforcement learning, focusing on how it has been used in NLP. We discuss how to reduce NLP problems into the reinforcement learning framework, and circumstances where it may or may not be useful. We discuss imitation learning, roll-in and roll-out, and how to approximate an expert with a reference policy.
+
+DAgger: https://www.semanticscholar.org/paper/A-Reduction-of-Imitation-Learning-and-Structured-to-Ross-Gordon/17eddf33b513ae1134abadab728bdbf6abab2a05?navId=citing-papers
+
+RESLOPE: http://legacydirs.umiacs.umd.edu/~hal/docs/daume18reslope.pdf"
 type: episode
 ---
 
@@ -28,7 +32,7 @@ Artificial Intelligence.
 
 <turn speaker="Waleed Ammar" timestamp="00:11">
 
-Today our guest is Hal Daume, Hal is a professor of computer science at the University of Maryland.
+Today our guest is Hal Daumé, Hal is a professor of computer science at the University of Maryland.
 College park is currently on leave at Microsoft research in New York. He's interested in studying
 how to get computers to learn language through natural interaction with people. He's also interested
 in studying how we can do this in a way that promotes fairness, transparency and extend-ability in
@@ -37,7 +41,7 @@ learned models. Welcome to the program.
 </turn>
 
 
-<turn speaker="Hal Daume III" timestamp="00:32">
+<turn speaker="Hal Daumé III" timestamp="00:32">
 
 Thanks.
 
@@ -54,7 +58,7 @@ and why would you do it?
 </turn>
 
 
-<turn speaker="Hal Daume III" timestamp="00:49">
+<turn speaker="Hal Daumé III" timestamp="00:49">
 
 Yeah, sure. So I think in some ways this is actually a lot easier to explain now than it was five or
 or certainly 10 years ago. So one of the things that changed recently is with the advent of sort of
@@ -71,7 +75,7 @@ sequential decision making problem.
 </turn>
 
 
-<turn speaker="Hal Daume III" timestamp="01:51">
+<turn speaker="Hal Daumé III" timestamp="01:51">
 
 And so I think that while this sort of style of thinking of structured prediction output as being
 one of making a sequence of decisions hasn't historically been the way that many people in the field
@@ -99,7 +103,7 @@ very recently a whole bunch of reinforcement learning methods being applied to t
 </turn>
 
 
-<turn speaker="Hal Daume III" timestamp="03:13">
+<turn speaker="Hal Daumé III" timestamp="03:13">
 
 I think this is a really interesting example. So the cases where if I think about this, you know,
 sort of as like a traditional structured prediction problem, the structure is in a latent variable
@@ -115,7 +119,7 @@ So the first is that the world is deterministic typically and also typically ful
 </turn>
 
 
-<turn speaker="Hal Daume III" timestamp="04:04">
+<turn speaker="Hal Daumé III" timestamp="04:04">
 
 So in translation, I know if I say the next word should be dog, the next word is going to be dog.
 There's no chance that like the world conspires against me and does something unexpected. And so
@@ -147,7 +151,7 @@ a fixed known reward at every step.
 </turn>
 
 
-<turn speaker="Hal Daume III" timestamp="05:45">
+<turn speaker="Hal Daumé III" timestamp="05:45">
 
 Yeah, I think that's, I mean I think that's like 90% right. So I think there are some cases that I
 want to set aside. So your semantic parsing case I think is a little different because there you
@@ -165,7 +169,7 @@ space. So it's questionable whether that's even the same thing here. Right?
 </turn>
 
 
-<turn speaker="Hal Daume III" timestamp="06:06">
+<turn speaker="Hal Daumé III" timestamp="06:06">
 
 Yeah, I think that's right. So, but I think, yeah, in the traditional sort of structured prediction
 setting where the output that's structured, at least in cases where you know, we've successfully, we
@@ -188,7 +192,7 @@ reward that you get at the end of completion of a task, you get to observe some 
 </turn>
 
 
-<turn speaker="Hal Daume III" timestamp="07:01">
+<turn speaker="Hal Daumé III" timestamp="07:01">
 
 And then hopefully you can learn from their behavior. And I think there's two dominant styles within
 imitation learning. So one, I would roughly term learning from demonstration. So the setting there
@@ -203,7 +207,7 @@ expert is queryable.
 </turn>
 
 
-<turn speaker="Hal Daume III" timestamp="07:52">
+<turn speaker="Hal Daumé III" timestamp="07:52">
 
 So translation you would say, okay, the gold standard output was "the hippopotamus walked into the
 lake." And you know, maybe my translation system starts off and it produces "a big," and then you
@@ -219,7 +223,7 @@ suffix.
 </turn>
 
 
-<turn speaker="Hal Daume III" timestamp="08:51">
+<turn speaker="Hal Daumé III" timestamp="08:51">
 
 And so for some tasks this is trivial, like sequence labeling under a Hamming loss, the answer is
 always just do whatever is the right thing to do on the next word. In some cases it's a bit harder.
@@ -241,7 +245,7 @@ to approximate this loss?
 </turn>
 
 
-<turn speaker="Hal Daume III" timestamp="09:39">
+<turn speaker="Hal Daumé III" timestamp="09:39">
 
 So in practice for these sort of general text prediction tasks, like whether it's translation or
 caption generation or something like that, we've tended to use edit distance because it's actually
@@ -264,7 +268,7 @@ So, how is the preformance for choices of the trends was a approximating every w
 </turn>
 
 
-<turn speaker="Hal Daume III" timestamp="10:35">
+<turn speaker="Hal Daumé III" timestamp="10:35">
 
 The answer here is actually a complicated and I think pretty interesting. So there's actually kind
 of a big open question. Okay. Maybe it's not a big open question, but I think there's an open
@@ -280,7 +284,7 @@ or something like that where there's all sorts of partial credit for synonyms an
 </turn>
 
 
-<turn speaker="Hal Daume III" timestamp="11:30">
+<turn speaker="Hal Daumé III" timestamp="11:30">
 
 And there's a little bit of an analogy to even like binary classification under surrogate losses.
 Like are you better off optimizing the thing that you care about or are you better off optimizing
@@ -308,7 +312,7 @@ approximations for their work.
 </turn>
 
 
-<turn speaker="Hal Daume III" timestamp="12:46">
+<turn speaker="Hal Daumé III" timestamp="12:46">
 
 Yeah, I think that's right. And you know, I think there's also a little bit of a disconnect, you
 know, between some research land and real land, right? In research land we're happy to say like, Oh,
@@ -332,7 +336,7 @@ incomprehensible. So why should you do this?
 </turn>
 
 
-<turn speaker="Hal Daume III" timestamp="13:50">
+<turn speaker="Hal Daumé III" timestamp="13:50">
 
 Yeah, it used to be the case at least at the document understanding conference that they would use
 ROUGE where it first throughout all stop words. And so if you train against that, lo and behold,
@@ -350,7 +354,7 @@ Could you tell us about it as a concrete way of doing imitation learning?
 </turn>
 
 
-<turn speaker="Hal Daume III" timestamp="14:17">
+<turn speaker="Hal Daumé III" timestamp="14:17">
 
 Yeah, so I often say the dagger is my favorite algorithm. And the reason I say that is because it's
 a, it's simple. It works pretty well. It's not like you can't beat it for sure. It's been beaten
@@ -365,7 +369,7 @@ classifier to try to re predict that action.
 </turn>
 
 
-<turn speaker="Hal Daume III" timestamp="15:03">
+<turn speaker="Hal Daumé III" timestamp="15:03">
 
 So this is essentially what, you know, for instance, in sequence to sequence models, this is
 basically how they're all trained by default. The problem, which I guess you know we've known about
@@ -380,7 +384,7 @@ okay, first run supervised learning or behavioral cloning.
 </turn>
 
 
-<turn speaker="Hal Daume III" timestamp="15:51">
+<turn speaker="Hal Daumé III" timestamp="15:51">
 
 Now what I'm going to do is I'm going to take the thing that I learned there and I'm going to run it
 over the training data and it will probably diverged from what the expert did. and every time it
@@ -396,7 +400,7 @@ you don't have to run it too long.
 </turn>
 
 
-<turn speaker="Hal Daume III" timestamp="16:36">
+<turn speaker="Hal Daumé III" timestamp="16:36">
 
 You'll end up with something that has reasonably good performance guarantees. Nowadays, I think most
 people who do dagger would call what I just described batch dagger because you're sort of building a
@@ -421,7 +425,7 @@ when you were mixing these examples, especially online.
 </turn>
 
 
-<turn speaker="Hal Daume III" timestamp="17:38">
+<turn speaker="Hal Daumé III" timestamp="17:38">
 
 Right. So, so I guess just to be precise that the terminology that I like for this is that I think
 of this as I'm making a sequence of decisions and at some point I'm going to ask the expert what
@@ -436,7 +440,7 @@ interpolate between the expert and the learned policy or whatever.
 </turn>
 
 
-<turn speaker="Hal Daume III" timestamp="18:29">
+<turn speaker="Hal Daumé III" timestamp="18:29">
 
 This also comes up in like the mixer algorithm where they do some sort of interpolation. So I think
 here the answer is slightly unsatisfying. So the answer is that like, at least as far as theory
@@ -451,7 +455,7 @@ examples, it's making essentially random decisions.
 </turn>
 
 
-<turn speaker="Hal Daume III" timestamp="19:20">
+<turn speaker="Hal Daumé III" timestamp="19:20">
 
 And so you're getting like really not so useful feedback. The only place I've seen someone really
 try to analyze this is in the scheduled sampling paper. So scheduled sampling is basically running
@@ -467,7 +471,7 @@ examples and I'm going to do 10 passes over the data.
 </turn>
 
 
-<turn speaker="Hal Daume III" timestamp="20:15">
+<turn speaker="Hal Daumé III" timestamp="20:15">
 
 So that's like a hundred thousand examples. So I picked the 0.99 so that that number to the 100,000
 is like 0.1 or something like that. So that, you know, I have, cause you know, if you sent it to a
@@ -494,7 +498,7 @@ an expert for what comes next? Is this from the data?
 </turn>
 
 
-<turn speaker="Hal Daume III" timestamp="21:38">
+<turn speaker="Hal Daumé III" timestamp="21:38">
 
 Yeah. So thank you for asking this question because this is the question that everyone asks and yet
 I still clearly gloss over it too much. So abstractly, the, you know, this notion of an expert came
@@ -509,7 +513,7 @@ let me rephrase that.
 </turn>
 
 
-<turn speaker="Hal Daume III" timestamp="22:32">
+<turn speaker="Hal Daumé III" timestamp="22:32">
 
 What I want the expert to do is I want the experts to tell me what action to make right now so that
 if I made that and all subsequent decisions, optimally I would minimize my downstream loss. And so
@@ -528,7 +532,7 @@ I get each action right? Right.
 </turn>
 
 
-<turn speaker="Hal Daume III" timestamp="23:14">
+<turn speaker="Hal Daumé III" timestamp="23:14">
 
 Yeah, that's right. So, how many words do I tag incorrect? If this is the loss that I care about, if
 I'm asking myself, how should I tag the fifth word, it makes no difference how I tagged the previous
@@ -559,7 +563,7 @@ something over? Like how, how does this work?
 </turn>
 
 
-<turn speaker="Hal Daume III" timestamp="24:54">
+<turn speaker="Hal Daumé III" timestamp="24:54">
 
 Yeah, so this is hard. My recollection, which I hope is not wrong, but my recollection is that in
 for instance the scheduled sampling paper, they use a strategy which has been called data as
@@ -574,7 +578,7 @@ blah, blah, blah. Or it's going to count as a swap where you swapped the word hi
 </turn>
 
 
-<turn speaker="Hal Daume III" timestamp="25:42">
+<turn speaker="Hal Daumé III" timestamp="25:42">
 
 So let's assume that your string edit distance, is set up so that the cost of a swap is bigger than
 the cost of an insertion, which it's kind of an arbitrary decision, but it makes this case work out.
@@ -594,7 +598,7 @@ a lot more informative on whether the swamp or the insertion is more reasonable.
 </turn>
 
 
-<turn speaker="Hal Daume III" timestamp="26:23">
+<turn speaker="Hal Daumé III" timestamp="26:23">
 
 Yeah, right. Yes, you're right. It does not. If you wanted to be fancy, you could have some sort of
 a nontrivial costs associated with swaps and insertions and deletions. Right. You could say swapping
@@ -611,7 +615,7 @@ That's, it doesn't seem that far to push this toward using it inside of an algor
 </turn>
 
 
-<turn speaker="Hal Daume III" timestamp="26:54">
+<turn speaker="Hal Daumé III" timestamp="26:54">
 
 So I think this is a totally reasonable thing to do. I simply haven't tried it. I think one thing
 that's not totally obvious is how you would compare those costs to cost of insertions and deletions.
@@ -629,7 +633,7 @@ And it's totally context dependent, which will like kill your algorithm for effi
 </turn>
 
 
-<turn speaker="Hal Daume III" timestamp="27:21">
+<turn speaker="Hal Daumé III" timestamp="27:21">
 
 Yeah, that's right. Right. So because it's edit distance, it has to be word by word. You're not
 allowed to condition on anything else or the dynamic program goes away.
@@ -653,7 +657,7 @@ variables that we're predicting. Why would we do it?
 </turn>
 
 
-<turn speaker="Hal Daume III" timestamp="27:42">
+<turn speaker="Hal Daumé III" timestamp="27:42">
 
 Yeah. So I think this answer has actually changed dramatically over time. So in the beginning,
 meaning 10, 12 years ago, the answer was was fewer independence assumptions and speed. So at the
@@ -668,7 +672,7 @@ at test time, which means that you get to condition on whatever you want and you
 </turn>
 
 
-<turn speaker="Hal Daume III" timestamp="28:30">
+<turn speaker="Hal Daumé III" timestamp="28:30">
 
 I think that now the story is a bit different because I think that to some degree, the incumbent
 techniques these days are sequence to sequence models and their variants trained on maximum
@@ -683,7 +687,7 @@ notion of getting additional data off the training path sort of goes away.
 </turn>
 
 
-<turn speaker="Hal Daume III" timestamp="29:24">
+<turn speaker="Hal Daumé III" timestamp="29:24">
 
 So I think that where you would hope to see sort of interesting things happen are cases where the
 model does often sort of get off the gold path in ways that are potentially recoverable but that
@@ -706,7 +710,7 @@ all the time? Is the performance actually compelling enough for everyone to be u
 </turn>
 
 
-<turn speaker="Hal Daume III" timestamp="30:25">
+<turn speaker="Hal Daumé III" timestamp="30:25">
 
 Yeah, I think there's a couple of things. One is I think that for very well studied problems like
 you know, a part of speech tagging or dependency parsing or whatever, they're pretty much always
@@ -721,7 +725,7 @@ technical engineering stuff.
 </turn>
 
 
-<turn speaker="Hal Daume III" timestamp="31:19">
+<turn speaker="Hal Daumé III" timestamp="31:19">
 
 Right? Cause like if you think about translation, what I'm really asking you to do if you want to
 run this algorithm is I'm asking you to decode your training set many, many times. And decoding is
@@ -736,7 +740,7 @@ like I really like language. Like it's fun to think about like how do I model la
 </turn>
 
 
-<turn speaker="Hal Daume III" timestamp="32:08">
+<turn speaker="Hal Daumé III" timestamp="32:08">
 
 And I think we think more about that and less about algorithms and I think that's totally fine. I
 think that, you know, the best of both worlds is that the people who love thinking about
@@ -761,7 +765,7 @@ for imitation learning?
 </turn>
 
 
-<turn speaker="Hal Daume III" timestamp="33:12">
+<turn speaker="Hal Daumé III" timestamp="33:12">
 
 Yeah. Every problem. No more seriously. I, you know, I think it's like, you know, if you're already
 doing really well on the problem, it's not worth the effort. The other thing to keep in mind is that
@@ -785,7 +789,7 @@ Are there other characteristics that will tell you that this is a good fit?
 </turn>
 
 
-<turn speaker="Hal Daume III" timestamp="34:16">
+<turn speaker="Hal Daumé III" timestamp="34:16">
 
 Well, I mean from a practical perspective, if you have a super enormous dataset A, you might be able
 to just fit it pretty well B, you might be really unexcited about decoding it over and over again,
@@ -806,7 +810,7 @@ Alright, sounds good. Are there any other thoughts on this topic?
 </turn>
 
 
-<turn speaker="Hal Daume III" timestamp="34:58">
+<turn speaker="Hal Daumé III" timestamp="34:58">
 
 So we talked about imitation learning for sort of the bulk. I wanted to circle back briefly to like
 reinforcement learning more broadly. There's been a handful of papers. The first one I know of that
@@ -824,7 +828,7 @@ one star to five star or something.
 </turn>
 
 
-<turn speaker="Hal Daume III" timestamp="35:58">
+<turn speaker="Hal Daumé III" timestamp="35:58">
 
 And then you'd like to use that to improve the quality of the translations. This looks much, much
 more like a reinforcement learning problem where I make a sequence of decisions to produce a
@@ -840,7 +844,7 @@ setting.
 </turn>
 
 
-<turn speaker="Hal Daume III" timestamp="36:51">
+<turn speaker="Hal Daumé III" timestamp="36:51">
 
 And I guess my side comment is reinforcement learning is really hard. If you can avoid doing it,
 you're probably in a pretty good place when we have problems like this where there is additional
@@ -864,7 +868,7 @@ structured bandit, I guess semantic parsing is another area that's at least clos
 </turn>
 
 
-<turn speaker="Hal Daume III" timestamp="37:51">
+<turn speaker="Hal Daumé III" timestamp="37:51">
 
 Yeah, no, I think exactly. I mean, you know, I honestly haven't followed semantic parsing for the
 past couple of years, but a couple of years ago I remember sort of the, maybe the dominant paradigm
@@ -895,7 +899,7 @@ us a little bit about us.
 </turn>
 
 
-<turn speaker="Hal Daume III" timestamp="38:50">
+<turn speaker="Hal Daumé III" timestamp="38:50">
 
 Yeah. So re slope, you know, I could, I could tell you about it for an hour, but I won't. So this
 paper essentially started as this paper on learning to search better than your teacher, which was
@@ -912,7 +916,7 @@ what my default would have been.
 </turn>
 
 
-<turn speaker="Hal Daume III" timestamp="39:44">
+<turn speaker="Hal Daumé III" timestamp="39:44">
 
 So I try this new thing and then at the end of the day I see some loss or some reward associated
 with it. Now the problem is that I don't know whether that loss should be attributed to the decision
@@ -928,7 +932,7 @@ and see if that gets me to the library any faster.
 </turn>
 
 
-<turn speaker="Hal Daume III" timestamp="40:38">
+<turn speaker="Hal Daumé III" timestamp="40:38">
 
 So I choose to go straight and let's say after a block I run into one of my friends at a coffee shop
 and I grab a cup of coffee and I talk to them for five minutes. And then I ended up late to the
@@ -949,7 +953,7 @@ That sounds a lot like inverse reinforcement learning is that one of the ways yo
 </turn>
 
 
-<turn speaker="Hal Daume III" timestamp="41:21">
+<turn speaker="Hal Daumé III" timestamp="41:21">
 
 So actually that had not occurred to me when we were working on this. But yeah, I mean I think there
 is very much an inverse reinforcement learning flavor. So for people who don't know, right. So
@@ -964,7 +968,7 @@ something about a reward.
 </turn>
 
 
-<turn speaker="Hal Daume III" timestamp="42:04">
+<turn speaker="Hal Daumé III" timestamp="42:04">
 
 I think the difference is that in traditional IRL, the data with which you do this is typically
 demonstrations. Whereas in re slope, the data with which we're doing this is this reward that you
@@ -989,7 +993,7 @@ have a second hand experience.
 </turn>
 
 
-<turn speaker="Hal Daume III" timestamp="43:08">
+<turn speaker="Hal Daumé III" timestamp="43:08">
 
 My encouragement if you do is there was a nice summer school at the vector Institute this past
 summer on deep learning and reinforcement learning. I guess this is just a plug for anyone who's
@@ -1011,7 +1015,7 @@ All right. Thank you very much for joining us today. This was a fun conversation
 </turn>
 
 
-<turn speaker="Hal Daume III" timestamp="43:52">
+<turn speaker="Hal Daumé III" timestamp="43:52">
 
 Yeah. Thank you for having me. I really enjoyed it.
 

@@ -4,7 +4,9 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Rachel Rudinger"]
 number: "068"
 tags: []
-description: "NAACL 2018 paper, by Rachel Rudinger, Aaron Steven White, and Benjamin Van Durme Rachel comes on to the podcast, telling us about what factuality is (did an event happen?), what datasets exist for doing this task (a few; they made a new, bigger one), and how to build models to predict factuality (turns out a vanilla biLSTM does quite well). Along the way, we have interesting discussions about how you decide what an \"event\" is, how you label factuality (whether something happened) on inherently uncertain text (like \"I probably failed the test\"), and how you might use a system that predicts factuality in some end task. https://www.semanticscholar.org/paper/Neural-models-of-factuality-Rudinger-White/4d62a1e7819f9e3f8c837832c66659db5a6d9b37"
+description: "NAACL 2018 paper, by Rachel Rudinger, Aaron Steven White, and Benjamin Van Durme Rachel comes on to the podcast, telling us about what factuality is (did an event happen?), what datasets exist for doing this task (a few; they made a new, bigger one), and how to build models to predict factuality (turns out a vanilla biLSTM does quite well). Along the way, we have interesting discussions about how you decide what an \"event\" is, how you label factuality (whether something happened) on inherently uncertain text (like \"I probably failed the test\"), and how you might use a system that predicts factuality in some end task.
+
+https://www.semanticscholar.org/paper/Neural-models-of-factuality-Rudinger-White/4d62a1e7819f9e3f8c837832c66659db5a6d9b37"
 type: episode
 ---
 

@@ -4,7 +4,9 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Jacob Buckman"]
 number: "063"
 tags: []
-description: "TACL 2018 paper by Jacob Buckman and Graham Neubig. Jacob tells us about marginalizing over latent structure in a sentence by doing a clever parameterization of a lattice with a model kind of like a tree LSTM. This lets you treat collocations as multi-word units, or allow words to have multiple senses, without having to commit to a particular segmentation or word sense disambiguation up front. We talk about how this works and what comes out. One interesting result that comes out of the sense lattice: learning word senses from a language modeling objective tends to give you senses that capture the mode of the \"next word\" distribution, like uses of \"bank\" that are always followed by \"of\". Helpful for local perplexity, but not really what you want if you're looking for semantic senses, probably. https://www.semanticscholar.org/paper/Neural-Lattice-Language-Models-Buckman-Neubig/f36b961ea5106c19c341763bd9942c1f09038e5d"
+description: "TACL 2018 paper by Jacob Buckman and Graham Neubig. Jacob tells us about marginalizing over latent structure in a sentence by doing a clever parameterization of a lattice with a model kind of like a tree LSTM. This lets you treat collocations as multi-word units, or allow words to have multiple senses, without having to commit to a particular segmentation or word sense disambiguation up front. We talk about how this works and what comes out. One interesting result that comes out of the sense lattice: learning word senses from a language modeling objective tends to give you senses that capture the mode of the \"next word\" distribution, like uses of \"bank\" that are always followed by \"of\". Helpful for local perplexity, but not really what you want if you're looking for semantic senses, probably.
+
+https://www.semanticscholar.org/paper/Neural-Lattice-Language-Models-Buckman-Neubig/f36b961ea5106c19c341763bd9942c1f09038e5d"
 type: episode
 ---
 

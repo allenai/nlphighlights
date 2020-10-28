@@ -2,9 +2,15 @@
 title: "The Glass Ceiling in NLP, with Natalie Schluter"
 hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Natalie Schluter"]
-number: "080"
+number: "079"
 tags: []
-description: TODO
+description: "In this episode, Natalie Schluter talks to us about a data-driven analysis of career progression of male vs. female researchers in NLP through the lens of mentor-mentee networks based on ~20K papers in the ACL anthology. Directed edges in the network describe a mentorship relation from the last author on a paper to the last author, and author names were annotated for gender when possible. Interesting observations include the increase of percentage of mentors (regardless of gender), and an increasing gap between the fraction of mentors who are males and females since the early 2000s. By analyzing the number of years between a researcher’s first publication and the year at which they achieve mentorship status at threshold T, defined by publishing T or more papers as a last author, Natalie also found that female researchers tend to take much longer to be mentors.  Another interesting finding is that in-gender mentorship is a strong predictor of the mentee’s success in becoming mentors themselves. Finally, Natalie describes the bias preferential attachment model of Avin et al. (2015) and applies it to the gender-annotated mentor-mentee network in NLP, formally describing a glass ceiling in NLP for female researchers.
+
+www.semanticscholar.org/paper/The-gla…45909c8f86f4b
+
+See also: Homophily and the glass ceiling effect in social networks, at ITCS 2015, by Chen Avin, Barbara Keller, Zvi Lotker, Claire Mathieu, David Peleg, and Yvonne-Anne Pignolet.  www.semanticscholar.org/paper/Homophi…466478031b8ff
+
+Apologies for the relatively poor audio quality on this one; we did our best."
 type: episode
 ---
 

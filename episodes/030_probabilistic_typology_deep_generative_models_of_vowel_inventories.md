@@ -4,7 +4,9 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: []
 number: "030"
 tags: []
-description: "Paper by Ryan Cotterell and Jason Eisner, presented by Matt. This paper won the best paper award at ACL 2017. It's also quite outside the typical focus areas that you see at NLP conferences, trying to build generative models of vowel vocabularies in languages. That means we give quite a bit of set up, to try to help someone not familiar with this area understand what's going on. That makes this episode quite a bit longer than a typical non-interview episode. https://www.semanticscholar.org/paper/Probabilistic-Typology-Deep-Generative-Models-of-V-Cotterell-Eisner/6fad97c4fe0cfb92478d8a17a4e6aaa8637d8222"
+description: "Paper by Ryan Cotterell and Jason Eisner, presented by Matt. This paper won the best paper award at ACL 2017. It's also quite outside the typical focus areas that you see at NLP conferences, trying to build generative models of vowel vocabularies in languages. That means we give quite a bit of set up, to try to help someone not familiar with this area understand what's going on. That makes this episode quite a bit longer than a typical non-interview episode.
+
+https://www.semanticscholar.org/paper/Probabilistic-Typology-Deep-Generative-Models-of-V-Cotterell-Eisner/6fad97c4fe0cfb92478d8a17a4e6aaa8637d8222"
 type: episode
 ---
 

@@ -4,7 +4,9 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Omer Goldman"]
 number: "059"
 tags: []
-description: "ACL 2018 paper by Omer Goldman, Veronica Latcinnik, Udi Naveh, Amir Globerson, and Jonathan Berant Omer comes on to tell us about a class project (done mostly by undergraduates!) that made it into ACL. Omer and colleagues built a semantic parser that gets state-of-the-art results on the Cornell Natural Language Visual Reasoning dataset. They did this by using \"abstract examples\" - they replaced the entities in the questions and corresponding logical forms with their types, labeled about a hundred examples in this abstracted formalism, and used those labels to do data augmentation and train their parser. They also used some interesting caching tricks, and a discriminative reranker. https://www.semanticscholar.org/paper/Weakly-supervised-Semantic-Parsing-with-Abstract-Goldman-Latcinnik/5aec2ab5bf2979da067e2aa34762b589a0680030"
+description: "ACL 2018 paper by Omer Goldman, Veronica Latcinnik, Udi Naveh, Amir Globerson, and Jonathan Berant Omer comes on to tell us about a class project (done mostly by undergraduates!) that made it into ACL. Omer and colleagues built a semantic parser that gets state-of-the-art results on the Cornell Natural Language Visual Reasoning dataset. They did this by using \"abstract examples\" - they replaced the entities in the questions and corresponding logical forms with their types, labeled about a hundred examples in this abstracted formalism, and used those labels to do data augmentation and train their parser. They also used some interesting caching tricks, and a discriminative reranker.
+
+https://www.semanticscholar.org/paper/Weakly-supervised-Semantic-Parsing-with-Abstract-Goldman-Latcinnik/5aec2ab5bf2979da067e2aa34762b589a0680030"
 type: episode
 ---
 

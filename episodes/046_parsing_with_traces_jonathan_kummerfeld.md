@@ -4,7 +4,11 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Jonathan Kummerfeld"]
 number: "046"
 tags: []
-description: "TACL 2017 paper by Jonathan K. Kummerfeld and Dan Klein. Jonathan tells us about his work on parsing algorithms that capture traces and null elements in sentence structure. We spend the first third of the conversation talking about what these are and why they are interesting - if you want to correctly handle wh-movement, or coordinating structures, or control structures, or many other phenomena that we commonly see in language, you really want to handle traces and null elements, but most current parsers totally ignore these phenomena. The second third of the conversation is about how the parser works, and we conclude by talking about some of the implications of the work, and where to go next - should we really be pushing harder on capturing linguistic structure when everyone seems to be going towards end-to-end learning on some higher-level task? https://www.semanticscholar.org/paper/Parsing-with-Traces-An-O-n-4-Algorithm-and-a-Struc-Kummerfeld-Klein/af89e56b3d9b720d43cae9f4971928c5cb95cbe3 Jonathan also blogs about papers that he's reading; check out his paper summaries at http://jkk.name/"
+description: "TACL 2017 paper by Jonathan K. Kummerfeld and Dan Klein. Jonathan tells us about his work on parsing algorithms that capture traces and null elements in sentence structure. We spend the first third of the conversation talking about what these are and why they are interesting - if you want to correctly handle wh-movement, or coordinating structures, or control structures, or many other phenomena that we commonly see in language, you really want to handle traces and null elements, but most current parsers totally ignore these phenomena. The second third of the conversation is about how the parser works, and we conclude by talking about some of the implications of the work, and where to go next - should we really be pushing harder on capturing linguistic structure when everyone seems to be going towards end-to-end learning on some higher-level task?
+
+https://www.semanticscholar.org/paper/Parsing-with-Traces-An-O-n-4-Algorithm-and-a-Struc-Kummerfeld-Klein/af89e56b3d9b720d43cae9f4971928c5cb95cbe3
+
+Jonathan also blogs about papers that he's reading; check out his paper summaries at http://jkk.name/"
 type: episode
 ---
 

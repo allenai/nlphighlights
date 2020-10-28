@@ -4,7 +4,9 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Siva Reddy"]
 number: "080"
 tags: []
-description: "Originally used to entice fierce competitions in arcade games, leaderboards recently made their way into NLP research circles. Leaderboards could help mitigate some of the problems in how researchers run experiments and share results (e.g., accidentally overfitting models on a test set), but they also introduce new problems (e.g., breaking author anonymity in peer reviewing). In this episode, Siva Reddy joins us to talk about the good, the bad, and the ugly of using leaderboards in science. We also discuss potential solutions to address some of the outstanding problems with existing leaderboard frameworks. Software platforms for leaderboards: http://codalab.org/ https://leaderboard.allenai.org/"
+description: "Originally used to entice fierce competitions in arcade games, leaderboards recently made their way into NLP research circles. Leaderboards could help mitigate some of the problems in how researchers run experiments and share results (e.g., accidentally overfitting models on a test set), but they also introduce new problems (e.g., breaking author anonymity in peer reviewing). In this episode, Siva Reddy joins us to talk about the good, the bad, and the ugly of using leaderboards in science. We also discuss potential solutions to address some of the outstanding problems with existing leaderboard frameworks.
+
+Software platforms for leaderboards: http://codalab.org/ https://leaderboard.allenai.org/"
 type: episode
 ---
 

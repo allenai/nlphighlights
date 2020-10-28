@@ -4,7 +4,9 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Nitish Gupta"]
 number: "033"
 tags: []
-description: "EMNLP 2017 paper by Nitish Gupta, Sameer Singh, and Dan Roth. Nitish comes on to talk to us about his paper, which presents a new entity linking model that both unifies prior sources of information into a single neural model, and trains that model in a domain-agnostic way, so it can be transferred to new domains without much performance degradation. https://www.semanticscholar.org/paper/Entity-Linking-via-Joint-Encoding-of-Types-Descrip-Gupta-Singh/a66b6a3ac0aa9af6c178c1d1a4a97fd14a882353"
+description: "EMNLP 2017 paper by Nitish Gupta, Sameer Singh, and Dan Roth. Nitish comes on to talk to us about his paper, which presents a new entity linking model that both unifies prior sources of information into a single neural model, and trains that model in a domain-agnostic way, so it can be transferred to new domains without much performance degradation.
+
+https://www.semanticscholar.org/paper/Entity-Linking-via-Joint-Encoding-of-Types-Descrip-Gupta-Singh/a66b6a3ac0aa9af6c178c1d1a4a97fd14a882353"
 type: episode
 ---
 

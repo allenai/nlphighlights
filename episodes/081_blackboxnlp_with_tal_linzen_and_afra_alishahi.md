@@ -4,7 +4,13 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Tal Linzen","Afra Alishahi"]
 number: "081"
 tags: []
-description: "Neural models recently resulted in large performance improvements in various NLP problems, but our understanding of what and how the models learn remains fairly limited. In this episode, Tal Linzen and Afra Alishahi talk to us about BlackboxNLP, an EMNLP’18 workshop dedicated to the analysis and interpretation of neural networks for NLP. In the workshop, computer scientists and cognitive scientists joined forces to probe and analyze neural NLP models. BlackboxNLP 2018 website: https://blackboxnlp.github.io/2018/ BlackboxNLP 2018 proceedings: https://aclanthology.info/events/ws-2018#W18-54 BlackboxNLP 2019 website: https://blackboxnlp.github.io/"
+description: "Neural models recently resulted in large performance improvements in various NLP problems, but our understanding of what and how the models learn remains fairly limited. In this episode, Tal Linzen and Afra Alishahi talk to us about BlackboxNLP, an EMNLP’18 workshop dedicated to the analysis and interpretation of neural networks for NLP. In the workshop, computer scientists and cognitive scientists joined forces to probe and analyze neural NLP models.
+
+BlackboxNLP 2018 website: https://blackboxnlp.github.io/2018/
+
+BlackboxNLP 2018 proceedings: https://aclanthology.info/events/ws-2018#W18-54
+
+BlackboxNLP 2019 website: https://blackboxnlp.github.io/"
 type: episode
 ---
 

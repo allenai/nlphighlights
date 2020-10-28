@@ -1,10 +1,12 @@
 ---
 title: "Deep contextualized word representations, with Matthew Peters"
-hosts: ["Waleed","Matt Gardner","Waleed Ammar"]
+hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Matthew Peters"]
 number: "056"
 tags: []
-description: "NAACL 2018 paper, by Matt Peters, Mark Neumann, Mohit Iyyer, Matt Gardner, Chris Clark, Kenton Lee, and Luke Zettlemoyer. In this episode, AI2's own Matt Peters comes on the show to talk about his recent work on ELMo embeddings, what some have called \"the next word2vec\". Matt has shown very convincingly that using a pre-trained bidirectional language model to get contextualized word representations performs substantially better than using static word vectors. He comes on the show to give us some more intuition about how and why this works, and to talk about some of the other things he tried and what's coming next. https://www.semanticscholar.org/paper/Deep-contextualized-word-representations-Peters-Neumann/4b17597b856c087f109381ce77d60d9017cb6f9a"
+description: "NAACL 2018 paper, by Matt Peters, Mark Neumann, Mohit Iyyer, Matt Gardner, Chris Clark, Kenton Lee, and Luke Zettlemoyer. In this episode, AI2's own Matt Peters comes on the show to talk about his recent work on ELMo embeddings, what some have called \"the next word2vec\". Matt has shown very convincingly that using a pre-trained bidirectional language model to get contextualized word representations performs substantially better than using static word vectors. He comes on the show to give us some more intuition about how and why this works, and to talk about some of the other things he tried and what's coming next.
+
+https://www.semanticscholar.org/paper/Deep-contextualized-word-representations-Peters-Neumann/4b17597b856c087f109381ce77d60d9017cb6f9a"
 type: episode
 ---
 
@@ -26,7 +28,7 @@ Artificial Intelligence.
 </turn>
 
 
-<turn speaker="Waleed" timestamp="00:13">
+<turn speaker="Waleed Ammar" timestamp="00:13">
 
 Today our guest is Matt Peters. Matt is a research scientist at the Allen Institute for Artificial
 Intelligence, AI2, where he explores the applications of deep neural networks to a varity of NLP
@@ -503,7 +505,7 @@ for instance.
 </turn>
 
 
-<turn speaker="Waleed" timestamp="23:02">
+<turn speaker="Waleed Ammar" timestamp="23:02">
 
 And if you look at just part of speech tagging accuracies are word sentence integration, which are
 the two that we considered is the overall absolute performance you get from the bi-directional

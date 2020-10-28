@@ -1,10 +1,20 @@
 ---
 title: "A Structural Probe for Finding Syntax in Word Representations, with John Hewitt"
 hosts: ["Matt Gardner","Waleed Ammar"]
-guests: ["John Hewitt","New Speaker"]
+guests: ["John Hewitt"]
 number: "088"
 tags: []
-description: "In this episode, we invite John Hewitt to discuss his take on how to probe word embeddings for syntactic information. The basic idea is to project word embeddings to a vector space where the L2 distance between a pair of words in a sentence approximates the number of hops between them in the dependency tree. The proposed method shows that ELMo and BERT representations, trained with no syntactic supervision, embed many of the unlabeled, undirected dependency attachments between words in the same sentence. Paper: https://nlp.stanford.edu/pubs/hewitt2019structural.pdf GitHub repository: https://github.com/john-hewitt/structural-probes Blog post: https://nlp.stanford.edu/~johnhew/structural-probe.html Twitter thread: https://twitter.com/johnhewtt/status/1114252302141886464 John's homepage: https://nlp.stanford.edu/~johnhew/"
+description: "In this episode, we invite John Hewitt to discuss his take on how to probe word embeddings for syntactic information. The basic idea is to project word embeddings to a vector space where the L2 distance between a pair of words in a sentence approximates the number of hops between them in the dependency tree. The proposed method shows that ELMo and BERT representations, trained with no syntactic supervision, embed many of the unlabeled, undirected dependency attachments between words in the same sentence.
+
+Paper: https://nlp.stanford.edu/pubs/hewitt2019structural.pdf
+
+GitHub repository: https://github.com/john-hewitt/structural-probes
+
+Blog post: https://nlp.stanford.edu/~johnhew/structural-probe.html
+
+Twitter thread: https://twitter.com/johnhewtt/status/1114252302141886464
+
+John's homepage: https://nlp.stanford.edu/~johnhew/"
 type: episode
 ---
 
@@ -157,7 +167,7 @@ Great, thanks.
 </turn>
 
 
-<turn speaker="New Speaker" timestamp="05:33">
+<turn speaker="Matt Gardner" timestamp="05:33">
 
 Yeah, so we enticed the listeners enough, I think about this probe. Could you tell us, how do you
 actually do that?
@@ -501,7 +511,7 @@ ask very different questions.
 </turn>
 
 
-<turn speaker="New Speaker" timestamp="19:12">
+<turn speaker="Matt Gardner" timestamp="19:12">
 
 Right? So we didn't really talk about the evaluation. How do you evaluate after you apply the
 boundaries of your probe, what numbers do you report?

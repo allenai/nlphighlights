@@ -4,7 +4,9 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["James Bradbury"]
 number: "055"
 tags: []
-description: "In this episode, we take a more systems-oriented approach to NLP, looking at issues with writing deep learning code for NLP models. As a lot of people have discovered over the last few years, efficiently batching multiple examples together for fast training on a GPU can be very challenging with complex NLP models. James Bradbury comes on to tell us about Matchbox, his recent effort to provide a framework for automatic batching with pytorch. In the discussion, we talk about why batching is hard, why it's important, how other people have tried to solve this problem in the past, and what James' solution to the problem is. Code is available here: https://github.com/salesforce/matchbox"
+description: "In this episode, we take a more systems-oriented approach to NLP, looking at issues with writing deep learning code for NLP models. As a lot of people have discovered over the last few years, efficiently batching multiple examples together for fast training on a GPU can be very challenging with complex NLP models. James Bradbury comes on to tell us about Matchbox, his recent effort to provide a framework for automatic batching with pytorch. In the discussion, we talk about why batching is hard, why it's important, how other people have tried to solve this problem in the past, and what James' solution to the problem is. Code is available here:
+
+https://github.com/salesforce/matchbox"
 type: episode
 ---
 

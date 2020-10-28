@@ -1,10 +1,14 @@
 ---
 title: "Neural Text Generation in Stories Using Entity Representations as Context, with Elizabeth Clark and Yangfeng Ji"
 hosts: ["Matt Gardner","Waleed Ammar"]
-guests: ["New Speaker","Yangfeng Ji","Elizabeth Clark"]
+guests: ["Yangfeng Ji","Elizabeth Clark"]
 number: "061"
 tags: []
-description: "NAACL 2018 Outstanding Paper by Elizabeth Clark, Yangfeng Ji, and Noah A. Smith Both Elizabeth and Yangfeng come on the podcast to tell us about their work. This paper is an extension of an EMNLP 2017 paper by Yangfeng and co-authors that introduced a language model that included explicit entity representations. Elizabeth and Yangfeng take that model, improve it a bit, and use it for creative narrative generation, with some interesting applications. We talk a little bit about the model, but mostly about how the model was used to generate narrative text, how it was evaluated, and what other interesting applications there are of this idea. The punchline is that this model does a better job at generating coherent stories than other generation techniques, because it can track the entities in the story better. We've been experimenting with how we record the audio, trying to figure out how to get better audio quality. Sadly, this episode was a failed experiment, and there is a background hiss that we couldn't get rid of. Bear with us as we work on this... https://www.semanticscholar.org/paper/Generation-in-Stories-Using-Entity-Representations-Clark-Ji/56df50601975f6065b8acc0a08c169aaecad97bc"
+description: "NAACL 2018 Outstanding Paper by Elizabeth Clark, Yangfeng Ji, and Noah A. Smith Both Elizabeth and Yangfeng come on the podcast to tell us about their work. This paper is an extension of an EMNLP 2017 paper by Yangfeng and co-authors that introduced a language model that included explicit entity representations. Elizabeth and Yangfeng take that model, improve it a bit, and use it for creative narrative generation, with some interesting applications. We talk a little bit about the model, but mostly about how the model was used to generate narrative text, how it was evaluated, and what other interesting applications there are of this idea. The punchline is that this model does a better job at generating coherent stories than other generation techniques, because it can track the entities in the story better.
+
+We've been experimenting with how we record the audio, trying to figure out how to get better audio quality. Sadly, this episode was a failed experiment, and there is a background hiss that we couldn't get rid of. Bear with us as we work on this...
+
+https://www.semanticscholar.org/paper/Generation-in-Stories-Using-Entity-Representations-Clark-Ji/56df50601975f6065b8acc0a08c169aaecad97bc"
 type: episode
 ---
 
@@ -328,7 +332,7 @@ Yeah, untrained and trained.
 </turn>
 
 
-<turn speaker="New Speaker" timestamp="12:05">
+<turn speaker="Waleed Ammar" timestamp="12:05">
 
 I see.
 

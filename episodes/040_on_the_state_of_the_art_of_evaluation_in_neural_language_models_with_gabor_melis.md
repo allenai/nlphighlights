@@ -4,7 +4,9 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["Gabor Melis"]
 number: "040"
 tags: []
-description: "Recent arxiv paper by Gábor Melis, Chris Dyer, and Phil Blunsom. Gábor comes on the podcast to tell us about his work. He performs a thorough comparison between vanilla LSTMs and recurrent highway networks on the language modeling task, showing that when both methods are given equal amounts of hyperparameter tuning, LSTMs perform better, in contrast to prior work claiming that recurrent highway networks perform better. We talk about parameter tuning, training variance, language model evaluation, and other related issues. https://www.semanticscholar.org/paper/On-the-State-of-the-Art-of-Evaluation-in-Neural-La-Melis-Dyer/2397ce306e5d7f3d0492276e357fb1833536b5d8"
+description: "Recent arxiv paper by Gábor Melis, Chris Dyer, and Phil Blunsom. Gábor comes on the podcast to tell us about his work. He performs a thorough comparison between vanilla LSTMs and recurrent highway networks on the language modeling task, showing that when both methods are given equal amounts of hyperparameter tuning, LSTMs perform better, in contrast to prior work claiming that recurrent highway networks perform better. We talk about parameter tuning, training variance, language model evaluation, and other related issues.
+
+https://www.semanticscholar.org/paper/On-the-State-of-the-Art-of-Evaluation-in-Neural-La-Melis-Dyer/2397ce306e5d7f3d0492276e357fb1833536b5d8"
 type: episode
 ---
 

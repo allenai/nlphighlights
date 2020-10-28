@@ -4,7 +4,9 @@ hosts: ["Matt Gardner","Waleed Ammar"]
 guests: ["David Jurgens"]
 number: "070"
 tags: []
-description: "TACL 2018 paper (presented at ACL 2018) by David Jurgens, Srijan Kumar, Raine Hoover, Daniel A. McFarland, and Daniel Jurafsky David comes on the podcast to talk to us about citation frames. We discuss the dataset they created by painstakingly annotating the \"citation type\" for all of the citations in a large collection of papers (around 2000 citations in total), then training a classifier on that data to annotate the rest of the ACL anthology. This process itself is interesting, including how exactly the citations are classified, and we talk about this for a bit. The second half of the podcast talks about the analysis that David and colleagues did using the (automatically) annotated ACL anthology, trying to gauge how the field has changed over time. https://www.semanticscholar.org/paper/Measuring-the-Evolution-of-a-Scientific-Field-Jurgens-Kumar/65118f3a7463f54bdf9b9e5cdd655953a2488c2f"
+description: "TACL 2018 paper (presented at ACL 2018) by David Jurgens, Srijan Kumar, Raine Hoover, Daniel A. McFarland, and Daniel Jurafsky David comes on the podcast to talk to us about citation frames. We discuss the dataset they created by painstakingly annotating the \"citation type\" for all of the citations in a large collection of papers (around 2000 citations in total), then training a classifier on that data to annotate the rest of the ACL anthology. This process itself is interesting, including how exactly the citations are classified, and we talk about this for a bit. The second half of the podcast talks about the analysis that David and colleagues did using the (automatically) annotated ACL anthology, trying to gauge how the field has changed over time.
+
+https://www.semanticscholar.org/paper/Measuring-the-Evolution-of-a-Scientific-Field-Jurgens-Kumar/65118f3a7463f54bdf9b9e5cdd655953a2488c2f"
 type: episode
 ---
 
