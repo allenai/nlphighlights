@@ -32,12 +32,6 @@ module.exports = {
                 plugins: [
                     `gatsby-remark-copy-linked-files`,
                     {
-                        resolve: `gatsby-remark-prismjs`,
-                        options: {
-                            noInlineHighlight: true
-                        }
-                    },
-                    {
                         resolve: `gatsby-remark-smartypants`,
                         options: {
                             dashes: 'oldschool'

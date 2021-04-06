@@ -6,7 +6,7 @@
     "twitter": "ai2_allennlp",
     "googleAnalyticsId": "UA-105970043-4",
     "headerLinks": [
-        { "text": "AI2 Website", "url": "https://allenai.org/" },
-        { "text": "AllenNLP Website", "url": "https://allennlp.org/" }
+        { "text": "AI2 Home", "url": "https://allenai.org/" },
+        { "text": "AllenNLP Home", "url": "https://allennlp.org/" }
     ]
 }

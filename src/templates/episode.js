@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { graphql, navigate } from 'gatsby';
 import useLocalStorage from '@illinois/react-use-local-storage';
 import styled, { createGlobalStyle, css } from 'styled-components';
-import { Button } from '@allenai/varnish/components/button';
 
 import { renderAst } from '../markdown';
 import { EpisodeContext } from '../context';
@@ -392,62 +391,6 @@ const EpisodeIntroText = styled.div`
 
         @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
             margin-bottom: ${({ theme }) => theme.spacing.lg};
-        }
-    }
-`;
-
-const PartTitle = styled.strong`
-    ${({ theme }) => theme.typography.h6}
-    display: block;
-    text-transform: uppercase;
-    margin: 0 0 23px 2px;
-
-    @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
-        ${mobileEpisodeTitleStyles}
-    }
-`;
-
-// Previous / Next episode buttons
-const Pagination = styled.div`
-    padding: 54px 0;
-    width: 100%;
-    display: flex;
-
-    div:last-child {
-        margin-left: auto;
-    }
-`;
-
-const DisclosureIcon = styled(Disclosure)`
-    height: 12px;
-    width: auto;
-    margin: 0 2px;
-    transform: translate(5px, 1px);
-`;
-
-const PrevButton = styled(Button)`
-    &&& {
-        span {
-            color: ${({ theme }) => theme.color.B6};
-        }
-
-        ${DisclosureIcon} {
-            transform: rotate(180deg) translate(5px, -1px);
-            fill: ${({ theme }) => theme.color.B6};
-        }
-    }
-`;
-
-// Special episode template instance of global footer
-const EpisodeFooter = styled(Footer)`
-    &&& {
-        padding: ${({ theme }) => theme.spacing.xl} 0;
-        background: transparent;
-        text-align: left;
-
-        @media (max-width: 1024px) {
-            text-align: center;
-            padding: ${({ theme }) => `${theme.spacing.sm} ${theme.spacing.lg}`};
         }
     }
 `;

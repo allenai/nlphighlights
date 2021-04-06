@@ -43,7 +43,7 @@ const Layout = ({
                         <Head title={title} description={description} />
                         <GlobalStyle mobileNavIsActive={mobileNavIsActive} />
                         <HeaderContainer mobileNavIsActive={mobileNavIsActive}>
-                            <VarnishHeader alwaysVisible={true}>
+                            <VarnishHeader>
                                 <HeaderContent>
                                     <LogoContainer>
                                         <a href="/">
