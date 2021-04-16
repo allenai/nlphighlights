@@ -79,7 +79,7 @@ export default ({ data }) => {
                 </EpisodeList>
             </Parts>
             <Credits>
-                NLP Highlights is a podcast run by the <Link to={data.site.siteMetadata.siteUrl}>AllenNLP</Link>
+                NLP Highlights is a podcast run by the <Link to={data.site.siteMetadata.siteUrl}>AllenNLP</Link>{' '}
                 team at the{' '} <Link to="https://allenai.org/">Allen Institute for AI</Link>.<br />
             </Credits>
             <Footer />
