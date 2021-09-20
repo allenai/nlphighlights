@@ -2,9 +2,13 @@
 // External links are determined by the existence of `http` in the URL.
 
 import React from 'react';
-import { Link as GatsbyLink } from 'gatsby';
+import { Link as GatsbyLink, GatsbyLinkProps } from 'gatsby';
 
-export const Link = ({ children, to, href, onClick, className, ...other }) => {
+interface Props extends  Omit<GatsbyLinkProps<any>, 'to'>{
+    to?: string;
+    href?: string;
+}
+export const Link = ({ children, to, href, onClick, className, ref = React.useRef(null), ...other }: Props) => {
     const dest = to || href;
     const external = /(http(s?)):\/\//gi.test(dest);
 

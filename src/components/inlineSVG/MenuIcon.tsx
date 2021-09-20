@@ -51,10 +51,12 @@ const BottomRect = styled(Rect).attrs({
     y: '17'
 })``;
 
+
 // Default configuration of Rects into hamburger icon
-const Svg = styled.svg.attrs({
-    viewBox: '0 0 24 20'
-})`
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const Svg = styled(({mobileNavIsActive, ...rest}) => <svg viewBox='0 0 24 20' {...rest} />)<{
+    mobileNavIsActive?: boolean;
+}>`
     fill: ${({ theme }) => theme.color.B6};
     width: ${({ theme }) => theme.spacing.lg};
     height: ${({ theme }) => theme.spacing.lg};

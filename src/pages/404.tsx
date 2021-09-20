@@ -1,16 +1,13 @@
 import React from 'react';
-import { graphql } from 'gatsby';
 import styled from 'styled-components';
 
 import Layout from '../components/Layout';
 import { Footer } from '../components/Footer';
-import { getGroupedEpisodes } from '../utils';
 
-export default ({ data }) => {
-    const groupedEpisodes = getGroupedEpisodes(data.allMarkdownRemark);
+export default () => {
 
     return (
-        <Layout groupedEpisodes={groupedEpisodes}>
+        <Layout>
             <CenteredContent>
                 <span>404</span>
                 <p>Page not found.</p>
@@ -19,24 +16,6 @@ export default ({ data }) => {
         </Layout>
     );
 };
-
-// GraphQL Query
-export const pageQuery = graphql`
-    {
-        allMarkdownRemark {
-            edges {
-                node {
-                    fields {
-                        slug
-                    }
-                    frontmatter {
-                        title
-                    }
-                }
-            }
-        }
-    }
-`;
 
 const CenteredContent = styled.div`
     display: flex;

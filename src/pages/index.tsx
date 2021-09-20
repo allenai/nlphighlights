@@ -1,41 +1,39 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { graphql } from 'gatsby';
 import styled, { css } from 'styled-components';
-import AnimateHeight from 'react-animate-height';
 import { above } from '@allenai/varnish/theme/breakpoints';
 
-import { getGroupedEpisodes } from '../utils';
+import { getGroupedEpisodes } from '../utils/utils';
 import Layout from '../components/Layout';
 import { Link } from '../components/Link';
 import { Container } from '../components/Container';
 import { Card, CardContent } from '../components/Card';
 import { Footer } from '../components/Footer';
-import { IconBox } from '../components/IconBox';
 import { ArrowRightIcon, ExpandCollapseIcon, Disclosure } from '../components/inlineSVG';
 
 function renderDescription(description) {
-  const lines = description.split("\n");
-  const result = [];
-  lines.forEach(line => {
-    result.push(line);
-    result.push(<br/>);
-    result.push(<br/>);
-  });
-  result.pop();
-  result.pop();
-  return result
+    const lines = description.split('\n');
+    const result = [];
+    lines.forEach(line => {
+        result.push(line);
+        result.push(<br />);
+        result.push(<br />);
+    });
+    result.pop();
+    result.pop();
+    return result;
 }
 
 // Home Page Export
 export default ({ data }) => {
     const groupedEpisodes = getGroupedEpisodes(data.allMarkdownRemark);
     const episodeSlugs = Object.keys(groupedEpisodes);
-    episodeSlugs.sort()
-    episodeSlugs.reverse()
-    console.log(groupedEpisodes)
+    episodeSlugs.sort();
+    episodeSlugs.reverse();
+    console.log(groupedEpisodes);
 
     return (
-        <Layout groupedEpisodes={groupedEpisodes}>
+        <Layout>
             <Banner>
                 <h1>{data.site.siteMetadata.title}</h1>
             </Banner>
@@ -43,23 +41,22 @@ export default ({ data }) => {
                 <SectionIntro>
                     <h2>About the podcast</h2>
                     <p>
-                      NLP Highlights is a podcast discussing interesting recent work in natural
-                      language processing.  The hosts are members of the AllenNLP team at the Allen
-                      Institute for AI.  This website contains a page for each episode, with
-                      transcriptions.
+                        NLP Highlights is a podcast discussing interesting recent work in natural
+                        language processing. The hosts are members of the AllenNLP team at the Allen
+                        Institute for AI. This website contains a page for each episode, with
+                        transcriptions.
                     </p>
 
                     <p>
-                      A note: transcribing technical discussions involving non-native speakers is
-                      challenging!  We have worked with our transcribers to try to make sure the
-                      technical terms and names used are correct, but there are surely errors that
-                      we missed.  To improve the transcriptions, please open a pull request on the
-                      <Link to="https://github.com/allenai/nlphighlights"> Github page</Link> for
-                      this website.
+                        A note: transcribing technical discussions involving non-native speakers is
+                        challenging! We have worked with our transcribers to try to make sure the
+                        technical terms and names used are correct, but there are surely errors that
+                        we missed. To improve the transcriptions, please open a pull request on the
+                        <Link to="https://github.com/allenai/nlphighlights"> Github page</Link> for
+                        this website.
                     </p>
                 </SectionIntro>
-                <PartContainer>
-                </PartContainer>
+                <PartContainer></PartContainer>
             </About>
             <Parts>
                 <SectionIntro>
@@ -68,9 +65,14 @@ export default ({ data }) => {
                 <EpisodeList>
                     {episodeSlugs.map(episodeSlug => (
                         <EpisodeLink key={episodeSlug} to={episodeSlug}>
-                            <h4>{parseInt(groupedEpisodes[episodeSlug].node.frontmatter.number)}: {groupedEpisodes[episodeSlug].node.frontmatter.title}</h4>
+                            <h4>
+                                {parseInt(groupedEpisodes[episodeSlug].node.frontmatter.number)}:{' '}
+                                {groupedEpisodes[episodeSlug].node.frontmatter.title}
+                            </h4>
                             <p>
-                                {renderDescription(groupedEpisodes[episodeSlug].node.frontmatter.description)}
+                                {renderDescription(
+                                    groupedEpisodes[episodeSlug].node.frontmatter.description
+                                )}
                                 <StyledArrowRightIcon />
                             </p>
                             <MobileDisclosure />
@@ -79,8 +81,9 @@ export default ({ data }) => {
                 </EpisodeList>
             </Parts>
             <Credits>
-                NLP Highlights is a podcast run by the <Link to={data.site.siteMetadata.siteUrl}>AllenNLP</Link>{' '}
-                team at the{' '} <Link to="https://allenai.org/">Allen Institute for AI</Link>.<br />
+                NLP Highlights is a podcast run by the{' '}
+                <Link to={data.site.siteMetadata.siteUrl}>AllenNLP</Link> team at the{' '}
+                <Link to="https://allenai.org/">Allen Institute for AI</Link>.<br />
             </Credits>
             <Footer />
         </Layout>
@@ -178,35 +181,6 @@ const SectionIntro = styled.div`
     }
 `;
 
-// Part UI
-
-// Container for colored icon, title and description
-const PartHeader = ({ className, color, icon, title, description, slug, onClick = () => {} }) => (
-    <PartHeaderContainer className={className} onClick={onClick}>
-        <StyledIconBox color={color} icon={icon} />
-        <PartHeaderText>
-            {title && (
-                <PartTitle>
-                    <span>{title}</span>
-                </PartTitle>
-            )}
-            {description && (
-                <PartDescription>
-                    <p>{description}</p>
-                    {slug && <MobileDisclosure />}
-                </PartDescription>
-            )}
-            {slug && (
-                <BeginLink>
-                    <div>
-                        Begin Episode <StyledArrowRightIcon />
-                    </div>
-                </BeginLink>
-            )}
-        </PartHeaderText>
-    </PartHeaderContainer>
-);
-
 // Right arrow icon for episode links
 const StyledArrowRightIcon = styled(ArrowRightIcon)`
     opacity: 0;
@@ -222,106 +196,6 @@ const activeStyledArrowRightIconStyles = css`
     }
 `;
 
-// Styled wrapper for `PartHeader` component
-const PartHeaderContainer = styled.div`
-    display: flex;
-    cursor: pointer;
-
-    &:hover {
-        ${activeStyledArrowRightIconStyles}
-    }
-`;
-
-// Colored box with icon
-const StyledIconBox = styled(IconBox)`
-    width: ${({ theme }) => theme.spacing.xxl.getRemValue() * 4}rem;
-
-    @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
-        position: absolute;
-        width: 80px;
-        height: 80px;
-    }
-`;
-
-// Container for part title and description
-const PartHeaderText = styled.div`
-    padding: ${({ theme }) =>
-        `${theme.spacing.md.getRemValue() * 2 -
-            theme.spacing.xxs.getRemValue()}rem ${theme.spacing.md.getRemValue() * 2}rem`};
-    padding-bottom: ${({ theme }) =>
-        theme.spacing.md.getRemValue() * 2 +
-        theme.spacing.xxl.getRemValue() -
-        theme.spacing.xxs.getRemValue()}rem;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-
-    p {
-        margin-bottom: 0;
-    }
-
-    @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
-        padding: 0 0 ${({ theme }) => theme.spacing.xxxl} 0;
-
-        p {
-            padding: ${({ theme }) => `${theme.spacing.sm} ${theme.spacing.lg}`};
-        }
-    }
-`;
-
-const PartTitle = styled.h3`
-    ${({ theme }) => theme.typography.h4};
-    padding-bottom: 0;
-    color: ${({ theme }) => theme.color.B6};
-
-    @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
-        background: ${({ theme }) => theme.color.N2};
-        font-size: 20px;
-        padding-left: 80px;
-        min-height: 80px;
-        display: flex;
-        align-items: center;
-
-        span {
-            padding: 0 ${({ theme }) => theme.spacing.lg};
-        }
-    }
-`;
-
-const PartDescription = styled.div`
-    @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
-        display: flex;
-        align-items: center;
-        padding-right: ${({ theme }) => theme.spacing.md};
-
-        p {
-            flex: 1;
-        }
-    }
-`;
-
-// Begin Episode link for Overview
-const BeginLink = styled.div`
-    ${({ theme }) => theme.typography.bodySmall};
-    display: grid;
-    grid-template-columns: max-content;
-    margin-top: auto;
-
-    div {
-        display: flex;
-        align-items: center;
-
-        @media ${({ theme }) => above(theme.breakpoints.md)} {
-            &:hover {
-                text-decoration: underline;
-            }
-        }
-    }
-
-    @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
-        display: none;
-    }
-`;
 
 const MobileDisclosure = styled(Disclosure)`
     display: none;
@@ -332,87 +206,6 @@ const MobileDisclosure = styled(Disclosure)`
         display: block;
     }
 `;
-
-// Clickable wrapper for standalone episode
-const StandaloneEpisodeLink = styled(Link)`
-    && {
-        &,
-        &:hover {
-            text-decoration: none;
-
-            ${PartTitle} {
-                color: ${({ theme }) => theme.color.B6};
-            }
-
-            p {
-                color: ${({ theme }) => theme.palette.text.primary};
-            }
-        }
-
-        ${PartHeaderText} {
-            padding-bottom: ${({ theme }) =>
-                theme.spacing.md.getRemValue() * 2 - theme.spacing.xxs.getRemValue()}rem;
-
-            @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
-                padding-bottom: 0;
-
-                p {
-                    margin-bottom: ${({ theme }) => theme.spacing.sm};
-                }
-            }
-        }
-
-        &:hover {
-            ${MobileDisclosure} {
-                fill: ${({ theme }) => theme.color.B6};
-            }
-        }
-    }
-`;
-
-// Container for PartHeader and episode list
-const Part = ({ data, groupedEpisodes }) => {
-    const { color, icon, title, description, episodeSlugs } = data;
-    const [episodeListIsVisible, setChaperListVisibility] = useState(false);
-
-    return (
-        <PartContainer episodeListIsVisible={episodeListIsVisible}>
-            <PartHeader
-                color={color}
-                icon={icon}
-                title={title}
-                description={description}
-                onClick={() => setChaperListVisibility(!episodeListIsVisible)}
-                episodeListIsVisible={episodeListIsVisible}
-            />
-            <div>
-                <EpisodeListTrigger>
-                    <TriggerClickArea
-                        onClick={() => setChaperListVisibility(!episodeListIsVisible)}>
-                        <TriggerTooltip>
-                            Explore {title.substr(0, title.indexOf(':'))}
-                        </TriggerTooltip>
-                        <TriggerIcon isExpanded={episodeListIsVisible} />
-                    </TriggerClickArea>
-                </EpisodeListTrigger>
-                <AnimateHeight animateOpacity={true} height={episodeListIsVisible ? 'auto' : 0}>
-                    <EpisodeList>
-                        {episodeSlugs.map(episodeSlug => (
-                            <EpisodeLink key={episodeSlug} to={episodeSlug}>
-                                <h4>{groupedEpisodes[episodeSlug].node.frontmatter.title}</h4>
-                                <p>
-                                    {groupedEpisodes[episodeSlug].node.frontmatter.description}
-                                    <StyledArrowRightIcon />
-                                </p>
-                                <MobileDisclosure />
-                            </EpisodeLink>
-                        ))}
-                    </EpisodeList>
-                </AnimateHeight>
-            </div>
-        </PartContainer>
-    );
-};
 
 // Visual treatment that makes card look like it's popping out of the screen
 const activeCardStyles = css`
@@ -463,7 +256,7 @@ const PartContainer = styled(({ episodeListIsVisible, ...props }) => <Card {...p
                 }
             }
 
-            ${({ episodeListIsVisible, theme }) =>
+            ${({ episodeListIsVisible }) =>
                 episodeListIsVisible
                     ? `
                 ${TriggerIcon} {
@@ -471,26 +264,6 @@ const PartContainer = styled(({ episodeListIsVisible, ...props }) => <Card {...p
                 }
             `
                     : null}
-        }
-    }
-`;
-
-// Clickable bar that triggers expand/collapse of episode list
-const EpisodeListTrigger = styled.div`
-    background: ${({ theme }) => theme.color.N2};
-    min-height: ${({ theme }) => theme.spacing.xxl};
-    margin-top: -${({ theme }) => theme.spacing.xxl};
-    display: flex;
-`;
-
-// E.g. "Explore Part 1"
-const TriggerTooltip = styled.span`
-    ${({ theme }) => theme.typography.bodySmall}
-    color: ${({ theme }) => theme.color.B6};
-
-    @media ${({ theme }) => above(theme.breakpoints.md)} {
-        &:hover {
-            text-decoration: underline;
         }
     }
 `;

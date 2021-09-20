@@ -4,9 +4,13 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { above } from '@allenai/varnish/theme/breakpoints';
-import { toRem } from '../../utils';
+import { toRem } from '../../utils/utils';
 
-export const ExpandCollapseIcon = ({ className, isExpanded = false }) => (
+interface Props {
+    className?: string;
+    isExpanded: boolean;
+}
+export const ExpandCollapseIcon: React.FC<Props> = ({ className, isExpanded = false }) => (
     <PaddedContainer
         className={className}
         isExpanded={isExpanded}
@@ -53,6 +57,7 @@ const strokeWeight = 1.5;
 
 /*  TODO(mattg): I'm not sure why this is crashing when other similar calls aren't, but I'm also not
  *  sure we need this, so it may not be worth looking into.
+*/
 const innerStyles = css`
     display: block;
     transform-origin: 50% 50%;
@@ -83,7 +88,7 @@ const PaddedContainer = styled(({ isExpanded, ...props }) => <span {...props} />
         background: ${({ theme }) => theme.color.N6};
     }
 
-    ${({ isExpanded, theme }) =>
+    ${({ isExpanded }) =>
         isExpanded
             ? `
         ${LeftOuter} {
@@ -105,4 +110,4 @@ const PaddedContainer = styled(({ isExpanded, ...props }) => <span {...props} />
         }
     }
 `;
-*/
+

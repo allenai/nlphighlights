@@ -3,17 +3,19 @@ import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 
 const Head = ({ title, description }) => {
-    const [ isClient, setIsClient ] = React.useState(false);
+    const [isClient, setIsClient] = React.useState(false);
     React.useEffect(() => {
         setIsClient(true);
-    }, false);
+    }, []);
     return (
         <StaticQuery
             query={query}
             render={data => {
                 const lang = 'en';
                 const siteMetadata = data.site.siteMetadata;
-                const pageTitle = title ? `${title} · ${siteMetadata.title}` : `${siteMetadata.title}`;
+                const pageTitle = title
+                    ? `${title} · ${siteMetadata.title}`
+                    : `${siteMetadata.title}`;
                 const pageDesc = description || siteMetadata.description;
                 const image = '/social.jpg';
                 const meta = [
@@ -69,7 +71,8 @@ const Head = ({ title, description }) => {
                 const link = [
                     {
                         rel: 'stylesheet',
-                        href: 'https://cdn.jsdelivr.net/npm/@allenai/varnish@0.8.11/dist/theme.min.css'
+                        href:
+                            'https://cdn.jsdelivr.net/npm/@allenai/varnish@0.8.11/dist/theme.min.css'
                     },
                     {
                         rel: 'icon',
@@ -93,7 +96,7 @@ const Head = ({ title, description }) => {
                         link={link}>
                         {gaId !== '' && (
                             <script
-                                async=""
+                                async
                                 src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
                             />
                         )}
@@ -106,13 +109,13 @@ const Head = ({ title, description }) => {
                             `}</script>
                         )}
                         {/* We only trigger this on the client to avoid double-counting:
-                          * - The `isClient` gates prevents the script from being includeed in
-                          *   the SSR'd version, which causes the double-count bug to occur.
-                          * - We intentionally omit the `data-spa` flag, as this component is
-                          *   re-rendered with every pageview, thereby triggering a Skiff Stats
-                          *   tracking request to fire.
-                          * See: https://github.com/allenai/skiff/issues/891 */
-                         isClient ? (
+                         * - The `isClient` gates prevents the script from being includeed in
+                         *   the SSR'd version, which causes the double-count bug to occur.
+                         * - We intentionally omit the `data-spa` flag, as this component is
+                         *   re-rendered with every pageview, thereby triggering a Skiff Stats
+                         *   tracking request to fire.
+                         * See: https://github.com/allenai/skiff/issues/891 */
+                        isClient ? (
                             <script
                                 src="https://stats.allenai.org/init.min.js"
                                 data-app-name="nlphighlights"
@@ -124,7 +127,7 @@ const Head = ({ title, description }) => {
             }}
         />
     );
-}
+};
 
 export default Head;
 

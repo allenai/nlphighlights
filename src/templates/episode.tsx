@@ -1,26 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import { graphql, navigate } from 'gatsby';
+import { graphql } from 'gatsby';
 import useLocalStorage from '@illinois/react-use-local-storage';
 import styled, { createGlobalStyle, css } from 'styled-components';
 
 import { renderAst } from '../markdown';
 import { EpisodeContext } from '../context';
 import Layout from '../components/Layout';
-import { Footer } from '../components/Footer';
 import { IconBox } from '../components/IconBox';
-import { Link } from '../components/Link';
 import { Navigation } from '../components/Navigation';
-import { Disclosure } from '../components/inlineSVG';
 
-import { getGroupedEpisodes } from '../utils';
+import { getGroupedEpisodes } from '../utils/utils';
 
 function formatStringList(headingSingular, headingPlural, strings) {
     if (strings === undefined || strings.length === 0) {
-        return "";
-    } else if (strings.length == 1) {
-        return headingSingular + ": " + strings[0];
+        return '';
+    } else if (strings.length === 1) {
+        return headingSingular + ': ' + strings[0];
     } else {
-        return headingPlural + ": " + strings.join(", ");
+        return headingPlural + ': ' + strings.join(', ');
     }
 }
 
@@ -31,9 +28,9 @@ const Template = ({ data, location }) => {
     const { title, hosts, guests, number, tags, description } = frontmatter;
     const { slug } = fields;
 
-    const guestStr = formatStringList("Guest", "Guests", guests);
-    const hostStr = formatStringList("Host", "Hosts", hosts);
-    const tagStr = formatStringList("Tags", "Tags", tags);
+    const guestStr = formatStringList('Guest', 'Guests', guests);
+    const hostStr = formatStringList('Host', 'Hosts', hosts);
+    const tagStr = formatStringList('Tags', 'Tags', tags);
 
     // Util consts for slugs and outline data
     const groupedEpisodes = getGroupedEpisodes(allMarkdownRemark);
@@ -43,7 +40,7 @@ const Template = ({ data, location }) => {
         `${courseId}-completed-${slug.substring(1)}`,
         []
     );
-    const [storedUserExpandedGroups, setUserExpandedGroups] = useLocalStorage('expandedGroups');
+    const [storedUserExpandedGroups, setUserExpandedGroups] = useLocalStorage('expandedGroups', null);
 
     // User-defined nav group expand/collapse state
     const html = renderAst(htmlAst);
@@ -84,17 +81,13 @@ const Template = ({ data, location }) => {
                 setCompleted,
                 setUserExpandedGroups
             }}>
-            <Layout
-                title={title}
-                groupedEpisodes={groupedEpisodes}
-                defaultSelectedKeys={[slug]}>
+            <Layout title={title} defaultSelectedKeys={[slug]}>
                 <GlobalStyle />
                 <Wrapper>
                     <LeftContainer>
                         <LeftContent>
                             <SideNav>
                                 <Navigation
-                                    groupedEpisodes={groupedEpisodes}
                                     defaultSelectedKeys={[slug]}
                                 />
                             </SideNav>
@@ -104,8 +97,7 @@ const Template = ({ data, location }) => {
                         <RightContent>
                             <EpisodeIntro>
                                 <div>
-                                    <StyledIconBox
-                                    />
+                                    <StyledIconBox />
                                 </div>
                                 <EpisodeIntroText>
                                     {title && (
@@ -114,13 +106,22 @@ const Template = ({ data, location }) => {
                                         </h1>
                                     )}
                                     {guestStr && (
-                                        <div> <span> {guestStr} </span> </div>
+                                        <div>
+                                            {' '}
+                                            <span> {guestStr} </span>{' '}
+                                        </div>
                                     )}
                                     {hostStr && (
-                                        <div> <span> {hostStr} </span> </div>
+                                        <div>
+                                            {' '}
+                                            <span> {hostStr} </span>{' '}
+                                        </div>
                                     )}
                                     {tagStr && (
-                                        <div> <span> {tagStr} </span> </div>
+                                        <div>
+                                            {' '}
+                                            <span> {tagStr} </span>{' '}
+                                        </div>
                                     )}
                                     {description && <p>{description}</p>}
                                 </EpisodeIntroText>
@@ -215,19 +216,19 @@ const GlobalStyle = createGlobalStyle`
             margin-bottom: 1.5rem;
 
             td, th {
-                ${({ theme }) => theme.typography.body}
+                ${({ theme }) => (theme as any).typography.body}
                 vertical-align: top;
                 padding: 0.5rem 0.75rem;
-                border: 1px solid ${({ theme }) => theme.color.N4};
+                border: 1px solid ${({ theme }) => (theme as any).color.N4};
             }
 
             th {
-                color: ${({ theme }) => theme.color.N10};
+                color: ${({ theme }) => (theme as any).color.N10};
             }
 
             tbody {
                 tr:nth-child(even) {
-                    background: ${({ theme }) => theme.color.N2};
+                    background: ${({ theme }) => (theme as any).color.N2};
                 }
             }
 

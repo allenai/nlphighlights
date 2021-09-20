@@ -6,7 +6,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export const Container = ({ children, className }) => (
+interface Props {
+    className?: string;
+}
+export const Container: React.FC<Props> = ({ children, className }) => (
     <StyledContainer className={className}>
         <Content>{children}</Content>
     </StyledContainer>

@@ -3,21 +3,26 @@ import { StaticQuery, graphql } from 'gatsby';
 import styled, { createGlobalStyle } from 'styled-components';
 import { ThemeProvider } from '@allenai/varnish/theme';
 import { Header } from '@allenai/varnish/components/Header';
-import { Menu } from 'antd';
 
 import Head from './Head';
 import { Link } from './Link';
 import { Navigation, mobileNavEntrance } from './Navigation';
-import { AllenNLPLogo, MenuIcon } from './inlineSVG';
-import { toRem } from '../utils';
+import { MenuIcon } from './inlineSVG';
+import { toRem } from '../utils/utils';
 
-const Layout = ({
+interface Props {
+    title?: string;
+    description?: string;
+    defaultSelectedKeys?: string[];
+    defaultOpenKeys?: string[];
+}
+
+const Layout: React.FC<Props> = ({
     title,
     description,
-    groupedEpisodes,
     defaultSelectedKeys = [],
     defaultOpenKeys = [],
-    children
+    children,
 }) => {
     const [mobileNavIsActive, setMobileNav] = useState(false);
 
@@ -73,7 +78,6 @@ const Layout = ({
                                     <Navigation
                                         isMobile={true}
                                         headerLinks={headerLinks}
-                                        groupedEpisodes={groupedEpisodes}
                                         defaultSelectedKeys={defaultSelectedKeys}
                                         defaultOpenKeys={defaultOpenKeys}
                                     />
@@ -230,7 +234,7 @@ const MobileNavContainer = styled(({ mobileNavIsActive, ...props }) => <div {...
 
     // Only show MobileNavContainer if mobileNavIsActive is true
     // AND screen width is tablet portrait or below
-    ${({ mobileNavIsActive, theme }) =>
+    ${({ mobileNavIsActive }) =>
         mobileNavIsActive
             ? `
         @media (max-width: 1024px) {
@@ -292,7 +296,7 @@ const GlobalStyle = createGlobalStyle`
     // height of viewport so user cannot scroll past the menu and wind up
     // in a confusing scroll state -- but it only does this if mobile
     // nav is open and screen width is below tablet portrait
-    ${({ mobileNavIsActive, theme }) =>
+    ${({ mobileNavIsActive }) =>
         mobileNavIsActive
             ? `
         @media (max-width: 1024px) {

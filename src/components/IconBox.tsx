@@ -14,9 +14,14 @@
 
 import React from 'react';
 import styled from 'styled-components';
-import { getIcon } from '../utils';
+import { getIcon } from '../utils/getIcon';
 
-export const IconBox = ({ className, icon, color }) => (
+interface Props {
+    className?: string;
+    icon?: string;
+    color?: string;
+}
+export const IconBox: React.FC<Props> = ({ className, icon, color }) => (
     <StyledIconBox className={className} color={color}>
         <OuterWrapper>
             <InnerWrapper>{getIcon(icon)}</InnerWrapper>
