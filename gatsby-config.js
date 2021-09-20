@@ -64,7 +64,8 @@ module.exports = {
                 background_color: meta.theme,
                 theme_color: meta.theme,
                 display: `minimal-ui`,
-                legacy: false
+                legacy: false,
+                icon: `${__dirname}/static/icons/apple-touch-icon.png`
             }
         },
         `gatsby-plugin-offline`
