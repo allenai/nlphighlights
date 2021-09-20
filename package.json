@@ -8,6 +8,7 @@
         "@allenai/varnish": "0.8.11",
         "@illinois/react-use-local-storage": "^1.1.0",
         "@phosphor/widgets": "^1.6.0",
+        "@types/styled-components": "^5.1.14",
         "antd": "^3.26.7",
         "autoprefixer": "^9.4.7",
         "babel-plugin-styled-components": "^1.13.2",
@@ -32,6 +33,7 @@
         "gatsby-plugin-sharp": "^3.14.0",
         "gatsby-plugin-sitemap": "^4.10.0",
         "gatsby-plugin-styled-components": "^4.14.0",
+        "gatsby-plugin-typescript": "^3.14.0",
         "gatsby-react-router-scroll": "^4.14.0",
         "gatsby-remark-copy-linked-files": "^4.11.0",
         "gatsby-remark-images": "^5.11.0",
@@ -50,7 +52,8 @@
         "react-router-dom": "^5.0.1",
         "rehype-react": "^3.1.0",
         "remark-react": "^5.0.1",
-        "styled-components": "^5.3.1"
+        "styled-components": "^5.3.1",
+        "typescript": "^4.4.3"
     },
     "scripts": {
         "start": "gatsby serve --port 8000 --host 0.0.0.0",
@@ -59,9 +62,13 @@
         "lint": "eslint '**/*.{js,ts,tsx,json}'",
         "lint:fix": "eslint '**/*.{js,ts,tsx,json}' --fix && echo '🛠  Lint --fix complete.'",
         "clear": "rm -rf .cache",
-        "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+        "test": "npm run type-check && npm run lint",
+        "type-check": "tsc --pretty --noEmit"
     },
     "devDependencies": {
+        "@types/node": "^14.17.17",
+        "@types/react": "^17.0.22",
+        "@types/react-dom": "^17.0.9",
         "browser-monads": "^1.0.0",
         "prettier": "^1.19.1"
     },
