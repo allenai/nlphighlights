@@ -10,6 +10,7 @@ import { Container } from '../components/Container';
 import { Card, CardContent } from '../components/Card';
 import { Footer } from '../components/Footer';
 import { ArrowRightIcon, ExpandCollapseIcon, Disclosure } from '../components/inlineSVG';
+import { pxToRem } from '@allenai/varnish/utils/base';
 
 function renderDescription(description) {
     const lines = description.split('\n');
@@ -128,7 +129,7 @@ const Banner = styled(Container)`
 
     h1 {
         font-size: ${({ theme }) => theme.spacing.xl};
-        line-height: ${({ theme }) => theme.spacing.xxl};
+        line-height: ${({ theme }) => theme.spacing.xl2};
         font-weight: ${({ theme }) => theme.typography.fontWeightBold};
         color: ${({ theme }) => theme.color.N1};
         text-align: center;
@@ -224,8 +225,8 @@ const TriggerClickArea = styled.div`
     margin-left: auto;
     display: flex;
     align-items: center;
-    padding: 0 ${({ theme }) => theme.spacing.md.getRemValue() * 2}rem;
-    width: calc(100% - ${({ theme }) => theme.spacing.xxl.getRemValue() * 4}rem);
+    padding: 0 ${({ theme }) => pxToRem(theme.spacing.md.getValue() * 2)};
+    width: calc(100% - ${({ theme }) => pxToRem(theme.spacing.xl2.getValue() * 4)});
     position: relative;
     cursor: pointer;
 
@@ -271,7 +272,7 @@ const PartContainer = styled(({ episodeListIsVisible, ...props }) => <Card {...p
 // Container for list of episodes for a given part
 const EpisodeList = styled(CardContent)`
     background: ${({ theme }) => theme.color.N2};
-    padding-bottom: ${({ theme }) => theme.spacing.md.getRemValue() * 2}rem;
+    padding-bottom: ${({ theme }) => pxToRem(theme.spacing.md.getValue() * 2)};
 
     @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
         padding-top: 0;
@@ -286,7 +287,7 @@ const EpisodeLink = styled(Link)`
         border: 1px solid ${({ theme }) => theme.color.N6};
         border-radius: ${({ theme }) => theme.spacing.xxs};
         transition: border-color 0.1s ease, box-shadow 0.1s ease;
-        padding: ${({ theme }) => `${theme.spacing.lg} ${theme.spacing.md.getRemValue() * 2}rem`};
+        padding: ${({ theme }) => `${theme.spacing.lg} ${pxToRem(theme.spacing.md.getValue() * 2)}`};
 
         & + & {
             margin-top: ${({ theme }) => theme.spacing.md} !important;
@@ -349,6 +350,6 @@ const EpisodeLink = styled(Link)`
 const Credits = styled(Container)`
     background: ${({ theme }) => theme.color.N2};
     border-bottom: 1px solid ${({ theme }) => theme.color.N4};
-    padding: ${({ theme }) => `${theme.spacing.xl} ${theme.spacing.xxl}`};
+    padding: ${({ theme }) => `${theme.spacing.xl} ${theme.spacing.xl2}`};
     text-align: center;
 `;

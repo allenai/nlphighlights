@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import styled, { createGlobalStyle } from 'styled-components';
-import { ThemeProvider } from '@allenai/varnish/theme';
-import { Header } from '@allenai/varnish/components/Header';
+import { VarnishApp, Header } from '@allenai/varnish/components';
+import '@allenai/varnish/dist/theme.css';
 
 import Head from './Head';
 import { Link } from './Link';
@@ -44,7 +44,7 @@ const Layout: React.FC<Props> = ({
                 const { headerLinks } = data.site.siteMetadata;
 
                 return (
-                    <ThemeProvider>
+                    <VarnishApp>
                         <Head title={title} description={description} />
                         <GlobalStyle mobileNavIsActive={mobileNavIsActive} />
                         <HeaderContainer mobileNavIsActive={mobileNavIsActive}>
@@ -85,7 +85,7 @@ const Layout: React.FC<Props> = ({
                             </MobileNavContainer>
                         </HeaderContainer>
                         <Main>{children}</Main>
-                    </ThemeProvider>
+                    </VarnishApp>
                 );
             }}
         />
@@ -246,7 +246,7 @@ const MobileNavContainer = styled(({ mobileNavIsActive, ...props }) => <div {...
 
 const MobileNavContent = styled.div`
     padding-top: ${toRem(116)};
-    animation: ${({ theme }) => mobileNavEntrance(theme.spacing.xxl)} 0.66s ease forwards;
+    animation: ${({ theme }) => mobileNavEntrance(theme.spacing.xl2)} 0.66s ease forwards;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
         padding-top: ${toRem(82)};

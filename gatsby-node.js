@@ -1,7 +1,7 @@
 const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
 
-const episodeTemplate = path.resolve('src/templates/episode.js');
+const episodeTemplate = path.resolve('src/templates/episode.tsx');
 
 function replacePath(pagePath) {
     return pagePath === `/` ? pagePath : pagePath.replace(/\/$/, ``);

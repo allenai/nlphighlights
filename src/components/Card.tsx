@@ -2,6 +2,7 @@
 // content container with rounded corners and a drop-shadow that is
 // reminiscent of a playing card look and feel.
 
+import { pxToRem } from '@allenai/varnish/utils/base';
 import styled from 'styled-components';
 
 export const Card = styled.div`
@@ -12,7 +13,7 @@ export const Card = styled.div`
     transition: box-shadow 0.2s ease, transform 0.2s ease;
 
     & + & {
-        margin-top: ${({ theme }) => theme.spacing.md.getRemValue() * 2}rem;
+        margin-top: ${({ theme }) => pxToRem(theme.spacing.md.getValue() * 2)};
     }
 
     @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
@@ -25,7 +26,7 @@ export const Card = styled.div`
 `;
 
 export const CardContent = styled.div`
-    padding: ${({ theme }) => theme.spacing.md.getRemValue() * 2}rem;
+    padding: ${({ theme }) => pxToRem(theme.spacing.md.getValue() * 2)};
 
     @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
         padding: ${({ theme }) => theme.spacing.md};

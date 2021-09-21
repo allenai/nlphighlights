@@ -70,11 +70,6 @@ const Head = ({ title, description }) => {
                 ];
                 const link = [
                     {
-                        rel: 'stylesheet',
-                        href:
-                            'https://cdn.jsdelivr.net/npm/@allenai/varnish@0.8.11/dist/theme.min.css'
-                    },
-                    {
                         rel: 'icon',
                         href: '/favicon.ico',
                         type: 'image/x-icon'

@@ -10,6 +10,7 @@ import { IconBox } from '../components/IconBox';
 import { Navigation } from '../components/Navigation';
 
 import { getGroupedEpisodes } from '../utils/utils';
+import { pxToRem } from '@allenai/varnish/utils/base';
 
 function formatStringList(headingSingular, headingPlural, strings) {
     if (strings === undefined || strings.length === 0) {
@@ -260,7 +261,7 @@ const LeftContainer = styled.div`
     background: ${({ theme }) => theme.color.N1};
     width: calc(
         ${({ theme }) =>
-            `324px + ((100vw - (${theme.breakpoints.xl} + ${theme.spacing.xxl}) - ${theme.spacing.xxl}) / 2) + ${theme.spacing.xxl}`}
+            `324px + ((100vw - (${theme.breakpoints.xl} + ${theme.spacing.xl2}) - ${theme.spacing.xl2}) / 2) + ${theme.spacing.xl2}`}
     );
     height: 100%;
     display: flex;
@@ -296,9 +297,9 @@ const RightContainer = styled.div`
     position: relative;
     flex: 1;
     max-width: ${({ theme }) =>
-        theme.breakpoints.xl.getRemValue() +
-        theme.spacing.xxl.getRemValue() -
-        theme.spacing.xxl.getRemValue()}rem;
+        pxToRem(theme.breakpoints.xl.getValue() +
+        theme.spacing.xl2.getValue() -
+        theme.spacing.xl2.getValue())};
     height: 100%;
 
     &:before {
@@ -320,20 +321,20 @@ const RightContainer = styled.div`
 
 const RightContent = styled.div`
     max-width: ${({ theme }) =>
-        theme.breakpoints.xl.getRemValue() +
-        theme.spacing.xxl.getRemValue() -
-        theme.spacing.xxl.getRemValue() -
-        324 / 16}rem;
+        pxToRem(theme.breakpoints.xl.getValue() +
+        theme.spacing.xl2.getValue() -
+        theme.spacing.xl2.getValue() -
+        324 / 16)};
     height: 100%;
     display: flex;
     flex-direction: column;
-    padding: ${({ theme }) => `${theme.spacing.xxl} 0 0 ${theme.spacing.xxl}`};
+    padding: ${({ theme }) => `${theme.spacing.xl2} 0 0 ${theme.spacing.xl2}`};
     box-sizing: border-box;
-    margin-right: ${({ theme }) => theme.spacing.xxl};
+    margin-right: ${({ theme }) => theme.spacing.xl2};
 
     @media (max-width: 1024px) {
         max-width: 100%;
-        padding-right: ${({ theme }) => theme.spacing.xxl};
+        padding-right: ${({ theme }) => theme.spacing.xl2};
         margin-right: 0;
     }
 
@@ -388,7 +389,7 @@ const EpisodeIntroText = styled.div`
     p {
         ${({ theme }) => theme.typography.bodyBig}
         color: ${({ theme }) => theme.color.N10};
-        margin-bottom: ${({ theme }) => theme.spacing.xxl};
+        margin-bottom: ${({ theme }) => theme.spacing.xl2};
 
         @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
             margin-bottom: ${({ theme }) => theme.spacing.lg};
